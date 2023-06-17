@@ -16,6 +16,7 @@ part 'respond_user_email_data.g.dart';
 /// * [photo] 
 /// * [role] 
 /// * [email] 
+/// * [name] 
 @BuiltValue()
 abstract class RespondUserEmailData implements Built<RespondUserEmailData, RespondUserEmailDataBuilder> {
   @BuiltValueField(wireName: r'userId')
@@ -32,6 +33,9 @@ abstract class RespondUserEmailData implements Built<RespondUserEmailData, Respo
 
   @BuiltValueField(wireName: r'email')
   String? get email;
+
+  @BuiltValueField(wireName: r'name')
+  String? get name;
 
   RespondUserEmailData._();
 
@@ -86,6 +90,13 @@ class _$RespondUserEmailDataSerializer implements PrimitiveSerializer<RespondUse
       yield r'email';
       yield serializers.serialize(
         object.email,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
         specifiedType: const FullType(String),
       );
     }
@@ -146,6 +157,13 @@ class _$RespondUserEmailDataSerializer implements PrimitiveSerializer<RespondUse
             specifiedType: const FullType(String),
           ) as String;
           result.email = valueDes;
+          break;
+        case r'name':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.name = valueDes;
           break;
         default:
           unhandled.add(key);
