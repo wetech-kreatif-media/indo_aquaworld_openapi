@@ -1,45 +1,47 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_email_respond.dart';
+part of 'respond_kompotisi_nomination.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$UserEmailRespond extends UserEmailRespond {
+class _$RespondKompotisiNomination extends RespondKompotisiNomination {
   @override
   final bool success;
   @override
   final String message;
   @override
-  final UserEmailRespondData data;
+  final BuiltList<RespondKompotisiNominationDataInner> data;
 
-  factory _$UserEmailRespond(
-          [void Function(UserEmailRespondBuilder)? updates]) =>
-      (new UserEmailRespondBuilder()..update(updates))._build();
+  factory _$RespondKompotisiNomination(
+          [void Function(RespondKompotisiNominationBuilder)? updates]) =>
+      (new RespondKompotisiNominationBuilder()..update(updates))._build();
 
-  _$UserEmailRespond._(
+  _$RespondKompotisiNomination._(
       {required this.success, required this.message, required this.data})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        success, r'UserEmailRespond', 'success');
+        success, r'RespondKompotisiNomination', 'success');
     BuiltValueNullFieldError.checkNotNull(
-        message, r'UserEmailRespond', 'message');
-    BuiltValueNullFieldError.checkNotNull(data, r'UserEmailRespond', 'data');
+        message, r'RespondKompotisiNomination', 'message');
+    BuiltValueNullFieldError.checkNotNull(
+        data, r'RespondKompotisiNomination', 'data');
   }
 
   @override
-  UserEmailRespond rebuild(void Function(UserEmailRespondBuilder) updates) =>
+  RespondKompotisiNomination rebuild(
+          void Function(RespondKompotisiNominationBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UserEmailRespondBuilder toBuilder() =>
-      new UserEmailRespondBuilder()..replace(this);
+  RespondKompotisiNominationBuilder toBuilder() =>
+      new RespondKompotisiNominationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is UserEmailRespond &&
+    return other is RespondKompotisiNomination &&
         success == other.success &&
         message == other.message &&
         data == other.data;
@@ -57,7 +59,7 @@ class _$UserEmailRespond extends UserEmailRespond {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'UserEmailRespond')
+    return (newBuiltValueToStringHelper(r'RespondKompotisiNomination')
           ..add('success', success)
           ..add('message', message)
           ..add('data', data))
@@ -65,9 +67,10 @@ class _$UserEmailRespond extends UserEmailRespond {
   }
 }
 
-class UserEmailRespondBuilder
-    implements Builder<UserEmailRespond, UserEmailRespondBuilder> {
-  _$UserEmailRespond? _$v;
+class RespondKompotisiNominationBuilder
+    implements
+        Builder<RespondKompotisiNomination, RespondKompotisiNominationBuilder> {
+  _$RespondKompotisiNomination? _$v;
 
   bool? _success;
   bool? get success => _$this._success;
@@ -77,16 +80,17 @@ class UserEmailRespondBuilder
   String? get message => _$this._message;
   set message(String? message) => _$this._message = message;
 
-  UserEmailRespondDataBuilder? _data;
-  UserEmailRespondDataBuilder get data =>
-      _$this._data ??= new UserEmailRespondDataBuilder();
-  set data(UserEmailRespondDataBuilder? data) => _$this._data = data;
+  ListBuilder<RespondKompotisiNominationDataInner>? _data;
+  ListBuilder<RespondKompotisiNominationDataInner> get data =>
+      _$this._data ??= new ListBuilder<RespondKompotisiNominationDataInner>();
+  set data(ListBuilder<RespondKompotisiNominationDataInner>? data) =>
+      _$this._data = data;
 
-  UserEmailRespondBuilder() {
-    UserEmailRespond._defaults(this);
+  RespondKompotisiNominationBuilder() {
+    RespondKompotisiNomination._defaults(this);
   }
 
-  UserEmailRespondBuilder get _$this {
+  RespondKompotisiNominationBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _success = $v.success;
@@ -98,28 +102,28 @@ class UserEmailRespondBuilder
   }
 
   @override
-  void replace(UserEmailRespond other) {
+  void replace(RespondKompotisiNomination other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$UserEmailRespond;
+    _$v = other as _$RespondKompotisiNomination;
   }
 
   @override
-  void update(void Function(UserEmailRespondBuilder)? updates) {
+  void update(void Function(RespondKompotisiNominationBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  UserEmailRespond build() => _build();
+  RespondKompotisiNomination build() => _build();
 
-  _$UserEmailRespond _build() {
-    _$UserEmailRespond _$result;
+  _$RespondKompotisiNomination _build() {
+    _$RespondKompotisiNomination _$result;
     try {
       _$result = _$v ??
-          new _$UserEmailRespond._(
+          new _$RespondKompotisiNomination._(
               success: BuiltValueNullFieldError.checkNotNull(
-                  success, r'UserEmailRespond', 'success'),
+                  success, r'RespondKompotisiNomination', 'success'),
               message: BuiltValueNullFieldError.checkNotNull(
-                  message, r'UserEmailRespond', 'message'),
+                  message, r'RespondKompotisiNomination', 'message'),
               data: data.build());
     } catch (_) {
       late String _$failedField;
@@ -128,7 +132,7 @@ class UserEmailRespondBuilder
         data.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'UserEmailRespond', _$failedField, e.toString());
+            r'RespondKompotisiNomination', _$failedField, e.toString());
       }
       rethrow;
     }

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **forgotUser**
-> UserEmailRespond forgotUser(userEmail)
+> RespondUserEmail forgotUser(requestUserEmail)
 
 Forgot
 
@@ -29,10 +29,10 @@ Api untuk lupa password
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUserApi();
-final UserEmail userEmail = ; // UserEmail | 
+final RequestUserEmail requestUserEmail = ; // RequestUserEmail | 
 
 try {
-    final response = api.forgotUser(userEmail);
+    final response = api.forgotUser(requestUserEmail);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UserApi->forgotUser: $e\n');
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userEmail** | [**UserEmail**](UserEmail.md)|  | [optional] 
+ **requestUserEmail** | [**RequestUserEmail**](RequestUserEmail.md)|  | [optional] 
 
 ### Return type
 
-[**UserEmailRespond**](UserEmailRespond.md)
+[**RespondUserEmail**](RespondUserEmail.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **loginFacebookUser**
-> UserEmailRespond loginFacebookUser(userFacebook)
+> RespondUserEmail loginFacebookUser(requestUserEmail)
 
 Login user dengan facebook
 
@@ -72,10 +72,10 @@ Api login email dan password user
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUserApi();
-final UserFacebook userFacebook = {"email":"email@gmail.com"}; // UserFacebook | 
+final RequestUserEmail requestUserEmail = {"email":"email@gmail.com"}; // RequestUserEmail | 
 
 try {
-    final response = api.loginFacebookUser(userFacebook);
+    final response = api.loginFacebookUser(requestUserEmail);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UserApi->loginFacebookUser: $e\n');
@@ -86,11 +86,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userFacebook** | [**UserFacebook**](UserFacebook.md)|  | [optional] 
+ **requestUserEmail** | [**RequestUserEmail**](RequestUserEmail.md)|  | [optional] 
 
 ### Return type
 
-[**UserEmailRespond**](UserEmailRespond.md)
+[**RespondUserEmail**](RespondUserEmail.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **loginUser**
-> UserEmailRespond loginUser(userEmailPassword)
+> RespondUserEmail loginUser(requestUserEmailPassword)
 
 Login user
 
@@ -115,10 +115,10 @@ Api login email dan password user
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUserApi();
-final UserEmailPassword userEmailPassword = {"email":"email@gmail.com","password":"12345"}; // UserEmailPassword | 
+final RequestUserEmailPassword requestUserEmailPassword = {"email":"email@gmail.com","password":"12345"}; // RequestUserEmailPassword | 
 
 try {
-    final response = api.loginUser(userEmailPassword);
+    final response = api.loginUser(requestUserEmailPassword);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UserApi->loginUser: $e\n');
@@ -129,11 +129,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userEmailPassword** | [**UserEmailPassword**](UserEmailPassword.md)|  | [optional] 
+ **requestUserEmailPassword** | [**RequestUserEmailPassword**](RequestUserEmailPassword.md)|  | [optional] 
 
 ### Return type
 
-[**UserEmailRespond**](UserEmailRespond.md)
+[**RespondUserEmail**](RespondUserEmail.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **newPasswordUser**
-> GlobalRespond newPasswordUser(userPassword)
+> RespondGlobal newPasswordUser(requestUserPassword)
 
 Create new password
 
@@ -158,10 +158,10 @@ Create new password
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUserApi();
-final UserPassword userPassword = ; // UserPassword | 
+final RequestUserPassword requestUserPassword = ; // RequestUserPassword | 
 
 try {
-    final response = api.newPasswordUser(userPassword);
+    final response = api.newPasswordUser(requestUserPassword);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UserApi->newPasswordUser: $e\n');
@@ -172,11 +172,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userPassword** | [**UserPassword**](UserPassword.md)|  | [optional] 
+ **requestUserPassword** | [**RequestUserPassword**](RequestUserPassword.md)|  | [optional] 
 
 ### Return type
 
-[**GlobalRespond**](GlobalRespond.md)
+[**RespondGlobal**](RespondGlobal.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **registerUser**
-> GlobalRespond registerUser(userRegister)
+> RespondGlobal registerUser(requestUserRegister)
 
 Register user
 
@@ -201,10 +201,10 @@ Api daftar user
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUserApi();
-final UserRegister userRegister = {"name":"Hasan","email":"email@gmail.com","handphone":"082213542319","password":"12345","password_confirm":"12345","kota":"Bogor"}; // UserRegister | 
+final RequestUserRegister requestUserRegister = {"name":"Hasan","email":"email@gmail.com","handphone":"082213542319","password":"12345","password_confirm":"12345","kota":"Bogor"}; // RequestUserRegister | 
 
 try {
-    final response = api.registerUser(userRegister);
+    final response = api.registerUser(requestUserRegister);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UserApi->registerUser: $e\n');
@@ -215,11 +215,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userRegister** | [**UserRegister**](UserRegister.md)|  | [optional] 
+ **requestUserRegister** | [**RequestUserRegister**](RequestUserRegister.md)|  | [optional] 
 
 ### Return type
 
-[**GlobalRespond**](GlobalRespond.md)
+[**RespondGlobal**](RespondGlobal.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sendOtpUser**
-> GlobalRespond sendOtpUser(userOtp)
+> RespondUserEmail sendOtpUser(requestUserOtp)
 
 Kirim otp ke server
 
@@ -244,10 +244,10 @@ Kirim otp ke server
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUserApi();
-final UserOtp userOtp = {"otp_code":"1235","userId":"23423sdfsdfsadfasdf"}; // UserOtp | Kode otp
+final RequestUserOtp requestUserOtp = {"otp_code":"1235","userId":"23423sdfsdfsadfasdf"}; // RequestUserOtp | Kode otp
 
 try {
-    final response = api.sendOtpUser(userOtp);
+    final response = api.sendOtpUser(requestUserOtp);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UserApi->sendOtpUser: $e\n');
@@ -258,11 +258,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userOtp** | [**UserOtp**](UserOtp.md)| Kode otp | [optional] 
+ **requestUserOtp** | [**RequestUserOtp**](RequestUserOtp.md)| Kode otp | [optional] 
 
 ### Return type
 
-[**GlobalRespond**](GlobalRespond.md)
+[**RespondUserEmail**](RespondUserEmail.md)
 
 ### Authorization
 

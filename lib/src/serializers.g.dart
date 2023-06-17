@@ -7,35 +7,35 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
-      ..add(GlobalRespond.serializer)
-      ..add(KompetisiDetail.serializer)
-      ..add(KompetisiDetailData.serializer)
-      ..add(KompetisiList.serializer)
-      ..add(KompetisiListDataInner.serializer)
-      ..add(KompotisiNomination.serializer)
-      ..add(KompotisiNominationDataInner.serializer)
-      ..add(KompuetisiParticipants.serializer)
-      ..add(KompuetisiParticipantsDataInner.serializer)
-      ..add(UserEmail.serializer)
-      ..add(UserEmailPassword.serializer)
-      ..add(UserEmailRespond.serializer)
-      ..add(UserEmailRespondData.serializer)
-      ..add(UserFacebook.serializer)
-      ..add(UserOtp.serializer)
-      ..add(UserPassword.serializer)
-      ..add(UserRegister.serializer)
+      ..add(RequestKompetisiDetail.serializer)
+      ..add(RequestUserEmail.serializer)
+      ..add(RequestUserEmailPassword.serializer)
+      ..add(RequestUserOtp.serializer)
+      ..add(RequestUserPassword.serializer)
+      ..add(RequestUserRegister.serializer)
+      ..add(RespondGlobal.serializer)
+      ..add(RespondKompetisiDetail.serializer)
+      ..add(RespondKompetisiDetailData.serializer)
+      ..add(RespondKompetisiList.serializer)
+      ..add(RespondKompetisiListDataInner.serializer)
+      ..add(RespondKompetisiParticipants.serializer)
+      ..add(RespondKompetisiParticipantsDataInner.serializer)
+      ..add(RespondKompotisiNomination.serializer)
+      ..add(RespondKompotisiNominationDataInner.serializer)
+      ..add(RespondUserEmail.serializer)
+      ..add(RespondUserEmailData.serializer)
       ..addBuilderFactory(
           const FullType(
-              BuiltList, const [const FullType(KompetisiListDataInner)]),
-          () => new ListBuilder<KompetisiListDataInner>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(KompotisiNominationDataInner)]),
-          () => new ListBuilder<KompotisiNominationDataInner>())
+              BuiltList, const [const FullType(RespondKompetisiListDataInner)]),
+          () => new ListBuilder<RespondKompetisiListDataInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(KompuetisiParticipantsDataInner)]),
-          () => new ListBuilder<KompuetisiParticipantsDataInner>()))
+              const [const FullType(RespondKompetisiParticipantsDataInner)]),
+          () => new ListBuilder<RespondKompetisiParticipantsDataInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondKompotisiNominationDataInner)]),
+          () => new ListBuilder<RespondKompotisiNominationDataInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

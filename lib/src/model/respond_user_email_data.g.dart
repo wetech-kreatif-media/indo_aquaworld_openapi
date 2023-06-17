@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_email_respond_data.dart';
+part of 'respond_user_email_data.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$UserEmailRespondData extends UserEmailRespondData {
+class _$RespondUserEmailData extends RespondUserEmailData {
   @override
   final String userId;
   @override
@@ -16,30 +16,30 @@ class _$UserEmailRespondData extends UserEmailRespondData {
   @override
   final String? role;
 
-  factory _$UserEmailRespondData(
-          [void Function(UserEmailRespondDataBuilder)? updates]) =>
-      (new UserEmailRespondDataBuilder()..update(updates))._build();
+  factory _$RespondUserEmailData(
+          [void Function(RespondUserEmailDataBuilder)? updates]) =>
+      (new RespondUserEmailDataBuilder()..update(updates))._build();
 
-  _$UserEmailRespondData._(
+  _$RespondUserEmailData._(
       {required this.userId, this.token, this.photo, this.role})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        userId, r'UserEmailRespondData', 'userId');
+        userId, r'RespondUserEmailData', 'userId');
   }
 
   @override
-  UserEmailRespondData rebuild(
-          void Function(UserEmailRespondDataBuilder) updates) =>
+  RespondUserEmailData rebuild(
+          void Function(RespondUserEmailDataBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UserEmailRespondDataBuilder toBuilder() =>
-      new UserEmailRespondDataBuilder()..replace(this);
+  RespondUserEmailDataBuilder toBuilder() =>
+      new RespondUserEmailDataBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is UserEmailRespondData &&
+    return other is RespondUserEmailData &&
         userId == other.userId &&
         token == other.token &&
         photo == other.photo &&
@@ -59,7 +59,7 @@ class _$UserEmailRespondData extends UserEmailRespondData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'UserEmailRespondData')
+    return (newBuiltValueToStringHelper(r'RespondUserEmailData')
           ..add('userId', userId)
           ..add('token', token)
           ..add('photo', photo)
@@ -68,9 +68,9 @@ class _$UserEmailRespondData extends UserEmailRespondData {
   }
 }
 
-class UserEmailRespondDataBuilder
-    implements Builder<UserEmailRespondData, UserEmailRespondDataBuilder> {
-  _$UserEmailRespondData? _$v;
+class RespondUserEmailDataBuilder
+    implements Builder<RespondUserEmailData, RespondUserEmailDataBuilder> {
+  _$RespondUserEmailData? _$v;
 
   String? _userId;
   String? get userId => _$this._userId;
@@ -88,11 +88,11 @@ class UserEmailRespondDataBuilder
   String? get role => _$this._role;
   set role(String? role) => _$this._role = role;
 
-  UserEmailRespondDataBuilder() {
-    UserEmailRespondData._defaults(this);
+  RespondUserEmailDataBuilder() {
+    RespondUserEmailData._defaults(this);
   }
 
-  UserEmailRespondDataBuilder get _$this {
+  RespondUserEmailDataBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _userId = $v.userId;
@@ -105,24 +105,24 @@ class UserEmailRespondDataBuilder
   }
 
   @override
-  void replace(UserEmailRespondData other) {
+  void replace(RespondUserEmailData other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$UserEmailRespondData;
+    _$v = other as _$RespondUserEmailData;
   }
 
   @override
-  void update(void Function(UserEmailRespondDataBuilder)? updates) {
+  void update(void Function(RespondUserEmailDataBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  UserEmailRespondData build() => _build();
+  RespondUserEmailData build() => _build();
 
-  _$UserEmailRespondData _build() {
+  _$RespondUserEmailData _build() {
     final _$result = _$v ??
-        new _$UserEmailRespondData._(
+        new _$RespondUserEmailData._(
             userId: BuiltValueNullFieldError.checkNotNull(
-                userId, r'UserEmailRespondData', 'userId'),
+                userId, r'RespondUserEmailData', 'userId'),
             token: token,
             photo: photo,
             role: role);

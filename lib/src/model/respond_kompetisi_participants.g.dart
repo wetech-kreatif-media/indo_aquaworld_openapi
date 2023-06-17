@@ -1,45 +1,47 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_email_respond.dart';
+part of 'respond_kompetisi_participants.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$UserEmailRespond extends UserEmailRespond {
+class _$RespondKompetisiParticipants extends RespondKompetisiParticipants {
   @override
   final bool success;
   @override
   final String message;
   @override
-  final UserEmailRespondData data;
+  final BuiltList<RespondKompetisiParticipantsDataInner> data;
 
-  factory _$UserEmailRespond(
-          [void Function(UserEmailRespondBuilder)? updates]) =>
-      (new UserEmailRespondBuilder()..update(updates))._build();
+  factory _$RespondKompetisiParticipants(
+          [void Function(RespondKompetisiParticipantsBuilder)? updates]) =>
+      (new RespondKompetisiParticipantsBuilder()..update(updates))._build();
 
-  _$UserEmailRespond._(
+  _$RespondKompetisiParticipants._(
       {required this.success, required this.message, required this.data})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        success, r'UserEmailRespond', 'success');
+        success, r'RespondKompetisiParticipants', 'success');
     BuiltValueNullFieldError.checkNotNull(
-        message, r'UserEmailRespond', 'message');
-    BuiltValueNullFieldError.checkNotNull(data, r'UserEmailRespond', 'data');
+        message, r'RespondKompetisiParticipants', 'message');
+    BuiltValueNullFieldError.checkNotNull(
+        data, r'RespondKompetisiParticipants', 'data');
   }
 
   @override
-  UserEmailRespond rebuild(void Function(UserEmailRespondBuilder) updates) =>
+  RespondKompetisiParticipants rebuild(
+          void Function(RespondKompetisiParticipantsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UserEmailRespondBuilder toBuilder() =>
-      new UserEmailRespondBuilder()..replace(this);
+  RespondKompetisiParticipantsBuilder toBuilder() =>
+      new RespondKompetisiParticipantsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is UserEmailRespond &&
+    return other is RespondKompetisiParticipants &&
         success == other.success &&
         message == other.message &&
         data == other.data;
@@ -57,7 +59,7 @@ class _$UserEmailRespond extends UserEmailRespond {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'UserEmailRespond')
+    return (newBuiltValueToStringHelper(r'RespondKompetisiParticipants')
           ..add('success', success)
           ..add('message', message)
           ..add('data', data))
@@ -65,9 +67,11 @@ class _$UserEmailRespond extends UserEmailRespond {
   }
 }
 
-class UserEmailRespondBuilder
-    implements Builder<UserEmailRespond, UserEmailRespondBuilder> {
-  _$UserEmailRespond? _$v;
+class RespondKompetisiParticipantsBuilder
+    implements
+        Builder<RespondKompetisiParticipants,
+            RespondKompetisiParticipantsBuilder> {
+  _$RespondKompetisiParticipants? _$v;
 
   bool? _success;
   bool? get success => _$this._success;
@@ -77,16 +81,17 @@ class UserEmailRespondBuilder
   String? get message => _$this._message;
   set message(String? message) => _$this._message = message;
 
-  UserEmailRespondDataBuilder? _data;
-  UserEmailRespondDataBuilder get data =>
-      _$this._data ??= new UserEmailRespondDataBuilder();
-  set data(UserEmailRespondDataBuilder? data) => _$this._data = data;
+  ListBuilder<RespondKompetisiParticipantsDataInner>? _data;
+  ListBuilder<RespondKompetisiParticipantsDataInner> get data =>
+      _$this._data ??= new ListBuilder<RespondKompetisiParticipantsDataInner>();
+  set data(ListBuilder<RespondKompetisiParticipantsDataInner>? data) =>
+      _$this._data = data;
 
-  UserEmailRespondBuilder() {
-    UserEmailRespond._defaults(this);
+  RespondKompetisiParticipantsBuilder() {
+    RespondKompetisiParticipants._defaults(this);
   }
 
-  UserEmailRespondBuilder get _$this {
+  RespondKompetisiParticipantsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _success = $v.success;
@@ -98,28 +103,28 @@ class UserEmailRespondBuilder
   }
 
   @override
-  void replace(UserEmailRespond other) {
+  void replace(RespondKompetisiParticipants other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$UserEmailRespond;
+    _$v = other as _$RespondKompetisiParticipants;
   }
 
   @override
-  void update(void Function(UserEmailRespondBuilder)? updates) {
+  void update(void Function(RespondKompetisiParticipantsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  UserEmailRespond build() => _build();
+  RespondKompetisiParticipants build() => _build();
 
-  _$UserEmailRespond _build() {
-    _$UserEmailRespond _$result;
+  _$RespondKompetisiParticipants _build() {
+    _$RespondKompetisiParticipants _$result;
     try {
       _$result = _$v ??
-          new _$UserEmailRespond._(
+          new _$RespondKompetisiParticipants._(
               success: BuiltValueNullFieldError.checkNotNull(
-                  success, r'UserEmailRespond', 'success'),
+                  success, r'RespondKompetisiParticipants', 'success'),
               message: BuiltValueNullFieldError.checkNotNull(
-                  message, r'UserEmailRespond', 'message'),
+                  message, r'RespondKompetisiParticipants', 'message'),
               data: data.build());
     } catch (_) {
       late String _$failedField;
@@ -128,7 +133,7 @@ class UserEmailRespondBuilder
         data.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'UserEmailRespond', _$failedField, e.toString());
+            r'RespondKompetisiParticipants', _$failedField, e.toString());
       }
       rethrow;
     }
