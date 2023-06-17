@@ -226,9 +226,9 @@ class UserApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [GlobalRespond] as data
+  /// Returns a [Future] containing a [Response] with a [UserEmailRespond] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<GlobalRespond>> loginUser({ 
+  Future<Response<UserEmailRespond>> loginUser({ 
     UserEmailPassword? userEmailPassword,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -278,14 +278,14 @@ class UserApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    GlobalRespond? _responseData;
+    UserEmailRespond? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(GlobalRespond),
-      ) as GlobalRespond;
+        specifiedType: const FullType(UserEmailRespond),
+      ) as UserEmailRespond;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -297,7 +297,7 @@ class UserApi {
       );
     }
 
-    return Response<GlobalRespond>(
+    return Response<UserEmailRespond>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

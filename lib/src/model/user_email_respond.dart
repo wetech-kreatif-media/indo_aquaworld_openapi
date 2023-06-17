@@ -18,13 +18,13 @@ part 'user_email_respond.g.dart';
 @BuiltValue()
 abstract class UserEmailRespond implements Built<UserEmailRespond, UserEmailRespondBuilder> {
   @BuiltValueField(wireName: r'success')
-  bool? get success;
+  bool get success;
 
   @BuiltValueField(wireName: r'message')
-  String? get message;
+  String get message;
 
   @BuiltValueField(wireName: r'data')
-  UserEmailRespondData? get data;
+  UserEmailRespondData get data;
 
   UserEmailRespond._();
 
@@ -49,27 +49,21 @@ class _$UserEmailRespondSerializer implements PrimitiveSerializer<UserEmailRespo
     UserEmailRespond object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.success != null) {
-      yield r'success';
-      yield serializers.serialize(
-        object.success,
-        specifiedType: const FullType(bool),
-      );
-    }
-    if (object.message != null) {
-      yield r'message';
-      yield serializers.serialize(
-        object.message,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.data != null) {
-      yield r'data';
-      yield serializers.serialize(
-        object.data,
-        specifiedType: const FullType(UserEmailRespondData),
-      );
-    }
+    yield r'success';
+    yield serializers.serialize(
+      object.success,
+      specifiedType: const FullType(bool),
+    );
+    yield r'message';
+    yield serializers.serialize(
+      object.message,
+      specifiedType: const FullType(String),
+    );
+    yield r'data';
+    yield serializers.serialize(
+      object.data,
+      specifiedType: const FullType(UserEmailRespondData),
+    );
   }
 
   @override

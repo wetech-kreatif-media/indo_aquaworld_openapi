@@ -12,10 +12,22 @@ part 'user_email_respond_data.g.dart';
 ///
 /// Properties:
 /// * [userId] 
+/// * [token] 
+/// * [photo] 
+/// * [role] 
 @BuiltValue()
 abstract class UserEmailRespondData implements Built<UserEmailRespondData, UserEmailRespondDataBuilder> {
   @BuiltValueField(wireName: r'userId')
-  String? get userId;
+  String get userId;
+
+  @BuiltValueField(wireName: r'token')
+  String? get token;
+
+  @BuiltValueField(wireName: r'photo')
+  String? get photo;
+
+  @BuiltValueField(wireName: r'role')
+  String? get role;
 
   UserEmailRespondData._();
 
@@ -40,10 +52,29 @@ class _$UserEmailRespondDataSerializer implements PrimitiveSerializer<UserEmailR
     UserEmailRespondData object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.userId != null) {
-      yield r'userId';
+    yield r'userId';
+    yield serializers.serialize(
+      object.userId,
+      specifiedType: const FullType(String),
+    );
+    if (object.token != null) {
+      yield r'token';
       yield serializers.serialize(
-        object.userId,
+        object.token,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.role != null) {
+      yield r'role';
+      yield serializers.serialize(
+        object.role,
         specifiedType: const FullType(String),
       );
     }
@@ -76,6 +107,27 @@ class _$UserEmailRespondDataSerializer implements PrimitiveSerializer<UserEmailR
             specifiedType: const FullType(String),
           ) as String;
           result.userId = valueDes;
+          break;
+        case r'token':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.token = valueDes;
+          break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.photo = valueDes;
+          break;
+        case r'role':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.role = valueDes;
           break;
         default:
           unhandled.add(key);
