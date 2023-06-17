@@ -15,13 +15,15 @@ class _$RespondUserEmailData extends RespondUserEmailData {
   final String? photo;
   @override
   final String? role;
+  @override
+  final String? email;
 
   factory _$RespondUserEmailData(
           [void Function(RespondUserEmailDataBuilder)? updates]) =>
       (new RespondUserEmailDataBuilder()..update(updates))._build();
 
   _$RespondUserEmailData._(
-      {required this.userId, this.token, this.photo, this.role})
+      {required this.userId, this.token, this.photo, this.role, this.email})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         userId, r'RespondUserEmailData', 'userId');
@@ -43,7 +45,8 @@ class _$RespondUserEmailData extends RespondUserEmailData {
         userId == other.userId &&
         token == other.token &&
         photo == other.photo &&
-        role == other.role;
+        role == other.role &&
+        email == other.email;
   }
 
   @override
@@ -53,6 +56,7 @@ class _$RespondUserEmailData extends RespondUserEmailData {
     _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, role.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -63,7 +67,8 @@ class _$RespondUserEmailData extends RespondUserEmailData {
           ..add('userId', userId)
           ..add('token', token)
           ..add('photo', photo)
-          ..add('role', role))
+          ..add('role', role)
+          ..add('email', email))
         .toString();
   }
 }
@@ -88,6 +93,10 @@ class RespondUserEmailDataBuilder
   String? get role => _$this._role;
   set role(String? role) => _$this._role = role;
 
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
+
   RespondUserEmailDataBuilder() {
     RespondUserEmailData._defaults(this);
   }
@@ -99,6 +108,7 @@ class RespondUserEmailDataBuilder
       _token = $v.token;
       _photo = $v.photo;
       _role = $v.role;
+      _email = $v.email;
       _$v = null;
     }
     return this;
@@ -125,7 +135,8 @@ class RespondUserEmailDataBuilder
                 userId, r'RespondUserEmailData', 'userId'),
             token: token,
             photo: photo,
-            role: role);
+            role: role,
+            email: email);
     replace(_$result);
     return _$result;
   }
