@@ -15,6 +15,8 @@ class _$RespondKompetisiListDataInner extends RespondKompetisiListDataInner {
   final String place;
   @override
   final String title;
+  @override
+  final num? participant;
 
   factory _$RespondKompetisiListDataInner(
           [void Function(RespondKompetisiListDataInnerBuilder)? updates]) =>
@@ -24,7 +26,8 @@ class _$RespondKompetisiListDataInner extends RespondKompetisiListDataInner {
       {required this.id,
       required this.date,
       required this.place,
-      required this.title})
+      required this.title,
+      this.participant})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondKompetisiListDataInner', 'id');
@@ -52,7 +55,8 @@ class _$RespondKompetisiListDataInner extends RespondKompetisiListDataInner {
         id == other.id &&
         date == other.date &&
         place == other.place &&
-        title == other.title;
+        title == other.title &&
+        participant == other.participant;
   }
 
   @override
@@ -62,6 +66,7 @@ class _$RespondKompetisiListDataInner extends RespondKompetisiListDataInner {
     _$hash = $jc(_$hash, date.hashCode);
     _$hash = $jc(_$hash, place.hashCode);
     _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, participant.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -72,7 +77,8 @@ class _$RespondKompetisiListDataInner extends RespondKompetisiListDataInner {
           ..add('id', id)
           ..add('date', date)
           ..add('place', place)
-          ..add('title', title))
+          ..add('title', title)
+          ..add('participant', participant))
         .toString();
   }
 }
@@ -99,6 +105,10 @@ class RespondKompetisiListDataInnerBuilder
   String? get title => _$this._title;
   set title(String? title) => _$this._title = title;
 
+  num? _participant;
+  num? get participant => _$this._participant;
+  set participant(num? participant) => _$this._participant = participant;
+
   RespondKompetisiListDataInnerBuilder() {
     RespondKompetisiListDataInner._defaults(this);
   }
@@ -110,6 +120,7 @@ class RespondKompetisiListDataInnerBuilder
       _date = $v.date;
       _place = $v.place;
       _title = $v.title;
+      _participant = $v.participant;
       _$v = null;
     }
     return this;
@@ -139,7 +150,8 @@ class RespondKompetisiListDataInnerBuilder
             place: BuiltValueNullFieldError.checkNotNull(
                 place, r'RespondKompetisiListDataInner', 'place'),
             title: BuiltValueNullFieldError.checkNotNull(
-                title, r'RespondKompetisiListDataInner', 'title'));
+                title, r'RespondKompetisiListDataInner', 'title'),
+            participant: participant);
     replace(_$result);
     return _$result;
   }

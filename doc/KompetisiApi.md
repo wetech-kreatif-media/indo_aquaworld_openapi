@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getKompetisi**
-> RespondKompetisiList getKompetisi()
+> RespondKompetisiList getKompetisi(kompetisiCari)
 
 Ambil daftar kompetisi
 
@@ -129,9 +129,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getKompetisiApi();
+final String kompetisiCari = kompetisiCari_example; // String | Kta kunci untuk mencari kompetisi berdasarkan nama atau tempat
 
 try {
-    final response = api.getKompetisi();
+    final response = api.getKompetisi(kompetisiCari);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling KompetisiApi->getKompetisi: $e\n');
@@ -139,7 +140,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kompetisiCari** | **String**| Kta kunci untuk mencari kompetisi berdasarkan nama atau tempat | [optional] 
 
 ### Return type
 

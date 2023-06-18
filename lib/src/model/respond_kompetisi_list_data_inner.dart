@@ -15,6 +15,7 @@ part 'respond_kompetisi_list_data_inner.g.dart';
 /// * [date] 
 /// * [place] 
 /// * [title] 
+/// * [participant] - hanya role untuk admin dan juri
 @BuiltValue()
 abstract class RespondKompetisiListDataInner implements Built<RespondKompetisiListDataInner, RespondKompetisiListDataInnerBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -28,6 +29,10 @@ abstract class RespondKompetisiListDataInner implements Built<RespondKompetisiLi
 
   @BuiltValueField(wireName: r'title')
   String get title;
+
+  /// hanya role untuk admin dan juri
+  @BuiltValueField(wireName: r'participant')
+  num? get participant;
 
   RespondKompetisiListDataInner._();
 
@@ -72,6 +77,13 @@ class _$RespondKompetisiListDataInnerSerializer implements PrimitiveSerializer<R
       object.title,
       specifiedType: const FullType(String),
     );
+    if (object.participant != null) {
+      yield r'participant';
+      yield serializers.serialize(
+        object.participant,
+        specifiedType: const FullType(num),
+      );
+    }
   }
 
   @override
@@ -122,6 +134,13 @@ class _$RespondKompetisiListDataInnerSerializer implements PrimitiveSerializer<R
             specifiedType: const FullType(String),
           ) as String;
           result.title = valueDes;
+          break;
+        case r'participant':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.participant = valueDes;
           break;
         default:
           unhandled.add(key);

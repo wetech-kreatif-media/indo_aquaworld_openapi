@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail.dart';
@@ -232,6 +233,7 @@ class KompetisiApi {
   /// Ambil daftar kompetisi
   ///
   /// Parameters:
+  /// * [kompetisiCari] - Kta kunci untuk mencari kompetisi berdasarkan nama atau tempat
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -242,6 +244,7 @@ class KompetisiApi {
   /// Returns a [Future] containing a [Response] with a [RespondKompetisiList] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondKompetisiList>> getKompetisi({ 
+    String? kompetisiCari,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -269,9 +272,14 @@ class KompetisiApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (kompetisiCari != null) r'kompetisiCari': encodeQueryParameter(_serializers, kompetisiCari, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
