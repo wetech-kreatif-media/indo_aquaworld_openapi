@@ -16,7 +16,7 @@ part 'request_user_register.g.dart';
 /// * [handphone] 
 /// * [password] 
 /// * [passwordConfirm] 
-/// * [kota] 
+/// * [city] 
 @BuiltValue()
 abstract class RequestUserRegister implements Built<RequestUserRegister, RequestUserRegisterBuilder> {
   @BuiltValueField(wireName: r'name')
@@ -34,8 +34,8 @@ abstract class RequestUserRegister implements Built<RequestUserRegister, Request
   @BuiltValueField(wireName: r'password_confirm')
   String? get passwordConfirm;
 
-  @BuiltValueField(wireName: r'kota')
-  String? get kota;
+  @BuiltValueField(wireName: r'city')
+  String? get city;
 
   RequestUserRegister._();
 
@@ -95,10 +95,10 @@ class _$RequestUserRegisterSerializer implements PrimitiveSerializer<RequestUser
         specifiedType: const FullType(String),
       );
     }
-    if (object.kota != null) {
-      yield r'kota';
+    if (object.city != null) {
+      yield r'city';
       yield serializers.serialize(
-        object.kota,
+        object.city,
         specifiedType: const FullType(String),
       );
     }
@@ -160,12 +160,12 @@ class _$RequestUserRegisterSerializer implements PrimitiveSerializer<RequestUser
           ) as String;
           result.passwordConfirm = valueDes;
           break;
-        case r'kota':
+        case r'city':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.kota = valueDes;
+          result.city = valueDes;
           break;
         default:
           unhandled.add(key);

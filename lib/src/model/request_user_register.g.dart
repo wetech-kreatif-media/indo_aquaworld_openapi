@@ -18,7 +18,7 @@ class _$RequestUserRegister extends RequestUserRegister {
   @override
   final String? passwordConfirm;
   @override
-  final String? kota;
+  final String? city;
 
   factory _$RequestUserRegister(
           [void Function(RequestUserRegisterBuilder)? updates]) =>
@@ -30,7 +30,7 @@ class _$RequestUserRegister extends RequestUserRegister {
       this.handphone,
       this.password,
       this.passwordConfirm,
-      this.kota})
+      this.city})
       : super._();
 
   @override
@@ -51,7 +51,7 @@ class _$RequestUserRegister extends RequestUserRegister {
         handphone == other.handphone &&
         password == other.password &&
         passwordConfirm == other.passwordConfirm &&
-        kota == other.kota;
+        city == other.city;
   }
 
   @override
@@ -62,7 +62,7 @@ class _$RequestUserRegister extends RequestUserRegister {
     _$hash = $jc(_$hash, handphone.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, passwordConfirm.hashCode);
-    _$hash = $jc(_$hash, kota.hashCode);
+    _$hash = $jc(_$hash, city.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -75,7 +75,7 @@ class _$RequestUserRegister extends RequestUserRegister {
           ..add('handphone', handphone)
           ..add('password', password)
           ..add('passwordConfirm', passwordConfirm)
-          ..add('kota', kota))
+          ..add('city', city))
         .toString();
   }
 }
@@ -105,9 +105,9 @@ class RequestUserRegisterBuilder
   set passwordConfirm(String? passwordConfirm) =>
       _$this._passwordConfirm = passwordConfirm;
 
-  String? _kota;
-  String? get kota => _$this._kota;
-  set kota(String? kota) => _$this._kota = kota;
+  String? _city;
+  String? get city => _$this._city;
+  set city(String? city) => _$this._city = city;
 
   RequestUserRegisterBuilder() {
     RequestUserRegister._defaults(this);
@@ -121,7 +121,7 @@ class RequestUserRegisterBuilder
       _handphone = $v.handphone;
       _password = $v.password;
       _passwordConfirm = $v.passwordConfirm;
-      _kota = $v.kota;
+      _city = $v.city;
       _$v = null;
     }
     return this;
@@ -149,7 +149,7 @@ class RequestUserRegisterBuilder
             handphone: handphone,
             password: password,
             passwordConfirm: passwordConfirm,
-            kota: kota);
+            city: city);
     replace(_$result);
     return _$result;
   }

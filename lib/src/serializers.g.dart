@@ -8,6 +8,7 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestKompetisiDetail.serializer)
+      ..add(RequestRegisterKompetisiByNominasi.serializer)
       ..add(RequestUserEmail.serializer)
       ..add(RequestUserEmailPassword.serializer)
       ..add(RequestUserOtp.serializer)
@@ -18,8 +19,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondKompetisiDetailData.serializer)
       ..add(RespondKompetisiList.serializer)
       ..add(RespondKompetisiListDataInner.serializer)
-      ..add(RespondKompetisiNomination.serializer)
-      ..add(RespondKompetisiNominationDataInner.serializer)
+      ..add(RespondKompetisiNominationDetail.serializer)
+      ..add(RespondKompetisiNominationDetailData.serializer)
+      ..add(RespondKompetisiNominationDetailDataJudgesInner.serializer)
+      ..add(RespondKompetisiNominationList.serializer)
+      ..add(RespondKompetisiNominationListById.serializer)
+      ..add(RespondKompetisiNominationListByIdDataInner.serializer)
+      ..add(RespondKompetisiNominationListDataInner.serializer)
       ..add(RespondKompetisiParticipants.serializer)
       ..add(RespondKompetisiParticipantsDataInner.serializer)
       ..add(RespondUserEmail.serializer)
@@ -29,9 +35,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(RespondKompetisiListDataInner)]),
           () => new ListBuilder<RespondKompetisiListDataInner>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondKompetisiNominationDetailDataJudgesInner)
+          ]),
+          () => new ListBuilder<
+              RespondKompetisiNominationDetailDataJudgesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondKompetisiNominationListByIdDataInner)
+          ]),
+          () => new ListBuilder<RespondKompetisiNominationListByIdDataInner>())
+      ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(RespondKompetisiNominationDataInner)]),
-          () => new ListBuilder<RespondKompetisiNominationDataInner>())
+              const [const FullType(RespondKompetisiNominationListDataInner)]),
+          () => new ListBuilder<RespondKompetisiNominationListDataInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondKompetisiParticipantsDataInner)]),

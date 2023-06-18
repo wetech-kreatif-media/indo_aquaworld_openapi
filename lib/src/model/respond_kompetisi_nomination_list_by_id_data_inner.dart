@@ -6,20 +6,23 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_kompetisi_participants_data_inner.g.dart';
+part 'respond_kompetisi_nomination_list_by_id_data_inner.g.dart';
 
-/// RespondKompetisiParticipantsDataInner
+/// RespondKompetisiNominationListByIdDataInner
 ///
 /// Properties:
 /// * [id] 
+/// * [tank] 
 /// * [name] 
 /// * [photo] 
 /// * [city] 
-/// * [nomination] 
 @BuiltValue()
-abstract class RespondKompetisiParticipantsDataInner implements Built<RespondKompetisiParticipantsDataInner, RespondKompetisiParticipantsDataInnerBuilder> {
+abstract class RespondKompetisiNominationListByIdDataInner implements Built<RespondKompetisiNominationListByIdDataInner, RespondKompetisiNominationListByIdDataInnerBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
+
+  @BuiltValueField(wireName: r'tank')
+  String? get tank;
 
   @BuiltValueField(wireName: r'name')
   String get name;
@@ -30,30 +33,27 @@ abstract class RespondKompetisiParticipantsDataInner implements Built<RespondKom
   @BuiltValueField(wireName: r'city')
   String get city;
 
-  @BuiltValueField(wireName: r'nomination')
-  String get nomination;
+  RespondKompetisiNominationListByIdDataInner._();
 
-  RespondKompetisiParticipantsDataInner._();
-
-  factory RespondKompetisiParticipantsDataInner([void updates(RespondKompetisiParticipantsDataInnerBuilder b)]) = _$RespondKompetisiParticipantsDataInner;
+  factory RespondKompetisiNominationListByIdDataInner([void updates(RespondKompetisiNominationListByIdDataInnerBuilder b)]) = _$RespondKompetisiNominationListByIdDataInner;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondKompetisiParticipantsDataInnerBuilder b) => b;
+  static void _defaults(RespondKompetisiNominationListByIdDataInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondKompetisiParticipantsDataInner> get serializer => _$RespondKompetisiParticipantsDataInnerSerializer();
+  static Serializer<RespondKompetisiNominationListByIdDataInner> get serializer => _$RespondKompetisiNominationListByIdDataInnerSerializer();
 }
 
-class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSerializer<RespondKompetisiParticipantsDataInner> {
+class _$RespondKompetisiNominationListByIdDataInnerSerializer implements PrimitiveSerializer<RespondKompetisiNominationListByIdDataInner> {
   @override
-  final Iterable<Type> types = const [RespondKompetisiParticipantsDataInner, _$RespondKompetisiParticipantsDataInner];
+  final Iterable<Type> types = const [RespondKompetisiNominationListByIdDataInner, _$RespondKompetisiNominationListByIdDataInner];
 
   @override
-  final String wireName = r'RespondKompetisiParticipantsDataInner';
+  final String wireName = r'RespondKompetisiNominationListByIdDataInner';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondKompetisiParticipantsDataInner object, {
+    RespondKompetisiNominationListByIdDataInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -61,6 +61,13 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
       object.id,
       specifiedType: const FullType(String),
     );
+    if (object.tank != null) {
+      yield r'tank';
+      yield serializers.serialize(
+        object.tank,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'name';
     yield serializers.serialize(
       object.name,
@@ -76,17 +83,12 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
       object.city,
       specifiedType: const FullType(String),
     );
-    yield r'nomination';
-    yield serializers.serialize(
-      object.nomination,
-      specifiedType: const FullType(String),
-    );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondKompetisiParticipantsDataInner object, {
+    RespondKompetisiNominationListByIdDataInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -97,7 +99,7 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondKompetisiParticipantsDataInnerBuilder result,
+    required RespondKompetisiNominationListByIdDataInnerBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -110,6 +112,13 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
             specifiedType: const FullType(String),
           ) as String;
           result.id = valueDes;
+          break;
+        case r'tank':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.tank = valueDes;
           break;
         case r'name':
           final valueDes = serializers.deserialize(
@@ -132,13 +141,6 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
           ) as String;
           result.city = valueDes;
           break;
-        case r'nomination':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.nomination = valueDes;
-          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -148,12 +150,12 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
   }
 
   @override
-  RespondKompetisiParticipantsDataInner deserialize(
+  RespondKompetisiNominationListByIdDataInner deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondKompetisiParticipantsDataInnerBuilder();
+    final result = RespondKompetisiNominationListByIdDataInnerBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

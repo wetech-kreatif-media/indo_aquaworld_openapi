@@ -201,7 +201,7 @@ Api daftar user
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUserApi();
-final RequestUserRegister requestUserRegister = {"name":"Hasan","email":"email@gmail.com","handphone":"082213542319","password":"12345","password_confirm":"12345","kota":"Bogor"}; // RequestUserRegister | 
+final RequestUserRegister requestUserRegister = {"name":"Hasan","email":"email@gmail.com","handphone":"082213542319","password":"12345","password_confirm":"12345","city":"Bogor"}; // RequestUserRegister | 
 
 try {
     final response = api.registerUser(requestUserRegister);
