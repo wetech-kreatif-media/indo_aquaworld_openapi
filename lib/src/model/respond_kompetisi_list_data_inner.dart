@@ -15,7 +15,7 @@ part 'respond_kompetisi_list_data_inner.g.dart';
 /// * [date] 
 /// * [place] 
 /// * [title] 
-/// * [participant] - hanya role untuk admin dan juri
+/// * [participant] - hanya role untuk admin dan juri 
 @BuiltValue()
 abstract class RespondKompetisiListDataInner implements Built<RespondKompetisiListDataInner, RespondKompetisiListDataInnerBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -30,7 +30,7 @@ abstract class RespondKompetisiListDataInner implements Built<RespondKompetisiLi
   @BuiltValueField(wireName: r'title')
   String get title;
 
-  /// hanya role untuk admin dan juri
+  /// hanya role untuk admin dan juri 
   @BuiltValueField(wireName: r'participant')
   num? get participant;
 

@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getKompetisiIdNominations**
-> RespondKompotisiNomination getKompetisiIdNominations(kompetisiId)
+> RespondKompetisiNomination getKompetisiIdNominations(kompetisiId)
 
 Ambil daftar nominasi kompetisi per Id
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RespondKompotisiNomination**](RespondKompotisiNomination.md)
+[**RespondKompetisiNomination**](RespondKompetisiNomination.md)
 
 ### Authorization
 

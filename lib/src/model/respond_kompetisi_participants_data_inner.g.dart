@@ -15,7 +15,9 @@ class _$RespondKompetisiParticipantsDataInner
   @override
   final String foto;
   @override
-  final String nominationId;
+  final String kota;
+  @override
+  final String nomination;
 
   factory _$RespondKompetisiParticipantsDataInner(
           [void Function(RespondKompetisiParticipantsDataInnerBuilder)?
@@ -27,7 +29,8 @@ class _$RespondKompetisiParticipantsDataInner
       {required this.id,
       required this.name,
       required this.foto,
-      required this.nominationId})
+      required this.kota,
+      required this.nomination})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondKompetisiParticipantsDataInner', 'id');
@@ -36,7 +39,9 @@ class _$RespondKompetisiParticipantsDataInner
     BuiltValueNullFieldError.checkNotNull(
         foto, r'RespondKompetisiParticipantsDataInner', 'foto');
     BuiltValueNullFieldError.checkNotNull(
-        nominationId, r'RespondKompetisiParticipantsDataInner', 'nominationId');
+        kota, r'RespondKompetisiParticipantsDataInner', 'kota');
+    BuiltValueNullFieldError.checkNotNull(
+        nomination, r'RespondKompetisiParticipantsDataInner', 'nomination');
   }
 
   @override
@@ -56,7 +61,8 @@ class _$RespondKompetisiParticipantsDataInner
         id == other.id &&
         name == other.name &&
         foto == other.foto &&
-        nominationId == other.nominationId;
+        kota == other.kota &&
+        nomination == other.nomination;
   }
 
   @override
@@ -65,7 +71,8 @@ class _$RespondKompetisiParticipantsDataInner
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, foto.hashCode);
-    _$hash = $jc(_$hash, nominationId.hashCode);
+    _$hash = $jc(_$hash, kota.hashCode);
+    _$hash = $jc(_$hash, nomination.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -77,7 +84,8 @@ class _$RespondKompetisiParticipantsDataInner
           ..add('id', id)
           ..add('name', name)
           ..add('foto', foto)
-          ..add('nominationId', nominationId))
+          ..add('kota', kota)
+          ..add('nomination', nomination))
         .toString();
   }
 }
@@ -100,9 +108,13 @@ class RespondKompetisiParticipantsDataInnerBuilder
   String? get foto => _$this._foto;
   set foto(String? foto) => _$this._foto = foto;
 
-  String? _nominationId;
-  String? get nominationId => _$this._nominationId;
-  set nominationId(String? nominationId) => _$this._nominationId = nominationId;
+  String? _kota;
+  String? get kota => _$this._kota;
+  set kota(String? kota) => _$this._kota = kota;
+
+  String? _nomination;
+  String? get nomination => _$this._nomination;
+  set nomination(String? nomination) => _$this._nomination = nomination;
 
   RespondKompetisiParticipantsDataInnerBuilder() {
     RespondKompetisiParticipantsDataInner._defaults(this);
@@ -114,7 +126,8 @@ class RespondKompetisiParticipantsDataInnerBuilder
       _id = $v.id;
       _name = $v.name;
       _foto = $v.foto;
-      _nominationId = $v.nominationId;
+      _kota = $v.kota;
+      _nomination = $v.nomination;
       _$v = null;
     }
     return this;
@@ -144,8 +157,10 @@ class RespondKompetisiParticipantsDataInnerBuilder
                 name, r'RespondKompetisiParticipantsDataInner', 'name'),
             foto: BuiltValueNullFieldError.checkNotNull(
                 foto, r'RespondKompetisiParticipantsDataInner', 'foto'),
-            nominationId: BuiltValueNullFieldError.checkNotNull(nominationId,
-                r'RespondKompetisiParticipantsDataInner', 'nominationId'));
+            kota: BuiltValueNullFieldError.checkNotNull(
+                kota, r'RespondKompetisiParticipantsDataInner', 'kota'),
+            nomination: BuiltValueNullFieldError.checkNotNull(nomination,
+                r'RespondKompetisiParticipantsDataInner', 'nomination'));
     replace(_$result);
     return _$result;
   }

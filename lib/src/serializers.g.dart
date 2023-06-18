@@ -18,10 +18,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondKompetisiDetailData.serializer)
       ..add(RespondKompetisiList.serializer)
       ..add(RespondKompetisiListDataInner.serializer)
+      ..add(RespondKompetisiNomination.serializer)
+      ..add(RespondKompetisiNominationDataInner.serializer)
       ..add(RespondKompetisiParticipants.serializer)
       ..add(RespondKompetisiParticipantsDataInner.serializer)
-      ..add(RespondKompotisiNomination.serializer)
-      ..add(RespondKompotisiNominationDataInner.serializer)
       ..add(RespondUserEmail.serializer)
       ..add(RespondUserEmailData.serializer)
       ..addBuilderFactory(
@@ -30,12 +30,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<RespondKompetisiListDataInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(RespondKompetisiParticipantsDataInner)]),
-          () => new ListBuilder<RespondKompetisiParticipantsDataInner>())
+              const [const FullType(RespondKompetisiNominationDataInner)]),
+          () => new ListBuilder<RespondKompetisiNominationDataInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(RespondKompotisiNominationDataInner)]),
-          () => new ListBuilder<RespondKompotisiNominationDataInner>()))
+              const [const FullType(RespondKompetisiParticipantsDataInner)]),
+          () => new ListBuilder<RespondKompetisiParticipantsDataInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

@@ -25,10 +25,10 @@ import 'package:openapi/src/model/respond_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail_data.dart';
 import 'package:openapi/src/model/respond_kompetisi_list.dart';
 import 'package:openapi/src/model/respond_kompetisi_list_data_inner.dart';
+import 'package:openapi/src/model/respond_kompetisi_nomination.dart';
+import 'package:openapi/src/model/respond_kompetisi_nomination_data_inner.dart';
 import 'package:openapi/src/model/respond_kompetisi_participants.dart';
 import 'package:openapi/src/model/respond_kompetisi_participants_data_inner.dart';
-import 'package:openapi/src/model/respond_kompotisi_nomination.dart';
-import 'package:openapi/src/model/respond_kompotisi_nomination_data_inner.dart';
 import 'package:openapi/src/model/respond_user_email.dart';
 import 'package:openapi/src/model/respond_user_email_data.dart';
 
@@ -46,10 +46,10 @@ part 'serializers.g.dart';
   RespondKompetisiDetailData,
   RespondKompetisiList,
   RespondKompetisiListDataInner,
+  RespondKompetisiNomination,
+  RespondKompetisiNominationDataInner,
   RespondKompetisiParticipants,
   RespondKompetisiParticipantsDataInner,
-  RespondKompotisiNomination,
-  RespondKompotisiNominationDataInner,
   RespondUserEmail,
   RespondUserEmailData,
 ])

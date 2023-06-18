@@ -12,8 +12,8 @@ import 'package:openapi/src/model/request_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_kompetisi_list.dart';
+import 'package:openapi/src/model/respond_kompetisi_nomination.dart';
 import 'package:openapi/src/model/respond_kompetisi_participants.dart';
-import 'package:openapi/src/model/respond_kompotisi_nomination.dart';
 
 class KompetisiApi {
 
@@ -410,9 +410,9 @@ class KompetisiApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RespondKompotisiNomination] as data
+  /// Returns a [Future] containing a [Response] with a [RespondKompetisiNomination] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondKompotisiNomination>> getKompetisiIdNominations({ 
+  Future<Response<RespondKompetisiNomination>> getKompetisiIdNominations({ 
     required String kompetisiId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -449,14 +449,14 @@ class KompetisiApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RespondKompotisiNomination? _responseData;
+    RespondKompetisiNomination? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RespondKompotisiNomination),
-      ) as RespondKompotisiNomination;
+        specifiedType: const FullType(RespondKompetisiNomination),
+      ) as RespondKompetisiNomination;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -468,7 +468,7 @@ class KompetisiApi {
       );
     }
 
-    return Response<RespondKompotisiNomination>(
+    return Response<RespondKompetisiNomination>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

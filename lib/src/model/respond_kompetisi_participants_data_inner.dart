@@ -14,7 +14,8 @@ part 'respond_kompetisi_participants_data_inner.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [foto] 
-/// * [nominationId] 
+/// * [kota] 
+/// * [nomination] 
 @BuiltValue()
 abstract class RespondKompetisiParticipantsDataInner implements Built<RespondKompetisiParticipantsDataInner, RespondKompetisiParticipantsDataInnerBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -26,8 +27,11 @@ abstract class RespondKompetisiParticipantsDataInner implements Built<RespondKom
   @BuiltValueField(wireName: r'foto')
   String get foto;
 
-  @BuiltValueField(wireName: r'nominationId')
-  String get nominationId;
+  @BuiltValueField(wireName: r'kota')
+  String get kota;
+
+  @BuiltValueField(wireName: r'nomination')
+  String get nomination;
 
   RespondKompetisiParticipantsDataInner._();
 
@@ -67,9 +71,14 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
       object.foto,
       specifiedType: const FullType(String),
     );
-    yield r'nominationId';
+    yield r'kota';
     yield serializers.serialize(
-      object.nominationId,
+      object.kota,
+      specifiedType: const FullType(String),
+    );
+    yield r'nomination';
+    yield serializers.serialize(
+      object.nomination,
       specifiedType: const FullType(String),
     );
   }
@@ -116,12 +125,19 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
           ) as String;
           result.foto = valueDes;
           break;
-        case r'nominationId':
+        case r'kota':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.nominationId = valueDes;
+          result.kota = valueDes;
+          break;
+        case r'nomination':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.nomination = valueDes;
           break;
         default:
           unhandled.add(key);
