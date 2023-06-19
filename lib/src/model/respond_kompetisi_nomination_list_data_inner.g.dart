@@ -9,7 +9,9 @@ part of 'respond_kompetisi_nomination_list_data_inner.dart';
 class _$RespondKompetisiNominationListDataInner
     extends RespondKompetisiNominationListDataInner {
   @override
-  final String id;
+  final String komId;
+  @override
+  final String nomId;
   @override
   final String name;
 
@@ -20,10 +22,12 @@ class _$RespondKompetisiNominationListDataInner
           ._build();
 
   _$RespondKompetisiNominationListDataInner._(
-      {required this.id, required this.name})
+      {required this.komId, required this.nomId, required this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        id, r'RespondKompetisiNominationListDataInner', 'id');
+        komId, r'RespondKompetisiNominationListDataInner', 'komId');
+    BuiltValueNullFieldError.checkNotNull(
+        nomId, r'RespondKompetisiNominationListDataInner', 'nomId');
     BuiltValueNullFieldError.checkNotNull(
         name, r'RespondKompetisiNominationListDataInner', 'name');
   }
@@ -42,14 +46,16 @@ class _$RespondKompetisiNominationListDataInner
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RespondKompetisiNominationListDataInner &&
-        id == other.id &&
+        komId == other.komId &&
+        nomId == other.nomId &&
         name == other.name;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, komId.hashCode);
+    _$hash = $jc(_$hash, nomId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -59,7 +65,8 @@ class _$RespondKompetisiNominationListDataInner
   String toString() {
     return (newBuiltValueToStringHelper(
             r'RespondKompetisiNominationListDataInner')
-          ..add('id', id)
+          ..add('komId', komId)
+          ..add('nomId', nomId)
           ..add('name', name))
         .toString();
   }
@@ -71,9 +78,13 @@ class RespondKompetisiNominationListDataInnerBuilder
             RespondKompetisiNominationListDataInnerBuilder> {
   _$RespondKompetisiNominationListDataInner? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+  String? _komId;
+  String? get komId => _$this._komId;
+  set komId(String? komId) => _$this._komId = komId;
+
+  String? _nomId;
+  String? get nomId => _$this._nomId;
+  set nomId(String? nomId) => _$this._nomId = nomId;
 
   String? _name;
   String? get name => _$this._name;
@@ -86,7 +97,8 @@ class RespondKompetisiNominationListDataInnerBuilder
   RespondKompetisiNominationListDataInnerBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _id = $v.id;
+      _komId = $v.komId;
+      _nomId = $v.nomId;
       _name = $v.name;
       _$v = null;
     }
@@ -111,8 +123,10 @@ class RespondKompetisiNominationListDataInnerBuilder
   _$RespondKompetisiNominationListDataInner _build() {
     final _$result = _$v ??
         new _$RespondKompetisiNominationListDataInner._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'RespondKompetisiNominationListDataInner', 'id'),
+            komId: BuiltValueNullFieldError.checkNotNull(
+                komId, r'RespondKompetisiNominationListDataInner', 'komId'),
+            nomId: BuiltValueNullFieldError.checkNotNull(
+                nomId, r'RespondKompetisiNominationListDataInner', 'nomId'),
             name: BuiltValueNullFieldError.checkNotNull(
                 name, r'RespondKompetisiNominationListDataInner', 'name'));
     replace(_$result);

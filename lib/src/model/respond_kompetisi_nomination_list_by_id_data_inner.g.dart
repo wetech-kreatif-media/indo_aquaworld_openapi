@@ -11,13 +11,17 @@ class _$RespondKompetisiNominationListByIdDataInner
   @override
   final String id;
   @override
-  final String? tank;
+  final String tank;
   @override
   final String name;
   @override
   final String photo;
   @override
+  final String userPhoto;
+  @override
   final String city;
+  @override
+  final num grandTotal;
 
   factory _$RespondKompetisiNominationListByIdDataInner(
           [void Function(RespondKompetisiNominationListByIdDataInnerBuilder)?
@@ -28,19 +32,27 @@ class _$RespondKompetisiNominationListByIdDataInner
 
   _$RespondKompetisiNominationListByIdDataInner._(
       {required this.id,
-      this.tank,
+      required this.tank,
       required this.name,
       required this.photo,
-      required this.city})
+      required this.userPhoto,
+      required this.city,
+      required this.grandTotal})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondKompetisiNominationListByIdDataInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        tank, r'RespondKompetisiNominationListByIdDataInner', 'tank');
     BuiltValueNullFieldError.checkNotNull(
         name, r'RespondKompetisiNominationListByIdDataInner', 'name');
     BuiltValueNullFieldError.checkNotNull(
         photo, r'RespondKompetisiNominationListByIdDataInner', 'photo');
     BuiltValueNullFieldError.checkNotNull(
+        userPhoto, r'RespondKompetisiNominationListByIdDataInner', 'userPhoto');
+    BuiltValueNullFieldError.checkNotNull(
         city, r'RespondKompetisiNominationListByIdDataInner', 'city');
+    BuiltValueNullFieldError.checkNotNull(grandTotal,
+        r'RespondKompetisiNominationListByIdDataInner', 'grandTotal');
   }
 
   @override
@@ -61,7 +73,9 @@ class _$RespondKompetisiNominationListByIdDataInner
         tank == other.tank &&
         name == other.name &&
         photo == other.photo &&
-        city == other.city;
+        userPhoto == other.userPhoto &&
+        city == other.city &&
+        grandTotal == other.grandTotal;
   }
 
   @override
@@ -71,7 +85,9 @@ class _$RespondKompetisiNominationListByIdDataInner
     _$hash = $jc(_$hash, tank.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
+    _$hash = $jc(_$hash, userPhoto.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, grandTotal.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -84,7 +100,9 @@ class _$RespondKompetisiNominationListByIdDataInner
           ..add('tank', tank)
           ..add('name', name)
           ..add('photo', photo)
-          ..add('city', city))
+          ..add('userPhoto', userPhoto)
+          ..add('city', city)
+          ..add('grandTotal', grandTotal))
         .toString();
   }
 }
@@ -111,9 +129,17 @@ class RespondKompetisiNominationListByIdDataInnerBuilder
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
+  String? _userPhoto;
+  String? get userPhoto => _$this._userPhoto;
+  set userPhoto(String? userPhoto) => _$this._userPhoto = userPhoto;
+
   String? _city;
   String? get city => _$this._city;
   set city(String? city) => _$this._city = city;
+
+  num? _grandTotal;
+  num? get grandTotal => _$this._grandTotal;
+  set grandTotal(num? grandTotal) => _$this._grandTotal = grandTotal;
 
   RespondKompetisiNominationListByIdDataInnerBuilder() {
     RespondKompetisiNominationListByIdDataInner._defaults(this);
@@ -126,7 +152,9 @@ class RespondKompetisiNominationListByIdDataInnerBuilder
       _tank = $v.tank;
       _name = $v.name;
       _photo = $v.photo;
+      _userPhoto = $v.userPhoto;
       _city = $v.city;
+      _grandTotal = $v.grandTotal;
       _$v = null;
     }
     return this;
@@ -153,13 +181,18 @@ class RespondKompetisiNominationListByIdDataInnerBuilder
         new _$RespondKompetisiNominationListByIdDataInner._(
             id: BuiltValueNullFieldError.checkNotNull(
                 id, r'RespondKompetisiNominationListByIdDataInner', 'id'),
-            tank: tank,
+            tank: BuiltValueNullFieldError.checkNotNull(
+                tank, r'RespondKompetisiNominationListByIdDataInner', 'tank'),
             name: BuiltValueNullFieldError.checkNotNull(
                 name, r'RespondKompetisiNominationListByIdDataInner', 'name'),
             photo: BuiltValueNullFieldError.checkNotNull(
                 photo, r'RespondKompetisiNominationListByIdDataInner', 'photo'),
+            userPhoto: BuiltValueNullFieldError.checkNotNull(
+                userPhoto, r'RespondKompetisiNominationListByIdDataInner', 'userPhoto'),
             city: BuiltValueNullFieldError.checkNotNull(
-                city, r'RespondKompetisiNominationListByIdDataInner', 'city'));
+                city, r'RespondKompetisiNominationListByIdDataInner', 'city'),
+            grandTotal: BuiltValueNullFieldError.checkNotNull(grandTotal,
+                r'RespondKompetisiNominationListByIdDataInner', 'grandTotal'));
     replace(_$result);
     return _$result;
   }

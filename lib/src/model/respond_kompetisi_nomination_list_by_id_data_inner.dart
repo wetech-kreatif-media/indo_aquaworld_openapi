@@ -15,14 +15,16 @@ part 'respond_kompetisi_nomination_list_by_id_data_inner.g.dart';
 /// * [tank] 
 /// * [name] 
 /// * [photo] 
+/// * [userPhoto] 
 /// * [city] 
+/// * [grandTotal] 
 @BuiltValue()
 abstract class RespondKompetisiNominationListByIdDataInner implements Built<RespondKompetisiNominationListByIdDataInner, RespondKompetisiNominationListByIdDataInnerBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
 
   @BuiltValueField(wireName: r'tank')
-  String? get tank;
+  String get tank;
 
   @BuiltValueField(wireName: r'name')
   String get name;
@@ -30,8 +32,14 @@ abstract class RespondKompetisiNominationListByIdDataInner implements Built<Resp
   @BuiltValueField(wireName: r'photo')
   String get photo;
 
+  @BuiltValueField(wireName: r'user_photo')
+  String get userPhoto;
+
   @BuiltValueField(wireName: r'city')
   String get city;
+
+  @BuiltValueField(wireName: r'grand_total')
+  num get grandTotal;
 
   RespondKompetisiNominationListByIdDataInner._();
 
@@ -61,13 +69,11 @@ class _$RespondKompetisiNominationListByIdDataInnerSerializer implements Primiti
       object.id,
       specifiedType: const FullType(String),
     );
-    if (object.tank != null) {
-      yield r'tank';
-      yield serializers.serialize(
-        object.tank,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'tank';
+    yield serializers.serialize(
+      object.tank,
+      specifiedType: const FullType(String),
+    );
     yield r'name';
     yield serializers.serialize(
       object.name,
@@ -78,10 +84,20 @@ class _$RespondKompetisiNominationListByIdDataInnerSerializer implements Primiti
       object.photo,
       specifiedType: const FullType(String),
     );
+    yield r'user_photo';
+    yield serializers.serialize(
+      object.userPhoto,
+      specifiedType: const FullType(String),
+    );
     yield r'city';
     yield serializers.serialize(
       object.city,
       specifiedType: const FullType(String),
+    );
+    yield r'grand_total';
+    yield serializers.serialize(
+      object.grandTotal,
+      specifiedType: const FullType(num),
     );
   }
 
@@ -134,12 +150,26 @@ class _$RespondKompetisiNominationListByIdDataInnerSerializer implements Primiti
           ) as String;
           result.photo = valueDes;
           break;
+        case r'user_photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.userPhoto = valueDes;
+          break;
         case r'city':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
           result.city = valueDes;
+          break;
+        case r'grand_total':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.grandTotal = valueDes;
           break;
         default:
           unhandled.add(key);

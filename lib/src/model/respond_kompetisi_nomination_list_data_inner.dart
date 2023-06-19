@@ -11,12 +11,16 @@ part 'respond_kompetisi_nomination_list_data_inner.g.dart';
 /// RespondKompetisiNominationListDataInner
 ///
 /// Properties:
-/// * [id] 
+/// * [komId] 
+/// * [nomId] 
 /// * [name] 
 @BuiltValue()
 abstract class RespondKompetisiNominationListDataInner implements Built<RespondKompetisiNominationListDataInner, RespondKompetisiNominationListDataInnerBuilder> {
-  @BuiltValueField(wireName: r'id')
-  String get id;
+  @BuiltValueField(wireName: r'komId')
+  String get komId;
+
+  @BuiltValueField(wireName: r'nomId')
+  String get nomId;
 
   @BuiltValueField(wireName: r'name')
   String get name;
@@ -44,9 +48,14 @@ class _$RespondKompetisiNominationListDataInnerSerializer implements PrimitiveSe
     RespondKompetisiNominationListDataInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
+    yield r'komId';
     yield serializers.serialize(
-      object.id,
+      object.komId,
+      specifiedType: const FullType(String),
+    );
+    yield r'nomId';
+    yield serializers.serialize(
+      object.nomId,
       specifiedType: const FullType(String),
     );
     yield r'name';
@@ -77,12 +86,19 @@ class _$RespondKompetisiNominationListDataInnerSerializer implements PrimitiveSe
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'id':
+        case r'komId':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.id = valueDes;
+          result.komId = valueDes;
+          break;
+        case r'nomId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.nomId = valueDes;
           break;
         case r'name':
           final valueDes = serializers.deserialize(
