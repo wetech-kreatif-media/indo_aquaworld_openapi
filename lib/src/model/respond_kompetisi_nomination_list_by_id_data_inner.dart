@@ -13,10 +13,11 @@ part 'respond_kompetisi_nomination_list_by_id_data_inner.g.dart';
 /// Properties:
 /// * [id] 
 /// * [tank] 
-/// * [name] 
+/// * [rank] 
 /// * [photo] 
-/// * [userPhoto] 
-/// * [city] 
+/// * [participantPhoto] 
+/// * [participantName] 
+/// * [participantCity] 
 /// * [grandTotal] 
 @BuiltValue()
 abstract class RespondKompetisiNominationListByIdDataInner implements Built<RespondKompetisiNominationListByIdDataInner, RespondKompetisiNominationListByIdDataInnerBuilder> {
@@ -26,20 +27,23 @@ abstract class RespondKompetisiNominationListByIdDataInner implements Built<Resp
   @BuiltValueField(wireName: r'tank')
   String get tank;
 
-  @BuiltValueField(wireName: r'name')
-  String get name;
+  @BuiltValueField(wireName: r'rank')
+  num? get rank;
 
   @BuiltValueField(wireName: r'photo')
   String get photo;
 
-  @BuiltValueField(wireName: r'user_photo')
-  String get userPhoto;
+  @BuiltValueField(wireName: r'participant_photo')
+  String get participantPhoto;
 
-  @BuiltValueField(wireName: r'city')
-  String get city;
+  @BuiltValueField(wireName: r'participant_name')
+  String get participantName;
+
+  @BuiltValueField(wireName: r'participant_city')
+  String get participantCity;
 
   @BuiltValueField(wireName: r'grand_total')
-  num get grandTotal;
+  num? get grandTotal;
 
   RespondKompetisiNominationListByIdDataInner._();
 
@@ -74,31 +78,40 @@ class _$RespondKompetisiNominationListByIdDataInnerSerializer implements Primiti
       object.tank,
       specifiedType: const FullType(String),
     );
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
+    if (object.rank != null) {
+      yield r'rank';
+      yield serializers.serialize(
+        object.rank,
+        specifiedType: const FullType(num),
+      );
+    }
     yield r'photo';
     yield serializers.serialize(
       object.photo,
       specifiedType: const FullType(String),
     );
-    yield r'user_photo';
+    yield r'participant_photo';
     yield serializers.serialize(
-      object.userPhoto,
+      object.participantPhoto,
       specifiedType: const FullType(String),
     );
-    yield r'city';
+    yield r'participant_name';
     yield serializers.serialize(
-      object.city,
+      object.participantName,
       specifiedType: const FullType(String),
     );
-    yield r'grand_total';
+    yield r'participant_city';
     yield serializers.serialize(
-      object.grandTotal,
-      specifiedType: const FullType(num),
+      object.participantCity,
+      specifiedType: const FullType(String),
     );
+    if (object.grandTotal != null) {
+      yield r'grand_total';
+      yield serializers.serialize(
+        object.grandTotal,
+        specifiedType: const FullType(num),
+      );
+    }
   }
 
   @override
@@ -136,12 +149,12 @@ class _$RespondKompetisiNominationListByIdDataInnerSerializer implements Primiti
           ) as String;
           result.tank = valueDes;
           break;
-        case r'name':
+        case r'rank':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.name = valueDes;
+            specifiedType: const FullType(num),
+          ) as num;
+          result.rank = valueDes;
           break;
         case r'photo':
           final valueDes = serializers.deserialize(
@@ -150,19 +163,26 @@ class _$RespondKompetisiNominationListByIdDataInnerSerializer implements Primiti
           ) as String;
           result.photo = valueDes;
           break;
-        case r'user_photo':
+        case r'participant_photo':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.userPhoto = valueDes;
+          result.participantPhoto = valueDes;
           break;
-        case r'city':
+        case r'participant_name':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.city = valueDes;
+          result.participantName = valueDes;
+          break;
+        case r'participant_city':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.participantCity = valueDes;
           break;
         case r'grand_total':
           final valueDes = serializers.deserialize(

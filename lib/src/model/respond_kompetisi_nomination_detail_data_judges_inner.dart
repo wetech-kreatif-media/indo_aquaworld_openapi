@@ -16,6 +16,7 @@ part 'respond_kompetisi_nomination_detail_data_judges_inner.g.dart';
 /// * [body] 
 /// * [color] 
 /// * [fintail] 
+/// * [face] 
 /// * [pearly] 
 /// * [marking] 
 /// * [overAllImpression] 
@@ -36,6 +37,9 @@ abstract class RespondKompetisiNominationDetailDataJudgesInner implements Built<
 
   @BuiltValueField(wireName: r'fintail')
   num? get fintail;
+
+  @BuiltValueField(wireName: r'face')
+  num? get face;
 
   @BuiltValueField(wireName: r'pearly')
   num? get pearly;
@@ -104,6 +108,13 @@ class _$RespondKompetisiNominationDetailDataJudgesInnerSerializer implements Pri
       yield r'fintail';
       yield serializers.serialize(
         object.fintail,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.face != null) {
+      yield r'face';
+      yield serializers.serialize(
+        object.face,
         specifiedType: const FullType(num),
       );
     }
@@ -192,6 +203,13 @@ class _$RespondKompetisiNominationDetailDataJudgesInnerSerializer implements Pri
             specifiedType: const FullType(num),
           ) as num;
           result.fintail = valueDes;
+          break;
+        case r'face':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.face = valueDes;
           break;
         case r'pearly':
           final valueDes = serializers.deserialize(

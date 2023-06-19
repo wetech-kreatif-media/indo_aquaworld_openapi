@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **body** | **num** |  | [optional] 
 **color** | **num** |  | [optional] 
 **fintail** | **num** |  | [optional] 
+**face** | **num** |  | [optional] 
 **pearly** | **num** |  | [optional] 
 **marking** | **num** |  | [optional] 
 **overAllImpression** | **num** |  | [optional] 

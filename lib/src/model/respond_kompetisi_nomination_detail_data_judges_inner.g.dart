@@ -19,6 +19,8 @@ class _$RespondKompetisiNominationDetailDataJudgesInner
   @override
   final num? fintail;
   @override
+  final num? face;
+  @override
   final num? pearly;
   @override
   final num? marking;
@@ -41,6 +43,7 @@ class _$RespondKompetisiNominationDetailDataJudgesInner
       this.body,
       this.color,
       this.fintail,
+      this.face,
       this.pearly,
       this.marking,
       this.overAllImpression,
@@ -67,6 +70,7 @@ class _$RespondKompetisiNominationDetailDataJudgesInner
         body == other.body &&
         color == other.color &&
         fintail == other.fintail &&
+        face == other.face &&
         pearly == other.pearly &&
         marking == other.marking &&
         overAllImpression == other.overAllImpression &&
@@ -81,6 +85,7 @@ class _$RespondKompetisiNominationDetailDataJudgesInner
     _$hash = $jc(_$hash, body.hashCode);
     _$hash = $jc(_$hash, color.hashCode);
     _$hash = $jc(_$hash, fintail.hashCode);
+    _$hash = $jc(_$hash, face.hashCode);
     _$hash = $jc(_$hash, pearly.hashCode);
     _$hash = $jc(_$hash, marking.hashCode);
     _$hash = $jc(_$hash, overAllImpression.hashCode);
@@ -98,6 +103,7 @@ class _$RespondKompetisiNominationDetailDataJudgesInner
           ..add('body', body)
           ..add('color', color)
           ..add('fintail', fintail)
+          ..add('face', face)
           ..add('pearly', pearly)
           ..add('marking', marking)
           ..add('overAllImpression', overAllImpression)
@@ -132,6 +138,10 @@ class RespondKompetisiNominationDetailDataJudgesInnerBuilder
   num? get fintail => _$this._fintail;
   set fintail(num? fintail) => _$this._fintail = fintail;
 
+  num? _face;
+  num? get face => _$this._face;
+  set face(num? face) => _$this._face = face;
+
   num? _pearly;
   num? get pearly => _$this._pearly;
   set pearly(num? pearly) => _$this._pearly = pearly;
@@ -161,6 +171,7 @@ class RespondKompetisiNominationDetailDataJudgesInnerBuilder
       _body = $v.body;
       _color = $v.color;
       _fintail = $v.fintail;
+      _face = $v.face;
       _pearly = $v.pearly;
       _marking = $v.marking;
       _overAllImpression = $v.overAllImpression;
@@ -194,6 +205,7 @@ class RespondKompetisiNominationDetailDataJudgesInnerBuilder
             body: body,
             color: color,
             fintail: fintail,
+            face: face,
             pearly: pearly,
             marking: marking,
             overAllImpression: overAllImpression,

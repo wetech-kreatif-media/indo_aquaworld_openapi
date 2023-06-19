@@ -19,9 +19,11 @@ class _$RespondKompetisiNominationDetailData
   @override
   final String? photo;
   @override
-  final String? name;
+  final String? participantName;
   @override
-  final String? city;
+  final String? participantCity;
+  @override
+  final String? participantPhoto;
   @override
   final BuiltList<RespondKompetisiNominationDetailDataJudgesInner>? judges;
   @override
@@ -41,8 +43,9 @@ class _$RespondKompetisiNominationDetailData
       this.status,
       this.rank,
       this.photo,
-      this.name,
-      this.city,
+      this.participantName,
+      this.participantCity,
+      this.participantPhoto,
       this.judges,
       this.penalty,
       this.grandTotal})
@@ -66,8 +69,9 @@ class _$RespondKompetisiNominationDetailData
         status == other.status &&
         rank == other.rank &&
         photo == other.photo &&
-        name == other.name &&
-        city == other.city &&
+        participantName == other.participantName &&
+        participantCity == other.participantCity &&
+        participantPhoto == other.participantPhoto &&
         judges == other.judges &&
         penalty == other.penalty &&
         grandTotal == other.grandTotal;
@@ -81,8 +85,9 @@ class _$RespondKompetisiNominationDetailData
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, rank.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, participantName.hashCode);
+    _$hash = $jc(_$hash, participantCity.hashCode);
+    _$hash = $jc(_$hash, participantPhoto.hashCode);
     _$hash = $jc(_$hash, judges.hashCode);
     _$hash = $jc(_$hash, penalty.hashCode);
     _$hash = $jc(_$hash, grandTotal.hashCode);
@@ -98,8 +103,9 @@ class _$RespondKompetisiNominationDetailData
           ..add('status', status)
           ..add('rank', rank)
           ..add('photo', photo)
-          ..add('name', name)
-          ..add('city', city)
+          ..add('participantName', participantName)
+          ..add('participantCity', participantCity)
+          ..add('participantPhoto', participantPhoto)
           ..add('judges', judges)
           ..add('penalty', penalty)
           ..add('grandTotal', grandTotal))
@@ -133,13 +139,20 @@ class RespondKompetisiNominationDetailDataBuilder
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _participantName;
+  String? get participantName => _$this._participantName;
+  set participantName(String? participantName) =>
+      _$this._participantName = participantName;
 
-  String? _city;
-  String? get city => _$this._city;
-  set city(String? city) => _$this._city = city;
+  String? _participantCity;
+  String? get participantCity => _$this._participantCity;
+  set participantCity(String? participantCity) =>
+      _$this._participantCity = participantCity;
+
+  String? _participantPhoto;
+  String? get participantPhoto => _$this._participantPhoto;
+  set participantPhoto(String? participantPhoto) =>
+      _$this._participantPhoto = participantPhoto;
 
   ListBuilder<RespondKompetisiNominationDetailDataJudgesInner>? _judges;
   ListBuilder<RespondKompetisiNominationDetailDataJudgesInner> get judges =>
@@ -170,8 +183,9 @@ class RespondKompetisiNominationDetailDataBuilder
       _status = $v.status;
       _rank = $v.rank;
       _photo = $v.photo;
-      _name = $v.name;
-      _city = $v.city;
+      _participantName = $v.participantName;
+      _participantCity = $v.participantCity;
+      _participantPhoto = $v.participantPhoto;
       _judges = $v.judges?.toBuilder();
       _penalty = $v.penalty;
       _grandTotal = $v.grandTotal;
@@ -205,8 +219,9 @@ class RespondKompetisiNominationDetailDataBuilder
               status: status,
               rank: rank,
               photo: photo,
-              name: name,
-              city: city,
+              participantName: participantName,
+              participantCity: participantCity,
+              participantPhoto: participantPhoto,
               judges: _judges?.build(),
               penalty: penalty,
               grandTotal: grandTotal);

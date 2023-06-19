@@ -10,11 +10,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
 **tank** | **String** |  | 
-**name** | **String** |  | 
+**rank** | **num** |  | [optional] 
 **photo** | **String** |  | 
-**userPhoto** | **String** |  | 
-**city** | **String** |  | 
-**grandTotal** | **num** |  | 
+**participantPhoto** | **String** |  | 
+**participantName** | **String** |  | 
+**participantCity** | **String** |  | 
+**grandTotal** | **num** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
