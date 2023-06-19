@@ -741,6 +741,97 @@ class KompetisiApi {
   }
 
   /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi dengan urut rangking
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [nomId] - nominasi id
+  /// * [nominasiCari] - Kata kunci untuk mencari nominasi berdasarkan nama peserta atau tank
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondKompetisiNominationListById] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondKompetisiNominationListById>> getKompetisiNominationsIdSummary({ 
+    required String komId,
+    required String nomId,
+    String? nominasiCari,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nominations/{nomId}/summary'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'auth',
+            'keyName': 'api_key',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (nominasiCari != null) r'nominasiCari': encodeQueryParameter(_serializers, nominasiCari, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondKompetisiNominationListById? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondKompetisiNominationListById),
+      ) as RespondKompetisiNominationListById;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondKompetisiNominationListById>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
   /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
   ///
   /// Parameters:

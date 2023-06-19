@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**getKompetisiIdParticipants**](KompetisiApi.md#getkompetisiidparticipants) | **GET** /kompetisi/{komId}/participants | Ambil daftar peserta kompetisi per Id
 [**getKompetisiNominationId**](KompetisiApi.md#getkompetisinominationid) | **GET** /kompetisi/{komId}/nomination/{komNomId} | Mengambil data detail nominasi kompetisi berdasarkan id nominasi
 [**getKompetisiNominationsId**](KompetisiApi.md#getkompetisinominationsid) | **GET** /kompetisi/{komId}/nominations/{nomId} | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+[**getKompetisiNominationsIdSummary**](KompetisiApi.md#getkompetisinominationsidsummary) | **GET** /kompetisi/{komId}/nominations/{nomId}/summary | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
 [**postKompetisiNominationsId**](KompetisiApi.md#postkompetisinominationsid) | **POST** /kompetisi/{komId}/nominations | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
 
 
@@ -378,6 +379,57 @@ try {
     print(response);
 } catch on DioError (e) {
     print('Exception when calling KompetisiApi->getKompetisiNominationsId: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **nomId** | **String**| nominasi id | 
+ **nominasiCari** | **String**| Kata kunci untuk mencari nominasi berdasarkan nama peserta atau tank | [optional] 
+
+### Return type
+
+[**RespondKompetisiNominationListById**](RespondKompetisiNominationListById.md)
+
+### Authorization
+
+[auth](../README.md#auth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getKompetisiNominationsIdSummary**
+> RespondKompetisiNominationListById getKompetisiNominationsIdSummary(komId, nomId, nominasiCari)
+
+Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+
+Mengambil data daftar nominasi kompetisi berdasarkan id nominasi dengan urut rangking
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: auth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final String nomId = nomId_example; // String | nominasi id
+final String nominasiCari = nominasiCari_example; // String | Kata kunci untuk mencari nominasi berdasarkan nama peserta atau tank
+
+try {
+    final response = api.getKompetisiNominationsIdSummary(komId, nomId, nominasiCari);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->getKompetisiNominationsIdSummary: $e\n');
 }
 ```
 
