@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getKompetisiIdNominations**
-> RespondKompetisiNominationList getKompetisiIdNominations(komId)
+> RespondKompetisiNominationList getKompetisiIdNominations(komId, nominasiCari)
 
 Ambil daftar nominasi kompetisi per Id
 
@@ -228,9 +228,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
+final String nominasiCari = nominasiCari_example; // String | Kata kunci untuk mencari nominasi berdasarkan nama peserta atau tank
 
 try {
-    final response = api.getKompetisiIdNominations(komId);
+    final response = api.getKompetisiIdNominations(komId, nominasiCari);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling KompetisiApi->getKompetisiIdNominations: $e\n');
@@ -242,6 +243,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
+ **nominasiCari** | **String**| Kata kunci untuk mencari nominasi berdasarkan nama peserta atau tank | [optional] 
 
 ### Return type
 
