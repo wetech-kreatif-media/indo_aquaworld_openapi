@@ -15,7 +15,6 @@ import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
-import 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 import 'package:openapi/src/model/request_user_email.dart';
 import 'package:openapi/src/model/request_user_email_password.dart';
 import 'package:openapi/src/model/request_user_otp.dart';
@@ -42,7 +41,6 @@ part 'serializers.g.dart';
 
 @SerializersFor([
   RequestKompetisiDetail,
-  RequestRegisterKompetisiByNominasi,
   RequestUserEmail,
   RequestUserEmailPassword,
   RequestUserOtp,

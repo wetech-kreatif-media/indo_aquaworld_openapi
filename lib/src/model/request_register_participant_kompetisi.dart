@@ -7,49 +7,49 @@ import 'dart:typed_data';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'request_register_kompetisi_by_nominasi.g.dart';
+part 'request_register_participant_kompetisi.g.dart';
 
-/// RequestRegisterKompetisiByNominasi
+/// RequestRegisterParticipantKompetisi
 ///
 /// Properties:
 /// * [nominasiId] 
 /// * [photo] 
-/// * [participantId] 
+/// * [userId] 
 @BuiltValue()
-abstract class RequestRegisterKompetisiByNominasi implements Built<RequestRegisterKompetisiByNominasi, RequestRegisterKompetisiByNominasiBuilder> {
-  @BuiltValueField(wireName: r'nominasi_id')
+abstract class RequestRegisterParticipantKompetisi implements Built<RequestRegisterParticipantKompetisi, RequestRegisterParticipantKompetisiBuilder> {
+  @BuiltValueField(wireName: r'nominasiId')
   String get nominasiId;
 
   @BuiltValueField(wireName: r'photo')
   Uint8List get photo;
 
-  @BuiltValueField(wireName: r'participant_id')
-  String get participantId;
+  @BuiltValueField(wireName: r'userId')
+  String get userId;
 
-  RequestRegisterKompetisiByNominasi._();
+  RequestRegisterParticipantKompetisi._();
 
-  factory RequestRegisterKompetisiByNominasi([void updates(RequestRegisterKompetisiByNominasiBuilder b)]) = _$RequestRegisterKompetisiByNominasi;
+  factory RequestRegisterParticipantKompetisi([void updates(RequestRegisterParticipantKompetisiBuilder b)]) = _$RequestRegisterParticipantKompetisi;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RequestRegisterKompetisiByNominasiBuilder b) => b;
+  static void _defaults(RequestRegisterParticipantKompetisiBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RequestRegisterKompetisiByNominasi> get serializer => _$RequestRegisterKompetisiByNominasiSerializer();
+  static Serializer<RequestRegisterParticipantKompetisi> get serializer => _$RequestRegisterParticipantKompetisiSerializer();
 }
 
-class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSerializer<RequestRegisterKompetisiByNominasi> {
+class _$RequestRegisterParticipantKompetisiSerializer implements PrimitiveSerializer<RequestRegisterParticipantKompetisi> {
   @override
-  final Iterable<Type> types = const [RequestRegisterKompetisiByNominasi, _$RequestRegisterKompetisiByNominasi];
+  final Iterable<Type> types = const [RequestRegisterParticipantKompetisi, _$RequestRegisterParticipantKompetisi];
 
   @override
-  final String wireName = r'RequestRegisterKompetisiByNominasi';
+  final String wireName = r'RequestRegisterParticipantKompetisi';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RequestRegisterKompetisiByNominasi object, {
+    RequestRegisterParticipantKompetisi object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'nominasi_id';
+    yield r'nominasiId';
     yield serializers.serialize(
       object.nominasiId,
       specifiedType: const FullType(String),
@@ -59,9 +59,9 @@ class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSeriali
       object.photo,
       specifiedType: const FullType(Uint8List),
     );
-    yield r'participant_id';
+    yield r'userId';
     yield serializers.serialize(
-      object.participantId,
+      object.userId,
       specifiedType: const FullType(String),
     );
   }
@@ -69,7 +69,7 @@ class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSeriali
   @override
   Object serialize(
     Serializers serializers,
-    RequestRegisterKompetisiByNominasi object, {
+    RequestRegisterParticipantKompetisi object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -80,14 +80,14 @@ class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSeriali
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RequestRegisterKompetisiByNominasiBuilder result,
+    required RequestRegisterParticipantKompetisiBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'nominasi_id':
+        case r'nominasiId':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
@@ -101,12 +101,12 @@ class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSeriali
           ) as Uint8List;
           result.photo = valueDes;
           break;
-        case r'participant_id':
+        case r'userId':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.participantId = valueDes;
+          result.userId = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -117,12 +117,12 @@ class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSeriali
   }
 
   @override
-  RequestRegisterKompetisiByNominasi deserialize(
+  RequestRegisterParticipantKompetisi deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RequestRegisterKompetisiByNominasiBuilder();
+    final result = RequestRegisterParticipantKompetisiBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

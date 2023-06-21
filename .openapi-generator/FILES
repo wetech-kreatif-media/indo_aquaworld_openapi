@@ -3,7 +3,6 @@ README.md
 analysis_options.yaml
 doc/KompetisiApi.md
 doc/RequestKompetisiDetail.md
-doc/RequestRegisterKompetisiByNominasi.md
 doc/RequestUserEmail.md
 doc/RequestUserEmailPassword.md
 doc/RequestUserOtp.md
@@ -39,7 +38,6 @@ lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
 lib/src/model/request_kompetisi_detail.dart
-lib/src/model/request_register_kompetisi_by_nominasi.dart
 lib/src/model/request_user_email.dart
 lib/src/model/request_user_email_password.dart
 lib/src/model/request_user_otp.dart

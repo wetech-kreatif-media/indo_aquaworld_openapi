@@ -13,7 +13,6 @@ export 'package:openapi/src/api/kompetisi_api.dart';
 export 'package:openapi/src/api/user_api.dart';
 
 export 'package:openapi/src/model/request_kompetisi_detail.dart';
-export 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 export 'package:openapi/src/model/request_user_email.dart';
 export 'package:openapi/src/model/request_user_email_password.dart';
 export 'package:openapi/src/model/request_user_otp.dart';

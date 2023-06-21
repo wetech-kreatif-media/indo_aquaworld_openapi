@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**getKompetisiNominationId**](KompetisiApi.md#getkompetisinominationid) | **GET** /kompetisi/{komId}/nomination/{komNomId} | Mengambil data detail nominasi kompetisi berdasarkan id nominasi
 [**getKompetisiNominationsId**](KompetisiApi.md#getkompetisinominationsid) | **GET** /kompetisi/{komId}/nominations/{nomId} | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
 [**getKompetisiNominationsIdSummary**](KompetisiApi.md#getkompetisinominationsidsummary) | **GET** /kompetisi/{komId}/nominations/{nomId}/summary | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
-[**postKompetisiNominationsId**](KompetisiApi.md#postkompetisinominationsid) | **POST** /kompetisi/{komId}/nominations | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+[**postKompetisiNominationId**](KompetisiApi.md#postkompetisinominationid) | **POST** /kompetisi/{komId}/participant | Daftar nominasi kompetisi berdasarkan id nominasi
 
 
 # **addKompetisi**
@@ -31,10 +31,9 @@ Tambah kompetisi baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final RequestKompetisiDetail requestKompetisiDetail = {"title":"Lomba Ikan Flowerhorn","place":"Aeon Mall Sentul City","notes":"Lorep impusmmm","address":"Jl. Ir. H. Djuamda No. 78 Sentul City Bogor Indonesia 16810","link_maps":"https://goo.gl/maps/a6ETqYvtAMjqyYYC7","date":"yyyy-MM-ddTHH:mm:ss","phone_number":"6565457986241"}; // RequestKompetisiDetail | 
@@ -59,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -78,10 +77,9 @@ Sunting kompetisi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
@@ -108,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -127,13 +125,12 @@ Ambil daftar kompetisi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
-final String kompetisiCari = kompetisiCari_example; // String | Kta kunci untuk mencari kompetisi berdasarkan nama atau tempat
+final String kompetisiCari = kompetisiCari_example; // String | Kata kunci untuk mencari kompetisi berdasarkan nama atau tempat
 
 try {
     final response = api.getKompetisi(kompetisiCari);
@@ -147,7 +144,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **kompetisiCari** | **String**| Kta kunci untuk mencari kompetisi berdasarkan nama atau tempat | [optional] 
+ **kompetisiCari** | **String**| Kata kunci untuk mencari kompetisi berdasarkan nama atau tempat | [optional] 
 
 ### Return type
 
@@ -155,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -174,10 +171,9 @@ Ambil daftar kompetisi per Id
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
@@ -202,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -221,10 +217,9 @@ Ambil daftar kompetisi per Id
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
@@ -251,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -270,10 +265,9 @@ Ambil daftar peserta kompetisi per Id
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
@@ -298,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -317,10 +311,9 @@ Mengambil data detail nominasi kompetisi berdasarkan id nominasi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
@@ -347,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -366,10 +359,9 @@ Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
@@ -398,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -417,10 +409,9 @@ Mengambil data daftar nominasi kompetisi berdasarkan id nominasi dengan urut ran
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
@@ -449,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -458,30 +449,31 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **postKompetisiNominationsId**
-> RespondKompetisiNominationListById postKompetisiNominationsId(komId, requestRegisterKompetisiByNominasi)
+# **postKompetisiNominationId**
+> RespondGlobal postKompetisiNominationId(komId, nominasiId, photo, participantId)
 
-Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+Daftar nominasi kompetisi berdasarkan id nominasi
 
-Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+Daftar nominasi kompetisi berdasarkan id nominasi
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: auth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('auth').apiKeyPrefix = 'Bearer';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
-final RequestRegisterKompetisiByNominasi requestRegisterKompetisiByNominasi = {"userId":"uuid","nominasiId":"uuid","photo":"dfasdfsd/sdfsdfsd.jpg"}; // RequestRegisterKompetisiByNominasi | 
+final String nominasiId = nominasiId_example; // String | 
+final MultipartFile photo = BINARY_DATA_HERE; // MultipartFile | 
+final String participantId = participantId_example; // String | 
 
 try {
-    final response = api.postKompetisiNominationsId(komId, requestRegisterKompetisiByNominasi);
+    final response = api.postKompetisiNominationId(komId, nominasiId, photo, participantId);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling KompetisiApi->postKompetisiNominationsId: $e\n');
+    print('Exception when calling KompetisiApi->postKompetisiNominationId: $e\n');
 }
 ```
 
@@ -490,19 +482,21 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
- **requestRegisterKompetisiByNominasi** | [**RequestRegisterKompetisiByNominasi**](RequestRegisterKompetisiByNominasi.md)|  | [optional] 
+ **nominasiId** | **String**|  | 
+ **photo** | **MultipartFile**|  | 
+ **participantId** | **String**|  | 
 
 ### Return type
 
-[**RespondKompetisiNominationListById**](RespondKompetisiNominationListById.md)
+[**RespondGlobal**](RespondGlobal.md)
 
 ### Authorization
 
-[auth](../README.md#auth)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

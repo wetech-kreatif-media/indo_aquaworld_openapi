@@ -9,7 +9,6 @@ import 'package:dio/dio.dart';
 
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
-import 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_kompetisi_list.dart';
@@ -58,10 +57,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -162,10 +160,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -236,7 +233,7 @@ class KompetisiApi {
   /// Ambil daftar kompetisi
   ///
   /// Parameters:
-  /// * [kompetisiCari] - Kta kunci untuk mencari kompetisi berdasarkan nama atau tempat
+  /// * [kompetisiCari] - Kata kunci untuk mencari kompetisi berdasarkan nama atau tempat
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -264,10 +261,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -351,10 +347,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -435,10 +430,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -522,10 +516,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -606,10 +599,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -692,10 +684,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -783,10 +774,9 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
@@ -838,12 +828,14 @@ class KompetisiApi {
     );
   }
 
-  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
-  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+  /// Daftar nominasi kompetisi berdasarkan id nominasi
+  /// Daftar nominasi kompetisi berdasarkan id nominasi
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
-  /// * [requestRegisterKompetisiByNominasi] - 
+  /// * [nominasiId] 
+  /// * [photo] 
+  /// * [participantId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -851,11 +843,13 @@ class KompetisiApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RespondKompetisiNominationListById] as data
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondKompetisiNominationListById>> postKompetisiNominationsId({ 
+  Future<Response<RespondGlobal>> postKompetisiNominationId({ 
     required String komId,
-    RequestRegisterKompetisiByNominasi? requestRegisterKompetisiByNominasi,
+    required String nominasiId,
+    required MultipartFile photo,
+    required String participantId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -863,7 +857,7 @@ class KompetisiApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/kompetisi/{komId}/nominations'.replaceAll('{' r'komId' '}', komId.toString());
+    final _path = r'/kompetisi/{komId}/participant'.replaceAll('{' r'komId' '}', komId.toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -872,23 +866,25 @@ class KompetisiApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'apiKey',
-            'name': 'auth',
-            'keyName': 'api_key',
-            'where': 'header',
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
           },
         ],
         ...?extra,
       },
-      contentType: 'application/json',
+      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
     dynamic _bodyData;
 
     try {
-      const _type = FullType(RequestRegisterKompetisiByNominasi);
-      _bodyData = requestRegisterKompetisiByNominasi == null ? null : _serializers.serialize(requestRegisterKompetisiByNominasi, specifiedType: _type);
+      _bodyData = FormData.fromMap(<String, dynamic>{
+        r'nominasi_id': encodeFormParameter(_serializers, nominasiId, const FullType(String)),
+        r'photo': photo,
+        r'participant_id': encodeFormParameter(_serializers, participantId, const FullType(String)),
+      });
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -911,14 +907,14 @@ class KompetisiApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RespondKompetisiNominationListById? _responseData;
+    RespondGlobal? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RespondKompetisiNominationListById),
-      ) as RespondKompetisiNominationListById;
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -930,7 +926,7 @@ class KompetisiApi {
       );
     }
 
-    return Response<RespondKompetisiNominationListById>(
+    return Response<RespondGlobal>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

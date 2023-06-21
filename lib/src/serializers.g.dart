@@ -8,7 +8,6 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestKompetisiDetail.serializer)
-      ..add(RequestRegisterKompetisiByNominasi.serializer)
       ..add(RequestUserEmail.serializer)
       ..add(RequestUserEmailPassword.serializer)
       ..add(RequestUserOtp.serializer)
