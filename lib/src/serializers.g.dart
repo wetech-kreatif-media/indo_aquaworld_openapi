@@ -7,6 +7,8 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(RequestAddNominasi.serializer)
+      ..add(RequestEditNominasi.serializer)
       ..add(RequestKompetisiDetail.serializer)
       ..add(RequestUserEmail.serializer)
       ..add(RequestUserEmailPassword.serializer)

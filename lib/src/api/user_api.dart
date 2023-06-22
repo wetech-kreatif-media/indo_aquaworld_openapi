@@ -118,7 +118,7 @@ class UserApi {
     );
   }
 
-  /// Login user dengan facebook
+  /// Login Facebook
   /// Api login email dan password user 
   ///
   /// Parameters:
@@ -213,7 +213,7 @@ class UserApi {
     );
   }
 
-  /// Login user
+  /// Login
   /// Api login email dan password user 
   ///
   /// Parameters:
@@ -308,7 +308,7 @@ class UserApi {
     );
   }
 
-  /// Create new password
+  /// Create New Password
   /// Create new password
   ///
   /// Parameters:
@@ -403,7 +403,7 @@ class UserApi {
     );
   }
 
-  /// Register user
+  /// Register
   /// Api daftar user 
   ///
   /// Parameters:
@@ -498,7 +498,7 @@ class UserApi {
     );
   }
 
-  /// Kirim otp ke server
+  /// Kirim OTP
   /// Kirim otp ke server
   ///
   /// Parameters:

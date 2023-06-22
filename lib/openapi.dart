@@ -12,6 +12,8 @@ export 'package:openapi/src/model/date.dart';
 export 'package:openapi/src/api/kompetisi_api.dart';
 export 'package:openapi/src/api/user_api.dart';
 
+export 'package:openapi/src/model/request_add_nominasi.dart';
+export 'package:openapi/src/model/request_edit_nominasi.dart';
 export 'package:openapi/src/model/request_kompetisi_detail.dart';
 export 'package:openapi/src/model/request_user_email.dart';
 export 'package:openapi/src/model/request_user_email_password.dart';

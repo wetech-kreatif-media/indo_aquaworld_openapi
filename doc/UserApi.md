@@ -10,11 +10,11 @@ All URIs are relative to *http://localhost:3000*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**forgotUser**](UserApi.md#forgotuser) | **POST** /forgot | Forgot
-[**loginFacebookUser**](UserApi.md#loginfacebookuser) | **POST** /login-facebook | Login user dengan facebook
-[**loginUser**](UserApi.md#loginuser) | **POST** /login | Login user
-[**newPasswordUser**](UserApi.md#newpassworduser) | **PUT** /new-password | Create new password
-[**registerUser**](UserApi.md#registeruser) | **POST** /register | Register user
-[**sendOtpUser**](UserApi.md#sendotpuser) | **POST** /send-otp | Kirim otp ke server
+[**loginFacebookUser**](UserApi.md#loginfacebookuser) | **POST** /login-facebook | Login Facebook
+[**loginUser**](UserApi.md#loginuser) | **POST** /login | Login
+[**newPasswordUser**](UserApi.md#newpassworduser) | **PUT** /new-password | Create New Password
+[**registerUser**](UserApi.md#registeruser) | **POST** /register | Register
+[**sendOtpUser**](UserApi.md#sendotpuser) | **POST** /send-otp | Kirim OTP
 
 
 # **forgotUser**
@@ -63,7 +63,7 @@ No authorization required
 # **loginFacebookUser**
 > RespondUserEmail loginFacebookUser(requestUserEmail)
 
-Login user dengan facebook
+Login Facebook
 
 Api login email dan password user 
 
@@ -106,7 +106,7 @@ No authorization required
 # **loginUser**
 > RespondUserEmail loginUser(requestUserEmailPassword)
 
-Login user
+Login
 
 Api login email dan password user 
 
@@ -149,7 +149,7 @@ No authorization required
 # **newPasswordUser**
 > RespondGlobal newPasswordUser(requestUserPassword)
 
-Create new password
+Create New Password
 
 Create new password
 
@@ -192,7 +192,7 @@ No authorization required
 # **registerUser**
 > RespondGlobal registerUser(requestUserRegister)
 
-Register user
+Register
 
 Api daftar user 
 
@@ -235,7 +235,7 @@ No authorization required
 # **sendOtpUser**
 > RespondUserEmail sendOtpUser(requestUserOtp)
 
-Kirim otp ke server
+Kirim OTP
 
 Kirim otp ke server
 

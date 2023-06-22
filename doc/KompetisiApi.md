@@ -11,14 +11,16 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addKompetisi**](KompetisiApi.md#addkompetisi) | **POST** /kompetisi | Tambah kompetisi
 [**editKompetisiId**](KompetisiApi.md#editkompetisiid) | **PUT** /kompetisi/{komId} | Sunting kompetisi
-[**getKompetisi**](KompetisiApi.md#getkompetisi) | **GET** /kompetisi | Ambil daftar kompetisi
-[**getKompetisiId**](KompetisiApi.md#getkompetisiid) | **GET** /kompetisi/{komId} | Ambil daftar kompetisi per Id
-[**getKompetisiIdNominations**](KompetisiApi.md#getkompetisiidnominations) | **GET** /kompetisi/{komId}/nominations | Ambil daftar nominasi kompetisi per Id
-[**getKompetisiIdParticipants**](KompetisiApi.md#getkompetisiidparticipants) | **GET** /kompetisi/{komId}/participants | Ambil daftar peserta kompetisi per Id
-[**getKompetisiNominationId**](KompetisiApi.md#getkompetisinominationid) | **GET** /kompetisi/{komId}/nomination/{komNomId} | Mengambil data detail nominasi kompetisi berdasarkan id nominasi
-[**getKompetisiNominationsId**](KompetisiApi.md#getkompetisinominationsid) | **GET** /kompetisi/{komId}/nominations/{nomId} | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
-[**getKompetisiNominationsIdSummary**](KompetisiApi.md#getkompetisinominationsidsummary) | **GET** /kompetisi/{komId}/nominations/{nomId}/summary | Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
-[**postKompetisiNominationId**](KompetisiApi.md#postkompetisinominationid) | **POST** /kompetisi/{komId}/participant | Daftar nominasi kompetisi berdasarkan id nominasi
+[**getKompetisi**](KompetisiApi.md#getkompetisi) | **GET** /kompetisi | Daftar Kompesiti
+[**getKompetisiId**](KompetisiApi.md#getkompetisiid) | **GET** /kompetisi/{komId} | Kompesiti per ID
+[**getKompetisiIdNomination**](KompetisiApi.md#getkompetisiidnomination) | **GET** /kompetisi/{komId}/nomination | Daftar Nominasi per KompetisiId
+[**getKompetisiIdParticipants**](KompetisiApi.md#getkompetisiidparticipants) | **GET** /kompetisi/{komId}/participant | Daftar Peserta Kompetisi
+[**getKompetisiNominationId**](KompetisiApi.md#getkompetisinominationid) | **GET** /kompetisi/{komId}/nomination/{participant_id}/result | Hasil Juri 
+[**getKompetisiNominationsId**](KompetisiApi.md#getkompetisinominationsid) | **GET** /kompetisi/{komId}/nomination/{nomId} | Daftar Peserta Nominasi
+[**getKompetisiNominationsIdSummary**](KompetisiApi.md#getkompetisinominationsidsummary) | **GET** /kompetisi/{komId}/nomination/{nomId}/summary | Daftar Peserta Nominasi Summay
+[**postKompetisiIdNomination**](KompetisiApi.md#postkompetisiidnomination) | **POST** /kompetisi/{komId}/nomination | Tambah Nominasi
+[**postKompetisiNominationId**](KompetisiApi.md#postkompetisinominationid) | **POST** /kompetisi/{komId}/participant | Registrasi Peserta
+[**putKompetisiIdNomination**](KompetisiApi.md#putkompetisiidnomination) | **PUT** /kompetisi/{komId}/nomination | Edit Nominasi
 
 
 # **addKompetisi**
@@ -26,7 +28,7 @@ Method | HTTP request | Description
 
 Tambah kompetisi
 
-Tambah kompetisi baru
+Mambuat kompetisi baru
 
 ### Example
 ```dart
@@ -118,9 +120,9 @@ Name | Type | Description  | Notes
 # **getKompetisi**
 > RespondKompetisiList getKompetisi(kompetisiCari)
 
-Ambil daftar kompetisi
+Daftar Kompesiti
 
-Ambil daftar kompetisi
+Mengambil data daftar kompesiti
 
 ### Example
 ```dart
@@ -164,9 +166,9 @@ Name | Type | Description  | Notes
 # **getKompetisiId**
 > RespondKompetisiDetail getKompetisiId(komId)
 
-Ambil daftar kompetisi per Id
+Kompesiti per ID
 
-Ambil daftar kompetisi per Id
+Ambil daftar kompetisi satuan dengan id unique
 
 ### Example
 ```dart
@@ -207,12 +209,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getKompetisiIdNominations**
-> RespondKompetisiNominationList getKompetisiIdNominations(komId, nominasiCari)
+# **getKompetisiIdNomination**
+> RespondKompetisiNominationList getKompetisiIdNomination(komId, nominasiCari)
 
-Ambil daftar nominasi kompetisi per Id
+Daftar Nominasi per KompetisiId
 
-Ambil daftar kompetisi per Id
+Mengambil data daftar Nominasi atau Kelas per  KompetisiId unique, dan mencari dengan kata kunci nama nominasi/ kelas
 
 ### Example
 ```dart
@@ -226,10 +228,10 @@ final String komId = komId_example; // String | kompetisiId
 final String nominasiCari = nominasiCari_example; // String | Kata kunci untuk mencari nominasi berdasarkan nama peserta atau tank
 
 try {
-    final response = api.getKompetisiIdNominations(komId, nominasiCari);
+    final response = api.getKompetisiIdNomination(komId, nominasiCari);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling KompetisiApi->getKompetisiIdNominations: $e\n');
+    print('Exception when calling KompetisiApi->getKompetisiIdNomination: $e\n');
 }
 ```
 
@@ -258,9 +260,9 @@ Name | Type | Description  | Notes
 # **getKompetisiIdParticipants**
 > RespondKompetisiParticipants getKompetisiIdParticipants(komId)
 
-Ambil daftar peserta kompetisi per Id
+Daftar Peserta Kompetisi
 
-Ambil daftar peserta kompetisi per Id
+Mengambil daftar peserta kompetisi berdasarkan id kompetisi
 
 ### Example
 ```dart
@@ -302,11 +304,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getKompetisiNominationId**
-> RespondKompetisiNominationDetail getKompetisiNominationId(komId, komNomId)
+> RespondKompetisiNominationDetail getKompetisiNominationId(komId, participantId)
 
-Mengambil data detail nominasi kompetisi berdasarkan id nominasi
+Hasil Juri 
 
-Mengambil data detail nominasi kompetisi berdasarkan id nominasi
+Mengambil data detail nominasi kompetisi berdasarkan id nominasi. atau Hasil penilain Juri
 
 ### Example
 ```dart
@@ -317,10 +319,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
-final String komNomId = komNomId_example; // String | 
+final String participantId = participantId_example; // String | 
 
 try {
-    final response = api.getKompetisiNominationId(komId, komNomId);
+    final response = api.getKompetisiNominationId(komId, participantId);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling KompetisiApi->getKompetisiNominationId: $e\n');
@@ -332,7 +334,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
- **komNomId** | **String**|  | 
+ **participantId** | **String**|  | 
 
 ### Return type
 
@@ -352,9 +354,9 @@ Name | Type | Description  | Notes
 # **getKompetisiNominationsId**
 > RespondKompetisiNominationListById getKompetisiNominationsId(komId, nomId, nominasiCari)
 
-Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+Daftar Peserta Nominasi
 
-Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+Mengambil data daftar peserta per nominasi 
 
 ### Example
 ```dart
@@ -402,9 +404,9 @@ Name | Type | Description  | Notes
 # **getKompetisiNominationsIdSummary**
 > RespondKompetisiNominationListById getKompetisiNominationsIdSummary(komId, nomId, nominasiCari)
 
-Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+Daftar Peserta Nominasi Summay
 
-Mengambil data daftar nominasi kompetisi berdasarkan id nominasi dengan urut rangking
+Mengambil data daftar peserta per nominasi dengan data Ranking bila sudah  dinput Juri
 
 ### Example
 ```dart
@@ -449,12 +451,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **postKompetisiIdNomination**
+> RespondGlobal postKompetisiIdNomination(komId, requestAddNominasi)
+
+Tambah Nominasi
+
+Tambah nomination kelas
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final RequestAddNominasi requestAddNominasi = {"komId":"563fg-5dfgdfg-456dfg-s-43563","name":"Free Maktiering"}; // RequestAddNominasi | 
+
+try {
+    final response = api.postKompetisiIdNomination(komId, requestAddNominasi);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->postKompetisiIdNomination: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **requestAddNominasi** | [**RequestAddNominasi**](RequestAddNominasi.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **postKompetisiNominationId**
-> RespondGlobal postKompetisiNominationId(komId, nominasiId, photo, participantId)
+> RespondGlobal postKompetisiNominationId(komId, nominasiId, participantId, photo)
 
-Daftar nominasi kompetisi berdasarkan id nominasi
+Registrasi Peserta
 
-Daftar nominasi kompetisi berdasarkan id nominasi
+Registrasi Peserta nominasi kompetisi berdasarkan
 
 ### Example
 ```dart
@@ -466,11 +516,11 @@ import 'package:openapi/api.dart';
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
 final String nominasiId = nominasiId_example; // String | 
-final MultipartFile photo = BINARY_DATA_HERE; // MultipartFile | 
 final String participantId = participantId_example; // String | 
+final MultipartFile photo = BINARY_DATA_HERE; // MultipartFile | 
 
 try {
-    final response = api.postKompetisiNominationId(komId, nominasiId, photo, participantId);
+    final response = api.postKompetisiNominationId(komId, nominasiId, participantId, photo);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling KompetisiApi->postKompetisiNominationId: $e\n');
@@ -483,8 +533,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
  **nominasiId** | **String**|  | 
- **photo** | **MultipartFile**|  | 
  **participantId** | **String**|  | 
+ **photo** | **MultipartFile**|  | 
 
 ### Return type
 
@@ -497,6 +547,54 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putKompetisiIdNomination**
+> RespondGlobal putKompetisiIdNomination(komId, requestEditNominasi)
+
+Edit Nominasi
+
+Edit nomination / kelas
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final RequestEditNominasi requestEditNominasi = {"nomId":"345-435dfg-346-dfg","komId":"tr-456-dfg-567-fgh-567","name":"FreeMaktiering"}; // RequestEditNominasi | 
+
+try {
+    final response = api.putKompetisiIdNomination(komId, requestEditNominasi);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->putKompetisiIdNomination: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **requestEditNominasi** | [**RequestEditNominasi**](RequestEditNominasi.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

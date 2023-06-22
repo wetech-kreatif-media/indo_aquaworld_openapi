@@ -13,7 +13,7 @@ part 'respond_kompetisi_nomination_detail_data.g.dart';
 /// RespondKompetisiNominationDetailData
 ///
 /// Properties:
-/// * [id] 
+/// * [id] - komNomId
 /// * [tank] 
 /// * [status] 
 /// * [rank] 
@@ -26,6 +26,7 @@ part 'respond_kompetisi_nomination_detail_data.g.dart';
 /// * [grandTotal] 
 @BuiltValue()
 abstract class RespondKompetisiNominationDetailData implements Built<RespondKompetisiNominationDetailData, RespondKompetisiNominationDetailDataBuilder> {
+  /// komNomId
   @BuiltValueField(wireName: r'id')
   String? get id;
 

@@ -14,6 +14,8 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
+import 'package:openapi/src/model/request_add_nominasi.dart';
+import 'package:openapi/src/model/request_edit_nominasi.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
 import 'package:openapi/src/model/request_user_email.dart';
 import 'package:openapi/src/model/request_user_email_password.dart';
@@ -40,6 +42,8 @@ import 'package:openapi/src/model/respond_user_email_data.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
+  RequestAddNominasi,
+  RequestEditNominasi,
   RequestKompetisiDetail,
   RequestUserEmail,
   RequestUserEmailPassword,

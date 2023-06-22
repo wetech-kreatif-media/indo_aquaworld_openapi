@@ -8,6 +8,8 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/request_add_nominasi.dart';
+import 'package:openapi/src/model/request_edit_nominasi.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail.dart';
@@ -26,7 +28,7 @@ class KompetisiApi {
   const KompetisiApi(this._dio, this._serializers);
 
   /// Tambah kompetisi
-  /// Tambah kompetisi baru
+  /// Mambuat kompetisi baru
   ///
   /// Parameters:
   /// * [requestKompetisiDetail] 
@@ -229,8 +231,8 @@ class KompetisiApi {
     );
   }
 
-  /// Ambil daftar kompetisi
-  /// Ambil daftar kompetisi
+  /// Daftar Kompesiti
+  /// Mengambil data daftar kompesiti
   ///
   /// Parameters:
   /// * [kompetisiCari] - Kata kunci untuk mencari kompetisi berdasarkan nama atau tempat
@@ -315,8 +317,8 @@ class KompetisiApi {
     );
   }
 
-  /// Ambil daftar kompetisi per Id
-  /// Ambil daftar kompetisi per Id
+  /// Kompesiti per ID
+  /// Ambil daftar kompetisi satuan dengan id unique
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
@@ -396,8 +398,8 @@ class KompetisiApi {
     );
   }
 
-  /// Ambil daftar nominasi kompetisi per Id
-  /// Ambil daftar kompetisi per Id
+  /// Daftar Nominasi per KompetisiId
+  /// Mengambil data daftar Nominasi atau Kelas per  KompetisiId unique, dan mencari dengan kata kunci nama nominasi/ kelas
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
@@ -411,7 +413,7 @@ class KompetisiApi {
   ///
   /// Returns a [Future] containing a [Response] with a [RespondKompetisiNominationList] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondKompetisiNominationList>> getKompetisiIdNominations({ 
+  Future<Response<RespondKompetisiNominationList>> getKompetisiIdNomination({ 
     required String komId,
     String? nominasiCari,
     CancelToken? cancelToken,
@@ -421,7 +423,7 @@ class KompetisiApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/kompetisi/{komId}/nominations'.replaceAll('{' r'komId' '}', komId.toString());
+    final _path = r'/kompetisi/{komId}/nomination'.replaceAll('{' r'komId' '}', komId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -484,8 +486,8 @@ class KompetisiApi {
     );
   }
 
-  /// Ambil daftar peserta kompetisi per Id
-  /// Ambil daftar peserta kompetisi per Id
+  /// Daftar Peserta Kompetisi
+  /// Mengambil daftar peserta kompetisi berdasarkan id kompetisi
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
@@ -507,7 +509,7 @@ class KompetisiApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/kompetisi/{komId}/participants'.replaceAll('{' r'komId' '}', komId.toString());
+    final _path = r'/kompetisi/{komId}/participant'.replaceAll('{' r'komId' '}', komId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -565,12 +567,12 @@ class KompetisiApi {
     );
   }
 
-  /// Mengambil data detail nominasi kompetisi berdasarkan id nominasi
-  /// Mengambil data detail nominasi kompetisi berdasarkan id nominasi
+  /// Hasil Juri 
+  /// Mengambil data detail nominasi kompetisi berdasarkan id nominasi. atau Hasil penilain Juri
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
-  /// * [komNomId] - 
+  /// * [participantId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -582,7 +584,7 @@ class KompetisiApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondKompetisiNominationDetail>> getKompetisiNominationId({ 
     required String komId,
-    required String komNomId,
+    required String participantId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -590,7 +592,7 @@ class KompetisiApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/kompetisi/{komId}/nomination/{komNomId}'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'komNomId' '}', komNomId.toString());
+    final _path = r'/kompetisi/{komId}/nomination/{participant_id}/result'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'participant_id' '}', participantId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -648,8 +650,8 @@ class KompetisiApi {
     );
   }
 
-  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
-  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
+  /// Daftar Peserta Nominasi
+  /// Mengambil data daftar peserta per nominasi 
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
@@ -675,7 +677,7 @@ class KompetisiApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/kompetisi/{komId}/nominations/{nomId}'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
+    final _path = r'/kompetisi/{komId}/nomination/{nomId}'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -738,8 +740,8 @@ class KompetisiApi {
     );
   }
 
-  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi
-  /// Mengambil data daftar nominasi kompetisi berdasarkan id nominasi dengan urut rangking
+  /// Daftar Peserta Nominasi Summay
+  /// Mengambil data daftar peserta per nominasi dengan data Ranking bila sudah  dinput Juri
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
@@ -765,7 +767,7 @@ class KompetisiApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/kompetisi/{komId}/nominations/{nomId}/summary'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
+    final _path = r'/kompetisi/{komId}/nomination/{nomId}/summary'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -828,14 +830,117 @@ class KompetisiApi {
     );
   }
 
-  /// Daftar nominasi kompetisi berdasarkan id nominasi
-  /// Daftar nominasi kompetisi berdasarkan id nominasi
+  /// Tambah Nominasi
+  /// Tambah nomination kelas
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [requestAddNominasi] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondGlobal>> postKompetisiIdNomination({ 
+    required String komId,
+    RequestAddNominasi? requestAddNominasi,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nomination'.replaceAll('{' r'komId' '}', komId.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(RequestAddNominasi);
+      _bodyData = requestAddNominasi == null ? null : _serializers.serialize(requestAddNominasi, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondGlobal? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondGlobal>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Registrasi Peserta
+  /// Registrasi Peserta nominasi kompetisi berdasarkan
   ///
   /// Parameters:
   /// * [komId] - kompetisiId
   /// * [nominasiId] 
-  /// * [photo] 
   /// * [participantId] 
+  /// * [photo] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -848,8 +953,8 @@ class KompetisiApi {
   Future<Response<RespondGlobal>> postKompetisiNominationId({ 
     required String komId,
     required String nominasiId,
-    required MultipartFile photo,
     required String participantId,
+    required MultipartFile photo,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -882,9 +987,112 @@ class KompetisiApi {
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
         r'nominasi_id': encodeFormParameter(_serializers, nominasiId, const FullType(String)),
-        r'photo': photo,
         r'participant_id': encodeFormParameter(_serializers, participantId, const FullType(String)),
+        r'photo': photo,
       });
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondGlobal? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondGlobal>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Edit Nominasi
+  /// Edit nomination / kelas
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [requestEditNominasi] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondGlobal>> putKompetisiIdNomination({ 
+    required String komId,
+    RequestEditNominasi? requestEditNominasi,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nomination'.replaceAll('{' r'komId' '}', komId.toString());
+    final _options = Options(
+      method: r'PUT',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(RequestEditNominasi);
+      _bodyData = requestEditNominasi == null ? null : _serializers.serialize(requestEditNominasi, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
