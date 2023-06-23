@@ -10,6 +10,7 @@ All URIs are relative to *http://localhost:3000*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**forgotUser**](UserApi.md#forgotuser) | **POST** /forgot | Forgot
+[**getUsers**](UserApi.md#getusers) | **GET** /users | List Users
 [**loginFacebookUser**](UserApi.md#loginfacebookuser) | **POST** /login-facebook | Login Facebook
 [**loginUser**](UserApi.md#loginuser) | **POST** /login | Login
 [**newPasswordUser**](UserApi.md#newpassworduser) | **PUT** /new-password | Create New Password
@@ -56,6 +57,52 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getUsers**
+> RespondUsers getUsers(userCari)
+
+List Users
+
+Ambil daftar users
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getUserApi();
+final String userCari = userCari_example; // String | 
+
+try {
+    final response = api.getUsers(userCari);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->getUsers: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userCari** | **String**|  | [optional] 
+
+### Return type
+
+[**RespondUsers**](RespondUsers.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

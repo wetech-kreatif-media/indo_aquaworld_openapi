@@ -11,9 +11,9 @@ class _$RequestRegisterKompetisiByNominasi
   @override
   final String nominasiId;
   @override
-  final Uint8List photo;
+  final String? participantId;
   @override
-  final String participantId;
+  final Uint8List? photo;
 
   factory _$RequestRegisterKompetisiByNominasi(
           [void Function(RequestRegisterKompetisiByNominasiBuilder)?
@@ -22,16 +22,10 @@ class _$RequestRegisterKompetisiByNominasi
           ._build();
 
   _$RequestRegisterKompetisiByNominasi._(
-      {required this.nominasiId,
-      required this.photo,
-      required this.participantId})
+      {required this.nominasiId, this.participantId, this.photo})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         nominasiId, r'RequestRegisterKompetisiByNominasi', 'nominasiId');
-    BuiltValueNullFieldError.checkNotNull(
-        photo, r'RequestRegisterKompetisiByNominasi', 'photo');
-    BuiltValueNullFieldError.checkNotNull(
-        participantId, r'RequestRegisterKompetisiByNominasi', 'participantId');
   }
 
   @override
@@ -48,16 +42,16 @@ class _$RequestRegisterKompetisiByNominasi
     if (identical(other, this)) return true;
     return other is RequestRegisterKompetisiByNominasi &&
         nominasiId == other.nominasiId &&
-        photo == other.photo &&
-        participantId == other.participantId;
+        participantId == other.participantId &&
+        photo == other.photo;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, nominasiId.hashCode);
-    _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, participantId.hashCode);
+    _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -66,8 +60,8 @@ class _$RequestRegisterKompetisiByNominasi
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestRegisterKompetisiByNominasi')
           ..add('nominasiId', nominasiId)
-          ..add('photo', photo)
-          ..add('participantId', participantId))
+          ..add('participantId', participantId)
+          ..add('photo', photo))
         .toString();
   }
 }
@@ -82,14 +76,14 @@ class RequestRegisterKompetisiByNominasiBuilder
   String? get nominasiId => _$this._nominasiId;
   set nominasiId(String? nominasiId) => _$this._nominasiId = nominasiId;
 
-  Uint8List? _photo;
-  Uint8List? get photo => _$this._photo;
-  set photo(Uint8List? photo) => _$this._photo = photo;
-
   String? _participantId;
   String? get participantId => _$this._participantId;
   set participantId(String? participantId) =>
       _$this._participantId = participantId;
+
+  Uint8List? _photo;
+  Uint8List? get photo => _$this._photo;
+  set photo(Uint8List? photo) => _$this._photo = photo;
 
   RequestRegisterKompetisiByNominasiBuilder() {
     RequestRegisterKompetisiByNominasi._defaults(this);
@@ -99,8 +93,8 @@ class RequestRegisterKompetisiByNominasiBuilder
     final $v = _$v;
     if ($v != null) {
       _nominasiId = $v.nominasiId;
-      _photo = $v.photo;
       _participantId = $v.participantId;
+      _photo = $v.photo;
       _$v = null;
     }
     return this;
@@ -126,10 +120,8 @@ class RequestRegisterKompetisiByNominasiBuilder
         new _$RequestRegisterKompetisiByNominasi._(
             nominasiId: BuiltValueNullFieldError.checkNotNull(nominasiId,
                 r'RequestRegisterKompetisiByNominasi', 'nominasiId'),
-            photo: BuiltValueNullFieldError.checkNotNull(
-                photo, r'RequestRegisterKompetisiByNominasi', 'photo'),
-            participantId: BuiltValueNullFieldError.checkNotNull(participantId,
-                r'RequestRegisterKompetisiByNominasi', 'participantId'));
+            participantId: participantId,
+            photo: photo);
     replace(_$result);
     return _$result;
   }

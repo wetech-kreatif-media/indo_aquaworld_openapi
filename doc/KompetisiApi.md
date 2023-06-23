@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**postKompetisiIdNomination**](KompetisiApi.md#postkompetisiidnomination) | **POST** /kompetisi/{komId}/nomination | Tambah Nominasi
 [**postKompetisiNominationId**](KompetisiApi.md#postkompetisinominationid) | **POST** /kompetisi/{komId}/participant | Registrasi Peserta
 [**putKompetisiIdNomination**](KompetisiApi.md#putkompetisiidnomination) | **PUT** /kompetisi/{komId}/nomination | Edit Nominasi
+[**putKompetisiNominationId**](KompetisiApi.md#putkompetisinominationid) | **PUT** /kompetisi/{komId}/participant | Ubah Peserta
 
 
 # **addKompetisi**
@@ -352,7 +353,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getKompetisiNominationsId**
-> RespondKompetisiNominationListById getKompetisiNominationsId(komId, nomId, nominasiCari)
+> RespondKompetisiParticipants getKompetisiNominationsId(komId, nomId, nominasiCari)
 
 Daftar Peserta Nominasi
 
@@ -388,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RespondKompetisiNominationListById**](RespondKompetisiNominationListById.md)
+[**RespondKompetisiParticipants**](RespondKompetisiParticipants.md)
 
 ### Authorization
 
@@ -402,7 +403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getKompetisiNominationsIdSummary**
-> RespondKompetisiNominationListById getKompetisiNominationsIdSummary(komId, nomId, nominasiCari)
+> RespondKompetisiParticipants getKompetisiNominationsIdSummary(komId, nomId, nominasiCari)
 
 Daftar Peserta Nominasi Summay
 
@@ -438,7 +439,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RespondKompetisiNominationListById**](RespondKompetisiNominationListById.md)
+[**RespondKompetisiParticipants**](RespondKompetisiParticipants.md)
 
 ### Authorization
 
@@ -533,8 +534,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
  **nominasiId** | **String**|  | 
- **participantId** | **String**|  | 
- **photo** | **MultipartFile**|  | 
+ **participantId** | **String**|  | [optional] 
+ **photo** | **MultipartFile**|  | [optional] 
 
 ### Return type
 
@@ -583,6 +584,54 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
  **requestEditNominasi** | [**RequestEditNominasi**](RequestEditNominasi.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putKompetisiNominationId**
+> RespondGlobal putKompetisiNominationId(komId, requestRegisterKompetisiByNominasi)
+
+Ubah Peserta
+
+Ubah Peserta kompetisi berdasarkan nominasi atau kelas
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final RequestRegisterKompetisiByNominasi requestRegisterKompetisiByNominasi = {"nominasi_id":"sdasdasdas-34-fdgdf-g"}; // RequestRegisterKompetisiByNominasi | 
+
+try {
+    final response = api.putKompetisiNominationId(komId, requestRegisterKompetisiByNominasi);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->putKompetisiNominationId: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **requestRegisterKompetisiByNominasi** | [**RequestRegisterKompetisiByNominasi**](RequestRegisterKompetisiByNominasi.md)|  | [optional] 
 
 ### Return type
 

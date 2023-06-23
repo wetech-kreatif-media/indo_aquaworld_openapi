@@ -9,8 +9,8 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nominasiId** | **String** |  | 
-**photo** | [**Uint8List**](Uint8List.md) |  | 
-**participantId** | **String** |  | 
+**participantId** | **String** |  | [optional] 
+**photo** | [**Uint8List**](Uint8List.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

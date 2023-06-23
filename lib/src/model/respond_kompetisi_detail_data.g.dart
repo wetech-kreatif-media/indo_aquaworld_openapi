@@ -8,7 +8,7 @@ part of 'respond_kompetisi_detail_data.dart';
 
 class _$RespondKompetisiDetailData extends RespondKompetisiDetailData {
   @override
-  final String? id;
+  final String id;
   @override
   final String? title;
   @override
@@ -29,7 +29,7 @@ class _$RespondKompetisiDetailData extends RespondKompetisiDetailData {
       (new RespondKompetisiDetailDataBuilder()..update(updates))._build();
 
   _$RespondKompetisiDetailData._(
-      {this.id,
+      {required this.id,
       this.title,
       this.place,
       this.address,
@@ -37,7 +37,10 @@ class _$RespondKompetisiDetailData extends RespondKompetisiDetailData {
       this.date,
       this.phoneNumber,
       this.notes})
-      : super._();
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'RespondKompetisiDetailData', 'id');
+  }
 
   @override
   RespondKompetisiDetailData rebuild(
@@ -166,7 +169,8 @@ class RespondKompetisiDetailDataBuilder
   _$RespondKompetisiDetailData _build() {
     final _$result = _$v ??
         new _$RespondKompetisiDetailData._(
-            id: id,
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'RespondKompetisiDetailData', 'id'),
             title: title,
             place: place,
             address: address,

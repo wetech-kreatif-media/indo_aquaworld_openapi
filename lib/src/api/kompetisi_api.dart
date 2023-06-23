@@ -11,12 +11,12 @@ import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_add_nominasi.dart';
 import 'package:openapi/src/model/request_edit_nominasi.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
+import 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_kompetisi_list.dart';
 import 'package:openapi/src/model/respond_kompetisi_nomination_detail.dart';
 import 'package:openapi/src/model/respond_kompetisi_nomination_list.dart';
-import 'package:openapi/src/model/respond_kompetisi_nomination_list_by_id.dart';
 import 'package:openapi/src/model/respond_kompetisi_participants.dart';
 
 class KompetisiApi {
@@ -664,9 +664,9 @@ class KompetisiApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RespondKompetisiNominationListById] as data
+  /// Returns a [Future] containing a [Response] with a [RespondKompetisiParticipants] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondKompetisiNominationListById>> getKompetisiNominationsId({ 
+  Future<Response<RespondKompetisiParticipants>> getKompetisiNominationsId({ 
     required String komId,
     required String nomId,
     String? nominasiCari,
@@ -709,14 +709,14 @@ class KompetisiApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RespondKompetisiNominationListById? _responseData;
+    RespondKompetisiParticipants? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RespondKompetisiNominationListById),
-      ) as RespondKompetisiNominationListById;
+        specifiedType: const FullType(RespondKompetisiParticipants),
+      ) as RespondKompetisiParticipants;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -728,7 +728,7 @@ class KompetisiApi {
       );
     }
 
-    return Response<RespondKompetisiNominationListById>(
+    return Response<RespondKompetisiParticipants>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -754,9 +754,9 @@ class KompetisiApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RespondKompetisiNominationListById] as data
+  /// Returns a [Future] containing a [Response] with a [RespondKompetisiParticipants] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondKompetisiNominationListById>> getKompetisiNominationsIdSummary({ 
+  Future<Response<RespondKompetisiParticipants>> getKompetisiNominationsIdSummary({ 
     required String komId,
     required String nomId,
     String? nominasiCari,
@@ -799,14 +799,14 @@ class KompetisiApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RespondKompetisiNominationListById? _responseData;
+    RespondKompetisiParticipants? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RespondKompetisiNominationListById),
-      ) as RespondKompetisiNominationListById;
+        specifiedType: const FullType(RespondKompetisiParticipants),
+      ) as RespondKompetisiParticipants;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -818,7 +818,7 @@ class KompetisiApi {
       );
     }
 
-    return Response<RespondKompetisiNominationListById>(
+    return Response<RespondKompetisiParticipants>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -953,8 +953,8 @@ class KompetisiApi {
   Future<Response<RespondGlobal>> postKompetisiNominationId({ 
     required String komId,
     required String nominasiId,
-    required String participantId,
-    required MultipartFile photo,
+    String? participantId,
+    MultipartFile? photo,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -987,8 +987,8 @@ class KompetisiApi {
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
         r'nominasi_id': encodeFormParameter(_serializers, nominasiId, const FullType(String)),
-        r'participant_id': encodeFormParameter(_serializers, participantId, const FullType(String)),
-        r'photo': photo,
+        if (participantId != null) r'participant_id': encodeFormParameter(_serializers, participantId, const FullType(String)),
+        if (photo != null) r'photo': photo,
       });
 
     } catch(error, stackTrace) {
@@ -1093,6 +1093,109 @@ class KompetisiApi {
     try {
       const _type = FullType(RequestEditNominasi);
       _bodyData = requestEditNominasi == null ? null : _serializers.serialize(requestEditNominasi, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondGlobal? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondGlobal>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Ubah Peserta
+  /// Ubah Peserta kompetisi berdasarkan nominasi atau kelas
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [requestRegisterKompetisiByNominasi] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondGlobal>> putKompetisiNominationId({ 
+    required String komId,
+    RequestRegisterKompetisiByNominasi? requestRegisterKompetisiByNominasi,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/participant'.replaceAll('{' r'komId' '}', komId.toString());
+    final _options = Options(
+      method: r'PUT',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(RequestRegisterKompetisiByNominasi);
+      _bodyData = requestRegisterKompetisiByNominasi == null ? null : _serializers.serialize(requestRegisterKompetisiByNominasi, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

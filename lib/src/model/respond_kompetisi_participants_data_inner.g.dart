@@ -11,13 +11,21 @@ class _$RespondKompetisiParticipantsDataInner
   @override
   final String id;
   @override
-  final String name;
-  @override
   final String photo;
   @override
-  final String city;
+  final String? nominationName;
   @override
-  final String nomination;
+  final int? grandTotal;
+  @override
+  final int? rank;
+  @override
+  final String? tank;
+  @override
+  final String participantPhoto;
+  @override
+  final String participantCity;
+  @override
+  final String participantName;
 
   factory _$RespondKompetisiParticipantsDataInner(
           [void Function(RespondKompetisiParticipantsDataInnerBuilder)?
@@ -27,21 +35,25 @@ class _$RespondKompetisiParticipantsDataInner
 
   _$RespondKompetisiParticipantsDataInner._(
       {required this.id,
-      required this.name,
       required this.photo,
-      required this.city,
-      required this.nomination})
+      this.nominationName,
+      this.grandTotal,
+      this.rank,
+      this.tank,
+      required this.participantPhoto,
+      required this.participantCity,
+      required this.participantName})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondKompetisiParticipantsDataInner', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RespondKompetisiParticipantsDataInner', 'name');
-    BuiltValueNullFieldError.checkNotNull(
         photo, r'RespondKompetisiParticipantsDataInner', 'photo');
-    BuiltValueNullFieldError.checkNotNull(
-        city, r'RespondKompetisiParticipantsDataInner', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        nomination, r'RespondKompetisiParticipantsDataInner', 'nomination');
+    BuiltValueNullFieldError.checkNotNull(participantPhoto,
+        r'RespondKompetisiParticipantsDataInner', 'participantPhoto');
+    BuiltValueNullFieldError.checkNotNull(participantCity,
+        r'RespondKompetisiParticipantsDataInner', 'participantCity');
+    BuiltValueNullFieldError.checkNotNull(participantName,
+        r'RespondKompetisiParticipantsDataInner', 'participantName');
   }
 
   @override
@@ -59,20 +71,28 @@ class _$RespondKompetisiParticipantsDataInner
     if (identical(other, this)) return true;
     return other is RespondKompetisiParticipantsDataInner &&
         id == other.id &&
-        name == other.name &&
         photo == other.photo &&
-        city == other.city &&
-        nomination == other.nomination;
+        nominationName == other.nominationName &&
+        grandTotal == other.grandTotal &&
+        rank == other.rank &&
+        tank == other.tank &&
+        participantPhoto == other.participantPhoto &&
+        participantCity == other.participantCity &&
+        participantName == other.participantName;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
-    _$hash = $jc(_$hash, city.hashCode);
-    _$hash = $jc(_$hash, nomination.hashCode);
+    _$hash = $jc(_$hash, nominationName.hashCode);
+    _$hash = $jc(_$hash, grandTotal.hashCode);
+    _$hash = $jc(_$hash, rank.hashCode);
+    _$hash = $jc(_$hash, tank.hashCode);
+    _$hash = $jc(_$hash, participantPhoto.hashCode);
+    _$hash = $jc(_$hash, participantCity.hashCode);
+    _$hash = $jc(_$hash, participantName.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -82,10 +102,14 @@ class _$RespondKompetisiParticipantsDataInner
     return (newBuiltValueToStringHelper(
             r'RespondKompetisiParticipantsDataInner')
           ..add('id', id)
-          ..add('name', name)
           ..add('photo', photo)
-          ..add('city', city)
-          ..add('nomination', nomination))
+          ..add('nominationName', nominationName)
+          ..add('grandTotal', grandTotal)
+          ..add('rank', rank)
+          ..add('tank', tank)
+          ..add('participantPhoto', participantPhoto)
+          ..add('participantCity', participantCity)
+          ..add('participantName', participantName))
         .toString();
   }
 }
@@ -100,21 +124,41 @@ class RespondKompetisiParticipantsDataInnerBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
-
   String? _photo;
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
-  String? _city;
-  String? get city => _$this._city;
-  set city(String? city) => _$this._city = city;
+  String? _nominationName;
+  String? get nominationName => _$this._nominationName;
+  set nominationName(String? nominationName) =>
+      _$this._nominationName = nominationName;
 
-  String? _nomination;
-  String? get nomination => _$this._nomination;
-  set nomination(String? nomination) => _$this._nomination = nomination;
+  int? _grandTotal;
+  int? get grandTotal => _$this._grandTotal;
+  set grandTotal(int? grandTotal) => _$this._grandTotal = grandTotal;
+
+  int? _rank;
+  int? get rank => _$this._rank;
+  set rank(int? rank) => _$this._rank = rank;
+
+  String? _tank;
+  String? get tank => _$this._tank;
+  set tank(String? tank) => _$this._tank = tank;
+
+  String? _participantPhoto;
+  String? get participantPhoto => _$this._participantPhoto;
+  set participantPhoto(String? participantPhoto) =>
+      _$this._participantPhoto = participantPhoto;
+
+  String? _participantCity;
+  String? get participantCity => _$this._participantCity;
+  set participantCity(String? participantCity) =>
+      _$this._participantCity = participantCity;
+
+  String? _participantName;
+  String? get participantName => _$this._participantName;
+  set participantName(String? participantName) =>
+      _$this._participantName = participantName;
 
   RespondKompetisiParticipantsDataInnerBuilder() {
     RespondKompetisiParticipantsDataInner._defaults(this);
@@ -124,10 +168,14 @@ class RespondKompetisiParticipantsDataInnerBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _name = $v.name;
       _photo = $v.photo;
-      _city = $v.city;
-      _nomination = $v.nomination;
+      _nominationName = $v.nominationName;
+      _grandTotal = $v.grandTotal;
+      _rank = $v.rank;
+      _tank = $v.tank;
+      _participantPhoto = $v.participantPhoto;
+      _participantCity = $v.participantCity;
+      _participantName = $v.participantName;
       _$v = null;
     }
     return this;
@@ -153,14 +201,24 @@ class RespondKompetisiParticipantsDataInnerBuilder
         new _$RespondKompetisiParticipantsDataInner._(
             id: BuiltValueNullFieldError.checkNotNull(
                 id, r'RespondKompetisiParticipantsDataInner', 'id'),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RespondKompetisiParticipantsDataInner', 'name'),
             photo: BuiltValueNullFieldError.checkNotNull(
                 photo, r'RespondKompetisiParticipantsDataInner', 'photo'),
-            city: BuiltValueNullFieldError.checkNotNull(
-                city, r'RespondKompetisiParticipantsDataInner', 'city'),
-            nomination: BuiltValueNullFieldError.checkNotNull(nomination,
-                r'RespondKompetisiParticipantsDataInner', 'nomination'));
+            nominationName: nominationName,
+            grandTotal: grandTotal,
+            rank: rank,
+            tank: tank,
+            participantPhoto: BuiltValueNullFieldError.checkNotNull(
+                participantPhoto,
+                r'RespondKompetisiParticipantsDataInner',
+                'participantPhoto'),
+            participantCity: BuiltValueNullFieldError.checkNotNull(
+                participantCity,
+                r'RespondKompetisiParticipantsDataInner',
+                'participantCity'),
+            participantName: BuiltValueNullFieldError.checkNotNull(
+                participantName,
+                r'RespondKompetisiParticipantsDataInner',
+                'participantName'));
     replace(_$result);
     return _$result;
   }

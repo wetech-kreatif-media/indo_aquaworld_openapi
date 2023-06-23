@@ -1,59 +1,65 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_user_email_data.dart';
+part of 'respond_users_data_inner.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondUserEmailData extends RespondUserEmailData {
+class _$RespondUsersDataInner extends RespondUsersDataInner {
   @override
   final String userId;
   @override
-  final String? token;
+  final String photo;
   @override
-  final String? photo;
+  final String role;
   @override
-  final String? role;
+  final String email;
   @override
-  final String? email;
+  final String name;
   @override
-  final String? name;
-  @override
-  final String? city;
+  final String city;
 
-  factory _$RespondUserEmailData(
-          [void Function(RespondUserEmailDataBuilder)? updates]) =>
-      (new RespondUserEmailDataBuilder()..update(updates))._build();
+  factory _$RespondUsersDataInner(
+          [void Function(RespondUsersDataInnerBuilder)? updates]) =>
+      (new RespondUsersDataInnerBuilder()..update(updates))._build();
 
-  _$RespondUserEmailData._(
+  _$RespondUsersDataInner._(
       {required this.userId,
-      this.token,
-      this.photo,
-      this.role,
-      this.email,
-      this.name,
-      this.city})
+      required this.photo,
+      required this.role,
+      required this.email,
+      required this.name,
+      required this.city})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        userId, r'RespondUserEmailData', 'userId');
+        userId, r'RespondUsersDataInner', 'userId');
+    BuiltValueNullFieldError.checkNotNull(
+        photo, r'RespondUsersDataInner', 'photo');
+    BuiltValueNullFieldError.checkNotNull(
+        role, r'RespondUsersDataInner', 'role');
+    BuiltValueNullFieldError.checkNotNull(
+        email, r'RespondUsersDataInner', 'email');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'RespondUsersDataInner', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        city, r'RespondUsersDataInner', 'city');
   }
 
   @override
-  RespondUserEmailData rebuild(
-          void Function(RespondUserEmailDataBuilder) updates) =>
+  RespondUsersDataInner rebuild(
+          void Function(RespondUsersDataInnerBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondUserEmailDataBuilder toBuilder() =>
-      new RespondUserEmailDataBuilder()..replace(this);
+  RespondUsersDataInnerBuilder toBuilder() =>
+      new RespondUsersDataInnerBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondUserEmailData &&
+    return other is RespondUsersDataInner &&
         userId == other.userId &&
-        token == other.token &&
         photo == other.photo &&
         role == other.role &&
         email == other.email &&
@@ -65,7 +71,6 @@ class _$RespondUserEmailData extends RespondUserEmailData {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, userId.hashCode);
-    _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, role.hashCode);
     _$hash = $jc(_$hash, email.hashCode);
@@ -77,9 +82,8 @@ class _$RespondUserEmailData extends RespondUserEmailData {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'RespondUserEmailData')
+    return (newBuiltValueToStringHelper(r'RespondUsersDataInner')
           ..add('userId', userId)
-          ..add('token', token)
           ..add('photo', photo)
           ..add('role', role)
           ..add('email', email)
@@ -89,17 +93,13 @@ class _$RespondUserEmailData extends RespondUserEmailData {
   }
 }
 
-class RespondUserEmailDataBuilder
-    implements Builder<RespondUserEmailData, RespondUserEmailDataBuilder> {
-  _$RespondUserEmailData? _$v;
+class RespondUsersDataInnerBuilder
+    implements Builder<RespondUsersDataInner, RespondUsersDataInnerBuilder> {
+  _$RespondUsersDataInner? _$v;
 
   String? _userId;
   String? get userId => _$this._userId;
   set userId(String? userId) => _$this._userId = userId;
-
-  String? _token;
-  String? get token => _$this._token;
-  set token(String? token) => _$this._token = token;
 
   String? _photo;
   String? get photo => _$this._photo;
@@ -121,15 +121,14 @@ class RespondUserEmailDataBuilder
   String? get city => _$this._city;
   set city(String? city) => _$this._city = city;
 
-  RespondUserEmailDataBuilder() {
-    RespondUserEmailData._defaults(this);
+  RespondUsersDataInnerBuilder() {
+    RespondUsersDataInner._defaults(this);
   }
 
-  RespondUserEmailDataBuilder get _$this {
+  RespondUsersDataInnerBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _userId = $v.userId;
-      _token = $v.token;
       _photo = $v.photo;
       _role = $v.role;
       _email = $v.email;
@@ -141,30 +140,34 @@ class RespondUserEmailDataBuilder
   }
 
   @override
-  void replace(RespondUserEmailData other) {
+  void replace(RespondUsersDataInner other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondUserEmailData;
+    _$v = other as _$RespondUsersDataInner;
   }
 
   @override
-  void update(void Function(RespondUserEmailDataBuilder)? updates) {
+  void update(void Function(RespondUsersDataInnerBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondUserEmailData build() => _build();
+  RespondUsersDataInner build() => _build();
 
-  _$RespondUserEmailData _build() {
+  _$RespondUsersDataInner _build() {
     final _$result = _$v ??
-        new _$RespondUserEmailData._(
+        new _$RespondUsersDataInner._(
             userId: BuiltValueNullFieldError.checkNotNull(
-                userId, r'RespondUserEmailData', 'userId'),
-            token: token,
-            photo: photo,
-            role: role,
-            email: email,
-            name: name,
-            city: city);
+                userId, r'RespondUsersDataInner', 'userId'),
+            photo: BuiltValueNullFieldError.checkNotNull(
+                photo, r'RespondUsersDataInner', 'photo'),
+            role: BuiltValueNullFieldError.checkNotNull(
+                role, r'RespondUsersDataInner', 'role'),
+            email: BuiltValueNullFieldError.checkNotNull(
+                email, r'RespondUsersDataInner', 'email'),
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'RespondUsersDataInner', 'name'),
+            city: BuiltValueNullFieldError.checkNotNull(
+                city, r'RespondUsersDataInner', 'city'));
     replace(_$result);
     return _$result;
   }

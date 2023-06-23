@@ -13,18 +13,18 @@ part 'request_register_kompetisi_by_nominasi.g.dart';
 ///
 /// Properties:
 /// * [nominasiId] 
-/// * [photo] 
 /// * [participantId] 
+/// * [photo] 
 @BuiltValue()
 abstract class RequestRegisterKompetisiByNominasi implements Built<RequestRegisterKompetisiByNominasi, RequestRegisterKompetisiByNominasiBuilder> {
   @BuiltValueField(wireName: r'nominasi_id')
   String get nominasiId;
 
-  @BuiltValueField(wireName: r'photo')
-  Uint8List get photo;
-
   @BuiltValueField(wireName: r'participant_id')
-  String get participantId;
+  String? get participantId;
+
+  @BuiltValueField(wireName: r'photo')
+  Uint8List? get photo;
 
   RequestRegisterKompetisiByNominasi._();
 
@@ -54,16 +54,20 @@ class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSeriali
       object.nominasiId,
       specifiedType: const FullType(String),
     );
-    yield r'photo';
-    yield serializers.serialize(
-      object.photo,
-      specifiedType: const FullType(Uint8List),
-    );
-    yield r'participant_id';
-    yield serializers.serialize(
-      object.participantId,
-      specifiedType: const FullType(String),
-    );
+    if (object.participantId != null) {
+      yield r'participant_id';
+      yield serializers.serialize(
+        object.participantId,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
+        specifiedType: const FullType(Uint8List),
+      );
+    }
   }
 
   @override
@@ -94,19 +98,19 @@ class _$RequestRegisterKompetisiByNominasiSerializer implements PrimitiveSeriali
           ) as String;
           result.nominasiId = valueDes;
           break;
-        case r'photo':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(Uint8List),
-          ) as Uint8List;
-          result.photo = valueDes;
-          break;
         case r'participant_id':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
           result.participantId = valueDes;
+          break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(Uint8List),
+          ) as Uint8List;
+          result.photo = valueDes;
           break;
         default:
           unhandled.add(key);

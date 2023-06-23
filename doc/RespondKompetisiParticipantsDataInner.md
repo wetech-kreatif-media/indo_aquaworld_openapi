@@ -9,10 +9,14 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**name** | **String** |  | 
 **photo** | **String** |  | 
-**city** | **String** |  | 
-**nomination** | **String** |  | 
+**nominationName** | **String** |  | [optional] 
+**grandTotal** | **int** |  | [optional] 
+**rank** | **int** |  | [optional] 
+**tank** | **String** |  | [optional] 
+**participantPhoto** | **String** |  | 
+**participantCity** | **String** |  | 
+**participantName** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

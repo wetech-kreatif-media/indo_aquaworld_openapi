@@ -5,6 +5,7 @@ doc/KompetisiApi.md
 doc/RequestAddNominasi.md
 doc/RequestEditNominasi.md
 doc/RequestKompetisiDetail.md
+doc/RequestRegisterKompetisiByNominasi.md
 doc/RequestUserEmail.md
 doc/RequestUserEmailPassword.md
 doc/RequestUserOtp.md
@@ -19,13 +20,13 @@ doc/RespondKompetisiNominationDetail.md
 doc/RespondKompetisiNominationDetailData.md
 doc/RespondKompetisiNominationDetailDataJudgesInner.md
 doc/RespondKompetisiNominationList.md
-doc/RespondKompetisiNominationListById.md
-doc/RespondKompetisiNominationListByIdDataInner.md
 doc/RespondKompetisiNominationListDataInner.md
 doc/RespondKompetisiParticipants.md
 doc/RespondKompetisiParticipantsDataInner.md
 doc/RespondUserEmail.md
 doc/RespondUserEmailData.md
+doc/RespondUsers.md
+doc/RespondUsersDataInner.md
 doc/UserApi.md
 lib/openapi.dart
 lib/src/api.dart
@@ -42,6 +43,7 @@ lib/src/model/date.dart
 lib/src/model/request_add_nominasi.dart
 lib/src/model/request_edit_nominasi.dart
 lib/src/model/request_kompetisi_detail.dart
+lib/src/model/request_register_kompetisi_by_nominasi.dart
 lib/src/model/request_user_email.dart
 lib/src/model/request_user_email_password.dart
 lib/src/model/request_user_otp.dart
@@ -56,12 +58,12 @@ lib/src/model/respond_kompetisi_nomination_detail.dart
 lib/src/model/respond_kompetisi_nomination_detail_data.dart
 lib/src/model/respond_kompetisi_nomination_detail_data_judges_inner.dart
 lib/src/model/respond_kompetisi_nomination_list.dart
-lib/src/model/respond_kompetisi_nomination_list_by_id.dart
-lib/src/model/respond_kompetisi_nomination_list_by_id_data_inner.dart
 lib/src/model/respond_kompetisi_nomination_list_data_inner.dart
 lib/src/model/respond_kompetisi_participants.dart
 lib/src/model/respond_kompetisi_participants_data_inner.dart
 lib/src/model/respond_user_email.dart
 lib/src/model/respond_user_email_data.dart
+lib/src/model/respond_users.dart
+lib/src/model/respond_users_data_inner.dart
 lib/src/serializers.dart
 pubspec.yaml

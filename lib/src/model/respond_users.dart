@@ -3,20 +3,21 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_kompetisi_detail_data.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:openapi/src/model/respond_users_data_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_kompetisi_detail.g.dart';
+part 'respond_users.g.dart';
 
-/// RespondKompetisiDetail
+/// RespondUsers
 ///
 /// Properties:
 /// * [success] 
 /// * [message] 
 /// * [data] 
 @BuiltValue()
-abstract class RespondKompetisiDetail implements Built<RespondKompetisiDetail, RespondKompetisiDetailBuilder> {
+abstract class RespondUsers implements Built<RespondUsers, RespondUsersBuilder> {
   @BuiltValueField(wireName: r'success')
   bool get success;
 
@@ -24,29 +25,29 @@ abstract class RespondKompetisiDetail implements Built<RespondKompetisiDetail, R
   String get message;
 
   @BuiltValueField(wireName: r'data')
-  RespondKompetisiDetailData get data;
+  BuiltList<RespondUsersDataInner> get data;
 
-  RespondKompetisiDetail._();
+  RespondUsers._();
 
-  factory RespondKompetisiDetail([void updates(RespondKompetisiDetailBuilder b)]) = _$RespondKompetisiDetail;
+  factory RespondUsers([void updates(RespondUsersBuilder b)]) = _$RespondUsers;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondKompetisiDetailBuilder b) => b;
+  static void _defaults(RespondUsersBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondKompetisiDetail> get serializer => _$RespondKompetisiDetailSerializer();
+  static Serializer<RespondUsers> get serializer => _$RespondUsersSerializer();
 }
 
-class _$RespondKompetisiDetailSerializer implements PrimitiveSerializer<RespondKompetisiDetail> {
+class _$RespondUsersSerializer implements PrimitiveSerializer<RespondUsers> {
   @override
-  final Iterable<Type> types = const [RespondKompetisiDetail, _$RespondKompetisiDetail];
+  final Iterable<Type> types = const [RespondUsers, _$RespondUsers];
 
   @override
-  final String wireName = r'RespondKompetisiDetail';
+  final String wireName = r'RespondUsers';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondKompetisiDetail object, {
+    RespondUsers object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'success';
@@ -62,14 +63,14 @@ class _$RespondKompetisiDetailSerializer implements PrimitiveSerializer<RespondK
     yield r'data';
     yield serializers.serialize(
       object.data,
-      specifiedType: const FullType(RespondKompetisiDetailData),
+      specifiedType: const FullType(BuiltList, [FullType(RespondUsersDataInner)]),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondKompetisiDetail object, {
+    RespondUsers object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -80,7 +81,7 @@ class _$RespondKompetisiDetailSerializer implements PrimitiveSerializer<RespondK
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondKompetisiDetailBuilder result,
+    required RespondUsersBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -104,8 +105,8 @@ class _$RespondKompetisiDetailSerializer implements PrimitiveSerializer<RespondK
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondKompetisiDetailData),
-          ) as RespondKompetisiDetailData;
+            specifiedType: const FullType(BuiltList, [FullType(RespondUsersDataInner)]),
+          ) as BuiltList<RespondUsersDataInner>;
           result.data.replace(valueDes);
           break;
         default:
@@ -117,12 +118,12 @@ class _$RespondKompetisiDetailSerializer implements PrimitiveSerializer<RespondK
   }
 
   @override
-  RespondKompetisiDetail deserialize(
+  RespondUsers deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondKompetisiDetailBuilder();
+    final result = RespondUsersBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

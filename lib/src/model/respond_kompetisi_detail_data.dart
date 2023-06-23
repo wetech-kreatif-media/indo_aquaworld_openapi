@@ -22,7 +22,7 @@ part 'respond_kompetisi_detail_data.g.dart';
 @BuiltValue()
 abstract class RespondKompetisiDetailData implements Built<RespondKompetisiDetailData, RespondKompetisiDetailDataBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
 
   @BuiltValueField(wireName: r'title')
   String? get title;
@@ -68,13 +68,11 @@ class _$RespondKompetisiDetailDataSerializer implements PrimitiveSerializer<Resp
     RespondKompetisiDetailData object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
     if (object.title != null) {
       yield r'title';
       yield serializers.serialize(
