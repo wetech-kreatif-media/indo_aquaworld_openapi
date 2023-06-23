@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **userId** | **String** |  | 
 **komId** | **String** |  | 
+**photo** | **String** |  | 
 **role** | **String** |  | 
 **email** | **String** |  | 
 **name** | **String** |  | 

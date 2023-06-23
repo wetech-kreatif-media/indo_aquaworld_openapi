@@ -13,6 +13,7 @@ part 'respond_users_judge_data_inner.g.dart';
 /// Properties:
 /// * [userId] 
 /// * [komId] 
+/// * [photo] 
 /// * [role] 
 /// * [email] 
 /// * [name] 
@@ -24,6 +25,9 @@ abstract class RespondUsersJudgeDataInner implements Built<RespondUsersJudgeData
 
   @BuiltValueField(wireName: r'komId')
   String get komId;
+
+  @BuiltValueField(wireName: r'photo')
+  String get photo;
 
   @BuiltValueField(wireName: r'role')
   String get role;
@@ -68,6 +72,11 @@ class _$RespondUsersJudgeDataInnerSerializer implements PrimitiveSerializer<Resp
     yield r'komId';
     yield serializers.serialize(
       object.komId,
+      specifiedType: const FullType(String),
+    );
+    yield r'photo';
+    yield serializers.serialize(
+      object.photo,
       specifiedType: const FullType(String),
     );
     yield r'role';
@@ -126,6 +135,13 @@ class _$RespondUsersJudgeDataInnerSerializer implements PrimitiveSerializer<Resp
             specifiedType: const FullType(String),
           ) as String;
           result.komId = valueDes;
+          break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.photo = valueDes;
           break;
         case r'role':
           final valueDes = serializers.deserialize(

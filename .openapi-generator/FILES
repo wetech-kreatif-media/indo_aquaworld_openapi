@@ -73,6 +73,3 @@ lib/src/model/respond_users_judge.dart
 lib/src/model/respond_users_judge_data_inner.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/request_judge_kompetisi_test.dart
-test/respond_users_judge_data_inner_test.dart
-test/respond_users_judge_test.dart

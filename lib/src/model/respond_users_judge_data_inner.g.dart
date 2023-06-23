@@ -12,6 +12,8 @@ class _$RespondUsersJudgeDataInner extends RespondUsersJudgeDataInner {
   @override
   final String komId;
   @override
+  final String photo;
+  @override
   final String role;
   @override
   final String email;
@@ -27,6 +29,7 @@ class _$RespondUsersJudgeDataInner extends RespondUsersJudgeDataInner {
   _$RespondUsersJudgeDataInner._(
       {required this.userId,
       required this.komId,
+      required this.photo,
       required this.role,
       required this.email,
       required this.name,
@@ -36,6 +39,8 @@ class _$RespondUsersJudgeDataInner extends RespondUsersJudgeDataInner {
         userId, r'RespondUsersJudgeDataInner', 'userId');
     BuiltValueNullFieldError.checkNotNull(
         komId, r'RespondUsersJudgeDataInner', 'komId');
+    BuiltValueNullFieldError.checkNotNull(
+        photo, r'RespondUsersJudgeDataInner', 'photo');
     BuiltValueNullFieldError.checkNotNull(
         role, r'RespondUsersJudgeDataInner', 'role');
     BuiltValueNullFieldError.checkNotNull(
@@ -61,6 +66,7 @@ class _$RespondUsersJudgeDataInner extends RespondUsersJudgeDataInner {
     return other is RespondUsersJudgeDataInner &&
         userId == other.userId &&
         komId == other.komId &&
+        photo == other.photo &&
         role == other.role &&
         email == other.email &&
         name == other.name &&
@@ -72,6 +78,7 @@ class _$RespondUsersJudgeDataInner extends RespondUsersJudgeDataInner {
     var _$hash = 0;
     _$hash = $jc(_$hash, userId.hashCode);
     _$hash = $jc(_$hash, komId.hashCode);
+    _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, role.hashCode);
     _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
@@ -85,6 +92,7 @@ class _$RespondUsersJudgeDataInner extends RespondUsersJudgeDataInner {
     return (newBuiltValueToStringHelper(r'RespondUsersJudgeDataInner')
           ..add('userId', userId)
           ..add('komId', komId)
+          ..add('photo', photo)
           ..add('role', role)
           ..add('email', email)
           ..add('name', name)
@@ -105,6 +113,10 @@ class RespondUsersJudgeDataInnerBuilder
   String? _komId;
   String? get komId => _$this._komId;
   set komId(String? komId) => _$this._komId = komId;
+
+  String? _photo;
+  String? get photo => _$this._photo;
+  set photo(String? photo) => _$this._photo = photo;
 
   String? _role;
   String? get role => _$this._role;
@@ -131,6 +143,7 @@ class RespondUsersJudgeDataInnerBuilder
     if ($v != null) {
       _userId = $v.userId;
       _komId = $v.komId;
+      _photo = $v.photo;
       _role = $v.role;
       _email = $v.email;
       _name = $v.name;
@@ -161,6 +174,8 @@ class RespondUsersJudgeDataInnerBuilder
                 userId, r'RespondUsersJudgeDataInner', 'userId'),
             komId: BuiltValueNullFieldError.checkNotNull(
                 komId, r'RespondUsersJudgeDataInner', 'komId'),
+            photo: BuiltValueNullFieldError.checkNotNull(
+                photo, r'RespondUsersJudgeDataInner', 'photo'),
             role: BuiltValueNullFieldError.checkNotNull(
                 role, r'RespondUsersJudgeDataInner', 'role'),
             email: BuiltValueNullFieldError.checkNotNull(
