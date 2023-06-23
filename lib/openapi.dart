@@ -14,6 +14,7 @@ export 'package:openapi/src/api/user_api.dart';
 
 export 'package:openapi/src/model/request_add_nominasi.dart';
 export 'package:openapi/src/model/request_edit_nominasi.dart';
+export 'package:openapi/src/model/request_judge_kompetisi.dart';
 export 'package:openapi/src/model/request_kompetisi_detail.dart';
 export 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 export 'package:openapi/src/model/request_user_email.dart';
@@ -37,3 +38,5 @@ export 'package:openapi/src/model/respond_user_email.dart';
 export 'package:openapi/src/model/respond_user_email_data.dart';
 export 'package:openapi/src/model/respond_users.dart';
 export 'package:openapi/src/model/respond_users_data_inner.dart';
+export 'package:openapi/src/model/respond_users_judge.dart';
+export 'package:openapi/src/model/respond_users_judge_data_inner.dart';

@@ -4,6 +4,7 @@ analysis_options.yaml
 doc/KompetisiApi.md
 doc/RequestAddNominasi.md
 doc/RequestEditNominasi.md
+doc/RequestJudgeKompetisi.md
 doc/RequestKompetisiDetail.md
 doc/RequestRegisterKompetisiByNominasi.md
 doc/RequestUserEmail.md
@@ -27,6 +28,8 @@ doc/RespondUserEmail.md
 doc/RespondUserEmailData.md
 doc/RespondUsers.md
 doc/RespondUsersDataInner.md
+doc/RespondUsersJudge.md
+doc/RespondUsersJudgeDataInner.md
 doc/UserApi.md
 lib/openapi.dart
 lib/src/api.dart
@@ -42,6 +45,7 @@ lib/src/date_serializer.dart
 lib/src/model/date.dart
 lib/src/model/request_add_nominasi.dart
 lib/src/model/request_edit_nominasi.dart
+lib/src/model/request_judge_kompetisi.dart
 lib/src/model/request_kompetisi_detail.dart
 lib/src/model/request_register_kompetisi_by_nominasi.dart
 lib/src/model/request_user_email.dart
@@ -65,5 +69,10 @@ lib/src/model/respond_user_email.dart
 lib/src/model/respond_user_email_data.dart
 lib/src/model/respond_users.dart
 lib/src/model/respond_users_data_inner.dart
+lib/src/model/respond_users_judge.dart
+lib/src/model/respond_users_judge_data_inner.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/request_judge_kompetisi_test.dart
+test/respond_users_judge_data_inner_test.dart
+test/respond_users_judge_test.dart

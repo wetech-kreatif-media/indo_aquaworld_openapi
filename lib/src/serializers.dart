@@ -16,6 +16,7 @@ import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/request_add_nominasi.dart';
 import 'package:openapi/src/model/request_edit_nominasi.dart';
+import 'package:openapi/src/model/request_judge_kompetisi.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
 import 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 import 'package:openapi/src/model/request_user_email.dart';
@@ -39,12 +40,15 @@ import 'package:openapi/src/model/respond_user_email.dart';
 import 'package:openapi/src/model/respond_user_email_data.dart';
 import 'package:openapi/src/model/respond_users.dart';
 import 'package:openapi/src/model/respond_users_data_inner.dart';
+import 'package:openapi/src/model/respond_users_judge.dart';
+import 'package:openapi/src/model/respond_users_judge_data_inner.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
   RequestAddNominasi,
   RequestEditNominasi,
+  RequestJudgeKompetisi,
   RequestKompetisiDetail,
   RequestRegisterKompetisiByNominasi,
   RequestUserEmail,
@@ -68,6 +72,8 @@ part 'serializers.g.dart';
   RespondUserEmailData,
   RespondUsers,
   RespondUsersDataInner,
+  RespondUsersJudge,
+  RespondUsersJudgeDataInner,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..add(const OneOfSerializer())

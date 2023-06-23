@@ -9,6 +9,7 @@ part of 'serializers.dart';
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestAddNominasi.serializer)
       ..add(RequestEditNominasi.serializer)
+      ..add(RequestJudgeKompetisi.serializer)
       ..add(RequestKompetisiDetail.serializer)
       ..add(RequestRegisterKompetisiByNominasi.serializer)
       ..add(RequestUserEmail.serializer)
@@ -32,6 +33,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondUserEmailData.serializer)
       ..add(RespondUsers.serializer)
       ..add(RespondUsersDataInner.serializer)
+      ..add(RespondUsersJudge.serializer)
+      ..add(RespondUsersJudgeDataInner.serializer)
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondKompetisiListDataInner)]),
@@ -53,7 +56,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondUsersDataInner)]),
-          () => new ListBuilder<RespondUsersDataInner>()))
+          () => new ListBuilder<RespondUsersDataInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondUsersJudgeDataInner)]),
+          () => new ListBuilder<RespondUsersJudgeDataInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint
