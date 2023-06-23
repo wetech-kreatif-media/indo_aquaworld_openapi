@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getKompetisiIdParticipants**
-> RespondKompetisiParticipants getKompetisiIdParticipants(komId)
+> RespondKompetisiParticipants getKompetisiIdParticipants(komId, userCari)
 
 Daftar Peserta Kompetisi
 
@@ -371,9 +371,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getKompetisiApi();
 final String komId = komId_example; // String | kompetisiId
+final String userCari = userCari_example; // String | 
 
 try {
-    final response = api.getKompetisiIdParticipants(komId);
+    final response = api.getKompetisiIdParticipants(komId, userCari);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling KompetisiApi->getKompetisiIdParticipants: $e\n');
@@ -385,6 +386,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
+ **userCari** | **String**|  | [optional] 
 
 ### Return type
 

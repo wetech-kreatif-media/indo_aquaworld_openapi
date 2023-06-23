@@ -26,6 +26,8 @@ class _$RespondKompetisiParticipantsDataInner
   final String participantCity;
   @override
   final String participantName;
+  @override
+  final String? participantEmail;
 
   factory _$RespondKompetisiParticipantsDataInner(
           [void Function(RespondKompetisiParticipantsDataInnerBuilder)?
@@ -42,7 +44,8 @@ class _$RespondKompetisiParticipantsDataInner
       this.tank,
       required this.participantPhoto,
       required this.participantCity,
-      required this.participantName})
+      required this.participantName,
+      this.participantEmail})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondKompetisiParticipantsDataInner', 'id');
@@ -78,7 +81,8 @@ class _$RespondKompetisiParticipantsDataInner
         tank == other.tank &&
         participantPhoto == other.participantPhoto &&
         participantCity == other.participantCity &&
-        participantName == other.participantName;
+        participantName == other.participantName &&
+        participantEmail == other.participantEmail;
   }
 
   @override
@@ -93,6 +97,7 @@ class _$RespondKompetisiParticipantsDataInner
     _$hash = $jc(_$hash, participantPhoto.hashCode);
     _$hash = $jc(_$hash, participantCity.hashCode);
     _$hash = $jc(_$hash, participantName.hashCode);
+    _$hash = $jc(_$hash, participantEmail.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -109,7 +114,8 @@ class _$RespondKompetisiParticipantsDataInner
           ..add('tank', tank)
           ..add('participantPhoto', participantPhoto)
           ..add('participantCity', participantCity)
-          ..add('participantName', participantName))
+          ..add('participantName', participantName)
+          ..add('participantEmail', participantEmail))
         .toString();
   }
 }
@@ -160,6 +166,11 @@ class RespondKompetisiParticipantsDataInnerBuilder
   set participantName(String? participantName) =>
       _$this._participantName = participantName;
 
+  String? _participantEmail;
+  String? get participantEmail => _$this._participantEmail;
+  set participantEmail(String? participantEmail) =>
+      _$this._participantEmail = participantEmail;
+
   RespondKompetisiParticipantsDataInnerBuilder() {
     RespondKompetisiParticipantsDataInner._defaults(this);
   }
@@ -176,6 +187,7 @@ class RespondKompetisiParticipantsDataInnerBuilder
       _participantPhoto = $v.participantPhoto;
       _participantCity = $v.participantCity;
       _participantName = $v.participantName;
+      _participantEmail = $v.participantEmail;
       _$v = null;
     }
     return this;
@@ -218,7 +230,8 @@ class RespondKompetisiParticipantsDataInnerBuilder
             participantName: BuiltValueNullFieldError.checkNotNull(
                 participantName,
                 r'RespondKompetisiParticipantsDataInner',
-                'participantName'));
+                'participantName'),
+            participantEmail: participantEmail);
     replace(_$result);
     return _$result;
   }

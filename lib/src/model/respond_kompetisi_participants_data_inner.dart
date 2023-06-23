@@ -20,6 +20,7 @@ part 'respond_kompetisi_participants_data_inner.g.dart';
 /// * [participantPhoto] 
 /// * [participantCity] 
 /// * [participantName] 
+/// * [participantEmail] 
 @BuiltValue()
 abstract class RespondKompetisiParticipantsDataInner implements Built<RespondKompetisiParticipantsDataInner, RespondKompetisiParticipantsDataInnerBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -48,6 +49,9 @@ abstract class RespondKompetisiParticipantsDataInner implements Built<RespondKom
 
   @BuiltValueField(wireName: r'participant_name')
   String get participantName;
+
+  @BuiltValueField(wireName: r'participant_email')
+  String? get participantEmail;
 
   RespondKompetisiParticipantsDataInner._();
 
@@ -125,6 +129,13 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
       object.participantName,
       specifiedType: const FullType(String),
     );
+    if (object.participantEmail != null) {
+      yield r'participant_email';
+      yield serializers.serialize(
+        object.participantEmail,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
@@ -210,6 +221,13 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
             specifiedType: const FullType(String),
           ) as String;
           result.participantName = valueDes;
+          break;
+        case r'participant_email':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.participantEmail = valueDes;
           break;
         default:
           unhandled.add(key);
