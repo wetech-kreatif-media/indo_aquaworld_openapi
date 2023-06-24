@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**loginFacebookUser**](UserApi.md#loginfacebookuser) | **POST** /login-facebook | Login Facebook
 [**loginUser**](UserApi.md#loginuser) | **POST** /login | Login
 [**newPasswordUser**](UserApi.md#newpassworduser) | **PUT** /new-password | Create New Password
+[**putUsers**](UserApi.md#putusers) | **PUT** /users | Ubah data users
 [**registerUser**](UserApi.md#registeruser) | **POST** /register | Register
 [**sendOtpUser**](UserApi.md#sendotpuser) | **POST** /send-otp | Kirim OTP
 
@@ -228,6 +229,52 @@ Name | Type | Description  | Notes
 ### Authorization
 
 No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putUsers**
+> RespondGlobal putUsers(requestChangeRole)
+
+Ubah data users
+
+Sunting user
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getUserApi();
+final RequestChangeRole requestChangeRole = {"user_id":"sdasdasdas-34-fdgdf-g","role":"admin"}; // RequestChangeRole | 
+
+try {
+    final response = api.putUsers(requestChangeRole);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->putUsers: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestChangeRole** | [**RequestChangeRole**](RequestChangeRole.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

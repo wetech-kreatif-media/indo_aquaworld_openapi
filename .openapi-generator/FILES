@@ -3,6 +3,7 @@ README.md
 analysis_options.yaml
 doc/KompetisiApi.md
 doc/RequestAddNominasi.md
+doc/RequestChangeRole.md
 doc/RequestEditNominasi.md
 doc/RequestJudgeKompetisi.md
 doc/RequestKompetisiDetail.md
@@ -44,6 +45,7 @@ lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
 lib/src/model/request_add_nominasi.dart
+lib/src/model/request_change_role.dart
 lib/src/model/request_edit_nominasi.dart
 lib/src/model/request_judge_kompetisi.dart
 lib/src/model/request_kompetisi_detail.dart

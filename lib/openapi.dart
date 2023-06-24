@@ -13,6 +13,7 @@ export 'package:openapi/src/api/kompetisi_api.dart';
 export 'package:openapi/src/api/user_api.dart';
 
 export 'package:openapi/src/model/request_add_nominasi.dart';
+export 'package:openapi/src/model/request_change_role.dart';
 export 'package:openapi/src/model/request_edit_nominasi.dart';
 export 'package:openapi/src/model/request_judge_kompetisi.dart';
 export 'package:openapi/src/model/request_kompetisi_detail.dart';

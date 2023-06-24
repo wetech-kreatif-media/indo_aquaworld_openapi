@@ -15,6 +15,7 @@ import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/request_add_nominasi.dart';
+import 'package:openapi/src/model/request_change_role.dart';
 import 'package:openapi/src/model/request_edit_nominasi.dart';
 import 'package:openapi/src/model/request_judge_kompetisi.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
@@ -47,6 +48,7 @@ part 'serializers.g.dart';
 
 @SerializersFor([
   RequestAddNominasi,
+  RequestChangeRole,
   RequestEditNominasi,
   RequestJudgeKompetisi,
   RequestKompetisiDetail,

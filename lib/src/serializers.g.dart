@@ -8,6 +8,7 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestAddNominasi.serializer)
+      ..add(RequestChangeRole.serializer)
       ..add(RequestEditNominasi.serializer)
       ..add(RequestJudgeKompetisi.serializer)
       ..add(RequestKompetisiDetail.serializer)
