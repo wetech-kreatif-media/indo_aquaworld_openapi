@@ -15,6 +15,8 @@ class _$RespondKompetisiParticipantsDataInner
   @override
   final String? nominationName;
   @override
+  final bool? isNomination;
+  @override
   final int? grandTotal;
   @override
   final int? rank;
@@ -39,6 +41,7 @@ class _$RespondKompetisiParticipantsDataInner
       {required this.id,
       required this.photo,
       this.nominationName,
+      this.isNomination,
       this.grandTotal,
       this.rank,
       this.tank,
@@ -76,6 +79,7 @@ class _$RespondKompetisiParticipantsDataInner
         id == other.id &&
         photo == other.photo &&
         nominationName == other.nominationName &&
+        isNomination == other.isNomination &&
         grandTotal == other.grandTotal &&
         rank == other.rank &&
         tank == other.tank &&
@@ -91,6 +95,7 @@ class _$RespondKompetisiParticipantsDataInner
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, nominationName.hashCode);
+    _$hash = $jc(_$hash, isNomination.hashCode);
     _$hash = $jc(_$hash, grandTotal.hashCode);
     _$hash = $jc(_$hash, rank.hashCode);
     _$hash = $jc(_$hash, tank.hashCode);
@@ -109,6 +114,7 @@ class _$RespondKompetisiParticipantsDataInner
           ..add('id', id)
           ..add('photo', photo)
           ..add('nominationName', nominationName)
+          ..add('isNomination', isNomination)
           ..add('grandTotal', grandTotal)
           ..add('rank', rank)
           ..add('tank', tank)
@@ -138,6 +144,10 @@ class RespondKompetisiParticipantsDataInnerBuilder
   String? get nominationName => _$this._nominationName;
   set nominationName(String? nominationName) =>
       _$this._nominationName = nominationName;
+
+  bool? _isNomination;
+  bool? get isNomination => _$this._isNomination;
+  set isNomination(bool? isNomination) => _$this._isNomination = isNomination;
 
   int? _grandTotal;
   int? get grandTotal => _$this._grandTotal;
@@ -181,6 +191,7 @@ class RespondKompetisiParticipantsDataInnerBuilder
       _id = $v.id;
       _photo = $v.photo;
       _nominationName = $v.nominationName;
+      _isNomination = $v.isNomination;
       _grandTotal = $v.grandTotal;
       _rank = $v.rank;
       _tank = $v.tank;
@@ -216,6 +227,7 @@ class RespondKompetisiParticipantsDataInnerBuilder
             photo: BuiltValueNullFieldError.checkNotNull(
                 photo, r'RespondKompetisiParticipantsDataInner', 'photo'),
             nominationName: nominationName,
+            isNomination: isNomination,
             grandTotal: grandTotal,
             rank: rank,
             tank: tank,

@@ -11,18 +11,23 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addKompetisi**](KompetisiApi.md#addkompetisi) | **POST** /kompetisi | Tambah kompetisi
 [**delKompetisiIdJudge**](KompetisiApi.md#delkompetisiidjudge) | **DELETE** /kompetisi/{komId}/judge | Delete Juri
+[**deleteKompetisiNominationsIdParticipant**](KompetisiApi.md#deletekompetisinominationsidparticipant) | **DELETE** /kompetisi/{komId}/nomination/{nomId} | Hapuskan peserta ke nominasi
 [**editKompetisiId**](KompetisiApi.md#editkompetisiid) | **PUT** /kompetisi/{komId} | Sunting kompetisi
 [**getKompetisi**](KompetisiApi.md#getkompetisi) | **GET** /kompetisi | Daftar Kompesiti
 [**getKompetisiId**](KompetisiApi.md#getkompetisiid) | **GET** /kompetisi/{komId} | Kompesiti per ID
+[**getKompetisiIdJudgement**](KompetisiApi.md#getkompetisiidjudgement) | **GET** /kompetisi/{komId}/nomination/{nomId}/judgement/{judgeId} | Ambil Nilai Penjurian
 [**getKompetisiIdJudges**](KompetisiApi.md#getkompetisiidjudges) | **GET** /kompetisi/{komId}/judge | Daftar Peserta Kompetisi
 [**getKompetisiIdNomination**](KompetisiApi.md#getkompetisiidnomination) | **GET** /kompetisi/{komId}/nomination | Daftar Nominasi per KompetisiId
 [**getKompetisiIdParticipants**](KompetisiApi.md#getkompetisiidparticipants) | **GET** /kompetisi/{komId}/participant | Daftar Peserta Kompetisi
 [**getKompetisiNominationId**](KompetisiApi.md#getkompetisinominationid) | **GET** /kompetisi/{komId}/nomination/{participant_id}/result | Hasil Juri 
 [**getKompetisiNominationsId**](KompetisiApi.md#getkompetisinominationsid) | **GET** /kompetisi/{komId}/nomination/{nomId} | Daftar Peserta Nominasi
 [**getKompetisiNominationsIdSummary**](KompetisiApi.md#getkompetisinominationsidsummary) | **GET** /kompetisi/{komId}/nomination/{nomId}/summary | Daftar Peserta Nominasi Summay
-[**postKompetisiIdJudge**](KompetisiApi.md#postkompetisiidjudge) | **POST** /kompetisi/{komId}/judge | Registrasi Peserta
+[**postKompetisiIdJudge**](KompetisiApi.md#postkompetisiidjudge) | **POST** /kompetisi/{komId}/judge | Registrasikan Juri
+[**postKompetisiIdJudgement**](KompetisiApi.md#postkompetisiidjudgement) | **POST** /kompetisi/{komId}/nomination/{nomId}/judgement | Input Nilai Penjurian
 [**postKompetisiIdNomination**](KompetisiApi.md#postkompetisiidnomination) | **POST** /kompetisi/{komId}/nomination | Tambah Nominasi
 [**postKompetisiNominationId**](KompetisiApi.md#postkompetisinominationid) | **POST** /kompetisi/{komId}/participant | Registrasi Peserta
+[**postKompetisiNominationsIdParticipant**](KompetisiApi.md#postkompetisinominationsidparticipant) | **POST** /kompetisi/{komId}/nomination/{nomId} | Daftarkan peserta ke nominasi
+[**putKompetisiIdJudgement**](KompetisiApi.md#putkompetisiidjudgement) | **PUT** /kompetisi/{komId}/nomination/{nomId}/judgement | Update Nilai Penjurian
 [**putKompetisiIdNomination**](KompetisiApi.md#putkompetisiidnomination) | **PUT** /kompetisi/{komId}/nomination | Edit Nominasi
 [**putKompetisiNominationId**](KompetisiApi.md#putkompetisinominationid) | **PUT** /kompetisi/{komId}/participant | Ubah Peserta
 
@@ -105,6 +110,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
  **requestJudgeKompetisi** | [**RequestJudgeKompetisi**](RequestJudgeKompetisi.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deleteKompetisiNominationsIdParticipant**
+> RespondGlobal deleteKompetisiNominationsIdParticipant(komId, nomId, requestKompetisiNominasiPartisipant)
+
+Hapuskan peserta ke nominasi
+
+Hapuskan peserta ke nominasi
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final String nomId = nomId_example; // String | nominasi id
+final RequestKompetisiNominasiPartisipant requestKompetisiNominasiPartisipant = {"user_id":"sdasdasdas-34-fdgdf-g"}; // RequestKompetisiNominasiPartisipant | 
+
+try {
+    final response = api.deleteKompetisiNominationsIdParticipant(komId, nomId, requestKompetisiNominasiPartisipant);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->deleteKompetisiNominationsIdParticipant: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **nomId** | **String**| nominasi id | 
+ **requestKompetisiNominasiPartisipant** | [**RequestKompetisiNominasiPartisipant**](RequestKompetisiNominasiPartisipant.md)|  | [optional] 
 
 ### Return type
 
@@ -249,6 +304,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RespondKompetisiDetail**](RespondKompetisiDetail.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getKompetisiIdJudgement**
+> RespondJudgeNominasi getKompetisiIdJudgement(komId, nomId, judgeId)
+
+Ambil Nilai Penjurian
+
+Mengambil nilai penjurian per juri
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final String nomId = nomId_example; // String | nominasi id
+final String judgeId = judgeId_example; // String | 
+
+try {
+    final response = api.getKompetisiIdJudgement(komId, nomId, judgeId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->getKompetisiIdJudgement: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **nomId** | **String**| nominasi id | 
+ **judgeId** | **String**|  | 
+
+### Return type
+
+[**RespondJudgeNominasi**](RespondJudgeNominasi.md)
 
 ### Authorization
 
@@ -554,7 +659,7 @@ Name | Type | Description  | Notes
 # **postKompetisiIdJudge**
 > RespondGlobal postKompetisiIdJudge(komId, requestJudgeKompetisi)
 
-Registrasi Peserta
+Registrasikan Juri
 
 Daftarkan juri kompetisi
 
@@ -583,6 +688,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **komId** | **String**| kompetisiId | 
  **requestJudgeKompetisi** | [**RequestJudgeKompetisi**](RequestJudgeKompetisi.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postKompetisiIdJudgement**
+> RespondGlobal postKompetisiIdJudgement(komId, nomId, requestJudgeNominasi)
+
+Input Nilai Penjurian
+
+Input nilai nilai pernjurian
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final String nomId = nomId_example; // String | nominasi id
+final RequestJudgeNominasi requestJudgeNominasi = {"judge_id":"459587hjfdghysfdgsdfghgfd","participant_id":"459587hjfdghysfdgsdfghgfd","head":65,"body":454,"color":654,"fintail":456,"face":564,"pearly":45,"marking":56,"over_all_impression":56,"penalty":45}; // RequestJudgeNominasi | 
+
+try {
+    final response = api.postKompetisiIdJudgement(komId, nomId, requestJudgeNominasi);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->postKompetisiIdJudgement: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **nomId** | **String**| nominasi id | 
+ **requestJudgeNominasi** | [**RequestJudgeNominasi**](RequestJudgeNominasi.md)|  | [optional] 
 
 ### Return type
 
@@ -695,6 +850,106 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postKompetisiNominationsIdParticipant**
+> RespondGlobal postKompetisiNominationsIdParticipant(komId, nomId, requestKompetisiNominasiPartisipant)
+
+Daftarkan peserta ke nominasi
+
+Daftarkan peserta ke nominasi
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final String nomId = nomId_example; // String | nominasi id
+final RequestKompetisiNominasiPartisipant requestKompetisiNominasiPartisipant = {"user_id":"sdasdasdas-34-fdgdf-g"}; // RequestKompetisiNominasiPartisipant | 
+
+try {
+    final response = api.postKompetisiNominationsIdParticipant(komId, nomId, requestKompetisiNominasiPartisipant);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->postKompetisiNominationsIdParticipant: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **nomId** | **String**| nominasi id | 
+ **requestKompetisiNominasiPartisipant** | [**RequestKompetisiNominasiPartisipant**](RequestKompetisiNominasiPartisipant.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putKompetisiIdJudgement**
+> RespondGlobal putKompetisiIdJudgement(komId, nomId, requestJudgeNominasi)
+
+Update Nilai Penjurian
+
+Update nilai nilai pernjurian
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getKompetisiApi();
+final String komId = komId_example; // String | kompetisiId
+final String nomId = nomId_example; // String | nominasi id
+final RequestJudgeNominasi requestJudgeNominasi = {"judge_id":"459587hjfdghysfdgsdfghgfd","participant_id":"459587hjfdghysfdgsdfghgfd","head":65,"body":454,"color":654,"fintail":456,"face":564,"pearly":45,"marking":56,"over_all_impression":56,"penalty":45}; // RequestJudgeNominasi | 
+
+try {
+    final response = api.putKompetisiIdJudgement(komId, nomId, requestJudgeNominasi);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling KompetisiApi->putKompetisiIdJudgement: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **komId** | **String**| kompetisiId | 
+ **nomId** | **String**| nominasi id | 
+ **requestJudgeNominasi** | [**RequestJudgeNominasi**](RequestJudgeNominasi.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

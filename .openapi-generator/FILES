@@ -6,7 +6,9 @@ doc/RequestAddNominasi.md
 doc/RequestChangeRole.md
 doc/RequestEditNominasi.md
 doc/RequestJudgeKompetisi.md
+doc/RequestJudgeNominasi.md
 doc/RequestKompetisiDetail.md
+doc/RequestKompetisiNominasiPartisipant.md
 doc/RequestRegisterKompetisiByNominasi.md
 doc/RequestUserEmail.md
 doc/RequestUserEmailPassword.md
@@ -14,6 +16,8 @@ doc/RequestUserOtp.md
 doc/RequestUserPassword.md
 doc/RequestUserRegister.md
 doc/RespondGlobal.md
+doc/RespondJudgeNominasi.md
+doc/RespondJudgeNominasiDataInner.md
 doc/RespondKompetisiDetail.md
 doc/RespondKompetisiDetailData.md
 doc/RespondKompetisiList.md
@@ -48,7 +52,9 @@ lib/src/model/request_add_nominasi.dart
 lib/src/model/request_change_role.dart
 lib/src/model/request_edit_nominasi.dart
 lib/src/model/request_judge_kompetisi.dart
+lib/src/model/request_judge_nominasi.dart
 lib/src/model/request_kompetisi_detail.dart
+lib/src/model/request_kompetisi_nominasi_partisipant.dart
 lib/src/model/request_register_kompetisi_by_nominasi.dart
 lib/src/model/request_user_email.dart
 lib/src/model/request_user_email_password.dart
@@ -56,6 +62,8 @@ lib/src/model/request_user_otp.dart
 lib/src/model/request_user_password.dart
 lib/src/model/request_user_register.dart
 lib/src/model/respond_global.dart
+lib/src/model/respond_judge_nominasi.dart
+lib/src/model/respond_judge_nominasi_data_inner.dart
 lib/src/model/respond_kompetisi_detail.dart
 lib/src/model/respond_kompetisi_detail_data.dart
 lib/src/model/respond_kompetisi_list.dart

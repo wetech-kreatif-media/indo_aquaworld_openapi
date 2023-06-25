@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | 
 **photo** | **String** |  | 
 **nominationName** | **String** |  | [optional] 
+**isNomination** | **bool** |  | [optional] 
 **grandTotal** | **int** |  | [optional] 
 **rank** | **int** |  | [optional] 
 **tank** | **String** |  | [optional] 

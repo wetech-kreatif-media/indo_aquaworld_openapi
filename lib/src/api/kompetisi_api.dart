@@ -11,9 +11,12 @@ import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_add_nominasi.dart';
 import 'package:openapi/src/model/request_edit_nominasi.dart';
 import 'package:openapi/src/model/request_judge_kompetisi.dart';
+import 'package:openapi/src/model/request_judge_nominasi.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
+import 'package:openapi/src/model/request_kompetisi_nominasi_partisipant.dart';
 import 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 import 'package:openapi/src/model/respond_global.dart';
+import 'package:openapi/src/model/respond_judge_nominasi.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_kompetisi_list.dart';
 import 'package:openapi/src/model/respond_kompetisi_nomination_detail.dart';
@@ -180,6 +183,111 @@ class KompetisiApi {
     try {
       const _type = FullType(RequestJudgeKompetisi);
       _bodyData = requestJudgeKompetisi == null ? null : _serializers.serialize(requestJudgeKompetisi, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondGlobal? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondGlobal>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Hapuskan peserta ke nominasi
+  /// Hapuskan peserta ke nominasi
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [nomId] - nominasi id
+  /// * [requestKompetisiNominasiPartisipant] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondGlobal>> deleteKompetisiNominationsIdParticipant({ 
+    required String komId,
+    required String nomId,
+    RequestKompetisiNominasiPartisipant? requestKompetisiNominasiPartisipant,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nomination/{nomId}'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
+    final _options = Options(
+      method: r'DELETE',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(RequestKompetisiNominasiPartisipant);
+      _bodyData = requestKompetisiNominasiPartisipant == null ? null : _serializers.serialize(requestKompetisiNominasiPartisipant, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -492,6 +600,91 @@ class KompetisiApi {
     }
 
     return Response<RespondKompetisiDetail>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Ambil Nilai Penjurian
+  /// Mengambil nilai penjurian per juri
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [nomId] - nominasi id
+  /// * [judgeId] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondJudgeNominasi] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondJudgeNominasi>> getKompetisiIdJudgement({ 
+    required String komId,
+    required String nomId,
+    required String judgeId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nomination/{nomId}/judgement/{judgeId}'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString()).replaceAll('{' r'judgeId' '}', judgeId.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondJudgeNominasi? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondJudgeNominasi),
+      ) as RespondJudgeNominasi;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondJudgeNominasi>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1023,7 +1216,7 @@ class KompetisiApi {
     );
   }
 
-  /// Registrasi Peserta
+  /// Registrasikan Juri
   /// Daftarkan juri kompetisi
   ///
   /// Parameters:
@@ -1073,6 +1266,111 @@ class KompetisiApi {
     try {
       const _type = FullType(RequestJudgeKompetisi);
       _bodyData = requestJudgeKompetisi == null ? null : _serializers.serialize(requestJudgeKompetisi, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondGlobal? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondGlobal>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Input Nilai Penjurian
+  /// Input nilai nilai pernjurian
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [nomId] - nominasi id
+  /// * [requestJudgeNominasi] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondGlobal>> postKompetisiIdJudgement({ 
+    required String komId,
+    required String nomId,
+    RequestJudgeNominasi? requestJudgeNominasi,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nomination/{nomId}/judgement'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(RequestJudgeNominasi);
+      _bodyData = requestJudgeNominasi == null ? null : _serializers.serialize(requestJudgeNominasi, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -1286,6 +1584,216 @@ class KompetisiApi {
         if (participantId != null) r'participant_id': encodeFormParameter(_serializers, participantId, const FullType(String)),
         if (photo != null) r'photo': photo,
       });
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondGlobal? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondGlobal>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Daftarkan peserta ke nominasi
+  /// Daftarkan peserta ke nominasi
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [nomId] - nominasi id
+  /// * [requestKompetisiNominasiPartisipant] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondGlobal>> postKompetisiNominationsIdParticipant({ 
+    required String komId,
+    required String nomId,
+    RequestKompetisiNominasiPartisipant? requestKompetisiNominasiPartisipant,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nomination/{nomId}'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(RequestKompetisiNominasiPartisipant);
+      _bodyData = requestKompetisiNominasiPartisipant == null ? null : _serializers.serialize(requestKompetisiNominasiPartisipant, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RespondGlobal? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RespondGlobal>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Update Nilai Penjurian
+  /// Update nilai nilai pernjurian
+  ///
+  /// Parameters:
+  /// * [komId] - kompetisiId
+  /// * [nomId] - nominasi id
+  /// * [requestJudgeNominasi] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RespondGlobal>> putKompetisiIdJudgement({ 
+    required String komId,
+    required String nomId,
+    RequestJudgeNominasi? requestJudgeNominasi,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/kompetisi/{komId}/nomination/{nomId}/judgement'.replaceAll('{' r'komId' '}', komId.toString()).replaceAll('{' r'nomId' '}', nomId.toString());
+    final _options = Options(
+      method: r'PUT',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(RequestJudgeNominasi);
+      _bodyData = requestJudgeNominasi == null ? null : _serializers.serialize(requestJudgeNominasi, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

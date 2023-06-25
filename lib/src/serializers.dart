@@ -18,7 +18,9 @@ import 'package:openapi/src/model/request_add_nominasi.dart';
 import 'package:openapi/src/model/request_change_role.dart';
 import 'package:openapi/src/model/request_edit_nominasi.dart';
 import 'package:openapi/src/model/request_judge_kompetisi.dart';
+import 'package:openapi/src/model/request_judge_nominasi.dart';
 import 'package:openapi/src/model/request_kompetisi_detail.dart';
+import 'package:openapi/src/model/request_kompetisi_nominasi_partisipant.dart';
 import 'package:openapi/src/model/request_register_kompetisi_by_nominasi.dart';
 import 'package:openapi/src/model/request_user_email.dart';
 import 'package:openapi/src/model/request_user_email_password.dart';
@@ -26,6 +28,8 @@ import 'package:openapi/src/model/request_user_otp.dart';
 import 'package:openapi/src/model/request_user_password.dart';
 import 'package:openapi/src/model/request_user_register.dart';
 import 'package:openapi/src/model/respond_global.dart';
+import 'package:openapi/src/model/respond_judge_nominasi.dart';
+import 'package:openapi/src/model/respond_judge_nominasi_data_inner.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail.dart';
 import 'package:openapi/src/model/respond_kompetisi_detail_data.dart';
 import 'package:openapi/src/model/respond_kompetisi_list.dart';
@@ -51,7 +55,9 @@ part 'serializers.g.dart';
   RequestChangeRole,
   RequestEditNominasi,
   RequestJudgeKompetisi,
+  RequestJudgeNominasi,
   RequestKompetisiDetail,
+  RequestKompetisiNominasiPartisipant,
   RequestRegisterKompetisiByNominasi,
   RequestUserEmail,
   RequestUserEmailPassword,
@@ -59,6 +65,8 @@ part 'serializers.g.dart';
   RequestUserPassword,
   RequestUserRegister,
   RespondGlobal,
+  RespondJudgeNominasi,
+  RespondJudgeNominasiDataInner,
   RespondKompetisiDetail,
   RespondKompetisiDetailData,
   RespondKompetisiList,

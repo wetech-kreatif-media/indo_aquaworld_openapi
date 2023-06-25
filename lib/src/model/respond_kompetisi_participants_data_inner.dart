@@ -14,6 +14,7 @@ part 'respond_kompetisi_participants_data_inner.g.dart';
 /// * [id] 
 /// * [photo] 
 /// * [nominationName] 
+/// * [isNomination] 
 /// * [grandTotal] 
 /// * [rank] 
 /// * [tank] 
@@ -31,6 +32,9 @@ abstract class RespondKompetisiParticipantsDataInner implements Built<RespondKom
 
   @BuiltValueField(wireName: r'nomination_name')
   String? get nominationName;
+
+  @BuiltValueField(wireName: r'is_nomination')
+  bool? get isNomination;
 
   @BuiltValueField(wireName: r'grand_total')
   int? get grandTotal;
@@ -91,6 +95,13 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
       yield serializers.serialize(
         object.nominationName,
         specifiedType: const FullType(String),
+      );
+    }
+    if (object.isNomination != null) {
+      yield r'is_nomination';
+      yield serializers.serialize(
+        object.isNomination,
+        specifiedType: const FullType(bool),
       );
     }
     if (object.grandTotal != null) {
@@ -179,6 +190,13 @@ class _$RespondKompetisiParticipantsDataInnerSerializer implements PrimitiveSeri
             specifiedType: const FullType(String),
           ) as String;
           result.nominationName = valueDes;
+          break;
+        case r'is_nomination':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.isNomination = valueDes;
           break;
         case r'grand_total':
           final valueDes = serializers.deserialize(

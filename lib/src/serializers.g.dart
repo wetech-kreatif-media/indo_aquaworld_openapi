@@ -11,7 +11,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestChangeRole.serializer)
       ..add(RequestEditNominasi.serializer)
       ..add(RequestJudgeKompetisi.serializer)
+      ..add(RequestJudgeNominasi.serializer)
       ..add(RequestKompetisiDetail.serializer)
+      ..add(RequestKompetisiNominasiPartisipant.serializer)
       ..add(RequestRegisterKompetisiByNominasi.serializer)
       ..add(RequestUserEmail.serializer)
       ..add(RequestUserEmailPassword.serializer)
@@ -19,6 +21,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestUserPassword.serializer)
       ..add(RequestUserRegister.serializer)
       ..add(RespondGlobal.serializer)
+      ..add(RespondJudgeNominasi.serializer)
+      ..add(RespondJudgeNominasiDataInner.serializer)
       ..add(RespondKompetisiDetail.serializer)
       ..add(RespondKompetisiDetailData.serializer)
       ..add(RespondKompetisiList.serializer)
@@ -36,6 +40,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondUsersDataInner.serializer)
       ..add(RespondUsersJudge.serializer)
       ..add(RespondUsersJudgeDataInner.serializer)
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondJudgeNominasiDataInner)]),
+          () => new ListBuilder<RespondJudgeNominasiDataInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondKompetisiListDataInner)]),
