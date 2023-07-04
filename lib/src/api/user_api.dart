@@ -121,8 +121,8 @@ class UserApi {
     );
   }
 
-  /// List Users
-  /// Ambil daftar users
+  /// List Users Admin Only
+  /// Ambil daftar users Admin Only
   ///
   /// Parameters:
   /// * [userCari] - 
@@ -492,8 +492,8 @@ class UserApi {
     );
   }
 
-  /// Ubah data users
-  /// Sunting user
+  /// Sunting Role User Admin Only
+  /// Sunting Role User Admin Only
   ///
   /// Parameters:
   /// * [requestChangeRole] - 

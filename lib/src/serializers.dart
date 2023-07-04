@@ -41,6 +41,8 @@ import 'package:openapi/src/model/respond_kompetisi_nomination_list.dart';
 import 'package:openapi/src/model/respond_kompetisi_nomination_list_data_inner.dart';
 import 'package:openapi/src/model/respond_kompetisi_participants.dart';
 import 'package:openapi/src/model/respond_kompetisi_participants_data_inner.dart';
+import 'package:openapi/src/model/respond_user.dart';
+import 'package:openapi/src/model/respond_user_data.dart';
 import 'package:openapi/src/model/respond_user_email.dart';
 import 'package:openapi/src/model/respond_user_email_data.dart';
 import 'package:openapi/src/model/respond_users.dart';
@@ -78,6 +80,8 @@ part 'serializers.g.dart';
   RespondKompetisiNominationListDataInner,
   RespondKompetisiParticipants,
   RespondKompetisiParticipantsDataInner,
+  RespondUser,
+  RespondUserData,
   RespondUserEmail,
   RespondUserEmailData,
   RespondUsers,

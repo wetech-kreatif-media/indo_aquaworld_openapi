@@ -10,11 +10,11 @@ All URIs are relative to *http://localhost:3000*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**forgotUser**](UserApi.md#forgotuser) | **POST** /forgot | Forgot
-[**getUsers**](UserApi.md#getusers) | **GET** /users | List Users
+[**getUsers**](UserApi.md#getusers) | **GET** /users | List Users Admin Only
 [**loginFacebookUser**](UserApi.md#loginfacebookuser) | **POST** /login-facebook | Login Facebook
 [**loginUser**](UserApi.md#loginuser) | **POST** /login | Login
 [**newPasswordUser**](UserApi.md#newpassworduser) | **PUT** /new-password | Create New Password
-[**putUsers**](UserApi.md#putusers) | **PUT** /users | Ubah data users
+[**putUsers**](UserApi.md#putusers) | **PUT** /users | Sunting Role User Admin Only
 [**registerUser**](UserApi.md#registeruser) | **POST** /register | Register
 [**sendOtpUser**](UserApi.md#sendotpuser) | **POST** /send-otp | Kirim OTP
 
@@ -65,9 +65,9 @@ No authorization required
 # **getUsers**
 > RespondUsers getUsers(userCari)
 
-List Users
+List Users Admin Only
 
-Ambil daftar users
+Ambil daftar users Admin Only
 
 ### Example
 ```dart
@@ -240,9 +240,9 @@ No authorization required
 # **putUsers**
 > RespondGlobal putUsers(requestChangeRole)
 
-Ubah data users
+Sunting Role User Admin Only
 
-Sunting user
+Sunting Role User Admin Only
 
 ### Example
 ```dart

@@ -29,6 +29,8 @@ doc/RespondKompetisiNominationList.md
 doc/RespondKompetisiNominationListDataInner.md
 doc/RespondKompetisiParticipants.md
 doc/RespondKompetisiParticipantsDataInner.md
+doc/RespondUser.md
+doc/RespondUserData.md
 doc/RespondUserEmail.md
 doc/RespondUserEmailData.md
 doc/RespondUsers.md
@@ -36,10 +38,12 @@ doc/RespondUsersDataInner.md
 doc/RespondUsersJudge.md
 doc/RespondUsersJudgeDataInner.md
 doc/UserApi.md
+doc/UserProfileApi.md
 lib/openapi.dart
 lib/src/api.dart
 lib/src/api/kompetisi_api.dart
 lib/src/api/user_api.dart
+lib/src/api/user_profile_api.dart
 lib/src/api_util.dart
 lib/src/auth/api_key_auth.dart
 lib/src/auth/auth.dart
@@ -75,6 +79,8 @@ lib/src/model/respond_kompetisi_nomination_list.dart
 lib/src/model/respond_kompetisi_nomination_list_data_inner.dart
 lib/src/model/respond_kompetisi_participants.dart
 lib/src/model/respond_kompetisi_participants_data_inner.dart
+lib/src/model/respond_user.dart
+lib/src/model/respond_user_data.dart
 lib/src/model/respond_user_email.dart
 lib/src/model/respond_user_email_data.dart
 lib/src/model/respond_users.dart

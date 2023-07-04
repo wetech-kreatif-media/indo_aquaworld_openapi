@@ -11,6 +11,7 @@ import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
 import 'package:openapi/src/api/kompetisi_api.dart';
 import 'package:openapi/src/api/user_api.dart';
+import 'package:openapi/src/api/user_profile_api.dart';
 
 class Openapi {
   static const String basePath = r'http://localhost:3000';
@@ -76,5 +77,11 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   UserApi getUserApi() {
     return UserApi(dio, serializers);
+  }
+
+  /// Get UserProfileApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UserProfileApi getUserProfileApi() {
+    return UserProfileApi(dio, serializers);
   }
 }
