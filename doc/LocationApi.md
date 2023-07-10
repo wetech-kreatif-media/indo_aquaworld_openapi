@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **createLocation**
-> RequestLocation createLocation(body)
+> RespondGlobal createLocation(requestLocation)
 
 Create Location
 
@@ -25,10 +25,10 @@ Membuat lokasi baru
 import 'package:openapi/api.dart';
 
 final api = Openapi().getLocationApi();
-final JsonObject body = {"name":"Gor Malaka 3","address":"Jl. Tamaghdfgn Malaka Selatan 2D","mobilePhone":"089938849","route":"route","urlMaps":"https://www.google.com/maps/place/6%C2%B043'19.5%22S+106%C2%B048'56.4%22E/@-6.72207,106.8130771,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.72207!4d106.815652?entry=ttu"}; // JsonObject | 
+final RequestLocation requestLocation = {"name":"Gor Malaka 3","address":"Jl. Tamaghdfgn Malaka Selatan 2D","mobilePhone":"089938849","route":"route","urlMaps":"https://www.google.com/maps/place/6%C2%B043'19.5%22S+106%C2%B048'56.4%22E/@-6.72207,106.8130771,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.72207!4d106.815652?entry=ttu"}; // RequestLocation | 
 
 try {
-    final response = api.createLocation(body);
+    final response = api.createLocation(requestLocation);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling LocationApi->createLocation: $e\n');
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **JsonObject**|  | [optional] 
+ **requestLocation** | [**RequestLocation**](RequestLocation.md)|  | [optional] 
 
 ### Return type
 
-[**RequestLocation**](RequestLocation.md)
+[**RespondGlobal**](RespondGlobal.md)
 
 ### Authorization
 

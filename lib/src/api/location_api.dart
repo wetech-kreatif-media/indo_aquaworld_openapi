@@ -7,8 +7,8 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:built_value/json_object.dart';
 import 'package:openapi/src/model/request_location.dart';
+import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_locations.dart';
 
 class LocationApi {
@@ -23,7 +23,7 @@ class LocationApi {
   /// Membuat lokasi baru
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [requestLocation] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -31,10 +31,10 @@ class LocationApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RequestLocation] as data
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RequestLocation>> createLocation({ 
-    JsonObject? body,
+  Future<Response<RespondGlobal>> createLocation({ 
+    RequestLocation? requestLocation,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -59,7 +59,8 @@ class LocationApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = body;
+      const _type = FullType(RequestLocation);
+      _bodyData = requestLocation == null ? null : _serializers.serialize(requestLocation, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -82,14 +83,14 @@ class LocationApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RequestLocation? _responseData;
+    RespondGlobal? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RequestLocation),
-      ) as RequestLocation;
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -101,7 +102,7 @@ class LocationApi {
       );
     }
 
-    return Response<RequestLocation>(
+    return Response<RespondGlobal>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
