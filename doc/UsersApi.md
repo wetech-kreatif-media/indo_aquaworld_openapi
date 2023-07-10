@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **postLogin**
-> RespondSuccessLogin postLogin(requestRegistrasi)
+> RespondSuccessLogin postLogin(requestLogin)
 
 Login
 
@@ -118,10 +118,10 @@ Login
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUsersApi();
-final RequestRegistrasi requestRegistrasi = {"fullname":"Juri","email":"juri1@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","id_role":"86c1f549-5440-4d05-80f3-6b75024af7d0"}; // RequestRegistrasi | 
+final RequestLogin requestLogin = {"email":"juri1@yopmsail.com","password":"juri"}; // RequestLogin | 
 
 try {
-    final response = api.postLogin(requestRegistrasi);
+    final response = api.postLogin(requestLogin);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->postLogin: $e\n');
@@ -132,7 +132,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestRegistrasi** | [**RequestRegistrasi**](RequestRegistrasi.md)|  | [optional] 
+ **requestLogin** | [**RequestLogin**](RequestLogin.md)|  | [optional] 
 
 ### Return type
 

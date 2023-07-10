@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
  - [RequestEventNominationsInnerDetailNominatesInner](doc/RequestEventNominationsInnerDetailNominatesInner.md)
  - [RequestForgot](doc/RequestForgot.md)
  - [RequestLocation](doc/RequestLocation.md)
+ - [RequestLogin](doc/RequestLogin.md)
  - [RequestPermission](doc/RequestPermission.md)
  - [RequestRegistrasi](doc/RequestRegistrasi.md)
  - [RequestRole](doc/RequestRole.md)

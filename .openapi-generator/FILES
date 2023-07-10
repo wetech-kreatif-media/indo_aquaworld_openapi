@@ -11,6 +11,7 @@ doc/RequestEventNominationsInner.md
 doc/RequestEventNominationsInnerDetailNominatesInner.md
 doc/RequestForgot.md
 doc/RequestLocation.md
+doc/RequestLogin.md
 doc/RequestPermission.md
 doc/RequestRegistrasi.md
 doc/RequestRole.md
@@ -70,6 +71,7 @@ lib/src/model/request_event_nominations_inner.dart
 lib/src/model/request_event_nominations_inner_detail_nominates_inner.dart
 lib/src/model/request_forgot.dart
 lib/src/model/request_location.dart
+lib/src/model/request_login.dart
 lib/src/model/request_permission.dart
 lib/src/model/request_registrasi.dart
 lib/src/model/request_role.dart
@@ -107,5 +109,4 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/respond_success_login_data_test.dart
-test/respond_success_login_test.dart
+test/request_login_test.dart

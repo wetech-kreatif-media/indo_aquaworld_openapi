@@ -10,6 +10,7 @@ import 'package:dio/dio.dart';
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_forgot.dart';
+import 'package:openapi/src/model/request_login.dart';
 import 'package:openapi/src/model/request_registrasi.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/respond_global.dart';
@@ -206,7 +207,7 @@ class UsersApi {
   /// Login
   ///
   /// Parameters:
-  /// * [requestRegistrasi] 
+  /// * [requestLogin] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -217,7 +218,7 @@ class UsersApi {
   /// Returns a [Future] containing a [Response] with a [RespondSuccessLogin] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondSuccessLogin>> postLogin({ 
-    RequestRegistrasi? requestRegistrasi,
+    RequestLogin? requestLogin,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -242,8 +243,8 @@ class UsersApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(RequestRegistrasi);
-      _bodyData = requestRegistrasi == null ? null : _serializers.serialize(requestRegistrasi, specifiedType: _type);
+      const _type = FullType(RequestLogin);
+      _bodyData = requestLogin == null ? null : _serializers.serialize(requestLogin, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

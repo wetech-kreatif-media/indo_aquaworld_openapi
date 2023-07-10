@@ -22,6 +22,7 @@ export 'package:openapi/src/model/request_event_nominations_inner.dart';
 export 'package:openapi/src/model/request_event_nominations_inner_detail_nominates_inner.dart';
 export 'package:openapi/src/model/request_forgot.dart';
 export 'package:openapi/src/model/request_location.dart';
+export 'package:openapi/src/model/request_login.dart';
 export 'package:openapi/src/model/request_permission.dart';
 export 'package:openapi/src/model/request_registrasi.dart';
 export 'package:openapi/src/model/request_role.dart';

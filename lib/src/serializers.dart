@@ -21,6 +21,7 @@ import 'package:openapi/src/model/request_event_nominations_inner.dart';
 import 'package:openapi/src/model/request_event_nominations_inner_detail_nominates_inner.dart';
 import 'package:openapi/src/model/request_forgot.dart';
 import 'package:openapi/src/model/request_location.dart';
+import 'package:openapi/src/model/request_login.dart';
 import 'package:openapi/src/model/request_permission.dart';
 import 'package:openapi/src/model/request_registrasi.dart';
 import 'package:openapi/src/model/request_role.dart';
@@ -67,6 +68,7 @@ part 'serializers.g.dart';
   RequestEventNominationsInnerDetailNominatesInner,
   RequestForgot,
   RequestLocation,
+  RequestLogin,
   RequestPermission,
   RequestRegistrasi,
   RequestRole,
