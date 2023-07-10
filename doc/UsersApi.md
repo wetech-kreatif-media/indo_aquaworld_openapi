@@ -11,6 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getUsers**](UsersApi.md#getusers) | **GET** /public/users | Get Users
 [**postForgot**](UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
+[**postLogin**](UsersApi.md#postlogin) | **POST** /public/login | Login
 [**postRegistrasi**](UsersApi.md#postregistrasi) | **POST** /public/registration | Registrasi
 [**postSentOtp**](UsersApi.md#postsentotp) | **POST** /public/send-otp | Send OTP
 [**putChangePassword**](UsersApi.md#putchangepassword) | **PUT** /public/change-password | Change Password
@@ -93,6 +94,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postLogin**
+> RespondSuccessLogin postLogin(requestRegistrasi)
+
+Login
+
+Login
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUsersApi();
+final RequestRegistrasi requestRegistrasi = {"fullname":"Juri","email":"juri1@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","id_role":"86c1f549-5440-4d05-80f3-6b75024af7d0"}; // RequestRegistrasi | 
+
+try {
+    final response = api.postLogin(requestRegistrasi);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UsersApi->postLogin: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestRegistrasi** | [**RequestRegistrasi**](RequestRegistrasi.md)|  | [optional] 
+
+### Return type
+
+[**RespondSuccessLogin**](RespondSuccessLogin.md)
 
 ### Authorization
 

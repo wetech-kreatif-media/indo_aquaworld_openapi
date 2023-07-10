@@ -50,6 +50,8 @@ import 'package:openapi/src/model/respond_permissions_data_content_inner.dart';
 import 'package:openapi/src/model/respond_roles.dart';
 import 'package:openapi/src/model/respond_roles_data.dart';
 import 'package:openapi/src/model/respond_roles_data_content_inner.dart';
+import 'package:openapi/src/model/respond_success_login.dart';
+import 'package:openapi/src/model/respond_success_login_data.dart';
 import 'package:openapi/src/model/respond_users.dart';
 import 'package:openapi/src/model/respond_users_data.dart';
 import 'package:openapi/src/model/respond_users_data_content_inner.dart';
@@ -94,6 +96,8 @@ part 'serializers.g.dart';
   RespondRoles,
   RespondRolesData,
   RespondRolesDataContentInner,
+  RespondSuccessLogin,
+  RespondSuccessLoginData,
   RespondUsers,
   RespondUsersData,
   RespondUsersDataContentInner,

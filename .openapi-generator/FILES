@@ -40,6 +40,8 @@ doc/RespondPermissionsDataContentInner.md
 doc/RespondRoles.md
 doc/RespondRolesData.md
 doc/RespondRolesDataContentInner.md
+doc/RespondSuccessLogin.md
+doc/RespondSuccessLoginData.md
 doc/RespondUsers.md
 doc/RespondUsersData.md
 doc/RespondUsersDataContentInner.md
@@ -97,9 +99,13 @@ lib/src/model/respond_permissions_data_content_inner.dart
 lib/src/model/respond_roles.dart
 lib/src/model/respond_roles_data.dart
 lib/src/model/respond_roles_data_content_inner.dart
+lib/src/model/respond_success_login.dart
+lib/src/model/respond_success_login_data.dart
 lib/src/model/respond_users.dart
 lib/src/model/respond_users_data.dart
 lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_success_login_data_test.dart
+test/respond_success_login_test.dart

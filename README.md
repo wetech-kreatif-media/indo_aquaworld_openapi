@@ -75,6 +75,7 @@ Class | Method | HTTP request | Description
 [*RoleApi*](doc/RoleApi.md) | [**getRoles**](doc/RoleApi.md#getroles) | **GET** /public/roles | Get Roles
 [*UsersApi*](doc/UsersApi.md) | [**getUsers**](doc/UsersApi.md#getusers) | **GET** /public/users | Get Users
 [*UsersApi*](doc/UsersApi.md) | [**postForgot**](doc/UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
+[*UsersApi*](doc/UsersApi.md) | [**postLogin**](doc/UsersApi.md#postlogin) | **POST** /public/login | Login
 [*UsersApi*](doc/UsersApi.md) | [**postRegistrasi**](doc/UsersApi.md#postregistrasi) | **POST** /public/registration | Registrasi
 [*UsersApi*](doc/UsersApi.md) | [**postSentOtp**](doc/UsersApi.md#postsentotp) | **POST** /public/send-otp | Send OTP
 [*UsersApi*](doc/UsersApi.md) | [**putChangePassword**](doc/UsersApi.md#putchangepassword) | **PUT** /public/change-password | Change Password
@@ -119,6 +120,8 @@ Class | Method | HTTP request | Description
  - [RespondRoles](doc/RespondRoles.md)
  - [RespondRolesData](doc/RespondRolesData.md)
  - [RespondRolesDataContentInner](doc/RespondRolesDataContentInner.md)
+ - [RespondSuccessLogin](doc/RespondSuccessLogin.md)
+ - [RespondSuccessLoginData](doc/RespondSuccessLoginData.md)
  - [RespondUsers](doc/RespondUsers.md)
  - [RespondUsersData](doc/RespondUsersData.md)
  - [RespondUsersDataContentInner](doc/RespondUsersDataContentInner.md)
