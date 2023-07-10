@@ -4,6 +4,7 @@ analysis_options.yaml
 doc/EventsApi.md
 doc/LocationApi.md
 doc/PermissionApi.md
+doc/RequestChangePassword.md
 doc/RequestEvent.md
 doc/RequestEventLocation.md
 doc/RequestEventNominationsInner.md
@@ -14,6 +15,7 @@ doc/RequestPermission.md
 doc/RequestRegistrasi.md
 doc/RequestRole.md
 doc/RequestRolePermissionsInner.md
+doc/RequestSendOtp.md
 doc/RespondEvent.md
 doc/RespondEventData.md
 doc/RespondEvents.md
@@ -59,6 +61,7 @@ lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
+lib/src/model/request_change_password.dart
 lib/src/model/request_event.dart
 lib/src/model/request_event_location.dart
 lib/src/model/request_event_nominations_inner.dart
@@ -69,6 +72,7 @@ lib/src/model/request_permission.dart
 lib/src/model/request_registrasi.dart
 lib/src/model/request_role.dart
 lib/src/model/request_role_permissions_inner.dart
+lib/src/model/request_send_otp.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
 lib/src/model/respond_events.dart
@@ -99,5 +103,5 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/respond_location_data_test.dart
-test/respond_location_test.dart
+test/request_change_password_test.dart
+test/request_send_otp_test.dart

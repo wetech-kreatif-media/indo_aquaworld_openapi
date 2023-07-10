@@ -14,6 +14,7 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
+import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_event.dart';
 import 'package:openapi/src/model/request_event_location.dart';
 import 'package:openapi/src/model/request_event_nominations_inner.dart';
@@ -24,6 +25,7 @@ import 'package:openapi/src/model/request_permission.dart';
 import 'package:openapi/src/model/request_registrasi.dart';
 import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
+import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/respond_event.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
 import 'package:openapi/src/model/respond_events.dart';
@@ -56,6 +58,7 @@ import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
+  RequestChangePassword,
   RequestEvent,
   RequestEventLocation,
   RequestEventNominationsInner,
@@ -66,6 +69,7 @@ part 'serializers.g.dart';
   RequestRegistrasi,
   RequestRole,
   RequestRolePermissionsInner,
+  RequestSendOtp,
   RespondEvent,
   RespondEventData,
   RespondEvents,

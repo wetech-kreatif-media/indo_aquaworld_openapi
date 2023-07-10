@@ -12,6 +12,9 @@ Method | HTTP request | Description
 [**getUsers**](UsersApi.md#getusers) | **GET** /public/users | Get Users
 [**postForgot**](UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
 [**postRegistrasi**](UsersApi.md#postregistrasi) | **POST** /public/registration | Registrasi
+[**postSentOtp**](UsersApi.md#postsentotp) | **POST** /send-otp | Send OTP
+[**putChangePassword**](UsersApi.md#putchangepassword) | **PUT** /public/change-password | Change Password
+[**putNewPassword**](UsersApi.md#putnewpassword) | **PUT** /public/new-password | New Password
 
 
 # **getUsers**
@@ -129,6 +132,135 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestRegistrasi** | [**RequestRegistrasi**](RequestRegistrasi.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postSentOtp**
+> RespondGlobal postSentOtp(requestSendOtp)
+
+Send OTP
+
+Kirim OTP
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUsersApi();
+final RequestSendOtp requestSendOtp = {"userId":"30ce67b2-0421-4330-9482-b777d06d45e4","otp_code":"6293"}; // RequestSendOtp | 
+
+try {
+    final response = api.postSentOtp(requestSendOtp);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UsersApi->postSentOtp: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestSendOtp** | [**RequestSendOtp**](RequestSendOtp.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putChangePassword**
+> RespondGlobal putChangePassword(requestChangePassword)
+
+Change Password
+
+Ganti password
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUsersApi();
+final RequestChangePassword requestChangePassword = {"userId":"asdasd","password_confirm":"qwer1234","password":"qwer1234"}; // RequestChangePassword | 
+
+try {
+    final response = api.putChangePassword(requestChangePassword);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UsersApi->putChangePassword: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestChangePassword** | [**RequestChangePassword**](RequestChangePassword.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putNewPassword**
+> RespondGlobal putNewPassword(requestChangePassword)
+
+New Password
+
+Ganti password baru
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUsersApi();
+final RequestChangePassword requestChangePassword = {"userId":"asdasd","password_confirm":"qwer1234","password":"qwer1234"}; // RequestChangePassword | 
+
+try {
+    final response = api.putNewPassword(requestChangePassword);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UsersApi->putNewPassword: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestChangePassword** | [**RequestChangePassword**](RequestChangePassword.md)|  | [optional] 
 
 ### Return type
 

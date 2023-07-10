@@ -7,6 +7,7 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(RequestChangePassword.serializer)
       ..add(RequestEvent.serializer)
       ..add(RequestEventLocation.serializer)
       ..add(RequestEventNominationsInner.serializer)
@@ -17,6 +18,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestRegistrasi.serializer)
       ..add(RequestRole.serializer)
       ..add(RequestRolePermissionsInner.serializer)
+      ..add(RequestSendOtp.serializer)
       ..add(RespondEvent.serializer)
       ..add(RespondEventData.serializer)
       ..add(RespondEvents.serializer)

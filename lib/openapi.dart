@@ -15,6 +15,7 @@ export 'package:openapi/src/api/permission_api.dart';
 export 'package:openapi/src/api/role_api.dart';
 export 'package:openapi/src/api/users_api.dart';
 
+export 'package:openapi/src/model/request_change_password.dart';
 export 'package:openapi/src/model/request_event.dart';
 export 'package:openapi/src/model/request_event_location.dart';
 export 'package:openapi/src/model/request_event_nominations_inner.dart';
@@ -25,6 +26,7 @@ export 'package:openapi/src/model/request_permission.dart';
 export 'package:openapi/src/model/request_registrasi.dart';
 export 'package:openapi/src/model/request_role.dart';
 export 'package:openapi/src/model/request_role_permissions_inner.dart';
+export 'package:openapi/src/model/request_send_otp.dart';
 export 'package:openapi/src/model/respond_event.dart';
 export 'package:openapi/src/model/respond_event_data.dart';
 export 'package:openapi/src/model/respond_events.dart';
