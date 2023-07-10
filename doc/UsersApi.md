@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getUsers**](UsersApi.md#getusers) | **GET** /public/users | Get Users
 [**postForgot**](UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
 [**postRegistrasi**](UsersApi.md#postregistrasi) | **POST** /public/registration | Registrasi
-[**postSentOtp**](UsersApi.md#postsentotp) | **POST** /send-otp | Send OTP
+[**postSentOtp**](UsersApi.md#postsentotp) | **POST** /public/send-otp | Send OTP
 [**putChangePassword**](UsersApi.md#putchangepassword) | **PUT** /public/change-password | Change Password
 [**putNewPassword**](UsersApi.md#putnewpassword) | **PUT** /public/new-password | New Password
 

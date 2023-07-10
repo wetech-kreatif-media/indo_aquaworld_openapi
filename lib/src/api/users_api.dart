@@ -319,7 +319,7 @@ class UsersApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/send-otp';
+    final _path = r'/public/send-otp';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
