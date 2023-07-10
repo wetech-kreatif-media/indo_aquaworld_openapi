@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **getUsers**
-> RespondUsers getUsers()
+> RespondUsers getUsers(pageNumber, direction)
 
 Get Users
 
@@ -26,9 +26,11 @@ Ambil data pengguna / users
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUsersApi();
+final num pageNumber = 8.14; // num | 
+final String direction = direction_example; // String | 
 
 try {
-    final response = api.getUsers();
+    final response = api.getUsers(pageNumber, direction);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->getUsers: $e\n');
@@ -36,7 +38,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageNumber** | **num**|  | [optional] 
+ **direction** | **String**|  | [optional] 
 
 ### Return type
 

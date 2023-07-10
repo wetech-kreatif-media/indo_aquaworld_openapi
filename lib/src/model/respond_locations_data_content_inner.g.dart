@@ -31,9 +31,7 @@ class _$RespondLocationsDataContentInner
   @override
   final String route;
   @override
-  final String latitude;
-  @override
-  final String longitude;
+  final String urlMaps;
 
   factory _$RespondLocationsDataContentInner(
           [void Function(RespondLocationsDataContentInnerBuilder)? updates]) =>
@@ -51,8 +49,7 @@ class _$RespondLocationsDataContentInner
       required this.address,
       required this.mobilePhone,
       required this.route,
-      required this.latitude,
-      required this.longitude})
+      required this.urlMaps})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondLocationsDataContentInner', 'id');
@@ -77,9 +74,7 @@ class _$RespondLocationsDataContentInner
     BuiltValueNullFieldError.checkNotNull(
         route, r'RespondLocationsDataContentInner', 'route');
     BuiltValueNullFieldError.checkNotNull(
-        latitude, r'RespondLocationsDataContentInner', 'latitude');
-    BuiltValueNullFieldError.checkNotNull(
-        longitude, r'RespondLocationsDataContentInner', 'longitude');
+        urlMaps, r'RespondLocationsDataContentInner', 'urlMaps');
   }
 
   @override
@@ -106,8 +101,7 @@ class _$RespondLocationsDataContentInner
         address == other.address &&
         mobilePhone == other.mobilePhone &&
         route == other.route &&
-        latitude == other.latitude &&
-        longitude == other.longitude;
+        urlMaps == other.urlMaps;
   }
 
   @override
@@ -124,8 +118,7 @@ class _$RespondLocationsDataContentInner
     _$hash = $jc(_$hash, address.hashCode);
     _$hash = $jc(_$hash, mobilePhone.hashCode);
     _$hash = $jc(_$hash, route.hashCode);
-    _$hash = $jc(_$hash, latitude.hashCode);
-    _$hash = $jc(_$hash, longitude.hashCode);
+    _$hash = $jc(_$hash, urlMaps.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -144,8 +137,7 @@ class _$RespondLocationsDataContentInner
           ..add('address', address)
           ..add('mobilePhone', mobilePhone)
           ..add('route', route)
-          ..add('latitude', latitude)
-          ..add('longitude', longitude))
+          ..add('urlMaps', urlMaps))
         .toString();
   }
 }
@@ -200,13 +192,9 @@ class RespondLocationsDataContentInnerBuilder
   String? get route => _$this._route;
   set route(String? route) => _$this._route = route;
 
-  String? _latitude;
-  String? get latitude => _$this._latitude;
-  set latitude(String? latitude) => _$this._latitude = latitude;
-
-  String? _longitude;
-  String? get longitude => _$this._longitude;
-  set longitude(String? longitude) => _$this._longitude = longitude;
+  String? _urlMaps;
+  String? get urlMaps => _$this._urlMaps;
+  set urlMaps(String? urlMaps) => _$this._urlMaps = urlMaps;
 
   RespondLocationsDataContentInnerBuilder() {
     RespondLocationsDataContentInner._defaults(this);
@@ -226,8 +214,7 @@ class RespondLocationsDataContentInnerBuilder
       _address = $v.address;
       _mobilePhone = $v.mobilePhone;
       _route = $v.route;
-      _latitude = $v.latitude;
-      _longitude = $v.longitude;
+      _urlMaps = $v.urlMaps;
       _$v = null;
     }
     return this;
@@ -269,8 +256,7 @@ class RespondLocationsDataContentInnerBuilder
             address: BuiltValueNullFieldError.checkNotNull(address, r'RespondLocationsDataContentInner', 'address'),
             mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondLocationsDataContentInner', 'mobilePhone'),
             route: BuiltValueNullFieldError.checkNotNull(route, r'RespondLocationsDataContentInner', 'route'),
-            latitude: BuiltValueNullFieldError.checkNotNull(latitude, r'RespondLocationsDataContentInner', 'latitude'),
-            longitude: BuiltValueNullFieldError.checkNotNull(longitude, r'RespondLocationsDataContentInner', 'longitude'));
+            urlMaps: BuiltValueNullFieldError.checkNotNull(urlMaps, r'RespondLocationsDataContentInner', 'urlMaps'));
     replace(_$result);
     return _$result;
   }

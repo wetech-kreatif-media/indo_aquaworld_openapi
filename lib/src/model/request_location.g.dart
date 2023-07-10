@@ -8,29 +8,35 @@ part of 'request_location.dart';
 
 class _$RequestLocation extends RequestLocation {
   @override
-  final String? name;
+  final String name;
   @override
-  final String? address;
+  final String address;
   @override
-  final String? mobilePhone;
+  final String mobilePhone;
   @override
-  final String? route;
+  final String route;
   @override
-  final String? latitude;
-  @override
-  final String? longitude;
+  final String urlMaps;
 
   factory _$RequestLocation([void Function(RequestLocationBuilder)? updates]) =>
       (new RequestLocationBuilder()..update(updates))._build();
 
   _$RequestLocation._(
-      {this.name,
-      this.address,
-      this.mobilePhone,
-      this.route,
-      this.latitude,
-      this.longitude})
-      : super._();
+      {required this.name,
+      required this.address,
+      required this.mobilePhone,
+      required this.route,
+      required this.urlMaps})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(name, r'RequestLocation', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        address, r'RequestLocation', 'address');
+    BuiltValueNullFieldError.checkNotNull(
+        mobilePhone, r'RequestLocation', 'mobilePhone');
+    BuiltValueNullFieldError.checkNotNull(route, r'RequestLocation', 'route');
+    BuiltValueNullFieldError.checkNotNull(
+        urlMaps, r'RequestLocation', 'urlMaps');
+  }
 
   @override
   RequestLocation rebuild(void Function(RequestLocationBuilder) updates) =>
@@ -48,8 +54,7 @@ class _$RequestLocation extends RequestLocation {
         address == other.address &&
         mobilePhone == other.mobilePhone &&
         route == other.route &&
-        latitude == other.latitude &&
-        longitude == other.longitude;
+        urlMaps == other.urlMaps;
   }
 
   @override
@@ -59,8 +64,7 @@ class _$RequestLocation extends RequestLocation {
     _$hash = $jc(_$hash, address.hashCode);
     _$hash = $jc(_$hash, mobilePhone.hashCode);
     _$hash = $jc(_$hash, route.hashCode);
-    _$hash = $jc(_$hash, latitude.hashCode);
-    _$hash = $jc(_$hash, longitude.hashCode);
+    _$hash = $jc(_$hash, urlMaps.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -72,8 +76,7 @@ class _$RequestLocation extends RequestLocation {
           ..add('address', address)
           ..add('mobilePhone', mobilePhone)
           ..add('route', route)
-          ..add('latitude', latitude)
-          ..add('longitude', longitude))
+          ..add('urlMaps', urlMaps))
         .toString();
   }
 }
@@ -98,13 +101,9 @@ class RequestLocationBuilder
   String? get route => _$this._route;
   set route(String? route) => _$this._route = route;
 
-  String? _latitude;
-  String? get latitude => _$this._latitude;
-  set latitude(String? latitude) => _$this._latitude = latitude;
-
-  String? _longitude;
-  String? get longitude => _$this._longitude;
-  set longitude(String? longitude) => _$this._longitude = longitude;
+  String? _urlMaps;
+  String? get urlMaps => _$this._urlMaps;
+  set urlMaps(String? urlMaps) => _$this._urlMaps = urlMaps;
 
   RequestLocationBuilder() {
     RequestLocation._defaults(this);
@@ -117,8 +116,7 @@ class RequestLocationBuilder
       _address = $v.address;
       _mobilePhone = $v.mobilePhone;
       _route = $v.route;
-      _latitude = $v.latitude;
-      _longitude = $v.longitude;
+      _urlMaps = $v.urlMaps;
       _$v = null;
     }
     return this;
@@ -141,12 +139,16 @@ class RequestLocationBuilder
   _$RequestLocation _build() {
     final _$result = _$v ??
         new _$RequestLocation._(
-            name: name,
-            address: address,
-            mobilePhone: mobilePhone,
-            route: route,
-            latitude: latitude,
-            longitude: longitude);
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'RequestLocation', 'name'),
+            address: BuiltValueNullFieldError.checkNotNull(
+                address, r'RequestLocation', 'address'),
+            mobilePhone: BuiltValueNullFieldError.checkNotNull(
+                mobilePhone, r'RequestLocation', 'mobilePhone'),
+            route: BuiltValueNullFieldError.checkNotNull(
+                route, r'RequestLocation', 'route'),
+            urlMaps: BuiltValueNullFieldError.checkNotNull(
+                urlMaps, r'RequestLocation', 'urlMaps'));
     replace(_$result);
     return _$result;
   }

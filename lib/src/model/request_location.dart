@@ -15,27 +15,23 @@ part 'request_location.g.dart';
 /// * [address] 
 /// * [mobilePhone] 
 /// * [route] 
-/// * [latitude] 
-/// * [longitude] 
+/// * [urlMaps] 
 @BuiltValue()
 abstract class RequestLocation implements Built<RequestLocation, RequestLocationBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String get name;
 
   @BuiltValueField(wireName: r'address')
-  String? get address;
+  String get address;
 
   @BuiltValueField(wireName: r'mobilePhone')
-  String? get mobilePhone;
+  String get mobilePhone;
 
   @BuiltValueField(wireName: r'route')
-  String? get route;
+  String get route;
 
-  @BuiltValueField(wireName: r'latitude')
-  String? get latitude;
-
-  @BuiltValueField(wireName: r'longitude')
-  String? get longitude;
+  @BuiltValueField(wireName: r'urlMaps')
+  String get urlMaps;
 
   RequestLocation._();
 
@@ -60,48 +56,31 @@ class _$RequestLocationSerializer implements PrimitiveSerializer<RequestLocation
     RequestLocation object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
-      yield r'name';
-      yield serializers.serialize(
-        object.name,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.address != null) {
-      yield r'address';
-      yield serializers.serialize(
-        object.address,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.mobilePhone != null) {
-      yield r'mobilePhone';
-      yield serializers.serialize(
-        object.mobilePhone,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.route != null) {
-      yield r'route';
-      yield serializers.serialize(
-        object.route,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.latitude != null) {
-      yield r'latitude';
-      yield serializers.serialize(
-        object.latitude,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.longitude != null) {
-      yield r'longitude';
-      yield serializers.serialize(
-        object.longitude,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'name';
+    yield serializers.serialize(
+      object.name,
+      specifiedType: const FullType(String),
+    );
+    yield r'address';
+    yield serializers.serialize(
+      object.address,
+      specifiedType: const FullType(String),
+    );
+    yield r'mobilePhone';
+    yield serializers.serialize(
+      object.mobilePhone,
+      specifiedType: const FullType(String),
+    );
+    yield r'route';
+    yield serializers.serialize(
+      object.route,
+      specifiedType: const FullType(String),
+    );
+    yield r'urlMaps';
+    yield serializers.serialize(
+      object.urlMaps,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override
@@ -153,19 +132,12 @@ class _$RequestLocationSerializer implements PrimitiveSerializer<RequestLocation
           ) as String;
           result.route = valueDes;
           break;
-        case r'latitude':
+        case r'urlMaps':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.latitude = valueDes;
-          break;
-        case r'longitude':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.longitude = valueDes;
+          result.urlMaps = valueDes;
           break;
         default:
           unhandled.add(key);

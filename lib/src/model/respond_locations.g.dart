@@ -8,9 +8,9 @@ part of 'respond_locations.dart';
 
 class _$RespondLocations extends RespondLocations {
   @override
-  final String? responseCode;
+  final String responseCode;
   @override
-  final String? responseMessage;
+  final String responseMessage;
   @override
   final RespondLocationsData? data;
 
@@ -18,8 +18,14 @@ class _$RespondLocations extends RespondLocations {
           [void Function(RespondLocationsBuilder)? updates]) =>
       (new RespondLocationsBuilder()..update(updates))._build();
 
-  _$RespondLocations._({this.responseCode, this.responseMessage, this.data})
-      : super._();
+  _$RespondLocations._(
+      {required this.responseCode, required this.responseMessage, this.data})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondLocations', 'responseCode');
+    BuiltValueNullFieldError.checkNotNull(
+        responseMessage, r'RespondLocations', 'responseMessage');
+  }
 
   @override
   RespondLocations rebuild(void Function(RespondLocationsBuilder) updates) =>
@@ -110,8 +116,10 @@ class RespondLocationsBuilder
     try {
       _$result = _$v ??
           new _$RespondLocations._(
-              responseCode: responseCode,
-              responseMessage: responseMessage,
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondLocations', 'responseCode'),
+              responseMessage: BuiltValueNullFieldError.checkNotNull(
+                  responseMessage, r'RespondLocations', 'responseMessage'),
               data: _data?.build());
     } catch (_) {
       late String _$failedField;

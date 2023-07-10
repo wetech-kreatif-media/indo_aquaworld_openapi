@@ -22,8 +22,7 @@ part 'respond_locations_data_content_inner.g.dart';
 /// * [address] 
 /// * [mobilePhone] 
 /// * [route] 
-/// * [latitude] 
-/// * [longitude] 
+/// * [urlMaps] 
 @BuiltValue()
 abstract class RespondLocationsDataContentInner implements Built<RespondLocationsDataContentInner, RespondLocationsDataContentInnerBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -59,11 +58,8 @@ abstract class RespondLocationsDataContentInner implements Built<RespondLocation
   @BuiltValueField(wireName: r'route')
   String get route;
 
-  @BuiltValueField(wireName: r'latitude')
-  String get latitude;
-
-  @BuiltValueField(wireName: r'longitude')
-  String get longitude;
+  @BuiltValueField(wireName: r'urlMaps')
+  String get urlMaps;
 
   RespondLocationsDataContentInner._();
 
@@ -143,14 +139,9 @@ class _$RespondLocationsDataContentInnerSerializer implements PrimitiveSerialize
       object.route,
       specifiedType: const FullType(String),
     );
-    yield r'latitude';
+    yield r'urlMaps';
     yield serializers.serialize(
-      object.latitude,
-      specifiedType: const FullType(String),
-    );
-    yield r'longitude';
-    yield serializers.serialize(
-      object.longitude,
+      object.urlMaps,
       specifiedType: const FullType(String),
     );
   }
@@ -253,19 +244,12 @@ class _$RespondLocationsDataContentInnerSerializer implements PrimitiveSerialize
           ) as String;
           result.route = valueDes;
           break;
-        case r'latitude':
+        case r'urlMaps':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.latitude = valueDes;
-          break;
-        case r'longitude':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.longitude = valueDes;
+          result.urlMaps = valueDes;
           break;
         default:
           unhandled.add(key);
