@@ -24,6 +24,9 @@ import 'package:openapi/src/model/request_permission.dart';
 import 'package:openapi/src/model/request_registrasi.dart';
 import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
+import 'package:openapi/src/model/respond_event.dart';
+import 'package:openapi/src/model/respond_event_data.dart';
+import 'package:openapi/src/model/respond_event_data_location.dart';
 import 'package:openapi/src/model/respond_events.dart';
 import 'package:openapi/src/model/respond_events_data.dart';
 import 'package:openapi/src/model/respond_events_data_content_inner.dart';
@@ -62,6 +65,9 @@ part 'serializers.g.dart';
   RequestRegistrasi,
   RequestRole,
   RequestRolePermissionsInner,
+  RespondEvent,
+  RespondEventData,
+  RespondEventDataLocation,
   RespondEvents,
   RespondEventsData,
   RespondEventsDataContentInner,

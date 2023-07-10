@@ -17,6 +17,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestRegistrasi.serializer)
       ..add(RequestRole.serializer)
       ..add(RequestRolePermissionsInner.serializer)
+      ..add(RespondEvent.serializer)
+      ..add(RespondEventData.serializer)
+      ..add(RespondEventDataLocation.serializer)
       ..add(RespondEvents.serializer)
       ..add(RespondEventsData.serializer)
       ..add(RespondEventsDataContentInner.serializer)
@@ -115,7 +118,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondUsersDataContentInner)]),
-          () => new ListBuilder<RespondUsersDataContentInner>()))
+          () => new ListBuilder<RespondUsersDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint
