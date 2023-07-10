@@ -18,7 +18,7 @@ class _$RespondEventData extends RespondEventData {
   @override
   final String? description;
   @override
-  final RespondEventDataLocation? location;
+  final RespondLocationData? location;
   @override
   final BuiltList<String>? teams;
   @override
@@ -121,10 +121,10 @@ class RespondEventDataBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  RespondEventDataLocationBuilder? _location;
-  RespondEventDataLocationBuilder get location =>
-      _$this._location ??= new RespondEventDataLocationBuilder();
-  set location(RespondEventDataLocationBuilder? location) =>
+  RespondLocationDataBuilder? _location;
+  RespondLocationDataBuilder get location =>
+      _$this._location ??= new RespondLocationDataBuilder();
+  set location(RespondLocationDataBuilder? location) =>
       _$this._location = location;
 
   ListBuilder<String>? _teams;

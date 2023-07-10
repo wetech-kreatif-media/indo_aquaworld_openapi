@@ -10,6 +10,7 @@ All URIs are relative to *http://localhost:8080/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createLocation**](LocationApi.md#createlocation) | **POST** /public/location | Create Location
+[**getLocation**](LocationApi.md#getlocation) | **GET** /public/location/{locationId} | Get Location
 [**getLocations**](LocationApi.md#getlocations) | **GET** /public/locations | Get Locations
 
 
@@ -52,6 +53,49 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getLocation**
+> RespondLocation getLocation(locationId)
+
+Get Location
+
+Ambil detail data lokasi 
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getLocationApi();
+final String locationId = locationId_example; // String | 
+
+try {
+    final response = api.getLocation(locationId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling LocationApi->getLocation: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **locationId** | **String**|  | 
+
+### Return type
+
+[**RespondLocation**](RespondLocation.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

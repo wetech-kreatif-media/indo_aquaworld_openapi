@@ -67,6 +67,7 @@ Class | Method | HTTP request | Description
 [*EventsApi*](doc/EventsApi.md) | [**getEvent**](doc/EventsApi.md#getevent) | **GET** /public/event/{eventId} | Ambil Event
 [*EventsApi*](doc/EventsApi.md) | [**getEvents**](doc/EventsApi.md#getevents) | **GET** /public/events | Get Events
 [*LocationApi*](doc/LocationApi.md) | [**createLocation**](doc/LocationApi.md#createlocation) | **POST** /public/location | Create Location
+[*LocationApi*](doc/LocationApi.md) | [**getLocation**](doc/LocationApi.md#getlocation) | **GET** /public/location/{locationId} | Get Location
 [*LocationApi*](doc/LocationApi.md) | [**getLocations**](doc/LocationApi.md#getlocations) | **GET** /public/locations | Get Locations
 [*PermissionApi*](doc/PermissionApi.md) | [**createPermission**](doc/PermissionApi.md#createpermission) | **POST** /public/permission | Create Permission
 [*PermissionApi*](doc/PermissionApi.md) | [**getPermissions**](doc/PermissionApi.md#getpermissions) | **GET** /public/permissions | Get Permissions
@@ -91,7 +92,6 @@ Class | Method | HTTP request | Description
  - [RequestRolePermissionsInner](doc/RequestRolePermissionsInner.md)
  - [RespondEvent](doc/RespondEvent.md)
  - [RespondEventData](doc/RespondEventData.md)
- - [RespondEventDataLocation](doc/RespondEventDataLocation.md)
  - [RespondEvents](doc/RespondEvents.md)
  - [RespondEventsData](doc/RespondEventsData.md)
  - [RespondEventsDataContentInner](doc/RespondEventsDataContentInner.md)
@@ -103,6 +103,8 @@ Class | Method | HTTP request | Description
  - [RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner](doc/RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner.md)
  - [RespondGlobal](doc/RespondGlobal.md)
  - [RespondGlobalData](doc/RespondGlobalData.md)
+ - [RespondLocation](doc/RespondLocation.md)
+ - [RespondLocationData](doc/RespondLocationData.md)
  - [RespondLocations](doc/RespondLocations.md)
  - [RespondLocationsData](doc/RespondLocationsData.md)
  - [RespondLocationsDataContentInner](doc/RespondLocationsDataContentInner.md)

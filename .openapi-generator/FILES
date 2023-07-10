@@ -16,7 +16,6 @@ doc/RequestRole.md
 doc/RequestRolePermissionsInner.md
 doc/RespondEvent.md
 doc/RespondEventData.md
-doc/RespondEventDataLocation.md
 doc/RespondEvents.md
 doc/RespondEventsData.md
 doc/RespondEventsDataContentInner.md
@@ -28,6 +27,8 @@ doc/RespondEventsDataContentInnerNominationsInnerJudgeRole.md
 doc/RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner.md
 doc/RespondGlobal.md
 doc/RespondGlobalData.md
+doc/RespondLocation.md
+doc/RespondLocationData.md
 doc/RespondLocations.md
 doc/RespondLocationsData.md
 doc/RespondLocationsDataContentInner.md
@@ -70,7 +71,6 @@ lib/src/model/request_role.dart
 lib/src/model/request_role_permissions_inner.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
-lib/src/model/respond_event_data_location.dart
 lib/src/model/respond_events.dart
 lib/src/model/respond_events_data.dart
 lib/src/model/respond_events_data_content_inner.dart
@@ -82,6 +82,8 @@ lib/src/model/respond_events_data_content_inner_nominations_inner_judge_role.dar
 lib/src/model/respond_events_data_content_inner_nominations_inner_judge_role_permissions_inner.dart
 lib/src/model/respond_global.dart
 lib/src/model/respond_global_data.dart
+lib/src/model/respond_location.dart
+lib/src/model/respond_location_data.dart
 lib/src/model/respond_locations.dart
 lib/src/model/respond_locations_data.dart
 lib/src/model/respond_locations_data_content_inner.dart
@@ -97,3 +99,5 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_location_data_test.dart
+test/respond_location_test.dart

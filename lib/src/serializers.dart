@@ -26,7 +26,6 @@ import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_event.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
-import 'package:openapi/src/model/respond_event_data_location.dart';
 import 'package:openapi/src/model/respond_events.dart';
 import 'package:openapi/src/model/respond_events_data.dart';
 import 'package:openapi/src/model/respond_events_data_content_inner.dart';
@@ -38,6 +37,8 @@ import 'package:openapi/src/model/respond_events_data_content_inner_nominations_
 import 'package:openapi/src/model/respond_events_data_content_inner_nominations_inner_judge_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_global_data.dart';
+import 'package:openapi/src/model/respond_location.dart';
+import 'package:openapi/src/model/respond_location_data.dart';
 import 'package:openapi/src/model/respond_locations.dart';
 import 'package:openapi/src/model/respond_locations_data.dart';
 import 'package:openapi/src/model/respond_locations_data_content_inner.dart';
@@ -67,7 +68,6 @@ part 'serializers.g.dart';
   RequestRolePermissionsInner,
   RespondEvent,
   RespondEventData,
-  RespondEventDataLocation,
   RespondEvents,
   RespondEventsData,
   RespondEventsDataContentInner,
@@ -79,6 +79,8 @@ part 'serializers.g.dart';
   RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner,
   RespondGlobal,
   RespondGlobalData,
+  RespondLocation,
+  RespondLocationData,
   RespondLocations,
   RespondLocationsData,
   RespondLocationsDataContentInner,

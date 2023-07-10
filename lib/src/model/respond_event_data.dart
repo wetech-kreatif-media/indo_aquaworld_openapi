@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/respond_event_data_location.dart';
+import 'package:openapi/src/model/respond_location_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -40,7 +40,7 @@ abstract class RespondEventData implements Built<RespondEventData, RespondEventD
   String? get description;
 
   @BuiltValueField(wireName: r'location')
-  RespondEventDataLocation? get location;
+  RespondLocationData? get location;
 
   @BuiltValueField(wireName: r'teams')
   BuiltList<String>? get teams;
@@ -113,7 +113,7 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
       yield r'location';
       yield serializers.serialize(
         object.location,
-        specifiedType: const FullType(RespondEventDataLocation),
+        specifiedType: const FullType(RespondLocationData),
       );
     }
     if (object.teams != null) {
@@ -198,8 +198,8 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
         case r'location':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondEventDataLocation),
-          ) as RespondEventDataLocation;
+            specifiedType: const FullType(RespondLocationData),
+          ) as RespondLocationData;
           result.location.replace(valueDes);
           break;
         case r'teams':

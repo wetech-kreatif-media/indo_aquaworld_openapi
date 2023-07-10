@@ -27,7 +27,6 @@ export 'package:openapi/src/model/request_role.dart';
 export 'package:openapi/src/model/request_role_permissions_inner.dart';
 export 'package:openapi/src/model/respond_event.dart';
 export 'package:openapi/src/model/respond_event_data.dart';
-export 'package:openapi/src/model/respond_event_data_location.dart';
 export 'package:openapi/src/model/respond_events.dart';
 export 'package:openapi/src/model/respond_events_data.dart';
 export 'package:openapi/src/model/respond_events_data_content_inner.dart';
@@ -39,6 +38,8 @@ export 'package:openapi/src/model/respond_events_data_content_inner_nominations_
 export 'package:openapi/src/model/respond_events_data_content_inner_nominations_inner_judge_role_permissions_inner.dart';
 export 'package:openapi/src/model/respond_global.dart';
 export 'package:openapi/src/model/respond_global_data.dart';
+export 'package:openapi/src/model/respond_location.dart';
+export 'package:openapi/src/model/respond_location_data.dart';
 export 'package:openapi/src/model/respond_locations.dart';
 export 'package:openapi/src/model/respond_locations_data.dart';
 export 'package:openapi/src/model/respond_locations_data_content_inner.dart';

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **startDate** | **String** |  | [optional] 
 **endDate** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**location** | [**RespondEventDataLocation**](RespondEventDataLocation.md) |  | [optional] 
+**location** | [**RespondLocationData**](RespondLocationData.md) |  | [optional] 
 **teams** | **BuiltList&lt;String&gt;** |  | [optional] 
 **statusPublish** | **String** |  | [optional] 
 **statusEvent** | **String** |  | [optional] 
