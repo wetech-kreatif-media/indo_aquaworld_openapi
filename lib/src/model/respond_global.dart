@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/respond_global_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,15 +12,19 @@ part 'respond_global.g.dart';
 /// RespondGlobal
 ///
 /// Properties:
-/// * [success] 
-/// * [message] 
+/// * [responseCode] 
+/// * [responseMessage] 
+/// * [data] 
 @BuiltValue()
 abstract class RespondGlobal implements Built<RespondGlobal, RespondGlobalBuilder> {
-  @BuiltValueField(wireName: r'success')
-  bool get success;
+  @BuiltValueField(wireName: r'responseCode')
+  String get responseCode;
 
-  @BuiltValueField(wireName: r'message')
-  String get message;
+  @BuiltValueField(wireName: r'responseMessage')
+  String get responseMessage;
+
+  @BuiltValueField(wireName: r'data')
+  RespondGlobalData? get data;
 
   RespondGlobal._();
 
@@ -44,16 +49,23 @@ class _$RespondGlobalSerializer implements PrimitiveSerializer<RespondGlobal> {
     RespondGlobal object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'success';
+    yield r'responseCode';
     yield serializers.serialize(
-      object.success,
-      specifiedType: const FullType(bool),
-    );
-    yield r'message';
-    yield serializers.serialize(
-      object.message,
+      object.responseCode,
       specifiedType: const FullType(String),
     );
+    yield r'responseMessage';
+    yield serializers.serialize(
+      object.responseMessage,
+      specifiedType: const FullType(String),
+    );
+    if (object.data != null) {
+      yield r'data';
+      yield serializers.serialize(
+        object.data,
+        specifiedType: const FullType(RespondGlobalData),
+      );
+    }
   }
 
   @override
@@ -77,19 +89,26 @@ class _$RespondGlobalSerializer implements PrimitiveSerializer<RespondGlobal> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'success':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(bool),
-          ) as bool;
-          result.success = valueDes;
-          break;
-        case r'message':
+        case r'responseCode':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.message = valueDes;
+          result.responseCode = valueDes;
+          break;
+        case r'responseMessage':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.responseMessage = valueDes;
+          break;
+        case r'data':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RespondGlobalData),
+          ) as RespondGlobalData;
+          result.data.replace(valueDes);
           break;
         default:
           unhandled.add(key);

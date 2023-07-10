@@ -3,8 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/respond_users_data_inner.dart';
+import 'package:openapi/src/model/respond_users_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,19 +12,19 @@ part 'respond_users.g.dart';
 /// RespondUsers
 ///
 /// Properties:
-/// * [success] 
-/// * [message] 
+/// * [responseCode] 
+/// * [responseMessage] 
 /// * [data] 
 @BuiltValue()
 abstract class RespondUsers implements Built<RespondUsers, RespondUsersBuilder> {
-  @BuiltValueField(wireName: r'success')
-  bool get success;
+  @BuiltValueField(wireName: r'responseCode')
+  String get responseCode;
 
-  @BuiltValueField(wireName: r'message')
-  String get message;
+  @BuiltValueField(wireName: r'responseMessage')
+  String get responseMessage;
 
   @BuiltValueField(wireName: r'data')
-  BuiltList<RespondUsersDataInner> get data;
+  RespondUsersData get data;
 
   RespondUsers._();
 
@@ -50,20 +49,20 @@ class _$RespondUsersSerializer implements PrimitiveSerializer<RespondUsers> {
     RespondUsers object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'success';
+    yield r'responseCode';
     yield serializers.serialize(
-      object.success,
-      specifiedType: const FullType(bool),
+      object.responseCode,
+      specifiedType: const FullType(String),
     );
-    yield r'message';
+    yield r'responseMessage';
     yield serializers.serialize(
-      object.message,
+      object.responseMessage,
       specifiedType: const FullType(String),
     );
     yield r'data';
     yield serializers.serialize(
       object.data,
-      specifiedType: const FullType(BuiltList, [FullType(RespondUsersDataInner)]),
+      specifiedType: const FullType(RespondUsersData),
     );
   }
 
@@ -88,25 +87,25 @@ class _$RespondUsersSerializer implements PrimitiveSerializer<RespondUsers> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'success':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(bool),
-          ) as bool;
-          result.success = valueDes;
-          break;
-        case r'message':
+        case r'responseCode':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.message = valueDes;
+          result.responseCode = valueDes;
+          break;
+        case r'responseMessage':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.responseMessage = valueDes;
           break;
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(RespondUsersDataInner)]),
-          ) as BuiltList<RespondUsersDataInner>;
+            specifiedType: const FullType(RespondUsersData),
+          ) as RespondUsersData;
           result.data.replace(valueDes);
           break;
         default:

@@ -8,17 +8,22 @@ part of 'respond_global.dart';
 
 class _$RespondGlobal extends RespondGlobal {
   @override
-  final bool success;
+  final String responseCode;
   @override
-  final String message;
+  final String responseMessage;
+  @override
+  final RespondGlobalData? data;
 
   factory _$RespondGlobal([void Function(RespondGlobalBuilder)? updates]) =>
       (new RespondGlobalBuilder()..update(updates))._build();
 
-  _$RespondGlobal._({required this.success, required this.message})
+  _$RespondGlobal._(
+      {required this.responseCode, required this.responseMessage, this.data})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(success, r'RespondGlobal', 'success');
-    BuiltValueNullFieldError.checkNotNull(message, r'RespondGlobal', 'message');
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondGlobal', 'responseCode');
+    BuiltValueNullFieldError.checkNotNull(
+        responseMessage, r'RespondGlobal', 'responseMessage');
   }
 
   @override
@@ -32,15 +37,17 @@ class _$RespondGlobal extends RespondGlobal {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RespondGlobal &&
-        success == other.success &&
-        message == other.message;
+        responseCode == other.responseCode &&
+        responseMessage == other.responseMessage &&
+        data == other.data;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, success.hashCode);
-    _$hash = $jc(_$hash, message.hashCode);
+    _$hash = $jc(_$hash, responseCode.hashCode);
+    _$hash = $jc(_$hash, responseMessage.hashCode);
+    _$hash = $jc(_$hash, data.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -48,8 +55,9 @@ class _$RespondGlobal extends RespondGlobal {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RespondGlobal')
-          ..add('success', success)
-          ..add('message', message))
+          ..add('responseCode', responseCode)
+          ..add('responseMessage', responseMessage)
+          ..add('data', data))
         .toString();
   }
 }
@@ -58,13 +66,19 @@ class RespondGlobalBuilder
     implements Builder<RespondGlobal, RespondGlobalBuilder> {
   _$RespondGlobal? _$v;
 
-  bool? _success;
-  bool? get success => _$this._success;
-  set success(bool? success) => _$this._success = success;
+  String? _responseCode;
+  String? get responseCode => _$this._responseCode;
+  set responseCode(String? responseCode) => _$this._responseCode = responseCode;
 
-  String? _message;
-  String? get message => _$this._message;
-  set message(String? message) => _$this._message = message;
+  String? _responseMessage;
+  String? get responseMessage => _$this._responseMessage;
+  set responseMessage(String? responseMessage) =>
+      _$this._responseMessage = responseMessage;
+
+  RespondGlobalDataBuilder? _data;
+  RespondGlobalDataBuilder get data =>
+      _$this._data ??= new RespondGlobalDataBuilder();
+  set data(RespondGlobalDataBuilder? data) => _$this._data = data;
 
   RespondGlobalBuilder() {
     RespondGlobal._defaults(this);
@@ -73,8 +87,9 @@ class RespondGlobalBuilder
   RespondGlobalBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _success = $v.success;
-      _message = $v.message;
+      _responseCode = $v.responseCode;
+      _responseMessage = $v.responseMessage;
+      _data = $v.data?.toBuilder();
       _$v = null;
     }
     return this;
@@ -95,12 +110,26 @@ class RespondGlobalBuilder
   RespondGlobal build() => _build();
 
   _$RespondGlobal _build() {
-    final _$result = _$v ??
-        new _$RespondGlobal._(
-            success: BuiltValueNullFieldError.checkNotNull(
-                success, r'RespondGlobal', 'success'),
-            message: BuiltValueNullFieldError.checkNotNull(
-                message, r'RespondGlobal', 'message'));
+    _$RespondGlobal _$result;
+    try {
+      _$result = _$v ??
+          new _$RespondGlobal._(
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondGlobal', 'responseCode'),
+              responseMessage: BuiltValueNullFieldError.checkNotNull(
+                  responseMessage, r'RespondGlobal', 'responseMessage'),
+              data: _data?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'data';
+        _data?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'RespondGlobal', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

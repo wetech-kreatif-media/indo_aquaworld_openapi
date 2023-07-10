@@ -7,71 +7,115 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
-      ..add(RequestAddNominasi.serializer)
-      ..add(RequestChangeRole.serializer)
-      ..add(RequestEditNominasi.serializer)
-      ..add(RequestJudgeKompetisi.serializer)
-      ..add(RequestJudgeNominasi.serializer)
-      ..add(RequestKompetisiDetail.serializer)
-      ..add(RequestKompetisiNominasiPartisipant.serializer)
-      ..add(RequestRegisterKompetisiByNominasi.serializer)
-      ..add(RequestUserEmail.serializer)
-      ..add(RequestUserEmailPassword.serializer)
-      ..add(RequestUserOtp.serializer)
-      ..add(RequestUserPassword.serializer)
-      ..add(RequestUserRegister.serializer)
+      ..add(RequestEvent.serializer)
+      ..add(RequestEventLocation.serializer)
+      ..add(RequestEventNominationsInner.serializer)
+      ..add(RequestEventNominationsInnerDetailNominatesInner.serializer)
+      ..add(RequestForgot.serializer)
+      ..add(RequestLocation.serializer)
+      ..add(RequestPermission.serializer)
+      ..add(RequestRegistrasi.serializer)
+      ..add(RequestRole.serializer)
+      ..add(RequestRolePermissionsInner.serializer)
+      ..add(RespondEvents.serializer)
+      ..add(RespondEventsData.serializer)
+      ..add(RespondEventsDataContentInner.serializer)
+      ..add(RespondEventsDataContentInnerLocation.serializer)
+      ..add(RespondEventsDataContentInnerNominationsInner.serializer)
+      ..add(RespondEventsDataContentInnerNominationsInnerDetailNominatesInner
+          .serializer)
+      ..add(RespondEventsDataContentInnerNominationsInnerJudge.serializer)
+      ..add(RespondEventsDataContentInnerNominationsInnerJudgeRole.serializer)
+      ..add(
+          RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner
+              .serializer)
       ..add(RespondGlobal.serializer)
-      ..add(RespondJudgeNominasi.serializer)
-      ..add(RespondJudgeNominasiDataInner.serializer)
-      ..add(RespondKompetisiDetail.serializer)
-      ..add(RespondKompetisiDetailData.serializer)
-      ..add(RespondKompetisiList.serializer)
-      ..add(RespondKompetisiListDataInner.serializer)
-      ..add(RespondKompetisiNominationDetail.serializer)
-      ..add(RespondKompetisiNominationDetailData.serializer)
-      ..add(RespondKompetisiNominationDetailDataJudgesInner.serializer)
-      ..add(RespondKompetisiNominationList.serializer)
-      ..add(RespondKompetisiNominationListDataInner.serializer)
-      ..add(RespondKompetisiParticipants.serializer)
-      ..add(RespondKompetisiParticipantsDataInner.serializer)
-      ..add(RespondUser.serializer)
-      ..add(RespondUserData.serializer)
-      ..add(RespondUserEmail.serializer)
-      ..add(RespondUserEmailData.serializer)
+      ..add(RespondGlobalData.serializer)
+      ..add(RespondLocations.serializer)
+      ..add(RespondLocationsData.serializer)
+      ..add(RespondLocationsDataContentInner.serializer)
+      ..add(RespondPermissions.serializer)
+      ..add(RespondPermissionsData.serializer)
+      ..add(RespondPermissionsDataContentInner.serializer)
+      ..add(RespondRoles.serializer)
+      ..add(RespondRolesData.serializer)
+      ..add(RespondRolesDataContentInner.serializer)
       ..add(RespondUsers.serializer)
-      ..add(RespondUsersDataInner.serializer)
-      ..add(RespondUsersJudge.serializer)
-      ..add(RespondUsersJudgeDataInner.serializer)
+      ..add(RespondUsersData.serializer)
+      ..add(RespondUsersDataContentInner.serializer)
+      ..add(RespondUsersDataContentInnerRole.serializer)
       ..addBuilderFactory(
           const FullType(
-              BuiltList, const [const FullType(RespondJudgeNominasiDataInner)]),
-          () => new ListBuilder<RespondJudgeNominasiDataInner>())
+              BuiltList, const [const FullType(RequestEventNominationsInner)]),
+          () => new ListBuilder<RequestEventNominationsInner>())
       ..addBuilderFactory(
           const FullType(
-              BuiltList, const [const FullType(RespondKompetisiListDataInner)]),
-          () => new ListBuilder<RespondKompetisiListDataInner>())
+              BuiltList, const [const FullType(RequestEventLocation)]),
+          () => new ListBuilder<RequestEventLocation>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(RespondKompetisiNominationDetailDataJudgesInner)
+            const FullType(RequestEventNominationsInnerDetailNominatesInner)
           ]),
           () => new ListBuilder<
-              RespondKompetisiNominationDetailDataJudgesInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(RespondKompetisiNominationListDataInner)]),
-          () => new ListBuilder<RespondKompetisiNominationListDataInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(RespondKompetisiParticipantsDataInner)]),
-          () => new ListBuilder<RespondKompetisiParticipantsDataInner>())
+              RequestEventNominationsInnerDetailNominatesInner>())
       ..addBuilderFactory(
           const FullType(
-              BuiltList, const [const FullType(RespondUsersDataInner)]),
-          () => new ListBuilder<RespondUsersDataInner>())
+              BuiltList, const [const FullType(RequestRolePermissionsInner)]),
+          () => new ListBuilder<RequestRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(
-              BuiltList, const [const FullType(RespondUsersJudgeDataInner)]),
-          () => new ListBuilder<RespondUsersJudgeDataInner>()))
+              BuiltList, const [const FullType(RespondEventsDataContentInner)]),
+          () => new ListBuilder<RespondEventsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondEventsDataContentInnerNominationsInner)
+          ]),
+          () =>
+              new ListBuilder<RespondEventsDataContentInnerNominationsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondEventsDataContentInnerNominationsInnerJudge)
+          ]),
+          () => new ListBuilder<
+              RespondEventsDataContentInnerNominationsInnerJudge>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                RespondEventsDataContentInnerNominationsInnerDetailNominatesInner)
+          ]),
+          () => new ListBuilder<
+              RespondEventsDataContentInnerNominationsInnerDetailNominatesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner)
+          ]),
+          () => new ListBuilder<
+              RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondLocationsDataContentInner)]),
+          () => new ListBuilder<RespondLocationsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondPermissionsDataContentInner)]),
+          () => new ListBuilder<RespondPermissionsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondPermissionsDataContentInner)]),
+          () => new ListBuilder<RespondPermissionsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondPermissionsDataContentInner)]),
+          () => new ListBuilder<RespondPermissionsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondRolesDataContentInner)]),
+          () => new ListBuilder<RespondRolesDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondUsersDataContentInner)]),
+          () => new ListBuilder<RespondUsersDataContentInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

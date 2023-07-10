@@ -8,20 +8,24 @@ part of 'respond_users.dart';
 
 class _$RespondUsers extends RespondUsers {
   @override
-  final bool success;
+  final String responseCode;
   @override
-  final String message;
+  final String responseMessage;
   @override
-  final BuiltList<RespondUsersDataInner> data;
+  final RespondUsersData data;
 
   factory _$RespondUsers([void Function(RespondUsersBuilder)? updates]) =>
       (new RespondUsersBuilder()..update(updates))._build();
 
   _$RespondUsers._(
-      {required this.success, required this.message, required this.data})
+      {required this.responseCode,
+      required this.responseMessage,
+      required this.data})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(success, r'RespondUsers', 'success');
-    BuiltValueNullFieldError.checkNotNull(message, r'RespondUsers', 'message');
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondUsers', 'responseCode');
+    BuiltValueNullFieldError.checkNotNull(
+        responseMessage, r'RespondUsers', 'responseMessage');
     BuiltValueNullFieldError.checkNotNull(data, r'RespondUsers', 'data');
   }
 
@@ -36,16 +40,16 @@ class _$RespondUsers extends RespondUsers {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RespondUsers &&
-        success == other.success &&
-        message == other.message &&
+        responseCode == other.responseCode &&
+        responseMessage == other.responseMessage &&
         data == other.data;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, success.hashCode);
-    _$hash = $jc(_$hash, message.hashCode);
+    _$hash = $jc(_$hash, responseCode.hashCode);
+    _$hash = $jc(_$hash, responseMessage.hashCode);
     _$hash = $jc(_$hash, data.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -54,8 +58,8 @@ class _$RespondUsers extends RespondUsers {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RespondUsers')
-          ..add('success', success)
-          ..add('message', message)
+          ..add('responseCode', responseCode)
+          ..add('responseMessage', responseMessage)
           ..add('data', data))
         .toString();
   }
@@ -65,18 +69,19 @@ class RespondUsersBuilder
     implements Builder<RespondUsers, RespondUsersBuilder> {
   _$RespondUsers? _$v;
 
-  bool? _success;
-  bool? get success => _$this._success;
-  set success(bool? success) => _$this._success = success;
+  String? _responseCode;
+  String? get responseCode => _$this._responseCode;
+  set responseCode(String? responseCode) => _$this._responseCode = responseCode;
 
-  String? _message;
-  String? get message => _$this._message;
-  set message(String? message) => _$this._message = message;
+  String? _responseMessage;
+  String? get responseMessage => _$this._responseMessage;
+  set responseMessage(String? responseMessage) =>
+      _$this._responseMessage = responseMessage;
 
-  ListBuilder<RespondUsersDataInner>? _data;
-  ListBuilder<RespondUsersDataInner> get data =>
-      _$this._data ??= new ListBuilder<RespondUsersDataInner>();
-  set data(ListBuilder<RespondUsersDataInner>? data) => _$this._data = data;
+  RespondUsersDataBuilder? _data;
+  RespondUsersDataBuilder get data =>
+      _$this._data ??= new RespondUsersDataBuilder();
+  set data(RespondUsersDataBuilder? data) => _$this._data = data;
 
   RespondUsersBuilder() {
     RespondUsers._defaults(this);
@@ -85,8 +90,8 @@ class RespondUsersBuilder
   RespondUsersBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _success = $v.success;
-      _message = $v.message;
+      _responseCode = $v.responseCode;
+      _responseMessage = $v.responseMessage;
       _data = $v.data.toBuilder();
       _$v = null;
     }
@@ -112,10 +117,10 @@ class RespondUsersBuilder
     try {
       _$result = _$v ??
           new _$RespondUsers._(
-              success: BuiltValueNullFieldError.checkNotNull(
-                  success, r'RespondUsers', 'success'),
-              message: BuiltValueNullFieldError.checkNotNull(
-                  message, r'RespondUsers', 'message'),
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondUsers', 'responseCode'),
+              responseMessage: BuiltValueNullFieldError.checkNotNull(
+                  responseMessage, r'RespondUsers', 'responseMessage'),
               data: data.build());
     } catch (_) {
       late String _$failedField;

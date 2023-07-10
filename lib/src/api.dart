@@ -9,12 +9,14 @@ import 'package:openapi/src/auth/api_key_auth.dart';
 import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
-import 'package:openapi/src/api/kompetisi_api.dart';
-import 'package:openapi/src/api/user_api.dart';
-import 'package:openapi/src/api/user_profile_api.dart';
+import 'package:openapi/src/api/events_api.dart';
+import 'package:openapi/src/api/location_api.dart';
+import 'package:openapi/src/api/permission_api.dart';
+import 'package:openapi/src/api/role_api.dart';
+import 'package:openapi/src/api/users_api.dart';
 
 class Openapi {
-  static const String basePath = r'http://localhost:3000';
+  static const String basePath = r'http://localhost:8080/api';
 
   final Dio dio;
   final Serializers serializers;
@@ -67,21 +69,33 @@ class Openapi {
     }
   }
 
-  /// Get KompetisiApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get EventsApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  KompetisiApi getKompetisiApi() {
-    return KompetisiApi(dio, serializers);
+  EventsApi getEventsApi() {
+    return EventsApi(dio, serializers);
   }
 
-  /// Get UserApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get LocationApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  UserApi getUserApi() {
-    return UserApi(dio, serializers);
+  LocationApi getLocationApi() {
+    return LocationApi(dio, serializers);
   }
 
-  /// Get UserProfileApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get PermissionApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  UserProfileApi getUserProfileApi() {
-    return UserProfileApi(dio, serializers);
+  PermissionApi getPermissionApi() {
+    return PermissionApi(dio, serializers);
+  }
+
+  /// Get RoleApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  RoleApi getRoleApi() {
+    return RoleApi(dio, serializers);
+  }
+
+  /// Get UsersApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UsersApi getUsersApi() {
+    return UsersApi(dio, serializers);
   }
 }
