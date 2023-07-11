@@ -23,7 +23,7 @@ part 'respond_users_data_content_inner.g.dart';
 /// * [mobilePhone] 
 /// * [email] 
 /// * [city] 
-/// * [urlPhoto] 
+/// * [photo] 
 /// * [gender] 
 /// * [placeofBirth] 
 /// * [role] 
@@ -62,8 +62,8 @@ abstract class RespondUsersDataContentInner implements Built<RespondUsersDataCon
   @BuiltValueField(wireName: r'city')
   String get city;
 
-  @BuiltValueField(wireName: r'urlPhoto')
-  String get urlPhoto;
+  @BuiltValueField(wireName: r'photo')
+  String get photo;
 
   @BuiltValueField(wireName: r'gender')
   String get gender;
@@ -152,9 +152,9 @@ class _$RespondUsersDataContentInnerSerializer implements PrimitiveSerializer<Re
       object.city,
       specifiedType: const FullType(String),
     );
-    yield r'urlPhoto';
+    yield r'photo';
     yield serializers.serialize(
-      object.urlPhoto,
+      object.photo,
       specifiedType: const FullType(String),
     );
     yield r'gender';
@@ -272,12 +272,12 @@ class _$RespondUsersDataContentInnerSerializer implements PrimitiveSerializer<Re
           ) as String;
           result.city = valueDes;
           break;
-        case r'urlPhoto':
+        case r'photo':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.urlPhoto = valueDes;
+          result.photo = valueDes;
           break;
         case r'gender':
           final valueDes = serializers.deserialize(

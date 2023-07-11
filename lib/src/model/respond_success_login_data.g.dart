@@ -30,7 +30,7 @@ class _$RespondSuccessLoginData extends RespondSuccessLoginData {
   @override
   final String? city;
   @override
-  final String? urlPhoto;
+  final String? photo;
   @override
   final String? gender;
   @override
@@ -54,7 +54,7 @@ class _$RespondSuccessLoginData extends RespondSuccessLoginData {
       this.mobilePhone,
       this.email,
       this.city,
-      this.urlPhoto,
+      this.photo,
       this.gender,
       this.placeofBirth,
       this.role})
@@ -84,7 +84,7 @@ class _$RespondSuccessLoginData extends RespondSuccessLoginData {
         mobilePhone == other.mobilePhone &&
         email == other.email &&
         city == other.city &&
-        urlPhoto == other.urlPhoto &&
+        photo == other.photo &&
         gender == other.gender &&
         placeofBirth == other.placeofBirth &&
         role == other.role;
@@ -104,7 +104,7 @@ class _$RespondSuccessLoginData extends RespondSuccessLoginData {
     _$hash = $jc(_$hash, mobilePhone.hashCode);
     _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
-    _$hash = $jc(_$hash, urlPhoto.hashCode);
+    _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, gender.hashCode);
     _$hash = $jc(_$hash, placeofBirth.hashCode);
     _$hash = $jc(_$hash, role.hashCode);
@@ -126,7 +126,7 @@ class _$RespondSuccessLoginData extends RespondSuccessLoginData {
           ..add('mobilePhone', mobilePhone)
           ..add('email', email)
           ..add('city', city)
-          ..add('urlPhoto', urlPhoto)
+          ..add('photo', photo)
           ..add('gender', gender)
           ..add('placeofBirth', placeofBirth)
           ..add('role', role))
@@ -183,9 +183,9 @@ class RespondSuccessLoginDataBuilder
   String? get city => _$this._city;
   set city(String? city) => _$this._city = city;
 
-  String? _urlPhoto;
-  String? get urlPhoto => _$this._urlPhoto;
-  set urlPhoto(String? urlPhoto) => _$this._urlPhoto = urlPhoto;
+  String? _photo;
+  String? get photo => _$this._photo;
+  set photo(String? photo) => _$this._photo = photo;
 
   String? _gender;
   String? get gender => _$this._gender;
@@ -218,7 +218,7 @@ class RespondSuccessLoginDataBuilder
       _mobilePhone = $v.mobilePhone;
       _email = $v.email;
       _city = $v.city;
-      _urlPhoto = $v.urlPhoto;
+      _photo = $v.photo;
       _gender = $v.gender;
       _placeofBirth = $v.placeofBirth;
       _role = $v.role?.toBuilder();
@@ -257,7 +257,7 @@ class RespondSuccessLoginDataBuilder
               mobilePhone: mobilePhone,
               email: email,
               city: city,
-              urlPhoto: urlPhoto,
+              photo: photo,
               gender: gender,
               placeofBirth: placeofBirth,
               role: _role?.build());

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **mobilePhone** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **city** | **String** |  | [optional] 
-**urlPhoto** | **String** |  | [optional] 
+**photo** | **String** |  | [optional] 
 **gender** | **String** |  | [optional] 
 **placeofBirth** | **String** |  | [optional] 
 **role** | [**RespondSuccessLoginDataRole**](RespondSuccessLoginDataRole.md) |  | [optional] 

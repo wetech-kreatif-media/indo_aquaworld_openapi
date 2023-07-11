@@ -23,7 +23,7 @@ part 'respond_success_login_data.g.dart';
 /// * [mobilePhone] 
 /// * [email] 
 /// * [city] 
-/// * [urlPhoto] 
+/// * [photo] 
 /// * [gender] 
 /// * [placeofBirth] 
 /// * [role] 
@@ -62,8 +62,8 @@ abstract class RespondSuccessLoginData implements Built<RespondSuccessLoginData,
   @BuiltValueField(wireName: r'city')
   String? get city;
 
-  @BuiltValueField(wireName: r'urlPhoto')
-  String? get urlPhoto;
+  @BuiltValueField(wireName: r'photo')
+  String? get photo;
 
   @BuiltValueField(wireName: r'gender')
   String? get gender;
@@ -174,10 +174,10 @@ class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<Respond
         specifiedType: const FullType(String),
       );
     }
-    if (object.urlPhoto != null) {
-      yield r'urlPhoto';
+    if (object.photo != null) {
+      yield r'photo';
       yield serializers.serialize(
-        object.urlPhoto,
+        object.photo,
         specifiedType: const FullType(String),
       );
     }
@@ -302,12 +302,12 @@ class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<Respond
           ) as String;
           result.city = valueDes;
           break;
-        case r'urlPhoto':
+        case r'photo':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.urlPhoto = valueDes;
+          result.photo = valueDes;
           break;
         case r'gender':
           final valueDes = serializers.deserialize(

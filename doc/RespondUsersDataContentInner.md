@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **mobilePhone** | **String** |  | 
 **email** | **String** |  | 
 **city** | **String** |  | 
-**urlPhoto** | **String** |  | 
+**photo** | **String** |  | 
 **gender** | **String** |  | 
 **placeofBirth** | **String** |  | 
 **role** | [**RespondUsersDataContentInnerRole**](RespondUsersDataContentInnerRole.md) |  | 
