@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/respond_users_data_content_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_location_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -44,7 +44,7 @@ abstract class RespondEventData implements Built<RespondEventData, RespondEventD
   RespondLocationData? get location;
 
   @BuiltValueField(wireName: r'teams')
-  BuiltList<RespondEventDataTeamsInner>? get teams;
+  BuiltList<RespondUsersDataContentInner>? get teams;
 
   @BuiltValueField(wireName: r'statusPublish')
   String? get statusPublish;
@@ -121,7 +121,7 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
       yield r'teams';
       yield serializers.serialize(
         object.teams,
-        specifiedType: const FullType(BuiltList, [FullType(RespondEventDataTeamsInner)]),
+        specifiedType: const FullType(BuiltList, [FullType(RespondUsersDataContentInner)]),
       );
     }
     if (object.statusPublish != null) {
@@ -206,8 +206,8 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
         case r'teams':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(RespondEventDataTeamsInner)]),
-          ) as BuiltList<RespondEventDataTeamsInner>;
+            specifiedType: const FullType(BuiltList, [FullType(RespondUsersDataContentInner)]),
+          ) as BuiltList<RespondUsersDataContentInner>;
           result.teams.replace(valueDes);
           break;
         case r'statusPublish':

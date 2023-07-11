@@ -29,7 +29,6 @@ import 'package:openapi/src/model/request_role_permissions_inner.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/respond_event.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
-import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_events.dart';
 import 'package:openapi/src/model/respond_events_data.dart';
 import 'package:openapi/src/model/respond_events_data_content_inner.dart';
@@ -73,7 +72,6 @@ part 'serializers.g.dart';
   RequestSendOtp,
   RespondEvent,
   RespondEventData,
-  RespondEventDataTeamsInner,
   RespondEvents,
   RespondEventsData,
   RespondEventsDataContentInner,

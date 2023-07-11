@@ -19,6 +19,9 @@ Name | Type | Description | Notes
 **mobilePhone** | **String** |  | 
 **email** | **String** |  | 
 **city** | **String** |  | 
+**urlPhoto** | **String** |  | 
+**gender** | **String** |  | 
+**placeofBirth** | **String** |  | 
 **role** | [**RespondUsersDataContentInnerRole**](RespondUsersDataContentInnerRole.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

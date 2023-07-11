@@ -18,13 +18,13 @@ part 'respond_users.g.dart';
 @BuiltValue()
 abstract class RespondUsers implements Built<RespondUsers, RespondUsersBuilder> {
   @BuiltValueField(wireName: r'responseCode')
-  String get responseCode;
+  String? get responseCode;
 
   @BuiltValueField(wireName: r'responseMessage')
-  String get responseMessage;
+  String? get responseMessage;
 
   @BuiltValueField(wireName: r'data')
-  RespondUsersData get data;
+  RespondUsersData? get data;
 
   RespondUsers._();
 
@@ -49,21 +49,27 @@ class _$RespondUsersSerializer implements PrimitiveSerializer<RespondUsers> {
     RespondUsers object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'responseCode';
-    yield serializers.serialize(
-      object.responseCode,
-      specifiedType: const FullType(String),
-    );
-    yield r'responseMessage';
-    yield serializers.serialize(
-      object.responseMessage,
-      specifiedType: const FullType(String),
-    );
-    yield r'data';
-    yield serializers.serialize(
-      object.data,
-      specifiedType: const FullType(RespondUsersData),
-    );
+    if (object.responseCode != null) {
+      yield r'responseCode';
+      yield serializers.serialize(
+        object.responseCode,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.responseMessage != null) {
+      yield r'responseMessage';
+      yield serializers.serialize(
+        object.responseMessage,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.data != null) {
+      yield r'data';
+      yield serializers.serialize(
+        object.data,
+        specifiedType: const FullType(RespondUsersData),
+      );
+    }
   }
 
   @override

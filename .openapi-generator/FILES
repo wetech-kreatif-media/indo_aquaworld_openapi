@@ -19,7 +19,6 @@ doc/RequestRolePermissionsInner.md
 doc/RequestSendOtp.md
 doc/RespondEvent.md
 doc/RespondEventData.md
-doc/RespondEventDataTeamsInner.md
 doc/RespondEvents.md
 doc/RespondEventsData.md
 doc/RespondEventsDataContentInner.md
@@ -76,7 +75,6 @@ lib/src/model/request_role_permissions_inner.dart
 lib/src/model/request_send_otp.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
-lib/src/model/respond_event_data_teams_inner.dart
 lib/src/model/respond_events.dart
 lib/src/model/respond_events_data.dart
 lib/src/model/respond_events_data_content_inner.dart

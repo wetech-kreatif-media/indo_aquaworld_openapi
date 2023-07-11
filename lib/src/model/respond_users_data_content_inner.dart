@@ -23,6 +23,9 @@ part 'respond_users_data_content_inner.g.dart';
 /// * [mobilePhone] 
 /// * [email] 
 /// * [city] 
+/// * [urlPhoto] 
+/// * [gender] 
+/// * [placeofBirth] 
 /// * [role] 
 @BuiltValue()
 abstract class RespondUsersDataContentInner implements Built<RespondUsersDataContentInner, RespondUsersDataContentInnerBuilder> {
@@ -58,6 +61,15 @@ abstract class RespondUsersDataContentInner implements Built<RespondUsersDataCon
 
   @BuiltValueField(wireName: r'city')
   String get city;
+
+  @BuiltValueField(wireName: r'urlPhoto')
+  String get urlPhoto;
+
+  @BuiltValueField(wireName: r'gender')
+  String get gender;
+
+  @BuiltValueField(wireName: r'placeofBirth')
+  String get placeofBirth;
 
   @BuiltValueField(wireName: r'role')
   RespondUsersDataContentInnerRole get role;
@@ -138,6 +150,21 @@ class _$RespondUsersDataContentInnerSerializer implements PrimitiveSerializer<Re
     yield r'city';
     yield serializers.serialize(
       object.city,
+      specifiedType: const FullType(String),
+    );
+    yield r'urlPhoto';
+    yield serializers.serialize(
+      object.urlPhoto,
+      specifiedType: const FullType(String),
+    );
+    yield r'gender';
+    yield serializers.serialize(
+      object.gender,
+      specifiedType: const FullType(String),
+    );
+    yield r'placeofBirth';
+    yield serializers.serialize(
+      object.placeofBirth,
       specifiedType: const FullType(String),
     );
     yield r'role';
@@ -244,6 +271,27 @@ class _$RespondUsersDataContentInnerSerializer implements PrimitiveSerializer<Re
             specifiedType: const FullType(String),
           ) as String;
           result.city = valueDes;
+          break;
+        case r'urlPhoto':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.urlPhoto = valueDes;
+          break;
+        case r'gender':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.gender = valueDes;
+          break;
+        case r'placeofBirth':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.placeofBirth = valueDes;
           break;
         case r'role':
           final valueDes = serializers.deserialize(

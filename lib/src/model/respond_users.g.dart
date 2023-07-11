@@ -8,26 +8,17 @@ part of 'respond_users.dart';
 
 class _$RespondUsers extends RespondUsers {
   @override
-  final String responseCode;
+  final String? responseCode;
   @override
-  final String responseMessage;
+  final String? responseMessage;
   @override
-  final RespondUsersData data;
+  final RespondUsersData? data;
 
   factory _$RespondUsers([void Function(RespondUsersBuilder)? updates]) =>
       (new RespondUsersBuilder()..update(updates))._build();
 
-  _$RespondUsers._(
-      {required this.responseCode,
-      required this.responseMessage,
-      required this.data})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        responseCode, r'RespondUsers', 'responseCode');
-    BuiltValueNullFieldError.checkNotNull(
-        responseMessage, r'RespondUsers', 'responseMessage');
-    BuiltValueNullFieldError.checkNotNull(data, r'RespondUsers', 'data');
-  }
+  _$RespondUsers._({this.responseCode, this.responseMessage, this.data})
+      : super._();
 
   @override
   RespondUsers rebuild(void Function(RespondUsersBuilder) updates) =>
@@ -92,7 +83,7 @@ class RespondUsersBuilder
     if ($v != null) {
       _responseCode = $v.responseCode;
       _responseMessage = $v.responseMessage;
-      _data = $v.data.toBuilder();
+      _data = $v.data?.toBuilder();
       _$v = null;
     }
     return this;
@@ -117,16 +108,14 @@ class RespondUsersBuilder
     try {
       _$result = _$v ??
           new _$RespondUsers._(
-              responseCode: BuiltValueNullFieldError.checkNotNull(
-                  responseCode, r'RespondUsers', 'responseCode'),
-              responseMessage: BuiltValueNullFieldError.checkNotNull(
-                  responseMessage, r'RespondUsers', 'responseMessage'),
-              data: data.build());
+              responseCode: responseCode,
+              responseMessage: responseMessage,
+              data: _data?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'data';
-        data.build();
+        _data?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondUsers', _$failedField, e.toString());

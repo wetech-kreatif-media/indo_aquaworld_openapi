@@ -20,7 +20,7 @@ class _$RespondEventData extends RespondEventData {
   @override
   final RespondLocationData? location;
   @override
-  final BuiltList<RespondEventDataTeamsInner>? teams;
+  final BuiltList<RespondUsersDataContentInner>? teams;
   @override
   final String? statusPublish;
   @override
@@ -127,10 +127,10 @@ class RespondEventDataBuilder
   set location(RespondLocationDataBuilder? location) =>
       _$this._location = location;
 
-  ListBuilder<RespondEventDataTeamsInner>? _teams;
-  ListBuilder<RespondEventDataTeamsInner> get teams =>
-      _$this._teams ??= new ListBuilder<RespondEventDataTeamsInner>();
-  set teams(ListBuilder<RespondEventDataTeamsInner>? teams) =>
+  ListBuilder<RespondUsersDataContentInner>? _teams;
+  ListBuilder<RespondUsersDataContentInner> get teams =>
+      _$this._teams ??= new ListBuilder<RespondUsersDataContentInner>();
+  set teams(ListBuilder<RespondUsersDataContentInner>? teams) =>
       _$this._teams = teams;
 
   String? _statusPublish;

@@ -30,6 +30,12 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
   @override
   final String city;
   @override
+  final String urlPhoto;
+  @override
+  final String gender;
+  @override
+  final String placeofBirth;
+  @override
   final RespondUsersDataContentInnerRole role;
 
   factory _$RespondUsersDataContentInner(
@@ -48,6 +54,9 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
       required this.mobilePhone,
       required this.email,
       required this.city,
+      required this.urlPhoto,
+      required this.gender,
+      required this.placeofBirth,
       required this.role})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
@@ -72,6 +81,12 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
         email, r'RespondUsersDataContentInner', 'email');
     BuiltValueNullFieldError.checkNotNull(
         city, r'RespondUsersDataContentInner', 'city');
+    BuiltValueNullFieldError.checkNotNull(
+        urlPhoto, r'RespondUsersDataContentInner', 'urlPhoto');
+    BuiltValueNullFieldError.checkNotNull(
+        gender, r'RespondUsersDataContentInner', 'gender');
+    BuiltValueNullFieldError.checkNotNull(
+        placeofBirth, r'RespondUsersDataContentInner', 'placeofBirth');
     BuiltValueNullFieldError.checkNotNull(
         role, r'RespondUsersDataContentInner', 'role');
   }
@@ -100,6 +115,9 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
         mobilePhone == other.mobilePhone &&
         email == other.email &&
         city == other.city &&
+        urlPhoto == other.urlPhoto &&
+        gender == other.gender &&
+        placeofBirth == other.placeofBirth &&
         role == other.role;
   }
 
@@ -117,6 +135,9 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
     _$hash = $jc(_$hash, mobilePhone.hashCode);
     _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, urlPhoto.hashCode);
+    _$hash = $jc(_$hash, gender.hashCode);
+    _$hash = $jc(_$hash, placeofBirth.hashCode);
     _$hash = $jc(_$hash, role.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -136,6 +157,9 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
           ..add('mobilePhone', mobilePhone)
           ..add('email', email)
           ..add('city', city)
+          ..add('urlPhoto', urlPhoto)
+          ..add('gender', gender)
+          ..add('placeofBirth', placeofBirth)
           ..add('role', role))
         .toString();
   }
@@ -191,6 +215,18 @@ class RespondUsersDataContentInnerBuilder
   String? get city => _$this._city;
   set city(String? city) => _$this._city = city;
 
+  String? _urlPhoto;
+  String? get urlPhoto => _$this._urlPhoto;
+  set urlPhoto(String? urlPhoto) => _$this._urlPhoto = urlPhoto;
+
+  String? _gender;
+  String? get gender => _$this._gender;
+  set gender(String? gender) => _$this._gender = gender;
+
+  String? _placeofBirth;
+  String? get placeofBirth => _$this._placeofBirth;
+  set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
+
   RespondUsersDataContentInnerRoleBuilder? _role;
   RespondUsersDataContentInnerRoleBuilder get role =>
       _$this._role ??= new RespondUsersDataContentInnerRoleBuilder();
@@ -215,6 +251,9 @@ class RespondUsersDataContentInnerBuilder
       _mobilePhone = $v.mobilePhone;
       _email = $v.email;
       _city = $v.city;
+      _urlPhoto = $v.urlPhoto;
+      _gender = $v.gender;
+      _placeofBirth = $v.placeofBirth;
       _role = $v.role.toBuilder();
       _$v = null;
     }
@@ -259,6 +298,9 @@ class RespondUsersDataContentInnerBuilder
               mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondUsersDataContentInner', 'mobilePhone'),
               email: BuiltValueNullFieldError.checkNotNull(email, r'RespondUsersDataContentInner', 'email'),
               city: BuiltValueNullFieldError.checkNotNull(city, r'RespondUsersDataContentInner', 'city'),
+              urlPhoto: BuiltValueNullFieldError.checkNotNull(urlPhoto, r'RespondUsersDataContentInner', 'urlPhoto'),
+              gender: BuiltValueNullFieldError.checkNotNull(gender, r'RespondUsersDataContentInner', 'gender'),
+              placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondUsersDataContentInner', 'placeofBirth'),
               role: role.build());
     } catch (_) {
       late String _$failedField;
