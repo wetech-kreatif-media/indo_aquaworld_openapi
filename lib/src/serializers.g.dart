@@ -22,6 +22,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestSendOtp.serializer)
       ..add(RespondEvent.serializer)
       ..add(RespondEventData.serializer)
+      ..add(RespondEventNominations.serializer)
+      ..add(RespondEventNominationsDataInner.serializer)
       ..add(RespondEvents.serializer)
       ..add(RespondEventsData.serializer)
       ..add(RespondEventsDataContentInner.serializer)
@@ -58,6 +60,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RequestRolePermissionsInner)]),
           () => new ListBuilder<RequestRolePermissionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondEventNominationsDataInner)]),
+          () => new ListBuilder<RespondEventNominationsDataInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondEventsDataContentInner)]),
