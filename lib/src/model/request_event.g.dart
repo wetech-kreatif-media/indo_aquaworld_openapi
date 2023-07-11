@@ -8,54 +8,38 @@ part of 'request_event.dart';
 
 class _$RequestEvent extends RequestEvent {
   @override
-  final String name;
+  final String? name;
   @override
-  final String startDate;
+  final String? startDate;
   @override
-  final String endDate;
+  final String? endDate;
   @override
-  final String description;
+  final String? description;
   @override
-  final RequestEventLocation location;
+  final BuiltList<RequestEventContestComponentsInner>? contestComponents;
   @override
-  final BuiltList<RequestEventNominationsInner> nominations;
+  final String? location;
   @override
-  final BuiltList<RequestEventLocation> teams;
+  final BuiltList<RequestEventTeamsInner>? teams;
   @override
-  final String statusPublish;
+  final String? statusPublish;
   @override
-  final String statusEvent;
+  final String? statusEvent;
 
   factory _$RequestEvent([void Function(RequestEventBuilder)? updates]) =>
       (new RequestEventBuilder()..update(updates))._build();
 
   _$RequestEvent._(
-      {required this.name,
-      required this.startDate,
-      required this.endDate,
-      required this.description,
-      required this.location,
-      required this.nominations,
-      required this.teams,
-      required this.statusPublish,
-      required this.statusEvent})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'RequestEvent', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        startDate, r'RequestEvent', 'startDate');
-    BuiltValueNullFieldError.checkNotNull(endDate, r'RequestEvent', 'endDate');
-    BuiltValueNullFieldError.checkNotNull(
-        description, r'RequestEvent', 'description');
-    BuiltValueNullFieldError.checkNotNull(
-        location, r'RequestEvent', 'location');
-    BuiltValueNullFieldError.checkNotNull(
-        nominations, r'RequestEvent', 'nominations');
-    BuiltValueNullFieldError.checkNotNull(teams, r'RequestEvent', 'teams');
-    BuiltValueNullFieldError.checkNotNull(
-        statusPublish, r'RequestEvent', 'statusPublish');
-    BuiltValueNullFieldError.checkNotNull(
-        statusEvent, r'RequestEvent', 'statusEvent');
-  }
+      {this.name,
+      this.startDate,
+      this.endDate,
+      this.description,
+      this.contestComponents,
+      this.location,
+      this.teams,
+      this.statusPublish,
+      this.statusEvent})
+      : super._();
 
   @override
   RequestEvent rebuild(void Function(RequestEventBuilder) updates) =>
@@ -72,8 +56,8 @@ class _$RequestEvent extends RequestEvent {
         startDate == other.startDate &&
         endDate == other.endDate &&
         description == other.description &&
+        contestComponents == other.contestComponents &&
         location == other.location &&
-        nominations == other.nominations &&
         teams == other.teams &&
         statusPublish == other.statusPublish &&
         statusEvent == other.statusEvent;
@@ -86,8 +70,8 @@ class _$RequestEvent extends RequestEvent {
     _$hash = $jc(_$hash, startDate.hashCode);
     _$hash = $jc(_$hash, endDate.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, contestComponents.hashCode);
     _$hash = $jc(_$hash, location.hashCode);
-    _$hash = $jc(_$hash, nominations.hashCode);
     _$hash = $jc(_$hash, teams.hashCode);
     _$hash = $jc(_$hash, statusPublish.hashCode);
     _$hash = $jc(_$hash, statusEvent.hashCode);
@@ -102,8 +86,8 @@ class _$RequestEvent extends RequestEvent {
           ..add('startDate', startDate)
           ..add('endDate', endDate)
           ..add('description', description)
+          ..add('contestComponents', contestComponents)
           ..add('location', location)
-          ..add('nominations', nominations)
           ..add('teams', teams)
           ..add('statusPublish', statusPublish)
           ..add('statusEvent', statusEvent))
@@ -131,22 +115,23 @@ class RequestEventBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  RequestEventLocationBuilder? _location;
-  RequestEventLocationBuilder get location =>
-      _$this._location ??= new RequestEventLocationBuilder();
-  set location(RequestEventLocationBuilder? location) =>
-      _$this._location = location;
+  ListBuilder<RequestEventContestComponentsInner>? _contestComponents;
+  ListBuilder<RequestEventContestComponentsInner> get contestComponents =>
+      _$this._contestComponents ??=
+          new ListBuilder<RequestEventContestComponentsInner>();
+  set contestComponents(
+          ListBuilder<RequestEventContestComponentsInner>? contestComponents) =>
+      _$this._contestComponents = contestComponents;
 
-  ListBuilder<RequestEventNominationsInner>? _nominations;
-  ListBuilder<RequestEventNominationsInner> get nominations =>
-      _$this._nominations ??= new ListBuilder<RequestEventNominationsInner>();
-  set nominations(ListBuilder<RequestEventNominationsInner>? nominations) =>
-      _$this._nominations = nominations;
+  String? _location;
+  String? get location => _$this._location;
+  set location(String? location) => _$this._location = location;
 
-  ListBuilder<RequestEventLocation>? _teams;
-  ListBuilder<RequestEventLocation> get teams =>
-      _$this._teams ??= new ListBuilder<RequestEventLocation>();
-  set teams(ListBuilder<RequestEventLocation>? teams) => _$this._teams = teams;
+  ListBuilder<RequestEventTeamsInner>? _teams;
+  ListBuilder<RequestEventTeamsInner> get teams =>
+      _$this._teams ??= new ListBuilder<RequestEventTeamsInner>();
+  set teams(ListBuilder<RequestEventTeamsInner>? teams) =>
+      _$this._teams = teams;
 
   String? _statusPublish;
   String? get statusPublish => _$this._statusPublish;
@@ -168,9 +153,9 @@ class RequestEventBuilder
       _startDate = $v.startDate;
       _endDate = $v.endDate;
       _description = $v.description;
-      _location = $v.location.toBuilder();
-      _nominations = $v.nominations.toBuilder();
-      _teams = $v.teams.toBuilder();
+      _contestComponents = $v.contestComponents?.toBuilder();
+      _location = $v.location;
+      _teams = $v.teams?.toBuilder();
       _statusPublish = $v.statusPublish;
       _statusEvent = $v.statusEvent;
       _$v = null;
@@ -197,30 +182,23 @@ class RequestEventBuilder
     try {
       _$result = _$v ??
           new _$RequestEvent._(
-              name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'RequestEvent', 'name'),
-              startDate: BuiltValueNullFieldError.checkNotNull(
-                  startDate, r'RequestEvent', 'startDate'),
-              endDate: BuiltValueNullFieldError.checkNotNull(
-                  endDate, r'RequestEvent', 'endDate'),
-              description: BuiltValueNullFieldError.checkNotNull(
-                  description, r'RequestEvent', 'description'),
-              location: location.build(),
-              nominations: nominations.build(),
-              teams: teams.build(),
-              statusPublish: BuiltValueNullFieldError.checkNotNull(
-                  statusPublish, r'RequestEvent', 'statusPublish'),
-              statusEvent: BuiltValueNullFieldError.checkNotNull(
-                  statusEvent, r'RequestEvent', 'statusEvent'));
+              name: name,
+              startDate: startDate,
+              endDate: endDate,
+              description: description,
+              contestComponents: _contestComponents?.build(),
+              location: location,
+              teams: _teams?.build(),
+              statusPublish: statusPublish,
+              statusEvent: statusEvent);
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'location';
-        location.build();
-        _$failedField = 'nominations';
-        nominations.build();
+        _$failedField = 'contestComponents';
+        _contestComponents?.build();
+
         _$failedField = 'teams';
-        teams.build();
+        _teams?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RequestEvent', _$failedField, e.toString());

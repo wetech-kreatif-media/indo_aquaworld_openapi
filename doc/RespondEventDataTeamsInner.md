@@ -1,4 +1,4 @@
-# openapi.model.RespondEventsDataContentInner
+# openapi.model.RespondEventDataTeamsInner
 
 ## Load the model package
 ```dart
@@ -15,13 +15,14 @@ Name | Type | Description | Notes
 **updated** | **String** |  | 
 **deleted** | **num** |  | 
 **recordStatus** | **String** |  | 
-**name** | **String** |  | 
-**startDate** | **String** |  | 
-**endDate** | **String** |  | 
-**description** | **String** |  | 
-**location** | [**RespondLocationData**](RespondLocationData.md) |  | 
-**statusPublish** | **String** |  | 
-**statusEvent** | **String** |  | 
+**fullname** | **String** |  | 
+**mobilePhone** | **String** |  | 
+**email** | **String** |  | 
+**city** | **String** |  | 
+**urlPhoto** | **String** |  | 
+**gender** | **String** |  | 
+**placeofBirth** | **String** |  | 
+**role** | [**RespondUsersDataContentInnerRole**](RespondUsersDataContentInnerRole.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

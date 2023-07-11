@@ -1,4 +1,4 @@
-# openapi.model.RespondSuccessLoginData
+# openapi.model.RespondSuccessLoginDataRolePermissionsInner
 
 ## Load the model package
 ```dart
@@ -15,14 +15,9 @@ Name | Type | Description | Notes
 **updated** | **String** |  | [optional] 
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
-**fullname** | **String** |  | [optional] 
-**mobilePhone** | **String** |  | [optional] 
-**email** | **String** |  | [optional] 
-**city** | **String** |  | [optional] 
-**urlPhoto** | **String** |  | [optional] 
-**gender** | **String** |  | [optional] 
-**placeofBirth** | **String** |  | [optional] 
-**role** | [**RespondSuccessLoginDataRole**](RespondSuccessLoginDataRole.md) |  | [optional] 
+**label** | **String** |  | [optional] 
+**value** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

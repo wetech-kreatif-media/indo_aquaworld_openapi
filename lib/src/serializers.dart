@@ -16,9 +16,9 @@ import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_event.dart';
-import 'package:openapi/src/model/request_event_location.dart';
-import 'package:openapi/src/model/request_event_nominations_inner.dart';
-import 'package:openapi/src/model/request_event_nominations_inner_detail_nominates_inner.dart';
+import 'package:openapi/src/model/request_event_contest_components_inner.dart';
+import 'package:openapi/src/model/request_event_contest_components_inner_judge.dart';
+import 'package:openapi/src/model/request_event_teams_inner.dart';
 import 'package:openapi/src/model/request_forgot.dart';
 import 'package:openapi/src/model/request_location.dart';
 import 'package:openapi/src/model/request_login.dart';
@@ -29,15 +29,10 @@ import 'package:openapi/src/model/request_role_permissions_inner.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/respond_event.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
+import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_events.dart';
 import 'package:openapi/src/model/respond_events_data.dart';
 import 'package:openapi/src/model/respond_events_data_content_inner.dart';
-import 'package:openapi/src/model/respond_events_data_content_inner_location.dart';
-import 'package:openapi/src/model/respond_events_data_content_inner_nominations_inner.dart';
-import 'package:openapi/src/model/respond_events_data_content_inner_nominations_inner_detail_nominates_inner.dart';
-import 'package:openapi/src/model/respond_events_data_content_inner_nominations_inner_judge.dart';
-import 'package:openapi/src/model/respond_events_data_content_inner_nominations_inner_judge_role.dart';
-import 'package:openapi/src/model/respond_events_data_content_inner_nominations_inner_judge_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_global_data.dart';
 import 'package:openapi/src/model/respond_location.dart';
@@ -53,6 +48,8 @@ import 'package:openapi/src/model/respond_roles_data.dart';
 import 'package:openapi/src/model/respond_roles_data_content_inner.dart';
 import 'package:openapi/src/model/respond_success_login.dart';
 import 'package:openapi/src/model/respond_success_login_data.dart';
+import 'package:openapi/src/model/respond_success_login_data_role.dart';
+import 'package:openapi/src/model/respond_success_login_data_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_users.dart';
 import 'package:openapi/src/model/respond_users_data.dart';
 import 'package:openapi/src/model/respond_users_data_content_inner.dart';
@@ -63,9 +60,9 @@ part 'serializers.g.dart';
 @SerializersFor([
   RequestChangePassword,
   RequestEvent,
-  RequestEventLocation,
-  RequestEventNominationsInner,
-  RequestEventNominationsInnerDetailNominatesInner,
+  RequestEventContestComponentsInner,
+  RequestEventContestComponentsInnerJudge,
+  RequestEventTeamsInner,
   RequestForgot,
   RequestLocation,
   RequestLogin,
@@ -76,15 +73,10 @@ part 'serializers.g.dart';
   RequestSendOtp,
   RespondEvent,
   RespondEventData,
+  RespondEventDataTeamsInner,
   RespondEvents,
   RespondEventsData,
   RespondEventsDataContentInner,
-  RespondEventsDataContentInnerLocation,
-  RespondEventsDataContentInnerNominationsInner,
-  RespondEventsDataContentInnerNominationsInnerDetailNominatesInner,
-  RespondEventsDataContentInnerNominationsInnerJudge,
-  RespondEventsDataContentInnerNominationsInnerJudgeRole,
-  RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner,
   RespondGlobal,
   RespondGlobalData,
   RespondLocation,
@@ -100,6 +92,8 @@ part 'serializers.g.dart';
   RespondRolesDataContentInner,
   RespondSuccessLogin,
   RespondSuccessLoginData,
+  RespondSuccessLoginDataRole,
+  RespondSuccessLoginDataRolePermissionsInner,
   RespondUsers,
   RespondUsersData,
   RespondUsersDataContentInner,

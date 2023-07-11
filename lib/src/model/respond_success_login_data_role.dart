@@ -3,13 +3,14 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_success_login_data_role.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:openapi/src/model/respond_success_login_data_role_permissions_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_success_login_data.g.dart';
+part 'respond_success_login_data_role.g.dart';
 
-/// RespondSuccessLoginData
+/// RespondSuccessLoginDataRole
 ///
 /// Properties:
 /// * [id] 
@@ -19,16 +20,11 @@ part 'respond_success_login_data.g.dart';
 /// * [updated] 
 /// * [deleted] 
 /// * [recordStatus] 
-/// * [fullname] 
-/// * [mobilePhone] 
-/// * [email] 
-/// * [city] 
-/// * [urlPhoto] 
-/// * [gender] 
-/// * [placeofBirth] 
-/// * [role] 
+/// * [name] 
+/// * [code] 
+/// * [permissions] 
 @BuiltValue()
-abstract class RespondSuccessLoginData implements Built<RespondSuccessLoginData, RespondSuccessLoginDataBuilder> {
+abstract class RespondSuccessLoginDataRole implements Built<RespondSuccessLoginDataRole, RespondSuccessLoginDataRoleBuilder> {
   @BuiltValueField(wireName: r'id')
   String? get id;
 
@@ -50,51 +46,36 @@ abstract class RespondSuccessLoginData implements Built<RespondSuccessLoginData,
   @BuiltValueField(wireName: r'recordStatus')
   String? get recordStatus;
 
-  @BuiltValueField(wireName: r'fullname')
-  String? get fullname;
+  @BuiltValueField(wireName: r'name')
+  String? get name;
 
-  @BuiltValueField(wireName: r'mobilePhone')
-  String? get mobilePhone;
+  @BuiltValueField(wireName: r'code')
+  String? get code;
 
-  @BuiltValueField(wireName: r'email')
-  String? get email;
+  @BuiltValueField(wireName: r'permissions')
+  BuiltList<RespondSuccessLoginDataRolePermissionsInner>? get permissions;
 
-  @BuiltValueField(wireName: r'city')
-  String? get city;
+  RespondSuccessLoginDataRole._();
 
-  @BuiltValueField(wireName: r'urlPhoto')
-  String? get urlPhoto;
-
-  @BuiltValueField(wireName: r'gender')
-  String? get gender;
-
-  @BuiltValueField(wireName: r'placeofBirth')
-  String? get placeofBirth;
-
-  @BuiltValueField(wireName: r'role')
-  RespondSuccessLoginDataRole? get role;
-
-  RespondSuccessLoginData._();
-
-  factory RespondSuccessLoginData([void updates(RespondSuccessLoginDataBuilder b)]) = _$RespondSuccessLoginData;
+  factory RespondSuccessLoginDataRole([void updates(RespondSuccessLoginDataRoleBuilder b)]) = _$RespondSuccessLoginDataRole;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondSuccessLoginDataBuilder b) => b;
+  static void _defaults(RespondSuccessLoginDataRoleBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondSuccessLoginData> get serializer => _$RespondSuccessLoginDataSerializer();
+  static Serializer<RespondSuccessLoginDataRole> get serializer => _$RespondSuccessLoginDataRoleSerializer();
 }
 
-class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<RespondSuccessLoginData> {
+class _$RespondSuccessLoginDataRoleSerializer implements PrimitiveSerializer<RespondSuccessLoginDataRole> {
   @override
-  final Iterable<Type> types = const [RespondSuccessLoginData, _$RespondSuccessLoginData];
+  final Iterable<Type> types = const [RespondSuccessLoginDataRole, _$RespondSuccessLoginDataRole];
 
   @override
-  final String wireName = r'RespondSuccessLoginData';
+  final String wireName = r'RespondSuccessLoginDataRole';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondSuccessLoginData object, {
+    RespondSuccessLoginDataRole object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.id != null) {
@@ -146,60 +127,25 @@ class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<Respond
         specifiedType: const FullType(String),
       );
     }
-    if (object.fullname != null) {
-      yield r'fullname';
+    if (object.name != null) {
+      yield r'name';
       yield serializers.serialize(
-        object.fullname,
+        object.name,
         specifiedType: const FullType(String),
       );
     }
-    if (object.mobilePhone != null) {
-      yield r'mobilePhone';
+    if (object.code != null) {
+      yield r'code';
       yield serializers.serialize(
-        object.mobilePhone,
+        object.code,
         specifiedType: const FullType(String),
       );
     }
-    if (object.email != null) {
-      yield r'email';
+    if (object.permissions != null) {
+      yield r'permissions';
       yield serializers.serialize(
-        object.email,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.city != null) {
-      yield r'city';
-      yield serializers.serialize(
-        object.city,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.urlPhoto != null) {
-      yield r'urlPhoto';
-      yield serializers.serialize(
-        object.urlPhoto,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.gender != null) {
-      yield r'gender';
-      yield serializers.serialize(
-        object.gender,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.placeofBirth != null) {
-      yield r'placeofBirth';
-      yield serializers.serialize(
-        object.placeofBirth,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.role != null) {
-      yield r'role';
-      yield serializers.serialize(
-        object.role,
-        specifiedType: const FullType(RespondSuccessLoginDataRole),
+        object.permissions,
+        specifiedType: const FullType(BuiltList, [FullType(RespondSuccessLoginDataRolePermissionsInner)]),
       );
     }
   }
@@ -207,7 +153,7 @@ class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<Respond
   @override
   Object serialize(
     Serializers serializers,
-    RespondSuccessLoginData object, {
+    RespondSuccessLoginDataRole object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -218,7 +164,7 @@ class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<Respond
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondSuccessLoginDataBuilder result,
+    required RespondSuccessLoginDataRoleBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -274,61 +220,26 @@ class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<Respond
           ) as String;
           result.recordStatus = valueDes;
           break;
-        case r'fullname':
+        case r'name':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.fullname = valueDes;
+          result.name = valueDes;
           break;
-        case r'mobilePhone':
+        case r'code':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.mobilePhone = valueDes;
+          result.code = valueDes;
           break;
-        case r'email':
+        case r'permissions':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.email = valueDes;
-          break;
-        case r'city':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.city = valueDes;
-          break;
-        case r'urlPhoto':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.urlPhoto = valueDes;
-          break;
-        case r'gender':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.gender = valueDes;
-          break;
-        case r'placeofBirth':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.placeofBirth = valueDes;
-          break;
-        case r'role':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondSuccessLoginDataRole),
-          ) as RespondSuccessLoginDataRole;
-          result.role.replace(valueDes);
+            specifiedType: const FullType(BuiltList, [FullType(RespondSuccessLoginDataRolePermissionsInner)]),
+          ) as BuiltList<RespondSuccessLoginDataRolePermissionsInner>;
+          result.permissions.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -339,12 +250,12 @@ class _$RespondSuccessLoginDataSerializer implements PrimitiveSerializer<Respond
   }
 
   @override
-  RespondSuccessLoginData deserialize(
+  RespondSuccessLoginDataRole deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondSuccessLoginDataBuilder();
+    final result = RespondSuccessLoginDataRoleBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

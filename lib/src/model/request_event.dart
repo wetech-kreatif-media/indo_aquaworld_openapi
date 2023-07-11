@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/request_event_nominations_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/request_event_location.dart';
+import 'package:openapi/src/model/request_event_contest_components_inner.dart';
+import 'package:openapi/src/model/request_event_teams_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,39 +18,39 @@ part 'request_event.g.dart';
 /// * [startDate] 
 /// * [endDate] 
 /// * [description] 
+/// * [contestComponents] 
 /// * [location] 
-/// * [nominations] 
 /// * [teams] 
 /// * [statusPublish] 
 /// * [statusEvent] 
 @BuiltValue()
 abstract class RequestEvent implements Built<RequestEvent, RequestEventBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String? get name;
 
   @BuiltValueField(wireName: r'startDate')
-  String get startDate;
+  String? get startDate;
 
   @BuiltValueField(wireName: r'endDate')
-  String get endDate;
+  String? get endDate;
 
   @BuiltValueField(wireName: r'description')
-  String get description;
+  String? get description;
+
+  @BuiltValueField(wireName: r'contestComponents')
+  BuiltList<RequestEventContestComponentsInner>? get contestComponents;
 
   @BuiltValueField(wireName: r'location')
-  RequestEventLocation get location;
-
-  @BuiltValueField(wireName: r'nominations')
-  BuiltList<RequestEventNominationsInner> get nominations;
+  String? get location;
 
   @BuiltValueField(wireName: r'teams')
-  BuiltList<RequestEventLocation> get teams;
+  BuiltList<RequestEventTeamsInner>? get teams;
 
   @BuiltValueField(wireName: r'statusPublish')
-  String get statusPublish;
+  String? get statusPublish;
 
   @BuiltValueField(wireName: r'statusEvent')
-  String get statusEvent;
+  String? get statusEvent;
 
   RequestEvent._();
 
@@ -75,51 +75,69 @@ class _$RequestEventSerializer implements PrimitiveSerializer<RequestEvent> {
     RequestEvent object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
-    yield r'startDate';
-    yield serializers.serialize(
-      object.startDate,
-      specifiedType: const FullType(String),
-    );
-    yield r'endDate';
-    yield serializers.serialize(
-      object.endDate,
-      specifiedType: const FullType(String),
-    );
-    yield r'description';
-    yield serializers.serialize(
-      object.description,
-      specifiedType: const FullType(String),
-    );
-    yield r'location';
-    yield serializers.serialize(
-      object.location,
-      specifiedType: const FullType(RequestEventLocation),
-    );
-    yield r'nominations';
-    yield serializers.serialize(
-      object.nominations,
-      specifiedType: const FullType(BuiltList, [FullType(RequestEventNominationsInner)]),
-    );
-    yield r'teams';
-    yield serializers.serialize(
-      object.teams,
-      specifiedType: const FullType(BuiltList, [FullType(RequestEventLocation)]),
-    );
-    yield r'statusPublish';
-    yield serializers.serialize(
-      object.statusPublish,
-      specifiedType: const FullType(String),
-    );
-    yield r'statusEvent';
-    yield serializers.serialize(
-      object.statusEvent,
-      specifiedType: const FullType(String),
-    );
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.startDate != null) {
+      yield r'startDate';
+      yield serializers.serialize(
+        object.startDate,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.endDate != null) {
+      yield r'endDate';
+      yield serializers.serialize(
+        object.endDate,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.contestComponents != null) {
+      yield r'contestComponents';
+      yield serializers.serialize(
+        object.contestComponents,
+        specifiedType: const FullType(BuiltList, [FullType(RequestEventContestComponentsInner)]),
+      );
+    }
+    if (object.location != null) {
+      yield r'location';
+      yield serializers.serialize(
+        object.location,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.teams != null) {
+      yield r'teams';
+      yield serializers.serialize(
+        object.teams,
+        specifiedType: const FullType(BuiltList, [FullType(RequestEventTeamsInner)]),
+      );
+    }
+    if (object.statusPublish != null) {
+      yield r'statusPublish';
+      yield serializers.serialize(
+        object.statusPublish,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.statusEvent != null) {
+      yield r'statusEvent';
+      yield serializers.serialize(
+        object.statusEvent,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
@@ -171,25 +189,25 @@ class _$RequestEventSerializer implements PrimitiveSerializer<RequestEvent> {
           ) as String;
           result.description = valueDes;
           break;
+        case r'contestComponents':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(RequestEventContestComponentsInner)]),
+          ) as BuiltList<RequestEventContestComponentsInner>;
+          result.contestComponents.replace(valueDes);
+          break;
         case r'location':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RequestEventLocation),
-          ) as RequestEventLocation;
-          result.location.replace(valueDes);
-          break;
-        case r'nominations':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(RequestEventNominationsInner)]),
-          ) as BuiltList<RequestEventNominationsInner>;
-          result.nominations.replace(valueDes);
+            specifiedType: const FullType(String),
+          ) as String;
+          result.location = valueDes;
           break;
         case r'teams':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(RequestEventLocation)]),
-          ) as BuiltList<RequestEventLocation>;
+            specifiedType: const FullType(BuiltList, [FullType(RequestEventTeamsInner)]),
+          ) as BuiltList<RequestEventTeamsInner>;
           result.teams.replace(valueDes);
           break;
         case r'statusPublish':

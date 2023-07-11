@@ -8,15 +8,15 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
-**startDate** | **String** |  | 
-**endDate** | **String** |  | 
-**description** | **String** |  | 
-**location** | [**RequestEventLocation**](RequestEventLocation.md) |  | 
-**nominations** | [**BuiltList&lt;RequestEventNominationsInner&gt;**](RequestEventNominationsInner.md) |  | 
-**teams** | [**BuiltList&lt;RequestEventLocation&gt;**](RequestEventLocation.md) |  | 
-**statusPublish** | **String** |  | 
-**statusEvent** | **String** |  | 
+**name** | **String** |  | [optional] 
+**startDate** | **String** |  | [optional] 
+**endDate** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**contestComponents** | [**BuiltList&lt;RequestEventContestComponentsInner&gt;**](RequestEventContestComponentsInner.md) |  | [optional] 
+**location** | **String** |  | [optional] 
+**teams** | [**BuiltList&lt;RequestEventTeamsInner&gt;**](RequestEventTeamsInner.md) |  | [optional] 
+**statusPublish** | **String** |  | [optional] 
+**statusEvent** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

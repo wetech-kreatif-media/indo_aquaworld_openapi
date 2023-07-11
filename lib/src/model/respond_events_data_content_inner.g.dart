@@ -8,60 +8,83 @@ part of 'respond_events_data_content_inner.dart';
 
 class _$RespondEventsDataContentInner extends RespondEventsDataContentInner {
   @override
-  final String? id;
+  final String id;
   @override
-  final String? createdBy;
+  final String createdBy;
   @override
-  final String? updatedBy;
+  final String updatedBy;
   @override
-  final String? created;
+  final String created;
   @override
-  final String? updated;
+  final String updated;
   @override
-  final num? deleted;
+  final num deleted;
   @override
-  final String? recordStatus;
+  final String recordStatus;
   @override
-  final String? name;
+  final String name;
   @override
-  final String? startDate;
+  final String startDate;
   @override
-  final String? endDate;
+  final String endDate;
   @override
-  final String? description;
+  final String description;
   @override
-  final RespondEventsDataContentInnerLocation? location;
+  final RespondLocationData location;
   @override
-  final BuiltList<RespondEventsDataContentInnerNominationsInner>? nominations;
+  final String statusPublish;
   @override
-  final BuiltList<RespondEventsDataContentInnerNominationsInnerJudge>? teams;
-  @override
-  final String? statusPublish;
-  @override
-  final String? statusEvent;
+  final String statusEvent;
 
   factory _$RespondEventsDataContentInner(
           [void Function(RespondEventsDataContentInnerBuilder)? updates]) =>
       (new RespondEventsDataContentInnerBuilder()..update(updates))._build();
 
   _$RespondEventsDataContentInner._(
-      {this.id,
-      this.createdBy,
-      this.updatedBy,
-      this.created,
-      this.updated,
-      this.deleted,
-      this.recordStatus,
-      this.name,
-      this.startDate,
-      this.endDate,
-      this.description,
-      this.location,
-      this.nominations,
-      this.teams,
-      this.statusPublish,
-      this.statusEvent})
-      : super._();
+      {required this.id,
+      required this.createdBy,
+      required this.updatedBy,
+      required this.created,
+      required this.updated,
+      required this.deleted,
+      required this.recordStatus,
+      required this.name,
+      required this.startDate,
+      required this.endDate,
+      required this.description,
+      required this.location,
+      required this.statusPublish,
+      required this.statusEvent})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'RespondEventsDataContentInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        createdBy, r'RespondEventsDataContentInner', 'createdBy');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedBy, r'RespondEventsDataContentInner', 'updatedBy');
+    BuiltValueNullFieldError.checkNotNull(
+        created, r'RespondEventsDataContentInner', 'created');
+    BuiltValueNullFieldError.checkNotNull(
+        updated, r'RespondEventsDataContentInner', 'updated');
+    BuiltValueNullFieldError.checkNotNull(
+        deleted, r'RespondEventsDataContentInner', 'deleted');
+    BuiltValueNullFieldError.checkNotNull(
+        recordStatus, r'RespondEventsDataContentInner', 'recordStatus');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'RespondEventsDataContentInner', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        startDate, r'RespondEventsDataContentInner', 'startDate');
+    BuiltValueNullFieldError.checkNotNull(
+        endDate, r'RespondEventsDataContentInner', 'endDate');
+    BuiltValueNullFieldError.checkNotNull(
+        description, r'RespondEventsDataContentInner', 'description');
+    BuiltValueNullFieldError.checkNotNull(
+        location, r'RespondEventsDataContentInner', 'location');
+    BuiltValueNullFieldError.checkNotNull(
+        statusPublish, r'RespondEventsDataContentInner', 'statusPublish');
+    BuiltValueNullFieldError.checkNotNull(
+        statusEvent, r'RespondEventsDataContentInner', 'statusEvent');
+  }
 
   @override
   RespondEventsDataContentInner rebuild(
@@ -88,8 +111,6 @@ class _$RespondEventsDataContentInner extends RespondEventsDataContentInner {
         endDate == other.endDate &&
         description == other.description &&
         location == other.location &&
-        nominations == other.nominations &&
-        teams == other.teams &&
         statusPublish == other.statusPublish &&
         statusEvent == other.statusEvent;
   }
@@ -109,8 +130,6 @@ class _$RespondEventsDataContentInner extends RespondEventsDataContentInner {
     _$hash = $jc(_$hash, endDate.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, location.hashCode);
-    _$hash = $jc(_$hash, nominations.hashCode);
-    _$hash = $jc(_$hash, teams.hashCode);
     _$hash = $jc(_$hash, statusPublish.hashCode);
     _$hash = $jc(_$hash, statusEvent.hashCode);
     _$hash = $jf(_$hash);
@@ -132,8 +151,6 @@ class _$RespondEventsDataContentInner extends RespondEventsDataContentInner {
           ..add('endDate', endDate)
           ..add('description', description)
           ..add('location', location)
-          ..add('nominations', nominations)
-          ..add('teams', teams)
           ..add('statusPublish', statusPublish)
           ..add('statusEvent', statusEvent))
         .toString();
@@ -190,29 +207,11 @@ class RespondEventsDataContentInnerBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  RespondEventsDataContentInnerLocationBuilder? _location;
-  RespondEventsDataContentInnerLocationBuilder get location =>
-      _$this._location ??= new RespondEventsDataContentInnerLocationBuilder();
-  set location(RespondEventsDataContentInnerLocationBuilder? location) =>
+  RespondLocationDataBuilder? _location;
+  RespondLocationDataBuilder get location =>
+      _$this._location ??= new RespondLocationDataBuilder();
+  set location(RespondLocationDataBuilder? location) =>
       _$this._location = location;
-
-  ListBuilder<RespondEventsDataContentInnerNominationsInner>? _nominations;
-  ListBuilder<RespondEventsDataContentInnerNominationsInner> get nominations =>
-      _$this._nominations ??=
-          new ListBuilder<RespondEventsDataContentInnerNominationsInner>();
-  set nominations(
-          ListBuilder<RespondEventsDataContentInnerNominationsInner>?
-              nominations) =>
-      _$this._nominations = nominations;
-
-  ListBuilder<RespondEventsDataContentInnerNominationsInnerJudge>? _teams;
-  ListBuilder<RespondEventsDataContentInnerNominationsInnerJudge> get teams =>
-      _$this._teams ??=
-          new ListBuilder<RespondEventsDataContentInnerNominationsInnerJudge>();
-  set teams(
-          ListBuilder<RespondEventsDataContentInnerNominationsInnerJudge>?
-              teams) =>
-      _$this._teams = teams;
 
   String? _statusPublish;
   String? get statusPublish => _$this._statusPublish;
@@ -241,9 +240,7 @@ class RespondEventsDataContentInnerBuilder
       _startDate = $v.startDate;
       _endDate = $v.endDate;
       _description = $v.description;
-      _location = $v.location?.toBuilder();
-      _nominations = $v.nominations?.toBuilder();
-      _teams = $v.teams?.toBuilder();
+      _location = $v.location.toBuilder();
       _statusPublish = $v.statusPublish;
       _statusEvent = $v.statusEvent;
       _$v = null;
@@ -270,31 +267,34 @@ class RespondEventsDataContentInnerBuilder
     try {
       _$result = _$v ??
           new _$RespondEventsDataContentInner._(
-              id: id,
-              createdBy: createdBy,
-              updatedBy: updatedBy,
-              created: created,
-              updated: updated,
-              deleted: deleted,
-              recordStatus: recordStatus,
-              name: name,
-              startDate: startDate,
-              endDate: endDate,
-              description: description,
-              location: _location?.build(),
-              nominations: _nominations?.build(),
-              teams: _teams?.build(),
-              statusPublish: statusPublish,
-              statusEvent: statusEvent);
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondEventsDataContentInner', 'id'),
+              createdBy: BuiltValueNullFieldError.checkNotNull(
+                  createdBy, r'RespondEventsDataContentInner', 'createdBy'),
+              updatedBy: BuiltValueNullFieldError.checkNotNull(
+                  updatedBy, r'RespondEventsDataContentInner', 'updatedBy'),
+              created: BuiltValueNullFieldError.checkNotNull(
+                  created, r'RespondEventsDataContentInner', 'created'),
+              updated: BuiltValueNullFieldError.checkNotNull(
+                  updated, r'RespondEventsDataContentInner', 'updated'),
+              deleted: BuiltValueNullFieldError.checkNotNull(
+                  deleted, r'RespondEventsDataContentInner', 'deleted'),
+              recordStatus: BuiltValueNullFieldError.checkNotNull(
+                  recordStatus, r'RespondEventsDataContentInner', 'recordStatus'),
+              name: BuiltValueNullFieldError.checkNotNull(
+                  name, r'RespondEventsDataContentInner', 'name'),
+              startDate:
+                  BuiltValueNullFieldError.checkNotNull(startDate, r'RespondEventsDataContentInner', 'startDate'),
+              endDate: BuiltValueNullFieldError.checkNotNull(endDate, r'RespondEventsDataContentInner', 'endDate'),
+              description: BuiltValueNullFieldError.checkNotNull(description, r'RespondEventsDataContentInner', 'description'),
+              location: location.build(),
+              statusPublish: BuiltValueNullFieldError.checkNotNull(statusPublish, r'RespondEventsDataContentInner', 'statusPublish'),
+              statusEvent: BuiltValueNullFieldError.checkNotNull(statusEvent, r'RespondEventsDataContentInner', 'statusEvent'));
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'location';
-        _location?.build();
-        _$failedField = 'nominations';
-        _nominations?.build();
-        _$failedField = 'teams';
-        _teams?.build();
+        location.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondEventsDataContentInner', _$failedField, e.toString());

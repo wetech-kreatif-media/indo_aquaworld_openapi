@@ -3,13 +3,13 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_location_data.dart';
+import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_events_data_content_inner.g.dart';
+part 'respond_event_data_teams_inner.g.dart';
 
-/// RespondEventsDataContentInner
+/// RespondEventDataTeamsInner
 ///
 /// Properties:
 /// * [id] 
@@ -19,15 +19,16 @@ part 'respond_events_data_content_inner.g.dart';
 /// * [updated] 
 /// * [deleted] 
 /// * [recordStatus] 
-/// * [name] 
-/// * [startDate] 
-/// * [endDate] 
-/// * [description] 
-/// * [location] 
-/// * [statusPublish] 
-/// * [statusEvent] 
+/// * [fullname] 
+/// * [mobilePhone] 
+/// * [email] 
+/// * [city] 
+/// * [urlPhoto] 
+/// * [gender] 
+/// * [placeofBirth] 
+/// * [role] 
 @BuiltValue()
-abstract class RespondEventsDataContentInner implements Built<RespondEventsDataContentInner, RespondEventsDataContentInnerBuilder> {
+abstract class RespondEventDataTeamsInner implements Built<RespondEventDataTeamsInner, RespondEventDataTeamsInnerBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
 
@@ -49,48 +50,51 @@ abstract class RespondEventsDataContentInner implements Built<RespondEventsDataC
   @BuiltValueField(wireName: r'recordStatus')
   String get recordStatus;
 
-  @BuiltValueField(wireName: r'name')
-  String get name;
+  @BuiltValueField(wireName: r'fullname')
+  String get fullname;
 
-  @BuiltValueField(wireName: r'startDate')
-  String get startDate;
+  @BuiltValueField(wireName: r'mobilePhone')
+  String get mobilePhone;
 
-  @BuiltValueField(wireName: r'endDate')
-  String get endDate;
+  @BuiltValueField(wireName: r'email')
+  String get email;
 
-  @BuiltValueField(wireName: r'description')
-  String get description;
+  @BuiltValueField(wireName: r'city')
+  String get city;
 
-  @BuiltValueField(wireName: r'location')
-  RespondLocationData get location;
+  @BuiltValueField(wireName: r'urlPhoto')
+  String get urlPhoto;
 
-  @BuiltValueField(wireName: r'statusPublish')
-  String get statusPublish;
+  @BuiltValueField(wireName: r'gender')
+  String get gender;
 
-  @BuiltValueField(wireName: r'statusEvent')
-  String get statusEvent;
+  @BuiltValueField(wireName: r'placeofBirth')
+  String get placeofBirth;
 
-  RespondEventsDataContentInner._();
+  @BuiltValueField(wireName: r'role')
+  RespondUsersDataContentInnerRole get role;
 
-  factory RespondEventsDataContentInner([void updates(RespondEventsDataContentInnerBuilder b)]) = _$RespondEventsDataContentInner;
+  RespondEventDataTeamsInner._();
+
+  factory RespondEventDataTeamsInner([void updates(RespondEventDataTeamsInnerBuilder b)]) = _$RespondEventDataTeamsInner;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondEventsDataContentInnerBuilder b) => b;
+  static void _defaults(RespondEventDataTeamsInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondEventsDataContentInner> get serializer => _$RespondEventsDataContentInnerSerializer();
+  static Serializer<RespondEventDataTeamsInner> get serializer => _$RespondEventDataTeamsInnerSerializer();
 }
 
-class _$RespondEventsDataContentInnerSerializer implements PrimitiveSerializer<RespondEventsDataContentInner> {
+class _$RespondEventDataTeamsInnerSerializer implements PrimitiveSerializer<RespondEventDataTeamsInner> {
   @override
-  final Iterable<Type> types = const [RespondEventsDataContentInner, _$RespondEventsDataContentInner];
+  final Iterable<Type> types = const [RespondEventDataTeamsInner, _$RespondEventDataTeamsInner];
 
   @override
-  final String wireName = r'RespondEventsDataContentInner';
+  final String wireName = r'RespondEventDataTeamsInner';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondEventsDataContentInner object, {
+    RespondEventDataTeamsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -128,47 +132,52 @@ class _$RespondEventsDataContentInnerSerializer implements PrimitiveSerializer<R
       object.recordStatus,
       specifiedType: const FullType(String),
     );
-    yield r'name';
+    yield r'fullname';
     yield serializers.serialize(
-      object.name,
+      object.fullname,
       specifiedType: const FullType(String),
     );
-    yield r'startDate';
+    yield r'mobilePhone';
     yield serializers.serialize(
-      object.startDate,
+      object.mobilePhone,
       specifiedType: const FullType(String),
     );
-    yield r'endDate';
+    yield r'email';
     yield serializers.serialize(
-      object.endDate,
+      object.email,
       specifiedType: const FullType(String),
     );
-    yield r'description';
+    yield r'city';
     yield serializers.serialize(
-      object.description,
+      object.city,
       specifiedType: const FullType(String),
     );
-    yield r'location';
+    yield r'urlPhoto';
     yield serializers.serialize(
-      object.location,
-      specifiedType: const FullType(RespondLocationData),
-    );
-    yield r'statusPublish';
-    yield serializers.serialize(
-      object.statusPublish,
+      object.urlPhoto,
       specifiedType: const FullType(String),
     );
-    yield r'statusEvent';
+    yield r'gender';
     yield serializers.serialize(
-      object.statusEvent,
+      object.gender,
       specifiedType: const FullType(String),
+    );
+    yield r'placeofBirth';
+    yield serializers.serialize(
+      object.placeofBirth,
+      specifiedType: const FullType(String),
+    );
+    yield r'role';
+    yield serializers.serialize(
+      object.role,
+      specifiedType: const FullType(RespondUsersDataContentInnerRole),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondEventsDataContentInner object, {
+    RespondEventDataTeamsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -179,7 +188,7 @@ class _$RespondEventsDataContentInnerSerializer implements PrimitiveSerializer<R
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondEventsDataContentInnerBuilder result,
+    required RespondEventDataTeamsInnerBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -235,54 +244,61 @@ class _$RespondEventsDataContentInnerSerializer implements PrimitiveSerializer<R
           ) as String;
           result.recordStatus = valueDes;
           break;
-        case r'name':
+        case r'fullname':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.fullname = valueDes;
           break;
-        case r'startDate':
+        case r'mobilePhone':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.startDate = valueDes;
+          result.mobilePhone = valueDes;
           break;
-        case r'endDate':
+        case r'email':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.endDate = valueDes;
+          result.email = valueDes;
           break;
-        case r'description':
+        case r'city':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.description = valueDes;
+          result.city = valueDes;
           break;
-        case r'location':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondLocationData),
-          ) as RespondLocationData;
-          result.location.replace(valueDes);
-          break;
-        case r'statusPublish':
+        case r'urlPhoto':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.statusPublish = valueDes;
+          result.urlPhoto = valueDes;
           break;
-        case r'statusEvent':
+        case r'gender':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.statusEvent = valueDes;
+          result.gender = valueDes;
+          break;
+        case r'placeofBirth':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.placeofBirth = valueDes;
+          break;
+        case r'role':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RespondUsersDataContentInnerRole),
+          ) as RespondUsersDataContentInnerRole;
+          result.role.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -293,12 +309,12 @@ class _$RespondEventsDataContentInnerSerializer implements PrimitiveSerializer<R
   }
 
   @override
-  RespondEventsDataContentInner deserialize(
+  RespondEventDataTeamsInner deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondEventsDataContentInnerBuilder();
+    final result = RespondEventDataTeamsInnerBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

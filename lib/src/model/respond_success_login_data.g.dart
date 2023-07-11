@@ -36,7 +36,7 @@ class _$RespondSuccessLoginData extends RespondSuccessLoginData {
   @override
   final String? placeofBirth;
   @override
-  final RespondEventsDataContentInnerNominationsInnerJudgeRole? role;
+  final RespondSuccessLoginDataRole? role;
 
   factory _$RespondSuccessLoginData(
           [void Function(RespondSuccessLoginDataBuilder)? updates]) =>
@@ -195,14 +195,10 @@ class RespondSuccessLoginDataBuilder
   String? get placeofBirth => _$this._placeofBirth;
   set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
 
-  RespondEventsDataContentInnerNominationsInnerJudgeRoleBuilder? _role;
-  RespondEventsDataContentInnerNominationsInnerJudgeRoleBuilder get role =>
-      _$this._role ??=
-          new RespondEventsDataContentInnerNominationsInnerJudgeRoleBuilder();
-  set role(
-          RespondEventsDataContentInnerNominationsInnerJudgeRoleBuilder?
-              role) =>
-      _$this._role = role;
+  RespondSuccessLoginDataRoleBuilder? _role;
+  RespondSuccessLoginDataRoleBuilder get role =>
+      _$this._role ??= new RespondSuccessLoginDataRoleBuilder();
+  set role(RespondSuccessLoginDataRoleBuilder? role) => _$this._role = role;
 
   RespondSuccessLoginDataBuilder() {
     RespondSuccessLoginData._defaults(this);

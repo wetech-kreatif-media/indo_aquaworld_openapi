@@ -9,9 +9,9 @@ part of 'serializers.dart';
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestChangePassword.serializer)
       ..add(RequestEvent.serializer)
-      ..add(RequestEventLocation.serializer)
-      ..add(RequestEventNominationsInner.serializer)
-      ..add(RequestEventNominationsInnerDetailNominatesInner.serializer)
+      ..add(RequestEventContestComponentsInner.serializer)
+      ..add(RequestEventContestComponentsInnerJudge.serializer)
+      ..add(RequestEventTeamsInner.serializer)
       ..add(RequestForgot.serializer)
       ..add(RequestLocation.serializer)
       ..add(RequestLogin.serializer)
@@ -22,18 +22,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestSendOtp.serializer)
       ..add(RespondEvent.serializer)
       ..add(RespondEventData.serializer)
+      ..add(RespondEventDataTeamsInner.serializer)
       ..add(RespondEvents.serializer)
       ..add(RespondEventsData.serializer)
       ..add(RespondEventsDataContentInner.serializer)
-      ..add(RespondEventsDataContentInnerLocation.serializer)
-      ..add(RespondEventsDataContentInnerNominationsInner.serializer)
-      ..add(RespondEventsDataContentInnerNominationsInnerDetailNominatesInner
-          .serializer)
-      ..add(RespondEventsDataContentInnerNominationsInnerJudge.serializer)
-      ..add(RespondEventsDataContentInnerNominationsInnerJudgeRole.serializer)
-      ..add(
-          RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner
-              .serializer)
       ..add(RespondGlobal.serializer)
       ..add(RespondGlobalData.serializer)
       ..add(RespondLocation.serializer)
@@ -49,58 +41,32 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondRolesDataContentInner.serializer)
       ..add(RespondSuccessLogin.serializer)
       ..add(RespondSuccessLoginData.serializer)
+      ..add(RespondSuccessLoginDataRole.serializer)
+      ..add(RespondSuccessLoginDataRolePermissionsInner.serializer)
       ..add(RespondUsers.serializer)
       ..add(RespondUsersData.serializer)
       ..add(RespondUsersDataContentInner.serializer)
       ..add(RespondUsersDataContentInnerRole.serializer)
       ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(RequestEventNominationsInner)]),
-          () => new ListBuilder<RequestEventNominationsInner>())
+          const FullType(BuiltList,
+              const [const FullType(RequestEventContestComponentsInner)]),
+          () => new ListBuilder<RequestEventContestComponentsInner>())
       ..addBuilderFactory(
           const FullType(
-              BuiltList, const [const FullType(RequestEventLocation)]),
-          () => new ListBuilder<RequestEventLocation>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(RequestEventNominationsInnerDetailNominatesInner)
-          ]),
-          () => new ListBuilder<
-              RequestEventNominationsInnerDetailNominatesInner>())
+              BuiltList, const [const FullType(RequestEventTeamsInner)]),
+          () => new ListBuilder<RequestEventTeamsInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RequestRolePermissionsInner)]),
           () => new ListBuilder<RequestRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(
+              BuiltList, const [const FullType(RespondEventDataTeamsInner)]),
+          () => new ListBuilder<RespondEventDataTeamsInner>())
+      ..addBuilderFactory(
+          const FullType(
               BuiltList, const [const FullType(RespondEventsDataContentInner)]),
           () => new ListBuilder<RespondEventsDataContentInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(RespondEventsDataContentInnerNominationsInner)
-          ]),
-          () =>
-              new ListBuilder<RespondEventsDataContentInnerNominationsInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(RespondEventsDataContentInnerNominationsInnerJudge)
-          ]),
-          () => new ListBuilder<
-              RespondEventsDataContentInnerNominationsInnerJudge>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                RespondEventsDataContentInnerNominationsInnerDetailNominatesInner)
-          ]),
-          () => new ListBuilder<
-              RespondEventsDataContentInnerNominationsInnerDetailNominatesInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner)
-          ]),
-          () => new ListBuilder<
-              RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondLocationsDataContentInner)]),
@@ -122,12 +88,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(RespondRolesDataContentInner)]),
           () => new ListBuilder<RespondRolesDataContentInner>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondSuccessLoginDataRolePermissionsInner)
+          ]),
+          () => new ListBuilder<RespondSuccessLoginDataRolePermissionsInner>())
+      ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondUsersDataContentInner)]),
-          () => new ListBuilder<RespondUsersDataContentInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>()))
+          () => new ListBuilder<RespondUsersDataContentInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

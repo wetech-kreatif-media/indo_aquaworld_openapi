@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **endDate** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **location** | [**RespondLocationData**](RespondLocationData.md) |  | [optional] 
-**teams** | **BuiltList&lt;String&gt;** |  | [optional] 
+**teams** | [**BuiltList&lt;RespondEventDataTeamsInner&gt;**](RespondEventDataTeamsInner.md) |  | [optional] 
 **statusPublish** | **String** |  | [optional] 
 **statusEvent** | **String** |  | [optional] 
 
