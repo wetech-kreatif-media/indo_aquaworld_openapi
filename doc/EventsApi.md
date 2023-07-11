@@ -26,7 +26,7 @@ Membuat event
 import 'package:openapi/api.dart';
 
 final api = Openapi().getEventsApi();
-final RequestEvent requestEvent = {"name":"Event Lohan","startDate":"2023-06-23","endDate":"2023-07-26","description":"Kofdgsdfgntes untuk ikan lohan","location":"9fc784c2-c71b-4a72-96d9-cba5a87e3bdf","nominations":[{"name":"Nominasi 1","description":"Nominasi 1","detailNominates":[{"head":10,"body":5,"colour":7,"fantail":8,"face":10,"pearly":5,"marking":3,"overall":2}],"judge":{"id":"108573e1-d446-439c-89ee-2aa1506e03ca"}}],"teams":[{"id":"643b6101-449d-411e-b4e8-ec31ac8ccf98"}],"statusPublish":"ACTIVE","statusEvent":"COMING_SOON"}; // RequestEvent | 
+final RequestEvent requestEvent = {"name":"Event Lohaan","startDate":"2023-06-23","endDate":"2023-07-11","description":"Kofdgsdfgntes untuk ikan lohan","contestComponents":[{"nomination":"42095eec-e9e8-4e23-b07e-d1d82063fc14","head":10,"body":5,"colour":7,"fantail":8,"face":10,"pearly":5,"marking":3,"overall":2,"judge":{"id":"108573e1-d446-439c-89ee-2aa1506e03ca"}},{"nomination":"283267b4-3f62-4936-9dae-756fb6bc82a4","head":10,"body":5,"colour":7,"fantail":8,"face":10,"pearly":5,"marking":3,"overall":2,"judge":{"id":"108573e1-d446-439c-89ee-2aa1506e03ca"}}],"location":"12c6bbc4-888b-4393-a718-b438472358df","teams":[{"id":"50432068-c66c-4810-8cf6-367c86f9284d"},{"id":"01e23a3e-1f57-4a3e-86e8-93c210ed9dad"}],"statusPublish":"DRAFT","statusEvent":"COMING_SOON"}; // RequestEvent | 
 
 try {
     final response = api.createEvent(requestEvent);

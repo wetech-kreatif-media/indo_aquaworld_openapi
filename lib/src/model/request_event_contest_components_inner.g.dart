@@ -9,25 +9,25 @@ part of 'request_event_contest_components_inner.dart';
 class _$RequestEventContestComponentsInner
     extends RequestEventContestComponentsInner {
   @override
-  final String? nomination;
+  final String nomination;
   @override
-  final num? head;
+  final num head;
   @override
-  final num? body;
+  final num body;
   @override
-  final num? colour;
+  final num colour;
   @override
-  final num? fantail;
+  final num fantail;
   @override
-  final num? face;
+  final num face;
   @override
-  final num? pearly;
+  final num pearly;
   @override
-  final num? marking;
+  final num marking;
   @override
-  final num? overall;
+  final num overall;
   @override
-  final RequestEventContestComponentsInnerJudge? judge;
+  final RequestEventContestComponentsInnerJudge judge;
 
   factory _$RequestEventContestComponentsInner(
           [void Function(RequestEventContestComponentsInnerBuilder)?
@@ -36,17 +36,38 @@ class _$RequestEventContestComponentsInner
           ._build();
 
   _$RequestEventContestComponentsInner._(
-      {this.nomination,
-      this.head,
-      this.body,
-      this.colour,
-      this.fantail,
-      this.face,
-      this.pearly,
-      this.marking,
-      this.overall,
-      this.judge})
-      : super._();
+      {required this.nomination,
+      required this.head,
+      required this.body,
+      required this.colour,
+      required this.fantail,
+      required this.face,
+      required this.pearly,
+      required this.marking,
+      required this.overall,
+      required this.judge})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        nomination, r'RequestEventContestComponentsInner', 'nomination');
+    BuiltValueNullFieldError.checkNotNull(
+        head, r'RequestEventContestComponentsInner', 'head');
+    BuiltValueNullFieldError.checkNotNull(
+        body, r'RequestEventContestComponentsInner', 'body');
+    BuiltValueNullFieldError.checkNotNull(
+        colour, r'RequestEventContestComponentsInner', 'colour');
+    BuiltValueNullFieldError.checkNotNull(
+        fantail, r'RequestEventContestComponentsInner', 'fantail');
+    BuiltValueNullFieldError.checkNotNull(
+        face, r'RequestEventContestComponentsInner', 'face');
+    BuiltValueNullFieldError.checkNotNull(
+        pearly, r'RequestEventContestComponentsInner', 'pearly');
+    BuiltValueNullFieldError.checkNotNull(
+        marking, r'RequestEventContestComponentsInner', 'marking');
+    BuiltValueNullFieldError.checkNotNull(
+        overall, r'RequestEventContestComponentsInner', 'overall');
+    BuiltValueNullFieldError.checkNotNull(
+        judge, r'RequestEventContestComponentsInner', 'judge');
+  }
 
   @override
   RequestEventContestComponentsInner rebuild(
@@ -171,7 +192,7 @@ class RequestEventContestComponentsInnerBuilder
       _pearly = $v.pearly;
       _marking = $v.marking;
       _overall = $v.overall;
-      _judge = $v.judge?.toBuilder();
+      _judge = $v.judge.toBuilder();
       _$v = null;
     }
     return this;
@@ -197,21 +218,29 @@ class RequestEventContestComponentsInnerBuilder
     try {
       _$result = _$v ??
           new _$RequestEventContestComponentsInner._(
-              nomination: nomination,
-              head: head,
-              body: body,
-              colour: colour,
-              fantail: fantail,
-              face: face,
-              pearly: pearly,
-              marking: marking,
-              overall: overall,
-              judge: _judge?.build());
+              nomination: BuiltValueNullFieldError.checkNotNull(
+                  nomination, r'RequestEventContestComponentsInner', 'nomination'),
+              head: BuiltValueNullFieldError.checkNotNull(
+                  head, r'RequestEventContestComponentsInner', 'head'),
+              body: BuiltValueNullFieldError.checkNotNull(
+                  body, r'RequestEventContestComponentsInner', 'body'),
+              colour: BuiltValueNullFieldError.checkNotNull(
+                  colour, r'RequestEventContestComponentsInner', 'colour'),
+              fantail: BuiltValueNullFieldError.checkNotNull(
+                  fantail, r'RequestEventContestComponentsInner', 'fantail'),
+              face: BuiltValueNullFieldError.checkNotNull(
+                  face, r'RequestEventContestComponentsInner', 'face'),
+              pearly: BuiltValueNullFieldError.checkNotNull(
+                  pearly, r'RequestEventContestComponentsInner', 'pearly'),
+              marking: BuiltValueNullFieldError.checkNotNull(
+                  marking, r'RequestEventContestComponentsInner', 'marking'),
+              overall: BuiltValueNullFieldError.checkNotNull(overall, r'RequestEventContestComponentsInner', 'overall'),
+              judge: judge.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'judge';
-        _judge?.build();
+        judge.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RequestEventContestComponentsInner', _$failedField, e.toString());
