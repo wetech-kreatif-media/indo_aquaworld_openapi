@@ -103,9 +103,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/request_event_contest_components_inner_judge_test.dart
-test/request_event_contest_components_inner_test.dart
-test/request_event_teams_inner_test.dart
-test/respond_event_data_teams_inner_test.dart
-test/respond_success_login_data_role_permissions_inner_test.dart
-test/respond_success_login_data_role_test.dart

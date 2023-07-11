@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **getUsers**
-> RespondUsers getUsers(pageNumber, direction)
+> RespondUsers getUsers(pageNumber, direction, fullname)
 
 Get Users
 
@@ -32,9 +32,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getUsersApi();
 final num pageNumber = 8.14; // num | 
 final String direction = direction_example; // String | 
+final String fullname = fullname_example; // String | 
 
 try {
-    final response = api.getUsers(pageNumber, direction);
+    final response = api.getUsers(pageNumber, direction, fullname);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->getUsers: $e\n');
@@ -47,6 +48,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageNumber** | **num**|  | [optional] 
  **direction** | **String**|  | [optional] 
+ **fullname** | **String**|  | [optional] 
 
 ### Return type
 

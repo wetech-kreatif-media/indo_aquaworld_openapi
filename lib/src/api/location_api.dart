@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_location.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_location.dart';
@@ -194,6 +195,7 @@ class LocationApi {
   /// Ambil data lokasi 
   ///
   /// Parameters:
+  /// * [nama] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -204,6 +206,7 @@ class LocationApi {
   /// Returns a [Future] containing a [Response] with a [RespondLocations] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondLocations>> getLocations({ 
+    String? nama,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -224,9 +227,14 @@ class LocationApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (nama != null) r'nama': encodeQueryParameter(_serializers, nama, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getRoles**
-> RespondRoles getRoles()
+> RespondRoles getRoles(nama)
 
 Get Roles
 
@@ -68,9 +68,10 @@ Ambil data role
 import 'package:openapi/api.dart';
 
 final api = Openapi().getRoleApi();
+final String nama = nama_example; // String | 
 
 try {
-    final response = api.getRoles();
+    final response = api.getRoles(nama);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling RoleApi->getRoles: $e\n');
@@ -78,7 +79,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nama** | **String**|  | [optional] 
 
 ### Return type
 

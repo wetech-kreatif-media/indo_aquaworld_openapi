@@ -31,6 +31,7 @@ class UsersApi {
   /// Parameters:
   /// * [pageNumber] - 
   /// * [direction] - 
+  /// * [fullname] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -43,6 +44,7 @@ class UsersApi {
   Future<Response<RespondUsers>> getUsers({ 
     num? pageNumber,
     String? direction,
+    String? fullname,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -66,6 +68,7 @@ class UsersApi {
     final _queryParameters = <String, dynamic>{
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (fullname != null) r'fullname': encodeQueryParameter(_serializers, fullname, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
