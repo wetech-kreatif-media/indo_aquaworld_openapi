@@ -219,6 +219,7 @@ class EventsApi {
   ///
   /// Parameters:
   /// * [eventId] - 
+  /// * [name] - 
   /// * [requestEvent] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -231,6 +232,7 @@ class EventsApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondEventNominations>> getEventNominations({ 
     required String eventId,
+    String? name,
     RequestEvent? requestEvent,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -253,6 +255,10 @@ class EventsApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+    };
+
     dynamic _bodyData;
 
     try {
@@ -264,6 +270,7 @@ class EventsApi {
          requestOptions: _options.compose(
           _dio.options,
           _path,
+          queryParameters: _queryParameters,
         ),
         type: DioErrorType.unknown,
         error: error,
@@ -275,6 +282,7 @@ class EventsApi {
       _path,
       data: _bodyData,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
