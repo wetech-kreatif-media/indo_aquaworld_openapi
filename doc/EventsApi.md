@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEvents**
-> RespondEvents getEvents(nama)
+> RespondEvents getEvents(name)
 
 Get Events
 
@@ -113,10 +113,10 @@ Ambil data events atau lomba
 import 'package:openapi/api.dart';
 
 final api = Openapi().getEventsApi();
-final String nama = nama_example; // String | 
+final String name = name_example; // String | 
 
 try {
-    final response = api.getEvents(nama);
+    final response = api.getEvents(name);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling EventsApi->getEvents: $e\n');
@@ -127,7 +127,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nama** | **String**|  | [optional] 
+ **name** | **String**|  | [optional] 
 
 ### Return type
 

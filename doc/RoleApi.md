@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getRoles**
-> RespondRoles getRoles(nama)
+> RespondRoles getRoles(name)
 
 Get Roles
 
@@ -68,10 +68,10 @@ Ambil data role
 import 'package:openapi/api.dart';
 
 final api = Openapi().getRoleApi();
-final String nama = nama_example; // String | 
+final String name = name_example; // String | 
 
 try {
-    final response = api.getRoles(nama);
+    final response = api.getRoles(name);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling RoleApi->getRoles: $e\n');
@@ -82,7 +82,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nama** | **String**|  | [optional] 
+ **name** | **String**|  | [optional] 
 
 ### Return type
 

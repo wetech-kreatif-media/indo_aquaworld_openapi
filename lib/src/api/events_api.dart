@@ -189,7 +189,7 @@ class EventsApi {
   /// Ambil data events atau lomba
   ///
   /// Parameters:
-  /// * [nama] - 
+  /// * [name] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -200,7 +200,7 @@ class EventsApi {
   /// Returns a [Future] containing a [Response] with a [RespondEvents] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondEvents>> getEvents({ 
-    String? nama,
+    String? name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -222,7 +222,7 @@ class EventsApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (nama != null) r'nama': encodeQueryParameter(_serializers, nama, const FullType(String)),
+      if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(

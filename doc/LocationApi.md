@@ -101,7 +101,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getLocations**
-> RespondLocations getLocations(nama)
+> RespondLocations getLocations(name)
 
 Get Locations
 
@@ -112,10 +112,10 @@ Ambil data lokasi
 import 'package:openapi/api.dart';
 
 final api = Openapi().getLocationApi();
-final String nama = nama_example; // String | 
+final String name = name_example; // String | 
 
 try {
-    final response = api.getLocations(nama);
+    final response = api.getLocations(name);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling LocationApi->getLocations: $e\n');
@@ -126,7 +126,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nama** | **String**|  | [optional] 
+ **name** | **String**|  | [optional] 
 
 ### Return type
 
