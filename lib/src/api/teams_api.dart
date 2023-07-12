@@ -275,9 +275,9 @@ class TeamsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RequestTeam] as data
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RequestTeam>> putTeam({ 
+  Future<Response<RespondGlobal>> putTeam({ 
     required String teamId,
     RequestTeam? requestTeam,
     CancelToken? cancelToken,
@@ -328,14 +328,14 @@ class TeamsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RequestTeam? _responseData;
+    RespondGlobal? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RequestTeam),
-      ) as RequestTeam;
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -347,7 +347,7 @@ class TeamsApi {
       );
     }
 
-    return Response<RequestTeam>(
+    return Response<RespondGlobal>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

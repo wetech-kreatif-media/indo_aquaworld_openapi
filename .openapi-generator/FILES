@@ -115,8 +115,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/request_team_test.dart
-test/respond_teams_data_content_inner_test.dart
-test/respond_teams_data_test.dart
-test/respond_teams_test.dart
-test/teams_api_test.dart

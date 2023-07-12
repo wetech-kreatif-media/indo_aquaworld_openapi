@@ -141,7 +141,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **putTeam**
-> RequestTeam putTeam(teamId, requestTeam)
+> RespondGlobal putTeam(teamId, requestTeam)
 
 Update Team
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RequestTeam**](RequestTeam.md)
+[**RespondGlobal**](RespondGlobal.md)
 
 ### Authorization
 
