@@ -8,17 +8,17 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | **String** |  | 
 **nomination** | [**RespondEventDataContestComponentsInnerNomination**](RespondEventDataContestComponentsInnerNomination.md) |  | [optional] 
-**head** | **num** |  | [optional] 
-**body** | **num** |  | [optional] 
-**colour** | **num** |  | [optional] 
-**fantail** | **num** |  | [optional] 
-**face** | **num** |  | [optional] 
-**pearly** | **num** |  | [optional] 
-**marking** | **num** |  | [optional] 
-**overall** | **num** |  | [optional] 
-**judge** | [**RespondEventDataTeamsInner**](RespondEventDataTeamsInner.md) |  | [optional] 
+**head** | **num** |  | 
+**body** | **num** |  | 
+**colour** | **num** |  | 
+**fantail** | **num** |  | 
+**face** | **num** |  | 
+**pearly** | **num** |  | 
+**marking** | **num** |  | 
+**overall** | **num** |  | 
+**judge** | [**RespondEventDataContestComponentsInnerJudge**](RespondEventDataContestComponentsInnerJudge.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

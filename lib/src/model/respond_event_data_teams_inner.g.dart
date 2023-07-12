@@ -8,57 +8,63 @@ part of 'respond_event_data_teams_inner.dart';
 
 class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
   @override
-  final String? id;
+  final String id;
   @override
-  final String? createdBy;
+  final String recordStatus;
   @override
-  final String? updatedBy;
+  final String fullname;
   @override
-  final String? created;
+  final String mobilePhone;
   @override
-  final String? updated;
+  final String email;
   @override
-  final num? deleted;
+  final String city;
   @override
-  final String? recordStatus;
+  final String photo;
   @override
-  final String? fullname;
+  final String gender;
   @override
-  final String? mobilePhone;
+  final String placeofBirth;
   @override
-  final String? email;
-  @override
-  final String? city;
-  @override
-  final String? photo;
-  @override
-  final String? gender;
-  @override
-  final String? placeofBirth;
-  @override
-  final RespondEventDataTeamsInnerRole? role;
+  final RespondEventDataTeamsInnerRole role;
 
   factory _$RespondEventDataTeamsInner(
           [void Function(RespondEventDataTeamsInnerBuilder)? updates]) =>
       (new RespondEventDataTeamsInnerBuilder()..update(updates))._build();
 
   _$RespondEventDataTeamsInner._(
-      {this.id,
-      this.createdBy,
-      this.updatedBy,
-      this.created,
-      this.updated,
-      this.deleted,
-      this.recordStatus,
-      this.fullname,
-      this.mobilePhone,
-      this.email,
-      this.city,
-      this.photo,
-      this.gender,
-      this.placeofBirth,
-      this.role})
-      : super._();
+      {required this.id,
+      required this.recordStatus,
+      required this.fullname,
+      required this.mobilePhone,
+      required this.email,
+      required this.city,
+      required this.photo,
+      required this.gender,
+      required this.placeofBirth,
+      required this.role})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'RespondEventDataTeamsInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        recordStatus, r'RespondEventDataTeamsInner', 'recordStatus');
+    BuiltValueNullFieldError.checkNotNull(
+        fullname, r'RespondEventDataTeamsInner', 'fullname');
+    BuiltValueNullFieldError.checkNotNull(
+        mobilePhone, r'RespondEventDataTeamsInner', 'mobilePhone');
+    BuiltValueNullFieldError.checkNotNull(
+        email, r'RespondEventDataTeamsInner', 'email');
+    BuiltValueNullFieldError.checkNotNull(
+        city, r'RespondEventDataTeamsInner', 'city');
+    BuiltValueNullFieldError.checkNotNull(
+        photo, r'RespondEventDataTeamsInner', 'photo');
+    BuiltValueNullFieldError.checkNotNull(
+        gender, r'RespondEventDataTeamsInner', 'gender');
+    BuiltValueNullFieldError.checkNotNull(
+        placeofBirth, r'RespondEventDataTeamsInner', 'placeofBirth');
+    BuiltValueNullFieldError.checkNotNull(
+        role, r'RespondEventDataTeamsInner', 'role');
+  }
 
   @override
   RespondEventDataTeamsInner rebuild(
@@ -74,11 +80,6 @@ class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
     if (identical(other, this)) return true;
     return other is RespondEventDataTeamsInner &&
         id == other.id &&
-        createdBy == other.createdBy &&
-        updatedBy == other.updatedBy &&
-        created == other.created &&
-        updated == other.updated &&
-        deleted == other.deleted &&
         recordStatus == other.recordStatus &&
         fullname == other.fullname &&
         mobilePhone == other.mobilePhone &&
@@ -94,11 +95,6 @@ class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, createdBy.hashCode);
-    _$hash = $jc(_$hash, updatedBy.hashCode);
-    _$hash = $jc(_$hash, created.hashCode);
-    _$hash = $jc(_$hash, updated.hashCode);
-    _$hash = $jc(_$hash, deleted.hashCode);
     _$hash = $jc(_$hash, recordStatus.hashCode);
     _$hash = $jc(_$hash, fullname.hashCode);
     _$hash = $jc(_$hash, mobilePhone.hashCode);
@@ -116,11 +112,6 @@ class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
   String toString() {
     return (newBuiltValueToStringHelper(r'RespondEventDataTeamsInner')
           ..add('id', id)
-          ..add('createdBy', createdBy)
-          ..add('updatedBy', updatedBy)
-          ..add('created', created)
-          ..add('updated', updated)
-          ..add('deleted', deleted)
           ..add('recordStatus', recordStatus)
           ..add('fullname', fullname)
           ..add('mobilePhone', mobilePhone)
@@ -142,26 +133,6 @@ class RespondEventDataTeamsInnerBuilder
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
-
-  String? _createdBy;
-  String? get createdBy => _$this._createdBy;
-  set createdBy(String? createdBy) => _$this._createdBy = createdBy;
-
-  String? _updatedBy;
-  String? get updatedBy => _$this._updatedBy;
-  set updatedBy(String? updatedBy) => _$this._updatedBy = updatedBy;
-
-  String? _created;
-  String? get created => _$this._created;
-  set created(String? created) => _$this._created = created;
-
-  String? _updated;
-  String? get updated => _$this._updated;
-  set updated(String? updated) => _$this._updated = updated;
-
-  num? _deleted;
-  num? get deleted => _$this._deleted;
-  set deleted(num? deleted) => _$this._deleted = deleted;
 
   String? _recordStatus;
   String? get recordStatus => _$this._recordStatus;
@@ -208,11 +179,6 @@ class RespondEventDataTeamsInnerBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _createdBy = $v.createdBy;
-      _updatedBy = $v.updatedBy;
-      _created = $v.created;
-      _updated = $v.updated;
-      _deleted = $v.deleted;
       _recordStatus = $v.recordStatus;
       _fullname = $v.fullname;
       _mobilePhone = $v.mobilePhone;
@@ -221,7 +187,7 @@ class RespondEventDataTeamsInnerBuilder
       _photo = $v.photo;
       _gender = $v.gender;
       _placeofBirth = $v.placeofBirth;
-      _role = $v.role?.toBuilder();
+      _role = $v.role.toBuilder();
       _$v = null;
     }
     return this;
@@ -246,26 +212,29 @@ class RespondEventDataTeamsInnerBuilder
     try {
       _$result = _$v ??
           new _$RespondEventDataTeamsInner._(
-              id: id,
-              createdBy: createdBy,
-              updatedBy: updatedBy,
-              created: created,
-              updated: updated,
-              deleted: deleted,
-              recordStatus: recordStatus,
-              fullname: fullname,
-              mobilePhone: mobilePhone,
-              email: email,
-              city: city,
-              photo: photo,
-              gender: gender,
-              placeofBirth: placeofBirth,
-              role: _role?.build());
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondEventDataTeamsInner', 'id'),
+              recordStatus: BuiltValueNullFieldError.checkNotNull(
+                  recordStatus, r'RespondEventDataTeamsInner', 'recordStatus'),
+              fullname: BuiltValueNullFieldError.checkNotNull(
+                  fullname, r'RespondEventDataTeamsInner', 'fullname'),
+              mobilePhone: BuiltValueNullFieldError.checkNotNull(
+                  mobilePhone, r'RespondEventDataTeamsInner', 'mobilePhone'),
+              email: BuiltValueNullFieldError.checkNotNull(
+                  email, r'RespondEventDataTeamsInner', 'email'),
+              city: BuiltValueNullFieldError.checkNotNull(
+                  city, r'RespondEventDataTeamsInner', 'city'),
+              photo: BuiltValueNullFieldError.checkNotNull(
+                  photo, r'RespondEventDataTeamsInner', 'photo'),
+              gender: BuiltValueNullFieldError.checkNotNull(
+                  gender, r'RespondEventDataTeamsInner', 'gender'),
+              placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondEventDataTeamsInner', 'placeofBirth'),
+              role: role.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'role';
-        _role?.build();
+        role.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondEventDataTeamsInner', _$failedField, e.toString());

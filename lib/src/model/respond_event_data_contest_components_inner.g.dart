@@ -9,27 +9,27 @@ part of 'respond_event_data_contest_components_inner.dart';
 class _$RespondEventDataContestComponentsInner
     extends RespondEventDataContestComponentsInner {
   @override
-  final String? id;
+  final String id;
   @override
   final RespondEventDataContestComponentsInnerNomination? nomination;
   @override
-  final num? head;
+  final num head;
   @override
-  final num? body;
+  final num body;
   @override
-  final num? colour;
+  final num colour;
   @override
-  final num? fantail;
+  final num fantail;
   @override
-  final num? face;
+  final num face;
   @override
-  final num? pearly;
+  final num pearly;
   @override
-  final num? marking;
+  final num marking;
   @override
-  final num? overall;
+  final num overall;
   @override
-  final RespondEventDataTeamsInner? judge;
+  final RespondEventDataContestComponentsInnerJudge judge;
 
   factory _$RespondEventDataContestComponentsInner(
           [void Function(RespondEventDataContestComponentsInnerBuilder)?
@@ -38,18 +38,39 @@ class _$RespondEventDataContestComponentsInner
           ._build();
 
   _$RespondEventDataContestComponentsInner._(
-      {this.id,
+      {required this.id,
       this.nomination,
-      this.head,
-      this.body,
-      this.colour,
-      this.fantail,
-      this.face,
-      this.pearly,
-      this.marking,
-      this.overall,
-      this.judge})
-      : super._();
+      required this.head,
+      required this.body,
+      required this.colour,
+      required this.fantail,
+      required this.face,
+      required this.pearly,
+      required this.marking,
+      required this.overall,
+      required this.judge})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'RespondEventDataContestComponentsInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        head, r'RespondEventDataContestComponentsInner', 'head');
+    BuiltValueNullFieldError.checkNotNull(
+        body, r'RespondEventDataContestComponentsInner', 'body');
+    BuiltValueNullFieldError.checkNotNull(
+        colour, r'RespondEventDataContestComponentsInner', 'colour');
+    BuiltValueNullFieldError.checkNotNull(
+        fantail, r'RespondEventDataContestComponentsInner', 'fantail');
+    BuiltValueNullFieldError.checkNotNull(
+        face, r'RespondEventDataContestComponentsInner', 'face');
+    BuiltValueNullFieldError.checkNotNull(
+        pearly, r'RespondEventDataContestComponentsInner', 'pearly');
+    BuiltValueNullFieldError.checkNotNull(
+        marking, r'RespondEventDataContestComponentsInner', 'marking');
+    BuiltValueNullFieldError.checkNotNull(
+        overall, r'RespondEventDataContestComponentsInner', 'overall');
+    BuiltValueNullFieldError.checkNotNull(
+        judge, r'RespondEventDataContestComponentsInner', 'judge');
+  }
 
   @override
   RespondEventDataContestComponentsInner rebuild(
@@ -166,10 +187,12 @@ class RespondEventDataContestComponentsInnerBuilder
   num? get overall => _$this._overall;
   set overall(num? overall) => _$this._overall = overall;
 
-  RespondEventDataTeamsInnerBuilder? _judge;
-  RespondEventDataTeamsInnerBuilder get judge =>
-      _$this._judge ??= new RespondEventDataTeamsInnerBuilder();
-  set judge(RespondEventDataTeamsInnerBuilder? judge) => _$this._judge = judge;
+  RespondEventDataContestComponentsInnerJudgeBuilder? _judge;
+  RespondEventDataContestComponentsInnerJudgeBuilder get judge =>
+      _$this._judge ??=
+          new RespondEventDataContestComponentsInnerJudgeBuilder();
+  set judge(RespondEventDataContestComponentsInnerJudgeBuilder? judge) =>
+      _$this._judge = judge;
 
   RespondEventDataContestComponentsInnerBuilder() {
     RespondEventDataContestComponentsInner._defaults(this);
@@ -188,7 +211,7 @@ class RespondEventDataContestComponentsInnerBuilder
       _pearly = $v.pearly;
       _marking = $v.marking;
       _overall = $v.overall;
-      _judge = $v.judge?.toBuilder();
+      _judge = $v.judge.toBuilder();
       _$v = null;
     }
     return this;
@@ -214,17 +237,25 @@ class RespondEventDataContestComponentsInnerBuilder
     try {
       _$result = _$v ??
           new _$RespondEventDataContestComponentsInner._(
-              id: id,
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondEventDataContestComponentsInner', 'id'),
               nomination: _nomination?.build(),
-              head: head,
-              body: body,
-              colour: colour,
-              fantail: fantail,
-              face: face,
-              pearly: pearly,
-              marking: marking,
-              overall: overall,
-              judge: _judge?.build());
+              head: BuiltValueNullFieldError.checkNotNull(
+                  head, r'RespondEventDataContestComponentsInner', 'head'),
+              body: BuiltValueNullFieldError.checkNotNull(
+                  body, r'RespondEventDataContestComponentsInner', 'body'),
+              colour: BuiltValueNullFieldError.checkNotNull(
+                  colour, r'RespondEventDataContestComponentsInner', 'colour'),
+              fantail: BuiltValueNullFieldError.checkNotNull(
+                  fantail, r'RespondEventDataContestComponentsInner', 'fantail'),
+              face: BuiltValueNullFieldError.checkNotNull(
+                  face, r'RespondEventDataContestComponentsInner', 'face'),
+              pearly: BuiltValueNullFieldError.checkNotNull(
+                  pearly, r'RespondEventDataContestComponentsInner', 'pearly'),
+              marking: BuiltValueNullFieldError.checkNotNull(
+                  marking, r'RespondEventDataContestComponentsInner', 'marking'),
+              overall: BuiltValueNullFieldError.checkNotNull(overall, r'RespondEventDataContestComponentsInner', 'overall'),
+              judge: judge.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -232,7 +263,7 @@ class RespondEventDataContestComponentsInnerBuilder
         _nomination?.build();
 
         _$failedField = 'judge';
-        _judge?.build();
+        judge.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondEventDataContestComponentsInner',

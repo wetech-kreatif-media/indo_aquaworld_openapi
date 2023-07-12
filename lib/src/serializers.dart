@@ -35,6 +35,7 @@ import 'package:openapi/src/model/respond_contestan_nominations_data_content_inn
 import 'package:openapi/src/model/respond_event.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
 import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_event_data_teams_inner_role.dart';
@@ -58,6 +59,9 @@ import 'package:openapi/src/model/respond_roles.dart';
 import 'package:openapi/src/model/respond_roles_data.dart';
 import 'package:openapi/src/model/respond_roles_data_content_inner.dart';
 import 'package:openapi/src/model/respond_success_login.dart';
+import 'package:openapi/src/model/respond_success_login_data.dart';
+import 'package:openapi/src/model/respond_success_login_data_role.dart';
+import 'package:openapi/src/model/respond_success_login_data_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_team.dart';
 import 'package:openapi/src/model/respond_teams.dart';
 import 'package:openapi/src/model/respond_teams_data.dart';
@@ -91,6 +95,7 @@ part 'serializers.g.dart';
   RespondEvent,
   RespondEventData,
   RespondEventDataContestComponentsInner,
+  RespondEventDataContestComponentsInnerJudge,
   RespondEventDataContestComponentsInnerNomination,
   RespondEventDataTeamsInner,
   RespondEventDataTeamsInnerRole,
@@ -114,6 +119,9 @@ part 'serializers.g.dart';
   RespondRolesData,
   RespondRolesDataContentInner,
   RespondSuccessLogin,
+  RespondSuccessLoginData,
+  RespondSuccessLoginDataRole,
+  RespondSuccessLoginDataRolePermissionsInner,
   RespondTeam,
   RespondTeams,
   RespondTeamsData,

@@ -38,6 +38,7 @@ export 'package:openapi/src/model/respond_contestan_nominations_data_content_inn
 export 'package:openapi/src/model/respond_event.dart';
 export 'package:openapi/src/model/respond_event_data.dart';
 export 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
+export 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 export 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
 export 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 export 'package:openapi/src/model/respond_event_data_teams_inner_role.dart';
@@ -61,6 +62,9 @@ export 'package:openapi/src/model/respond_roles.dart';
 export 'package:openapi/src/model/respond_roles_data.dart';
 export 'package:openapi/src/model/respond_roles_data_content_inner.dart';
 export 'package:openapi/src/model/respond_success_login.dart';
+export 'package:openapi/src/model/respond_success_login_data.dart';
+export 'package:openapi/src/model/respond_success_login_data_role.dart';
+export 'package:openapi/src/model/respond_success_login_data_role_permissions_inner.dart';
 export 'package:openapi/src/model/respond_team.dart';
 export 'package:openapi/src/model/respond_teams.dart';
 export 'package:openapi/src/model/respond_teams_data.dart';

@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -27,37 +27,37 @@ part 'respond_event_data_contest_components_inner.g.dart';
 @BuiltValue()
 abstract class RespondEventDataContestComponentsInner implements Built<RespondEventDataContestComponentsInner, RespondEventDataContestComponentsInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
 
   @BuiltValueField(wireName: r'nomination')
   RespondEventDataContestComponentsInnerNomination? get nomination;
 
   @BuiltValueField(wireName: r'head')
-  num? get head;
+  num get head;
 
   @BuiltValueField(wireName: r'body')
-  num? get body;
+  num get body;
 
   @BuiltValueField(wireName: r'colour')
-  num? get colour;
+  num get colour;
 
   @BuiltValueField(wireName: r'fantail')
-  num? get fantail;
+  num get fantail;
 
   @BuiltValueField(wireName: r'face')
-  num? get face;
+  num get face;
 
   @BuiltValueField(wireName: r'pearly')
-  num? get pearly;
+  num get pearly;
 
   @BuiltValueField(wireName: r'marking')
-  num? get marking;
+  num get marking;
 
   @BuiltValueField(wireName: r'overall')
-  num? get overall;
+  num get overall;
 
   @BuiltValueField(wireName: r'judge')
-  RespondEventDataTeamsInner? get judge;
+  RespondEventDataContestComponentsInnerJudge get judge;
 
   RespondEventDataContestComponentsInner._();
 
@@ -82,13 +82,11 @@ class _$RespondEventDataContestComponentsInnerSerializer implements PrimitiveSer
     RespondEventDataContestComponentsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
     if (object.nomination != null) {
       yield r'nomination';
       yield serializers.serialize(
@@ -96,69 +94,51 @@ class _$RespondEventDataContestComponentsInnerSerializer implements PrimitiveSer
         specifiedType: const FullType(RespondEventDataContestComponentsInnerNomination),
       );
     }
-    if (object.head != null) {
-      yield r'head';
-      yield serializers.serialize(
-        object.head,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.body != null) {
-      yield r'body';
-      yield serializers.serialize(
-        object.body,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.colour != null) {
-      yield r'colour';
-      yield serializers.serialize(
-        object.colour,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.fantail != null) {
-      yield r'fantail';
-      yield serializers.serialize(
-        object.fantail,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.face != null) {
-      yield r'face';
-      yield serializers.serialize(
-        object.face,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.pearly != null) {
-      yield r'pearly';
-      yield serializers.serialize(
-        object.pearly,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.marking != null) {
-      yield r'marking';
-      yield serializers.serialize(
-        object.marking,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.overall != null) {
-      yield r'overall';
-      yield serializers.serialize(
-        object.overall,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.judge != null) {
-      yield r'judge';
-      yield serializers.serialize(
-        object.judge,
-        specifiedType: const FullType(RespondEventDataTeamsInner),
-      );
-    }
+    yield r'head';
+    yield serializers.serialize(
+      object.head,
+      specifiedType: const FullType(num),
+    );
+    yield r'body';
+    yield serializers.serialize(
+      object.body,
+      specifiedType: const FullType(num),
+    );
+    yield r'colour';
+    yield serializers.serialize(
+      object.colour,
+      specifiedType: const FullType(num),
+    );
+    yield r'fantail';
+    yield serializers.serialize(
+      object.fantail,
+      specifiedType: const FullType(num),
+    );
+    yield r'face';
+    yield serializers.serialize(
+      object.face,
+      specifiedType: const FullType(num),
+    );
+    yield r'pearly';
+    yield serializers.serialize(
+      object.pearly,
+      specifiedType: const FullType(num),
+    );
+    yield r'marking';
+    yield serializers.serialize(
+      object.marking,
+      specifiedType: const FullType(num),
+    );
+    yield r'overall';
+    yield serializers.serialize(
+      object.overall,
+      specifiedType: const FullType(num),
+    );
+    yield r'judge';
+    yield serializers.serialize(
+      object.judge,
+      specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
+    );
   }
 
   @override
@@ -255,8 +235,8 @@ class _$RespondEventDataContestComponentsInnerSerializer implements PrimitiveSer
         case r'judge':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondEventDataTeamsInner),
-          ) as RespondEventDataTeamsInner;
+            specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
+          ) as RespondEventDataContestComponentsInnerJudge;
           result.judge.replace(valueDes);
           break;
         default:

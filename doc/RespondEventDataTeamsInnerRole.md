@@ -9,11 +9,6 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**createdBy** | **String** |  | [optional] 
-**updatedBy** | **String** |  | [optional] 
-**created** | **String** |  | [optional] 
-**updated** | **String** |  | [optional] 
-**deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **code** | **String** |  | [optional] 

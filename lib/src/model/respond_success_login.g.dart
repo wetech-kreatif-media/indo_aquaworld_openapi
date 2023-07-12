@@ -12,7 +12,7 @@ class _$RespondSuccessLogin extends RespondSuccessLogin {
   @override
   final String? responseMessage;
   @override
-  final RespondEventDataTeamsInner? data;
+  final RespondSuccessLoginData? data;
 
   factory _$RespondSuccessLogin(
           [void Function(RespondSuccessLoginBuilder)? updates]) =>
@@ -72,10 +72,10 @@ class RespondSuccessLoginBuilder
   set responseMessage(String? responseMessage) =>
       _$this._responseMessage = responseMessage;
 
-  RespondEventDataTeamsInnerBuilder? _data;
-  RespondEventDataTeamsInnerBuilder get data =>
-      _$this._data ??= new RespondEventDataTeamsInnerBuilder();
-  set data(RespondEventDataTeamsInnerBuilder? data) => _$this._data = data;
+  RespondSuccessLoginDataBuilder? _data;
+  RespondSuccessLoginDataBuilder get data =>
+      _$this._data ??= new RespondSuccessLoginDataBuilder();
+  set data(RespondSuccessLoginDataBuilder? data) => _$this._data = data;
 
   RespondSuccessLoginBuilder() {
     RespondSuccessLogin._defaults(this);

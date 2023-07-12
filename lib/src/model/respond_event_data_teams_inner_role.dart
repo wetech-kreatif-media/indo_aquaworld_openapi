@@ -14,11 +14,6 @@ part 'respond_event_data_teams_inner_role.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [createdBy] 
-/// * [updatedBy] 
-/// * [created] 
-/// * [updated] 
-/// * [deleted] 
 /// * [recordStatus] 
 /// * [name] 
 /// * [code] 
@@ -27,21 +22,6 @@ part 'respond_event_data_teams_inner_role.g.dart';
 abstract class RespondEventDataTeamsInnerRole implements Built<RespondEventDataTeamsInnerRole, RespondEventDataTeamsInnerRoleBuilder> {
   @BuiltValueField(wireName: r'id')
   String? get id;
-
-  @BuiltValueField(wireName: r'createdBy')
-  String? get createdBy;
-
-  @BuiltValueField(wireName: r'updatedBy')
-  String? get updatedBy;
-
-  @BuiltValueField(wireName: r'created')
-  String? get created;
-
-  @BuiltValueField(wireName: r'updated')
-  String? get updated;
-
-  @BuiltValueField(wireName: r'deleted')
-  num? get deleted;
 
   @BuiltValueField(wireName: r'recordStatus')
   String? get recordStatus;
@@ -83,41 +63,6 @@ class _$RespondEventDataTeamsInnerRoleSerializer implements PrimitiveSerializer<
       yield serializers.serialize(
         object.id,
         specifiedType: const FullType(String),
-      );
-    }
-    if (object.createdBy != null) {
-      yield r'createdBy';
-      yield serializers.serialize(
-        object.createdBy,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updatedBy != null) {
-      yield r'updatedBy';
-      yield serializers.serialize(
-        object.updatedBy,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.created != null) {
-      yield r'created';
-      yield serializers.serialize(
-        object.created,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updated != null) {
-      yield r'updated';
-      yield serializers.serialize(
-        object.updated,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.deleted != null) {
-      yield r'deleted';
-      yield serializers.serialize(
-        object.deleted,
-        specifiedType: const FullType(num),
       );
     }
     if (object.recordStatus != null) {
@@ -177,41 +122,6 @@ class _$RespondEventDataTeamsInnerRoleSerializer implements PrimitiveSerializer<
             specifiedType: const FullType(String),
           ) as String;
           result.id = valueDes;
-          break;
-        case r'createdBy':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.createdBy = valueDes;
-          break;
-        case r'updatedBy':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.updatedBy = valueDes;
-          break;
-        case r'created':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.created = valueDes;
-          break;
-        case r'updated':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.updated = valueDes;
-          break;
-        case r'deleted':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(num),
-          ) as num;
-          result.deleted = valueDes;
           break;
         case r'recordStatus':
           final valueDes = serializers.deserialize(
