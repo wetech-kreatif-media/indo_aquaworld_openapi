@@ -54,6 +54,7 @@ export 'package:openapi/src/model/respond_success_login.dart';
 export 'package:openapi/src/model/respond_success_login_data.dart';
 export 'package:openapi/src/model/respond_success_login_data_role.dart';
 export 'package:openapi/src/model/respond_success_login_data_role_permissions_inner.dart';
+export 'package:openapi/src/model/respond_team.dart';
 export 'package:openapi/src/model/respond_teams.dart';
 export 'package:openapi/src/model/respond_teams_data.dart';
 export 'package:openapi/src/model/respond_teams_data_content_inner.dart';

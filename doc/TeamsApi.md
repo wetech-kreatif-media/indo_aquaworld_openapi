@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeam**
-> RespondGlobal getTeam(teamId)
+> RespondTeam getTeam(teamId)
 
 Get Team
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RespondGlobal**](RespondGlobal.md)
+[**RespondTeam**](RespondTeam.md)
 
 ### Authorization
 

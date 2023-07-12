@@ -9,6 +9,7 @@ import 'package:dio/dio.dart';
 
 import 'package:openapi/src/model/request_team.dart';
 import 'package:openapi/src/model/respond_global.dart';
+import 'package:openapi/src/model/respond_team.dart';
 import 'package:openapi/src/model/respond_teams.dart';
 
 class TeamsApi {
@@ -126,9 +127,9 @@ class TeamsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
+  /// Returns a [Future] containing a [Response] with a [RespondTeam] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondGlobal>> getTeam({ 
+  Future<Response<RespondTeam>> getTeam({ 
     required String teamId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -158,14 +159,14 @@ class TeamsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RespondGlobal? _responseData;
+    RespondTeam? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RespondGlobal),
-      ) as RespondGlobal;
+        specifiedType: const FullType(RespondTeam),
+      ) as RespondTeam;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -177,7 +178,7 @@ class TeamsApi {
       );
     }
 
-    return Response<RespondGlobal>(
+    return Response<RespondTeam>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
