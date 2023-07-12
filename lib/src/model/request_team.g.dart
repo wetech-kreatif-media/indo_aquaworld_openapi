@@ -8,17 +8,16 @@ part of 'request_team.dart';
 
 class _$RequestTeam extends RequestTeam {
   @override
-  final String? responseCode;
+  final String? name;
   @override
-  final String? responseMessage;
+  final String? region;
   @override
-  final RespondTeamsData? data;
+  final String? address;
 
   factory _$RequestTeam([void Function(RequestTeamBuilder)? updates]) =>
       (new RequestTeamBuilder()..update(updates))._build();
 
-  _$RequestTeam._({this.responseCode, this.responseMessage, this.data})
-      : super._();
+  _$RequestTeam._({this.name, this.region, this.address}) : super._();
 
   @override
   RequestTeam rebuild(void Function(RequestTeamBuilder) updates) =>
@@ -31,17 +30,17 @@ class _$RequestTeam extends RequestTeam {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RequestTeam &&
-        responseCode == other.responseCode &&
-        responseMessage == other.responseMessage &&
-        data == other.data;
+        name == other.name &&
+        region == other.region &&
+        address == other.address;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, responseCode.hashCode);
-    _$hash = $jc(_$hash, responseMessage.hashCode);
-    _$hash = $jc(_$hash, data.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, region.hashCode);
+    _$hash = $jc(_$hash, address.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -49,9 +48,9 @@ class _$RequestTeam extends RequestTeam {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestTeam')
-          ..add('responseCode', responseCode)
-          ..add('responseMessage', responseMessage)
-          ..add('data', data))
+          ..add('name', name)
+          ..add('region', region)
+          ..add('address', address))
         .toString();
   }
 }
@@ -59,19 +58,17 @@ class _$RequestTeam extends RequestTeam {
 class RequestTeamBuilder implements Builder<RequestTeam, RequestTeamBuilder> {
   _$RequestTeam? _$v;
 
-  String? _responseCode;
-  String? get responseCode => _$this._responseCode;
-  set responseCode(String? responseCode) => _$this._responseCode = responseCode;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  String? _responseMessage;
-  String? get responseMessage => _$this._responseMessage;
-  set responseMessage(String? responseMessage) =>
-      _$this._responseMessage = responseMessage;
+  String? _region;
+  String? get region => _$this._region;
+  set region(String? region) => _$this._region = region;
 
-  RespondTeamsDataBuilder? _data;
-  RespondTeamsDataBuilder get data =>
-      _$this._data ??= new RespondTeamsDataBuilder();
-  set data(RespondTeamsDataBuilder? data) => _$this._data = data;
+  String? _address;
+  String? get address => _$this._address;
+  set address(String? address) => _$this._address = address;
 
   RequestTeamBuilder() {
     RequestTeam._defaults(this);
@@ -80,9 +77,9 @@ class RequestTeamBuilder implements Builder<RequestTeam, RequestTeamBuilder> {
   RequestTeamBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _responseCode = $v.responseCode;
-      _responseMessage = $v.responseMessage;
-      _data = $v.data?.toBuilder();
+      _name = $v.name;
+      _region = $v.region;
+      _address = $v.address;
       _$v = null;
     }
     return this;
@@ -103,24 +100,8 @@ class RequestTeamBuilder implements Builder<RequestTeam, RequestTeamBuilder> {
   RequestTeam build() => _build();
 
   _$RequestTeam _build() {
-    _$RequestTeam _$result;
-    try {
-      _$result = _$v ??
-          new _$RequestTeam._(
-              responseCode: responseCode,
-              responseMessage: responseMessage,
-              data: _data?.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'data';
-        _data?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'RequestTeam', _$failedField, e.toString());
-      }
-      rethrow;
-    }
+    final _$result = _$v ??
+        new _$RequestTeam._(name: name, region: region, address: address);
     replace(_$result);
     return _$result;
   }

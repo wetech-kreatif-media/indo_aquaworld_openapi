@@ -3,7 +3,6 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_teams_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,19 +11,19 @@ part 'request_team.g.dart';
 /// RequestTeam
 ///
 /// Properties:
-/// * [responseCode] 
-/// * [responseMessage] 
-/// * [data] 
+/// * [name] 
+/// * [region] 
+/// * [address] 
 @BuiltValue()
 abstract class RequestTeam implements Built<RequestTeam, RequestTeamBuilder> {
-  @BuiltValueField(wireName: r'responseCode')
-  String? get responseCode;
+  @BuiltValueField(wireName: r'name')
+  String? get name;
 
-  @BuiltValueField(wireName: r'responseMessage')
-  String? get responseMessage;
+  @BuiltValueField(wireName: r'region')
+  String? get region;
 
-  @BuiltValueField(wireName: r'data')
-  RespondTeamsData? get data;
+  @BuiltValueField(wireName: r'address')
+  String? get address;
 
   RequestTeam._();
 
@@ -49,25 +48,25 @@ class _$RequestTeamSerializer implements PrimitiveSerializer<RequestTeam> {
     RequestTeam object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.responseCode != null) {
-      yield r'responseCode';
+    if (object.name != null) {
+      yield r'name';
       yield serializers.serialize(
-        object.responseCode,
+        object.name,
         specifiedType: const FullType(String),
       );
     }
-    if (object.responseMessage != null) {
-      yield r'responseMessage';
+    if (object.region != null) {
+      yield r'region';
       yield serializers.serialize(
-        object.responseMessage,
+        object.region,
         specifiedType: const FullType(String),
       );
     }
-    if (object.data != null) {
-      yield r'data';
+    if (object.address != null) {
+      yield r'address';
       yield serializers.serialize(
-        object.data,
-        specifiedType: const FullType(RespondTeamsData),
+        object.address,
+        specifiedType: const FullType(String),
       );
     }
   }
@@ -93,26 +92,26 @@ class _$RequestTeamSerializer implements PrimitiveSerializer<RequestTeam> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'responseCode':
+        case r'name':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.responseCode = valueDes;
+          result.name = valueDes;
           break;
-        case r'responseMessage':
+        case r'region':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.responseMessage = valueDes;
+          result.region = valueDes;
           break;
-        case r'data':
+        case r'address':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondTeamsData),
-          ) as RespondTeamsData;
-          result.data.replace(valueDes);
+            specifiedType: const FullType(String),
+          ) as String;
+          result.address = valueDes;
           break;
         default:
           unhandled.add(key);
