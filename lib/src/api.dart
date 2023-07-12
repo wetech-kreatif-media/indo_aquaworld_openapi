@@ -13,6 +13,7 @@ import 'package:openapi/src/api/events_api.dart';
 import 'package:openapi/src/api/location_api.dart';
 import 'package:openapi/src/api/permission_api.dart';
 import 'package:openapi/src/api/role_api.dart';
+import 'package:openapi/src/api/teams_api.dart';
 import 'package:openapi/src/api/users_api.dart';
 
 class Openapi {
@@ -91,6 +92,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   RoleApi getRoleApi() {
     return RoleApi(dio, serializers);
+  }
+
+  /// Get TeamsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  TeamsApi getTeamsApi() {
+    return TeamsApi(dio, serializers);
   }
 
   /// Get UsersApi instance, base route and serializer can be overridden by a given but be careful,

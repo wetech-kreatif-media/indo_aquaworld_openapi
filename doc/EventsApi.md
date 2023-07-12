@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**getEventNominations**](EventsApi.md#geteventnominations) | **GET** /public/event-nomination/{eventId} | Get Event Nominations
 [**getEventNominationsContestans**](EventsApi.md#geteventnominationscontestans) | **GET** /public/event/{eventId}/contestan-nomination/{nominasiId} | Get Event Nomination Contestans
 [**getEvents**](EventsApi.md#getevents) | **GET** /public/events | Get Events
+[**putEvent**](EventsApi.md#putevent) | **PUT** /public/event/{eventId} | Update Event
 
 
 # **createEvent**
@@ -237,6 +238,51 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putEvent**
+> RespondGlobal putEvent(eventId, requestEvent)
+
+Update Event
+
+UPdate data event. / lomba
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getEventsApi();
+final String eventId = eventId_example; // String | 
+final RequestEvent requestEvent = {"name":"Event Lohaan","startDate":"2023-06-23","endDate":"2023-07-11","description":"Kofdgsdfgntes untuk ikan lohan","contestComponents":[{"nomination":"42095eec-e9e8-4e23-b07e-d1d82063fc14","head":10,"body":5,"colour":7,"fantail":8,"face":10,"pearly":5,"marking":3,"overall":2,"judge":{"id":"108573e1-d446-439c-89ee-2aa1506e03ca"}},{"nomination":"283267b4-3f62-4936-9dae-756fb6bc82a4","head":10,"body":5,"colour":7,"fantail":8,"face":10,"pearly":5,"marking":3,"overall":2,"judge":{"id":"108573e1-d446-439c-89ee-2aa1506e03ca"}}],"location":"12c6bbc4-888b-4393-a718-b438472358df","teams":[{"id":"50432068-c66c-4810-8cf6-367c86f9284d"},{"id":"01e23a3e-1f57-4a3e-86e8-93c210ed9dad"}],"statusPublish":"DRAFT","statusEvent":"COMING_SOON"}; // RequestEvent | 
+
+try {
+    final response = api.putEvent(eventId, requestEvent);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling EventsApi->putEvent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventId** | **String**|  | 
+ **requestEvent** | [**RequestEvent**](RequestEvent.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

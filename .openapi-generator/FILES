@@ -17,6 +17,7 @@ doc/RequestRegistrasi.md
 doc/RequestRole.md
 doc/RequestRolePermissionsInner.md
 doc/RequestSendOtp.md
+doc/RequestTeam.md
 doc/RespondEvent.md
 doc/RespondEventData.md
 doc/RespondEventNominations.md
@@ -41,11 +42,15 @@ doc/RespondSuccessLogin.md
 doc/RespondSuccessLoginData.md
 doc/RespondSuccessLoginDataRole.md
 doc/RespondSuccessLoginDataRolePermissionsInner.md
+doc/RespondTeams.md
+doc/RespondTeamsData.md
+doc/RespondTeamsDataContentInner.md
 doc/RespondUsers.md
 doc/RespondUsersData.md
 doc/RespondUsersDataContentInner.md
 doc/RespondUsersDataContentInnerRole.md
 doc/RoleApi.md
+doc/TeamsApi.md
 doc/UsersApi.md
 lib/openapi.dart
 lib/src/api.dart
@@ -53,6 +58,7 @@ lib/src/api/events_api.dart
 lib/src/api/location_api.dart
 lib/src/api/permission_api.dart
 lib/src/api/role_api.dart
+lib/src/api/teams_api.dart
 lib/src/api/users_api.dart
 lib/src/api_util.dart
 lib/src/auth/api_key_auth.dart
@@ -75,6 +81,7 @@ lib/src/model/request_registrasi.dart
 lib/src/model/request_role.dart
 lib/src/model/request_role_permissions_inner.dart
 lib/src/model/request_send_otp.dart
+lib/src/model/request_team.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
 lib/src/model/respond_event_nominations.dart
@@ -99,9 +106,17 @@ lib/src/model/respond_success_login.dart
 lib/src/model/respond_success_login_data.dart
 lib/src/model/respond_success_login_data_role.dart
 lib/src/model/respond_success_login_data_role_permissions_inner.dart
+lib/src/model/respond_teams.dart
+lib/src/model/respond_teams_data.dart
+lib/src/model/respond_teams_data_content_inner.dart
 lib/src/model/respond_users.dart
 lib/src/model/respond_users_data.dart
 lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/request_team_test.dart
+test/respond_teams_data_content_inner_test.dart
+test/respond_teams_data_test.dart
+test/respond_teams_test.dart
+test/teams_api_test.dart
