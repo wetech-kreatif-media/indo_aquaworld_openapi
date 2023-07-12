@@ -25,6 +25,8 @@ class _$RespondEventData extends RespondEventData {
   final String? statusPublish;
   @override
   final String? statusEvent;
+  @override
+  final BuiltList<RespondEventDataContestComponentsInner>? contestComponents;
 
   factory _$RespondEventData(
           [void Function(RespondEventDataBuilder)? updates]) =>
@@ -39,7 +41,8 @@ class _$RespondEventData extends RespondEventData {
       this.location,
       this.teams,
       this.statusPublish,
-      this.statusEvent})
+      this.statusEvent,
+      this.contestComponents})
       : super._();
 
   @override
@@ -62,7 +65,8 @@ class _$RespondEventData extends RespondEventData {
         location == other.location &&
         teams == other.teams &&
         statusPublish == other.statusPublish &&
-        statusEvent == other.statusEvent;
+        statusEvent == other.statusEvent &&
+        contestComponents == other.contestComponents;
   }
 
   @override
@@ -77,6 +81,7 @@ class _$RespondEventData extends RespondEventData {
     _$hash = $jc(_$hash, teams.hashCode);
     _$hash = $jc(_$hash, statusPublish.hashCode);
     _$hash = $jc(_$hash, statusEvent.hashCode);
+    _$hash = $jc(_$hash, contestComponents.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -92,7 +97,8 @@ class _$RespondEventData extends RespondEventData {
           ..add('location', location)
           ..add('teams', teams)
           ..add('statusPublish', statusPublish)
-          ..add('statusEvent', statusEvent))
+          ..add('statusEvent', statusEvent)
+          ..add('contestComponents', contestComponents))
         .toString();
   }
 }
@@ -142,6 +148,15 @@ class RespondEventDataBuilder
   String? get statusEvent => _$this._statusEvent;
   set statusEvent(String? statusEvent) => _$this._statusEvent = statusEvent;
 
+  ListBuilder<RespondEventDataContestComponentsInner>? _contestComponents;
+  ListBuilder<RespondEventDataContestComponentsInner> get contestComponents =>
+      _$this._contestComponents ??=
+          new ListBuilder<RespondEventDataContestComponentsInner>();
+  set contestComponents(
+          ListBuilder<RespondEventDataContestComponentsInner>?
+              contestComponents) =>
+      _$this._contestComponents = contestComponents;
+
   RespondEventDataBuilder() {
     RespondEventData._defaults(this);
   }
@@ -158,6 +173,7 @@ class RespondEventDataBuilder
       _teams = $v.teams?.toBuilder();
       _statusPublish = $v.statusPublish;
       _statusEvent = $v.statusEvent;
+      _contestComponents = $v.contestComponents?.toBuilder();
       _$v = null;
     }
     return this;
@@ -190,7 +206,8 @@ class RespondEventDataBuilder
               location: _location?.build(),
               teams: _teams?.build(),
               statusPublish: statusPublish,
-              statusEvent: statusEvent);
+              statusEvent: statusEvent,
+              contestComponents: _contestComponents?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -198,6 +215,9 @@ class RespondEventDataBuilder
         _location?.build();
         _$failedField = 'teams';
         _teams?.build();
+
+        _$failedField = 'contestComponents';
+        _contestComponents?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondEventData', _$failedField, e.toString());

@@ -5,6 +5,7 @@ doc/EventsApi.md
 doc/LocationApi.md
 doc/PermissionApi.md
 doc/RequestChangePassword.md
+doc/RequestContestanNomination.md
 doc/RequestEvent.md
 doc/RequestEventContestComponentsInner.md
 doc/RequestEventContestComponentsInnerJudge.md
@@ -18,8 +19,14 @@ doc/RequestRole.md
 doc/RequestRolePermissionsInner.md
 doc/RequestSendOtp.md
 doc/RequestTeam.md
+doc/RespondContestanNominations.md
+doc/RespondContestanNominationsData.md
+doc/RespondContestanNominationsDataContentInner.md
 doc/RespondEvent.md
 doc/RespondEventData.md
+doc/RespondEventDataContestComponentsInner.md
+doc/RespondEventDataContestComponentsInnerContestEvent.md
+doc/RespondEventDataContestComponentsInnerJudge.md
 doc/RespondEventNominations.md
 doc/RespondEventNominationsDataInner.md
 doc/RespondEvents.md
@@ -70,6 +77,7 @@ lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
 lib/src/model/request_change_password.dart
+lib/src/model/request_contestan_nomination.dart
 lib/src/model/request_event.dart
 lib/src/model/request_event_contest_components_inner.dart
 lib/src/model/request_event_contest_components_inner_judge.dart
@@ -83,8 +91,14 @@ lib/src/model/request_role.dart
 lib/src/model/request_role_permissions_inner.dart
 lib/src/model/request_send_otp.dart
 lib/src/model/request_team.dart
+lib/src/model/respond_contestan_nominations.dart
+lib/src/model/respond_contestan_nominations_data.dart
+lib/src/model/respond_contestan_nominations_data_content_inner.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
+lib/src/model/respond_event_data_contest_components_inner.dart
+lib/src/model/respond_event_data_contest_components_inner_contest_event.dart
+lib/src/model/respond_event_data_contest_components_inner_judge.dart
 lib/src/model/respond_event_nominations.dart
 lib/src/model/respond_event_nominations_data_inner.dart
 lib/src/model/respond_events.dart
@@ -117,3 +131,10 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/request_contestan_nomination_test.dart
+test/respond_contestan_nominations_data_content_inner_test.dart
+test/respond_contestan_nominations_data_test.dart
+test/respond_contestan_nominations_test.dart
+test/respond_event_data_contest_components_inner_contest_event_test.dart
+test/respond_event_data_contest_components_inner_judge_test.dart
+test/respond_event_data_contest_components_inner_test.dart

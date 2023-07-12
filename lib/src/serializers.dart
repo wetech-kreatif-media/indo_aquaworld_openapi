@@ -15,6 +15,7 @@ import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/request_change_password.dart';
+import 'package:openapi/src/model/request_contestan_nomination.dart';
 import 'package:openapi/src/model/request_event.dart';
 import 'package:openapi/src/model/request_event_contest_components_inner.dart';
 import 'package:openapi/src/model/request_event_contest_components_inner_judge.dart';
@@ -28,8 +29,14 @@ import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/request_team.dart';
+import 'package:openapi/src/model/respond_contestan_nominations.dart';
+import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
+import 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
 import 'package:openapi/src/model/respond_event.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_contest_event.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:openapi/src/model/respond_event_nominations.dart';
 import 'package:openapi/src/model/respond_event_nominations_data_inner.dart';
 import 'package:openapi/src/model/respond_events.dart';
@@ -65,6 +72,7 @@ part 'serializers.g.dart';
 
 @SerializersFor([
   RequestChangePassword,
+  RequestContestanNomination,
   RequestEvent,
   RequestEventContestComponentsInner,
   RequestEventContestComponentsInnerJudge,
@@ -78,8 +86,14 @@ part 'serializers.g.dart';
   RequestRolePermissionsInner,
   RequestSendOtp,
   RequestTeam,
+  RespondContestanNominations,
+  RespondContestanNominationsData,
+  RespondContestanNominationsDataContentInner,
   RespondEvent,
   RespondEventData,
+  RespondEventDataContestComponentsInner,
+  RespondEventDataContestComponentsInnerContestEvent,
+  RespondEventDataContestComponentsInnerJudge,
   RespondEventNominations,
   RespondEventNominationsDataInner,
   RespondEvents,

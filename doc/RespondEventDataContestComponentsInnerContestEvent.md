@@ -1,4 +1,4 @@
-# openapi.model.RespondEventData
+# openapi.model.RespondEventDataContestComponentsInnerContestEvent
 
 ## Load the model package
 ```dart
@@ -9,15 +9,19 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
+**createdBy** | **String** |  | [optional] 
+**updatedBy** | **String** |  | [optional] 
+**created** | **String** |  | [optional] 
+**updated** | **String** |  | [optional] 
+**deleted** | **num** |  | [optional] 
+**recordStatus** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **startDate** | **String** |  | [optional] 
 **endDate** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **location** | [**RespondLocationData**](RespondLocationData.md) |  | [optional] 
-**teams** | [**BuiltList&lt;RespondUsersDataContentInner&gt;**](RespondUsersDataContentInner.md) |  | [optional] 
 **statusPublish** | **String** |  | [optional] 
 **statusEvent** | **String** |  | [optional] 
-**contestComponents** | [**BuiltList&lt;RespondEventDataContestComponentsInner&gt;**](RespondEventDataContestComponentsInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

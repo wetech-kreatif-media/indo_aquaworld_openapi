@@ -1,0 +1,364 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_contest_event.dart';
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part 'respond_event_data_contest_components_inner.g.dart';
+
+/// RespondEventDataContestComponentsInner
+///
+/// Properties:
+/// * [id] 
+/// * [createdBy] 
+/// * [updatedBy] 
+/// * [created] 
+/// * [updated] 
+/// * [deleted] 
+/// * [recordStatus] 
+/// * [contestEvent] 
+/// * [head] 
+/// * [body] 
+/// * [colour] 
+/// * [fantail] 
+/// * [face] 
+/// * [pearly] 
+/// * [marking] 
+/// * [overall] 
+/// * [judge] 
+@BuiltValue()
+abstract class RespondEventDataContestComponentsInner implements Built<RespondEventDataContestComponentsInner, RespondEventDataContestComponentsInnerBuilder> {
+  @BuiltValueField(wireName: r'id')
+  String get id;
+
+  @BuiltValueField(wireName: r'createdBy')
+  String get createdBy;
+
+  @BuiltValueField(wireName: r'updatedBy')
+  String get updatedBy;
+
+  @BuiltValueField(wireName: r'created')
+  String get created;
+
+  @BuiltValueField(wireName: r'updated')
+  String get updated;
+
+  @BuiltValueField(wireName: r'deleted')
+  num get deleted;
+
+  @BuiltValueField(wireName: r'recordStatus')
+  String get recordStatus;
+
+  @BuiltValueField(wireName: r'contestEvent')
+  RespondEventDataContestComponentsInnerContestEvent get contestEvent;
+
+  @BuiltValueField(wireName: r'head')
+  num get head;
+
+  @BuiltValueField(wireName: r'body')
+  num get body;
+
+  @BuiltValueField(wireName: r'colour')
+  num get colour;
+
+  @BuiltValueField(wireName: r'fantail')
+  num get fantail;
+
+  @BuiltValueField(wireName: r'face')
+  num get face;
+
+  @BuiltValueField(wireName: r'pearly')
+  num get pearly;
+
+  @BuiltValueField(wireName: r'marking')
+  num get marking;
+
+  @BuiltValueField(wireName: r'overall')
+  num get overall;
+
+  @BuiltValueField(wireName: r'judge')
+  RespondEventDataContestComponentsInnerJudge get judge;
+
+  RespondEventDataContestComponentsInner._();
+
+  factory RespondEventDataContestComponentsInner([void updates(RespondEventDataContestComponentsInnerBuilder b)]) = _$RespondEventDataContestComponentsInner;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(RespondEventDataContestComponentsInnerBuilder b) => b;
+
+  @BuiltValueSerializer(custom: true)
+  static Serializer<RespondEventDataContestComponentsInner> get serializer => _$RespondEventDataContestComponentsInnerSerializer();
+}
+
+class _$RespondEventDataContestComponentsInnerSerializer implements PrimitiveSerializer<RespondEventDataContestComponentsInner> {
+  @override
+  final Iterable<Type> types = const [RespondEventDataContestComponentsInner, _$RespondEventDataContestComponentsInner];
+
+  @override
+  final String wireName = r'RespondEventDataContestComponentsInner';
+
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    RespondEventDataContestComponentsInner object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
+    yield r'createdBy';
+    yield serializers.serialize(
+      object.createdBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'updatedBy';
+    yield serializers.serialize(
+      object.updatedBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'created';
+    yield serializers.serialize(
+      object.created,
+      specifiedType: const FullType(String),
+    );
+    yield r'updated';
+    yield serializers.serialize(
+      object.updated,
+      specifiedType: const FullType(String),
+    );
+    yield r'deleted';
+    yield serializers.serialize(
+      object.deleted,
+      specifiedType: const FullType(num),
+    );
+    yield r'recordStatus';
+    yield serializers.serialize(
+      object.recordStatus,
+      specifiedType: const FullType(String),
+    );
+    yield r'contestEvent';
+    yield serializers.serialize(
+      object.contestEvent,
+      specifiedType: const FullType(RespondEventDataContestComponentsInnerContestEvent),
+    );
+    yield r'head';
+    yield serializers.serialize(
+      object.head,
+      specifiedType: const FullType(num),
+    );
+    yield r'body';
+    yield serializers.serialize(
+      object.body,
+      specifiedType: const FullType(num),
+    );
+    yield r'colour';
+    yield serializers.serialize(
+      object.colour,
+      specifiedType: const FullType(num),
+    );
+    yield r'fantail';
+    yield serializers.serialize(
+      object.fantail,
+      specifiedType: const FullType(num),
+    );
+    yield r'face';
+    yield serializers.serialize(
+      object.face,
+      specifiedType: const FullType(num),
+    );
+    yield r'pearly';
+    yield serializers.serialize(
+      object.pearly,
+      specifiedType: const FullType(num),
+    );
+    yield r'marking';
+    yield serializers.serialize(
+      object.marking,
+      specifiedType: const FullType(num),
+    );
+    yield r'overall';
+    yield serializers.serialize(
+      object.overall,
+      specifiedType: const FullType(num),
+    );
+    yield r'judge';
+    yield serializers.serialize(
+      object.judge,
+      specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
+    );
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    RespondEventDataContestComponentsInner object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required RespondEventDataContestComponentsInnerBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.id = valueDes;
+          break;
+        case r'createdBy':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.createdBy = valueDes;
+          break;
+        case r'updatedBy':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.updatedBy = valueDes;
+          break;
+        case r'created':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.created = valueDes;
+          break;
+        case r'updated':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.updated = valueDes;
+          break;
+        case r'deleted':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.deleted = valueDes;
+          break;
+        case r'recordStatus':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.recordStatus = valueDes;
+          break;
+        case r'contestEvent':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RespondEventDataContestComponentsInnerContestEvent),
+          ) as RespondEventDataContestComponentsInnerContestEvent;
+          result.contestEvent.replace(valueDes);
+          break;
+        case r'head':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.head = valueDes;
+          break;
+        case r'body':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.body = valueDes;
+          break;
+        case r'colour':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.colour = valueDes;
+          break;
+        case r'fantail':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.fantail = valueDes;
+          break;
+        case r'face':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.face = valueDes;
+          break;
+        case r'pearly':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.pearly = valueDes;
+          break;
+        case r'marking':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.marking = valueDes;
+          break;
+        case r'overall':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.overall = valueDes;
+          break;
+        case r'judge':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
+          ) as RespondEventDataContestComponentsInnerJudge;
+          result.judge.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  RespondEventDataContestComponentsInner deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = RespondEventDataContestComponentsInnerBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
+}
+
