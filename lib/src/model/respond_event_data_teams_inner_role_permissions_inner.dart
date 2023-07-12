@@ -19,19 +19,19 @@ part 'respond_event_data_teams_inner_role_permissions_inner.g.dart';
 @BuiltValue()
 abstract class RespondEventDataTeamsInnerRolePermissionsInner implements Built<RespondEventDataTeamsInnerRolePermissionsInner, RespondEventDataTeamsInnerRolePermissionsInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'recordStatus')
-  String get recordStatus;
+  String? get recordStatus;
 
   @BuiltValueField(wireName: r'label')
-  String get label;
+  String? get label;
 
   @BuiltValueField(wireName: r'value')
-  String get value;
+  String? get value;
 
   @BuiltValueField(wireName: r'description')
-  String get description;
+  String? get description;
 
   RespondEventDataTeamsInnerRolePermissionsInner._();
 
@@ -56,31 +56,41 @@ class _$RespondEventDataTeamsInnerRolePermissionsInnerSerializer implements Prim
     RespondEventDataTeamsInnerRolePermissionsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'recordStatus';
-    yield serializers.serialize(
-      object.recordStatus,
-      specifiedType: const FullType(String),
-    );
-    yield r'label';
-    yield serializers.serialize(
-      object.label,
-      specifiedType: const FullType(String),
-    );
-    yield r'value';
-    yield serializers.serialize(
-      object.value,
-      specifiedType: const FullType(String),
-    );
-    yield r'description';
-    yield serializers.serialize(
-      object.description,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.recordStatus != null) {
+      yield r'recordStatus';
+      yield serializers.serialize(
+        object.recordStatus,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.label != null) {
+      yield r'label';
+      yield serializers.serialize(
+        object.label,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.value != null) {
+      yield r'value';
+      yield serializers.serialize(
+        object.value,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override

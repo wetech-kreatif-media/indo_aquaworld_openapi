@@ -9,15 +9,15 @@ part of 'respond_event_data_teams_inner_role_permissions_inner.dart';
 class _$RespondEventDataTeamsInnerRolePermissionsInner
     extends RespondEventDataTeamsInnerRolePermissionsInner {
   @override
-  final String id;
+  final String? id;
   @override
-  final String recordStatus;
+  final String? recordStatus;
   @override
-  final String label;
+  final String? label;
   @override
-  final String value;
+  final String? value;
   @override
-  final String description;
+  final String? description;
 
   factory _$RespondEventDataTeamsInnerRolePermissionsInner(
           [void Function(RespondEventDataTeamsInnerRolePermissionsInnerBuilder)?
@@ -27,23 +27,8 @@ class _$RespondEventDataTeamsInnerRolePermissionsInner
           ._build();
 
   _$RespondEventDataTeamsInnerRolePermissionsInner._(
-      {required this.id,
-      required this.recordStatus,
-      required this.label,
-      required this.value,
-      required this.description})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'RespondEventDataTeamsInnerRolePermissionsInner', 'id');
-    BuiltValueNullFieldError.checkNotNull(recordStatus,
-        r'RespondEventDataTeamsInnerRolePermissionsInner', 'recordStatus');
-    BuiltValueNullFieldError.checkNotNull(
-        label, r'RespondEventDataTeamsInnerRolePermissionsInner', 'label');
-    BuiltValueNullFieldError.checkNotNull(
-        value, r'RespondEventDataTeamsInnerRolePermissionsInner', 'value');
-    BuiltValueNullFieldError.checkNotNull(description,
-        r'RespondEventDataTeamsInnerRolePermissionsInner', 'description');
-  }
+      {this.id, this.recordStatus, this.label, this.value, this.description})
+      : super._();
 
   @override
   RespondEventDataTeamsInnerRolePermissionsInner rebuild(
@@ -154,20 +139,11 @@ class RespondEventDataTeamsInnerRolePermissionsInnerBuilder
   _$RespondEventDataTeamsInnerRolePermissionsInner _build() {
     final _$result = _$v ??
         new _$RespondEventDataTeamsInnerRolePermissionsInner._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'RespondEventDataTeamsInnerRolePermissionsInner', 'id'),
-            recordStatus: BuiltValueNullFieldError.checkNotNull(
-                recordStatus,
-                r'RespondEventDataTeamsInnerRolePermissionsInner',
-                'recordStatus'),
-            label: BuiltValueNullFieldError.checkNotNull(label,
-                r'RespondEventDataTeamsInnerRolePermissionsInner', 'label'),
-            value: BuiltValueNullFieldError.checkNotNull(value,
-                r'RespondEventDataTeamsInnerRolePermissionsInner', 'value'),
-            description: BuiltValueNullFieldError.checkNotNull(
-                description,
-                r'RespondEventDataTeamsInnerRolePermissionsInner',
-                'description'));
+            id: id,
+            recordStatus: recordStatus,
+            label: label,
+            value: value,
+            description: description);
     replace(_$result);
     return _$result;
   }

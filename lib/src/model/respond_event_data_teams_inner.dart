@@ -25,34 +25,34 @@ part 'respond_event_data_teams_inner.g.dart';
 @BuiltValue()
 abstract class RespondEventDataTeamsInner implements Built<RespondEventDataTeamsInner, RespondEventDataTeamsInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'recordStatus')
-  String get recordStatus;
+  String? get recordStatus;
 
   @BuiltValueField(wireName: r'fullname')
-  String get fullname;
+  String? get fullname;
 
   @BuiltValueField(wireName: r'mobilePhone')
-  String get mobilePhone;
+  String? get mobilePhone;
 
   @BuiltValueField(wireName: r'email')
-  String get email;
+  String? get email;
 
   @BuiltValueField(wireName: r'city')
-  String get city;
+  String? get city;
 
   @BuiltValueField(wireName: r'photo')
-  String get photo;
+  String? get photo;
 
   @BuiltValueField(wireName: r'gender')
-  String get gender;
+  String? get gender;
 
   @BuiltValueField(wireName: r'placeofBirth')
-  String get placeofBirth;
+  String? get placeofBirth;
 
   @BuiltValueField(wireName: r'role')
-  RespondEventDataTeamsInnerRole get role;
+  RespondEventDataTeamsInnerRole? get role;
 
   RespondEventDataTeamsInner._();
 
@@ -77,56 +77,76 @@ class _$RespondEventDataTeamsInnerSerializer implements PrimitiveSerializer<Resp
     RespondEventDataTeamsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'recordStatus';
-    yield serializers.serialize(
-      object.recordStatus,
-      specifiedType: const FullType(String),
-    );
-    yield r'fullname';
-    yield serializers.serialize(
-      object.fullname,
-      specifiedType: const FullType(String),
-    );
-    yield r'mobilePhone';
-    yield serializers.serialize(
-      object.mobilePhone,
-      specifiedType: const FullType(String),
-    );
-    yield r'email';
-    yield serializers.serialize(
-      object.email,
-      specifiedType: const FullType(String),
-    );
-    yield r'city';
-    yield serializers.serialize(
-      object.city,
-      specifiedType: const FullType(String),
-    );
-    yield r'photo';
-    yield serializers.serialize(
-      object.photo,
-      specifiedType: const FullType(String),
-    );
-    yield r'gender';
-    yield serializers.serialize(
-      object.gender,
-      specifiedType: const FullType(String),
-    );
-    yield r'placeofBirth';
-    yield serializers.serialize(
-      object.placeofBirth,
-      specifiedType: const FullType(String),
-    );
-    yield r'role';
-    yield serializers.serialize(
-      object.role,
-      specifiedType: const FullType(RespondEventDataTeamsInnerRole),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.recordStatus != null) {
+      yield r'recordStatus';
+      yield serializers.serialize(
+        object.recordStatus,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.fullname != null) {
+      yield r'fullname';
+      yield serializers.serialize(
+        object.fullname,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.mobilePhone != null) {
+      yield r'mobilePhone';
+      yield serializers.serialize(
+        object.mobilePhone,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.email != null) {
+      yield r'email';
+      yield serializers.serialize(
+        object.email,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.city != null) {
+      yield r'city';
+      yield serializers.serialize(
+        object.city,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.gender != null) {
+      yield r'gender';
+      yield serializers.serialize(
+        object.gender,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.placeofBirth != null) {
+      yield r'placeofBirth';
+      yield serializers.serialize(
+        object.placeofBirth,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.role != null) {
+      yield r'role';
+      yield serializers.serialize(
+        object.role,
+        specifiedType: const FullType(RespondEventDataTeamsInnerRole),
+      );
+    }
   }
 
   @override

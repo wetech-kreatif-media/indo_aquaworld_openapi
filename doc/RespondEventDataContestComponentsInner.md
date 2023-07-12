@@ -8,9 +8,9 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
+**id** | **String** |  | [optional] 
 **nomination** | [**RespondEventDataContestComponentsInnerNomination**](RespondEventDataContestComponentsInnerNomination.md) |  | [optional] 
-**head** | **num** |  | 
+**head** | **num** |  | [optional] 
 **body** | **num** |  | 
 **colour** | **num** |  | 
 **fantail** | **num** |  | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **pearly** | **num** |  | 
 **marking** | **num** |  | 
 **overall** | **num** |  | 
-**judge** | [**RespondEventDataContestComponentsInnerJudge**](RespondEventDataContestComponentsInnerJudge.md) |  | 
+**judge** | [**RespondEventDataContestComponentsInnerJudge**](RespondEventDataContestComponentsInnerJudge.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,63 +8,42 @@ part of 'respond_event_data_teams_inner.dart';
 
 class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
   @override
-  final String id;
+  final String? id;
   @override
-  final String recordStatus;
+  final String? recordStatus;
   @override
-  final String fullname;
+  final String? fullname;
   @override
-  final String mobilePhone;
+  final String? mobilePhone;
   @override
-  final String email;
+  final String? email;
   @override
-  final String city;
+  final String? city;
   @override
-  final String photo;
+  final String? photo;
   @override
-  final String gender;
+  final String? gender;
   @override
-  final String placeofBirth;
+  final String? placeofBirth;
   @override
-  final RespondEventDataTeamsInnerRole role;
+  final RespondEventDataTeamsInnerRole? role;
 
   factory _$RespondEventDataTeamsInner(
           [void Function(RespondEventDataTeamsInnerBuilder)? updates]) =>
       (new RespondEventDataTeamsInnerBuilder()..update(updates))._build();
 
   _$RespondEventDataTeamsInner._(
-      {required this.id,
-      required this.recordStatus,
-      required this.fullname,
-      required this.mobilePhone,
-      required this.email,
-      required this.city,
-      required this.photo,
-      required this.gender,
-      required this.placeofBirth,
-      required this.role})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'RespondEventDataTeamsInner', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        recordStatus, r'RespondEventDataTeamsInner', 'recordStatus');
-    BuiltValueNullFieldError.checkNotNull(
-        fullname, r'RespondEventDataTeamsInner', 'fullname');
-    BuiltValueNullFieldError.checkNotNull(
-        mobilePhone, r'RespondEventDataTeamsInner', 'mobilePhone');
-    BuiltValueNullFieldError.checkNotNull(
-        email, r'RespondEventDataTeamsInner', 'email');
-    BuiltValueNullFieldError.checkNotNull(
-        city, r'RespondEventDataTeamsInner', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        photo, r'RespondEventDataTeamsInner', 'photo');
-    BuiltValueNullFieldError.checkNotNull(
-        gender, r'RespondEventDataTeamsInner', 'gender');
-    BuiltValueNullFieldError.checkNotNull(
-        placeofBirth, r'RespondEventDataTeamsInner', 'placeofBirth');
-    BuiltValueNullFieldError.checkNotNull(
-        role, r'RespondEventDataTeamsInner', 'role');
-  }
+      {this.id,
+      this.recordStatus,
+      this.fullname,
+      this.mobilePhone,
+      this.email,
+      this.city,
+      this.photo,
+      this.gender,
+      this.placeofBirth,
+      this.role})
+      : super._();
 
   @override
   RespondEventDataTeamsInner rebuild(
@@ -187,7 +166,7 @@ class RespondEventDataTeamsInnerBuilder
       _photo = $v.photo;
       _gender = $v.gender;
       _placeofBirth = $v.placeofBirth;
-      _role = $v.role.toBuilder();
+      _role = $v.role?.toBuilder();
       _$v = null;
     }
     return this;
@@ -212,29 +191,21 @@ class RespondEventDataTeamsInnerBuilder
     try {
       _$result = _$v ??
           new _$RespondEventDataTeamsInner._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'RespondEventDataTeamsInner', 'id'),
-              recordStatus: BuiltValueNullFieldError.checkNotNull(
-                  recordStatus, r'RespondEventDataTeamsInner', 'recordStatus'),
-              fullname: BuiltValueNullFieldError.checkNotNull(
-                  fullname, r'RespondEventDataTeamsInner', 'fullname'),
-              mobilePhone: BuiltValueNullFieldError.checkNotNull(
-                  mobilePhone, r'RespondEventDataTeamsInner', 'mobilePhone'),
-              email: BuiltValueNullFieldError.checkNotNull(
-                  email, r'RespondEventDataTeamsInner', 'email'),
-              city: BuiltValueNullFieldError.checkNotNull(
-                  city, r'RespondEventDataTeamsInner', 'city'),
-              photo: BuiltValueNullFieldError.checkNotNull(
-                  photo, r'RespondEventDataTeamsInner', 'photo'),
-              gender: BuiltValueNullFieldError.checkNotNull(
-                  gender, r'RespondEventDataTeamsInner', 'gender'),
-              placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondEventDataTeamsInner', 'placeofBirth'),
-              role: role.build());
+              id: id,
+              recordStatus: recordStatus,
+              fullname: fullname,
+              mobilePhone: mobilePhone,
+              email: email,
+              city: city,
+              photo: photo,
+              gender: gender,
+              placeofBirth: placeofBirth,
+              role: _role?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'role';
-        role.build();
+        _role?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondEventDataTeamsInner', _$failedField, e.toString());
