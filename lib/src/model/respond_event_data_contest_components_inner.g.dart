@@ -9,39 +9,27 @@ part of 'respond_event_data_contest_components_inner.dart';
 class _$RespondEventDataContestComponentsInner
     extends RespondEventDataContestComponentsInner {
   @override
-  final String id;
+  final String? id;
   @override
-  final String createdBy;
+  final RespondEventDataContestComponentsInnerNomination? nomination;
   @override
-  final String updatedBy;
+  final num? head;
   @override
-  final String created;
+  final num? body;
   @override
-  final String updated;
+  final num? colour;
   @override
-  final num deleted;
+  final num? fantail;
   @override
-  final String recordStatus;
+  final num? face;
   @override
-  final RespondEventDataContestComponentsInnerContestEvent contestEvent;
+  final num? pearly;
   @override
-  final num head;
+  final num? marking;
   @override
-  final num body;
+  final num? overall;
   @override
-  final num colour;
-  @override
-  final num fantail;
-  @override
-  final num face;
-  @override
-  final num pearly;
-  @override
-  final num marking;
-  @override
-  final num overall;
-  @override
-  final RespondEventDataContestComponentsInnerJudge judge;
+  final RespondEventDataTeamsInner? judge;
 
   factory _$RespondEventDataContestComponentsInner(
           [void Function(RespondEventDataContestComponentsInnerBuilder)?
@@ -50,59 +38,18 @@ class _$RespondEventDataContestComponentsInner
           ._build();
 
   _$RespondEventDataContestComponentsInner._(
-      {required this.id,
-      required this.createdBy,
-      required this.updatedBy,
-      required this.created,
-      required this.updated,
-      required this.deleted,
-      required this.recordStatus,
-      required this.contestEvent,
-      required this.head,
-      required this.body,
-      required this.colour,
-      required this.fantail,
-      required this.face,
-      required this.pearly,
-      required this.marking,
-      required this.overall,
-      required this.judge})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'RespondEventDataContestComponentsInner', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        createdBy, r'RespondEventDataContestComponentsInner', 'createdBy');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedBy, r'RespondEventDataContestComponentsInner', 'updatedBy');
-    BuiltValueNullFieldError.checkNotNull(
-        created, r'RespondEventDataContestComponentsInner', 'created');
-    BuiltValueNullFieldError.checkNotNull(
-        updated, r'RespondEventDataContestComponentsInner', 'updated');
-    BuiltValueNullFieldError.checkNotNull(
-        deleted, r'RespondEventDataContestComponentsInner', 'deleted');
-    BuiltValueNullFieldError.checkNotNull(recordStatus,
-        r'RespondEventDataContestComponentsInner', 'recordStatus');
-    BuiltValueNullFieldError.checkNotNull(contestEvent,
-        r'RespondEventDataContestComponentsInner', 'contestEvent');
-    BuiltValueNullFieldError.checkNotNull(
-        head, r'RespondEventDataContestComponentsInner', 'head');
-    BuiltValueNullFieldError.checkNotNull(
-        body, r'RespondEventDataContestComponentsInner', 'body');
-    BuiltValueNullFieldError.checkNotNull(
-        colour, r'RespondEventDataContestComponentsInner', 'colour');
-    BuiltValueNullFieldError.checkNotNull(
-        fantail, r'RespondEventDataContestComponentsInner', 'fantail');
-    BuiltValueNullFieldError.checkNotNull(
-        face, r'RespondEventDataContestComponentsInner', 'face');
-    BuiltValueNullFieldError.checkNotNull(
-        pearly, r'RespondEventDataContestComponentsInner', 'pearly');
-    BuiltValueNullFieldError.checkNotNull(
-        marking, r'RespondEventDataContestComponentsInner', 'marking');
-    BuiltValueNullFieldError.checkNotNull(
-        overall, r'RespondEventDataContestComponentsInner', 'overall');
-    BuiltValueNullFieldError.checkNotNull(
-        judge, r'RespondEventDataContestComponentsInner', 'judge');
-  }
+      {this.id,
+      this.nomination,
+      this.head,
+      this.body,
+      this.colour,
+      this.fantail,
+      this.face,
+      this.pearly,
+      this.marking,
+      this.overall,
+      this.judge})
+      : super._();
 
   @override
   RespondEventDataContestComponentsInner rebuild(
@@ -119,13 +66,7 @@ class _$RespondEventDataContestComponentsInner
     if (identical(other, this)) return true;
     return other is RespondEventDataContestComponentsInner &&
         id == other.id &&
-        createdBy == other.createdBy &&
-        updatedBy == other.updatedBy &&
-        created == other.created &&
-        updated == other.updated &&
-        deleted == other.deleted &&
-        recordStatus == other.recordStatus &&
-        contestEvent == other.contestEvent &&
+        nomination == other.nomination &&
         head == other.head &&
         body == other.body &&
         colour == other.colour &&
@@ -141,13 +82,7 @@ class _$RespondEventDataContestComponentsInner
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, createdBy.hashCode);
-    _$hash = $jc(_$hash, updatedBy.hashCode);
-    _$hash = $jc(_$hash, created.hashCode);
-    _$hash = $jc(_$hash, updated.hashCode);
-    _$hash = $jc(_$hash, deleted.hashCode);
-    _$hash = $jc(_$hash, recordStatus.hashCode);
-    _$hash = $jc(_$hash, contestEvent.hashCode);
+    _$hash = $jc(_$hash, nomination.hashCode);
     _$hash = $jc(_$hash, head.hashCode);
     _$hash = $jc(_$hash, body.hashCode);
     _$hash = $jc(_$hash, colour.hashCode);
@@ -166,13 +101,7 @@ class _$RespondEventDataContestComponentsInner
     return (newBuiltValueToStringHelper(
             r'RespondEventDataContestComponentsInner')
           ..add('id', id)
-          ..add('createdBy', createdBy)
-          ..add('updatedBy', updatedBy)
-          ..add('created', created)
-          ..add('updated', updated)
-          ..add('deleted', deleted)
-          ..add('recordStatus', recordStatus)
-          ..add('contestEvent', contestEvent)
+          ..add('nomination', nomination)
           ..add('head', head)
           ..add('body', body)
           ..add('colour', colour)
@@ -196,38 +125,14 @@ class RespondEventDataContestComponentsInnerBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  String? _createdBy;
-  String? get createdBy => _$this._createdBy;
-  set createdBy(String? createdBy) => _$this._createdBy = createdBy;
-
-  String? _updatedBy;
-  String? get updatedBy => _$this._updatedBy;
-  set updatedBy(String? updatedBy) => _$this._updatedBy = updatedBy;
-
-  String? _created;
-  String? get created => _$this._created;
-  set created(String? created) => _$this._created = created;
-
-  String? _updated;
-  String? get updated => _$this._updated;
-  set updated(String? updated) => _$this._updated = updated;
-
-  num? _deleted;
-  num? get deleted => _$this._deleted;
-  set deleted(num? deleted) => _$this._deleted = deleted;
-
-  String? _recordStatus;
-  String? get recordStatus => _$this._recordStatus;
-  set recordStatus(String? recordStatus) => _$this._recordStatus = recordStatus;
-
-  RespondEventDataContestComponentsInnerContestEventBuilder? _contestEvent;
-  RespondEventDataContestComponentsInnerContestEventBuilder get contestEvent =>
-      _$this._contestEvent ??=
-          new RespondEventDataContestComponentsInnerContestEventBuilder();
-  set contestEvent(
-          RespondEventDataContestComponentsInnerContestEventBuilder?
-              contestEvent) =>
-      _$this._contestEvent = contestEvent;
+  RespondEventDataContestComponentsInnerNominationBuilder? _nomination;
+  RespondEventDataContestComponentsInnerNominationBuilder get nomination =>
+      _$this._nomination ??=
+          new RespondEventDataContestComponentsInnerNominationBuilder();
+  set nomination(
+          RespondEventDataContestComponentsInnerNominationBuilder?
+              nomination) =>
+      _$this._nomination = nomination;
 
   num? _head;
   num? get head => _$this._head;
@@ -261,12 +166,10 @@ class RespondEventDataContestComponentsInnerBuilder
   num? get overall => _$this._overall;
   set overall(num? overall) => _$this._overall = overall;
 
-  RespondEventDataContestComponentsInnerJudgeBuilder? _judge;
-  RespondEventDataContestComponentsInnerJudgeBuilder get judge =>
-      _$this._judge ??=
-          new RespondEventDataContestComponentsInnerJudgeBuilder();
-  set judge(RespondEventDataContestComponentsInnerJudgeBuilder? judge) =>
-      _$this._judge = judge;
+  RespondEventDataTeamsInnerBuilder? _judge;
+  RespondEventDataTeamsInnerBuilder get judge =>
+      _$this._judge ??= new RespondEventDataTeamsInnerBuilder();
+  set judge(RespondEventDataTeamsInnerBuilder? judge) => _$this._judge = judge;
 
   RespondEventDataContestComponentsInnerBuilder() {
     RespondEventDataContestComponentsInner._defaults(this);
@@ -276,13 +179,7 @@ class RespondEventDataContestComponentsInnerBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _createdBy = $v.createdBy;
-      _updatedBy = $v.updatedBy;
-      _created = $v.created;
-      _updated = $v.updated;
-      _deleted = $v.deleted;
-      _recordStatus = $v.recordStatus;
-      _contestEvent = $v.contestEvent.toBuilder();
+      _nomination = $v.nomination?.toBuilder();
       _head = $v.head;
       _body = $v.body;
       _colour = $v.colour;
@@ -291,7 +188,7 @@ class RespondEventDataContestComponentsInnerBuilder
       _pearly = $v.pearly;
       _marking = $v.marking;
       _overall = $v.overall;
-      _judge = $v.judge.toBuilder();
+      _judge = $v.judge?.toBuilder();
       _$v = null;
     }
     return this;
@@ -317,38 +214,25 @@ class RespondEventDataContestComponentsInnerBuilder
     try {
       _$result = _$v ??
           new _$RespondEventDataContestComponentsInner._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'RespondEventDataContestComponentsInner', 'id'),
-              createdBy: BuiltValueNullFieldError.checkNotNull(
-                  createdBy, r'RespondEventDataContestComponentsInner', 'createdBy'),
-              updatedBy: BuiltValueNullFieldError.checkNotNull(
-                  updatedBy, r'RespondEventDataContestComponentsInner', 'updatedBy'),
-              created: BuiltValueNullFieldError.checkNotNull(
-                  created, r'RespondEventDataContestComponentsInner', 'created'),
-              updated: BuiltValueNullFieldError.checkNotNull(
-                  updated, r'RespondEventDataContestComponentsInner', 'updated'),
-              deleted: BuiltValueNullFieldError.checkNotNull(
-                  deleted, r'RespondEventDataContestComponentsInner', 'deleted'),
-              recordStatus: BuiltValueNullFieldError.checkNotNull(recordStatus,
-                  r'RespondEventDataContestComponentsInner', 'recordStatus'),
-              contestEvent: contestEvent.build(),
-              head: BuiltValueNullFieldError.checkNotNull(head, r'RespondEventDataContestComponentsInner', 'head'),
-              body: BuiltValueNullFieldError.checkNotNull(body, r'RespondEventDataContestComponentsInner', 'body'),
-              colour: BuiltValueNullFieldError.checkNotNull(colour, r'RespondEventDataContestComponentsInner', 'colour'),
-              fantail: BuiltValueNullFieldError.checkNotNull(fantail, r'RespondEventDataContestComponentsInner', 'fantail'),
-              face: BuiltValueNullFieldError.checkNotNull(face, r'RespondEventDataContestComponentsInner', 'face'),
-              pearly: BuiltValueNullFieldError.checkNotNull(pearly, r'RespondEventDataContestComponentsInner', 'pearly'),
-              marking: BuiltValueNullFieldError.checkNotNull(marking, r'RespondEventDataContestComponentsInner', 'marking'),
-              overall: BuiltValueNullFieldError.checkNotNull(overall, r'RespondEventDataContestComponentsInner', 'overall'),
-              judge: judge.build());
+              id: id,
+              nomination: _nomination?.build(),
+              head: head,
+              body: body,
+              colour: colour,
+              fantail: fantail,
+              face: face,
+              pearly: pearly,
+              marking: marking,
+              overall: overall,
+              judge: _judge?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'contestEvent';
-        contestEvent.build();
+        _$failedField = 'nomination';
+        _nomination?.build();
 
         _$failedField = 'judge';
-        judge.build();
+        _judge?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondEventDataContestComponentsInner',

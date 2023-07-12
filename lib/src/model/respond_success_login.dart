@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_success_login_data.dart';
+import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,7 +24,7 @@ abstract class RespondSuccessLogin implements Built<RespondSuccessLogin, Respond
   String? get responseMessage;
 
   @BuiltValueField(wireName: r'data')
-  RespondSuccessLoginData? get data;
+  RespondEventDataTeamsInner? get data;
 
   RespondSuccessLogin._();
 
@@ -67,7 +67,7 @@ class _$RespondSuccessLoginSerializer implements PrimitiveSerializer<RespondSucc
       yield r'data';
       yield serializers.serialize(
         object.data,
-        specifiedType: const FullType(RespondSuccessLoginData),
+        specifiedType: const FullType(RespondEventDataTeamsInner),
       );
     }
   }
@@ -110,8 +110,8 @@ class _$RespondSuccessLoginSerializer implements PrimitiveSerializer<RespondSucc
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSuccessLoginData),
-          ) as RespondSuccessLoginData;
+            specifiedType: const FullType(RespondEventDataTeamsInner),
+          ) as RespondEventDataTeamsInner;
           result.data.replace(valueDes);
           break;
         default:

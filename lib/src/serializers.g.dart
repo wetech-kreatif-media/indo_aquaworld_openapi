@@ -28,8 +28,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondEvent.serializer)
       ..add(RespondEventData.serializer)
       ..add(RespondEventDataContestComponentsInner.serializer)
-      ..add(RespondEventDataContestComponentsInnerContestEvent.serializer)
-      ..add(RespondEventDataContestComponentsInnerJudge.serializer)
+      ..add(RespondEventDataContestComponentsInnerNomination.serializer)
+      ..add(RespondEventDataTeamsInner.serializer)
+      ..add(RespondEventDataTeamsInnerRole.serializer)
+      ..add(RespondEventDataTeamsInnerRolePermissionsInner.serializer)
       ..add(RespondEventNominations.serializer)
       ..add(RespondEventNominationsDataInner.serializer)
       ..add(RespondEvents.serializer)
@@ -49,9 +51,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondRolesData.serializer)
       ..add(RespondRolesDataContentInner.serializer)
       ..add(RespondSuccessLogin.serializer)
-      ..add(RespondSuccessLoginData.serializer)
-      ..add(RespondSuccessLoginDataRole.serializer)
-      ..add(RespondSuccessLoginDataRolePermissionsInner.serializer)
       ..add(RespondTeam.serializer)
       ..add(RespondTeams.serializer)
       ..add(RespondTeamsData.serializer)
@@ -77,6 +76,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType(RespondContestanNominationsDataContentInner)
           ]),
           () => new ListBuilder<RespondContestanNominationsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondEventDataTeamsInner)]),
+          () => new ListBuilder<RespondEventDataTeamsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondEventDataContestComponentsInner)]),
+          () => new ListBuilder<RespondEventDataContestComponentsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondEventDataTeamsInnerRolePermissionsInner)
+          ]),
+          () =>
+              new ListBuilder<RespondEventDataTeamsInnerRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondEventNominationsDataInner)]),
@@ -106,26 +119,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(RespondRolesDataContentInner)]),
           () => new ListBuilder<RespondRolesDataContentInner>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(RespondSuccessLoginDataRolePermissionsInner)
-          ]),
-          () => new ListBuilder<RespondSuccessLoginDataRolePermissionsInner>())
-      ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondTeamsDataContentInner)]),
           () => new ListBuilder<RespondTeamsDataContentInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondUsersDataContentInner)]),
-          () => new ListBuilder<RespondUsersDataContentInner>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(RespondUsersDataContentInner)]),
-          () => new ListBuilder<RespondUsersDataContentInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(RespondEventDataContestComponentsInner)]),
-          () => new ListBuilder<RespondEventDataContestComponentsInner>()))
+          () => new ListBuilder<RespondUsersDataContentInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint
