@@ -3,81 +3,77 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
-import 'package:openapi/src/model/respond_location_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_event_data.g.dart';
+part 'respond_event_data_teams_inner_role_permissions_inner.g.dart';
 
-/// RespondEventData
+/// RespondEventDataTeamsInnerRolePermissionsInner
 ///
 /// Properties:
 /// * [id] 
-/// * [name] 
-/// * [startDate] 
-/// * [endDate] 
+/// * [createdBy] 
+/// * [updatedBy] 
+/// * [created] 
+/// * [updated] 
+/// * [deleted] 
+/// * [recordStatus] 
+/// * [label] 
+/// * [value] 
 /// * [description] 
-/// * [location] 
-/// * [teams] 
-/// * [statusPublish] 
-/// * [statusEvent] 
-/// * [contestComponents] 
 @BuiltValue()
-abstract class RespondEventData implements Built<RespondEventData, RespondEventDataBuilder> {
+abstract class RespondEventDataTeamsInnerRolePermissionsInner implements Built<RespondEventDataTeamsInnerRolePermissionsInner, RespondEventDataTeamsInnerRolePermissionsInnerBuilder> {
   @BuiltValueField(wireName: r'id')
   String? get id;
 
-  @BuiltValueField(wireName: r'name')
-  String? get name;
+  @BuiltValueField(wireName: r'createdBy')
+  String? get createdBy;
 
-  @BuiltValueField(wireName: r'startDate')
-  String? get startDate;
+  @BuiltValueField(wireName: r'updatedBy')
+  String? get updatedBy;
 
-  @BuiltValueField(wireName: r'endDate')
-  String? get endDate;
+  @BuiltValueField(wireName: r'created')
+  String? get created;
+
+  @BuiltValueField(wireName: r'updated')
+  String? get updated;
+
+  @BuiltValueField(wireName: r'deleted')
+  num? get deleted;
+
+  @BuiltValueField(wireName: r'recordStatus')
+  String? get recordStatus;
+
+  @BuiltValueField(wireName: r'label')
+  String? get label;
+
+  @BuiltValueField(wireName: r'value')
+  String? get value;
 
   @BuiltValueField(wireName: r'description')
   String? get description;
 
-  @BuiltValueField(wireName: r'location')
-  RespondLocationData? get location;
+  RespondEventDataTeamsInnerRolePermissionsInner._();
 
-  @BuiltValueField(wireName: r'teams')
-  BuiltList<RespondEventDataTeamsInner>? get teams;
-
-  @BuiltValueField(wireName: r'statusPublish')
-  String? get statusPublish;
-
-  @BuiltValueField(wireName: r'statusEvent')
-  String? get statusEvent;
-
-  @BuiltValueField(wireName: r'contestComponents')
-  BuiltList<RespondEventDataContestComponentsInner>? get contestComponents;
-
-  RespondEventData._();
-
-  factory RespondEventData([void updates(RespondEventDataBuilder b)]) = _$RespondEventData;
+  factory RespondEventDataTeamsInnerRolePermissionsInner([void updates(RespondEventDataTeamsInnerRolePermissionsInnerBuilder b)]) = _$RespondEventDataTeamsInnerRolePermissionsInner;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondEventDataBuilder b) => b;
+  static void _defaults(RespondEventDataTeamsInnerRolePermissionsInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondEventData> get serializer => _$RespondEventDataSerializer();
+  static Serializer<RespondEventDataTeamsInnerRolePermissionsInner> get serializer => _$RespondEventDataTeamsInnerRolePermissionsInnerSerializer();
 }
 
-class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventData> {
+class _$RespondEventDataTeamsInnerRolePermissionsInnerSerializer implements PrimitiveSerializer<RespondEventDataTeamsInnerRolePermissionsInner> {
   @override
-  final Iterable<Type> types = const [RespondEventData, _$RespondEventData];
+  final Iterable<Type> types = const [RespondEventDataTeamsInnerRolePermissionsInner, _$RespondEventDataTeamsInnerRolePermissionsInner];
 
   @override
-  final String wireName = r'RespondEventData';
+  final String wireName = r'RespondEventDataTeamsInnerRolePermissionsInner';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondEventData object, {
+    RespondEventDataTeamsInnerRolePermissionsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.id != null) {
@@ -87,24 +83,59 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
-      yield r'name';
+    if (object.createdBy != null) {
+      yield r'createdBy';
       yield serializers.serialize(
-        object.name,
+        object.createdBy,
         specifiedType: const FullType(String),
       );
     }
-    if (object.startDate != null) {
-      yield r'startDate';
+    if (object.updatedBy != null) {
+      yield r'updatedBy';
       yield serializers.serialize(
-        object.startDate,
+        object.updatedBy,
         specifiedType: const FullType(String),
       );
     }
-    if (object.endDate != null) {
-      yield r'endDate';
+    if (object.created != null) {
+      yield r'created';
       yield serializers.serialize(
-        object.endDate,
+        object.created,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updated != null) {
+      yield r'updated';
+      yield serializers.serialize(
+        object.updated,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.deleted != null) {
+      yield r'deleted';
+      yield serializers.serialize(
+        object.deleted,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.recordStatus != null) {
+      yield r'recordStatus';
+      yield serializers.serialize(
+        object.recordStatus,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.label != null) {
+      yield r'label';
+      yield serializers.serialize(
+        object.label,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.value != null) {
+      yield r'value';
+      yield serializers.serialize(
+        object.value,
         specifiedType: const FullType(String),
       );
     }
@@ -115,47 +146,12 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
         specifiedType: const FullType(String),
       );
     }
-    if (object.location != null) {
-      yield r'location';
-      yield serializers.serialize(
-        object.location,
-        specifiedType: const FullType(RespondLocationData),
-      );
-    }
-    if (object.teams != null) {
-      yield r'teams';
-      yield serializers.serialize(
-        object.teams,
-        specifiedType: const FullType(BuiltList, [FullType(RespondEventDataTeamsInner)]),
-      );
-    }
-    if (object.statusPublish != null) {
-      yield r'statusPublish';
-      yield serializers.serialize(
-        object.statusPublish,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.statusEvent != null) {
-      yield r'statusEvent';
-      yield serializers.serialize(
-        object.statusEvent,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.contestComponents != null) {
-      yield r'contestComponents';
-      yield serializers.serialize(
-        object.contestComponents,
-        specifiedType: const FullType(BuiltList, [FullType(RespondEventDataContestComponentsInner)]),
-      );
-    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondEventData object, {
+    RespondEventDataTeamsInnerRolePermissionsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -166,7 +162,7 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondEventDataBuilder result,
+    required RespondEventDataTeamsInnerRolePermissionsInnerBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -180,26 +176,61 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
           ) as String;
           result.id = valueDes;
           break;
-        case r'name':
+        case r'createdBy':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.createdBy = valueDes;
           break;
-        case r'startDate':
+        case r'updatedBy':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.startDate = valueDes;
+          result.updatedBy = valueDes;
           break;
-        case r'endDate':
+        case r'created':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.endDate = valueDes;
+          result.created = valueDes;
+          break;
+        case r'updated':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.updated = valueDes;
+          break;
+        case r'deleted':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.deleted = valueDes;
+          break;
+        case r'recordStatus':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.recordStatus = valueDes;
+          break;
+        case r'label':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.label = valueDes;
+          break;
+        case r'value':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.value = valueDes;
           break;
         case r'description':
           final valueDes = serializers.deserialize(
@@ -207,41 +238,6 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
             specifiedType: const FullType(String),
           ) as String;
           result.description = valueDes;
-          break;
-        case r'location':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondLocationData),
-          ) as RespondLocationData;
-          result.location.replace(valueDes);
-          break;
-        case r'teams':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(RespondEventDataTeamsInner)]),
-          ) as BuiltList<RespondEventDataTeamsInner>;
-          result.teams.replace(valueDes);
-          break;
-        case r'statusPublish':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.statusPublish = valueDes;
-          break;
-        case r'statusEvent':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.statusEvent = valueDes;
-          break;
-        case r'contestComponents':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(RespondEventDataContestComponentsInner)]),
-          ) as BuiltList<RespondEventDataContestComponentsInner>;
-          result.contestComponents.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -252,12 +248,12 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
   }
 
   @override
-  RespondEventData deserialize(
+  RespondEventDataTeamsInnerRolePermissionsInner deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondEventDataBuilder();
+    final result = RespondEventDataTeamsInnerRolePermissionsInnerBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
