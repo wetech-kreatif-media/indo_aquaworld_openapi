@@ -26,10 +26,8 @@ doc/RespondContestanNominationsDataContentInner.md
 doc/RespondEvent.md
 doc/RespondEventData.md
 doc/RespondEventDataContestComponentsInner.md
-doc/RespondEventDataContestComponentsInnerNomination.md
-doc/RespondEventDataTeamsInner.md
-doc/RespondEventDataTeamsInnerRole.md
-doc/RespondEventDataTeamsInnerRolePermissionsInner.md
+doc/RespondEventDataContestComponentsInnerContestEvent.md
+doc/RespondEventDataContestComponentsInnerJudge.md
 doc/RespondEventNominations.md
 doc/RespondEventNominationsDataInner.md
 doc/RespondEvents.md
@@ -49,6 +47,9 @@ doc/RespondRoles.md
 doc/RespondRolesData.md
 doc/RespondRolesDataContentInner.md
 doc/RespondSuccessLogin.md
+doc/RespondSuccessLoginData.md
+doc/RespondSuccessLoginDataRole.md
+doc/RespondSuccessLoginDataRolePermissionsInner.md
 doc/RespondTeam.md
 doc/RespondTeams.md
 doc/RespondTeamsData.md
@@ -98,10 +99,8 @@ lib/src/model/respond_contestan_nominations_data_content_inner.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
 lib/src/model/respond_event_data_contest_components_inner.dart
-lib/src/model/respond_event_data_contest_components_inner_nomination.dart
-lib/src/model/respond_event_data_teams_inner.dart
-lib/src/model/respond_event_data_teams_inner_role.dart
-lib/src/model/respond_event_data_teams_inner_role_permissions_inner.dart
+lib/src/model/respond_event_data_contest_components_inner_contest_event.dart
+lib/src/model/respond_event_data_contest_components_inner_judge.dart
 lib/src/model/respond_event_nominations.dart
 lib/src/model/respond_event_nominations_data_inner.dart
 lib/src/model/respond_events.dart
@@ -121,6 +120,9 @@ lib/src/model/respond_roles.dart
 lib/src/model/respond_roles_data.dart
 lib/src/model/respond_roles_data_content_inner.dart
 lib/src/model/respond_success_login.dart
+lib/src/model/respond_success_login_data.dart
+lib/src/model/respond_success_login_data_role.dart
+lib/src/model/respond_success_login_data_role_permissions_inner.dart
 lib/src/model/respond_team.dart
 lib/src/model/respond_teams.dart
 lib/src/model/respond_teams_data.dart
