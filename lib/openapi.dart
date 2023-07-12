@@ -9,6 +9,7 @@ export 'package:openapi/src/auth/oauth.dart';
 export 'package:openapi/src/serializers.dart';
 export 'package:openapi/src/model/date.dart';
 
+export 'package:openapi/src/api/contestan_nomination_api.dart';
 export 'package:openapi/src/api/events_api.dart';
 export 'package:openapi/src/api/location_api.dart';
 export 'package:openapi/src/api/permission_api.dart';

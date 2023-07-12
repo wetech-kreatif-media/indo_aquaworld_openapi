@@ -1,6 +1,7 @@
 .gitignore
 README.md
 analysis_options.yaml
+doc/ContestanNominationApi.md
 doc/EventsApi.md
 doc/LocationApi.md
 doc/PermissionApi.md
@@ -62,6 +63,7 @@ doc/TeamsApi.md
 doc/UsersApi.md
 lib/openapi.dart
 lib/src/api.dart
+lib/src/api/contestan_nomination_api.dart
 lib/src/api/events_api.dart
 lib/src/api/location_api.dart
 lib/src/api/permission_api.dart
@@ -131,10 +133,4 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/request_contestan_nomination_test.dart
-test/respond_contestan_nominations_data_content_inner_test.dart
-test/respond_contestan_nominations_data_test.dart
-test/respond_contestan_nominations_test.dart
-test/respond_event_data_contest_components_inner_contest_event_test.dart
-test/respond_event_data_contest_components_inner_judge_test.dart
-test/respond_event_data_contest_components_inner_test.dart
+test/contestan_nomination_api_test.dart
