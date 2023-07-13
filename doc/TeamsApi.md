@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeams**
-> RespondTeams getTeams()
+> RespondTeams getTeams(name)
 
 Get Teams
 
@@ -113,9 +113,10 @@ Ambil data teams
 import 'package:openapi/api.dart';
 
 final api = Openapi().getTeamsApi();
+final String name = name_example; // String | 
 
 try {
-    final response = api.getTeams();
+    final response = api.getTeams(name);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TeamsApi->getTeams: $e\n');
@@ -123,7 +124,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | [optional] 
 
 ### Return type
 

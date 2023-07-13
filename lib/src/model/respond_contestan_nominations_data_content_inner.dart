@@ -76,7 +76,7 @@ abstract class RespondContestanNominationsDataContentInner implements Built<Resp
   String get photo;
 
   @BuiltValueField(wireName: r'contestantTeam')
-  String get contestantTeam;
+  String? get contestantTeam;
 
   @BuiltValueField(wireName: r'codeContestant')
   String get codeContestant;
@@ -179,11 +179,13 @@ class _$RespondContestanNominationsDataContentInnerSerializer implements Primiti
       object.photo,
       specifiedType: const FullType(String),
     );
-    yield r'contestantTeam';
-    yield serializers.serialize(
-      object.contestantTeam,
-      specifiedType: const FullType(String),
-    );
+    if (object.contestantTeam != null) {
+      yield r'contestantTeam';
+      yield serializers.serialize(
+        object.contestantTeam,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'codeContestant';
     yield serializers.serialize(
       object.codeContestant,

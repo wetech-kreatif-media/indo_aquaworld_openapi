@@ -39,7 +39,7 @@ class _$RespondContestanNominationsDataContentInner
   @override
   final String photo;
   @override
-  final String contestantTeam;
+  final String? contestantTeam;
   @override
   final String codeContestant;
 
@@ -66,7 +66,7 @@ class _$RespondContestanNominationsDataContentInner
       required this.placeofBirth,
       required this.statusContestant,
       required this.photo,
-      required this.contestantTeam,
+      this.contestantTeam,
       required this.codeContestant})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
@@ -99,8 +99,6 @@ class _$RespondContestanNominationsDataContentInner
         r'RespondContestanNominationsDataContentInner', 'statusContestant');
     BuiltValueNullFieldError.checkNotNull(
         photo, r'RespondContestanNominationsDataContentInner', 'photo');
-    BuiltValueNullFieldError.checkNotNull(contestantTeam,
-        r'RespondContestanNominationsDataContentInner', 'contestantTeam');
     BuiltValueNullFieldError.checkNotNull(codeContestant,
         r'RespondContestanNominationsDataContentInner', 'codeContestant');
   }
@@ -334,7 +332,7 @@ class RespondContestanNominationsDataContentInnerBuilder
             placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondContestanNominationsDataContentInner', 'placeofBirth'),
             statusContestant: BuiltValueNullFieldError.checkNotNull(statusContestant, r'RespondContestanNominationsDataContentInner', 'statusContestant'),
             photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondContestanNominationsDataContentInner', 'photo'),
-            contestantTeam: BuiltValueNullFieldError.checkNotNull(contestantTeam, r'RespondContestanNominationsDataContentInner', 'contestantTeam'),
+            contestantTeam: contestantTeam,
             codeContestant: BuiltValueNullFieldError.checkNotNull(codeContestant, r'RespondContestanNominationsDataContentInner', 'codeContestant'));
     replace(_$result);
     return _$result;
