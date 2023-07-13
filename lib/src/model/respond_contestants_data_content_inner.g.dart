@@ -41,7 +41,7 @@ class _$RespondContestantsDataContentInner
   @override
   final String photo;
   @override
-  final String contestantTeam;
+  final String? contestantTeam;
   @override
   final String codeContestant;
 
@@ -68,7 +68,7 @@ class _$RespondContestantsDataContentInner
       required this.dateofBirth,
       required this.statusContestant,
       required this.photo,
-      required this.contestantTeam,
+      this.contestantTeam,
       required this.codeContestant})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
@@ -103,8 +103,6 @@ class _$RespondContestantsDataContentInner
         r'RespondContestantsDataContentInner', 'statusContestant');
     BuiltValueNullFieldError.checkNotNull(
         photo, r'RespondContestantsDataContentInner', 'photo');
-    BuiltValueNullFieldError.checkNotNull(contestantTeam,
-        r'RespondContestantsDataContentInner', 'contestantTeam');
     BuiltValueNullFieldError.checkNotNull(codeContestant,
         r'RespondContestantsDataContentInner', 'codeContestant');
   }
@@ -345,7 +343,7 @@ class RespondContestantsDataContentInnerBuilder
             dateofBirth: BuiltValueNullFieldError.checkNotNull(dateofBirth, r'RespondContestantsDataContentInner', 'dateofBirth'),
             statusContestant: BuiltValueNullFieldError.checkNotNull(statusContestant, r'RespondContestantsDataContentInner', 'statusContestant'),
             photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondContestantsDataContentInner', 'photo'),
-            contestantTeam: BuiltValueNullFieldError.checkNotNull(contestantTeam, r'RespondContestantsDataContentInner', 'contestantTeam'),
+            contestantTeam: contestantTeam,
             codeContestant: BuiltValueNullFieldError.checkNotNull(codeContestant, r'RespondContestantsDataContentInner', 'codeContestant'));
     replace(_$result);
     return _$result;

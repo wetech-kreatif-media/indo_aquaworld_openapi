@@ -80,7 +80,7 @@ abstract class RespondContestantsDataContentInner implements Built<RespondContes
   String get photo;
 
   @BuiltValueField(wireName: r'contestantTeam')
-  String get contestantTeam;
+  String? get contestantTeam;
 
   @BuiltValueField(wireName: r'codeContestant')
   String get codeContestant;
@@ -188,11 +188,13 @@ class _$RespondContestantsDataContentInnerSerializer implements PrimitiveSeriali
       object.photo,
       specifiedType: const FullType(String),
     );
-    yield r'contestantTeam';
-    yield serializers.serialize(
-      object.contestantTeam,
-      specifiedType: const FullType(String),
-    );
+    if (object.contestantTeam != null) {
+      yield r'contestantTeam';
+      yield serializers.serialize(
+        object.contestantTeam,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'codeContestant';
     yield serializers.serialize(
       object.codeContestant,
