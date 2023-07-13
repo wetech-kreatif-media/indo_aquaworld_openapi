@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/respond_teams_data_content_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -80,7 +81,7 @@ abstract class RespondContestantsDataContentInner implements Built<RespondContes
   String get photo;
 
   @BuiltValueField(wireName: r'contestantTeam')
-  String? get contestantTeam;
+  RespondTeamsDataContentInner? get contestantTeam;
 
   @BuiltValueField(wireName: r'codeContestant')
   String get codeContestant;
@@ -192,7 +193,7 @@ class _$RespondContestantsDataContentInnerSerializer implements PrimitiveSeriali
       yield r'contestantTeam';
       yield serializers.serialize(
         object.contestantTeam,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType(RespondTeamsDataContentInner),
       );
     }
     yield r'codeContestant';
@@ -338,9 +339,9 @@ class _$RespondContestantsDataContentInnerSerializer implements PrimitiveSeriali
         case r'contestantTeam':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.contestantTeam = valueDes;
+            specifiedType: const FullType(RespondTeamsDataContentInner),
+          ) as RespondTeamsDataContentInner;
+          result.contestantTeam.replace(valueDes);
           break;
         case r'codeContestant':
           final valueDes = serializers.deserialize(

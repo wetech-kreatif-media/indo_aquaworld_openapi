@@ -41,7 +41,7 @@ class _$RespondContestantsDataContentInner
   @override
   final String photo;
   @override
-  final String? contestantTeam;
+  final RespondTeamsDataContentInner? contestantTeam;
   @override
   final String codeContestant;
 
@@ -261,9 +261,10 @@ class RespondContestantsDataContentInnerBuilder
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
-  String? _contestantTeam;
-  String? get contestantTeam => _$this._contestantTeam;
-  set contestantTeam(String? contestantTeam) =>
+  RespondTeamsDataContentInnerBuilder? _contestantTeam;
+  RespondTeamsDataContentInnerBuilder get contestantTeam =>
+      _$this._contestantTeam ??= new RespondTeamsDataContentInnerBuilder();
+  set contestantTeam(RespondTeamsDataContentInnerBuilder? contestantTeam) =>
       _$this._contestantTeam = contestantTeam;
 
   String? _codeContestant;
@@ -294,7 +295,7 @@ class RespondContestantsDataContentInnerBuilder
       _dateofBirth = $v.dateofBirth;
       _statusContestant = $v.statusContestant;
       _photo = $v.photo;
-      _contestantTeam = $v.contestantTeam;
+      _contestantTeam = $v.contestantTeam?.toBuilder();
       _codeContestant = $v.codeContestant;
       _$v = null;
     }
@@ -317,34 +318,46 @@ class RespondContestantsDataContentInnerBuilder
   RespondContestantsDataContentInner build() => _build();
 
   _$RespondContestantsDataContentInner _build() {
-    final _$result = _$v ??
-        new _$RespondContestantsDataContentInner._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'RespondContestantsDataContentInner', 'id'),
-            createdBy: BuiltValueNullFieldError.checkNotNull(
-                createdBy, r'RespondContestantsDataContentInner', 'createdBy'),
-            updatedBy: BuiltValueNullFieldError.checkNotNull(
-                updatedBy, r'RespondContestantsDataContentInner', 'updatedBy'),
-            created: BuiltValueNullFieldError.checkNotNull(
-                created, r'RespondContestantsDataContentInner', 'created'),
-            updated: BuiltValueNullFieldError.checkNotNull(
-                updated, r'RespondContestantsDataContentInner', 'updated'),
-            deleted: BuiltValueNullFieldError.checkNotNull(
-                deleted, r'RespondContestantsDataContentInner', 'deleted'),
-            recordStatus: BuiltValueNullFieldError.checkNotNull(
-                recordStatus, r'RespondContestantsDataContentInner', 'recordStatus'),
-            fullname:
-                BuiltValueNullFieldError.checkNotNull(fullname, r'RespondContestantsDataContentInner', 'fullname'),
-            mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondContestantsDataContentInner', 'mobilePhone'),
-            email: BuiltValueNullFieldError.checkNotNull(email, r'RespondContestantsDataContentInner', 'email'),
-            city: BuiltValueNullFieldError.checkNotNull(city, r'RespondContestantsDataContentInner', 'city'),
-            gender: BuiltValueNullFieldError.checkNotNull(gender, r'RespondContestantsDataContentInner', 'gender'),
-            placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondContestantsDataContentInner', 'placeofBirth'),
-            dateofBirth: BuiltValueNullFieldError.checkNotNull(dateofBirth, r'RespondContestantsDataContentInner', 'dateofBirth'),
-            statusContestant: BuiltValueNullFieldError.checkNotNull(statusContestant, r'RespondContestantsDataContentInner', 'statusContestant'),
-            photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondContestantsDataContentInner', 'photo'),
-            contestantTeam: contestantTeam,
-            codeContestant: BuiltValueNullFieldError.checkNotNull(codeContestant, r'RespondContestantsDataContentInner', 'codeContestant'));
+    _$RespondContestantsDataContentInner _$result;
+    try {
+      _$result = _$v ??
+          new _$RespondContestantsDataContentInner._(
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondContestantsDataContentInner', 'id'),
+              createdBy: BuiltValueNullFieldError.checkNotNull(
+                  createdBy, r'RespondContestantsDataContentInner', 'createdBy'),
+              updatedBy: BuiltValueNullFieldError.checkNotNull(
+                  updatedBy, r'RespondContestantsDataContentInner', 'updatedBy'),
+              created: BuiltValueNullFieldError.checkNotNull(
+                  created, r'RespondContestantsDataContentInner', 'created'),
+              updated: BuiltValueNullFieldError.checkNotNull(
+                  updated, r'RespondContestantsDataContentInner', 'updated'),
+              deleted: BuiltValueNullFieldError.checkNotNull(
+                  deleted, r'RespondContestantsDataContentInner', 'deleted'),
+              recordStatus: BuiltValueNullFieldError.checkNotNull(recordStatus,
+                  r'RespondContestantsDataContentInner', 'recordStatus'),
+              fullname: BuiltValueNullFieldError.checkNotNull(fullname, r'RespondContestantsDataContentInner', 'fullname'),
+              mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondContestantsDataContentInner', 'mobilePhone'),
+              email: BuiltValueNullFieldError.checkNotNull(email, r'RespondContestantsDataContentInner', 'email'),
+              city: BuiltValueNullFieldError.checkNotNull(city, r'RespondContestantsDataContentInner', 'city'),
+              gender: BuiltValueNullFieldError.checkNotNull(gender, r'RespondContestantsDataContentInner', 'gender'),
+              placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondContestantsDataContentInner', 'placeofBirth'),
+              dateofBirth: BuiltValueNullFieldError.checkNotNull(dateofBirth, r'RespondContestantsDataContentInner', 'dateofBirth'),
+              statusContestant: BuiltValueNullFieldError.checkNotNull(statusContestant, r'RespondContestantsDataContentInner', 'statusContestant'),
+              photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondContestantsDataContentInner', 'photo'),
+              contestantTeam: _contestantTeam?.build(),
+              codeContestant: BuiltValueNullFieldError.checkNotNull(codeContestant, r'RespondContestantsDataContentInner', 'codeContestant'));
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'contestantTeam';
+        _contestantTeam?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'RespondContestantsDataContentInner', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
