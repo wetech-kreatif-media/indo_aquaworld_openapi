@@ -37,6 +37,8 @@ export 'package:openapi/src/model/request_team.dart';
 export 'package:openapi/src/model/respond_contestan_nominations.dart';
 export 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 export 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
+export 'package:openapi/src/model/respond_contestant.dart';
+export 'package:openapi/src/model/respond_contestant_data.dart';
 export 'package:openapi/src/model/respond_contestants.dart';
 export 'package:openapi/src/model/respond_contestants_data.dart';
 export 'package:openapi/src/model/respond_contestants_data_content_inner.dart';

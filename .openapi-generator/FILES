@@ -25,6 +25,8 @@ doc/RequestTeam.md
 doc/RespondContestanNominations.md
 doc/RespondContestanNominationsData.md
 doc/RespondContestanNominationsDataContentInner.md
+doc/RespondContestant.md
+doc/RespondContestantData.md
 doc/RespondContestants.md
 doc/RespondContestantsData.md
 doc/RespondContestantsDataContentInner.md
@@ -106,6 +108,8 @@ lib/src/model/request_team.dart
 lib/src/model/respond_contestan_nominations.dart
 lib/src/model/respond_contestan_nominations_data.dart
 lib/src/model/respond_contestan_nominations_data_content_inner.dart
+lib/src/model/respond_contestant.dart
+lib/src/model/respond_contestant_data.dart
 lib/src/model/respond_contestants.dart
 lib/src/model/respond_contestants_data.dart
 lib/src/model/respond_contestants_data_content_inner.dart
@@ -149,3 +153,5 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_contestant_data_test.dart
+test/respond_contestant_test.dart

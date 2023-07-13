@@ -10,7 +10,9 @@ All URIs are relative to *http://localhost:8080/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createContestant**](ContestansApi.md#createcontestant) | **POST** /public/contestant | Create Contestant
+[**getContestant**](ContestansApi.md#getcontestant) | **GET** /public/contestant/{contestantId} | Get Contestant
 [**getContestants**](ContestansApi.md#getcontestants) | **GET** /public/contestants | Get Contestants
+[**putContestant**](ContestansApi.md#putcontestant) | **PUT** /public/contestant/{contestantId} | Put Contestant
 
 
 # **createContestant**
@@ -56,6 +58,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getContestant**
+> RespondContestant getContestant(contestantId)
+
+Get Contestant
+
+Ambil detail data contestant
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getContestansApi();
+final String contestantId = contestantId_example; // String | 
+
+try {
+    final response = api.getContestant(contestantId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling ContestansApi->getContestant: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contestantId** | **String**|  | 
+
+### Return type
+
+[**RespondContestant**](RespondContestant.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getContestants**
 > RespondContestants getContestants(fullname)
 
@@ -95,6 +140,51 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putContestant**
+> RespondGlobal putContestant(contestantId, requestContestant)
+
+Put Contestant
+
+Update Contestant
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getContestansApi();
+final String contestantId = contestantId_example; // String | 
+final RequestContestant requestContestant = {"fullname":"Ahmad D asd asd ","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"TIM","dateofBirth":"1999-10-14","photo":"{{SAMPLE_IMAGE}}","codeContestant":"sdasd","contestantTeam":"3033d51e-3e02-4579-b534-05460ac3489a"}; // RequestContestant | 
+
+try {
+    final response = api.putContestant(contestantId, requestContestant);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling ContestansApi->putContestant: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contestantId** | **String**|  | 
+ **requestContestant** | [**RequestContestant**](RequestContestant.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
