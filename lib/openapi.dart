@@ -10,6 +10,7 @@ export 'package:openapi/src/serializers.dart';
 export 'package:openapi/src/model/date.dart';
 
 export 'package:openapi/src/api/contestan_nomination_api.dart';
+export 'package:openapi/src/api/contestans_api.dart';
 export 'package:openapi/src/api/events_api.dart';
 export 'package:openapi/src/api/location_api.dart';
 export 'package:openapi/src/api/permission_api.dart';
@@ -19,6 +20,9 @@ export 'package:openapi/src/api/users_api.dart';
 
 export 'package:openapi/src/model/request_change_password.dart';
 export 'package:openapi/src/model/request_contestan_nomination.dart';
+export 'package:openapi/src/model/request_contestant.dart';
+export 'package:openapi/src/model/request_contestant_data.dart';
+export 'package:openapi/src/model/request_contestant_data_content_inner.dart';
 export 'package:openapi/src/model/request_event.dart';
 export 'package:openapi/src/model/request_event_contest_components_inner.dart';
 export 'package:openapi/src/model/request_event_contest_components_inner_judge.dart';
@@ -35,6 +39,9 @@ export 'package:openapi/src/model/request_team.dart';
 export 'package:openapi/src/model/respond_contestan_nominations.dart';
 export 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 export 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
+export 'package:openapi/src/model/respond_contestants.dart';
+export 'package:openapi/src/model/respond_contestants_data.dart';
+export 'package:openapi/src/model/respond_contestants_data_content_inner.dart';
 export 'package:openapi/src/model/respond_event.dart';
 export 'package:openapi/src/model/respond_event_data.dart';
 export 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';

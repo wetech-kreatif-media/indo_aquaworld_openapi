@@ -2,11 +2,15 @@
 README.md
 analysis_options.yaml
 doc/ContestanNominationApi.md
+doc/ContestansApi.md
 doc/EventsApi.md
 doc/LocationApi.md
 doc/PermissionApi.md
 doc/RequestChangePassword.md
 doc/RequestContestanNomination.md
+doc/RequestContestant.md
+doc/RequestContestantData.md
+doc/RequestContestantDataContentInner.md
 doc/RequestEvent.md
 doc/RequestEventContestComponentsInner.md
 doc/RequestEventContestComponentsInnerJudge.md
@@ -23,6 +27,9 @@ doc/RequestTeam.md
 doc/RespondContestanNominations.md
 doc/RespondContestanNominationsData.md
 doc/RespondContestanNominationsDataContentInner.md
+doc/RespondContestants.md
+doc/RespondContestantsData.md
+doc/RespondContestantsDataContentInner.md
 doc/RespondEvent.md
 doc/RespondEventData.md
 doc/RespondEventDataContestComponentsInner.md
@@ -67,6 +74,7 @@ doc/UsersApi.md
 lib/openapi.dart
 lib/src/api.dart
 lib/src/api/contestan_nomination_api.dart
+lib/src/api/contestans_api.dart
 lib/src/api/events_api.dart
 lib/src/api/location_api.dart
 lib/src/api/permission_api.dart
@@ -83,6 +91,9 @@ lib/src/date_serializer.dart
 lib/src/model/date.dart
 lib/src/model/request_change_password.dart
 lib/src/model/request_contestan_nomination.dart
+lib/src/model/request_contestant.dart
+lib/src/model/request_contestant_data.dart
+lib/src/model/request_contestant_data_content_inner.dart
 lib/src/model/request_event.dart
 lib/src/model/request_event_contest_components_inner.dart
 lib/src/model/request_event_contest_components_inner_judge.dart
@@ -99,6 +110,9 @@ lib/src/model/request_team.dart
 lib/src/model/respond_contestan_nominations.dart
 lib/src/model/respond_contestan_nominations_data.dart
 lib/src/model/respond_contestan_nominations_data_content_inner.dart
+lib/src/model/respond_contestants.dart
+lib/src/model/respond_contestants_data.dart
+lib/src/model/respond_contestants_data_content_inner.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
 lib/src/model/respond_event_data_contest_components_inner.dart
@@ -139,3 +153,10 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/contestans_api_test.dart
+test/request_contestant_data_content_inner_test.dart
+test/request_contestant_data_test.dart
+test/request_contestant_test.dart
+test/respond_contestants_data_content_inner_test.dart
+test/respond_contestants_data_test.dart
+test/respond_contestants_test.dart

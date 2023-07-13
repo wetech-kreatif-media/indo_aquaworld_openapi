@@ -9,6 +9,9 @@ part of 'serializers.dart';
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestChangePassword.serializer)
       ..add(RequestContestanNomination.serializer)
+      ..add(RequestContestant.serializer)
+      ..add(RequestContestantData.serializer)
+      ..add(RequestContestantDataContentInner.serializer)
       ..add(RequestEvent.serializer)
       ..add(RequestEventContestComponentsInner.serializer)
       ..add(RequestEventContestComponentsInnerJudge.serializer)
@@ -25,6 +28,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondContestanNominations.serializer)
       ..add(RespondContestanNominationsData.serializer)
       ..add(RespondContestanNominationsDataContentInner.serializer)
+      ..add(RespondContestants.serializer)
+      ..add(RespondContestantsData.serializer)
+      ..add(RespondContestantsDataContentInner.serializer)
       ..add(RespondEvent.serializer)
       ..add(RespondEventData.serializer)
       ..add(RespondEventDataContestComponentsInner.serializer)
@@ -65,6 +71,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondUsersDataContentInnerRole.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList,
+              const [const FullType(RequestContestantDataContentInner)]),
+          () => new ListBuilder<RequestContestantDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
               const [const FullType(RequestEventContestComponentsInner)]),
           () => new ListBuilder<RequestEventContestComponentsInner>())
       ..addBuilderFactory(
@@ -80,6 +90,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType(RespondContestanNominationsDataContentInner)
           ]),
           () => new ListBuilder<RespondContestanNominationsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondContestantsDataContentInner)]),
+          () => new ListBuilder<RespondContestantsDataContentInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondEventDataTeamsInner)]),
