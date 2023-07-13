@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_contestant.dart';
 import 'package:openapi/src/model/respond_contestants.dart';
 import 'package:openapi/src/model/respond_global.dart';
@@ -118,6 +119,7 @@ class ContestansApi {
   /// Ambil data semua contestants
   ///
   /// Parameters:
+  /// * [fullname] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -128,6 +130,7 @@ class ContestansApi {
   /// Returns a [Future] containing a [Response] with a [RespondContestants] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondContestants>> getContestants({ 
+    String? fullname,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -148,9 +151,14 @@ class ContestansApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (fullname != null) r'fullname': encodeQueryParameter(_serializers, fullname, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

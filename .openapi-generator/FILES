@@ -153,10 +153,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/contestans_api_test.dart
-test/request_contestant_data_content_inner_test.dart
-test/request_contestant_data_test.dart
-test/request_contestant_test.dart
-test/respond_contestants_data_content_inner_test.dart
-test/respond_contestants_data_test.dart
-test/respond_contestants_test.dart

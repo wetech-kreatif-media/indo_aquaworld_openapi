@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getContestants**
-> RespondContestants getContestants()
+> RespondContestants getContestants(fullname)
 
 Get Contestants
 
@@ -68,9 +68,10 @@ Ambil data semua contestants
 import 'package:openapi/api.dart';
 
 final api = Openapi().getContestansApi();
+final String fullname = fullname_example; // String | 
 
 try {
-    final response = api.getContestants();
+    final response = api.getContestants(fullname);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ContestansApi->getContestants: $e\n');
@@ -78,7 +79,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fullname** | **String**|  | [optional] 
 
 ### Return type
 
