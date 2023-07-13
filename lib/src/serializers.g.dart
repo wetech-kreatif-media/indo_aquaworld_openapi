@@ -10,8 +10,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestChangePassword.serializer)
       ..add(RequestContestanNomination.serializer)
       ..add(RequestContestant.serializer)
-      ..add(RequestContestantData.serializer)
-      ..add(RequestContestantDataContentInner.serializer)
       ..add(RequestEvent.serializer)
       ..add(RequestEventContestComponentsInner.serializer)
       ..add(RequestEventContestComponentsInnerJudge.serializer)
@@ -69,10 +67,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondUsersData.serializer)
       ..add(RespondUsersDataContentInner.serializer)
       ..add(RespondUsersDataContentInnerRole.serializer)
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(RequestContestantDataContentInner)]),
-          () => new ListBuilder<RequestContestantDataContentInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RequestEventContestComponentsInner)]),

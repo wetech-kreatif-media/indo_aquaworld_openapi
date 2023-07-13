@@ -9,8 +9,6 @@ doc/PermissionApi.md
 doc/RequestChangePassword.md
 doc/RequestContestanNomination.md
 doc/RequestContestant.md
-doc/RequestContestantData.md
-doc/RequestContestantDataContentInner.md
 doc/RequestEvent.md
 doc/RequestEventContestComponentsInner.md
 doc/RequestEventContestComponentsInnerJudge.md
@@ -92,8 +90,6 @@ lib/src/model/date.dart
 lib/src/model/request_change_password.dart
 lib/src/model/request_contestan_nomination.dart
 lib/src/model/request_contestant.dart
-lib/src/model/request_contestant_data.dart
-lib/src/model/request_contestant_data_content_inner.dart
 lib/src/model/request_event.dart
 lib/src/model/request_event_contest_components_inner.dart
 lib/src/model/request_event_contest_components_inner_judge.dart

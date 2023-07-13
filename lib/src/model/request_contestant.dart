@@ -3,7 +3,6 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/request_contestant_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,19 +11,51 @@ part 'request_contestant.g.dart';
 /// RequestContestant
 ///
 /// Properties:
-/// * [responseCode] 
-/// * [responseMessage] 
-/// * [data] 
+/// * [fullname] 
+/// * [mobilePhone] 
+/// * [email] 
+/// * [city] 
+/// * [gender] 
+/// * [placeofBirth] 
+/// * [statusContestant] 
+/// * [dateofBirth] 
+/// * [photo] 
+/// * [codeContestant] 
+/// * [contestantTeam] 
 @BuiltValue()
 abstract class RequestContestant implements Built<RequestContestant, RequestContestantBuilder> {
-  @BuiltValueField(wireName: r'responseCode')
-  String? get responseCode;
+  @BuiltValueField(wireName: r'fullname')
+  String get fullname;
 
-  @BuiltValueField(wireName: r'responseMessage')
-  String? get responseMessage;
+  @BuiltValueField(wireName: r'mobilePhone')
+  String get mobilePhone;
 
-  @BuiltValueField(wireName: r'data')
-  RequestContestantData? get data;
+  @BuiltValueField(wireName: r'email')
+  String get email;
+
+  @BuiltValueField(wireName: r'city')
+  String get city;
+
+  @BuiltValueField(wireName: r'gender')
+  String get gender;
+
+  @BuiltValueField(wireName: r'placeofBirth')
+  String get placeofBirth;
+
+  @BuiltValueField(wireName: r'statusContestant')
+  String? get statusContestant;
+
+  @BuiltValueField(wireName: r'dateofBirth')
+  String get dateofBirth;
+
+  @BuiltValueField(wireName: r'photo')
+  String? get photo;
+
+  @BuiltValueField(wireName: r'codeContestant')
+  String? get codeContestant;
+
+  @BuiltValueField(wireName: r'contestantTeam')
+  String? get contestantTeam;
 
   RequestContestant._();
 
@@ -49,25 +80,67 @@ class _$RequestContestantSerializer implements PrimitiveSerializer<RequestContes
     RequestContestant object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.responseCode != null) {
-      yield r'responseCode';
+    yield r'fullname';
+    yield serializers.serialize(
+      object.fullname,
+      specifiedType: const FullType(String),
+    );
+    yield r'mobilePhone';
+    yield serializers.serialize(
+      object.mobilePhone,
+      specifiedType: const FullType(String),
+    );
+    yield r'email';
+    yield serializers.serialize(
+      object.email,
+      specifiedType: const FullType(String),
+    );
+    yield r'city';
+    yield serializers.serialize(
+      object.city,
+      specifiedType: const FullType(String),
+    );
+    yield r'gender';
+    yield serializers.serialize(
+      object.gender,
+      specifiedType: const FullType(String),
+    );
+    yield r'placeofBirth';
+    yield serializers.serialize(
+      object.placeofBirth,
+      specifiedType: const FullType(String),
+    );
+    if (object.statusContestant != null) {
+      yield r'statusContestant';
       yield serializers.serialize(
-        object.responseCode,
+        object.statusContestant,
         specifiedType: const FullType(String),
       );
     }
-    if (object.responseMessage != null) {
-      yield r'responseMessage';
+    yield r'dateofBirth';
+    yield serializers.serialize(
+      object.dateofBirth,
+      specifiedType: const FullType(String),
+    );
+    if (object.photo != null) {
+      yield r'photo';
       yield serializers.serialize(
-        object.responseMessage,
+        object.photo,
         specifiedType: const FullType(String),
       );
     }
-    if (object.data != null) {
-      yield r'data';
+    if (object.codeContestant != null) {
+      yield r'codeContestant';
       yield serializers.serialize(
-        object.data,
-        specifiedType: const FullType(RequestContestantData),
+        object.codeContestant,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.contestantTeam != null) {
+      yield r'contestantTeam';
+      yield serializers.serialize(
+        object.contestantTeam,
+        specifiedType: const FullType(String),
       );
     }
   }
@@ -93,26 +166,82 @@ class _$RequestContestantSerializer implements PrimitiveSerializer<RequestContes
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'responseCode':
+        case r'fullname':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.responseCode = valueDes;
+          result.fullname = valueDes;
           break;
-        case r'responseMessage':
+        case r'mobilePhone':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.responseMessage = valueDes;
+          result.mobilePhone = valueDes;
           break;
-        case r'data':
+        case r'email':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RequestContestantData),
-          ) as RequestContestantData;
-          result.data.replace(valueDes);
+            specifiedType: const FullType(String),
+          ) as String;
+          result.email = valueDes;
+          break;
+        case r'city':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.city = valueDes;
+          break;
+        case r'gender':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.gender = valueDes;
+          break;
+        case r'placeofBirth':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.placeofBirth = valueDes;
+          break;
+        case r'statusContestant':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.statusContestant = valueDes;
+          break;
+        case r'dateofBirth':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.dateofBirth = valueDes;
+          break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.photo = valueDes;
+          break;
+        case r'codeContestant':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.codeContestant = valueDes;
+          break;
+        case r'contestantTeam':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.contestantTeam = valueDes;
           break;
         default:
           unhandled.add(key);

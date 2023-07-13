@@ -17,8 +17,6 @@ import 'package:openapi/src/model/date.dart';
 import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_contestan_nomination.dart';
 import 'package:openapi/src/model/request_contestant.dart';
-import 'package:openapi/src/model/request_contestant_data.dart';
-import 'package:openapi/src/model/request_contestant_data_content_inner.dart';
 import 'package:openapi/src/model/request_event.dart';
 import 'package:openapi/src/model/request_event_contest_components_inner.dart';
 import 'package:openapi/src/model/request_event_contest_components_inner_judge.dart';
@@ -83,8 +81,6 @@ part 'serializers.g.dart';
   RequestChangePassword,
   RequestContestanNomination,
   RequestContestant,
-  RequestContestantData,
-  RequestContestantDataContentInner,
   RequestEvent,
   RequestEventContestComponentsInner,
   RequestEventContestComponentsInnerJudge,

@@ -21,8 +21,6 @@ export 'package:openapi/src/api/users_api.dart';
 export 'package:openapi/src/model/request_change_password.dart';
 export 'package:openapi/src/model/request_contestan_nomination.dart';
 export 'package:openapi/src/model/request_contestant.dart';
-export 'package:openapi/src/model/request_contestant_data.dart';
-export 'package:openapi/src/model/request_contestant_data_content_inner.dart';
 export 'package:openapi/src/model/request_event.dart';
 export 'package:openapi/src/model/request_event_contest_components_inner.dart';
 export 'package:openapi/src/model/request_event_contest_components_inner_judge.dart';
