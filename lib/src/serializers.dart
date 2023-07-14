@@ -29,6 +29,7 @@ import 'package:openapi/src/model/request_registrasi.dart';
 import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
+import 'package:openapi/src/model/request_tank.dart';
 import 'package:openapi/src/model/request_team.dart';
 import 'package:openapi/src/model/respond_contestan_nominations.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
@@ -72,6 +73,14 @@ import 'package:openapi/src/model/respond_success_login.dart';
 import 'package:openapi/src/model/respond_success_login_data.dart';
 import 'package:openapi/src/model/respond_success_login_data_role.dart';
 import 'package:openapi/src/model/respond_success_login_data_role_permissions_inner.dart';
+import 'package:openapi/src/model/respond_tank.dart';
+import 'package:openapi/src/model/respond_tank_data.dart';
+import 'package:openapi/src/model/respond_tanks.dart';
+import 'package:openapi/src/model/respond_tanks_data.dart';
+import 'package:openapi/src/model/respond_tanks_data_content_inner.dart';
+import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component.dart';
+import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart';
+import 'package:openapi/src/model/respond_tanks_data_content_inner_contestant.dart';
 import 'package:openapi/src/model/respond_team.dart';
 import 'package:openapi/src/model/respond_teams.dart';
 import 'package:openapi/src/model/respond_teams_data.dart';
@@ -99,6 +108,7 @@ part 'serializers.g.dart';
   RequestRole,
   RequestRolePermissionsInner,
   RequestSendOtp,
+  RequestTank,
   RequestTeam,
   RespondContestanNominations,
   RespondContestanNominationsData,
@@ -142,6 +152,14 @@ part 'serializers.g.dart';
   RespondSuccessLoginData,
   RespondSuccessLoginDataRole,
   RespondSuccessLoginDataRolePermissionsInner,
+  RespondTank,
+  RespondTankData,
+  RespondTanks,
+  RespondTanksData,
+  RespondTanksDataContentInner,
+  RespondTanksDataContentInnerContestComponent,
+  RespondTanksDataContentInnerContestComponentContestEvent,
+  RespondTanksDataContentInnerContestant,
   RespondTeam,
   RespondTeams,
   RespondTeamsData,

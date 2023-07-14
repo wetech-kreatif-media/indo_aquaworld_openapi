@@ -22,6 +22,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestRole.serializer)
       ..add(RequestRolePermissionsInner.serializer)
       ..add(RequestSendOtp.serializer)
+      ..add(RequestTank.serializer)
       ..add(RequestTeam.serializer)
       ..add(RespondContestanNominations.serializer)
       ..add(RespondContestanNominationsData.serializer)
@@ -65,6 +66,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondSuccessLoginData.serializer)
       ..add(RespondSuccessLoginDataRole.serializer)
       ..add(RespondSuccessLoginDataRolePermissionsInner.serializer)
+      ..add(RespondTank.serializer)
+      ..add(RespondTankData.serializer)
+      ..add(RespondTanks.serializer)
+      ..add(RespondTanksData.serializer)
+      ..add(RespondTanksDataContentInner.serializer)
+      ..add(RespondTanksDataContentInnerContestComponent.serializer)
+      ..add(RespondTanksDataContentInnerContestComponentContestEvent.serializer)
+      ..add(RespondTanksDataContentInnerContestant.serializer)
       ..add(RespondTeam.serializer)
       ..add(RespondTeams.serializer)
       ..add(RespondTeamsData.serializer)
@@ -141,6 +150,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType(RespondSuccessLoginDataRolePermissionsInner)
           ]),
           () => new ListBuilder<RespondSuccessLoginDataRolePermissionsInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondTanksDataContentInner)]),
+          () => new ListBuilder<RespondTanksDataContentInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondTeamsDataContentInner)]),
