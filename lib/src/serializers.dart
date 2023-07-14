@@ -39,6 +39,10 @@ import 'package:openapi/src/model/respond_contestants.dart';
 import 'package:openapi/src/model/respond_contestants_data.dart';
 import 'package:openapi/src/model/respond_contestants_data_content_inner.dart';
 import 'package:openapi/src/model/respond_event.dart';
+import 'package:openapi/src/model/respond_event1.dart';
+import 'package:openapi/src/model/respond_event1_data.dart';
+import 'package:openapi/src/model/respond_event1_data_contest_components_inner.dart';
+import 'package:openapi/src/model/respond_event1_data_contest_components_inner_nomination.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
@@ -105,6 +109,10 @@ part 'serializers.g.dart';
   RespondContestantsData,
   RespondContestantsDataContentInner,
   RespondEvent,
+  RespondEvent1,
+  RespondEvent1Data,
+  RespondEvent1DataContestComponentsInner,
+  RespondEvent1DataContestComponentsInnerNomination,
   RespondEventData,
   RespondEventDataContestComponentsInner,
   RespondEventDataContestComponentsInnerJudge,

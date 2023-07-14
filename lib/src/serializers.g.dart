@@ -32,6 +32,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondContestantsData.serializer)
       ..add(RespondContestantsDataContentInner.serializer)
       ..add(RespondEvent.serializer)
+      ..add(RespondEvent1.serializer)
+      ..add(RespondEvent1Data.serializer)
+      ..add(RespondEvent1DataContestComponentsInner.serializer)
+      ..add(RespondEvent1DataContestComponentsInnerNomination.serializer)
       ..add(RespondEventData.serializer)
       ..add(RespondEventDataContestComponentsInner.serializer)
       ..add(RespondEventDataContestComponentsInnerJudge.serializer)
@@ -144,7 +148,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondUsersDataContentInner)]),
-          () => new ListBuilder<RespondUsersDataContentInner>()))
+          () => new ListBuilder<RespondUsersDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondUsersDataContentInner)]),
+          () => new ListBuilder<RespondUsersDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondEvent1DataContestComponentsInner)]),
+          () => new ListBuilder<RespondEvent1DataContestComponentsInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

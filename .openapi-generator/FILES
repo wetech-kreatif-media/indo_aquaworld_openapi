@@ -31,6 +31,10 @@ doc/RespondContestants.md
 doc/RespondContestantsData.md
 doc/RespondContestantsDataContentInner.md
 doc/RespondEvent.md
+doc/RespondEvent1.md
+doc/RespondEvent1Data.md
+doc/RespondEvent1DataContestComponentsInner.md
+doc/RespondEvent1DataContestComponentsInnerNomination.md
 doc/RespondEventData.md
 doc/RespondEventDataContestComponentsInner.md
 doc/RespondEventDataContestComponentsInnerJudge.md
@@ -114,6 +118,10 @@ lib/src/model/respond_contestants.dart
 lib/src/model/respond_contestants_data.dart
 lib/src/model/respond_contestants_data_content_inner.dart
 lib/src/model/respond_event.dart
+lib/src/model/respond_event1.dart
+lib/src/model/respond_event1_data.dart
+lib/src/model/respond_event1_data_contest_components_inner.dart
+lib/src/model/respond_event1_data_contest_components_inner_nomination.dart
 lib/src/model/respond_event_data.dart
 lib/src/model/respond_event_data_contest_components_inner.dart
 lib/src/model/respond_event_data_contest_components_inner_judge.dart
@@ -153,5 +161,7 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/respond_contestant_data_test.dart
-test/respond_contestant_test.dart
+test/respond_event1_data_contest_components_inner_nomination_test.dart
+test/respond_event1_data_contest_components_inner_test.dart
+test/respond_event1_data_test.dart
+test/respond_event1_test.dart

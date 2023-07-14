@@ -10,6 +10,7 @@ import 'package:dio/dio.dart';
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_event.dart';
 import 'package:openapi/src/model/respond_event.dart';
+import 'package:openapi/src/model/respond_event1.dart';
 import 'package:openapi/src/model/respond_event_nominations.dart';
 import 'package:openapi/src/model/respond_events.dart';
 import 'package:openapi/src/model/respond_global.dart';
@@ -122,7 +123,7 @@ class EventsApi {
   ///
   /// Parameters:
   /// * [eventId] - 
-  /// * [requestEvent] 
+  /// * [respondEvent1] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -134,7 +135,7 @@ class EventsApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondEvent>> getEvent({ 
     required String eventId,
-    RequestEvent? requestEvent,
+    RespondEvent1? respondEvent1,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -159,8 +160,8 @@ class EventsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(RequestEvent);
-      _bodyData = requestEvent == null ? null : _serializers.serialize(requestEvent, specifiedType: _type);
+      const _type = FullType(RespondEvent1);
+      _bodyData = respondEvent1 == null ? null : _serializers.serialize(respondEvent1, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
