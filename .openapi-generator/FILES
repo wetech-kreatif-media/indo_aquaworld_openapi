@@ -22,6 +22,9 @@ doc/RequestRole.md
 doc/RequestRolePermissionsInner.md
 doc/RequestSendOtp.md
 doc/RequestTank.md
+doc/RequestTankAssesment.md
+doc/RequestTankAssesmentHead.md
+doc/RequestTankAssesmentOverall.md
 doc/RequestTeam.md
 doc/RespondContestanNominations.md
 doc/RespondContestanNominationsData.md
@@ -66,6 +69,9 @@ doc/RespondSuccessLoginData.md
 doc/RespondSuccessLoginDataRole.md
 doc/RespondSuccessLoginDataRolePermissionsInner.md
 doc/RespondTank.md
+doc/RespondTankAssesment.md
+doc/RespondTankAssesmentData.md
+doc/RespondTankAssesmentDataPinaltiesInner.md
 doc/RespondTankData.md
 doc/RespondTanks.md
 doc/RespondTanksData.md
@@ -81,6 +87,7 @@ doc/RespondUsersData.md
 doc/RespondUsersDataContentInner.md
 doc/RespondUsersDataContentInnerRole.md
 doc/RoleApi.md
+doc/TankAssesmentApi.md
 doc/TanksApi.md
 doc/TeamsApi.md
 doc/UsersApi.md
@@ -92,6 +99,7 @@ lib/src/api/events_api.dart
 lib/src/api/location_api.dart
 lib/src/api/permission_api.dart
 lib/src/api/role_api.dart
+lib/src/api/tank_assesment_api.dart
 lib/src/api/tanks_api.dart
 lib/src/api/teams_api.dart
 lib/src/api/users_api.dart
@@ -119,6 +127,9 @@ lib/src/model/request_role.dart
 lib/src/model/request_role_permissions_inner.dart
 lib/src/model/request_send_otp.dart
 lib/src/model/request_tank.dart
+lib/src/model/request_tank_assesment.dart
+lib/src/model/request_tank_assesment_head.dart
+lib/src/model/request_tank_assesment_overall.dart
 lib/src/model/request_team.dart
 lib/src/model/respond_contestan_nominations.dart
 lib/src/model/respond_contestan_nominations_data.dart
@@ -163,6 +174,9 @@ lib/src/model/respond_success_login_data.dart
 lib/src/model/respond_success_login_data_role.dart
 lib/src/model/respond_success_login_data_role_permissions_inner.dart
 lib/src/model/respond_tank.dart
+lib/src/model/respond_tank_assesment.dart
+lib/src/model/respond_tank_assesment_data.dart
+lib/src/model/respond_tank_assesment_data_pinalties_inner.dart
 lib/src/model/respond_tank_data.dart
 lib/src/model/respond_tanks.dart
 lib/src/model/respond_tanks_data.dart
@@ -179,3 +193,10 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/request_tank_assesment_head_test.dart
+test/request_tank_assesment_overall_test.dart
+test/request_tank_assesment_test.dart
+test/respond_tank_assesment_data_pinalties_inner_test.dart
+test/respond_tank_assesment_data_test.dart
+test/respond_tank_assesment_test.dart
+test/tank_assesment_api_test.dart
