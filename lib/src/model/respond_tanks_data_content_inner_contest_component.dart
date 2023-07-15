@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_success_login_data.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -81,7 +81,7 @@ abstract class RespondTanksDataContentInnerContestComponent implements Built<Res
   num? get overall;
 
   @BuiltValueField(wireName: r'judge')
-  RespondSuccessLoginData? get judge;
+  RespondEventDataContestComponentsInnerJudge? get judge;
 
   RespondTanksDataContentInnerContestComponent._();
 
@@ -222,7 +222,7 @@ class _$RespondTanksDataContentInnerContestComponentSerializer implements Primit
       yield r'judge';
       yield serializers.serialize(
         object.judge,
-        specifiedType: const FullType(RespondSuccessLoginData),
+        specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
       );
     }
   }
@@ -363,8 +363,8 @@ class _$RespondTanksDataContentInnerContestComponentSerializer implements Primit
         case r'judge':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSuccessLoginData),
-          ) as RespondSuccessLoginData;
+            specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
+          ) as RespondEventDataContestComponentsInnerJudge;
           result.judge.replace(valueDes);
           break;
         default:

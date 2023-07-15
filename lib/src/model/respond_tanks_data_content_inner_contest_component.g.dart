@@ -41,7 +41,7 @@ class _$RespondTanksDataContentInnerContestComponent
   @override
   final num? overall;
   @override
-  final RespondSuccessLoginData? judge;
+  final RespondEventDataContestComponentsInnerJudge? judge;
 
   factory _$RespondTanksDataContentInnerContestComponent(
           [void Function(RespondTanksDataContentInnerContestComponentBuilder)?
@@ -228,10 +228,12 @@ class RespondTanksDataContentInnerContestComponentBuilder
   num? get overall => _$this._overall;
   set overall(num? overall) => _$this._overall = overall;
 
-  RespondSuccessLoginDataBuilder? _judge;
-  RespondSuccessLoginDataBuilder get judge =>
-      _$this._judge ??= new RespondSuccessLoginDataBuilder();
-  set judge(RespondSuccessLoginDataBuilder? judge) => _$this._judge = judge;
+  RespondEventDataContestComponentsInnerJudgeBuilder? _judge;
+  RespondEventDataContestComponentsInnerJudgeBuilder get judge =>
+      _$this._judge ??=
+          new RespondEventDataContestComponentsInnerJudgeBuilder();
+  set judge(RespondEventDataContestComponentsInnerJudgeBuilder? judge) =>
+      _$this._judge = judge;
 
   RespondTanksDataContentInnerContestComponentBuilder() {
     RespondTanksDataContentInnerContestComponent._defaults(this);

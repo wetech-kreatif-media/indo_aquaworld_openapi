@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_tanks_data_content_inner_contestant.dart';
+import 'package:openapi/src/model/respond_contestant_data.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -48,100 +48,100 @@ part 'respond_tanks_data_content_inner.g.dart';
 @BuiltValue()
 abstract class RespondTanksDataContentInner implements Built<RespondTanksDataContentInner, RespondTanksDataContentInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
 
   @BuiltValueField(wireName: r'createdBy')
-  String? get createdBy;
+  String get createdBy;
 
   @BuiltValueField(wireName: r'updatedBy')
-  String? get updatedBy;
+  String get updatedBy;
 
   @BuiltValueField(wireName: r'created')
-  String? get created;
+  String get created;
 
   @BuiltValueField(wireName: r'updated')
-  String? get updated;
+  String get updated;
 
   @BuiltValueField(wireName: r'deleted')
-  num? get deleted;
+  num get deleted;
 
   @BuiltValueField(wireName: r'recordStatus')
-  String? get recordStatus;
+  String get recordStatus;
 
   @BuiltValueField(wireName: r'noTank')
-  String? get noTank;
+  String get noTank;
 
   @BuiltValueField(wireName: r'codeTank')
-  String? get codeTank;
+  String get codeTank;
 
   @BuiltValueField(wireName: r'photoUrl')
-  String? get photoUrl;
+  String get photoUrl;
 
   @BuiltValueField(wireName: r'contestant')
-  RespondTanksDataContentInnerContestant? get contestant;
+  RespondContestantData? get contestant;
 
   @BuiltValueField(wireName: r'contestComponent')
-  RespondTanksDataContentInnerContestComponent? get contestComponent;
+  RespondTanksDataContentInnerContestComponent get contestComponent;
 
   @BuiltValueField(wireName: r'head')
-  num? get head;
+  num get head;
 
   @BuiltValueField(wireName: r'headPoint')
-  num? get headPoint;
+  num get headPoint;
 
   @BuiltValueField(wireName: r'body')
-  num? get body;
+  num get body;
 
   @BuiltValueField(wireName: r'bodyPoint')
-  num? get bodyPoint;
+  num get bodyPoint;
 
   @BuiltValueField(wireName: r'colour')
-  num? get colour;
+  num get colour;
 
   @BuiltValueField(wireName: r'colourPoint')
-  num? get colourPoint;
+  num get colourPoint;
 
   @BuiltValueField(wireName: r'fantail')
-  num? get fantail;
+  num get fantail;
 
   @BuiltValueField(wireName: r'fantailPoint')
-  num? get fantailPoint;
+  num get fantailPoint;
 
   @BuiltValueField(wireName: r'face')
-  num? get face;
+  num get face;
 
   @BuiltValueField(wireName: r'facePoint')
-  num? get facePoint;
+  num get facePoint;
 
   @BuiltValueField(wireName: r'pearly')
-  num? get pearly;
+  num get pearly;
 
   @BuiltValueField(wireName: r'pearlyPoint')
-  num? get pearlyPoint;
+  num get pearlyPoint;
 
   @BuiltValueField(wireName: r'marking')
-  num? get marking;
+  num get marking;
 
   @BuiltValueField(wireName: r'markingPoint')
-  num? get markingPoint;
+  num get markingPoint;
 
   @BuiltValueField(wireName: r'overall')
-  num? get overall;
+  num get overall;
 
   @BuiltValueField(wireName: r'overallPoint')
-  num? get overallPoint;
+  num get overallPoint;
 
   @BuiltValueField(wireName: r'total')
-  num? get total;
+  num get total;
 
   @BuiltValueField(wireName: r'totalPenalty')
-  num? get totalPenalty;
+  num get totalPenalty;
 
   @BuiltValueField(wireName: r'grandTotal')
-  num? get grandTotal;
+  num get grandTotal;
 
   @BuiltValueField(wireName: r'assesmentStatus')
-  String? get assesmentStatus;
+  String get assesmentStatus;
 
   RespondTanksDataContentInner._();
 
@@ -166,230 +166,168 @@ class _$RespondTanksDataContentInnerSerializer implements PrimitiveSerializer<Re
     RespondTanksDataContentInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.createdBy != null) {
-      yield r'createdBy';
-      yield serializers.serialize(
-        object.createdBy,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updatedBy != null) {
-      yield r'updatedBy';
-      yield serializers.serialize(
-        object.updatedBy,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.created != null) {
-      yield r'created';
-      yield serializers.serialize(
-        object.created,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updated != null) {
-      yield r'updated';
-      yield serializers.serialize(
-        object.updated,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.deleted != null) {
-      yield r'deleted';
-      yield serializers.serialize(
-        object.deleted,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.recordStatus != null) {
-      yield r'recordStatus';
-      yield serializers.serialize(
-        object.recordStatus,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.noTank != null) {
-      yield r'noTank';
-      yield serializers.serialize(
-        object.noTank,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.codeTank != null) {
-      yield r'codeTank';
-      yield serializers.serialize(
-        object.codeTank,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.photoUrl != null) {
-      yield r'photoUrl';
-      yield serializers.serialize(
-        object.photoUrl,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
+    yield r'createdBy';
+    yield serializers.serialize(
+      object.createdBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'updatedBy';
+    yield serializers.serialize(
+      object.updatedBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'created';
+    yield serializers.serialize(
+      object.created,
+      specifiedType: const FullType(String),
+    );
+    yield r'updated';
+    yield serializers.serialize(
+      object.updated,
+      specifiedType: const FullType(String),
+    );
+    yield r'deleted';
+    yield serializers.serialize(
+      object.deleted,
+      specifiedType: const FullType(num),
+    );
+    yield r'recordStatus';
+    yield serializers.serialize(
+      object.recordStatus,
+      specifiedType: const FullType(String),
+    );
+    yield r'noTank';
+    yield serializers.serialize(
+      object.noTank,
+      specifiedType: const FullType(String),
+    );
+    yield r'codeTank';
+    yield serializers.serialize(
+      object.codeTank,
+      specifiedType: const FullType(String),
+    );
+    yield r'photoUrl';
+    yield serializers.serialize(
+      object.photoUrl,
+      specifiedType: const FullType(String),
+    );
     if (object.contestant != null) {
       yield r'contestant';
       yield serializers.serialize(
         object.contestant,
-        specifiedType: const FullType(RespondTanksDataContentInnerContestant),
+        specifiedType: const FullType(RespondContestantData),
       );
     }
-    if (object.contestComponent != null) {
-      yield r'contestComponent';
-      yield serializers.serialize(
-        object.contestComponent,
-        specifiedType: const FullType(RespondTanksDataContentInnerContestComponent),
-      );
-    }
-    if (object.head != null) {
-      yield r'head';
-      yield serializers.serialize(
-        object.head,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.headPoint != null) {
-      yield r'headPoint';
-      yield serializers.serialize(
-        object.headPoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.body != null) {
-      yield r'body';
-      yield serializers.serialize(
-        object.body,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.bodyPoint != null) {
-      yield r'bodyPoint';
-      yield serializers.serialize(
-        object.bodyPoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.colour != null) {
-      yield r'colour';
-      yield serializers.serialize(
-        object.colour,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.colourPoint != null) {
-      yield r'colourPoint';
-      yield serializers.serialize(
-        object.colourPoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.fantail != null) {
-      yield r'fantail';
-      yield serializers.serialize(
-        object.fantail,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.fantailPoint != null) {
-      yield r'fantailPoint';
-      yield serializers.serialize(
-        object.fantailPoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.face != null) {
-      yield r'face';
-      yield serializers.serialize(
-        object.face,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.facePoint != null) {
-      yield r'facePoint';
-      yield serializers.serialize(
-        object.facePoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.pearly != null) {
-      yield r'pearly';
-      yield serializers.serialize(
-        object.pearly,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.pearlyPoint != null) {
-      yield r'pearlyPoint';
-      yield serializers.serialize(
-        object.pearlyPoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.marking != null) {
-      yield r'marking';
-      yield serializers.serialize(
-        object.marking,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.markingPoint != null) {
-      yield r'markingPoint';
-      yield serializers.serialize(
-        object.markingPoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.overall != null) {
-      yield r'overall';
-      yield serializers.serialize(
-        object.overall,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.overallPoint != null) {
-      yield r'overallPoint';
-      yield serializers.serialize(
-        object.overallPoint,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.total != null) {
-      yield r'total';
-      yield serializers.serialize(
-        object.total,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.totalPenalty != null) {
-      yield r'totalPenalty';
-      yield serializers.serialize(
-        object.totalPenalty,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.grandTotal != null) {
-      yield r'grandTotal';
-      yield serializers.serialize(
-        object.grandTotal,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.assesmentStatus != null) {
-      yield r'assesmentStatus';
-      yield serializers.serialize(
-        object.assesmentStatus,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'contestComponent';
+    yield serializers.serialize(
+      object.contestComponent,
+      specifiedType: const FullType(RespondTanksDataContentInnerContestComponent),
+    );
+    yield r'head';
+    yield serializers.serialize(
+      object.head,
+      specifiedType: const FullType(num),
+    );
+    yield r'headPoint';
+    yield serializers.serialize(
+      object.headPoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'body';
+    yield serializers.serialize(
+      object.body,
+      specifiedType: const FullType(num),
+    );
+    yield r'bodyPoint';
+    yield serializers.serialize(
+      object.bodyPoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'colour';
+    yield serializers.serialize(
+      object.colour,
+      specifiedType: const FullType(num),
+    );
+    yield r'colourPoint';
+    yield serializers.serialize(
+      object.colourPoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'fantail';
+    yield serializers.serialize(
+      object.fantail,
+      specifiedType: const FullType(num),
+    );
+    yield r'fantailPoint';
+    yield serializers.serialize(
+      object.fantailPoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'face';
+    yield serializers.serialize(
+      object.face,
+      specifiedType: const FullType(num),
+    );
+    yield r'facePoint';
+    yield serializers.serialize(
+      object.facePoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'pearly';
+    yield serializers.serialize(
+      object.pearly,
+      specifiedType: const FullType(num),
+    );
+    yield r'pearlyPoint';
+    yield serializers.serialize(
+      object.pearlyPoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'marking';
+    yield serializers.serialize(
+      object.marking,
+      specifiedType: const FullType(num),
+    );
+    yield r'markingPoint';
+    yield serializers.serialize(
+      object.markingPoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'overall';
+    yield serializers.serialize(
+      object.overall,
+      specifiedType: const FullType(num),
+    );
+    yield r'overallPoint';
+    yield serializers.serialize(
+      object.overallPoint,
+      specifiedType: const FullType(num),
+    );
+    yield r'total';
+    yield serializers.serialize(
+      object.total,
+      specifiedType: const FullType(num),
+    );
+    yield r'totalPenalty';
+    yield serializers.serialize(
+      object.totalPenalty,
+      specifiedType: const FullType(num),
+    );
+    yield r'grandTotal';
+    yield serializers.serialize(
+      object.grandTotal,
+      specifiedType: const FullType(num),
+    );
+    yield r'assesmentStatus';
+    yield serializers.serialize(
+      object.assesmentStatus,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override
@@ -486,8 +424,8 @@ class _$RespondTanksDataContentInnerSerializer implements PrimitiveSerializer<Re
         case r'contestant':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondTanksDataContentInnerContestant),
-          ) as RespondTanksDataContentInnerContestant;
+            specifiedType: const FullType(RespondContestantData),
+          ) as RespondContestantData;
           result.contestant.replace(valueDes);
           break;
         case r'contestComponent':
