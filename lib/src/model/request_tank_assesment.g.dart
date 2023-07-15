@@ -22,7 +22,7 @@ class _$RequestTankAssesment extends RequestTankAssesment {
   @override
   final RequestTankAssesmentHead? marking;
   @override
-  final RequestTankAssesmentOverall? overall;
+  final RequestTankAssesmentHead? overall;
   @override
   final String? defect;
 
@@ -141,10 +141,10 @@ class RequestTankAssesmentBuilder
   set marking(RequestTankAssesmentHeadBuilder? marking) =>
       _$this._marking = marking;
 
-  RequestTankAssesmentOverallBuilder? _overall;
-  RequestTankAssesmentOverallBuilder get overall =>
-      _$this._overall ??= new RequestTankAssesmentOverallBuilder();
-  set overall(RequestTankAssesmentOverallBuilder? overall) =>
+  RequestTankAssesmentHeadBuilder? _overall;
+  RequestTankAssesmentHeadBuilder get overall =>
+      _$this._overall ??= new RequestTankAssesmentHeadBuilder();
+  set overall(RequestTankAssesmentHeadBuilder? overall) =>
       _$this._overall = overall;
 
   String? _defect;

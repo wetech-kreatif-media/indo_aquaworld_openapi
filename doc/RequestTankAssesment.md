@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **face** | [**RequestTankAssesmentHead**](RequestTankAssesmentHead.md) |  | [optional] 
 **pearly** | [**RequestTankAssesmentHead**](RequestTankAssesmentHead.md) |  | [optional] 
 **marking** | [**RequestTankAssesmentHead**](RequestTankAssesmentHead.md) |  | [optional] 
-**overall** | [**RequestTankAssesmentOverall**](RequestTankAssesmentOverall.md) |  | [optional] 
+**overall** | [**RequestTankAssesmentHead**](RequestTankAssesmentHead.md) |  | [optional] 
 **defect** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

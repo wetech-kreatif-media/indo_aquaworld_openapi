@@ -38,7 +38,6 @@ export 'package:openapi/src/model/request_send_otp.dart';
 export 'package:openapi/src/model/request_tank.dart';
 export 'package:openapi/src/model/request_tank_assesment.dart';
 export 'package:openapi/src/model/request_tank_assesment_head.dart';
-export 'package:openapi/src/model/request_tank_assesment_overall.dart';
 export 'package:openapi/src/model/request_team.dart';
 export 'package:openapi/src/model/respond_contestan_nominations.dart';
 export 'package:openapi/src/model/respond_contestan_nominations_data.dart';

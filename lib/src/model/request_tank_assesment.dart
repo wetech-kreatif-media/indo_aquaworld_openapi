@@ -4,7 +4,6 @@
 
 // ignore_for_file: unused_element
 import 'package:openapi/src/model/request_tank_assesment_head.dart';
-import 'package:openapi/src/model/request_tank_assesment_overall.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -46,7 +45,7 @@ abstract class RequestTankAssesment implements Built<RequestTankAssesment, Reque
   RequestTankAssesmentHead? get marking;
 
   @BuiltValueField(wireName: r'overall')
-  RequestTankAssesmentOverall? get overall;
+  RequestTankAssesmentHead? get overall;
 
   @BuiltValueField(wireName: r'defect')
   String? get defect;
@@ -127,7 +126,7 @@ class _$RequestTankAssesmentSerializer implements PrimitiveSerializer<RequestTan
       yield r'overall';
       yield serializers.serialize(
         object.overall,
-        specifiedType: const FullType(RequestTankAssesmentOverall),
+        specifiedType: const FullType(RequestTankAssesmentHead),
       );
     }
     if (object.defect != null) {
@@ -212,8 +211,8 @@ class _$RequestTankAssesmentSerializer implements PrimitiveSerializer<RequestTan
         case r'overall':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RequestTankAssesmentOverall),
-          ) as RequestTankAssesmentOverall;
+            specifiedType: const FullType(RequestTankAssesmentHead),
+          ) as RequestTankAssesmentHead;
           result.overall.replace(valueDes);
           break;
         case r'defect':

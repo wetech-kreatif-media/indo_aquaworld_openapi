@@ -32,7 +32,6 @@ import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/request_tank.dart';
 import 'package:openapi/src/model/request_tank_assesment.dart';
 import 'package:openapi/src/model/request_tank_assesment_head.dart';
-import 'package:openapi/src/model/request_tank_assesment_overall.dart';
 import 'package:openapi/src/model/request_team.dart';
 import 'package:openapi/src/model/respond_contestan_nominations.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
@@ -116,7 +115,6 @@ part 'serializers.g.dart';
   RequestTank,
   RequestTankAssesment,
   RequestTankAssesmentHead,
-  RequestTankAssesmentOverall,
   RequestTeam,
   RespondContestanNominations,
   RespondContestanNominationsData,
