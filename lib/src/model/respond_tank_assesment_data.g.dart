@@ -14,6 +14,12 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
   @override
   final String? photo;
   @override
+  final String? contestantName;
+  @override
+  final String? contestantPhoto;
+  @override
+  final String? contestantCity;
+  @override
   final String? judgeName;
   @override
   final String? judgePhoto;
@@ -54,6 +60,9 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
       {this.id,
       this.name,
       this.photo,
+      this.contestantName,
+      this.contestantPhoto,
+      this.contestantCity,
       this.judgeName,
       this.judgePhoto,
       this.judgeCity,
@@ -88,6 +97,9 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
         id == other.id &&
         name == other.name &&
         photo == other.photo &&
+        contestantName == other.contestantName &&
+        contestantPhoto == other.contestantPhoto &&
+        contestantCity == other.contestantCity &&
         judgeName == other.judgeName &&
         judgePhoto == other.judgePhoto &&
         judgeCity == other.judgeCity &&
@@ -112,6 +124,9 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
+    _$hash = $jc(_$hash, contestantName.hashCode);
+    _$hash = $jc(_$hash, contestantPhoto.hashCode);
+    _$hash = $jc(_$hash, contestantCity.hashCode);
     _$hash = $jc(_$hash, judgeName.hashCode);
     _$hash = $jc(_$hash, judgePhoto.hashCode);
     _$hash = $jc(_$hash, judgeCity.hashCode);
@@ -138,6 +153,9 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
           ..add('id', id)
           ..add('name', name)
           ..add('photo', photo)
+          ..add('contestantName', contestantName)
+          ..add('contestantPhoto', contestantPhoto)
+          ..add('contestantCity', contestantCity)
           ..add('judgeName', judgeName)
           ..add('judgePhoto', judgePhoto)
           ..add('judgeCity', judgeCity)
@@ -174,6 +192,21 @@ class RespondTankAssesmentDataBuilder
   String? _photo;
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
+
+  String? _contestantName;
+  String? get contestantName => _$this._contestantName;
+  set contestantName(String? contestantName) =>
+      _$this._contestantName = contestantName;
+
+  String? _contestantPhoto;
+  String? get contestantPhoto => _$this._contestantPhoto;
+  set contestantPhoto(String? contestantPhoto) =>
+      _$this._contestantPhoto = contestantPhoto;
+
+  String? _contestantCity;
+  String? get contestantCity => _$this._contestantCity;
+  set contestantCity(String? contestantCity) =>
+      _$this._contestantCity = contestantCity;
 
   String? _judgeName;
   String? get judgeName => _$this._judgeName;
@@ -254,6 +287,9 @@ class RespondTankAssesmentDataBuilder
       _id = $v.id;
       _name = $v.name;
       _photo = $v.photo;
+      _contestantName = $v.contestantName;
+      _contestantPhoto = $v.contestantPhoto;
+      _contestantCity = $v.contestantCity;
       _judgeName = $v.judgeName;
       _judgePhoto = $v.judgePhoto;
       _judgeCity = $v.judgeCity;
@@ -297,6 +333,9 @@ class RespondTankAssesmentDataBuilder
               id: id,
               name: name,
               photo: photo,
+              contestantName: contestantName,
+              contestantPhoto: contestantPhoto,
+              contestantCity: contestantCity,
               judgeName: judgeName,
               judgePhoto: judgePhoto,
               judgeCity: judgeCity,

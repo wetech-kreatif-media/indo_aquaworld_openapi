@@ -16,6 +16,9 @@ part 'respond_tank_assesment_data.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [photo] 
+/// * [contestantName] 
+/// * [contestantPhoto] 
+/// * [contestantCity] 
 /// * [judgeName] 
 /// * [judgePhoto] 
 /// * [judgeCity] 
@@ -42,6 +45,15 @@ abstract class RespondTankAssesmentData implements Built<RespondTankAssesmentDat
 
   @BuiltValueField(wireName: r'photo')
   String? get photo;
+
+  @BuiltValueField(wireName: r'contestantName')
+  String? get contestantName;
+
+  @BuiltValueField(wireName: r'contestantPhoto')
+  String? get contestantPhoto;
+
+  @BuiltValueField(wireName: r'contestantCity')
+  String? get contestantCity;
 
   @BuiltValueField(wireName: r'judgeName')
   String? get judgeName;
@@ -132,6 +144,27 @@ class _$RespondTankAssesmentDataSerializer implements PrimitiveSerializer<Respon
       yield r'photo';
       yield serializers.serialize(
         object.photo,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.contestantName != null) {
+      yield r'contestantName';
+      yield serializers.serialize(
+        object.contestantName,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.contestantPhoto != null) {
+      yield r'contestantPhoto';
+      yield serializers.serialize(
+        object.contestantPhoto,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.contestantCity != null) {
+      yield r'contestantCity';
+      yield serializers.serialize(
+        object.contestantCity,
         specifiedType: const FullType(String),
       );
     }
@@ -290,6 +323,27 @@ class _$RespondTankAssesmentDataSerializer implements PrimitiveSerializer<Respon
             specifiedType: const FullType(String),
           ) as String;
           result.photo = valueDes;
+          break;
+        case r'contestantName':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.contestantName = valueDes;
+          break;
+        case r'contestantPhoto':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.contestantPhoto = valueDes;
+          break;
+        case r'contestantCity':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.contestantCity = valueDes;
           break;
         case r'judgeName':
           final valueDes = serializers.deserialize(
