@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **contestantName** | **String** |  | [optional] 
 **contestantPhoto** | **String** |  | [optional] 
 **contestantCity** | **String** |  | [optional] 
+**contestantEmail** | **String** |  | [optional] 
 **judgeName** | **String** |  | [optional] 
 **judgePhoto** | **String** |  | [optional] 
 **judgeCity** | **String** |  | [optional] 

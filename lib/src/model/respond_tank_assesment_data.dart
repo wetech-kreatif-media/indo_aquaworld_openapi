@@ -19,6 +19,7 @@ part 'respond_tank_assesment_data.g.dart';
 /// * [contestantName] 
 /// * [contestantPhoto] 
 /// * [contestantCity] 
+/// * [contestantEmail] 
 /// * [judgeName] 
 /// * [judgePhoto] 
 /// * [judgeCity] 
@@ -54,6 +55,9 @@ abstract class RespondTankAssesmentData implements Built<RespondTankAssesmentDat
 
   @BuiltValueField(wireName: r'contestantCity')
   String? get contestantCity;
+
+  @BuiltValueField(wireName: r'contestantEmail')
+  String? get contestantEmail;
 
   @BuiltValueField(wireName: r'judgeName')
   String? get judgeName;
@@ -165,6 +169,13 @@ class _$RespondTankAssesmentDataSerializer implements PrimitiveSerializer<Respon
       yield r'contestantCity';
       yield serializers.serialize(
         object.contestantCity,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.contestantEmail != null) {
+      yield r'contestantEmail';
+      yield serializers.serialize(
+        object.contestantEmail,
         specifiedType: const FullType(String),
       );
     }
@@ -344,6 +355,13 @@ class _$RespondTankAssesmentDataSerializer implements PrimitiveSerializer<Respon
             specifiedType: const FullType(String),
           ) as String;
           result.contestantCity = valueDes;
+          break;
+        case r'contestantEmail':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.contestantEmail = valueDes;
           break;
         case r'judgeName':
           final valueDes = serializers.deserialize(
