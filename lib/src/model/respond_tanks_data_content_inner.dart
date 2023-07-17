@@ -45,6 +45,7 @@ part 'respond_tanks_data_content_inner.g.dart';
 /// * [totalPenalty] 
 /// * [grandTotal] 
 /// * [assesmentStatus] 
+/// * [rank] 
 @BuiltValue()
 abstract class RespondTanksDataContentInner implements Built<RespondTanksDataContentInner, RespondTanksDataContentInnerBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -142,6 +143,9 @@ abstract class RespondTanksDataContentInner implements Built<RespondTanksDataCon
 
   @BuiltValueField(wireName: r'assesmentStatus')
   String get assesmentStatus;
+
+  @BuiltValueField(wireName: r'rank')
+  String? get rank;
 
   RespondTanksDataContentInner._();
 
@@ -328,6 +332,13 @@ class _$RespondTanksDataContentInnerSerializer implements PrimitiveSerializer<Re
       object.assesmentStatus,
       specifiedType: const FullType(String),
     );
+    if (object.rank != null) {
+      yield r'rank';
+      yield serializers.serialize(
+        object.rank,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
@@ -574,6 +585,13 @@ class _$RespondTanksDataContentInnerSerializer implements PrimitiveSerializer<Re
             specifiedType: const FullType(String),
           ) as String;
           result.assesmentStatus = valueDes;
+          break;
+        case r'rank':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.rank = valueDes;
           break;
         default:
           unhandled.add(key);

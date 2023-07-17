@@ -71,6 +71,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
   final num grandTotal;
   @override
   final String assesmentStatus;
+  @override
+  final String? rank;
 
   factory _$RespondTanksDataContentInner(
           [void Function(RespondTanksDataContentInnerBuilder)? updates]) =>
@@ -108,7 +110,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
       required this.total,
       required this.totalPenalty,
       required this.grandTotal,
-      required this.assesmentStatus})
+      required this.assesmentStatus,
+      this.rank})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondTanksDataContentInner', 'id');
@@ -218,7 +221,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
         total == other.total &&
         totalPenalty == other.totalPenalty &&
         grandTotal == other.grandTotal &&
-        assesmentStatus == other.assesmentStatus;
+        assesmentStatus == other.assesmentStatus &&
+        rank == other.rank;
   }
 
   @override
@@ -256,6 +260,7 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
     _$hash = $jc(_$hash, totalPenalty.hashCode);
     _$hash = $jc(_$hash, grandTotal.hashCode);
     _$hash = $jc(_$hash, assesmentStatus.hashCode);
+    _$hash = $jc(_$hash, rank.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -294,7 +299,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
           ..add('total', total)
           ..add('totalPenalty', totalPenalty)
           ..add('grandTotal', grandTotal)
-          ..add('assesmentStatus', assesmentStatus))
+          ..add('assesmentStatus', assesmentStatus)
+          ..add('rank', rank))
         .toString();
   }
 }
@@ -441,6 +447,10 @@ class RespondTanksDataContentInnerBuilder
   set assesmentStatus(String? assesmentStatus) =>
       _$this._assesmentStatus = assesmentStatus;
 
+  String? _rank;
+  String? get rank => _$this._rank;
+  set rank(String? rank) => _$this._rank = rank;
+
   RespondTanksDataContentInnerBuilder() {
     RespondTanksDataContentInner._defaults(this);
   }
@@ -480,6 +490,7 @@ class RespondTanksDataContentInnerBuilder
       _totalPenalty = $v.totalPenalty;
       _grandTotal = $v.grandTotal;
       _assesmentStatus = $v.assesmentStatus;
+      _rank = $v.rank;
       _$v = null;
     }
     return this;
@@ -543,7 +554,8 @@ class RespondTanksDataContentInnerBuilder
               total: BuiltValueNullFieldError.checkNotNull(total, r'RespondTanksDataContentInner', 'total'),
               totalPenalty: BuiltValueNullFieldError.checkNotNull(totalPenalty, r'RespondTanksDataContentInner', 'totalPenalty'),
               grandTotal: BuiltValueNullFieldError.checkNotNull(grandTotal, r'RespondTanksDataContentInner', 'grandTotal'),
-              assesmentStatus: BuiltValueNullFieldError.checkNotNull(assesmentStatus, r'RespondTanksDataContentInner', 'assesmentStatus'));
+              assesmentStatus: BuiltValueNullFieldError.checkNotNull(assesmentStatus, r'RespondTanksDataContentInner', 'assesmentStatus'),
+              rank: rank);
     } catch (_) {
       late String _$failedField;
       try {
