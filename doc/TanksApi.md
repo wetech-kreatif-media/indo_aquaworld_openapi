@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**addTank**](TanksApi.md#addtank) | **POST** /public/event/{eventId}/tank/{nominasiId} | Add Tank
 [**getTank**](TanksApi.md#gettank) | **GET** /public/tank/{tankId} | Get Tank
 [**getTanks**](TanksApi.md#gettanks) | **GET** /public/event/{eventId}/tank/{nominasiId} | Get Tanks
+[**getTanksSummary**](TanksApi.md#gettankssummary) | **GET** /public/event/{eventId}/summary/{nominasiId} | Get Tanks
 [**putTank**](TanksApi.md#puttank) | **PUT** /public/tank/{tankId} | Put Tank
 
 
@@ -125,6 +126,51 @@ try {
     print(response);
 } catch on DioError (e) {
     print('Exception when calling TanksApi->getTanks: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventId** | **String**|  | 
+ **nominasiId** | **String**|  | 
+
+### Return type
+
+[**RespondTanks**](RespondTanks.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getTanksSummary**
+> RespondTanks getTanksSummary(eventId, nominasiId)
+
+Get Tanks
+
+Ambil data tanks
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getTanksApi();
+final String eventId = eventId_example; // String | 
+final String nominasiId = nominasiId_example; // String | 
+
+try {
+    final response = api.getTanksSummary(eventId, nominasiId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling TanksApi->getTanksSummary: $e\n');
 }
 ```
 
