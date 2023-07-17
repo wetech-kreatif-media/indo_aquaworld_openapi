@@ -28,7 +28,7 @@ abstract class RequestTank implements Built<RequestTank, RequestTankBuilder> {
   String get codeTank;
 
   @BuiltValueField(wireName: r'photo')
-  String get photo;
+  String? get photo;
 
   @BuiltValueField(wireName: r'contestant')
   String get contestant;
@@ -73,11 +73,13 @@ class _$RequestTankSerializer implements PrimitiveSerializer<RequestTank> {
       object.codeTank,
       specifiedType: const FullType(String),
     );
-    yield r'photo';
-    yield serializers.serialize(
-      object.photo,
-      specifiedType: const FullType(String),
-    );
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'contestant';
     yield serializers.serialize(
       object.contestant,

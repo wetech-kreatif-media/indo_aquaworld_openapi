@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **noTank** | **String** |  | 
 **codeTank** | **String** |  | 
-**photo** | **String** |  | 
+**photo** | **String** |  | [optional] 
 **contestant** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
