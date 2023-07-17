@@ -383,7 +383,7 @@ class TanksApi {
         'secure': <Map<String, String>>[],
         ...?extra,
       },
-      contentType: 'others',
+      contentType: 'application/json',
       validateStatus: validateStatus,
     );
 
