@@ -28,7 +28,7 @@ import 'package:openapi/api.dart';
 final api = Openapi().getContestanNominationApi();
 final String eventId = eventId_example; // String | 
 final String nominasiId = nominasiId_example; // String | 
-final RequestContestanNomination requestContestanNomination = {"fullname":"Hasan Basri","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","dateofBirth":"sdasdas das","statusContestant":"Individual","photo":"asdsdasd","codeContestant":"sdasd"}; // RequestContestanNomination | 
+final RequestContestanNomination requestContestanNomination = {"fullname":"Hasan Basri","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","dateofBirth":"sdasdas das","statusContestant":"Individual","photo":"asdsdasd","codeContestant":"sdasd","contestantTeam":"sdasdasdasd"}; // RequestContestanNomination | 
 
 try {
     final response = api.addEventNominationContestant(eventId, nominasiId, requestContestanNomination);
@@ -123,7 +123,7 @@ final api = Openapi().getContestanNominationApi();
 final String nominasiId = nominasiId_example; // String | 
 final String eventId = eventId_example; // String | 
 final String userId = userId_example; // String | 
-final RequestContestanNomination requestContestanNomination = {"fullname":"Hasan Basri","mobilePhone":"62822135423190","email":"example@gmail.com","dateofBirth":"sdasdas das","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"Individual","photo":"asdsdasd","codeContestant":"sdasd"}; // RequestContestanNomination | 
+final RequestContestanNomination requestContestanNomination = {"fullname":"Hasan Basri","mobilePhone":"62822135423190","email":"example@gmail.com","dateofBirth":"sdasdas das","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"Individual","photo":"asdsdasd","codeContestant":"sdasd","contestantTeam":"sdasdasdsad"}; // RequestContestanNomination | 
 
 try {
     final response = api.putEventNominationContestant(nominasiId, eventId, userId, requestContestanNomination);

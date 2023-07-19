@@ -21,6 +21,7 @@ part 'request_contestan_nomination.g.dart';
 /// * [statusContestant] 
 /// * [photo] 
 /// * [codeContestant] 
+/// * [contestantTeam] 
 @BuiltValue()
 abstract class RequestContestanNomination implements Built<RequestContestanNomination, RequestContestanNominationBuilder> {
   @BuiltValueField(wireName: r'fullname')
@@ -52,6 +53,9 @@ abstract class RequestContestanNomination implements Built<RequestContestanNomin
 
   @BuiltValueField(wireName: r'codeContestant')
   String? get codeContestant;
+
+  @BuiltValueField(wireName: r'contestantTeam')
+  String? get contestantTeam;
 
   RequestContestanNomination._();
 
@@ -129,6 +133,13 @@ class _$RequestContestanNominationSerializer implements PrimitiveSerializer<Requ
       yield r'codeContestant';
       yield serializers.serialize(
         object.codeContestant,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.contestantTeam != null) {
+      yield r'contestantTeam';
+      yield serializers.serialize(
+        object.contestantTeam,
         specifiedType: const FullType(String),
       );
     }
@@ -224,6 +235,13 @@ class _$RequestContestanNominationSerializer implements PrimitiveSerializer<Requ
             specifiedType: const FullType(String),
           ) as String;
           result.codeContestant = valueDes;
+          break;
+        case r'contestantTeam':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.contestantTeam = valueDes;
           break;
         default:
           unhandled.add(key);

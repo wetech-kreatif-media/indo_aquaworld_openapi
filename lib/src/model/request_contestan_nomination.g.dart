@@ -27,6 +27,8 @@ class _$RequestContestanNomination extends RequestContestanNomination {
   final String? photo;
   @override
   final String? codeContestant;
+  @override
+  final String? contestantTeam;
 
   factory _$RequestContestanNomination(
           [void Function(RequestContestanNominationBuilder)? updates]) =>
@@ -42,7 +44,8 @@ class _$RequestContestanNomination extends RequestContestanNomination {
       required this.placeofBirth,
       this.statusContestant,
       this.photo,
-      this.codeContestant})
+      this.codeContestant,
+      this.contestantTeam})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         fullname, r'RequestContestanNomination', 'fullname');
@@ -82,7 +85,8 @@ class _$RequestContestanNomination extends RequestContestanNomination {
         placeofBirth == other.placeofBirth &&
         statusContestant == other.statusContestant &&
         photo == other.photo &&
-        codeContestant == other.codeContestant;
+        codeContestant == other.codeContestant &&
+        contestantTeam == other.contestantTeam;
   }
 
   @override
@@ -98,6 +102,7 @@ class _$RequestContestanNomination extends RequestContestanNomination {
     _$hash = $jc(_$hash, statusContestant.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, codeContestant.hashCode);
+    _$hash = $jc(_$hash, contestantTeam.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -114,7 +119,8 @@ class _$RequestContestanNomination extends RequestContestanNomination {
           ..add('placeofBirth', placeofBirth)
           ..add('statusContestant', statusContestant)
           ..add('photo', photo)
-          ..add('codeContestant', codeContestant))
+          ..add('codeContestant', codeContestant)
+          ..add('contestantTeam', contestantTeam))
         .toString();
   }
 }
@@ -166,6 +172,11 @@ class RequestContestanNominationBuilder
   set codeContestant(String? codeContestant) =>
       _$this._codeContestant = codeContestant;
 
+  String? _contestantTeam;
+  String? get contestantTeam => _$this._contestantTeam;
+  set contestantTeam(String? contestantTeam) =>
+      _$this._contestantTeam = contestantTeam;
+
   RequestContestanNominationBuilder() {
     RequestContestanNomination._defaults(this);
   }
@@ -183,6 +194,7 @@ class RequestContestanNominationBuilder
       _statusContestant = $v.statusContestant;
       _photo = $v.photo;
       _codeContestant = $v.codeContestant;
+      _contestantTeam = $v.contestantTeam;
       _$v = null;
     }
     return this;
@@ -221,7 +233,8 @@ class RequestContestanNominationBuilder
                 placeofBirth, r'RequestContestanNomination', 'placeofBirth'),
             statusContestant: statusContestant,
             photo: photo,
-            codeContestant: codeContestant);
+            codeContestant: codeContestant,
+            contestantTeam: contestantTeam);
     replace(_$result);
     return _$result;
   }
