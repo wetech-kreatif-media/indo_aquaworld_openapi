@@ -16,6 +16,7 @@ part 'request_contestan_nomination.g.dart';
 /// * [email] 
 /// * [city] 
 /// * [gender] 
+/// * [dateofBirth] 
 /// * [placeofBirth] 
 /// * [statusContestant] 
 /// * [photo] 
@@ -36,6 +37,9 @@ abstract class RequestContestanNomination implements Built<RequestContestanNomin
 
   @BuiltValueField(wireName: r'gender')
   String get gender;
+
+  @BuiltValueField(wireName: r'dateofBirth')
+  String get dateofBirth;
 
   @BuiltValueField(wireName: r'placeofBirth')
   String get placeofBirth;
@@ -95,6 +99,11 @@ class _$RequestContestanNominationSerializer implements PrimitiveSerializer<Requ
     yield r'gender';
     yield serializers.serialize(
       object.gender,
+      specifiedType: const FullType(String),
+    );
+    yield r'dateofBirth';
+    yield serializers.serialize(
+      object.dateofBirth,
       specifiedType: const FullType(String),
     );
     yield r'placeofBirth';
@@ -180,6 +189,13 @@ class _$RequestContestanNominationSerializer implements PrimitiveSerializer<Requ
             specifiedType: const FullType(String),
           ) as String;
           result.gender = valueDes;
+          break;
+        case r'dateofBirth':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.dateofBirth = valueDes;
           break;
         case r'placeofBirth':
           final valueDes = serializers.deserialize(

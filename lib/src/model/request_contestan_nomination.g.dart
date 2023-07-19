@@ -18,6 +18,8 @@ class _$RequestContestanNomination extends RequestContestanNomination {
   @override
   final String gender;
   @override
+  final String dateofBirth;
+  @override
   final String placeofBirth;
   @override
   final String? statusContestant;
@@ -36,6 +38,7 @@ class _$RequestContestanNomination extends RequestContestanNomination {
       required this.email,
       required this.city,
       required this.gender,
+      required this.dateofBirth,
       required this.placeofBirth,
       this.statusContestant,
       this.photo,
@@ -51,6 +54,8 @@ class _$RequestContestanNomination extends RequestContestanNomination {
         city, r'RequestContestanNomination', 'city');
     BuiltValueNullFieldError.checkNotNull(
         gender, r'RequestContestanNomination', 'gender');
+    BuiltValueNullFieldError.checkNotNull(
+        dateofBirth, r'RequestContestanNomination', 'dateofBirth');
     BuiltValueNullFieldError.checkNotNull(
         placeofBirth, r'RequestContestanNomination', 'placeofBirth');
   }
@@ -73,6 +78,7 @@ class _$RequestContestanNomination extends RequestContestanNomination {
         email == other.email &&
         city == other.city &&
         gender == other.gender &&
+        dateofBirth == other.dateofBirth &&
         placeofBirth == other.placeofBirth &&
         statusContestant == other.statusContestant &&
         photo == other.photo &&
@@ -87,6 +93,7 @@ class _$RequestContestanNomination extends RequestContestanNomination {
     _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
     _$hash = $jc(_$hash, gender.hashCode);
+    _$hash = $jc(_$hash, dateofBirth.hashCode);
     _$hash = $jc(_$hash, placeofBirth.hashCode);
     _$hash = $jc(_$hash, statusContestant.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
@@ -103,6 +110,7 @@ class _$RequestContestanNomination extends RequestContestanNomination {
           ..add('email', email)
           ..add('city', city)
           ..add('gender', gender)
+          ..add('dateofBirth', dateofBirth)
           ..add('placeofBirth', placeofBirth)
           ..add('statusContestant', statusContestant)
           ..add('photo', photo)
@@ -136,6 +144,10 @@ class RequestContestanNominationBuilder
   String? get gender => _$this._gender;
   set gender(String? gender) => _$this._gender = gender;
 
+  String? _dateofBirth;
+  String? get dateofBirth => _$this._dateofBirth;
+  set dateofBirth(String? dateofBirth) => _$this._dateofBirth = dateofBirth;
+
   String? _placeofBirth;
   String? get placeofBirth => _$this._placeofBirth;
   set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
@@ -166,6 +178,7 @@ class RequestContestanNominationBuilder
       _email = $v.email;
       _city = $v.city;
       _gender = $v.gender;
+      _dateofBirth = $v.dateofBirth;
       _placeofBirth = $v.placeofBirth;
       _statusContestant = $v.statusContestant;
       _photo = $v.photo;
@@ -202,6 +215,8 @@ class RequestContestanNominationBuilder
                 city, r'RequestContestanNomination', 'city'),
             gender: BuiltValueNullFieldError.checkNotNull(
                 gender, r'RequestContestanNomination', 'gender'),
+            dateofBirth: BuiltValueNullFieldError.checkNotNull(
+                dateofBirth, r'RequestContestanNomination', 'dateofBirth'),
             placeofBirth: BuiltValueNullFieldError.checkNotNull(
                 placeofBirth, r'RequestContestanNomination', 'placeofBirth'),
             statusContestant: statusContestant,

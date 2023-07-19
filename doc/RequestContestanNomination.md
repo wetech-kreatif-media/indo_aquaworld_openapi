@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **email** | **String** |  | 
 **city** | **String** |  | 
 **gender** | **String** |  | 
+**dateofBirth** | **String** |  | 
 **placeofBirth** | **String** |  | 
 **statusContestant** | **String** |  | [optional] 
 **photo** | **String** |  | [optional] 

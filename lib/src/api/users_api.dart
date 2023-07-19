@@ -29,8 +29,10 @@ class UsersApi {
   /// Ambil data pengguna / users
   ///
   /// Parameters:
-  /// * [pageNumber] - 
+  /// * [sort] - 
   /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [fullname] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -42,8 +44,10 @@ class UsersApi {
   /// Returns a [Future] containing a [Response] with a [RespondUsers] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondUsers>> getUsers({ 
-    num? pageNumber,
+    String? sort,
     String? direction,
+    num? pageNumber,
+    String? pageSize,
     String? fullname,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -66,8 +70,10 @@ class UsersApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
       if (fullname != null) r'fullname': encodeQueryParameter(_serializers, fullname, const FullType(String)),
     };
 

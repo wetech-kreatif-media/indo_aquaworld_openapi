@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **getUsers**
-> RespondUsers getUsers(pageNumber, direction, fullname)
+> RespondUsers getUsers(sort, direction, pageNumber, pageSize, fullname)
 
 Get Users
 
@@ -30,12 +30,14 @@ Ambil data pengguna / users
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUsersApi();
-final num pageNumber = 8.14; // num | 
+final String sort = sort_example; // String | 
 final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final String pageSize = pageSize_example; // String | 
 final String fullname = fullname_example; // String | 
 
 try {
-    final response = api.getUsers(pageNumber, direction, fullname);
+    final response = api.getUsers(sort, direction, pageNumber, pageSize, fullname);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->getUsers: $e\n');
@@ -46,8 +48,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNumber** | **num**|  | [optional] 
+ **sort** | **String**|  | [optional] 
  **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **String**|  | [optional] 
  **fullname** | **String**|  | [optional] 
 
 ### Return type

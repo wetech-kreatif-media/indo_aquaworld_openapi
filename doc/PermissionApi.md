@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getPermissions**
-> RespondPermissions getPermissions()
+> RespondPermissions getPermissions(sort, direction, pageNumber, pageSize)
 
 Get Permissions
 
@@ -68,9 +68,13 @@ Ambil data pemission
 import 'package:openapi/api.dart';
 
 final api = Openapi().getPermissionApi();
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final String pageSize = pageSize_example; // String | 
 
 try {
-    final response = api.getPermissions();
+    final response = api.getPermissions(sort, direction, pageNumber, pageSize);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling PermissionApi->getPermissions: $e\n');
@@ -78,7 +82,13 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **String**|  | [optional] 
 
 ### Return type
 

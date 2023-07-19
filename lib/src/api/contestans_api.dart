@@ -196,6 +196,10 @@ class ContestansApi {
   ///
   /// Parameters:
   /// * [fullname] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -207,6 +211,10 @@ class ContestansApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondContestants>> getContestants({ 
     String? fullname,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    String? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -229,6 +237,10 @@ class ContestansApi {
 
     final _queryParameters = <String, dynamic>{
       if (fullname != null) r'fullname': encodeQueryParameter(_serializers, fullname, const FullType(String)),
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(

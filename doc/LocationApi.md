@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getLocations**
-> RespondLocations getLocations(name)
+> RespondLocations getLocations(name, sort, direction, pageNumber, pageSize)
 
 Get Locations
 
@@ -114,9 +114,13 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getLocationApi();
 final String name = name_example; // String | 
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final String pageSize = pageSize_example; // String | 
 
 try {
-    final response = api.getLocations(name);
+    final response = api.getLocations(name, sort, direction, pageNumber, pageSize);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling LocationApi->getLocations: $e\n');
@@ -128,6 +132,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**|  | [optional] 
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **String**|  | [optional] 
 
 ### Return type
 

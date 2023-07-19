@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getContestants**
-> RespondContestants getContestants(fullname)
+> RespondContestants getContestants(fullname, sort, direction, pageNumber, pageSize)
 
 Get Contestants
 
@@ -114,9 +114,13 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getContestansApi();
 final String fullname = fullname_example; // String | 
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final String pageSize = pageSize_example; // String | 
 
 try {
-    final response = api.getContestants(fullname);
+    final response = api.getContestants(fullname, sort, direction, pageNumber, pageSize);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ContestansApi->getContestants: $e\n');
@@ -128,6 +132,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fullname** | **String**|  | [optional] 
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **String**|  | [optional] 
 
 ### Return type
 
