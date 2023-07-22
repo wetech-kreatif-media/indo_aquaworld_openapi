@@ -4,6 +4,7 @@ analysis_options.yaml
 doc/ContestanNominationApi.md
 doc/ContestansApi.md
 doc/EventsApi.md
+doc/FaqApi.md
 doc/LocationApi.md
 doc/PermissionApi.md
 doc/RequestChangePassword.md
@@ -13,6 +14,7 @@ doc/RequestEvent.md
 doc/RequestEventContestComponentsInner.md
 doc/RequestEventContestComponentsInnerJudge.md
 doc/RequestEventTeamsInner.md
+doc/RequestFaq.md
 doc/RequestForgot.md
 doc/RequestLocation.md
 doc/RequestLogin.md
@@ -50,6 +52,11 @@ doc/RespondEventNominationsDataInner.md
 doc/RespondEvents.md
 doc/RespondEventsData.md
 doc/RespondEventsDataContentInner.md
+doc/RespondFaq.md
+doc/RespondFaqData.md
+doc/RespondFaqs.md
+doc/RespondFaqsData.md
+doc/RespondFaqsDataContentInner.md
 doc/RespondGlobal.md
 doc/RespondGlobalData.md
 doc/RespondLocation.md
@@ -81,6 +88,7 @@ doc/RespondTeam.md
 doc/RespondTeams.md
 doc/RespondTeamsData.md
 doc/RespondTeamsDataContentInner.md
+doc/RespondUser.md
 doc/RespondUsers.md
 doc/RespondUsersData.md
 doc/RespondUsersDataContentInner.md
@@ -95,6 +103,7 @@ lib/src/api.dart
 lib/src/api/contestan_nomination_api.dart
 lib/src/api/contestans_api.dart
 lib/src/api/events_api.dart
+lib/src/api/faq_api.dart
 lib/src/api/location_api.dart
 lib/src/api/permission_api.dart
 lib/src/api/role_api.dart
@@ -117,6 +126,7 @@ lib/src/model/request_event.dart
 lib/src/model/request_event_contest_components_inner.dart
 lib/src/model/request_event_contest_components_inner_judge.dart
 lib/src/model/request_event_teams_inner.dart
+lib/src/model/request_faq.dart
 lib/src/model/request_forgot.dart
 lib/src/model/request_location.dart
 lib/src/model/request_login.dart
@@ -154,6 +164,11 @@ lib/src/model/respond_event_nominations_data_inner.dart
 lib/src/model/respond_events.dart
 lib/src/model/respond_events_data.dart
 lib/src/model/respond_events_data_content_inner.dart
+lib/src/model/respond_faq.dart
+lib/src/model/respond_faq_data.dart
+lib/src/model/respond_faqs.dart
+lib/src/model/respond_faqs_data.dart
+lib/src/model/respond_faqs_data_content_inner.dart
 lib/src/model/respond_global.dart
 lib/src/model/respond_global_data.dart
 lib/src/model/respond_location.dart
@@ -185,9 +200,17 @@ lib/src/model/respond_team.dart
 lib/src/model/respond_teams.dart
 lib/src/model/respond_teams_data.dart
 lib/src/model/respond_teams_data_content_inner.dart
+lib/src/model/respond_user.dart
 lib/src/model/respond_users.dart
 lib/src/model/respond_users_data.dart
 lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/faq_api_test.dart
+test/request_faq_test.dart
+test/respond_faq_data_test.dart
+test/respond_faq_test.dart
+test/respond_faqs_data_content_inner_test.dart
+test/respond_faqs_data_test.dart
+test/respond_faqs_test.dart

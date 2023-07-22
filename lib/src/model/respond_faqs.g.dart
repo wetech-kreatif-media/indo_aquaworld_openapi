@@ -1,36 +1,36 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_user.dart';
+part of 'respond_faqs.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondUser extends RespondUser {
+class _$RespondFaqs extends RespondFaqs {
   @override
   final String? responseCode;
   @override
   final String? responseMessage;
   @override
-  final RespondSuccessLoginData? data;
+  final RespondFaqsData? data;
 
-  factory _$RespondUser([void Function(RespondUserBuilder)? updates]) =>
-      (new RespondUserBuilder()..update(updates))._build();
+  factory _$RespondFaqs([void Function(RespondFaqsBuilder)? updates]) =>
+      (new RespondFaqsBuilder()..update(updates))._build();
 
-  _$RespondUser._({this.responseCode, this.responseMessage, this.data})
+  _$RespondFaqs._({this.responseCode, this.responseMessage, this.data})
       : super._();
 
   @override
-  RespondUser rebuild(void Function(RespondUserBuilder) updates) =>
+  RespondFaqs rebuild(void Function(RespondFaqsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondUserBuilder toBuilder() => new RespondUserBuilder()..replace(this);
+  RespondFaqsBuilder toBuilder() => new RespondFaqsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondUser &&
+    return other is RespondFaqs &&
         responseCode == other.responseCode &&
         responseMessage == other.responseMessage &&
         data == other.data;
@@ -48,7 +48,7 @@ class _$RespondUser extends RespondUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'RespondUser')
+    return (newBuiltValueToStringHelper(r'RespondFaqs')
           ..add('responseCode', responseCode)
           ..add('responseMessage', responseMessage)
           ..add('data', data))
@@ -56,8 +56,8 @@ class _$RespondUser extends RespondUser {
   }
 }
 
-class RespondUserBuilder implements Builder<RespondUser, RespondUserBuilder> {
-  _$RespondUser? _$v;
+class RespondFaqsBuilder implements Builder<RespondFaqs, RespondFaqsBuilder> {
+  _$RespondFaqs? _$v;
 
   String? _responseCode;
   String? get responseCode => _$this._responseCode;
@@ -68,16 +68,16 @@ class RespondUserBuilder implements Builder<RespondUser, RespondUserBuilder> {
   set responseMessage(String? responseMessage) =>
       _$this._responseMessage = responseMessage;
 
-  RespondSuccessLoginDataBuilder? _data;
-  RespondSuccessLoginDataBuilder get data =>
-      _$this._data ??= new RespondSuccessLoginDataBuilder();
-  set data(RespondSuccessLoginDataBuilder? data) => _$this._data = data;
+  RespondFaqsDataBuilder? _data;
+  RespondFaqsDataBuilder get data =>
+      _$this._data ??= new RespondFaqsDataBuilder();
+  set data(RespondFaqsDataBuilder? data) => _$this._data = data;
 
-  RespondUserBuilder() {
-    RespondUser._defaults(this);
+  RespondFaqsBuilder() {
+    RespondFaqs._defaults(this);
   }
 
-  RespondUserBuilder get _$this {
+  RespondFaqsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _responseCode = $v.responseCode;
@@ -89,24 +89,24 @@ class RespondUserBuilder implements Builder<RespondUser, RespondUserBuilder> {
   }
 
   @override
-  void replace(RespondUser other) {
+  void replace(RespondFaqs other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondUser;
+    _$v = other as _$RespondFaqs;
   }
 
   @override
-  void update(void Function(RespondUserBuilder)? updates) {
+  void update(void Function(RespondFaqsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondUser build() => _build();
+  RespondFaqs build() => _build();
 
-  _$RespondUser _build() {
-    _$RespondUser _$result;
+  _$RespondFaqs _build() {
+    _$RespondFaqs _$result;
     try {
       _$result = _$v ??
-          new _$RespondUser._(
+          new _$RespondFaqs._(
               responseCode: responseCode,
               responseMessage: responseMessage,
               data: _data?.build());
@@ -117,7 +117,7 @@ class RespondUserBuilder implements Builder<RespondUser, RespondUserBuilder> {
         _data?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'RespondUser', _$failedField, e.toString());
+            r'RespondFaqs', _$failedField, e.toString());
       }
       rethrow;
     }

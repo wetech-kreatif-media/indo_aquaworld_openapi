@@ -9,6 +9,7 @@ All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getUser**](UsersApi.md#getuser) | **GET** /public/user/{userId} | Get User
 [**getUsers**](UsersApi.md#getusers) | **GET** /public/users | Get Users
 [**postForgot**](UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
 [**postLogin**](UsersApi.md#postlogin) | **POST** /public/login | Login
@@ -16,7 +17,51 @@ Method | HTTP request | Description
 [**postSentOtp**](UsersApi.md#postsentotp) | **POST** /public/send-otp | Send OTP
 [**putChangePassword**](UsersApi.md#putchangepassword) | **PUT** /public/change-password | Change Password
 [**putNewPassword**](UsersApi.md#putnewpassword) | **PUT** /public/new-password | New Password
+[**putUser**](UsersApi.md#putuser) | **PUT** /public/user/{userId} | Put User
 
+
+# **getUser**
+> RespondUser getUser(userId)
+
+Get User
+
+Ambil detail user
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUsersApi();
+final String userId = userId_example; // String | 
+
+try {
+    final response = api.getUser(userId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UsersApi->getUser: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**|  | 
+
+### Return type
+
+[**RespondUser**](RespondUser.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getUsers**
 > RespondUsers getUsers(sort, direction, pageNumber, pageSize, fullname)
@@ -311,6 +356,51 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestChangePassword** | [**RequestChangePassword**](RequestChangePassword.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putUser**
+> RespondGlobal putUser(userId, requestRegistrasi)
+
+Put User
+
+update data user
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUsersApi();
+final String userId = userId_example; // String | 
+final RequestRegistrasi requestRegistrasi = {"fullname":"Hasan Basri","email":"user12@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","photo":"as dasd asd","id_role":"8ca5e91e-c9b0-4f70-a2a7-4a05ed3b0fc5"}; // RequestRegistrasi | 
+
+try {
+    final response = api.putUser(userId, requestRegistrasi);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UsersApi->putUser: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**|  | 
+ **requestRegistrasi** | [**RequestRegistrasi**](RequestRegistrasi.md)|  | [optional] 
 
 ### Return type
 

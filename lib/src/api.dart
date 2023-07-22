@@ -12,6 +12,7 @@ import 'package:openapi/src/auth/oauth.dart';
 import 'package:openapi/src/api/contestan_nomination_api.dart';
 import 'package:openapi/src/api/contestans_api.dart';
 import 'package:openapi/src/api/events_api.dart';
+import 'package:openapi/src/api/faq_api.dart';
 import 'package:openapi/src/api/location_api.dart';
 import 'package:openapi/src/api/permission_api.dart';
 import 'package:openapi/src/api/role_api.dart';
@@ -90,6 +91,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   EventsApi getEventsApi() {
     return EventsApi(dio, serializers);
+  }
+
+  /// Get FaqApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  FaqApi getFaqApi() {
+    return FaqApi(dio, serializers);
   }
 
   /// Get LocationApi instance, base route and serializer can be overridden by a given but be careful,

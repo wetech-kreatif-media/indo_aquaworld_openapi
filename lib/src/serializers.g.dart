@@ -14,6 +14,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestEventContestComponentsInner.serializer)
       ..add(RequestEventContestComponentsInnerJudge.serializer)
       ..add(RequestEventTeamsInner.serializer)
+      ..add(RequestFaq.serializer)
       ..add(RequestForgot.serializer)
       ..add(RequestLocation.serializer)
       ..add(RequestLogin.serializer)
@@ -51,6 +52,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondEvents.serializer)
       ..add(RespondEventsData.serializer)
       ..add(RespondEventsDataContentInner.serializer)
+      ..add(RespondFaq.serializer)
+      ..add(RespondFaqData.serializer)
+      ..add(RespondFaqs.serializer)
+      ..add(RespondFaqsData.serializer)
+      ..add(RespondFaqsDataContentInner.serializer)
       ..add(RespondGlobal.serializer)
       ..add(RespondGlobalData.serializer)
       ..add(RespondLocation.serializer)
@@ -82,6 +88,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondTeams.serializer)
       ..add(RespondTeamsData.serializer)
       ..add(RespondTeamsDataContentInner.serializer)
+      ..add(RespondUser.serializer)
       ..add(RespondUsers.serializer)
       ..add(RespondUsersData.serializer)
       ..add(RespondUsersDataContentInner.serializer)
@@ -129,6 +136,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RespondEventsDataContentInner)]),
           () => new ListBuilder<RespondEventsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondFaqsDataContentInner)]),
+          () => new ListBuilder<RespondFaqsDataContentInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondLocationsDataContentInner)]),

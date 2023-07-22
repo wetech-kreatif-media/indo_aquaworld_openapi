@@ -3,20 +3,20 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_success_login_data.dart';
+import 'package:openapi/src/model/respond_faqs_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_user.g.dart';
+part 'respond_faqs.g.dart';
 
-/// RespondUser
+/// RespondFaqs
 ///
 /// Properties:
 /// * [responseCode] 
 /// * [responseMessage] 
 /// * [data] 
 @BuiltValue()
-abstract class RespondUser implements Built<RespondUser, RespondUserBuilder> {
+abstract class RespondFaqs implements Built<RespondFaqs, RespondFaqsBuilder> {
   @BuiltValueField(wireName: r'responseCode')
   String? get responseCode;
 
@@ -24,29 +24,29 @@ abstract class RespondUser implements Built<RespondUser, RespondUserBuilder> {
   String? get responseMessage;
 
   @BuiltValueField(wireName: r'data')
-  RespondSuccessLoginData? get data;
+  RespondFaqsData? get data;
 
-  RespondUser._();
+  RespondFaqs._();
 
-  factory RespondUser([void updates(RespondUserBuilder b)]) = _$RespondUser;
+  factory RespondFaqs([void updates(RespondFaqsBuilder b)]) = _$RespondFaqs;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondUserBuilder b) => b;
+  static void _defaults(RespondFaqsBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondUser> get serializer => _$RespondUserSerializer();
+  static Serializer<RespondFaqs> get serializer => _$RespondFaqsSerializer();
 }
 
-class _$RespondUserSerializer implements PrimitiveSerializer<RespondUser> {
+class _$RespondFaqsSerializer implements PrimitiveSerializer<RespondFaqs> {
   @override
-  final Iterable<Type> types = const [RespondUser, _$RespondUser];
+  final Iterable<Type> types = const [RespondFaqs, _$RespondFaqs];
 
   @override
-  final String wireName = r'RespondUser';
+  final String wireName = r'RespondFaqs';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondUser object, {
+    RespondFaqs object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.responseCode != null) {
@@ -67,7 +67,7 @@ class _$RespondUserSerializer implements PrimitiveSerializer<RespondUser> {
       yield r'data';
       yield serializers.serialize(
         object.data,
-        specifiedType: const FullType(RespondSuccessLoginData),
+        specifiedType: const FullType(RespondFaqsData),
       );
     }
   }
@@ -75,7 +75,7 @@ class _$RespondUserSerializer implements PrimitiveSerializer<RespondUser> {
   @override
   Object serialize(
     Serializers serializers,
-    RespondUser object, {
+    RespondFaqs object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -86,7 +86,7 @@ class _$RespondUserSerializer implements PrimitiveSerializer<RespondUser> {
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondUserBuilder result,
+    required RespondFaqsBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -110,8 +110,8 @@ class _$RespondUserSerializer implements PrimitiveSerializer<RespondUser> {
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSuccessLoginData),
-          ) as RespondSuccessLoginData;
+            specifiedType: const FullType(RespondFaqsData),
+          ) as RespondFaqsData;
           result.data.replace(valueDes);
           break;
         default:
@@ -123,12 +123,12 @@ class _$RespondUserSerializer implements PrimitiveSerializer<RespondUser> {
   }
 
   @override
-  RespondUser deserialize(
+  RespondFaqs deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondUserBuilder();
+    final result = RespondFaqsBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

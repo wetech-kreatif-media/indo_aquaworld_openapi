@@ -21,6 +21,7 @@ import 'package:openapi/src/model/request_event.dart';
 import 'package:openapi/src/model/request_event_contest_components_inner.dart';
 import 'package:openapi/src/model/request_event_contest_components_inner_judge.dart';
 import 'package:openapi/src/model/request_event_teams_inner.dart';
+import 'package:openapi/src/model/request_faq.dart';
 import 'package:openapi/src/model/request_forgot.dart';
 import 'package:openapi/src/model/request_location.dart';
 import 'package:openapi/src/model/request_login.dart';
@@ -58,6 +59,11 @@ import 'package:openapi/src/model/respond_event_nominations_data_inner.dart';
 import 'package:openapi/src/model/respond_events.dart';
 import 'package:openapi/src/model/respond_events_data.dart';
 import 'package:openapi/src/model/respond_events_data_content_inner.dart';
+import 'package:openapi/src/model/respond_faq.dart';
+import 'package:openapi/src/model/respond_faq_data.dart';
+import 'package:openapi/src/model/respond_faqs.dart';
+import 'package:openapi/src/model/respond_faqs_data.dart';
+import 'package:openapi/src/model/respond_faqs_data_content_inner.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_global_data.dart';
 import 'package:openapi/src/model/respond_location.dart';
@@ -89,6 +95,7 @@ import 'package:openapi/src/model/respond_team.dart';
 import 'package:openapi/src/model/respond_teams.dart';
 import 'package:openapi/src/model/respond_teams_data.dart';
 import 'package:openapi/src/model/respond_teams_data_content_inner.dart';
+import 'package:openapi/src/model/respond_user.dart';
 import 'package:openapi/src/model/respond_users.dart';
 import 'package:openapi/src/model/respond_users_data.dart';
 import 'package:openapi/src/model/respond_users_data_content_inner.dart';
@@ -104,6 +111,7 @@ part 'serializers.g.dart';
   RequestEventContestComponentsInner,
   RequestEventContestComponentsInnerJudge,
   RequestEventTeamsInner,
+  RequestFaq,
   RequestForgot,
   RequestLocation,
   RequestLogin,
@@ -141,6 +149,11 @@ part 'serializers.g.dart';
   RespondEvents,
   RespondEventsData,
   RespondEventsDataContentInner,
+  RespondFaq,
+  RespondFaqData,
+  RespondFaqs,
+  RespondFaqsData,
+  RespondFaqsDataContentInner,
   RespondGlobal,
   RespondGlobalData,
   RespondLocation,
@@ -172,6 +185,7 @@ part 'serializers.g.dart';
   RespondTeams,
   RespondTeamsData,
   RespondTeamsDataContentInner,
+  RespondUser,
   RespondUsers,
   RespondUsersData,
   RespondUsersDataContentInner,
