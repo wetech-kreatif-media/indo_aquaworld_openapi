@@ -8,40 +8,59 @@ part of 'respond_user_data.dart';
 
 class _$RespondUserData extends RespondUserData {
   @override
-  final String userId;
+  final String? id;
   @override
-  final String photo;
+  final String? createdBy;
   @override
-  final String? role;
+  final String? updatedBy;
   @override
-  final String email;
+  final String? created;
   @override
-  final String name;
+  final String? updated;
   @override
-  final String city;
+  final num? deleted;
   @override
-  final num handphone;
+  final String? recordStatus;
+  @override
+  final String? fullname;
+  @override
+  final String? mobilePhone;
+  @override
+  final String? email;
+  @override
+  final String? city;
+  @override
+  final String? photo;
+  @override
+  final String? gender;
+  @override
+  final String? placeofBirth;
+  @override
+  final String? linkMaps;
+  @override
+  final RespondUserDataRole? role;
 
   factory _$RespondUserData([void Function(RespondUserDataBuilder)? updates]) =>
       (new RespondUserDataBuilder()..update(updates))._build();
 
   _$RespondUserData._(
-      {required this.userId,
-      required this.photo,
-      this.role,
-      required this.email,
-      required this.name,
-      required this.city,
-      required this.handphone})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(userId, r'RespondUserData', 'userId');
-    BuiltValueNullFieldError.checkNotNull(photo, r'RespondUserData', 'photo');
-    BuiltValueNullFieldError.checkNotNull(email, r'RespondUserData', 'email');
-    BuiltValueNullFieldError.checkNotNull(name, r'RespondUserData', 'name');
-    BuiltValueNullFieldError.checkNotNull(city, r'RespondUserData', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        handphone, r'RespondUserData', 'handphone');
-  }
+      {this.id,
+      this.createdBy,
+      this.updatedBy,
+      this.created,
+      this.updated,
+      this.deleted,
+      this.recordStatus,
+      this.fullname,
+      this.mobilePhone,
+      this.email,
+      this.city,
+      this.photo,
+      this.gender,
+      this.placeofBirth,
+      this.linkMaps,
+      this.role})
+      : super._();
 
   @override
   RespondUserData rebuild(void Function(RespondUserDataBuilder) updates) =>
@@ -55,25 +74,43 @@ class _$RespondUserData extends RespondUserData {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RespondUserData &&
-        userId == other.userId &&
-        photo == other.photo &&
-        role == other.role &&
+        id == other.id &&
+        createdBy == other.createdBy &&
+        updatedBy == other.updatedBy &&
+        created == other.created &&
+        updated == other.updated &&
+        deleted == other.deleted &&
+        recordStatus == other.recordStatus &&
+        fullname == other.fullname &&
+        mobilePhone == other.mobilePhone &&
         email == other.email &&
-        name == other.name &&
         city == other.city &&
-        handphone == other.handphone;
+        photo == other.photo &&
+        gender == other.gender &&
+        placeofBirth == other.placeofBirth &&
+        linkMaps == other.linkMaps &&
+        role == other.role;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, userId.hashCode);
-    _$hash = $jc(_$hash, photo.hashCode);
-    _$hash = $jc(_$hash, role.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdBy.hashCode);
+    _$hash = $jc(_$hash, updatedBy.hashCode);
+    _$hash = $jc(_$hash, created.hashCode);
+    _$hash = $jc(_$hash, updated.hashCode);
+    _$hash = $jc(_$hash, deleted.hashCode);
+    _$hash = $jc(_$hash, recordStatus.hashCode);
+    _$hash = $jc(_$hash, fullname.hashCode);
+    _$hash = $jc(_$hash, mobilePhone.hashCode);
     _$hash = $jc(_$hash, email.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
-    _$hash = $jc(_$hash, handphone.hashCode);
+    _$hash = $jc(_$hash, photo.hashCode);
+    _$hash = $jc(_$hash, gender.hashCode);
+    _$hash = $jc(_$hash, placeofBirth.hashCode);
+    _$hash = $jc(_$hash, linkMaps.hashCode);
+    _$hash = $jc(_$hash, role.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -81,13 +118,22 @@ class _$RespondUserData extends RespondUserData {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RespondUserData')
-          ..add('userId', userId)
-          ..add('photo', photo)
-          ..add('role', role)
+          ..add('id', id)
+          ..add('createdBy', createdBy)
+          ..add('updatedBy', updatedBy)
+          ..add('created', created)
+          ..add('updated', updated)
+          ..add('deleted', deleted)
+          ..add('recordStatus', recordStatus)
+          ..add('fullname', fullname)
+          ..add('mobilePhone', mobilePhone)
           ..add('email', email)
-          ..add('name', name)
           ..add('city', city)
-          ..add('handphone', handphone))
+          ..add('photo', photo)
+          ..add('gender', gender)
+          ..add('placeofBirth', placeofBirth)
+          ..add('linkMaps', linkMaps)
+          ..add('role', role))
         .toString();
   }
 }
@@ -96,33 +142,70 @@ class RespondUserDataBuilder
     implements Builder<RespondUserData, RespondUserDataBuilder> {
   _$RespondUserData? _$v;
 
-  String? _userId;
-  String? get userId => _$this._userId;
-  set userId(String? userId) => _$this._userId = userId;
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
-  String? _photo;
-  String? get photo => _$this._photo;
-  set photo(String? photo) => _$this._photo = photo;
+  String? _createdBy;
+  String? get createdBy => _$this._createdBy;
+  set createdBy(String? createdBy) => _$this._createdBy = createdBy;
 
-  String? _role;
-  String? get role => _$this._role;
-  set role(String? role) => _$this._role = role;
+  String? _updatedBy;
+  String? get updatedBy => _$this._updatedBy;
+  set updatedBy(String? updatedBy) => _$this._updatedBy = updatedBy;
+
+  String? _created;
+  String? get created => _$this._created;
+  set created(String? created) => _$this._created = created;
+
+  String? _updated;
+  String? get updated => _$this._updated;
+  set updated(String? updated) => _$this._updated = updated;
+
+  num? _deleted;
+  num? get deleted => _$this._deleted;
+  set deleted(num? deleted) => _$this._deleted = deleted;
+
+  String? _recordStatus;
+  String? get recordStatus => _$this._recordStatus;
+  set recordStatus(String? recordStatus) => _$this._recordStatus = recordStatus;
+
+  String? _fullname;
+  String? get fullname => _$this._fullname;
+  set fullname(String? fullname) => _$this._fullname = fullname;
+
+  String? _mobilePhone;
+  String? get mobilePhone => _$this._mobilePhone;
+  set mobilePhone(String? mobilePhone) => _$this._mobilePhone = mobilePhone;
 
   String? _email;
   String? get email => _$this._email;
   set email(String? email) => _$this._email = email;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
-
   String? _city;
   String? get city => _$this._city;
   set city(String? city) => _$this._city = city;
 
-  num? _handphone;
-  num? get handphone => _$this._handphone;
-  set handphone(num? handphone) => _$this._handphone = handphone;
+  String? _photo;
+  String? get photo => _$this._photo;
+  set photo(String? photo) => _$this._photo = photo;
+
+  String? _gender;
+  String? get gender => _$this._gender;
+  set gender(String? gender) => _$this._gender = gender;
+
+  String? _placeofBirth;
+  String? get placeofBirth => _$this._placeofBirth;
+  set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
+
+  String? _linkMaps;
+  String? get linkMaps => _$this._linkMaps;
+  set linkMaps(String? linkMaps) => _$this._linkMaps = linkMaps;
+
+  RespondUserDataRoleBuilder? _role;
+  RespondUserDataRoleBuilder get role =>
+      _$this._role ??= new RespondUserDataRoleBuilder();
+  set role(RespondUserDataRoleBuilder? role) => _$this._role = role;
 
   RespondUserDataBuilder() {
     RespondUserData._defaults(this);
@@ -131,13 +214,22 @@ class RespondUserDataBuilder
   RespondUserDataBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _userId = $v.userId;
-      _photo = $v.photo;
-      _role = $v.role;
+      _id = $v.id;
+      _createdBy = $v.createdBy;
+      _updatedBy = $v.updatedBy;
+      _created = $v.created;
+      _updated = $v.updated;
+      _deleted = $v.deleted;
+      _recordStatus = $v.recordStatus;
+      _fullname = $v.fullname;
+      _mobilePhone = $v.mobilePhone;
       _email = $v.email;
-      _name = $v.name;
       _city = $v.city;
-      _handphone = $v.handphone;
+      _photo = $v.photo;
+      _gender = $v.gender;
+      _placeofBirth = $v.placeofBirth;
+      _linkMaps = $v.linkMaps;
+      _role = $v.role?.toBuilder();
       _$v = null;
     }
     return this;
@@ -158,21 +250,37 @@ class RespondUserDataBuilder
   RespondUserData build() => _build();
 
   _$RespondUserData _build() {
-    final _$result = _$v ??
-        new _$RespondUserData._(
-            userId: BuiltValueNullFieldError.checkNotNull(
-                userId, r'RespondUserData', 'userId'),
-            photo: BuiltValueNullFieldError.checkNotNull(
-                photo, r'RespondUserData', 'photo'),
-            role: role,
-            email: BuiltValueNullFieldError.checkNotNull(
-                email, r'RespondUserData', 'email'),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RespondUserData', 'name'),
-            city: BuiltValueNullFieldError.checkNotNull(
-                city, r'RespondUserData', 'city'),
-            handphone: BuiltValueNullFieldError.checkNotNull(
-                handphone, r'RespondUserData', 'handphone'));
+    _$RespondUserData _$result;
+    try {
+      _$result = _$v ??
+          new _$RespondUserData._(
+              id: id,
+              createdBy: createdBy,
+              updatedBy: updatedBy,
+              created: created,
+              updated: updated,
+              deleted: deleted,
+              recordStatus: recordStatus,
+              fullname: fullname,
+              mobilePhone: mobilePhone,
+              email: email,
+              city: city,
+              photo: photo,
+              gender: gender,
+              placeofBirth: placeofBirth,
+              linkMaps: linkMaps,
+              role: _role?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'role';
+        _role?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'RespondUserData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

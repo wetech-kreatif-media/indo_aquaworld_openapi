@@ -12,7 +12,7 @@ class _$RespondUser extends RespondUser {
   @override
   final String? responseMessage;
   @override
-  final RespondSuccessLoginData? data;
+  final RespondUserData? data;
 
   factory _$RespondUser([void Function(RespondUserBuilder)? updates]) =>
       (new RespondUserBuilder()..update(updates))._build();
@@ -68,10 +68,10 @@ class RespondUserBuilder implements Builder<RespondUser, RespondUserBuilder> {
   set responseMessage(String? responseMessage) =>
       _$this._responseMessage = responseMessage;
 
-  RespondSuccessLoginDataBuilder? _data;
-  RespondSuccessLoginDataBuilder get data =>
-      _$this._data ??= new RespondSuccessLoginDataBuilder();
-  set data(RespondSuccessLoginDataBuilder? data) => _$this._data = data;
+  RespondUserDataBuilder? _data;
+  RespondUserDataBuilder get data =>
+      _$this._data ??= new RespondUserDataBuilder();
+  set data(RespondUserDataBuilder? data) => _$this._data = data;
 
   RespondUserBuilder() {
     RespondUser._defaults(this);

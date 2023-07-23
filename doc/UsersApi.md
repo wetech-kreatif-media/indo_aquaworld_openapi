@@ -201,7 +201,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **postRegistrasi**
-> RespondGlobal postRegistrasi(requestRegistrasi)
+> RespondGlobal postRegistrasi(requestUser)
 
 Registrasi
 
@@ -212,10 +212,10 @@ Regsitrasi user baru
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUsersApi();
-final RequestRegistrasi requestRegistrasi = {"fullname":"Juri","email":"juri1@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","id_role":"86c1f549-5440-4d05-80f3-6b75024af7d0"}; // RequestRegistrasi | 
+final RequestUser requestUser = {"fullname":"Juri","email":"juri1@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","id_role":"86c1f549-5440-4d05-80f3-6b75024af7d0"}; // RequestUser | 
 
 try {
-    final response = api.postRegistrasi(requestRegistrasi);
+    final response = api.postRegistrasi(requestUser);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->postRegistrasi: $e\n');
@@ -226,7 +226,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestRegistrasi** | [**RequestRegistrasi**](RequestRegistrasi.md)|  | [optional] 
+ **requestUser** | [**RequestUser**](RequestUser.md)|  | [optional] 
 
 ### Return type
 
@@ -373,7 +373,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **putUser**
-> RespondGlobal putUser(userId, requestRegistrasi)
+> RespondGlobal putUser(userId, requestUser)
 
 Put User
 
@@ -385,10 +385,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getUsersApi();
 final String userId = userId_example; // String | 
-final RequestRegistrasi requestRegistrasi = {"fullname":"Hasan Basri","email":"user12@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","photo":"as dasd asd","id_role":"8ca5e91e-c9b0-4f70-a2a7-4a05ed3b0fc5"}; // RequestRegistrasi | 
+final RequestUser requestUser = {"fullname":"Hasan Basri","email":"user12@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","photo":"as dasd asd","id_role":"8ca5e91e-c9b0-4f70-a2a7-4a05ed3b0fc5"}; // RequestUser | 
 
 try {
-    final response = api.putUser(userId, requestRegistrasi);
+    final response = api.putUser(userId, requestUser);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->putUser: $e\n');
@@ -400,7 +400,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  | 
- **requestRegistrasi** | [**RequestRegistrasi**](RequestRegistrasi.md)|  | [optional] 
+ **requestUser** | [**RequestUser**](RequestUser.md)|  | [optional] 
 
 ### Return type
 

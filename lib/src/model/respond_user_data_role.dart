@@ -3,13 +3,12 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_user_data_role.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_user_data.g.dart';
+part 'respond_user_data_role.g.dart';
 
-/// RespondUserData
+/// RespondUserDataRole
 ///
 /// Properties:
 /// * [id] 
@@ -19,17 +18,10 @@ part 'respond_user_data.g.dart';
 /// * [updated] 
 /// * [deleted] 
 /// * [recordStatus] 
-/// * [fullname] 
-/// * [mobilePhone] 
-/// * [email] 
-/// * [city] 
-/// * [photo] 
-/// * [gender] 
-/// * [placeofBirth] 
-/// * [linkMaps] 
-/// * [role] 
+/// * [name] 
+/// * [code] 
 @BuiltValue()
-abstract class RespondUserData implements Built<RespondUserData, RespondUserDataBuilder> {
+abstract class RespondUserDataRole implements Built<RespondUserDataRole, RespondUserDataRoleBuilder> {
   @BuiltValueField(wireName: r'id')
   String? get id;
 
@@ -51,54 +43,33 @@ abstract class RespondUserData implements Built<RespondUserData, RespondUserData
   @BuiltValueField(wireName: r'recordStatus')
   String? get recordStatus;
 
-  @BuiltValueField(wireName: r'fullname')
-  String? get fullname;
+  @BuiltValueField(wireName: r'name')
+  String? get name;
 
-  @BuiltValueField(wireName: r'mobilePhone')
-  String? get mobilePhone;
+  @BuiltValueField(wireName: r'code')
+  String? get code;
 
-  @BuiltValueField(wireName: r'email')
-  String? get email;
+  RespondUserDataRole._();
 
-  @BuiltValueField(wireName: r'city')
-  String? get city;
-
-  @BuiltValueField(wireName: r'photo')
-  String? get photo;
-
-  @BuiltValueField(wireName: r'gender')
-  String? get gender;
-
-  @BuiltValueField(wireName: r'placeofBirth')
-  String? get placeofBirth;
-
-  @BuiltValueField(wireName: r'linkMaps')
-  String? get linkMaps;
-
-  @BuiltValueField(wireName: r'role')
-  RespondUserDataRole? get role;
-
-  RespondUserData._();
-
-  factory RespondUserData([void updates(RespondUserDataBuilder b)]) = _$RespondUserData;
+  factory RespondUserDataRole([void updates(RespondUserDataRoleBuilder b)]) = _$RespondUserDataRole;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondUserDataBuilder b) => b;
+  static void _defaults(RespondUserDataRoleBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondUserData> get serializer => _$RespondUserDataSerializer();
+  static Serializer<RespondUserDataRole> get serializer => _$RespondUserDataRoleSerializer();
 }
 
-class _$RespondUserDataSerializer implements PrimitiveSerializer<RespondUserData> {
+class _$RespondUserDataRoleSerializer implements PrimitiveSerializer<RespondUserDataRole> {
   @override
-  final Iterable<Type> types = const [RespondUserData, _$RespondUserData];
+  final Iterable<Type> types = const [RespondUserDataRole, _$RespondUserDataRole];
 
   @override
-  final String wireName = r'RespondUserData';
+  final String wireName = r'RespondUserDataRole';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondUserData object, {
+    RespondUserDataRole object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.id != null) {
@@ -150,67 +121,18 @@ class _$RespondUserDataSerializer implements PrimitiveSerializer<RespondUserData
         specifiedType: const FullType(String),
       );
     }
-    if (object.fullname != null) {
-      yield r'fullname';
+    if (object.name != null) {
+      yield r'name';
       yield serializers.serialize(
-        object.fullname,
+        object.name,
         specifiedType: const FullType(String),
       );
     }
-    if (object.mobilePhone != null) {
-      yield r'mobilePhone';
+    if (object.code != null) {
+      yield r'code';
       yield serializers.serialize(
-        object.mobilePhone,
+        object.code,
         specifiedType: const FullType(String),
-      );
-    }
-    if (object.email != null) {
-      yield r'email';
-      yield serializers.serialize(
-        object.email,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.city != null) {
-      yield r'city';
-      yield serializers.serialize(
-        object.city,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.photo != null) {
-      yield r'photo';
-      yield serializers.serialize(
-        object.photo,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.gender != null) {
-      yield r'gender';
-      yield serializers.serialize(
-        object.gender,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.placeofBirth != null) {
-      yield r'placeofBirth';
-      yield serializers.serialize(
-        object.placeofBirth,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.linkMaps != null) {
-      yield r'linkMaps';
-      yield serializers.serialize(
-        object.linkMaps,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.role != null) {
-      yield r'role';
-      yield serializers.serialize(
-        object.role,
-        specifiedType: const FullType(RespondUserDataRole),
       );
     }
   }
@@ -218,7 +140,7 @@ class _$RespondUserDataSerializer implements PrimitiveSerializer<RespondUserData
   @override
   Object serialize(
     Serializers serializers,
-    RespondUserData object, {
+    RespondUserDataRole object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -229,7 +151,7 @@ class _$RespondUserDataSerializer implements PrimitiveSerializer<RespondUserData
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondUserDataBuilder result,
+    required RespondUserDataRoleBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -285,68 +207,19 @@ class _$RespondUserDataSerializer implements PrimitiveSerializer<RespondUserData
           ) as String;
           result.recordStatus = valueDes;
           break;
-        case r'fullname':
+        case r'name':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.fullname = valueDes;
+          result.name = valueDes;
           break;
-        case r'mobilePhone':
+        case r'code':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.mobilePhone = valueDes;
-          break;
-        case r'email':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.email = valueDes;
-          break;
-        case r'city':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.city = valueDes;
-          break;
-        case r'photo':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.photo = valueDes;
-          break;
-        case r'gender':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.gender = valueDes;
-          break;
-        case r'placeofBirth':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.placeofBirth = valueDes;
-          break;
-        case r'linkMaps':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.linkMaps = valueDes;
-          break;
-        case r'role':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondUserDataRole),
-          ) as RespondUserDataRole;
-          result.role.replace(valueDes);
+          result.code = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -357,12 +230,12 @@ class _$RespondUserDataSerializer implements PrimitiveSerializer<RespondUserData
   }
 
   @override
-  RespondUserData deserialize(
+  RespondUserDataRole deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondUserDataBuilder();
+    final result = RespondUserDataRoleBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

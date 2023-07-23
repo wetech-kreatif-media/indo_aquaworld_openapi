@@ -19,7 +19,6 @@ doc/RequestForgot.md
 doc/RequestLocation.md
 doc/RequestLogin.md
 doc/RequestPermission.md
-doc/RequestRegistrasi.md
 doc/RequestRole.md
 doc/RequestRolePermissionsInner.md
 doc/RequestSendOtp.md
@@ -27,6 +26,7 @@ doc/RequestTank.md
 doc/RequestTankAssesment.md
 doc/RequestTankAssesmentHead.md
 doc/RequestTeam.md
+doc/RequestUser.md
 doc/RespondContestanNominations.md
 doc/RespondContestanNominationsData.md
 doc/RespondContestanNominationsDataContentInner.md
@@ -89,6 +89,8 @@ doc/RespondTeams.md
 doc/RespondTeamsData.md
 doc/RespondTeamsDataContentInner.md
 doc/RespondUser.md
+doc/RespondUserData.md
+doc/RespondUserDataRole.md
 doc/RespondUsers.md
 doc/RespondUsersData.md
 doc/RespondUsersDataContentInner.md
@@ -131,7 +133,6 @@ lib/src/model/request_forgot.dart
 lib/src/model/request_location.dart
 lib/src/model/request_login.dart
 lib/src/model/request_permission.dart
-lib/src/model/request_registrasi.dart
 lib/src/model/request_role.dart
 lib/src/model/request_role_permissions_inner.dart
 lib/src/model/request_send_otp.dart
@@ -139,6 +140,7 @@ lib/src/model/request_tank.dart
 lib/src/model/request_tank_assesment.dart
 lib/src/model/request_tank_assesment_head.dart
 lib/src/model/request_team.dart
+lib/src/model/request_user.dart
 lib/src/model/respond_contestan_nominations.dart
 lib/src/model/respond_contestan_nominations_data.dart
 lib/src/model/respond_contestan_nominations_data_content_inner.dart
@@ -201,16 +203,13 @@ lib/src/model/respond_teams.dart
 lib/src/model/respond_teams_data.dart
 lib/src/model/respond_teams_data_content_inner.dart
 lib/src/model/respond_user.dart
+lib/src/model/respond_user_data.dart
+lib/src/model/respond_user_data_role.dart
 lib/src/model/respond_users.dart
 lib/src/model/respond_users_data.dart
 lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/faq_api_test.dart
-test/request_faq_test.dart
-test/respond_faq_data_test.dart
-test/respond_faq_test.dart
-test/respond_faqs_data_content_inner_test.dart
-test/respond_faqs_data_test.dart
-test/respond_faqs_test.dart
+test/request_user_test.dart
+test/respond_user_data_role_test.dart

@@ -1,4 +1,4 @@
-# openapi.model.RespondUserData
+# openapi.model.RespondUserDataRole
 
 ## Load the model package
 ```dart
@@ -15,15 +15,8 @@ Name | Type | Description | Notes
 **updated** | **String** |  | [optional] 
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
-**fullname** | **String** |  | [optional] 
-**mobilePhone** | **String** |  | [optional] 
-**email** | **String** |  | [optional] 
-**city** | **String** |  | [optional] 
-**photo** | **String** |  | [optional] 
-**gender** | **String** |  | [optional] 
-**placeofBirth** | **String** |  | [optional] 
-**linkMaps** | **String** |  | [optional] 
-**role** | [**RespondUserDataRole**](RespondUserDataRole.md) |  | [optional] 
+**name** | **String** |  | [optional] 
+**code** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
