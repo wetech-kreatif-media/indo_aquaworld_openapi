@@ -18,9 +18,9 @@ class _$RequestUser extends RequestUser {
   @override
   final String? confirmPassword;
   @override
-  final String? city;
+  final String city;
   @override
-  final String idRole;
+  final String? idRole;
   @override
   final String? photo;
   @override
@@ -35,8 +35,8 @@ class _$RequestUser extends RequestUser {
       required this.mobilePhone,
       this.password,
       this.confirmPassword,
-      this.city,
-      required this.idRole,
+      required this.city,
+      this.idRole,
       this.photo,
       this.linkMaps})
       : super._() {
@@ -44,7 +44,7 @@ class _$RequestUser extends RequestUser {
     BuiltValueNullFieldError.checkNotNull(email, r'RequestUser', 'email');
     BuiltValueNullFieldError.checkNotNull(
         mobilePhone, r'RequestUser', 'mobilePhone');
-    BuiltValueNullFieldError.checkNotNull(idRole, r'RequestUser', 'idRole');
+    BuiltValueNullFieldError.checkNotNull(city, r'RequestUser', 'city');
   }
 
   @override
@@ -187,9 +187,9 @@ class RequestUserBuilder implements Builder<RequestUser, RequestUserBuilder> {
                 mobilePhone, r'RequestUser', 'mobilePhone'),
             password: password,
             confirmPassword: confirmPassword,
-            city: city,
-            idRole: BuiltValueNullFieldError.checkNotNull(
-                idRole, r'RequestUser', 'idRole'),
+            city: BuiltValueNullFieldError.checkNotNull(
+                city, r'RequestUser', 'city'),
+            idRole: idRole,
             photo: photo,
             linkMaps: linkMaps);
     replace(_$result);

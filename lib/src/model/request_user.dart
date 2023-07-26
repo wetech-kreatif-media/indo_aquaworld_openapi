@@ -38,10 +38,10 @@ abstract class RequestUser implements Built<RequestUser, RequestUserBuilder> {
   String? get confirmPassword;
 
   @BuiltValueField(wireName: r'city')
-  String? get city;
+  String get city;
 
   @BuiltValueField(wireName: r'id_role')
-  String get idRole;
+  String? get idRole;
 
   @BuiltValueField(wireName: r'photo')
   String? get photo;
@@ -101,18 +101,18 @@ class _$RequestUserSerializer implements PrimitiveSerializer<RequestUser> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.city != null) {
-      yield r'city';
+    yield r'city';
+    yield serializers.serialize(
+      object.city,
+      specifiedType: const FullType(String),
+    );
+    if (object.idRole != null) {
+      yield r'id_role';
       yield serializers.serialize(
-        object.city,
+        object.idRole,
         specifiedType: const FullType(String),
       );
     }
-    yield r'id_role';
-    yield serializers.serialize(
-      object.idRole,
-      specifiedType: const FullType(String),
-    );
     if (object.photo != null) {
       yield r'photo';
       yield serializers.serialize(

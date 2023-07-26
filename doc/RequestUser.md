@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **mobilePhone** | **String** |  | 
 **password** | **String** |  | [optional] 
 **confirmPassword** | **String** |  | [optional] 
-**city** | **String** |  | [optional] 
-**idRole** | **String** |  | 
+**city** | **String** |  | 
+**idRole** | **String** |  | [optional] 
 **photo** | **String** |  | [optional] 
 **linkMaps** | **String** |  | [optional] 
 
