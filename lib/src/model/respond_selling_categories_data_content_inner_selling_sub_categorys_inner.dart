@@ -6,9 +6,9 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_event_data_contest_components_inner_nomination.g.dart';
+part 'respond_selling_categories_data_content_inner_selling_sub_categorys_inner.g.dart';
 
-/// RespondEventDataContestComponentsInnerNomination
+/// RespondSellingCategoriesDataContentInnerSellingSubCategorysInner
 ///
 /// Properties:
 /// * [id] 
@@ -19,10 +19,8 @@ part 'respond_event_data_contest_components_inner_nomination.g.dart';
 /// * [deleted] 
 /// * [recordStatus] 
 /// * [name] 
-/// * [description] 
-/// * [urutan] 
 @BuiltValue()
-abstract class RespondEventDataContestComponentsInnerNomination implements Built<RespondEventDataContestComponentsInnerNomination, RespondEventDataContestComponentsInnerNominationBuilder> {
+abstract class RespondSellingCategoriesDataContentInnerSellingSubCategorysInner implements Built<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner, RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder> {
   @BuiltValueField(wireName: r'id')
   String? get id;
 
@@ -47,33 +45,27 @@ abstract class RespondEventDataContestComponentsInnerNomination implements Built
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  @BuiltValueField(wireName: r'description')
-  String? get description;
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner._();
 
-  @BuiltValueField(wireName: r'urutan')
-  num? get urutan;
-
-  RespondEventDataContestComponentsInnerNomination._();
-
-  factory RespondEventDataContestComponentsInnerNomination([void updates(RespondEventDataContestComponentsInnerNominationBuilder b)]) = _$RespondEventDataContestComponentsInnerNomination;
+  factory RespondSellingCategoriesDataContentInnerSellingSubCategorysInner([void updates(RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder b)]) = _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondEventDataContestComponentsInnerNominationBuilder b) => b;
+  static void _defaults(RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondEventDataContestComponentsInnerNomination> get serializer => _$RespondEventDataContestComponentsInnerNominationSerializer();
+  static Serializer<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner> get serializer => _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerSerializer();
 }
 
-class _$RespondEventDataContestComponentsInnerNominationSerializer implements PrimitiveSerializer<RespondEventDataContestComponentsInnerNomination> {
+class _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerSerializer implements PrimitiveSerializer<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner> {
   @override
-  final Iterable<Type> types = const [RespondEventDataContestComponentsInnerNomination, _$RespondEventDataContestComponentsInnerNomination];
+  final Iterable<Type> types = const [RespondSellingCategoriesDataContentInnerSellingSubCategorysInner, _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner];
 
   @override
-  final String wireName = r'RespondEventDataContestComponentsInnerNomination';
+  final String wireName = r'RespondSellingCategoriesDataContentInnerSellingSubCategorysInner';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondEventDataContestComponentsInnerNomination object, {
+    RespondSellingCategoriesDataContentInnerSellingSubCategorysInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.id != null) {
@@ -132,26 +124,12 @@ class _$RespondEventDataContestComponentsInnerNominationSerializer implements Pr
         specifiedType: const FullType(String),
       );
     }
-    if (object.description != null) {
-      yield r'description';
-      yield serializers.serialize(
-        object.description,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.urutan != null) {
-      yield r'urutan';
-      yield serializers.serialize(
-        object.urutan,
-        specifiedType: const FullType(num),
-      );
-    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondEventDataContestComponentsInnerNomination object, {
+    RespondSellingCategoriesDataContentInnerSellingSubCategorysInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -162,7 +140,7 @@ class _$RespondEventDataContestComponentsInnerNominationSerializer implements Pr
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondEventDataContestComponentsInnerNominationBuilder result,
+    required RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -225,20 +203,6 @@ class _$RespondEventDataContestComponentsInnerNominationSerializer implements Pr
           ) as String;
           result.name = valueDes;
           break;
-        case r'description':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.description = valueDes;
-          break;
-        case r'urutan':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(num),
-          ) as num;
-          result.urutan = valueDes;
-          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -248,12 +212,12 @@ class _$RespondEventDataContestComponentsInnerNominationSerializer implements Pr
   }
 
   @override
-  RespondEventDataContestComponentsInnerNomination deserialize(
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondEventDataContestComponentsInnerNominationBuilder();
+    final result = RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

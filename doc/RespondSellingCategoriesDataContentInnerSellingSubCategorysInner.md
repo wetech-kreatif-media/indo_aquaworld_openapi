@@ -1,4 +1,4 @@
-# openapi.model.RespondEventDataContestComponentsInnerNomination
+# openapi.model.RespondSellingCategoriesDataContentInnerSellingSubCategorysInner
 
 ## Load the model package
 ```dart
@@ -16,8 +16,6 @@ Name | Type | Description | Notes
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**urutan** | **num** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

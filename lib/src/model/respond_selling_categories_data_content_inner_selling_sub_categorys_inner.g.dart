@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_event_data_contest_components_inner_nomination.dart';
+part of 'respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondEventDataContestComponentsInnerNomination
-    extends RespondEventDataContestComponentsInnerNomination {
+class _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner
+    extends RespondSellingCategoriesDataContentInnerSellingSubCategorysInner {
   @override
   final String? id;
   @override
@@ -24,20 +24,16 @@ class _$RespondEventDataContestComponentsInnerNomination
   final String? recordStatus;
   @override
   final String? name;
-  @override
-  final String? description;
-  @override
-  final num? urutan;
 
-  factory _$RespondEventDataContestComponentsInnerNomination(
+  factory _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner(
           [void Function(
-                  RespondEventDataContestComponentsInnerNominationBuilder)?
+                  RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder)?
               updates]) =>
-      (new RespondEventDataContestComponentsInnerNominationBuilder()
+      (new RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder()
             ..update(updates))
           ._build();
 
-  _$RespondEventDataContestComponentsInnerNomination._(
+  _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner._(
       {this.id,
       this.createdBy,
       this.updatedBy,
@@ -45,26 +41,27 @@ class _$RespondEventDataContestComponentsInnerNomination
       this.updated,
       this.deleted,
       this.recordStatus,
-      this.name,
-      this.description,
-      this.urutan})
+      this.name})
       : super._();
 
   @override
-  RespondEventDataContestComponentsInnerNomination rebuild(
-          void Function(RespondEventDataContestComponentsInnerNominationBuilder)
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner rebuild(
+          void Function(
+                  RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder)
               updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondEventDataContestComponentsInnerNominationBuilder toBuilder() =>
-      new RespondEventDataContestComponentsInnerNominationBuilder()
-        ..replace(this);
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder
+      toBuilder() =>
+          new RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder()
+            ..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondEventDataContestComponentsInnerNomination &&
+    return other
+            is RespondSellingCategoriesDataContentInnerSellingSubCategorysInner &&
         id == other.id &&
         createdBy == other.createdBy &&
         updatedBy == other.updatedBy &&
@@ -72,9 +69,7 @@ class _$RespondEventDataContestComponentsInnerNomination
         updated == other.updated &&
         deleted == other.deleted &&
         recordStatus == other.recordStatus &&
-        name == other.name &&
-        description == other.description &&
-        urutan == other.urutan;
+        name == other.name;
   }
 
   @override
@@ -88,8 +83,6 @@ class _$RespondEventDataContestComponentsInnerNomination
     _$hash = $jc(_$hash, deleted.hashCode);
     _$hash = $jc(_$hash, recordStatus.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, urutan.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -97,7 +90,7 @@ class _$RespondEventDataContestComponentsInnerNomination
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'RespondEventDataContestComponentsInnerNomination')
+            r'RespondSellingCategoriesDataContentInnerSellingSubCategorysInner')
           ..add('id', id)
           ..add('createdBy', createdBy)
           ..add('updatedBy', updatedBy)
@@ -105,18 +98,17 @@ class _$RespondEventDataContestComponentsInnerNomination
           ..add('updated', updated)
           ..add('deleted', deleted)
           ..add('recordStatus', recordStatus)
-          ..add('name', name)
-          ..add('description', description)
-          ..add('urutan', urutan))
+          ..add('name', name))
         .toString();
   }
 }
 
-class RespondEventDataContestComponentsInnerNominationBuilder
+class RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder
     implements
-        Builder<RespondEventDataContestComponentsInnerNomination,
-            RespondEventDataContestComponentsInnerNominationBuilder> {
-  _$RespondEventDataContestComponentsInnerNomination? _$v;
+        Builder<
+            RespondSellingCategoriesDataContentInnerSellingSubCategorysInner,
+            RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder> {
+  _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -150,19 +142,13 @@ class RespondEventDataContestComponentsInnerNominationBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  String? _description;
-  String? get description => _$this._description;
-  set description(String? description) => _$this._description = description;
-
-  num? _urutan;
-  num? get urutan => _$this._urutan;
-  set urutan(num? urutan) => _$this._urutan = urutan;
-
-  RespondEventDataContestComponentsInnerNominationBuilder() {
-    RespondEventDataContestComponentsInnerNomination._defaults(this);
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder() {
+    RespondSellingCategoriesDataContentInnerSellingSubCategorysInner._defaults(
+        this);
   }
 
-  RespondEventDataContestComponentsInnerNominationBuilder get _$this {
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder
+      get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -173,32 +159,35 @@ class RespondEventDataContestComponentsInnerNominationBuilder
       _deleted = $v.deleted;
       _recordStatus = $v.recordStatus;
       _name = $v.name;
-      _description = $v.description;
-      _urutan = $v.urutan;
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(RespondEventDataContestComponentsInnerNomination other) {
+  void replace(
+      RespondSellingCategoriesDataContentInnerSellingSubCategorysInner other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondEventDataContestComponentsInnerNomination;
+    _$v = other
+        as _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner;
   }
 
   @override
   void update(
-      void Function(RespondEventDataContestComponentsInnerNominationBuilder)?
+      void Function(
+              RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder)?
           updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondEventDataContestComponentsInnerNomination build() => _build();
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner build() =>
+      _build();
 
-  _$RespondEventDataContestComponentsInnerNomination _build() {
+  _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner _build() {
     final _$result = _$v ??
-        new _$RespondEventDataContestComponentsInnerNomination._(
+        new _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner
+                ._(
             id: id,
             createdBy: createdBy,
             updatedBy: updatedBy,
@@ -206,9 +195,7 @@ class RespondEventDataContestComponentsInnerNominationBuilder
             updated: updated,
             deleted: deleted,
             recordStatus: recordStatus,
-            name: name,
-            description: description,
-            urutan: urutan);
+            name: name);
     replace(_$result);
     return _$result;
   }

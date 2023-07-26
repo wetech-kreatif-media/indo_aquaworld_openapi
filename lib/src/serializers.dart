@@ -28,6 +28,8 @@ import 'package:openapi/src/model/request_login.dart';
 import 'package:openapi/src/model/request_permission.dart';
 import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
+import 'package:openapi/src/model/request_selling_category.dart';
+import 'package:openapi/src/model/request_selling_sub_category.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/request_tank.dart';
 import 'package:openapi/src/model/request_tank_assesment.dart';
@@ -43,17 +45,10 @@ import 'package:openapi/src/model/respond_contestants.dart';
 import 'package:openapi/src/model/respond_contestants_data.dart';
 import 'package:openapi/src/model/respond_contestants_data_content_inner.dart';
 import 'package:openapi/src/model/respond_event.dart';
-import 'package:openapi/src/model/respond_event1.dart';
-import 'package:openapi/src/model/respond_event1_data.dart';
-import 'package:openapi/src/model/respond_event1_data_contest_components_inner.dart';
-import 'package:openapi/src/model/respond_event1_data_contest_components_inner_nomination.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
-import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
-import 'package:openapi/src/model/respond_event_data_teams_inner_role.dart';
-import 'package:openapi/src/model/respond_event_data_teams_inner_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_event_nominations.dart';
 import 'package:openapi/src/model/respond_event_nominations_data_inner.dart';
 import 'package:openapi/src/model/respond_events.dart';
@@ -77,6 +72,12 @@ import 'package:openapi/src/model/respond_permissions_data_content_inner.dart';
 import 'package:openapi/src/model/respond_roles.dart';
 import 'package:openapi/src/model/respond_roles_data.dart';
 import 'package:openapi/src/model/respond_roles_data_content_inner.dart';
+import 'package:openapi/src/model/respond_selling_categories.dart';
+import 'package:openapi/src/model/respond_selling_categories_data.dart';
+import 'package:openapi/src/model/respond_selling_categories_data_content_inner.dart';
+import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
+import 'package:openapi/src/model/respond_selling_sub_category.dart';
+import 'package:openapi/src/model/respond_selling_sub_category_data.dart';
 import 'package:openapi/src/model/respond_success_login.dart';
 import 'package:openapi/src/model/respond_success_login_data.dart';
 import 'package:openapi/src/model/respond_success_login_data_role.dart';
@@ -120,6 +121,8 @@ part 'serializers.g.dart';
   RequestPermission,
   RequestRole,
   RequestRolePermissionsInner,
+  RequestSellingCategory,
+  RequestSellingSubCategory,
   RequestSendOtp,
   RequestTank,
   RequestTankAssesment,
@@ -135,17 +138,10 @@ part 'serializers.g.dart';
   RespondContestantsData,
   RespondContestantsDataContentInner,
   RespondEvent,
-  RespondEvent1,
-  RespondEvent1Data,
-  RespondEvent1DataContestComponentsInner,
-  RespondEvent1DataContestComponentsInnerNomination,
   RespondEventData,
   RespondEventDataContestComponentsInner,
   RespondEventDataContestComponentsInnerJudge,
   RespondEventDataContestComponentsInnerNomination,
-  RespondEventDataTeamsInner,
-  RespondEventDataTeamsInnerRole,
-  RespondEventDataTeamsInnerRolePermissionsInner,
   RespondEventNominations,
   RespondEventNominationsDataInner,
   RespondEvents,
@@ -169,6 +165,12 @@ part 'serializers.g.dart';
   RespondRoles,
   RespondRolesData,
   RespondRolesDataContentInner,
+  RespondSellingCategories,
+  RespondSellingCategoriesData,
+  RespondSellingCategoriesDataContentInner,
+  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner,
+  RespondSellingSubCategory,
+  RespondSellingSubCategoryData,
   RespondSuccessLogin,
   RespondSuccessLoginData,
   RespondSuccessLoginDataRole,

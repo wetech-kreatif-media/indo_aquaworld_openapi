@@ -9,11 +9,11 @@ part of 'respond_event_data_contest_components_inner.dart';
 class _$RespondEventDataContestComponentsInner
     extends RespondEventDataContestComponentsInner {
   @override
-  final String? id;
+  final String id;
   @override
-  final RespondEventDataContestComponentsInnerNomination? nomination;
+  final RespondEventDataContestComponentsInnerNomination nomination;
   @override
-  final num? head;
+  final num head;
   @override
   final num body;
   @override
@@ -29,7 +29,7 @@ class _$RespondEventDataContestComponentsInner
   @override
   final num overall;
   @override
-  final RespondEventDataContestComponentsInnerJudge? judge;
+  final RespondEventDataContestComponentsInnerJudge judge;
 
   factory _$RespondEventDataContestComponentsInner(
           [void Function(RespondEventDataContestComponentsInnerBuilder)?
@@ -38,9 +38,9 @@ class _$RespondEventDataContestComponentsInner
           ._build();
 
   _$RespondEventDataContestComponentsInner._(
-      {this.id,
-      this.nomination,
-      this.head,
+      {required this.id,
+      required this.nomination,
+      required this.head,
       required this.body,
       required this.colour,
       required this.fantail,
@@ -48,8 +48,14 @@ class _$RespondEventDataContestComponentsInner
       required this.pearly,
       required this.marking,
       required this.overall,
-      this.judge})
+      required this.judge})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'RespondEventDataContestComponentsInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        nomination, r'RespondEventDataContestComponentsInner', 'nomination');
+    BuiltValueNullFieldError.checkNotNull(
+        head, r'RespondEventDataContestComponentsInner', 'head');
     BuiltValueNullFieldError.checkNotNull(
         body, r'RespondEventDataContestComponentsInner', 'body');
     BuiltValueNullFieldError.checkNotNull(
@@ -64,6 +70,8 @@ class _$RespondEventDataContestComponentsInner
         marking, r'RespondEventDataContestComponentsInner', 'marking');
     BuiltValueNullFieldError.checkNotNull(
         overall, r'RespondEventDataContestComponentsInner', 'overall');
+    BuiltValueNullFieldError.checkNotNull(
+        judge, r'RespondEventDataContestComponentsInner', 'judge');
   }
 
   @override
@@ -196,7 +204,7 @@ class RespondEventDataContestComponentsInnerBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _nomination = $v.nomination?.toBuilder();
+      _nomination = $v.nomination.toBuilder();
       _head = $v.head;
       _body = $v.body;
       _colour = $v.colour;
@@ -205,7 +213,7 @@ class RespondEventDataContestComponentsInnerBuilder
       _pearly = $v.pearly;
       _marking = $v.marking;
       _overall = $v.overall;
-      _judge = $v.judge?.toBuilder();
+      _judge = $v.judge.toBuilder();
       _$v = null;
     }
     return this;
@@ -231,9 +239,11 @@ class RespondEventDataContestComponentsInnerBuilder
     try {
       _$result = _$v ??
           new _$RespondEventDataContestComponentsInner._(
-              id: id,
-              nomination: _nomination?.build(),
-              head: head,
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondEventDataContestComponentsInner', 'id'),
+              nomination: nomination.build(),
+              head: BuiltValueNullFieldError.checkNotNull(
+                  head, r'RespondEventDataContestComponentsInner', 'head'),
               body: BuiltValueNullFieldError.checkNotNull(
                   body, r'RespondEventDataContestComponentsInner', 'body'),
               colour: BuiltValueNullFieldError.checkNotNull(
@@ -246,17 +256,16 @@ class RespondEventDataContestComponentsInnerBuilder
                   pearly, r'RespondEventDataContestComponentsInner', 'pearly'),
               marking: BuiltValueNullFieldError.checkNotNull(
                   marking, r'RespondEventDataContestComponentsInner', 'marking'),
-              overall: BuiltValueNullFieldError.checkNotNull(overall,
-                  r'RespondEventDataContestComponentsInner', 'overall'),
-              judge: _judge?.build());
+              overall: BuiltValueNullFieldError.checkNotNull(overall, r'RespondEventDataContestComponentsInner', 'overall'),
+              judge: judge.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'nomination';
-        _nomination?.build();
+        nomination.build();
 
         _$failedField = 'judge';
-        _judge?.build();
+        judge.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondEventDataContestComponentsInner',

@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_event_data_contest_components_inner_nomination.dart';
+part of 'respond_selling_categories_data_content_inner.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondEventDataContestComponentsInnerNomination
-    extends RespondEventDataContestComponentsInnerNomination {
+class _$RespondSellingCategoriesDataContentInner
+    extends RespondSellingCategoriesDataContentInner {
   @override
   final String? id;
   @override
@@ -25,19 +25,17 @@ class _$RespondEventDataContestComponentsInnerNomination
   @override
   final String? name;
   @override
-  final String? description;
-  @override
-  final num? urutan;
+  final BuiltList<
+          RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>?
+      sellingSubCategorys;
 
-  factory _$RespondEventDataContestComponentsInnerNomination(
-          [void Function(
-                  RespondEventDataContestComponentsInnerNominationBuilder)?
+  factory _$RespondSellingCategoriesDataContentInner(
+          [void Function(RespondSellingCategoriesDataContentInnerBuilder)?
               updates]) =>
-      (new RespondEventDataContestComponentsInnerNominationBuilder()
-            ..update(updates))
+      (new RespondSellingCategoriesDataContentInnerBuilder()..update(updates))
           ._build();
 
-  _$RespondEventDataContestComponentsInnerNomination._(
+  _$RespondSellingCategoriesDataContentInner._(
       {this.id,
       this.createdBy,
       this.updatedBy,
@@ -46,25 +44,23 @@ class _$RespondEventDataContestComponentsInnerNomination
       this.deleted,
       this.recordStatus,
       this.name,
-      this.description,
-      this.urutan})
+      this.sellingSubCategorys})
       : super._();
 
   @override
-  RespondEventDataContestComponentsInnerNomination rebuild(
-          void Function(RespondEventDataContestComponentsInnerNominationBuilder)
+  RespondSellingCategoriesDataContentInner rebuild(
+          void Function(RespondSellingCategoriesDataContentInnerBuilder)
               updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondEventDataContestComponentsInnerNominationBuilder toBuilder() =>
-      new RespondEventDataContestComponentsInnerNominationBuilder()
-        ..replace(this);
+  RespondSellingCategoriesDataContentInnerBuilder toBuilder() =>
+      new RespondSellingCategoriesDataContentInnerBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondEventDataContestComponentsInnerNomination &&
+    return other is RespondSellingCategoriesDataContentInner &&
         id == other.id &&
         createdBy == other.createdBy &&
         updatedBy == other.updatedBy &&
@@ -73,8 +69,7 @@ class _$RespondEventDataContestComponentsInnerNomination
         deleted == other.deleted &&
         recordStatus == other.recordStatus &&
         name == other.name &&
-        description == other.description &&
-        urutan == other.urutan;
+        sellingSubCategorys == other.sellingSubCategorys;
   }
 
   @override
@@ -88,8 +83,7 @@ class _$RespondEventDataContestComponentsInnerNomination
     _$hash = $jc(_$hash, deleted.hashCode);
     _$hash = $jc(_$hash, recordStatus.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, urutan.hashCode);
+    _$hash = $jc(_$hash, sellingSubCategorys.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -97,7 +91,7 @@ class _$RespondEventDataContestComponentsInnerNomination
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'RespondEventDataContestComponentsInnerNomination')
+            r'RespondSellingCategoriesDataContentInner')
           ..add('id', id)
           ..add('createdBy', createdBy)
           ..add('updatedBy', updatedBy)
@@ -106,17 +100,16 @@ class _$RespondEventDataContestComponentsInnerNomination
           ..add('deleted', deleted)
           ..add('recordStatus', recordStatus)
           ..add('name', name)
-          ..add('description', description)
-          ..add('urutan', urutan))
+          ..add('sellingSubCategorys', sellingSubCategorys))
         .toString();
   }
 }
 
-class RespondEventDataContestComponentsInnerNominationBuilder
+class RespondSellingCategoriesDataContentInnerBuilder
     implements
-        Builder<RespondEventDataContestComponentsInnerNomination,
-            RespondEventDataContestComponentsInnerNominationBuilder> {
-  _$RespondEventDataContestComponentsInnerNomination? _$v;
+        Builder<RespondSellingCategoriesDataContentInner,
+            RespondSellingCategoriesDataContentInnerBuilder> {
+  _$RespondSellingCategoriesDataContentInner? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -150,19 +143,22 @@ class RespondEventDataContestComponentsInnerNominationBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  String? _description;
-  String? get description => _$this._description;
-  set description(String? description) => _$this._description = description;
+  ListBuilder<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>?
+      _sellingSubCategorys;
+  ListBuilder<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>
+      get sellingSubCategorys => _$this._sellingSubCategorys ??= new ListBuilder<
+          RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>();
+  set sellingSubCategorys(
+          ListBuilder<
+                  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>?
+              sellingSubCategorys) =>
+      _$this._sellingSubCategorys = sellingSubCategorys;
 
-  num? _urutan;
-  num? get urutan => _$this._urutan;
-  set urutan(num? urutan) => _$this._urutan = urutan;
-
-  RespondEventDataContestComponentsInnerNominationBuilder() {
-    RespondEventDataContestComponentsInnerNomination._defaults(this);
+  RespondSellingCategoriesDataContentInnerBuilder() {
+    RespondSellingCategoriesDataContentInner._defaults(this);
   }
 
-  RespondEventDataContestComponentsInnerNominationBuilder get _$this {
+  RespondSellingCategoriesDataContentInnerBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -173,42 +169,54 @@ class RespondEventDataContestComponentsInnerNominationBuilder
       _deleted = $v.deleted;
       _recordStatus = $v.recordStatus;
       _name = $v.name;
-      _description = $v.description;
-      _urutan = $v.urutan;
+      _sellingSubCategorys = $v.sellingSubCategorys?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(RespondEventDataContestComponentsInnerNomination other) {
+  void replace(RespondSellingCategoriesDataContentInner other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondEventDataContestComponentsInnerNomination;
+    _$v = other as _$RespondSellingCategoriesDataContentInner;
   }
 
   @override
   void update(
-      void Function(RespondEventDataContestComponentsInnerNominationBuilder)?
-          updates) {
+      void Function(RespondSellingCategoriesDataContentInnerBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondEventDataContestComponentsInnerNomination build() => _build();
+  RespondSellingCategoriesDataContentInner build() => _build();
 
-  _$RespondEventDataContestComponentsInnerNomination _build() {
-    final _$result = _$v ??
-        new _$RespondEventDataContestComponentsInnerNomination._(
-            id: id,
-            createdBy: createdBy,
-            updatedBy: updatedBy,
-            created: created,
-            updated: updated,
-            deleted: deleted,
-            recordStatus: recordStatus,
-            name: name,
-            description: description,
-            urutan: urutan);
+  _$RespondSellingCategoriesDataContentInner _build() {
+    _$RespondSellingCategoriesDataContentInner _$result;
+    try {
+      _$result = _$v ??
+          new _$RespondSellingCategoriesDataContentInner._(
+              id: id,
+              createdBy: createdBy,
+              updatedBy: updatedBy,
+              created: created,
+              updated: updated,
+              deleted: deleted,
+              recordStatus: recordStatus,
+              name: name,
+              sellingSubCategorys: _sellingSubCategorys?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'sellingSubCategorys';
+        _sellingSubCategorys?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'RespondSellingCategoriesDataContentInner',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

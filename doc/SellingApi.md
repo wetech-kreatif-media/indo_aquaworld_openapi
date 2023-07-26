@@ -1,0 +1,277 @@
+# openapi.api.SellingApi
+
+## Load the API package
+```dart
+import 'package:openapi/api.dart';
+```
+
+All URIs are relative to *http://localhost:8080/api*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getSellingCategory**](SellingApi.md#getsellingcategory) | **GET** /public/selling-category | Get Selling Category
+[**getSellingSubCategory**](SellingApi.md#getsellingsubcategory) | **GET** /public/selling-subcategory/{sellingCatId} | Get Selling SubCategory
+[**postSellingCategory**](SellingApi.md#postsellingcategory) | **POST** /public/selling-category | Post Selling Category
+[**postSellingSubCategory**](SellingApi.md#postsellingsubcategory) | **POST** /public/selling-subcategory | Post Selling SubCategory
+[**putSellingCategory**](SellingApi.md#putsellingcategory) | **PUT** /public/selling-category/{sellingCatId} | Put Selling Category
+[**putSellingSubCategory**](SellingApi.md#putsellingsubcategory) | **PUT** /public/selling-subcategory/{sellingCatId} | Put Selling Category
+
+
+# **getSellingCategory**
+> RespondSellingCategories getSellingCategory()
+
+Get Selling Category
+
+Ambil kategori jual beli
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSellingApi();
+
+try {
+    final response = api.getSellingCategory();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->getSellingCategory: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RespondSellingCategories**](RespondSellingCategories.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getSellingSubCategory**
+> RespondSellingSubCategory getSellingSubCategory(sellingCatId)
+
+Get Selling SubCategory
+
+Ambil subkategori jual beli
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSellingApi();
+final String sellingCatId = sellingCatId_example; // String | 
+
+try {
+    final response = api.getSellingSubCategory(sellingCatId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->getSellingSubCategory: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sellingCatId** | **String**|  | 
+
+### Return type
+
+[**RespondSellingSubCategory**](RespondSellingSubCategory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postSellingCategory**
+> RespondGlobal postSellingCategory(requestSellingCategory)
+
+Post Selling Category
+
+Tambah ketegori jual beli
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSellingApi();
+final RequestSellingCategory requestSellingCategory = {"name":"Ikan"}; // RequestSellingCategory | 
+
+try {
+    final response = api.postSellingCategory(requestSellingCategory);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->postSellingCategory: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestSellingCategory** | [**RequestSellingCategory**](RequestSellingCategory.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postSellingSubCategory**
+> RespondGlobal postSellingSubCategory(requestSellingSubCategory)
+
+Post Selling SubCategory
+
+Tambah ketegori jual beli
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSellingApi();
+final RequestSellingSubCategory requestSellingSubCategory = {"sellingCategory":"9ba95266-1f6e-4d49-9f91-201e453a321e","name":"Koi"}; // RequestSellingSubCategory | 
+
+try {
+    final response = api.postSellingSubCategory(requestSellingSubCategory);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->postSellingSubCategory: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestSellingSubCategory** | [**RequestSellingSubCategory**](RequestSellingSubCategory.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putSellingCategory**
+> RespondGlobal putSellingCategory(sellingCatId, requestSellingCategory)
+
+Put Selling Category
+
+Sunting ketegori jual beli
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSellingApi();
+final String sellingCatId = sellingCatId_example; // String | 
+final RequestSellingCategory requestSellingCategory = {"name":"Ikan"}; // RequestSellingCategory | 
+
+try {
+    final response = api.putSellingCategory(sellingCatId, requestSellingCategory);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->putSellingCategory: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sellingCatId** | **String**|  | 
+ **requestSellingCategory** | [**RequestSellingCategory**](RequestSellingCategory.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putSellingSubCategory**
+> RespondGlobal putSellingSubCategory(sellingCatId, requestSellingCategory)
+
+Put Selling Category
+
+Sunting sub ketegori jual beli
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSellingApi();
+final String sellingCatId = sellingCatId_example; // String | 
+final RequestSellingCategory requestSellingCategory = {"name":"Ikan"}; // RequestSellingCategory | 
+
+try {
+    final response = api.putSellingSubCategory(sellingCatId, requestSellingCategory);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->putSellingSubCategory: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sellingCatId** | **String**|  | 
+ **requestSellingCategory** | [**RequestSellingCategory**](RequestSellingCategory.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
