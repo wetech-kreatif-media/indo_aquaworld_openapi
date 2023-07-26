@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_selling_category.dart';
 import 'package:openapi/src/model/request_selling_sub_category.dart';
 import 'package:openapi/src/model/respond_global.dart';
@@ -25,6 +26,11 @@ class SellingApi {
   /// Ambil kategori jual beli
   ///
   /// Parameters:
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
+  /// * [name] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,6 +41,11 @@ class SellingApi {
   /// Returns a [Future] containing a [Response] with a [RespondSellingCategories] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondSellingCategories>> getSellingCategory({ 
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    String? pageSize,
+    String? name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -55,9 +66,18 @@ class SellingApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
+      if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -99,6 +119,11 @@ class SellingApi {
   ///
   /// Parameters:
   /// * [sellingCatId] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
+  /// * [name] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -110,6 +135,11 @@ class SellingApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondSellingSubCategory>> getSellingSubCategory({ 
     required String sellingCatId,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    String? pageSize,
+    String? name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -130,9 +160,18 @@ class SellingApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
+      if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **getSellingCategory**
-> RespondSellingCategories getSellingCategory()
+> RespondSellingCategories getSellingCategory(sort, direction, pageNumber, pageSize, name)
 
 Get Selling Category
 
@@ -29,9 +29,14 @@ Ambil kategori jual beli
 import 'package:openapi/api.dart';
 
 final api = Openapi().getSellingApi();
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final String pageSize = pageSize_example; // String | 
+final String name = name_example; // String | 
 
 try {
-    final response = api.getSellingCategory();
+    final response = api.getSellingCategory(sort, direction, pageNumber, pageSize, name);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling SellingApi->getSellingCategory: $e\n');
@@ -39,7 +44,14 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **String**|  | [optional] 
+ **name** | **String**|  | [optional] 
 
 ### Return type
 
@@ -57,7 +69,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSellingSubCategory**
-> RespondSellingSubCategory getSellingSubCategory(sellingCatId)
+> RespondSellingSubCategory getSellingSubCategory(sellingCatId, sort, direction, pageNumber, pageSize, name)
 
 Get Selling SubCategory
 
@@ -69,9 +81,14 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getSellingApi();
 final String sellingCatId = sellingCatId_example; // String | 
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final String pageSize = pageSize_example; // String | 
+final String name = name_example; // String | 
 
 try {
-    final response = api.getSellingSubCategory(sellingCatId);
+    final response = api.getSellingSubCategory(sellingCatId, sort, direction, pageNumber, pageSize, name);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling SellingApi->getSellingSubCategory: $e\n');
@@ -83,6 +100,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sellingCatId** | **String**|  | 
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **String**|  | [optional] 
+ **name** | **String**|  | [optional] 
 
 ### Return type
 
