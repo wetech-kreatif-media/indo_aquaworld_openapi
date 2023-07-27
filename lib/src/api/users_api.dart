@@ -10,12 +10,10 @@ import 'package:dio/dio.dart';
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_forgot.dart';
-import 'package:openapi/src/model/request_login.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/request_user.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_logged.dart';
-import 'package:openapi/src/model/respond_success_login.dart';
 import 'package:openapi/src/model/respond_user.dart';
 import 'package:openapi/src/model/respond_users.dart';
 
@@ -31,7 +29,6 @@ class UsersApi {
   /// Ambil userId
   ///
   /// Parameters:
-  /// * [userId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -42,7 +39,6 @@ class UsersApi {
   /// Returns a [Future] containing a [Response] with a [RespondLogged] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondLogged>> getMe({ 
-    required String userId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -50,14 +46,20 @@ class UsersApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/protected/me'.replaceAll('{' r'userId' '}', userId.toString());
+    final _path = r'/protected/me';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -132,7 +134,13 @@ class UsersApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -364,101 +372,6 @@ class UsersApi {
     );
   }
 
-  /// Login
-  /// Login
-  ///
-  /// Parameters:
-  /// * [requestLogin] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [RespondSuccessLogin] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondSuccessLogin>> postLogin({ 
-    RequestLogin? requestLogin,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/public/login';
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(RequestLogin);
-      _bodyData = requestLogin == null ? null : _serializers.serialize(requestLogin, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    RespondSuccessLogin? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(RespondSuccessLogin),
-      ) as RespondSuccessLogin;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<RespondSuccessLogin>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Registrasi
   /// Regsitrasi user baru
   ///
@@ -489,7 +402,13 @@ class UsersApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -871,7 +790,13 @@ class UsersApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',

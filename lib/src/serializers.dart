@@ -24,7 +24,6 @@ import 'package:openapi/src/model/request_event_teams_inner.dart';
 import 'package:openapi/src/model/request_faq.dart';
 import 'package:openapi/src/model/request_forgot.dart';
 import 'package:openapi/src/model/request_location.dart';
-import 'package:openapi/src/model/request_login.dart';
 import 'package:openapi/src/model/request_permission.dart';
 import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
@@ -80,10 +79,6 @@ import 'package:openapi/src/model/respond_selling_categories_data_content_inner.
 import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
 import 'package:openapi/src/model/respond_selling_sub_category.dart';
 import 'package:openapi/src/model/respond_selling_sub_category_data.dart';
-import 'package:openapi/src/model/respond_success_login.dart';
-import 'package:openapi/src/model/respond_success_login_data.dart';
-import 'package:openapi/src/model/respond_success_login_data_role.dart';
-import 'package:openapi/src/model/respond_success_login_data_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_tank.dart';
 import 'package:openapi/src/model/respond_tank_assesment.dart';
 import 'package:openapi/src/model/respond_tank_assesment_data.dart';
@@ -119,7 +114,6 @@ part 'serializers.g.dart';
   RequestFaq,
   RequestForgot,
   RequestLocation,
-  RequestLogin,
   RequestPermission,
   RequestRole,
   RequestRolePermissionsInner,
@@ -175,10 +169,6 @@ part 'serializers.g.dart';
   RespondSellingCategoriesDataContentInnerSellingSubCategorysInner,
   RespondSellingSubCategory,
   RespondSellingSubCategoryData,
-  RespondSuccessLogin,
-  RespondSuccessLoginData,
-  RespondSuccessLoginDataRole,
-  RespondSuccessLoginDataRolePermissionsInner,
   RespondTank,
   RespondTankAssesment,
   RespondTankAssesmentData,

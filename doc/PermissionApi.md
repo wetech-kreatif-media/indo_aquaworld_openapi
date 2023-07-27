@@ -23,6 +23,9 @@ Buat permission
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getPermissionApi();
 final RequestPermission requestPermission = {"label":"permission_exp2","value":"Example Permission 2","description":"Contoh permission 2"}; // RequestPermission | 
@@ -47,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -17,7 +17,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestFaq.serializer)
       ..add(RequestForgot.serializer)
       ..add(RequestLocation.serializer)
-      ..add(RequestLogin.serializer)
       ..add(RequestPermission.serializer)
       ..add(RequestRole.serializer)
       ..add(RequestRolePermissionsInner.serializer)
@@ -74,10 +73,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(RespondSellingSubCategory.serializer)
       ..add(RespondSellingSubCategoryData.serializer)
-      ..add(RespondSuccessLogin.serializer)
-      ..add(RespondSuccessLoginData.serializer)
-      ..add(RespondSuccessLoginDataRole.serializer)
-      ..add(RespondSuccessLoginDataRolePermissionsInner.serializer)
       ..add(RespondTank.serializer)
       ..add(RespondTankAssesment.serializer)
       ..add(RespondTankAssesmentData.serializer)
@@ -174,11 +169,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () => new ListBuilder<
               RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(RespondSuccessLoginDataRolePermissionsInner)
-          ]),
-          () => new ListBuilder<RespondSuccessLoginDataRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondTankAssesmentDataPinaltiesInner)]),

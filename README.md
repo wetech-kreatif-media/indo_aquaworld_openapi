@@ -111,7 +111,6 @@ Class | Method | HTTP request | Description
 [*UsersApi*](doc/UsersApi.md) | [**getUser**](doc/UsersApi.md#getuser) | **GET** /public/user/{userId} | Get User
 [*UsersApi*](doc/UsersApi.md) | [**getUsers**](doc/UsersApi.md#getusers) | **GET** /public/users | Get Users
 [*UsersApi*](doc/UsersApi.md) | [**postForgot**](doc/UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
-[*UsersApi*](doc/UsersApi.md) | [**postLogin**](doc/UsersApi.md#postlogin) | **POST** /public/login | Login
 [*UsersApi*](doc/UsersApi.md) | [**postRegistrasi**](doc/UsersApi.md#postregistrasi) | **POST** /public/registration | Registrasi
 [*UsersApi*](doc/UsersApi.md) | [**postSentOtp**](doc/UsersApi.md#postsentotp) | **POST** /public/send-otp | Send OTP
 [*UsersApi*](doc/UsersApi.md) | [**putChangePassword**](doc/UsersApi.md#putchangepassword) | **PUT** /public/change-password | Change Password
@@ -131,7 +130,6 @@ Class | Method | HTTP request | Description
  - [RequestFaq](doc/RequestFaq.md)
  - [RequestForgot](doc/RequestForgot.md)
  - [RequestLocation](doc/RequestLocation.md)
- - [RequestLogin](doc/RequestLogin.md)
  - [RequestPermission](doc/RequestPermission.md)
  - [RequestRole](doc/RequestRole.md)
  - [RequestRolePermissionsInner](doc/RequestRolePermissionsInner.md)
@@ -187,10 +185,6 @@ Class | Method | HTTP request | Description
  - [RespondSellingCategoriesDataContentInnerSellingSubCategorysInner](doc/RespondSellingCategoriesDataContentInnerSellingSubCategorysInner.md)
  - [RespondSellingSubCategory](doc/RespondSellingSubCategory.md)
  - [RespondSellingSubCategoryData](doc/RespondSellingSubCategoryData.md)
- - [RespondSuccessLogin](doc/RespondSuccessLogin.md)
- - [RespondSuccessLoginData](doc/RespondSuccessLoginData.md)
- - [RespondSuccessLoginDataRole](doc/RespondSuccessLoginDataRole.md)
- - [RespondSuccessLoginDataRolePermissionsInner](doc/RespondSuccessLoginDataRolePermissionsInner.md)
  - [RespondTank](doc/RespondTank.md)
  - [RespondTankAssesment](doc/RespondTankAssesment.md)
  - [RespondTankAssesmentData](doc/RespondTankAssesmentData.md)
@@ -216,7 +210,11 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+### bearerAuth
+
+- **Type**: HTTP basic authentication
 
 
 ## Author

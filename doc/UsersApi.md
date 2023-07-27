@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**getUser**](UsersApi.md#getuser) | **GET** /public/user/{userId} | Get User
 [**getUsers**](UsersApi.md#getusers) | **GET** /public/users | Get Users
 [**postForgot**](UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
-[**postLogin**](UsersApi.md#postlogin) | **POST** /public/login | Login
 [**postRegistrasi**](UsersApi.md#postregistrasi) | **POST** /public/registration | Registrasi
 [**postSentOtp**](UsersApi.md#postsentotp) | **POST** /public/send-otp | Send OTP
 [**putChangePassword**](UsersApi.md#putchangepassword) | **PUT** /public/change-password | Change Password
@@ -22,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **getMe**
-> RespondLogged getMe(userId)
+> RespondLogged getMe()
 
 Get Me
 
@@ -31,12 +30,14 @@ Ambil userId
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
-final String userId = userId_example; // String | 
 
 try {
-    final response = api.getMe(userId);
+    final response = api.getMe();
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->getMe: $e\n');
@@ -44,10 +45,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -55,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -74,6 +72,9 @@ Ambil detail user
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
 final String userId = userId_example; // String | 
@@ -98,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -201,49 +202,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **postLogin**
-> RespondSuccessLogin postLogin(requestLogin)
-
-Login
-
-Login
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUsersApi();
-final RequestLogin requestLogin = {"email":"juri1@yopmsail.com","password":"juri"}; // RequestLogin | 
-
-try {
-    final response = api.postLogin(requestLogin);
-    print(response);
-} catch on DioError (e) {
-    print('Exception when calling UsersApi->postLogin: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestLogin** | [**RequestLogin**](RequestLogin.md)|  | [optional] 
-
-### Return type
-
-[**RespondSuccessLogin**](RespondSuccessLogin.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **postRegistrasi**
 > RespondGlobal postRegistrasi(requestUser)
 
@@ -254,6 +212,9 @@ Regsitrasi user baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
 final RequestUser requestUser = {"fullname":"Juri","email":"juri1@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","id_role":"86c1f549-5440-4d05-80f3-6b75024af7d0"}; // RequestUser | 
@@ -278,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -426,6 +387,9 @@ update data user
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
 final String userId = userId_example; // String | 
@@ -452,7 +416,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

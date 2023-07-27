@@ -25,6 +25,9 @@ Membuat lokasi baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getLocationApi();
 final RequestLocation requestLocation = {"name":"Gor Malaka 3","address":"Jl. Tamaghdfgn Malaka Selatan 2D","mobilePhone":"089938849","route":"route","urlMaps":"https://www.google.com/maps/place/6%C2%B043'19.5%22S+106%C2%B048'56.4%22E/@-6.72207,106.8130771,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.72207!4d106.815652?entry=ttu"}; // RequestLocation | 
@@ -49,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -68,6 +71,9 @@ Ambil detail data lokasi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getLocationApi();
 final String locationId = locationId_example; // String | 
@@ -92,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -111,6 +117,9 @@ Ambil data lokasi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getLocationApi();
 final String name = name_example; // String | 
@@ -143,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -9,6 +9,7 @@ import 'package:dio/dio.dart';
 
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_permission.dart';
+import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_permissions.dart';
 
 class PermissionApi {
@@ -49,7 +50,13 @@ class PermissionApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'bearerAuth',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
