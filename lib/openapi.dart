@@ -74,6 +74,8 @@ export 'package:openapi/src/model/respond_location_data.dart';
 export 'package:openapi/src/model/respond_locations.dart';
 export 'package:openapi/src/model/respond_locations_data.dart';
 export 'package:openapi/src/model/respond_locations_data_content_inner.dart';
+export 'package:openapi/src/model/respond_logged.dart';
+export 'package:openapi/src/model/respond_logged_authorities_inner.dart';
 export 'package:openapi/src/model/respond_permissions.dart';
 export 'package:openapi/src/model/respond_permissions_data.dart';
 export 'package:openapi/src/model/respond_permissions_data_content_inner.dart';

@@ -66,6 +66,8 @@ import 'package:openapi/src/model/respond_location_data.dart';
 import 'package:openapi/src/model/respond_locations.dart';
 import 'package:openapi/src/model/respond_locations_data.dart';
 import 'package:openapi/src/model/respond_locations_data_content_inner.dart';
+import 'package:openapi/src/model/respond_logged.dart';
+import 'package:openapi/src/model/respond_logged_authorities_inner.dart';
 import 'package:openapi/src/model/respond_permissions.dart';
 import 'package:openapi/src/model/respond_permissions_data.dart';
 import 'package:openapi/src/model/respond_permissions_data_content_inner.dart';
@@ -159,6 +161,8 @@ part 'serializers.g.dart';
   RespondLocations,
   RespondLocationsData,
   RespondLocationsDataContentInner,
+  RespondLogged,
+  RespondLoggedAuthoritiesInner,
   RespondPermissions,
   RespondPermissionsData,
   RespondPermissionsDataContentInner,

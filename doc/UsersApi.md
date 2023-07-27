@@ -9,6 +9,7 @@ All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getMe**](UsersApi.md#getme) | **GET** /pretected/me | Get Me
 [**getUser**](UsersApi.md#getuser) | **GET** /public/user/{userId} | Get User
 [**getUsers**](UsersApi.md#getusers) | **GET** /public/users | Get Users
 [**postForgot**](UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
@@ -19,6 +20,45 @@ Method | HTTP request | Description
 [**putNewPassword**](UsersApi.md#putnewpassword) | **PUT** /public/new-password | New Password
 [**putUser**](UsersApi.md#putuser) | **PUT** /public/user/{userId} | Put User
 
+
+# **getMe**
+> RespondLogged getMe()
+
+Get Me
+
+Ambil userId
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUsersApi();
+
+try {
+    final response = api.getMe();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UsersApi->getMe: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RespondLogged**](RespondLogged.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getUser**
 > RespondUser getUser(userId)

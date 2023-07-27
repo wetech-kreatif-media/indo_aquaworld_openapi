@@ -59,6 +59,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondLocations.serializer)
       ..add(RespondLocationsData.serializer)
       ..add(RespondLocationsDataContentInner.serializer)
+      ..add(RespondLogged.serializer)
+      ..add(RespondLoggedAuthoritiesInner.serializer)
       ..add(RespondPermissions.serializer)
       ..add(RespondPermissionsData.serializer)
       ..add(RespondPermissionsDataContentInner.serializer)
@@ -134,6 +136,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(RespondLocationsDataContentInner)]),
           () => new ListBuilder<RespondLocationsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondLoggedAuthoritiesInner)]),
+          () => new ListBuilder<RespondLoggedAuthoritiesInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondPermissionsDataContentInner)]),

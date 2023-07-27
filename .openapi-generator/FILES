@@ -59,6 +59,8 @@ doc/RespondLocationData.md
 doc/RespondLocations.md
 doc/RespondLocationsData.md
 doc/RespondLocationsDataContentInner.md
+doc/RespondLogged.md
+doc/RespondLoggedAuthoritiesInner.md
 doc/RespondPermissions.md
 doc/RespondPermissionsData.md
 doc/RespondPermissionsDataContentInner.md
@@ -176,6 +178,8 @@ lib/src/model/respond_location_data.dart
 lib/src/model/respond_locations.dart
 lib/src/model/respond_locations_data.dart
 lib/src/model/respond_locations_data_content_inner.dart
+lib/src/model/respond_logged.dart
+lib/src/model/respond_logged_authorities_inner.dart
 lib/src/model/respond_permissions.dart
 lib/src/model/respond_permissions_data.dart
 lib/src/model/respond_permissions_data_content_inner.dart
@@ -215,3 +219,5 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_logged_authorities_inner_test.dart
+test/respond_logged_test.dart
