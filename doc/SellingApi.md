@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDetailSelling**](SellingApi.md#getdetailselling) | **GET** /public/detail-selling | Get Detail Selling
+[**getDetailSelling**](SellingApi.md#getdetailselling) | **GET** /public/detail-selling/{sellingId} | Get Detail Selling
 [**getSellingCategory**](SellingApi.md#getsellingcategory) | **GET** /public/selling-category | Get Selling Category
 [**getSellingSubCategory**](SellingApi.md#getsellingsubcategory) | **GET** /public/selling-subcategory/{sellingCatId} | Get Selling SubCategory
 [**getSellingUser**](SellingApi.md#getsellinguser) | **GET** /public/selling/{userId} | Get Selling User
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **getDetailSelling**
-> RespondSelling getDetailSelling()
+> RespondSelling getDetailSelling(sellingId)
 
 Get Detail Selling
 
@@ -35,9 +35,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
+final String sellingId = sellingId_example; // String | 
 
 try {
-    final response = api.getDetailSelling();
+    final response = api.getDetailSelling(sellingId);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling SellingApi->getDetailSelling: $e\n');
@@ -45,7 +46,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sellingId** | **String**|  | 
 
 ### Return type
 

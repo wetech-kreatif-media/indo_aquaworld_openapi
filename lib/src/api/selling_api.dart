@@ -29,6 +29,7 @@ class SellingApi {
   /// Ambil data selling detail
   ///
   /// Parameters:
+  /// * [sellingId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -39,6 +40,7 @@ class SellingApi {
   /// Returns a [Future] containing a [Response] with a [RespondSelling] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondSelling>> getDetailSelling({ 
+    required String sellingId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -46,7 +48,7 @@ class SellingApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/detail-selling';
+    final _path = r'/public/detail-selling/{sellingId}'.replaceAll('{' r'sellingId' '}', sellingId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
