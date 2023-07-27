@@ -31,6 +31,7 @@ class UsersApi {
   /// Ambil userId
   ///
   /// Parameters:
+  /// * [userId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -41,6 +42,7 @@ class UsersApi {
   /// Returns a [Future] containing a [Response] with a [RespondLogged] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondLogged>> getMe({ 
+    required String userId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -48,7 +50,7 @@ class UsersApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/pretected/me';
+    final _path = r'/protected/me'.replaceAll('{' r'userId' '}', userId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

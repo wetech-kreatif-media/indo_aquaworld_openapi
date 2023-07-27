@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMe**](UsersApi.md#getme) | **GET** /pretected/me | Get Me
+[**getMe**](UsersApi.md#getme) | **GET** /protected/me | Get Me
 [**getUser**](UsersApi.md#getuser) | **GET** /public/user/{userId} | Get User
 [**getUsers**](UsersApi.md#getusers) | **GET** /public/users | Get Users
 [**postForgot**](UsersApi.md#postforgot) | **POST** /public/forgot | Forgor
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 # **getMe**
-> RespondLogged getMe()
+> RespondLogged getMe(userId)
 
 Get Me
 
@@ -33,9 +33,10 @@ Ambil userId
 import 'package:openapi/api.dart';
 
 final api = Openapi().getUsersApi();
+final String userId = userId_example; // String | 
 
 try {
-    final response = api.getMe();
+    final response = api.getMe(userId);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->getMe: $e\n');
@@ -43,7 +44,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**|  | 
 
 ### Return type
 
