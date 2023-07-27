@@ -30,7 +30,7 @@ class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
   @override
   final String city;
   @override
-  final String photo;
+  final String? photo;
   @override
   final String gender;
   @override
@@ -54,7 +54,7 @@ class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
       required this.mobilePhone,
       required this.email,
       required this.city,
-      required this.photo,
+      this.photo,
       required this.gender,
       required this.placeofBirth,
       required this.role})
@@ -81,8 +81,6 @@ class _$RespondEventDataTeamsInner extends RespondEventDataTeamsInner {
         email, r'RespondEventDataTeamsInner', 'email');
     BuiltValueNullFieldError.checkNotNull(
         city, r'RespondEventDataTeamsInner', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        photo, r'RespondEventDataTeamsInner', 'photo');
     BuiltValueNullFieldError.checkNotNull(
         gender, r'RespondEventDataTeamsInner', 'gender');
     BuiltValueNullFieldError.checkNotNull(
@@ -294,10 +292,11 @@ class RespondEventDataTeamsInnerBuilder
                   recordStatus, r'RespondEventDataTeamsInner', 'recordStatus'),
               fullname: BuiltValueNullFieldError.checkNotNull(
                   fullname, r'RespondEventDataTeamsInner', 'fullname'),
-              mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondEventDataTeamsInner', 'mobilePhone'),
+              mobilePhone:
+                  BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondEventDataTeamsInner', 'mobilePhone'),
               email: BuiltValueNullFieldError.checkNotNull(email, r'RespondEventDataTeamsInner', 'email'),
               city: BuiltValueNullFieldError.checkNotNull(city, r'RespondEventDataTeamsInner', 'city'),
-              photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondEventDataTeamsInner', 'photo'),
+              photo: photo,
               gender: BuiltValueNullFieldError.checkNotNull(gender, r'RespondEventDataTeamsInner', 'gender'),
               placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondEventDataTeamsInner', 'placeofBirth'),
               role: role.build());

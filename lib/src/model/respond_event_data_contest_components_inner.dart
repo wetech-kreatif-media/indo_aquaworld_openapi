@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -57,7 +57,7 @@ abstract class RespondEventDataContestComponentsInner implements Built<RespondEv
   num get overall;
 
   @BuiltValueField(wireName: r'judge')
-  RespondEventDataTeamsInner get judge;
+  RespondEventDataContestComponentsInnerJudge get judge;
 
   RespondEventDataContestComponentsInner._();
 
@@ -135,7 +135,7 @@ class _$RespondEventDataContestComponentsInnerSerializer implements PrimitiveSer
     yield r'judge';
     yield serializers.serialize(
       object.judge,
-      specifiedType: const FullType(RespondEventDataTeamsInner),
+      specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
     );
   }
 
@@ -233,8 +233,8 @@ class _$RespondEventDataContestComponentsInnerSerializer implements PrimitiveSer
         case r'judge':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondEventDataTeamsInner),
-          ) as RespondEventDataTeamsInner;
+            specifiedType: const FullType(RespondEventDataContestComponentsInnerJudge),
+          ) as RespondEventDataContestComponentsInnerJudge;
           result.judge.replace(valueDes);
           break;
         default:

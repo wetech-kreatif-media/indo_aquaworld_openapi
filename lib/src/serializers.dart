@@ -47,6 +47,7 @@ import 'package:openapi/src/model/respond_contestants_data_content_inner.dart';
 import 'package:openapi/src/model/respond_event.dart';
 import 'package:openapi/src/model/respond_event_data.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
+import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
 import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_event_nominations.dart';
@@ -97,7 +98,6 @@ import 'package:openapi/src/model/respond_tanks_data.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart';
-import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component_judge.dart';
 import 'package:openapi/src/model/respond_team.dart';
 import 'package:openapi/src/model/respond_teams.dart';
 import 'package:openapi/src/model/respond_teams_data.dart';
@@ -146,6 +146,7 @@ part 'serializers.g.dart';
   RespondEvent,
   RespondEventData,
   RespondEventDataContestComponentsInner,
+  RespondEventDataContestComponentsInnerJudge,
   RespondEventDataContestComponentsInnerNomination,
   RespondEventDataTeamsInner,
   RespondEventNominations,
@@ -196,7 +197,6 @@ part 'serializers.g.dart';
   RespondTanksDataContentInner,
   RespondTanksDataContentInnerContestComponent,
   RespondTanksDataContentInnerContestComponentContestEvent,
-  RespondTanksDataContentInnerContestComponentJudge,
   RespondTeam,
   RespondTeams,
   RespondTeamsData,

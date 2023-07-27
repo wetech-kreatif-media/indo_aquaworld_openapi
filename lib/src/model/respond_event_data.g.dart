@@ -18,9 +18,9 @@ class _$RespondEventData extends RespondEventData {
   @override
   final String? description;
   @override
-  final RespondLocationData location;
+  final RespondLocationData? location;
   @override
-  final BuiltList<RespondEventDataTeamsInner> teams;
+  final BuiltList<RespondEventDataTeamsInner>? teams;
   @override
   final String? statusPublish;
   @override
@@ -38,16 +38,12 @@ class _$RespondEventData extends RespondEventData {
       this.startDate,
       this.endDate,
       this.description,
-      required this.location,
-      required this.teams,
+      this.location,
+      this.teams,
       this.statusPublish,
       this.statusEvent,
       this.contestComponents})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        location, r'RespondEventData', 'location');
-    BuiltValueNullFieldError.checkNotNull(teams, r'RespondEventData', 'teams');
-  }
+      : super._();
 
   @override
   RespondEventData rebuild(void Function(RespondEventDataBuilder) updates) =>
@@ -173,8 +169,8 @@ class RespondEventDataBuilder
       _startDate = $v.startDate;
       _endDate = $v.endDate;
       _description = $v.description;
-      _location = $v.location.toBuilder();
-      _teams = $v.teams.toBuilder();
+      _location = $v.location?.toBuilder();
+      _teams = $v.teams?.toBuilder();
       _statusPublish = $v.statusPublish;
       _statusEvent = $v.statusEvent;
       _contestComponents = $v.contestComponents?.toBuilder();
@@ -207,8 +203,8 @@ class RespondEventDataBuilder
               startDate: startDate,
               endDate: endDate,
               description: description,
-              location: location.build(),
-              teams: teams.build(),
+              location: _location?.build(),
+              teams: _teams?.build(),
               statusPublish: statusPublish,
               statusEvent: statusEvent,
               contestComponents: _contestComponents?.build());
@@ -216,9 +212,9 @@ class RespondEventDataBuilder
       late String _$failedField;
       try {
         _$failedField = 'location';
-        location.build();
+        _location?.build();
         _$failedField = 'teams';
-        teams.build();
+        _teams?.build();
 
         _$failedField = 'contestComponents';
         _contestComponents?.build();

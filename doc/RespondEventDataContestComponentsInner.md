@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **pearly** | **num** |  | 
 **marking** | **num** |  | 
 **overall** | **num** |  | 
-**judge** | [**RespondEventDataTeamsInner**](RespondEventDataTeamsInner.md) |  | 
+**judge** | [**RespondEventDataContestComponentsInnerJudge**](RespondEventDataContestComponentsInnerJudge.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
