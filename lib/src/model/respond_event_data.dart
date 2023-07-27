@@ -43,10 +43,10 @@ abstract class RespondEventData implements Built<RespondEventData, RespondEventD
   String? get description;
 
   @BuiltValueField(wireName: r'location')
-  RespondLocationData? get location;
+  RespondLocationData get location;
 
   @BuiltValueField(wireName: r'teams')
-  BuiltList<RespondEventDataTeamsInner>? get teams;
+  BuiltList<RespondEventDataTeamsInner> get teams;
 
   @BuiltValueField(wireName: r'statusPublish')
   String? get statusPublish;
@@ -115,20 +115,16 @@ class _$RespondEventDataSerializer implements PrimitiveSerializer<RespondEventDa
         specifiedType: const FullType(String),
       );
     }
-    if (object.location != null) {
-      yield r'location';
-      yield serializers.serialize(
-        object.location,
-        specifiedType: const FullType(RespondLocationData),
-      );
-    }
-    if (object.teams != null) {
-      yield r'teams';
-      yield serializers.serialize(
-        object.teams,
-        specifiedType: const FullType(BuiltList, [FullType(RespondEventDataTeamsInner)]),
-      );
-    }
+    yield r'location';
+    yield serializers.serialize(
+      object.location,
+      specifiedType: const FullType(RespondLocationData),
+    );
+    yield r'teams';
+    yield serializers.serialize(
+      object.teams,
+      specifiedType: const FullType(BuiltList, [FullType(RespondEventDataTeamsInner)]),
+    );
     if (object.statusPublish != null) {
       yield r'statusPublish';
       yield serializers.serialize(

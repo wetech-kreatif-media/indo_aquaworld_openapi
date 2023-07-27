@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **startDate** | **String** |  | [optional] 
 **endDate** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**location** | [**RespondLocationData**](RespondLocationData.md) |  | [optional] 
-**teams** | [**BuiltList&lt;RespondEventDataTeamsInner&gt;**](RespondEventDataTeamsInner.md) |  | [optional] 
+**location** | [**RespondLocationData**](RespondLocationData.md) |  | 
+**teams** | [**BuiltList&lt;RespondEventDataTeamsInner&gt;**](RespondEventDataTeamsInner.md) |  | 
 **statusPublish** | **String** |  | [optional] 
 **statusEvent** | **String** |  | [optional] 
 **contestComponents** | [**BuiltList&lt;RespondEventDataContestComponentsInner&gt;**](RespondEventDataContestComponentsInner.md) |  | [optional] 
