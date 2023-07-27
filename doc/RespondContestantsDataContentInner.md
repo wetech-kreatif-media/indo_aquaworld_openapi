@@ -19,11 +19,11 @@ Name | Type | Description | Notes
 **mobilePhone** | **String** |  | 
 **email** | **String** |  | 
 **city** | **String** |  | 
-**gender** | **String** |  | 
-**placeofBirth** | **String** |  | 
-**dateofBirth** | **String** |  | 
+**gender** | **String** |  | [optional] 
+**placeofBirth** | **String** |  | [optional] 
+**dateofBirth** | **String** |  | [optional] 
 **statusContestant** | **String** |  | 
-**photo** | **String** |  | 
+**photo** | **String** |  | [optional] 
 **contestantTeam** | [**RespondTeamsDataContentInner**](RespondTeamsDataContentInner.md) |  | [optional] 
 **codeContestant** | **String** |  | 
 

@@ -1,4 +1,4 @@
-# openapi.model.RespondEventDataTeamsInner
+# openapi.model.RespondTanksDataContentInnerContestComponentJudge
 
 ## Load the model package
 ```dart
@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **photo** | **String** |  | [optional] 
 **gender** | **String** |  | [optional] 
 **placeofBirth** | **String** |  | [optional] 
+**role** | [**RespondUsersDataContentInnerRole**](RespondUsersDataContentInnerRole.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

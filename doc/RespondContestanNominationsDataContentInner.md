@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **gender** | **String** |  | 
 **placeofBirth** | **String** |  | 
 **statusContestant** | **String** |  | 
-**photo** | **String** |  | 
+**photo** | **String** |  | [optional] 
 **contestantTeam** | **String** |  | [optional] 
 **codeContestant** | **String** |  | 
 

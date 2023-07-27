@@ -40,7 +40,6 @@ doc/RespondContestantsDataContentInner.md
 doc/RespondEvent.md
 doc/RespondEventData.md
 doc/RespondEventDataContestComponentsInner.md
-doc/RespondEventDataContestComponentsInnerJudge.md
 doc/RespondEventDataContestComponentsInnerNomination.md
 doc/RespondEventDataTeamsInner.md
 doc/RespondEventNominations.md
@@ -91,6 +90,7 @@ doc/RespondTanksData.md
 doc/RespondTanksDataContentInner.md
 doc/RespondTanksDataContentInnerContestComponent.md
 doc/RespondTanksDataContentInnerContestComponentContestEvent.md
+doc/RespondTanksDataContentInnerContestComponentJudge.md
 doc/RespondTeam.md
 doc/RespondTeams.md
 doc/RespondTeamsData.md
@@ -163,7 +163,6 @@ lib/src/model/respond_contestants_data_content_inner.dart
 lib/src/model/respond_event.dart
 lib/src/model/respond_event_data.dart
 lib/src/model/respond_event_data_contest_components_inner.dart
-lib/src/model/respond_event_data_contest_components_inner_judge.dart
 lib/src/model/respond_event_data_contest_components_inner_nomination.dart
 lib/src/model/respond_event_data_teams_inner.dart
 lib/src/model/respond_event_nominations.dart
@@ -214,6 +213,7 @@ lib/src/model/respond_tanks_data.dart
 lib/src/model/respond_tanks_data_content_inner.dart
 lib/src/model/respond_tanks_data_content_inner_contest_component.dart
 lib/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart
+lib/src/model/respond_tanks_data_content_inner_contest_component_judge.dart
 lib/src/model/respond_team.dart
 lib/src/model/respond_teams.dart
 lib/src/model/respond_teams_data.dart
@@ -227,10 +227,4 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/respond_selling_data_files_inner_test.dart
-test/respond_selling_data_test.dart
-test/respond_selling_data_user_test.dart
-test/respond_selling_test.dart
-test/respond_selling_user_data_content_inner_test.dart
-test/respond_selling_user_data_test.dart
-test/respond_selling_user_test.dart
+test/respond_tanks_data_content_inner_contest_component_judge_test.dart

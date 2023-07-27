@@ -3,12 +3,13 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_contestan_nominations_data_content_inner.g.dart';
+part 'respond_tanks_data_content_inner_contest_component_judge.g.dart';
 
-/// RespondContestanNominationsDataContentInner
+/// RespondTanksDataContentInnerContestComponentJudge
 ///
 /// Properties:
 /// * [id] 
@@ -22,158 +23,157 @@ part 'respond_contestan_nominations_data_content_inner.g.dart';
 /// * [mobilePhone] 
 /// * [email] 
 /// * [city] 
+/// * [photo] 
 /// * [gender] 
 /// * [placeofBirth] 
-/// * [statusContestant] 
-/// * [photo] 
-/// * [contestantTeam] 
-/// * [codeContestant] 
+/// * [role] 
 @BuiltValue()
-abstract class RespondContestanNominationsDataContentInner implements Built<RespondContestanNominationsDataContentInner, RespondContestanNominationsDataContentInnerBuilder> {
+abstract class RespondTanksDataContentInnerContestComponentJudge implements Built<RespondTanksDataContentInnerContestComponentJudge, RespondTanksDataContentInnerContestComponentJudgeBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'createdBy')
-  String get createdBy;
+  String? get createdBy;
 
   @BuiltValueField(wireName: r'updatedBy')
-  String get updatedBy;
+  String? get updatedBy;
 
   @BuiltValueField(wireName: r'created')
-  String get created;
+  String? get created;
 
   @BuiltValueField(wireName: r'updated')
-  String get updated;
+  String? get updated;
 
   @BuiltValueField(wireName: r'deleted')
-  num get deleted;
+  num? get deleted;
 
   @BuiltValueField(wireName: r'recordStatus')
-  String get recordStatus;
+  String? get recordStatus;
 
   @BuiltValueField(wireName: r'fullname')
-  String get fullname;
+  String? get fullname;
 
   @BuiltValueField(wireName: r'mobilePhone')
-  String get mobilePhone;
+  String? get mobilePhone;
 
   @BuiltValueField(wireName: r'email')
-  String get email;
+  String? get email;
 
   @BuiltValueField(wireName: r'city')
-  String get city;
-
-  @BuiltValueField(wireName: r'gender')
-  String get gender;
-
-  @BuiltValueField(wireName: r'placeofBirth')
-  String get placeofBirth;
-
-  @BuiltValueField(wireName: r'statusContestant')
-  String get statusContestant;
+  String? get city;
 
   @BuiltValueField(wireName: r'photo')
   String? get photo;
 
-  @BuiltValueField(wireName: r'contestantTeam')
-  String? get contestantTeam;
+  @BuiltValueField(wireName: r'gender')
+  String? get gender;
 
-  @BuiltValueField(wireName: r'codeContestant')
-  String get codeContestant;
+  @BuiltValueField(wireName: r'placeofBirth')
+  String? get placeofBirth;
 
-  RespondContestanNominationsDataContentInner._();
+  @BuiltValueField(wireName: r'role')
+  RespondUsersDataContentInnerRole? get role;
 
-  factory RespondContestanNominationsDataContentInner([void updates(RespondContestanNominationsDataContentInnerBuilder b)]) = _$RespondContestanNominationsDataContentInner;
+  RespondTanksDataContentInnerContestComponentJudge._();
+
+  factory RespondTanksDataContentInnerContestComponentJudge([void updates(RespondTanksDataContentInnerContestComponentJudgeBuilder b)]) = _$RespondTanksDataContentInnerContestComponentJudge;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondContestanNominationsDataContentInnerBuilder b) => b;
+  static void _defaults(RespondTanksDataContentInnerContestComponentJudgeBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondContestanNominationsDataContentInner> get serializer => _$RespondContestanNominationsDataContentInnerSerializer();
+  static Serializer<RespondTanksDataContentInnerContestComponentJudge> get serializer => _$RespondTanksDataContentInnerContestComponentJudgeSerializer();
 }
 
-class _$RespondContestanNominationsDataContentInnerSerializer implements PrimitiveSerializer<RespondContestanNominationsDataContentInner> {
+class _$RespondTanksDataContentInnerContestComponentJudgeSerializer implements PrimitiveSerializer<RespondTanksDataContentInnerContestComponentJudge> {
   @override
-  final Iterable<Type> types = const [RespondContestanNominationsDataContentInner, _$RespondContestanNominationsDataContentInner];
+  final Iterable<Type> types = const [RespondTanksDataContentInnerContestComponentJudge, _$RespondTanksDataContentInnerContestComponentJudge];
 
   @override
-  final String wireName = r'RespondContestanNominationsDataContentInner';
+  final String wireName = r'RespondTanksDataContentInnerContestComponentJudge';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondContestanNominationsDataContentInner object, {
+    RespondTanksDataContentInnerContestComponentJudge object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'createdBy';
-    yield serializers.serialize(
-      object.createdBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'updatedBy';
-    yield serializers.serialize(
-      object.updatedBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'created';
-    yield serializers.serialize(
-      object.created,
-      specifiedType: const FullType(String),
-    );
-    yield r'updated';
-    yield serializers.serialize(
-      object.updated,
-      specifiedType: const FullType(String),
-    );
-    yield r'deleted';
-    yield serializers.serialize(
-      object.deleted,
-      specifiedType: const FullType(num),
-    );
-    yield r'recordStatus';
-    yield serializers.serialize(
-      object.recordStatus,
-      specifiedType: const FullType(String),
-    );
-    yield r'fullname';
-    yield serializers.serialize(
-      object.fullname,
-      specifiedType: const FullType(String),
-    );
-    yield r'mobilePhone';
-    yield serializers.serialize(
-      object.mobilePhone,
-      specifiedType: const FullType(String),
-    );
-    yield r'email';
-    yield serializers.serialize(
-      object.email,
-      specifiedType: const FullType(String),
-    );
-    yield r'city';
-    yield serializers.serialize(
-      object.city,
-      specifiedType: const FullType(String),
-    );
-    yield r'gender';
-    yield serializers.serialize(
-      object.gender,
-      specifiedType: const FullType(String),
-    );
-    yield r'placeofBirth';
-    yield serializers.serialize(
-      object.placeofBirth,
-      specifiedType: const FullType(String),
-    );
-    yield r'statusContestant';
-    yield serializers.serialize(
-      object.statusContestant,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.createdBy != null) {
+      yield r'createdBy';
+      yield serializers.serialize(
+        object.createdBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updatedBy != null) {
+      yield r'updatedBy';
+      yield serializers.serialize(
+        object.updatedBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.created != null) {
+      yield r'created';
+      yield serializers.serialize(
+        object.created,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updated != null) {
+      yield r'updated';
+      yield serializers.serialize(
+        object.updated,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.deleted != null) {
+      yield r'deleted';
+      yield serializers.serialize(
+        object.deleted,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.recordStatus != null) {
+      yield r'recordStatus';
+      yield serializers.serialize(
+        object.recordStatus,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.fullname != null) {
+      yield r'fullname';
+      yield serializers.serialize(
+        object.fullname,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.mobilePhone != null) {
+      yield r'mobilePhone';
+      yield serializers.serialize(
+        object.mobilePhone,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.email != null) {
+      yield r'email';
+      yield serializers.serialize(
+        object.email,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.city != null) {
+      yield r'city';
+      yield serializers.serialize(
+        object.city,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.photo != null) {
       yield r'photo';
       yield serializers.serialize(
@@ -181,24 +181,33 @@ class _$RespondContestanNominationsDataContentInnerSerializer implements Primiti
         specifiedType: const FullType(String),
       );
     }
-    if (object.contestantTeam != null) {
-      yield r'contestantTeam';
+    if (object.gender != null) {
+      yield r'gender';
       yield serializers.serialize(
-        object.contestantTeam,
+        object.gender,
         specifiedType: const FullType(String),
       );
     }
-    yield r'codeContestant';
-    yield serializers.serialize(
-      object.codeContestant,
-      specifiedType: const FullType(String),
-    );
+    if (object.placeofBirth != null) {
+      yield r'placeofBirth';
+      yield serializers.serialize(
+        object.placeofBirth,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.role != null) {
+      yield r'role';
+      yield serializers.serialize(
+        object.role,
+        specifiedType: const FullType(RespondUsersDataContentInnerRole),
+      );
+    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondContestanNominationsDataContentInner object, {
+    RespondTanksDataContentInnerContestComponentJudge object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -209,7 +218,7 @@ class _$RespondContestanNominationsDataContentInnerSerializer implements Primiti
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondContestanNominationsDataContentInnerBuilder result,
+    required RespondTanksDataContentInnerContestComponentJudgeBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -293,6 +302,13 @@ class _$RespondContestanNominationsDataContentInnerSerializer implements Primiti
           ) as String;
           result.city = valueDes;
           break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.photo = valueDes;
+          break;
         case r'gender':
           final valueDes = serializers.deserialize(
             value,
@@ -307,33 +323,12 @@ class _$RespondContestanNominationsDataContentInnerSerializer implements Primiti
           ) as String;
           result.placeofBirth = valueDes;
           break;
-        case r'statusContestant':
+        case r'role':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.statusContestant = valueDes;
-          break;
-        case r'photo':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.photo = valueDes;
-          break;
-        case r'contestantTeam':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.contestantTeam = valueDes;
-          break;
-        case r'codeContestant':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.codeContestant = valueDes;
+            specifiedType: const FullType(RespondUsersDataContentInnerRole),
+          ) as RespondUsersDataContentInnerRole;
+          result.role.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -344,12 +339,12 @@ class _$RespondContestanNominationsDataContentInnerSerializer implements Primiti
   }
 
   @override
-  RespondContestanNominationsDataContentInner deserialize(
+  RespondTanksDataContentInnerContestComponentJudge deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondContestanNominationsDataContentInnerBuilder();
+    final result = RespondTanksDataContentInnerContestComponentJudgeBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

@@ -66,19 +66,19 @@ abstract class RespondContestantsDataContentInner implements Built<RespondContes
   String get city;
 
   @BuiltValueField(wireName: r'gender')
-  String get gender;
+  String? get gender;
 
   @BuiltValueField(wireName: r'placeofBirth')
-  String get placeofBirth;
+  String? get placeofBirth;
 
   @BuiltValueField(wireName: r'dateofBirth')
-  String get dateofBirth;
+  String? get dateofBirth;
 
   @BuiltValueField(wireName: r'statusContestant')
   String get statusContestant;
 
   @BuiltValueField(wireName: r'photo')
-  String get photo;
+  String? get photo;
 
   @BuiltValueField(wireName: r'contestantTeam')
   RespondTeamsDataContentInner? get contestantTeam;
@@ -164,31 +164,39 @@ class _$RespondContestantsDataContentInnerSerializer implements PrimitiveSeriali
       object.city,
       specifiedType: const FullType(String),
     );
-    yield r'gender';
-    yield serializers.serialize(
-      object.gender,
-      specifiedType: const FullType(String),
-    );
-    yield r'placeofBirth';
-    yield serializers.serialize(
-      object.placeofBirth,
-      specifiedType: const FullType(String),
-    );
-    yield r'dateofBirth';
-    yield serializers.serialize(
-      object.dateofBirth,
-      specifiedType: const FullType(String),
-    );
+    if (object.gender != null) {
+      yield r'gender';
+      yield serializers.serialize(
+        object.gender,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.placeofBirth != null) {
+      yield r'placeofBirth';
+      yield serializers.serialize(
+        object.placeofBirth,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.dateofBirth != null) {
+      yield r'dateofBirth';
+      yield serializers.serialize(
+        object.dateofBirth,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'statusContestant';
     yield serializers.serialize(
       object.statusContestant,
       specifiedType: const FullType(String),
     );
-    yield r'photo';
-    yield serializers.serialize(
-      object.photo,
-      specifiedType: const FullType(String),
-    );
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.contestantTeam != null) {
       yield r'contestantTeam';
       yield serializers.serialize(

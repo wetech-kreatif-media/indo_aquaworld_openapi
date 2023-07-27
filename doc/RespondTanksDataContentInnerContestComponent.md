@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **pearly** | **num** |  | [optional] 
 **marking** | **num** |  | [optional] 
 **overall** | **num** |  | [optional] 
-**judge** | [**RespondEventDataContestComponentsInnerJudge**](RespondEventDataContestComponentsInnerJudge.md) |  | [optional] 
+**judge** | [**RespondTanksDataContentInnerContestComponentJudge**](RespondTanksDataContentInnerContestComponentJudge.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
