@@ -30,11 +30,11 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
   @override
   final String city;
   @override
-  final String photo;
+  final String? photo;
   @override
-  final String gender;
+  final String? gender;
   @override
-  final String placeofBirth;
+  final String? placeofBirth;
   @override
   final RespondUsersDataContentInnerRole role;
 
@@ -54,9 +54,9 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
       required this.mobilePhone,
       required this.email,
       required this.city,
-      required this.photo,
-      required this.gender,
-      required this.placeofBirth,
+      this.photo,
+      this.gender,
+      this.placeofBirth,
       required this.role})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
@@ -81,12 +81,6 @@ class _$RespondUsersDataContentInner extends RespondUsersDataContentInner {
         email, r'RespondUsersDataContentInner', 'email');
     BuiltValueNullFieldError.checkNotNull(
         city, r'RespondUsersDataContentInner', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        photo, r'RespondUsersDataContentInner', 'photo');
-    BuiltValueNullFieldError.checkNotNull(
-        gender, r'RespondUsersDataContentInner', 'gender');
-    BuiltValueNullFieldError.checkNotNull(
-        placeofBirth, r'RespondUsersDataContentInner', 'placeofBirth');
     BuiltValueNullFieldError.checkNotNull(
         role, r'RespondUsersDataContentInner', 'role');
   }
@@ -298,9 +292,9 @@ class RespondUsersDataContentInnerBuilder
               mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondUsersDataContentInner', 'mobilePhone'),
               email: BuiltValueNullFieldError.checkNotNull(email, r'RespondUsersDataContentInner', 'email'),
               city: BuiltValueNullFieldError.checkNotNull(city, r'RespondUsersDataContentInner', 'city'),
-              photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondUsersDataContentInner', 'photo'),
-              gender: BuiltValueNullFieldError.checkNotNull(gender, r'RespondUsersDataContentInner', 'gender'),
-              placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondUsersDataContentInner', 'placeofBirth'),
+              photo: photo,
+              gender: gender,
+              placeofBirth: placeofBirth,
               role: role.build());
     } catch (_) {
       late String _$failedField;

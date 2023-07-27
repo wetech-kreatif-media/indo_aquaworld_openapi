@@ -63,13 +63,13 @@ abstract class RespondUsersDataContentInner implements Built<RespondUsersDataCon
   String get city;
 
   @BuiltValueField(wireName: r'photo')
-  String get photo;
+  String? get photo;
 
   @BuiltValueField(wireName: r'gender')
-  String get gender;
+  String? get gender;
 
   @BuiltValueField(wireName: r'placeofBirth')
-  String get placeofBirth;
+  String? get placeofBirth;
 
   @BuiltValueField(wireName: r'role')
   RespondUsersDataContentInnerRole get role;
@@ -152,21 +152,27 @@ class _$RespondUsersDataContentInnerSerializer implements PrimitiveSerializer<Re
       object.city,
       specifiedType: const FullType(String),
     );
-    yield r'photo';
-    yield serializers.serialize(
-      object.photo,
-      specifiedType: const FullType(String),
-    );
-    yield r'gender';
-    yield serializers.serialize(
-      object.gender,
-      specifiedType: const FullType(String),
-    );
-    yield r'placeofBirth';
-    yield serializers.serialize(
-      object.placeofBirth,
-      specifiedType: const FullType(String),
-    );
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.gender != null) {
+      yield r'gender';
+      yield serializers.serialize(
+        object.gender,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.placeofBirth != null) {
+      yield r'placeofBirth';
+      yield serializers.serialize(
+        object.placeofBirth,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'role';
     yield serializers.serialize(
       object.role,

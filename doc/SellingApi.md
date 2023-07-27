@@ -11,6 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getSellingCategory**](SellingApi.md#getsellingcategory) | **GET** /public/selling-category | Get Selling Category
 [**getSellingSubCategory**](SellingApi.md#getsellingsubcategory) | **GET** /public/selling-subcategory/{sellingCatId} | Get Selling SubCategory
+[**postSelling**](SellingApi.md#postselling) | **POST** /selling | Post Selling
 [**postSellingCategory**](SellingApi.md#postsellingcategory) | **POST** /public/selling-category | Post Selling Category
 [**postSellingSubCategory**](SellingApi.md#postsellingsubcategory) | **POST** /public/selling-subcategory | Post Selling SubCategory
 [**putSellingCategory**](SellingApi.md#putsellingcategory) | **PUT** /public/selling-category/{sellingCatId} | Put Selling Category
@@ -123,6 +124,49 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **postSelling**
+> RespondGlobal postSelling(requestSelling)
+
+Post Selling
+
+Tambah barang yang akan dijual
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSellingApi();
+final RequestSelling requestSelling = {"jenisIklan":"Jual","judulIklan":"Jual Ikan","photo1":"nulasd asd asd asd asd asl","photo2":"","photo3":"","photo4":"","description":"test 1213","linkVideo":"https://www.youtube.com/shorts/ukZK4BkymPo","user":"e6458c51-3d5b-478a-a0c9-a710c3369d20","sellingSubCategory":"b49a359c-3ef8-406d-9aca-c6f8e95270e5","price":50000000,"publishStatus":"AKTIF"}; // RequestSelling | 
+
+try {
+    final response = api.postSelling(requestSelling);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->postSelling: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestSelling** | [**RequestSelling**](RequestSelling.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

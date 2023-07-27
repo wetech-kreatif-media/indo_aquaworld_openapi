@@ -27,6 +27,7 @@ import 'package:openapi/src/model/request_location.dart';
 import 'package:openapi/src/model/request_permission.dart';
 import 'package:openapi/src/model/request_role.dart';
 import 'package:openapi/src/model/request_role_permissions_inner.dart';
+import 'package:openapi/src/model/request_selling.dart';
 import 'package:openapi/src/model/request_selling_category.dart';
 import 'package:openapi/src/model/request_selling_sub_category.dart';
 import 'package:openapi/src/model/request_send_otp.dart';
@@ -48,6 +49,7 @@ import 'package:openapi/src/model/respond_event_data.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 import 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
+import 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 import 'package:openapi/src/model/respond_event_nominations.dart';
 import 'package:openapi/src/model/respond_event_nominations_data_inner.dart';
 import 'package:openapi/src/model/respond_events.dart';
@@ -117,6 +119,7 @@ part 'serializers.g.dart';
   RequestPermission,
   RequestRole,
   RequestRolePermissionsInner,
+  RequestSelling,
   RequestSellingCategory,
   RequestSellingSubCategory,
   RequestSendOtp,
@@ -138,6 +141,7 @@ part 'serializers.g.dart';
   RespondEventDataContestComponentsInner,
   RespondEventDataContestComponentsInnerJudge,
   RespondEventDataContestComponentsInnerNomination,
+  RespondEventDataTeamsInner,
   RespondEventNominations,
   RespondEventNominationsDataInner,
   RespondEvents,

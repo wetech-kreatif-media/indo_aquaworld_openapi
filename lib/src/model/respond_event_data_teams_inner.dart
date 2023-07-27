@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_event_data_teams_inner_role.dart';
+import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,6 +13,11 @@ part 'respond_event_data_teams_inner.g.dart';
 ///
 /// Properties:
 /// * [id] 
+/// * [createdBy] 
+/// * [updatedBy] 
+/// * [created] 
+/// * [updated] 
+/// * [deleted] 
 /// * [recordStatus] 
 /// * [fullname] 
 /// * [mobilePhone] 
@@ -25,34 +30,49 @@ part 'respond_event_data_teams_inner.g.dart';
 @BuiltValue()
 abstract class RespondEventDataTeamsInner implements Built<RespondEventDataTeamsInner, RespondEventDataTeamsInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
+
+  @BuiltValueField(wireName: r'createdBy')
+  String get createdBy;
+
+  @BuiltValueField(wireName: r'updatedBy')
+  String get updatedBy;
+
+  @BuiltValueField(wireName: r'created')
+  String get created;
+
+  @BuiltValueField(wireName: r'updated')
+  String get updated;
+
+  @BuiltValueField(wireName: r'deleted')
+  num get deleted;
 
   @BuiltValueField(wireName: r'recordStatus')
-  String? get recordStatus;
+  String get recordStatus;
 
   @BuiltValueField(wireName: r'fullname')
-  String? get fullname;
+  String get fullname;
 
   @BuiltValueField(wireName: r'mobilePhone')
-  String? get mobilePhone;
+  String get mobilePhone;
 
   @BuiltValueField(wireName: r'email')
-  String? get email;
+  String get email;
 
   @BuiltValueField(wireName: r'city')
-  String? get city;
+  String get city;
 
   @BuiltValueField(wireName: r'photo')
-  String? get photo;
+  String get photo;
 
   @BuiltValueField(wireName: r'gender')
-  String? get gender;
+  String get gender;
 
   @BuiltValueField(wireName: r'placeofBirth')
-  String? get placeofBirth;
+  String get placeofBirth;
 
   @BuiltValueField(wireName: r'role')
-  RespondEventDataTeamsInnerRole? get role;
+  RespondUsersDataContentInnerRole get role;
 
   RespondEventDataTeamsInner._();
 
@@ -77,76 +97,81 @@ class _$RespondEventDataTeamsInnerSerializer implements PrimitiveSerializer<Resp
     RespondEventDataTeamsInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.recordStatus != null) {
-      yield r'recordStatus';
-      yield serializers.serialize(
-        object.recordStatus,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.fullname != null) {
-      yield r'fullname';
-      yield serializers.serialize(
-        object.fullname,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.mobilePhone != null) {
-      yield r'mobilePhone';
-      yield serializers.serialize(
-        object.mobilePhone,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.email != null) {
-      yield r'email';
-      yield serializers.serialize(
-        object.email,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.city != null) {
-      yield r'city';
-      yield serializers.serialize(
-        object.city,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.photo != null) {
-      yield r'photo';
-      yield serializers.serialize(
-        object.photo,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.gender != null) {
-      yield r'gender';
-      yield serializers.serialize(
-        object.gender,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.placeofBirth != null) {
-      yield r'placeofBirth';
-      yield serializers.serialize(
-        object.placeofBirth,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.role != null) {
-      yield r'role';
-      yield serializers.serialize(
-        object.role,
-        specifiedType: const FullType(RespondEventDataTeamsInnerRole),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
+    yield r'createdBy';
+    yield serializers.serialize(
+      object.createdBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'updatedBy';
+    yield serializers.serialize(
+      object.updatedBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'created';
+    yield serializers.serialize(
+      object.created,
+      specifiedType: const FullType(String),
+    );
+    yield r'updated';
+    yield serializers.serialize(
+      object.updated,
+      specifiedType: const FullType(String),
+    );
+    yield r'deleted';
+    yield serializers.serialize(
+      object.deleted,
+      specifiedType: const FullType(num),
+    );
+    yield r'recordStatus';
+    yield serializers.serialize(
+      object.recordStatus,
+      specifiedType: const FullType(String),
+    );
+    yield r'fullname';
+    yield serializers.serialize(
+      object.fullname,
+      specifiedType: const FullType(String),
+    );
+    yield r'mobilePhone';
+    yield serializers.serialize(
+      object.mobilePhone,
+      specifiedType: const FullType(String),
+    );
+    yield r'email';
+    yield serializers.serialize(
+      object.email,
+      specifiedType: const FullType(String),
+    );
+    yield r'city';
+    yield serializers.serialize(
+      object.city,
+      specifiedType: const FullType(String),
+    );
+    yield r'photo';
+    yield serializers.serialize(
+      object.photo,
+      specifiedType: const FullType(String),
+    );
+    yield r'gender';
+    yield serializers.serialize(
+      object.gender,
+      specifiedType: const FullType(String),
+    );
+    yield r'placeofBirth';
+    yield serializers.serialize(
+      object.placeofBirth,
+      specifiedType: const FullType(String),
+    );
+    yield r'role';
+    yield serializers.serialize(
+      object.role,
+      specifiedType: const FullType(RespondUsersDataContentInnerRole),
+    );
   }
 
   @override
@@ -176,6 +201,41 @@ class _$RespondEventDataTeamsInnerSerializer implements PrimitiveSerializer<Resp
             specifiedType: const FullType(String),
           ) as String;
           result.id = valueDes;
+          break;
+        case r'createdBy':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.createdBy = valueDes;
+          break;
+        case r'updatedBy':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.updatedBy = valueDes;
+          break;
+        case r'created':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.created = valueDes;
+          break;
+        case r'updated':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.updated = valueDes;
+          break;
+        case r'deleted':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.deleted = valueDes;
           break;
         case r'recordStatus':
           final valueDes = serializers.deserialize(
@@ -236,8 +296,8 @@ class _$RespondEventDataTeamsInnerSerializer implements PrimitiveSerializer<Resp
         case r'role':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondEventDataTeamsInnerRole),
-          ) as RespondEventDataTeamsInnerRole;
+            specifiedType: const FullType(RespondUsersDataContentInnerRole),
+          ) as RespondUsersDataContentInnerRole;
           result.role.replace(valueDes);
           break;
         default:

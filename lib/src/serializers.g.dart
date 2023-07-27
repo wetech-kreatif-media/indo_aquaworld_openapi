@@ -20,6 +20,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestPermission.serializer)
       ..add(RequestRole.serializer)
       ..add(RequestRolePermissionsInner.serializer)
+      ..add(RequestSelling.serializer)
       ..add(RequestSellingCategory.serializer)
       ..add(RequestSellingSubCategory.serializer)
       ..add(RequestSendOtp.serializer)
@@ -41,6 +42,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondEventDataContestComponentsInner.serializer)
       ..add(RespondEventDataContestComponentsInnerJudge.serializer)
       ..add(RespondEventDataContestComponentsInnerNomination.serializer)
+      ..add(RespondEventDataTeamsInner.serializer)
       ..add(RespondEventNominations.serializer)
       ..add(RespondEventNominationsDataInner.serializer)
       ..add(RespondEvents.serializer)
@@ -116,6 +118,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
               const [const FullType(RespondContestantsDataContentInner)]),
           () => new ListBuilder<RespondContestantsDataContentInner>())
       ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondEventDataTeamsInner)]),
+          () => new ListBuilder<RespondEventDataTeamsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondEventDataContestComponentsInner)]),
+          () => new ListBuilder<RespondEventDataContestComponentsInner>())
+      ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondEventNominationsDataInner)]),
           () => new ListBuilder<RespondEventNominationsDataInner>())
@@ -184,15 +194,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondUsersDataContentInner)]),
-          () => new ListBuilder<RespondUsersDataContentInner>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(RespondUsersDataContentInner)]),
-          () => new ListBuilder<RespondUsersDataContentInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(RespondEventDataContestComponentsInner)]),
-          () => new ListBuilder<RespondEventDataContestComponentsInner>()))
+          () => new ListBuilder<RespondUsersDataContentInner>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint
