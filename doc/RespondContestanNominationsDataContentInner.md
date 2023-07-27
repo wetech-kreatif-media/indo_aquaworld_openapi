@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 **mobilePhone** | **String** |  | 
 **email** | **String** |  | 
 **city** | **String** |  | 
-**gender** | **String** |  | 
-**placeofBirth** | **String** |  | 
+**gender** | **String** |  | [optional] 
+**placeofBirth** | **String** |  | [optional] 
 **statusContestant** | **String** |  | 
 **photo** | **String** |  | [optional] 
 **contestantTeam** | **String** |  | [optional] 

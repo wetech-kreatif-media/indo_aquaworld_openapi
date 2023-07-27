@@ -57,7 +57,6 @@ export 'package:openapi/src/model/respond_event_data.dart';
 export 'package:openapi/src/model/respond_event_data_contest_components_inner.dart';
 export 'package:openapi/src/model/respond_event_data_contest_components_inner_judge.dart';
 export 'package:openapi/src/model/respond_event_data_contest_components_inner_nomination.dart';
-export 'package:openapi/src/model/respond_event_data_teams_inner.dart';
 export 'package:openapi/src/model/respond_event_nominations.dart';
 export 'package:openapi/src/model/respond_event_nominations_data_inner.dart';
 export 'package:openapi/src/model/respond_events.dart';

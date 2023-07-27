@@ -64,10 +64,10 @@ abstract class RespondContestanNominationsDataContentInner implements Built<Resp
   String get city;
 
   @BuiltValueField(wireName: r'gender')
-  String get gender;
+  String? get gender;
 
   @BuiltValueField(wireName: r'placeofBirth')
-  String get placeofBirth;
+  String? get placeofBirth;
 
   @BuiltValueField(wireName: r'statusContestant')
   String get statusContestant;
@@ -159,16 +159,20 @@ class _$RespondContestanNominationsDataContentInnerSerializer implements Primiti
       object.city,
       specifiedType: const FullType(String),
     );
-    yield r'gender';
-    yield serializers.serialize(
-      object.gender,
-      specifiedType: const FullType(String),
-    );
-    yield r'placeofBirth';
-    yield serializers.serialize(
-      object.placeofBirth,
-      specifiedType: const FullType(String),
-    );
+    if (object.gender != null) {
+      yield r'gender';
+      yield serializers.serialize(
+        object.gender,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.placeofBirth != null) {
+      yield r'placeofBirth';
+      yield serializers.serialize(
+        object.placeofBirth,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'statusContestant';
     yield serializers.serialize(
       object.statusContestant,

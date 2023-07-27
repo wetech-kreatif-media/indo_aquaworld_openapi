@@ -31,13 +31,13 @@ class _$RespondContestanNominationsDataContentInner
   @override
   final String city;
   @override
-  final String gender;
+  final String? gender;
   @override
-  final String placeofBirth;
+  final String? placeofBirth;
   @override
   final String statusContestant;
   @override
-  final String photo;
+  final String? photo;
   @override
   final String? contestantTeam;
   @override
@@ -62,10 +62,10 @@ class _$RespondContestanNominationsDataContentInner
       required this.mobilePhone,
       required this.email,
       required this.city,
-      required this.gender,
-      required this.placeofBirth,
+      this.gender,
+      this.placeofBirth,
       required this.statusContestant,
-      required this.photo,
+      this.photo,
       this.contestantTeam,
       required this.codeContestant})
       : super._() {
@@ -91,14 +91,8 @@ class _$RespondContestanNominationsDataContentInner
         email, r'RespondContestanNominationsDataContentInner', 'email');
     BuiltValueNullFieldError.checkNotNull(
         city, r'RespondContestanNominationsDataContentInner', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        gender, r'RespondContestanNominationsDataContentInner', 'gender');
-    BuiltValueNullFieldError.checkNotNull(placeofBirth,
-        r'RespondContestanNominationsDataContentInner', 'placeofBirth');
     BuiltValueNullFieldError.checkNotNull(statusContestant,
         r'RespondContestanNominationsDataContentInner', 'statusContestant');
-    BuiltValueNullFieldError.checkNotNull(
-        photo, r'RespondContestanNominationsDataContentInner', 'photo');
     BuiltValueNullFieldError.checkNotNull(codeContestant,
         r'RespondContestanNominationsDataContentInner', 'codeContestant');
   }
@@ -328,10 +322,10 @@ class RespondContestanNominationsDataContentInnerBuilder
             mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondContestanNominationsDataContentInner', 'mobilePhone'),
             email: BuiltValueNullFieldError.checkNotNull(email, r'RespondContestanNominationsDataContentInner', 'email'),
             city: BuiltValueNullFieldError.checkNotNull(city, r'RespondContestanNominationsDataContentInner', 'city'),
-            gender: BuiltValueNullFieldError.checkNotNull(gender, r'RespondContestanNominationsDataContentInner', 'gender'),
-            placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondContestanNominationsDataContentInner', 'placeofBirth'),
+            gender: gender,
+            placeofBirth: placeofBirth,
             statusContestant: BuiltValueNullFieldError.checkNotNull(statusContestant, r'RespondContestanNominationsDataContentInner', 'statusContestant'),
-            photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondContestanNominationsDataContentInner', 'photo'),
+            photo: photo,
             contestantTeam: contestantTeam,
             codeContestant: BuiltValueNullFieldError.checkNotNull(codeContestant, r'RespondContestanNominationsDataContentInner', 'codeContestant'));
     replace(_$result);
