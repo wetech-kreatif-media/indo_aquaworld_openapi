@@ -9,14 +9,58 @@ All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getDetailSelling**](SellingApi.md#getdetailselling) | **GET** /public/detail-selling | Get Detail Selling
 [**getSellingCategory**](SellingApi.md#getsellingcategory) | **GET** /public/selling-category | Get Selling Category
 [**getSellingSubCategory**](SellingApi.md#getsellingsubcategory) | **GET** /public/selling-subcategory/{sellingCatId} | Get Selling SubCategory
-[**postSelling**](SellingApi.md#postselling) | **POST** /selling | Post Selling
+[**getSellingUser**](SellingApi.md#getsellinguser) | **GET** /public/selling/{userId} | Get Selling User
+[**postSelling**](SellingApi.md#postselling) | **POST** /public/selling | Post Selling
 [**postSellingCategory**](SellingApi.md#postsellingcategory) | **POST** /public/selling-category | Post Selling Category
 [**postSellingSubCategory**](SellingApi.md#postsellingsubcategory) | **POST** /public/selling-subcategory | Post Selling SubCategory
 [**putSellingCategory**](SellingApi.md#putsellingcategory) | **PUT** /public/selling-category/{sellingCatId} | Put Selling Category
 [**putSellingSubCategory**](SellingApi.md#putsellingsubcategory) | **PUT** /public/selling-subcategory/{sellingCatId} | Put Selling Category
 
+
+# **getDetailSelling**
+> RespondSelling getDetailSelling()
+
+Get Detail Selling
+
+Ambil data selling detail
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getSellingApi();
+
+try {
+    final response = api.getDetailSelling();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->getDetailSelling: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RespondSelling**](RespondSelling.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSellingCategory**
 > RespondSellingCategories getSellingCategory(sort, direction, pageNumber, pageSize, name)
@@ -128,6 +172,52 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getSellingUser**
+> RespondSellingUser getSellingUser(userId)
+
+Get Selling User
+
+Ambil data selling user
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getSellingApi();
+final String userId = userId_example; // String | 
+
+try {
+    final response = api.getSellingUser(userId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->getSellingUser: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**|  | 
+
+### Return type
+
+[**RespondSellingUser**](RespondSellingUser.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **postSelling**
 > RespondGlobal postSelling(requestSelling)
 
@@ -138,6 +228,9 @@ Tambah barang yang akan dijual
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final RequestSelling requestSelling = {"jenisIklan":"Jual","judulIklan":"Jual Ikan","photo1":"nulasd asd asd asd asd asl","photo2":"","photo3":"","photo4":"","description":"test 1213","linkVideo":"https://www.youtube.com/shorts/ukZK4BkymPo","user":"e6458c51-3d5b-478a-a0c9-a710c3369d20","sellingSubCategory":"b49a359c-3ef8-406d-9aca-c6f8e95270e5","price":50000000,"publishStatus":"AKTIF"}; // RequestSelling | 
@@ -162,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

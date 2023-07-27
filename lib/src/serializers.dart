@@ -75,12 +75,19 @@ import 'package:openapi/src/model/respond_permissions_data_content_inner.dart';
 import 'package:openapi/src/model/respond_roles.dart';
 import 'package:openapi/src/model/respond_roles_data.dart';
 import 'package:openapi/src/model/respond_roles_data_content_inner.dart';
+import 'package:openapi/src/model/respond_selling.dart';
 import 'package:openapi/src/model/respond_selling_categories.dart';
 import 'package:openapi/src/model/respond_selling_categories_data.dart';
 import 'package:openapi/src/model/respond_selling_categories_data_content_inner.dart';
 import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
+import 'package:openapi/src/model/respond_selling_data.dart';
+import 'package:openapi/src/model/respond_selling_data_files_inner.dart';
+import 'package:openapi/src/model/respond_selling_data_user.dart';
 import 'package:openapi/src/model/respond_selling_sub_category.dart';
 import 'package:openapi/src/model/respond_selling_sub_category_data.dart';
+import 'package:openapi/src/model/respond_selling_user.dart';
+import 'package:openapi/src/model/respond_selling_user_data.dart';
+import 'package:openapi/src/model/respond_selling_user_data_content_inner.dart';
 import 'package:openapi/src/model/respond_tank.dart';
 import 'package:openapi/src/model/respond_tank_assesment.dart';
 import 'package:openapi/src/model/respond_tank_assesment_data.dart';
@@ -167,12 +174,19 @@ part 'serializers.g.dart';
   RespondRoles,
   RespondRolesData,
   RespondRolesDataContentInner,
+  RespondSelling,
   RespondSellingCategories,
   RespondSellingCategoriesData,
   RespondSellingCategoriesDataContentInner,
   RespondSellingCategoriesDataContentInnerSellingSubCategorysInner,
+  RespondSellingData,
+  RespondSellingDataFilesInner,
+  RespondSellingDataUser,
   RespondSellingSubCategory,
   RespondSellingSubCategoryData,
+  RespondSellingUser,
+  RespondSellingUserData,
+  RespondSellingUserDataContentInner,
   RespondTank,
   RespondTankAssesment,
   RespondTankAssesmentData,

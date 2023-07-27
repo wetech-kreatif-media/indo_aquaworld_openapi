@@ -68,13 +68,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondRoles.serializer)
       ..add(RespondRolesData.serializer)
       ..add(RespondRolesDataContentInner.serializer)
+      ..add(RespondSelling.serializer)
       ..add(RespondSellingCategories.serializer)
       ..add(RespondSellingCategoriesData.serializer)
       ..add(RespondSellingCategoriesDataContentInner.serializer)
       ..add(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner
           .serializer)
+      ..add(RespondSellingData.serializer)
+      ..add(RespondSellingDataFilesInner.serializer)
+      ..add(RespondSellingDataUser.serializer)
       ..add(RespondSellingSubCategory.serializer)
       ..add(RespondSellingSubCategoryData.serializer)
+      ..add(RespondSellingUser.serializer)
+      ..add(RespondSellingUserData.serializer)
+      ..add(RespondSellingUserDataContentInner.serializer)
       ..add(RespondTank.serializer)
       ..add(RespondTankAssesment.serializer)
       ..add(RespondTankAssesmentData.serializer)
@@ -179,6 +186,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () => new ListBuilder<
               RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondSellingDataFilesInner)]),
+          () => new ListBuilder<RespondSellingDataFilesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondSellingUserDataContentInner)]),
+          () => new ListBuilder<RespondSellingUserDataContentInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondTankAssesmentDataPinaltiesInner)]),
