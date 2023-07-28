@@ -8,7 +8,7 @@ part of 'respond_selling_data_user.dart';
 
 class _$RespondSellingDataUser extends RespondSellingDataUser {
   @override
-  final String? id;
+  final String id;
   @override
   final String? createdBy;
   @override
@@ -22,13 +22,13 @@ class _$RespondSellingDataUser extends RespondSellingDataUser {
   @override
   final String? recordStatus;
   @override
-  final String? fullname;
+  final String fullname;
   @override
-  final String? mobilePhone;
+  final String mobilePhone;
   @override
-  final String? email;
+  final String email;
   @override
-  final String? city;
+  final String city;
   @override
   final String? photo;
   @override
@@ -38,30 +38,42 @@ class _$RespondSellingDataUser extends RespondSellingDataUser {
   @override
   final String? placeofBirth;
   @override
-  final RespondSellingDataUserRole? role;
+  final RespondSellingDataUserRole role;
 
   factory _$RespondSellingDataUser(
           [void Function(RespondSellingDataUserBuilder)? updates]) =>
       (new RespondSellingDataUserBuilder()..update(updates))._build();
 
   _$RespondSellingDataUser._(
-      {this.id,
+      {required this.id,
       this.createdBy,
       this.updatedBy,
       this.created,
       this.updated,
       this.deleted,
       this.recordStatus,
-      this.fullname,
-      this.mobilePhone,
-      this.email,
-      this.city,
+      required this.fullname,
+      required this.mobilePhone,
+      required this.email,
+      required this.city,
       this.photo,
       this.gender,
       this.linkMaps,
       this.placeofBirth,
-      this.role})
-      : super._();
+      required this.role})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(id, r'RespondSellingDataUser', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        fullname, r'RespondSellingDataUser', 'fullname');
+    BuiltValueNullFieldError.checkNotNull(
+        mobilePhone, r'RespondSellingDataUser', 'mobilePhone');
+    BuiltValueNullFieldError.checkNotNull(
+        email, r'RespondSellingDataUser', 'email');
+    BuiltValueNullFieldError.checkNotNull(
+        city, r'RespondSellingDataUser', 'city');
+    BuiltValueNullFieldError.checkNotNull(
+        role, r'RespondSellingDataUser', 'role');
+  }
 
   @override
   RespondSellingDataUser rebuild(
@@ -231,7 +243,7 @@ class RespondSellingDataUserBuilder
       _gender = $v.gender;
       _linkMaps = $v.linkMaps;
       _placeofBirth = $v.placeofBirth;
-      _role = $v.role?.toBuilder();
+      _role = $v.role.toBuilder();
       _$v = null;
     }
     return this;
@@ -256,27 +268,32 @@ class RespondSellingDataUserBuilder
     try {
       _$result = _$v ??
           new _$RespondSellingDataUser._(
-              id: id,
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondSellingDataUser', 'id'),
               createdBy: createdBy,
               updatedBy: updatedBy,
               created: created,
               updated: updated,
               deleted: deleted,
               recordStatus: recordStatus,
-              fullname: fullname,
-              mobilePhone: mobilePhone,
-              email: email,
-              city: city,
+              fullname: BuiltValueNullFieldError.checkNotNull(
+                  fullname, r'RespondSellingDataUser', 'fullname'),
+              mobilePhone: BuiltValueNullFieldError.checkNotNull(
+                  mobilePhone, r'RespondSellingDataUser', 'mobilePhone'),
+              email: BuiltValueNullFieldError.checkNotNull(
+                  email, r'RespondSellingDataUser', 'email'),
+              city: BuiltValueNullFieldError.checkNotNull(
+                  city, r'RespondSellingDataUser', 'city'),
               photo: photo,
               gender: gender,
               linkMaps: linkMaps,
               placeofBirth: placeofBirth,
-              role: _role?.build());
+              role: role.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'role';
-        _role?.build();
+        role.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondSellingDataUser', _$failedField, e.toString());

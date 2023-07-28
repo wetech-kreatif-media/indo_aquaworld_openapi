@@ -8,17 +8,26 @@ part of 'respond_selling.dart';
 
 class _$RespondSelling extends RespondSelling {
   @override
-  final String? responseCode;
+  final String responseCode;
   @override
-  final String? responseMessage;
+  final String responseMessage;
   @override
-  final RespondSellingData? data;
+  final RespondSellingData data;
 
   factory _$RespondSelling([void Function(RespondSellingBuilder)? updates]) =>
       (new RespondSellingBuilder()..update(updates))._build();
 
-  _$RespondSelling._({this.responseCode, this.responseMessage, this.data})
-      : super._();
+  _$RespondSelling._(
+      {required this.responseCode,
+      required this.responseMessage,
+      required this.data})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondSelling', 'responseCode');
+    BuiltValueNullFieldError.checkNotNull(
+        responseMessage, r'RespondSelling', 'responseMessage');
+    BuiltValueNullFieldError.checkNotNull(data, r'RespondSelling', 'data');
+  }
 
   @override
   RespondSelling rebuild(void Function(RespondSellingBuilder) updates) =>
@@ -84,7 +93,7 @@ class RespondSellingBuilder
     if ($v != null) {
       _responseCode = $v.responseCode;
       _responseMessage = $v.responseMessage;
-      _data = $v.data?.toBuilder();
+      _data = $v.data.toBuilder();
       _$v = null;
     }
     return this;
@@ -109,14 +118,16 @@ class RespondSellingBuilder
     try {
       _$result = _$v ??
           new _$RespondSelling._(
-              responseCode: responseCode,
-              responseMessage: responseMessage,
-              data: _data?.build());
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondSelling', 'responseCode'),
+              responseMessage: BuiltValueNullFieldError.checkNotNull(
+                  responseMessage, r'RespondSelling', 'responseMessage'),
+              data: data.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'data';
-        _data?.build();
+        data.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondSelling', _$failedField, e.toString());

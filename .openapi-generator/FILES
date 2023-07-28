@@ -74,6 +74,7 @@ doc/RespondSellingCategoriesDataContentInner.md
 doc/RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md
 doc/RespondSellingData.md
 doc/RespondSellingDataFilesInner.md
+doc/RespondSellingDataSellingSubCategory.md
 doc/RespondSellingDataUser.md
 doc/RespondSellingDataUserRole.md
 doc/RespondSellingDataUserRolePermissionsInner.md
@@ -199,6 +200,7 @@ lib/src/model/respond_selling_categories_data_content_inner.dart
 lib/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart
 lib/src/model/respond_selling_data.dart
 lib/src/model/respond_selling_data_files_inner.dart
+lib/src/model/respond_selling_data_selling_sub_category.dart
 lib/src/model/respond_selling_data_user.dart
 lib/src/model/respond_selling_data_user_role.dart
 lib/src/model/respond_selling_data_user_role_permissions_inner.dart
@@ -231,3 +233,4 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_selling_data_selling_sub_category_test.dart

@@ -6,7 +6,7 @@
 import 'package:openapi/src/model/respond_selling_data_user.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/model/respond_selling_data_files_inner.dart';
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
+import 'package:openapi/src/model/respond_selling_data_selling_sub_category.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -37,25 +37,25 @@ abstract class RespondSellingData implements Built<RespondSellingData, RespondSe
   String? get judulIklan;
 
   @BuiltValueField(wireName: r'files')
-  BuiltList<RespondSellingDataFilesInner>? get files;
+  BuiltList<RespondSellingDataFilesInner> get files;
 
   @BuiltValueField(wireName: r'description')
-  String? get description;
+  String get description;
 
   @BuiltValueField(wireName: r'user')
-  RespondSellingDataUser? get user;
+  RespondSellingDataUser get user;
 
   @BuiltValueField(wireName: r'sellingSubCategory')
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner? get sellingSubCategory;
+  RespondSellingDataSellingSubCategory? get sellingSubCategory;
 
   @BuiltValueField(wireName: r'price')
-  num? get price;
+  num get price;
 
   @BuiltValueField(wireName: r'publishStatus')
-  String? get publishStatus;
+  String get publishStatus;
 
   @BuiltValueField(wireName: r'updated')
-  String? get updated;
+  String get updated;
 
   RespondSellingData._();
 
@@ -101,55 +101,43 @@ class _$RespondSellingDataSerializer implements PrimitiveSerializer<RespondSelli
         specifiedType: const FullType(String),
       );
     }
-    if (object.files != null) {
-      yield r'files';
-      yield serializers.serialize(
-        object.files,
-        specifiedType: const FullType(BuiltList, [FullType(RespondSellingDataFilesInner)]),
-      );
-    }
-    if (object.description != null) {
-      yield r'description';
-      yield serializers.serialize(
-        object.description,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.user != null) {
-      yield r'user';
-      yield serializers.serialize(
-        object.user,
-        specifiedType: const FullType(RespondSellingDataUser),
-      );
-    }
+    yield r'files';
+    yield serializers.serialize(
+      object.files,
+      specifiedType: const FullType(BuiltList, [FullType(RespondSellingDataFilesInner)]),
+    );
+    yield r'description';
+    yield serializers.serialize(
+      object.description,
+      specifiedType: const FullType(String),
+    );
+    yield r'user';
+    yield serializers.serialize(
+      object.user,
+      specifiedType: const FullType(RespondSellingDataUser),
+    );
     if (object.sellingSubCategory != null) {
       yield r'sellingSubCategory';
       yield serializers.serialize(
         object.sellingSubCategory,
-        specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
+        specifiedType: const FullType(RespondSellingDataSellingSubCategory),
       );
     }
-    if (object.price != null) {
-      yield r'price';
-      yield serializers.serialize(
-        object.price,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.publishStatus != null) {
-      yield r'publishStatus';
-      yield serializers.serialize(
-        object.publishStatus,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updated != null) {
-      yield r'updated';
-      yield serializers.serialize(
-        object.updated,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'price';
+    yield serializers.serialize(
+      object.price,
+      specifiedType: const FullType(num),
+    );
+    yield r'publishStatus';
+    yield serializers.serialize(
+      object.publishStatus,
+      specifiedType: const FullType(String),
+    );
+    yield r'updated';
+    yield serializers.serialize(
+      object.updated,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override
@@ -218,8 +206,8 @@ class _$RespondSellingDataSerializer implements PrimitiveSerializer<RespondSelli
         case r'sellingSubCategory':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
-          ) as RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
+            specifiedType: const FullType(RespondSellingDataSellingSubCategory),
+          ) as RespondSellingDataSellingSubCategory;
           result.sellingSubCategory.replace(valueDes);
           break;
         case r'price':

@@ -14,20 +14,19 @@ class _$RespondSellingData extends RespondSellingData {
   @override
   final String? judulIklan;
   @override
-  final BuiltList<RespondSellingDataFilesInner>? files;
+  final BuiltList<RespondSellingDataFilesInner> files;
   @override
-  final String? description;
+  final String description;
   @override
-  final RespondSellingDataUser? user;
+  final RespondSellingDataUser user;
   @override
-  final RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner?
-      sellingSubCategory;
+  final RespondSellingDataSellingSubCategory? sellingSubCategory;
   @override
-  final num? price;
+  final num price;
   @override
-  final String? publishStatus;
+  final String publishStatus;
   @override
-  final String? updated;
+  final String updated;
 
   factory _$RespondSellingData(
           [void Function(RespondSellingDataBuilder)? updates]) =>
@@ -37,14 +36,26 @@ class _$RespondSellingData extends RespondSellingData {
       {this.id,
       this.jenisIklan,
       this.judulIklan,
-      this.files,
-      this.description,
-      this.user,
+      required this.files,
+      required this.description,
+      required this.user,
       this.sellingSubCategory,
-      this.price,
-      this.publishStatus,
-      this.updated})
-      : super._();
+      required this.price,
+      required this.publishStatus,
+      required this.updated})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        files, r'RespondSellingData', 'files');
+    BuiltValueNullFieldError.checkNotNull(
+        description, r'RespondSellingData', 'description');
+    BuiltValueNullFieldError.checkNotNull(user, r'RespondSellingData', 'user');
+    BuiltValueNullFieldError.checkNotNull(
+        price, r'RespondSellingData', 'price');
+    BuiltValueNullFieldError.checkNotNull(
+        publishStatus, r'RespondSellingData', 'publishStatus');
+    BuiltValueNullFieldError.checkNotNull(
+        updated, r'RespondSellingData', 'updated');
+  }
 
   @override
   RespondSellingData rebuild(
@@ -136,14 +147,12 @@ class RespondSellingDataBuilder
       _$this._user ??= new RespondSellingDataUserBuilder();
   set user(RespondSellingDataUserBuilder? user) => _$this._user = user;
 
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
-      _sellingSubCategory;
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
-      get sellingSubCategory => _$this._sellingSubCategory ??=
-          new RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder();
+  RespondSellingDataSellingSubCategoryBuilder? _sellingSubCategory;
+  RespondSellingDataSellingSubCategoryBuilder get sellingSubCategory =>
+      _$this._sellingSubCategory ??=
+          new RespondSellingDataSellingSubCategoryBuilder();
   set sellingSubCategory(
-          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
-              sellingSubCategory) =>
+          RespondSellingDataSellingSubCategoryBuilder? sellingSubCategory) =>
       _$this._sellingSubCategory = sellingSubCategory;
 
   num? _price;
@@ -169,9 +178,9 @@ class RespondSellingDataBuilder
       _id = $v.id;
       _jenisIklan = $v.jenisIklan;
       _judulIklan = $v.judulIklan;
-      _files = $v.files?.toBuilder();
+      _files = $v.files.toBuilder();
       _description = $v.description;
-      _user = $v.user?.toBuilder();
+      _user = $v.user.toBuilder();
       _sellingSubCategory = $v.sellingSubCategory?.toBuilder();
       _price = $v.price;
       _publishStatus = $v.publishStatus;
@@ -203,21 +212,25 @@ class RespondSellingDataBuilder
               id: id,
               jenisIklan: jenisIklan,
               judulIklan: judulIklan,
-              files: _files?.build(),
-              description: description,
-              user: _user?.build(),
+              files: files.build(),
+              description: BuiltValueNullFieldError.checkNotNull(
+                  description, r'RespondSellingData', 'description'),
+              user: user.build(),
               sellingSubCategory: _sellingSubCategory?.build(),
-              price: price,
-              publishStatus: publishStatus,
-              updated: updated);
+              price: BuiltValueNullFieldError.checkNotNull(
+                  price, r'RespondSellingData', 'price'),
+              publishStatus: BuiltValueNullFieldError.checkNotNull(
+                  publishStatus, r'RespondSellingData', 'publishStatus'),
+              updated: BuiltValueNullFieldError.checkNotNull(
+                  updated, r'RespondSellingData', 'updated'));
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'files';
-        _files?.build();
+        files.build();
 
         _$failedField = 'user';
-        _user?.build();
+        user.build();
         _$failedField = 'sellingSubCategory';
         _sellingSubCategory?.build();
       } catch (e) {

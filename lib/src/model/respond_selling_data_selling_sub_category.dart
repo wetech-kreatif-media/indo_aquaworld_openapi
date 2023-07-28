@@ -3,14 +3,12 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/respond_selling_data_user_role_permissions_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_selling_data_user_role.g.dart';
+part 'respond_selling_data_selling_sub_category.g.dart';
 
-/// RespondSellingDataUserRole
+/// RespondSellingDataSellingSubCategory
 ///
 /// Properties:
 /// * [id] 
@@ -21,10 +19,8 @@ part 'respond_selling_data_user_role.g.dart';
 /// * [deleted] 
 /// * [recordStatus] 
 /// * [name] 
-/// * [code] 
-/// * [permissions] 
 @BuiltValue()
-abstract class RespondSellingDataUserRole implements Built<RespondSellingDataUserRole, RespondSellingDataUserRoleBuilder> {
+abstract class RespondSellingDataSellingSubCategory implements Built<RespondSellingDataSellingSubCategory, RespondSellingDataSellingSubCategoryBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
 
@@ -49,33 +45,27 @@ abstract class RespondSellingDataUserRole implements Built<RespondSellingDataUse
   @BuiltValueField(wireName: r'name')
   String get name;
 
-  @BuiltValueField(wireName: r'code')
-  String get code;
+  RespondSellingDataSellingSubCategory._();
 
-  @BuiltValueField(wireName: r'permissions')
-  BuiltList<RespondSellingDataUserRolePermissionsInner>? get permissions;
-
-  RespondSellingDataUserRole._();
-
-  factory RespondSellingDataUserRole([void updates(RespondSellingDataUserRoleBuilder b)]) = _$RespondSellingDataUserRole;
+  factory RespondSellingDataSellingSubCategory([void updates(RespondSellingDataSellingSubCategoryBuilder b)]) = _$RespondSellingDataSellingSubCategory;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondSellingDataUserRoleBuilder b) => b;
+  static void _defaults(RespondSellingDataSellingSubCategoryBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondSellingDataUserRole> get serializer => _$RespondSellingDataUserRoleSerializer();
+  static Serializer<RespondSellingDataSellingSubCategory> get serializer => _$RespondSellingDataSellingSubCategorySerializer();
 }
 
-class _$RespondSellingDataUserRoleSerializer implements PrimitiveSerializer<RespondSellingDataUserRole> {
+class _$RespondSellingDataSellingSubCategorySerializer implements PrimitiveSerializer<RespondSellingDataSellingSubCategory> {
   @override
-  final Iterable<Type> types = const [RespondSellingDataUserRole, _$RespondSellingDataUserRole];
+  final Iterable<Type> types = const [RespondSellingDataSellingSubCategory, _$RespondSellingDataSellingSubCategory];
 
   @override
-  final String wireName = r'RespondSellingDataUserRole';
+  final String wireName = r'RespondSellingDataSellingSubCategory';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondSellingDataUserRole object, {
+    RespondSellingDataSellingSubCategory object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -130,24 +120,12 @@ class _$RespondSellingDataUserRoleSerializer implements PrimitiveSerializer<Resp
       object.name,
       specifiedType: const FullType(String),
     );
-    yield r'code';
-    yield serializers.serialize(
-      object.code,
-      specifiedType: const FullType(String),
-    );
-    if (object.permissions != null) {
-      yield r'permissions';
-      yield serializers.serialize(
-        object.permissions,
-        specifiedType: const FullType(BuiltList, [FullType(RespondSellingDataUserRolePermissionsInner)]),
-      );
-    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondSellingDataUserRole object, {
+    RespondSellingDataSellingSubCategory object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -158,7 +136,7 @@ class _$RespondSellingDataUserRoleSerializer implements PrimitiveSerializer<Resp
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondSellingDataUserRoleBuilder result,
+    required RespondSellingDataSellingSubCategoryBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -221,20 +199,6 @@ class _$RespondSellingDataUserRoleSerializer implements PrimitiveSerializer<Resp
           ) as String;
           result.name = valueDes;
           break;
-        case r'code':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.code = valueDes;
-          break;
-        case r'permissions':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(RespondSellingDataUserRolePermissionsInner)]),
-          ) as BuiltList<RespondSellingDataUserRolePermissionsInner>;
-          result.permissions.replace(valueDes);
-          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -244,12 +208,12 @@ class _$RespondSellingDataUserRoleSerializer implements PrimitiveSerializer<Resp
   }
 
   @override
-  RespondSellingDataUserRole deserialize(
+  RespondSellingDataSellingSubCategory deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondSellingDataUserRoleBuilder();
+    final result = RespondSellingDataSellingSubCategoryBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

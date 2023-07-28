@@ -1,4 +1,4 @@
-# openapi.model.RespondSellingDataUserRole
+# openapi.model.RespondSellingDataSellingSubCategory
 
 ## Load the model package
 ```dart
@@ -16,8 +16,6 @@ Name | Type | Description | Notes
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
 **name** | **String** |  | 
-**code** | **String** |  | 
-**permissions** | [**BuiltList&lt;RespondSellingDataUserRolePermissionsInner&gt;**](RespondSellingDataUserRolePermissionsInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

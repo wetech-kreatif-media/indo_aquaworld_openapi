@@ -31,7 +31,7 @@ part 'respond_selling_data_user.g.dart';
 @BuiltValue()
 abstract class RespondSellingDataUser implements Built<RespondSellingDataUser, RespondSellingDataUserBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
 
   @BuiltValueField(wireName: r'createdBy')
   String? get createdBy;
@@ -52,16 +52,16 @@ abstract class RespondSellingDataUser implements Built<RespondSellingDataUser, R
   String? get recordStatus;
 
   @BuiltValueField(wireName: r'fullname')
-  String? get fullname;
+  String get fullname;
 
   @BuiltValueField(wireName: r'mobilePhone')
-  String? get mobilePhone;
+  String get mobilePhone;
 
   @BuiltValueField(wireName: r'email')
-  String? get email;
+  String get email;
 
   @BuiltValueField(wireName: r'city')
-  String? get city;
+  String get city;
 
   @BuiltValueField(wireName: r'photo')
   String? get photo;
@@ -76,7 +76,7 @@ abstract class RespondSellingDataUser implements Built<RespondSellingDataUser, R
   String? get placeofBirth;
 
   @BuiltValueField(wireName: r'role')
-  RespondSellingDataUserRole? get role;
+  RespondSellingDataUserRole get role;
 
   RespondSellingDataUser._();
 
@@ -101,13 +101,11 @@ class _$RespondSellingDataUserSerializer implements PrimitiveSerializer<RespondS
     RespondSellingDataUser object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
     if (object.createdBy != null) {
       yield r'createdBy';
       yield serializers.serialize(
@@ -150,34 +148,26 @@ class _$RespondSellingDataUserSerializer implements PrimitiveSerializer<RespondS
         specifiedType: const FullType(String),
       );
     }
-    if (object.fullname != null) {
-      yield r'fullname';
-      yield serializers.serialize(
-        object.fullname,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.mobilePhone != null) {
-      yield r'mobilePhone';
-      yield serializers.serialize(
-        object.mobilePhone,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.email != null) {
-      yield r'email';
-      yield serializers.serialize(
-        object.email,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.city != null) {
-      yield r'city';
-      yield serializers.serialize(
-        object.city,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'fullname';
+    yield serializers.serialize(
+      object.fullname,
+      specifiedType: const FullType(String),
+    );
+    yield r'mobilePhone';
+    yield serializers.serialize(
+      object.mobilePhone,
+      specifiedType: const FullType(String),
+    );
+    yield r'email';
+    yield serializers.serialize(
+      object.email,
+      specifiedType: const FullType(String),
+    );
+    yield r'city';
+    yield serializers.serialize(
+      object.city,
+      specifiedType: const FullType(String),
+    );
     if (object.photo != null) {
       yield r'photo';
       yield serializers.serialize(
@@ -206,13 +196,11 @@ class _$RespondSellingDataUserSerializer implements PrimitiveSerializer<RespondS
         specifiedType: const FullType(String),
       );
     }
-    if (object.role != null) {
-      yield r'role';
-      yield serializers.serialize(
-        object.role,
-        specifiedType: const FullType(RespondSellingDataUserRole),
-      );
-    }
+    yield r'role';
+    yield serializers.serialize(
+      object.role,
+      specifiedType: const FullType(RespondSellingDataUserRole),
+    );
   }
 
   @override

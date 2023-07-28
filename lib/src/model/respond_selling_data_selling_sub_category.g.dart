@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_selling_data_user_role.dart';
+part of 'respond_selling_data_selling_sub_category.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondSellingDataUserRole extends RespondSellingDataUserRole {
+class _$RespondSellingDataSellingSubCategory
+    extends RespondSellingDataSellingSubCategory {
   @override
   final String id;
   @override
@@ -23,16 +24,14 @@ class _$RespondSellingDataUserRole extends RespondSellingDataUserRole {
   final String? recordStatus;
   @override
   final String name;
-  @override
-  final String code;
-  @override
-  final BuiltList<RespondSellingDataUserRolePermissionsInner>? permissions;
 
-  factory _$RespondSellingDataUserRole(
-          [void Function(RespondSellingDataUserRoleBuilder)? updates]) =>
-      (new RespondSellingDataUserRoleBuilder()..update(updates))._build();
+  factory _$RespondSellingDataSellingSubCategory(
+          [void Function(RespondSellingDataSellingSubCategoryBuilder)?
+              updates]) =>
+      (new RespondSellingDataSellingSubCategoryBuilder()..update(updates))
+          ._build();
 
-  _$RespondSellingDataUserRole._(
+  _$RespondSellingDataSellingSubCategory._(
       {required this.id,
       this.createdBy,
       this.updatedBy,
@@ -40,31 +39,27 @@ class _$RespondSellingDataUserRole extends RespondSellingDataUserRole {
       this.updated,
       this.deleted,
       this.recordStatus,
-      required this.name,
-      required this.code,
-      this.permissions})
+      required this.name})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        id, r'RespondSellingDataUserRole', 'id');
+        id, r'RespondSellingDataSellingSubCategory', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RespondSellingDataUserRole', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'RespondSellingDataUserRole', 'code');
+        name, r'RespondSellingDataSellingSubCategory', 'name');
   }
 
   @override
-  RespondSellingDataUserRole rebuild(
-          void Function(RespondSellingDataUserRoleBuilder) updates) =>
+  RespondSellingDataSellingSubCategory rebuild(
+          void Function(RespondSellingDataSellingSubCategoryBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondSellingDataUserRoleBuilder toBuilder() =>
-      new RespondSellingDataUserRoleBuilder()..replace(this);
+  RespondSellingDataSellingSubCategoryBuilder toBuilder() =>
+      new RespondSellingDataSellingSubCategoryBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondSellingDataUserRole &&
+    return other is RespondSellingDataSellingSubCategory &&
         id == other.id &&
         createdBy == other.createdBy &&
         updatedBy == other.updatedBy &&
@@ -72,9 +67,7 @@ class _$RespondSellingDataUserRole extends RespondSellingDataUserRole {
         updated == other.updated &&
         deleted == other.deleted &&
         recordStatus == other.recordStatus &&
-        name == other.name &&
-        code == other.code &&
-        permissions == other.permissions;
+        name == other.name;
   }
 
   @override
@@ -88,15 +81,13 @@ class _$RespondSellingDataUserRole extends RespondSellingDataUserRole {
     _$hash = $jc(_$hash, deleted.hashCode);
     _$hash = $jc(_$hash, recordStatus.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, code.hashCode);
-    _$hash = $jc(_$hash, permissions.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'RespondSellingDataUserRole')
+    return (newBuiltValueToStringHelper(r'RespondSellingDataSellingSubCategory')
           ..add('id', id)
           ..add('createdBy', createdBy)
           ..add('updatedBy', updatedBy)
@@ -104,17 +95,16 @@ class _$RespondSellingDataUserRole extends RespondSellingDataUserRole {
           ..add('updated', updated)
           ..add('deleted', deleted)
           ..add('recordStatus', recordStatus)
-          ..add('name', name)
-          ..add('code', code)
-          ..add('permissions', permissions))
+          ..add('name', name))
         .toString();
   }
 }
 
-class RespondSellingDataUserRoleBuilder
+class RespondSellingDataSellingSubCategoryBuilder
     implements
-        Builder<RespondSellingDataUserRole, RespondSellingDataUserRoleBuilder> {
-  _$RespondSellingDataUserRole? _$v;
+        Builder<RespondSellingDataSellingSubCategory,
+            RespondSellingDataSellingSubCategoryBuilder> {
+  _$RespondSellingDataSellingSubCategory? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -148,24 +138,11 @@ class RespondSellingDataUserRoleBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  String? _code;
-  String? get code => _$this._code;
-  set code(String? code) => _$this._code = code;
-
-  ListBuilder<RespondSellingDataUserRolePermissionsInner>? _permissions;
-  ListBuilder<RespondSellingDataUserRolePermissionsInner> get permissions =>
-      _$this._permissions ??=
-          new ListBuilder<RespondSellingDataUserRolePermissionsInner>();
-  set permissions(
-          ListBuilder<RespondSellingDataUserRolePermissionsInner>?
-              permissions) =>
-      _$this._permissions = permissions;
-
-  RespondSellingDataUserRoleBuilder() {
-    RespondSellingDataUserRole._defaults(this);
+  RespondSellingDataSellingSubCategoryBuilder() {
+    RespondSellingDataSellingSubCategory._defaults(this);
   }
 
-  RespondSellingDataUserRoleBuilder get _$this {
+  RespondSellingDataSellingSubCategoryBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -176,56 +153,39 @@ class RespondSellingDataUserRoleBuilder
       _deleted = $v.deleted;
       _recordStatus = $v.recordStatus;
       _name = $v.name;
-      _code = $v.code;
-      _permissions = $v.permissions?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(RespondSellingDataUserRole other) {
+  void replace(RespondSellingDataSellingSubCategory other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondSellingDataUserRole;
+    _$v = other as _$RespondSellingDataSellingSubCategory;
   }
 
   @override
-  void update(void Function(RespondSellingDataUserRoleBuilder)? updates) {
+  void update(
+      void Function(RespondSellingDataSellingSubCategoryBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondSellingDataUserRole build() => _build();
+  RespondSellingDataSellingSubCategory build() => _build();
 
-  _$RespondSellingDataUserRole _build() {
-    _$RespondSellingDataUserRole _$result;
-    try {
-      _$result = _$v ??
-          new _$RespondSellingDataUserRole._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'RespondSellingDataUserRole', 'id'),
-              createdBy: createdBy,
-              updatedBy: updatedBy,
-              created: created,
-              updated: updated,
-              deleted: deleted,
-              recordStatus: recordStatus,
-              name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'RespondSellingDataUserRole', 'name'),
-              code: BuiltValueNullFieldError.checkNotNull(
-                  code, r'RespondSellingDataUserRole', 'code'),
-              permissions: _permissions?.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'permissions';
-        _permissions?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'RespondSellingDataUserRole', _$failedField, e.toString());
-      }
-      rethrow;
-    }
+  _$RespondSellingDataSellingSubCategory _build() {
+    final _$result = _$v ??
+        new _$RespondSellingDataSellingSubCategory._(
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'RespondSellingDataSellingSubCategory', 'id'),
+            createdBy: createdBy,
+            updatedBy: updatedBy,
+            created: created,
+            updated: updated,
+            deleted: deleted,
+            recordStatus: recordStatus,
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'RespondSellingDataSellingSubCategory', 'name'));
     replace(_$result);
     return _$result;
   }
