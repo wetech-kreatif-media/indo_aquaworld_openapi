@@ -86,7 +86,7 @@ export 'package:openapi/src/model/respond_selling.dart';
 export 'package:openapi/src/model/respond_selling_categories.dart';
 export 'package:openapi/src/model/respond_selling_categories_data.dart';
 export 'package:openapi/src/model/respond_selling_categories_data_content_inner.dart';
-export 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
+export 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
 export 'package:openapi/src/model/respond_selling_data.dart';
 export 'package:openapi/src/model/respond_selling_data_files_inner.dart';
 export 'package:openapi/src/model/respond_selling_data_user.dart';

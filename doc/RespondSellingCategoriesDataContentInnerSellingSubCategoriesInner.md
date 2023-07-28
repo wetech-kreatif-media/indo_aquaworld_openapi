@@ -1,4 +1,4 @@
-# openapi.model.RespondSellingCategoriesDataContentInner
+# openapi.model.RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
 
 ## Load the model package
 ```dart
@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
-**sellingSubCategories** | [**BuiltList&lt;RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner&gt;**](RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

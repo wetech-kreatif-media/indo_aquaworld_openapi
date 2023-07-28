@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **totalPages** | **num** |  | [optional] 
 **totalElements** | **num** |  | [optional] 
 **numberOfElements** | **num** |  | [optional] 
-**content** | [**BuiltList&lt;RespondSellingCategoriesDataContentInnerSellingSubCategorysInner&gt;**](RespondSellingCategoriesDataContentInnerSellingSubCategorysInner.md) |  | [optional] 
+**content** | [**BuiltList&lt;RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner&gt;**](RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

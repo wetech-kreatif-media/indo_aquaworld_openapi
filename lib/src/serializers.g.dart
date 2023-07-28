@@ -71,7 +71,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondSellingCategories.serializer)
       ..add(RespondSellingCategoriesData.serializer)
       ..add(RespondSellingCategoriesDataContentInner.serializer)
-      ..add(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner
+      ..add(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
           .serializer)
       ..add(RespondSellingData.serializer)
       ..add(RespondSellingDataFilesInner.serializer)
@@ -166,17 +166,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
-                RespondSellingCategoriesDataContentInnerSellingSubCategorysInner)
+                RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)
           ]),
           () => new ListBuilder<
-              RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>())
+              RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
-                RespondSellingCategoriesDataContentInnerSellingSubCategorysInner)
+                RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)
           ]),
           () => new ListBuilder<
-              RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>())
+              RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondSellingDataFilesInner)]),

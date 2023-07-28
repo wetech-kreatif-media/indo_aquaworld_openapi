@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:openapi/src/model/respond_selling_data_user.dart';
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
+import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -83,7 +83,7 @@ abstract class RespondSellingUserDataContentInner implements Built<RespondSellin
   RespondSellingDataUser? get user;
 
   @BuiltValueField(wireName: r'sellingSubCategory')
-  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner? get sellingSubCategory;
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner? get sellingSubCategory;
 
   @BuiltValueField(wireName: r'price')
   num? get price;
@@ -230,7 +230,7 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
       yield r'sellingSubCategory';
       yield serializers.serialize(
         object.sellingSubCategory,
-        specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner),
+        specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
       );
     }
     if (object.price != null) {
@@ -385,8 +385,8 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
         case r'sellingSubCategory':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner),
-          ) as RespondSellingCategoriesDataContentInnerSellingSubCategorysInner;
+            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
+          ) as RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
           result.sellingSubCategory.replace(valueDes);
           break;
         case r'price':

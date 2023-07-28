@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
+import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -49,7 +49,7 @@ abstract class RespondSellingSubCategoryData implements Built<RespondSellingSubC
   num? get numberOfElements;
 
   @BuiltValueField(wireName: r'content')
-  BuiltList<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>? get content;
+  BuiltList<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>? get content;
 
   RespondSellingSubCategoryData._();
 
@@ -134,7 +134,7 @@ class _$RespondSellingSubCategoryDataSerializer implements PrimitiveSerializer<R
       yield r'content';
       yield serializers.serialize(
         object.content,
-        specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner)]),
+        specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)]),
       );
     }
   }
@@ -219,8 +219,8 @@ class _$RespondSellingSubCategoryDataSerializer implements PrimitiveSerializer<R
         case r'content':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner)]),
-          ) as BuiltList<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>;
+            specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)]),
+          ) as BuiltList<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>;
           result.content.replace(valueDes);
           break;
         default:

@@ -6,7 +6,7 @@
 import 'package:openapi/src/model/respond_selling_data_user.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/model/respond_selling_data_files_inner.dart';
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categorys_inner.dart';
+import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -45,7 +45,7 @@ abstract class RespondSellingData implements Built<RespondSellingData, RespondSe
   RespondSellingDataUser? get user;
 
   @BuiltValueField(wireName: r'sellingSubCategory')
-  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner? get sellingSubCategory;
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner? get sellingSubCategory;
 
   @BuiltValueField(wireName: r'price')
   num? get price;
@@ -122,7 +122,7 @@ class _$RespondSellingDataSerializer implements PrimitiveSerializer<RespondSelli
       yield r'sellingSubCategory';
       yield serializers.serialize(
         object.sellingSubCategory,
-        specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner),
+        specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
       );
     }
     if (object.price != null) {
@@ -207,8 +207,8 @@ class _$RespondSellingDataSerializer implements PrimitiveSerializer<RespondSelli
         case r'sellingSubCategory':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategorysInner),
-          ) as RespondSellingCategoriesDataContentInnerSellingSubCategorysInner;
+            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
+          ) as RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
           result.sellingSubCategory.replace(valueDes);
           break;
         case r'price':

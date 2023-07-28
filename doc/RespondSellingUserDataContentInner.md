@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **linkVideo** | **String** |  | [optional] 
 **user** | [**RespondSellingDataUser**](RespondSellingDataUser.md) |  | [optional] 
-**sellingSubCategory** | [**RespondSellingCategoriesDataContentInnerSellingSubCategorysInner**](RespondSellingCategoriesDataContentInnerSellingSubCategorysInner.md) |  | [optional] 
+**sellingSubCategory** | [**RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner**](RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md) |  | [optional] 
 **price** | **num** |  | [optional] 
 **publishStatus** | **String** |  | [optional] 
 

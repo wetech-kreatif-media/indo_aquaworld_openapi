@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_selling_categories_data_content_inner.dart';
+part of 'respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondSellingCategoriesDataContentInner
-    extends RespondSellingCategoriesDataContentInner {
+class _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
+    extends RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner {
   @override
   final String? id;
   @override
@@ -24,18 +24,16 @@ class _$RespondSellingCategoriesDataContentInner
   final String? recordStatus;
   @override
   final String? name;
-  @override
-  final BuiltList<
-          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>?
-      sellingSubCategories;
 
-  factory _$RespondSellingCategoriesDataContentInner(
-          [void Function(RespondSellingCategoriesDataContentInnerBuilder)?
+  factory _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner(
+          [void Function(
+                  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder)?
               updates]) =>
-      (new RespondSellingCategoriesDataContentInnerBuilder()..update(updates))
+      (new RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder()
+            ..update(updates))
           ._build();
 
-  _$RespondSellingCategoriesDataContentInner._(
+  _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner._(
       {this.id,
       this.createdBy,
       this.updatedBy,
@@ -43,24 +41,27 @@ class _$RespondSellingCategoriesDataContentInner
       this.updated,
       this.deleted,
       this.recordStatus,
-      this.name,
-      this.sellingSubCategories})
+      this.name})
       : super._();
 
   @override
-  RespondSellingCategoriesDataContentInner rebuild(
-          void Function(RespondSellingCategoriesDataContentInnerBuilder)
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner rebuild(
+          void Function(
+                  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder)
               updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondSellingCategoriesDataContentInnerBuilder toBuilder() =>
-      new RespondSellingCategoriesDataContentInnerBuilder()..replace(this);
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
+      toBuilder() =>
+          new RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder()
+            ..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondSellingCategoriesDataContentInner &&
+    return other
+            is RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner &&
         id == other.id &&
         createdBy == other.createdBy &&
         updatedBy == other.updatedBy &&
@@ -68,8 +69,7 @@ class _$RespondSellingCategoriesDataContentInner
         updated == other.updated &&
         deleted == other.deleted &&
         recordStatus == other.recordStatus &&
-        name == other.name &&
-        sellingSubCategories == other.sellingSubCategories;
+        name == other.name;
   }
 
   @override
@@ -83,7 +83,6 @@ class _$RespondSellingCategoriesDataContentInner
     _$hash = $jc(_$hash, deleted.hashCode);
     _$hash = $jc(_$hash, recordStatus.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, sellingSubCategories.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -91,7 +90,7 @@ class _$RespondSellingCategoriesDataContentInner
   @override
   String toString() {
     return (newBuiltValueToStringHelper(
-            r'RespondSellingCategoriesDataContentInner')
+            r'RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner')
           ..add('id', id)
           ..add('createdBy', createdBy)
           ..add('updatedBy', updatedBy)
@@ -99,17 +98,17 @@ class _$RespondSellingCategoriesDataContentInner
           ..add('updated', updated)
           ..add('deleted', deleted)
           ..add('recordStatus', recordStatus)
-          ..add('name', name)
-          ..add('sellingSubCategories', sellingSubCategories))
+          ..add('name', name))
         .toString();
   }
 }
 
-class RespondSellingCategoriesDataContentInnerBuilder
+class RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
     implements
-        Builder<RespondSellingCategoriesDataContentInner,
-            RespondSellingCategoriesDataContentInnerBuilder> {
-  _$RespondSellingCategoriesDataContentInner? _$v;
+        Builder<
+            RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner,
+            RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder> {
+  _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -143,23 +142,13 @@ class RespondSellingCategoriesDataContentInnerBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  ListBuilder<
-          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>?
-      _sellingSubCategories;
-  ListBuilder<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>
-      get sellingSubCategories => _$this._sellingSubCategories ??= new ListBuilder<
-          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>();
-  set sellingSubCategories(
-          ListBuilder<
-                  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>?
-              sellingSubCategories) =>
-      _$this._sellingSubCategories = sellingSubCategories;
-
-  RespondSellingCategoriesDataContentInnerBuilder() {
-    RespondSellingCategoriesDataContentInner._defaults(this);
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder() {
+    RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner._defaults(
+        this);
   }
 
-  RespondSellingCategoriesDataContentInnerBuilder get _$this {
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
+      get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -170,54 +159,43 @@ class RespondSellingCategoriesDataContentInnerBuilder
       _deleted = $v.deleted;
       _recordStatus = $v.recordStatus;
       _name = $v.name;
-      _sellingSubCategories = $v.sellingSubCategories?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(RespondSellingCategoriesDataContentInner other) {
+  void replace(
+      RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondSellingCategoriesDataContentInner;
+    _$v = other
+        as _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
   }
 
   @override
   void update(
-      void Function(RespondSellingCategoriesDataContentInnerBuilder)? updates) {
+      void Function(
+              RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder)?
+          updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondSellingCategoriesDataContentInner build() => _build();
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner build() =>
+      _build();
 
-  _$RespondSellingCategoriesDataContentInner _build() {
-    _$RespondSellingCategoriesDataContentInner _$result;
-    try {
-      _$result = _$v ??
-          new _$RespondSellingCategoriesDataContentInner._(
-              id: id,
-              createdBy: createdBy,
-              updatedBy: updatedBy,
-              created: created,
-              updated: updated,
-              deleted: deleted,
-              recordStatus: recordStatus,
-              name: name,
-              sellingSubCategories: _sellingSubCategories?.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'sellingSubCategories';
-        _sellingSubCategories?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'RespondSellingCategoriesDataContentInner',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
+  _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner _build() {
+    final _$result = _$v ??
+        new _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
+                ._(
+            id: id,
+            createdBy: createdBy,
+            updatedBy: updatedBy,
+            created: created,
+            updated: updated,
+            deleted: deleted,
+            recordStatus: recordStatus,
+            name: name);
     replace(_$result);
     return _$result;
   }

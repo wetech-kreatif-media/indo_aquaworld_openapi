@@ -25,7 +25,7 @@ class _$RespondSellingSubCategoryData extends RespondSellingSubCategoryData {
   final num? numberOfElements;
   @override
   final BuiltList<
-          RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>?
+          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>?
       content;
 
   factory _$RespondSellingSubCategoryData(
@@ -140,14 +140,15 @@ class RespondSellingSubCategoryDataBuilder
   set numberOfElements(num? numberOfElements) =>
       _$this._numberOfElements = numberOfElements;
 
-  ListBuilder<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>?
+  ListBuilder<
+          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>?
       _content;
-  ListBuilder<RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>
+  ListBuilder<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>
       get content => _$this._content ??= new ListBuilder<
-          RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>();
+          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>();
   set content(
           ListBuilder<
-                  RespondSellingCategoriesDataContentInnerSellingSubCategorysInner>?
+                  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>?
               content) =>
       _$this._content = content;
 
