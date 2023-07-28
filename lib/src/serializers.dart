@@ -82,11 +82,14 @@ import 'package:openapi/src/model/respond_selling_categories_data_content_inner_
 import 'package:openapi/src/model/respond_selling_data.dart';
 import 'package:openapi/src/model/respond_selling_data_files_inner.dart';
 import 'package:openapi/src/model/respond_selling_data_user.dart';
+import 'package:openapi/src/model/respond_selling_data_user_role.dart';
+import 'package:openapi/src/model/respond_selling_data_user_role_permissions_inner.dart';
 import 'package:openapi/src/model/respond_selling_sub_category.dart';
 import 'package:openapi/src/model/respond_selling_sub_category_data.dart';
 import 'package:openapi/src/model/respond_selling_user.dart';
 import 'package:openapi/src/model/respond_selling_user_data.dart';
 import 'package:openapi/src/model/respond_selling_user_data_content_inner.dart';
+import 'package:openapi/src/model/respond_selling_user_data_content_inner_user.dart';
 import 'package:openapi/src/model/respond_tank.dart';
 import 'package:openapi/src/model/respond_tank_assesment.dart';
 import 'package:openapi/src/model/respond_tank_assesment_data.dart';
@@ -180,11 +183,14 @@ part 'serializers.g.dart';
   RespondSellingData,
   RespondSellingDataFilesInner,
   RespondSellingDataUser,
+  RespondSellingDataUserRole,
+  RespondSellingDataUserRolePermissionsInner,
   RespondSellingSubCategory,
   RespondSellingSubCategoryData,
   RespondSellingUser,
   RespondSellingUserData,
   RespondSellingUserDataContentInner,
+  RespondSellingUserDataContentInnerUser,
   RespondTank,
   RespondTankAssesment,
   RespondTankAssesmentData,

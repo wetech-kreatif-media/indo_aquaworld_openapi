@@ -76,11 +76,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondSellingData.serializer)
       ..add(RespondSellingDataFilesInner.serializer)
       ..add(RespondSellingDataUser.serializer)
+      ..add(RespondSellingDataUserRole.serializer)
+      ..add(RespondSellingDataUserRolePermissionsInner.serializer)
       ..add(RespondSellingSubCategory.serializer)
       ..add(RespondSellingSubCategoryData.serializer)
       ..add(RespondSellingUser.serializer)
       ..add(RespondSellingUserData.serializer)
       ..add(RespondSellingUserDataContentInner.serializer)
+      ..add(RespondSellingUserDataContentInnerUser.serializer)
       ..add(RespondTank.serializer)
       ..add(RespondTankAssesment.serializer)
       ..add(RespondTankAssesmentData.serializer)
@@ -181,6 +184,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RespondSellingDataFilesInner)]),
           () => new ListBuilder<RespondSellingDataFilesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondSellingDataUserRolePermissionsInner)
+          ]),
+          () => new ListBuilder<RespondSellingDataUserRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondSellingUserDataContentInner)]),

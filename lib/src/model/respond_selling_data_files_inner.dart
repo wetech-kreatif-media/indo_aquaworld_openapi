@@ -17,13 +17,13 @@ part 'respond_selling_data_files_inner.g.dart';
 @BuiltValue()
 abstract class RespondSellingDataFilesInner implements Built<RespondSellingDataFilesInner, RespondSellingDataFilesInnerBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String get name;
 
   @BuiltValueField(wireName: r'url')
-  String? get url;
+  String get url;
 
   @BuiltValueField(wireName: r'type')
-  String? get type;
+  String get type;
 
   RespondSellingDataFilesInner._();
 
@@ -48,27 +48,21 @@ class _$RespondSellingDataFilesInnerSerializer implements PrimitiveSerializer<Re
     RespondSellingDataFilesInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
-      yield r'name';
-      yield serializers.serialize(
-        object.name,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.url != null) {
-      yield r'url';
-      yield serializers.serialize(
-        object.url,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.type != null) {
-      yield r'type';
-      yield serializers.serialize(
-        object.type,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'name';
+    yield serializers.serialize(
+      object.name,
+      specifiedType: const FullType(String),
+    );
+    yield r'url';
+    yield serializers.serialize(
+      object.url,
+      specifiedType: const FullType(String),
+    );
+    yield r'type';
+    yield serializers.serialize(
+      object.type,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override

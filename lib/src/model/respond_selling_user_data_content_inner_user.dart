@@ -3,14 +3,12 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
-import 'package:openapi/src/model/respond_selling_user_data_content_inner_user.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_selling_user_data_content_inner.g.dart';
+part 'respond_selling_user_data_content_inner_user.g.dart';
 
-/// RespondSellingUserDataContentInner
+/// RespondSellingUserDataContentInnerUser
 ///
 /// Properties:
 /// * [id] 
@@ -20,20 +18,16 @@ part 'respond_selling_user_data_content_inner.g.dart';
 /// * [updated] 
 /// * [deleted] 
 /// * [recordStatus] 
-/// * [jenisIklan] 
-/// * [judulIklan] 
-/// * [photo1] 
-/// * [photo2] 
-/// * [photo3] 
-/// * [photo4] 
-/// * [description] 
-/// * [linkVideo] 
-/// * [user] 
-/// * [sellingSubCategory] 
-/// * [price] 
-/// * [publishStatus] 
+/// * [fullname] 
+/// * [mobilePhone] 
+/// * [email] 
+/// * [city] 
+/// * [photo] 
+/// * [gender] 
+/// * [linkMaps] 
+/// * [placeofBirth] 
 @BuiltValue()
-abstract class RespondSellingUserDataContentInner implements Built<RespondSellingUserDataContentInner, RespondSellingUserDataContentInnerBuilder> {
+abstract class RespondSellingUserDataContentInnerUser implements Built<RespondSellingUserDataContentInnerUser, RespondSellingUserDataContentInnerUserBuilder> {
   @BuiltValueField(wireName: r'id')
   String? get id;
 
@@ -55,63 +49,51 @@ abstract class RespondSellingUserDataContentInner implements Built<RespondSellin
   @BuiltValueField(wireName: r'recordStatus')
   String? get recordStatus;
 
-  @BuiltValueField(wireName: r'jenisIklan')
-  String? get jenisIklan;
+  @BuiltValueField(wireName: r'fullname')
+  String? get fullname;
 
-  @BuiltValueField(wireName: r'judulIklan')
-  String? get judulIklan;
+  @BuiltValueField(wireName: r'mobilePhone')
+  String? get mobilePhone;
 
-  @BuiltValueField(wireName: r'photo1')
-  String? get photo1;
+  @BuiltValueField(wireName: r'email')
+  String? get email;
 
-  @BuiltValueField(wireName: r'photo2')
-  String? get photo2;
+  @BuiltValueField(wireName: r'city')
+  String? get city;
 
-  @BuiltValueField(wireName: r'photo3')
-  String? get photo3;
+  @BuiltValueField(wireName: r'photo')
+  String? get photo;
 
-  @BuiltValueField(wireName: r'photo4')
-  String? get photo4;
+  @BuiltValueField(wireName: r'gender')
+  String? get gender;
 
-  @BuiltValueField(wireName: r'description')
-  String? get description;
+  @BuiltValueField(wireName: r'linkMaps')
+  String? get linkMaps;
 
-  @BuiltValueField(wireName: r'linkVideo')
-  String? get linkVideo;
+  @BuiltValueField(wireName: r'placeofBirth')
+  String? get placeofBirth;
 
-  @BuiltValueField(wireName: r'user')
-  RespondSellingUserDataContentInnerUser? get user;
+  RespondSellingUserDataContentInnerUser._();
 
-  @BuiltValueField(wireName: r'sellingSubCategory')
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner? get sellingSubCategory;
-
-  @BuiltValueField(wireName: r'price')
-  num? get price;
-
-  @BuiltValueField(wireName: r'publishStatus')
-  String? get publishStatus;
-
-  RespondSellingUserDataContentInner._();
-
-  factory RespondSellingUserDataContentInner([void updates(RespondSellingUserDataContentInnerBuilder b)]) = _$RespondSellingUserDataContentInner;
+  factory RespondSellingUserDataContentInnerUser([void updates(RespondSellingUserDataContentInnerUserBuilder b)]) = _$RespondSellingUserDataContentInnerUser;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondSellingUserDataContentInnerBuilder b) => b;
+  static void _defaults(RespondSellingUserDataContentInnerUserBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondSellingUserDataContentInner> get serializer => _$RespondSellingUserDataContentInnerSerializer();
+  static Serializer<RespondSellingUserDataContentInnerUser> get serializer => _$RespondSellingUserDataContentInnerUserSerializer();
 }
 
-class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSerializer<RespondSellingUserDataContentInner> {
+class _$RespondSellingUserDataContentInnerUserSerializer implements PrimitiveSerializer<RespondSellingUserDataContentInnerUser> {
   @override
-  final Iterable<Type> types = const [RespondSellingUserDataContentInner, _$RespondSellingUserDataContentInner];
+  final Iterable<Type> types = const [RespondSellingUserDataContentInnerUser, _$RespondSellingUserDataContentInnerUser];
 
   @override
-  final String wireName = r'RespondSellingUserDataContentInner';
+  final String wireName = r'RespondSellingUserDataContentInnerUser';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondSellingUserDataContentInner object, {
+    RespondSellingUserDataContentInnerUser object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.id != null) {
@@ -163,87 +145,59 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
         specifiedType: const FullType(String),
       );
     }
-    if (object.jenisIklan != null) {
-      yield r'jenisIklan';
+    if (object.fullname != null) {
+      yield r'fullname';
       yield serializers.serialize(
-        object.jenisIklan,
+        object.fullname,
         specifiedType: const FullType(String),
       );
     }
-    if (object.judulIklan != null) {
-      yield r'judulIklan';
+    if (object.mobilePhone != null) {
+      yield r'mobilePhone';
       yield serializers.serialize(
-        object.judulIklan,
+        object.mobilePhone,
         specifiedType: const FullType(String),
       );
     }
-    if (object.photo1 != null) {
-      yield r'photo1';
+    if (object.email != null) {
+      yield r'email';
       yield serializers.serialize(
-        object.photo1,
+        object.email,
         specifiedType: const FullType(String),
       );
     }
-    if (object.photo2 != null) {
-      yield r'photo2';
+    if (object.city != null) {
+      yield r'city';
       yield serializers.serialize(
-        object.photo2,
+        object.city,
         specifiedType: const FullType(String),
       );
     }
-    if (object.photo3 != null) {
-      yield r'photo3';
+    if (object.photo != null) {
+      yield r'photo';
       yield serializers.serialize(
-        object.photo3,
+        object.photo,
         specifiedType: const FullType(String),
       );
     }
-    if (object.photo4 != null) {
-      yield r'photo4';
+    if (object.gender != null) {
+      yield r'gender';
       yield serializers.serialize(
-        object.photo4,
+        object.gender,
         specifiedType: const FullType(String),
       );
     }
-    if (object.description != null) {
-      yield r'description';
+    if (object.linkMaps != null) {
+      yield r'linkMaps';
       yield serializers.serialize(
-        object.description,
+        object.linkMaps,
         specifiedType: const FullType(String),
       );
     }
-    if (object.linkVideo != null) {
-      yield r'linkVideo';
+    if (object.placeofBirth != null) {
+      yield r'placeofBirth';
       yield serializers.serialize(
-        object.linkVideo,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.user != null) {
-      yield r'user';
-      yield serializers.serialize(
-        object.user,
-        specifiedType: const FullType(RespondSellingUserDataContentInnerUser),
-      );
-    }
-    if (object.sellingSubCategory != null) {
-      yield r'sellingSubCategory';
-      yield serializers.serialize(
-        object.sellingSubCategory,
-        specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
-      );
-    }
-    if (object.price != null) {
-      yield r'price';
-      yield serializers.serialize(
-        object.price,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.publishStatus != null) {
-      yield r'publishStatus';
-      yield serializers.serialize(
-        object.publishStatus,
+        object.placeofBirth,
         specifiedType: const FullType(String),
       );
     }
@@ -252,7 +206,7 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
   @override
   Object serialize(
     Serializers serializers,
-    RespondSellingUserDataContentInner object, {
+    RespondSellingUserDataContentInnerUser object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -263,7 +217,7 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondSellingUserDataContentInnerBuilder result,
+    required RespondSellingUserDataContentInnerUserBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -319,89 +273,61 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
           ) as String;
           result.recordStatus = valueDes;
           break;
-        case r'jenisIklan':
+        case r'fullname':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.jenisIklan = valueDes;
+          result.fullname = valueDes;
           break;
-        case r'judulIklan':
+        case r'mobilePhone':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.judulIklan = valueDes;
+          result.mobilePhone = valueDes;
           break;
-        case r'photo1':
+        case r'email':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.photo1 = valueDes;
+          result.email = valueDes;
           break;
-        case r'photo2':
+        case r'city':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.photo2 = valueDes;
+          result.city = valueDes;
           break;
-        case r'photo3':
+        case r'photo':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.photo3 = valueDes;
+          result.photo = valueDes;
           break;
-        case r'photo4':
+        case r'gender':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.photo4 = valueDes;
+          result.gender = valueDes;
           break;
-        case r'description':
+        case r'linkMaps':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.description = valueDes;
+          result.linkMaps = valueDes;
           break;
-        case r'linkVideo':
+        case r'placeofBirth':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.linkVideo = valueDes;
-          break;
-        case r'user':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondSellingUserDataContentInnerUser),
-          ) as RespondSellingUserDataContentInnerUser;
-          result.user.replace(valueDes);
-          break;
-        case r'sellingSubCategory':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
-          ) as RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
-          result.sellingSubCategory.replace(valueDes);
-          break;
-        case r'price':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(num),
-          ) as num;
-          result.price = valueDes;
-          break;
-        case r'publishStatus':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.publishStatus = valueDes;
+          result.placeofBirth = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -412,12 +338,12 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
   }
 
   @override
-  RespondSellingUserDataContentInner deserialize(
+  RespondSellingUserDataContentInnerUser deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondSellingUserDataContentInnerBuilder();
+    final result = RespondSellingUserDataContentInnerUserBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

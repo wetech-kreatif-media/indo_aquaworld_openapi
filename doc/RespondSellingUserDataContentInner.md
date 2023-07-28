@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **photo4** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **linkVideo** | **String** |  | [optional] 
-**user** | [**RespondSellingDataUser**](RespondSellingDataUser.md) |  | [optional] 
+**user** | [**RespondSellingUserDataContentInnerUser**](RespondSellingUserDataContentInnerUser.md) |  | [optional] 
 **sellingSubCategory** | [**RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner**](RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md) |  | [optional] 
 **price** | **num** |  | [optional] 
 **publishStatus** | **String** |  | [optional] 

@@ -39,7 +39,7 @@ class _$RespondSellingUserDataContentInner
   @override
   final String? linkVideo;
   @override
-  final RespondSellingDataUser? user;
+  final RespondSellingUserDataContentInnerUser? user;
   @override
   final RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner?
       sellingSubCategory;
@@ -228,10 +228,11 @@ class RespondSellingUserDataContentInnerBuilder
   String? get linkVideo => _$this._linkVideo;
   set linkVideo(String? linkVideo) => _$this._linkVideo = linkVideo;
 
-  RespondSellingDataUserBuilder? _user;
-  RespondSellingDataUserBuilder get user =>
-      _$this._user ??= new RespondSellingDataUserBuilder();
-  set user(RespondSellingDataUserBuilder? user) => _$this._user = user;
+  RespondSellingUserDataContentInnerUserBuilder? _user;
+  RespondSellingUserDataContentInnerUserBuilder get user =>
+      _$this._user ??= new RespondSellingUserDataContentInnerUserBuilder();
+  set user(RespondSellingUserDataContentInnerUserBuilder? user) =>
+      _$this._user = user;
 
   RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
       _sellingSubCategory;

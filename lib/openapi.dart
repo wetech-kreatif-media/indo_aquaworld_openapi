@@ -90,11 +90,14 @@ export 'package:openapi/src/model/respond_selling_categories_data_content_inner_
 export 'package:openapi/src/model/respond_selling_data.dart';
 export 'package:openapi/src/model/respond_selling_data_files_inner.dart';
 export 'package:openapi/src/model/respond_selling_data_user.dart';
+export 'package:openapi/src/model/respond_selling_data_user_role.dart';
+export 'package:openapi/src/model/respond_selling_data_user_role_permissions_inner.dart';
 export 'package:openapi/src/model/respond_selling_sub_category.dart';
 export 'package:openapi/src/model/respond_selling_sub_category_data.dart';
 export 'package:openapi/src/model/respond_selling_user.dart';
 export 'package:openapi/src/model/respond_selling_user_data.dart';
 export 'package:openapi/src/model/respond_selling_user_data_content_inner.dart';
+export 'package:openapi/src/model/respond_selling_user_data_content_inner_user.dart';
 export 'package:openapi/src/model/respond_tank.dart';
 export 'package:openapi/src/model/respond_tank_assesment.dart';
 export 'package:openapi/src/model/respond_tank_assesment_data.dart';

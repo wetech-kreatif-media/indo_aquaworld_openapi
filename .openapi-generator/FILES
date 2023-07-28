@@ -75,11 +75,14 @@ doc/RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md
 doc/RespondSellingData.md
 doc/RespondSellingDataFilesInner.md
 doc/RespondSellingDataUser.md
+doc/RespondSellingDataUserRole.md
+doc/RespondSellingDataUserRolePermissionsInner.md
 doc/RespondSellingSubCategory.md
 doc/RespondSellingSubCategoryData.md
 doc/RespondSellingUser.md
 doc/RespondSellingUserData.md
 doc/RespondSellingUserDataContentInner.md
+doc/RespondSellingUserDataContentInnerUser.md
 doc/RespondTank.md
 doc/RespondTankAssesment.md
 doc/RespondTankAssesmentData.md
@@ -197,11 +200,14 @@ lib/src/model/respond_selling_categories_data_content_inner_selling_sub_categori
 lib/src/model/respond_selling_data.dart
 lib/src/model/respond_selling_data_files_inner.dart
 lib/src/model/respond_selling_data_user.dart
+lib/src/model/respond_selling_data_user_role.dart
+lib/src/model/respond_selling_data_user_role_permissions_inner.dart
 lib/src/model/respond_selling_sub_category.dart
 lib/src/model/respond_selling_sub_category_data.dart
 lib/src/model/respond_selling_user.dart
 lib/src/model/respond_selling_user_data.dart
 lib/src/model/respond_selling_user_data_content_inner.dart
+lib/src/model/respond_selling_user_data_content_inner_user.dart
 lib/src/model/respond_tank.dart
 lib/src/model/respond_tank_assesment.dart
 lib/src/model/respond_tank_assesment_data.dart
@@ -225,3 +231,6 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_selling_data_user_role_permissions_inner_test.dart
+test/respond_selling_data_user_role_test.dart
+test/respond_selling_user_data_content_inner_user_test.dart

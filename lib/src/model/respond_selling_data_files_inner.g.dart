@@ -8,18 +8,26 @@ part of 'respond_selling_data_files_inner.dart';
 
 class _$RespondSellingDataFilesInner extends RespondSellingDataFilesInner {
   @override
-  final String? name;
+  final String name;
   @override
-  final String? url;
+  final String url;
   @override
-  final String? type;
+  final String type;
 
   factory _$RespondSellingDataFilesInner(
           [void Function(RespondSellingDataFilesInnerBuilder)? updates]) =>
       (new RespondSellingDataFilesInnerBuilder()..update(updates))._build();
 
-  _$RespondSellingDataFilesInner._({this.name, this.url, this.type})
-      : super._();
+  _$RespondSellingDataFilesInner._(
+      {required this.name, required this.url, required this.type})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'RespondSellingDataFilesInner', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        url, r'RespondSellingDataFilesInner', 'url');
+    BuiltValueNullFieldError.checkNotNull(
+        type, r'RespondSellingDataFilesInner', 'type');
+  }
 
   @override
   RespondSellingDataFilesInner rebuild(
@@ -108,7 +116,13 @@ class RespondSellingDataFilesInnerBuilder
 
   _$RespondSellingDataFilesInner _build() {
     final _$result = _$v ??
-        new _$RespondSellingDataFilesInner._(name: name, url: url, type: type);
+        new _$RespondSellingDataFilesInner._(
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, r'RespondSellingDataFilesInner', 'name'),
+            url: BuiltValueNullFieldError.checkNotNull(
+                url, r'RespondSellingDataFilesInner', 'url'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'RespondSellingDataFilesInner', 'type'));
     replace(_$result);
     return _$result;
   }

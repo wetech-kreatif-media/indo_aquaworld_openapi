@@ -1,4 +1,4 @@
-# openapi.model.RespondSellingDataUser
+# openapi.model.RespondSellingUserDataContentInnerUser
 
 ## Load the model package
 ```dart
@@ -23,7 +23,6 @@ Name | Type | Description | Notes
 **gender** | **String** |  | [optional] 
 **linkMaps** | **String** |  | [optional] 
 **placeofBirth** | **String** |  | [optional] 
-**role** | [**RespondSellingDataUserRole**](RespondSellingDataUserRole.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_selling_data_user.dart';
+part of 'respond_selling_user_data_content_inner_user.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondSellingDataUser extends RespondSellingDataUser {
+class _$RespondSellingUserDataContentInnerUser
+    extends RespondSellingUserDataContentInnerUser {
   @override
   final String? id;
   @override
@@ -37,14 +38,14 @@ class _$RespondSellingDataUser extends RespondSellingDataUser {
   final String? linkMaps;
   @override
   final String? placeofBirth;
-  @override
-  final RespondSellingDataUserRole? role;
 
-  factory _$RespondSellingDataUser(
-          [void Function(RespondSellingDataUserBuilder)? updates]) =>
-      (new RespondSellingDataUserBuilder()..update(updates))._build();
+  factory _$RespondSellingUserDataContentInnerUser(
+          [void Function(RespondSellingUserDataContentInnerUserBuilder)?
+              updates]) =>
+      (new RespondSellingUserDataContentInnerUserBuilder()..update(updates))
+          ._build();
 
-  _$RespondSellingDataUser._(
+  _$RespondSellingUserDataContentInnerUser._(
       {this.id,
       this.createdBy,
       this.updatedBy,
@@ -59,23 +60,23 @@ class _$RespondSellingDataUser extends RespondSellingDataUser {
       this.photo,
       this.gender,
       this.linkMaps,
-      this.placeofBirth,
-      this.role})
+      this.placeofBirth})
       : super._();
 
   @override
-  RespondSellingDataUser rebuild(
-          void Function(RespondSellingDataUserBuilder) updates) =>
+  RespondSellingUserDataContentInnerUser rebuild(
+          void Function(RespondSellingUserDataContentInnerUserBuilder)
+              updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondSellingDataUserBuilder toBuilder() =>
-      new RespondSellingDataUserBuilder()..replace(this);
+  RespondSellingUserDataContentInnerUserBuilder toBuilder() =>
+      new RespondSellingUserDataContentInnerUserBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondSellingDataUser &&
+    return other is RespondSellingUserDataContentInnerUser &&
         id == other.id &&
         createdBy == other.createdBy &&
         updatedBy == other.updatedBy &&
@@ -90,8 +91,7 @@ class _$RespondSellingDataUser extends RespondSellingDataUser {
         photo == other.photo &&
         gender == other.gender &&
         linkMaps == other.linkMaps &&
-        placeofBirth == other.placeofBirth &&
-        role == other.role;
+        placeofBirth == other.placeofBirth;
   }
 
   @override
@@ -112,14 +112,14 @@ class _$RespondSellingDataUser extends RespondSellingDataUser {
     _$hash = $jc(_$hash, gender.hashCode);
     _$hash = $jc(_$hash, linkMaps.hashCode);
     _$hash = $jc(_$hash, placeofBirth.hashCode);
-    _$hash = $jc(_$hash, role.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'RespondSellingDataUser')
+    return (newBuiltValueToStringHelper(
+            r'RespondSellingUserDataContentInnerUser')
           ..add('id', id)
           ..add('createdBy', createdBy)
           ..add('updatedBy', updatedBy)
@@ -134,15 +134,16 @@ class _$RespondSellingDataUser extends RespondSellingDataUser {
           ..add('photo', photo)
           ..add('gender', gender)
           ..add('linkMaps', linkMaps)
-          ..add('placeofBirth', placeofBirth)
-          ..add('role', role))
+          ..add('placeofBirth', placeofBirth))
         .toString();
   }
 }
 
-class RespondSellingDataUserBuilder
-    implements Builder<RespondSellingDataUser, RespondSellingDataUserBuilder> {
-  _$RespondSellingDataUser? _$v;
+class RespondSellingUserDataContentInnerUserBuilder
+    implements
+        Builder<RespondSellingUserDataContentInnerUser,
+            RespondSellingUserDataContentInnerUserBuilder> {
+  _$RespondSellingUserDataContentInnerUser? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -204,16 +205,11 @@ class RespondSellingDataUserBuilder
   String? get placeofBirth => _$this._placeofBirth;
   set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
 
-  RespondSellingDataUserRoleBuilder? _role;
-  RespondSellingDataUserRoleBuilder get role =>
-      _$this._role ??= new RespondSellingDataUserRoleBuilder();
-  set role(RespondSellingDataUserRoleBuilder? role) => _$this._role = role;
-
-  RespondSellingDataUserBuilder() {
-    RespondSellingDataUser._defaults(this);
+  RespondSellingUserDataContentInnerUserBuilder() {
+    RespondSellingUserDataContentInnerUser._defaults(this);
   }
 
-  RespondSellingDataUserBuilder get _$this {
+  RespondSellingUserDataContentInnerUserBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -231,58 +227,44 @@ class RespondSellingDataUserBuilder
       _gender = $v.gender;
       _linkMaps = $v.linkMaps;
       _placeofBirth = $v.placeofBirth;
-      _role = $v.role?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(RespondSellingDataUser other) {
+  void replace(RespondSellingUserDataContentInnerUser other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondSellingDataUser;
+    _$v = other as _$RespondSellingUserDataContentInnerUser;
   }
 
   @override
-  void update(void Function(RespondSellingDataUserBuilder)? updates) {
+  void update(
+      void Function(RespondSellingUserDataContentInnerUserBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondSellingDataUser build() => _build();
+  RespondSellingUserDataContentInnerUser build() => _build();
 
-  _$RespondSellingDataUser _build() {
-    _$RespondSellingDataUser _$result;
-    try {
-      _$result = _$v ??
-          new _$RespondSellingDataUser._(
-              id: id,
-              createdBy: createdBy,
-              updatedBy: updatedBy,
-              created: created,
-              updated: updated,
-              deleted: deleted,
-              recordStatus: recordStatus,
-              fullname: fullname,
-              mobilePhone: mobilePhone,
-              email: email,
-              city: city,
-              photo: photo,
-              gender: gender,
-              linkMaps: linkMaps,
-              placeofBirth: placeofBirth,
-              role: _role?.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'role';
-        _role?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'RespondSellingDataUser', _$failedField, e.toString());
-      }
-      rethrow;
-    }
+  _$RespondSellingUserDataContentInnerUser _build() {
+    final _$result = _$v ??
+        new _$RespondSellingUserDataContentInnerUser._(
+            id: id,
+            createdBy: createdBy,
+            updatedBy: updatedBy,
+            created: created,
+            updated: updated,
+            deleted: deleted,
+            recordStatus: recordStatus,
+            fullname: fullname,
+            mobilePhone: mobilePhone,
+            email: email,
+            city: city,
+            photo: photo,
+            gender: gender,
+            linkMaps: linkMaps,
+            placeofBirth: placeofBirth);
     replace(_$result);
     return _$result;
   }
