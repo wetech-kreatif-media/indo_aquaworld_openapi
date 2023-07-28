@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getDetailSelling**](SellingApi.md#getdetailselling) | **GET** /public/detail-selling/{sellingId} | Get Detail Selling
 [**getSellingCategory**](SellingApi.md#getsellingcategory) | **GET** /public/selling-category | Get Selling Category
 [**getSellingSubCategory**](SellingApi.md#getsellingsubcategory) | **GET** /public/selling-subcategory/{sellingCatId} | Get Selling SubCategory
-[**getSellingUser**](SellingApi.md#getsellinguser) | **GET** /public/selling/{userId} | Get Selling User
+[**getSellingUser**](SellingApi.md#getsellinguser) | **GET** /public/selling-user | Get Selling User
 [**postSelling**](SellingApi.md#postselling) | **POST** /public/selling | Post Selling
 [**postSellingCategory**](SellingApi.md#postsellingcategory) | **POST** /public/selling-category | Post Selling Category
 [**postSellingSubCategory**](SellingApi.md#postsellingsubcategory) | **POST** /public/selling-subcategory | Post Selling SubCategory
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSellingUser**
-> RespondSellingUser getSellingUser(userId)
+> RespondSellingUser getSellingUser()
 
 Get Selling User
 
@@ -191,10 +191,9 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
-final String userId = userId_example; // String | 
 
 try {
-    final response = api.getSellingUser(userId);
+    final response = api.getSellingUser();
     print(response);
 } catch on DioError (e) {
     print('Exception when calling SellingApi->getSellingUser: $e\n');
@@ -202,10 +201,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
