@@ -48,7 +48,7 @@ abstract class RespondSellingCategoriesDataContentInner implements Built<Respond
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  @BuiltValueField(wireName: r'SellingSubCategories')
+  @BuiltValueField(wireName: r'sellingSubCategories')
   BuiltList<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>? get sellingSubCategories;
 
   RespondSellingCategoriesDataContentInner._();
@@ -131,7 +131,7 @@ class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveS
       );
     }
     if (object.sellingSubCategories != null) {
-      yield r'SellingSubCategories';
+      yield r'sellingSubCategories';
       yield serializers.serialize(
         object.sellingSubCategories,
         specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)]),
@@ -216,7 +216,7 @@ class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveS
           ) as String;
           result.name = valueDes;
           break;
-        case r'SellingSubCategories':
+        case r'sellingSubCategories':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)]),
