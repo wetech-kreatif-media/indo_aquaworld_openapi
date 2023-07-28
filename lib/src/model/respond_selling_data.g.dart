@@ -26,6 +26,8 @@ class _$RespondSellingData extends RespondSellingData {
   final num? price;
   @override
   final String? publishStatus;
+  @override
+  final String? updated;
 
   factory _$RespondSellingData(
           [void Function(RespondSellingDataBuilder)? updates]) =>
@@ -40,7 +42,8 @@ class _$RespondSellingData extends RespondSellingData {
       this.user,
       this.sellingSubCategory,
       this.price,
-      this.publishStatus})
+      this.publishStatus,
+      this.updated})
       : super._();
 
   @override
@@ -64,7 +67,8 @@ class _$RespondSellingData extends RespondSellingData {
         user == other.user &&
         sellingSubCategory == other.sellingSubCategory &&
         price == other.price &&
-        publishStatus == other.publishStatus;
+        publishStatus == other.publishStatus &&
+        updated == other.updated;
   }
 
   @override
@@ -79,6 +83,7 @@ class _$RespondSellingData extends RespondSellingData {
     _$hash = $jc(_$hash, sellingSubCategory.hashCode);
     _$hash = $jc(_$hash, price.hashCode);
     _$hash = $jc(_$hash, publishStatus.hashCode);
+    _$hash = $jc(_$hash, updated.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -94,7 +99,8 @@ class _$RespondSellingData extends RespondSellingData {
           ..add('user', user)
           ..add('sellingSubCategory', sellingSubCategory)
           ..add('price', price)
-          ..add('publishStatus', publishStatus))
+          ..add('publishStatus', publishStatus)
+          ..add('updated', updated))
         .toString();
   }
 }
@@ -149,6 +155,10 @@ class RespondSellingDataBuilder
   set publishStatus(String? publishStatus) =>
       _$this._publishStatus = publishStatus;
 
+  String? _updated;
+  String? get updated => _$this._updated;
+  set updated(String? updated) => _$this._updated = updated;
+
   RespondSellingDataBuilder() {
     RespondSellingData._defaults(this);
   }
@@ -165,6 +175,7 @@ class RespondSellingDataBuilder
       _sellingSubCategory = $v.sellingSubCategory?.toBuilder();
       _price = $v.price;
       _publishStatus = $v.publishStatus;
+      _updated = $v.updated;
       _$v = null;
     }
     return this;
@@ -197,7 +208,8 @@ class RespondSellingDataBuilder
               user: _user?.build(),
               sellingSubCategory: _sellingSubCategory?.build(),
               price: price,
-              publishStatus: publishStatus);
+              publishStatus: publishStatus,
+              updated: updated);
     } catch (_) {
       late String _$failedField;
       try {

@@ -24,6 +24,7 @@ part 'respond_selling_data.g.dart';
 /// * [sellingSubCategory] 
 /// * [price] 
 /// * [publishStatus] 
+/// * [updated] 
 @BuiltValue()
 abstract class RespondSellingData implements Built<RespondSellingData, RespondSellingDataBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -52,6 +53,9 @@ abstract class RespondSellingData implements Built<RespondSellingData, RespondSe
 
   @BuiltValueField(wireName: r'publishStatus')
   String? get publishStatus;
+
+  @BuiltValueField(wireName: r'updated')
+  String? get updated;
 
   RespondSellingData._();
 
@@ -136,6 +140,13 @@ class _$RespondSellingDataSerializer implements PrimitiveSerializer<RespondSelli
       yield r'publishStatus';
       yield serializers.serialize(
         object.publishStatus,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updated != null) {
+      yield r'updated';
+      yield serializers.serialize(
+        object.updated,
         specifiedType: const FullType(String),
       );
     }
@@ -224,6 +235,13 @@ class _$RespondSellingDataSerializer implements PrimitiveSerializer<RespondSelli
             specifiedType: const FullType(String),
           ) as String;
           result.publishStatus = valueDes;
+          break;
+        case r'updated':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.updated = valueDes;
           break;
         default:
           unhandled.add(key);
