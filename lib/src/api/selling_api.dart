@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_selling.dart';
 import 'package:openapi/src/model/request_selling_category.dart';
@@ -111,6 +112,12 @@ class SellingApi {
   /// Ambil semua data penjualan
   ///
   /// Parameters:
+  /// * [idCategory] - 
+  /// * [name] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -121,6 +128,12 @@ class SellingApi {
   /// Returns a [Future] containing a [Response] with a [RespondSellingAll] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondSellingAll>> getSelling({ 
+    BuiltList<String>? idCategory,
+    String? name,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    num? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -147,9 +160,19 @@ class SellingApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (idCategory != null) r'idCategory': encodeCollectionQueryParameter<String>(_serializers, idCategory, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
+      if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

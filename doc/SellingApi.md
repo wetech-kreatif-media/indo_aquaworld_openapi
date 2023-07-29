@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSelling**
-> RespondSellingAll getSelling()
+> RespondSellingAll getSelling(idCategory, name, sort, direction, pageNumber, pageSize)
 
 Get All Selling
 
@@ -82,9 +82,15 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
+final BuiltList<String> idCategory = ; // BuiltList<String> | 
+final String name = name_example; // String | 
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getSelling();
+    final response = api.getSelling(idCategory, name, sort, direction, pageNumber, pageSize);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling SellingApi->getSelling: $e\n');
@@ -92,7 +98,15 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **idCategory** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
+ **name** | **String**|  | [optional] 
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **num**|  | [optional] 
 
 ### Return type
 

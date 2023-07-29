@@ -267,10 +267,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/respond_selling_all_data_content_inner_selling_sub_category_test.dart
-test/respond_selling_all_data_content_inner_test.dart
-test/respond_selling_all_data_content_inner_user_role_permissions_inner_test.dart
-test/respond_selling_all_data_content_inner_user_role_test.dart
-test/respond_selling_all_data_content_inner_user_test.dart
-test/respond_selling_all_data_test.dart
-test/respond_selling_all_test.dart
