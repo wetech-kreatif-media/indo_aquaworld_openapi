@@ -14,6 +14,7 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
+import 'package:openapi/src/model/request_article.dart';
 import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_contestan_nomination.dart';
 import 'package:openapi/src/model/request_contestant.dart';
@@ -36,6 +37,11 @@ import 'package:openapi/src/model/request_tank_assesment.dart';
 import 'package:openapi/src/model/request_tank_assesment_head.dart';
 import 'package:openapi/src/model/request_team.dart';
 import 'package:openapi/src/model/request_user.dart';
+import 'package:openapi/src/model/respond_article.dart';
+import 'package:openapi/src/model/respond_article_data.dart';
+import 'package:openapi/src/model/respond_articles.dart';
+import 'package:openapi/src/model/respond_articles_data.dart';
+import 'package:openapi/src/model/respond_articles_data_content_inner.dart';
 import 'package:openapi/src/model/respond_contestan_nominations.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
@@ -116,6 +122,7 @@ import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
+  RequestArticle,
   RequestChangePassword,
   RequestContestanNomination,
   RequestContestant,
@@ -138,6 +145,11 @@ part 'serializers.g.dart';
   RequestTankAssesmentHead,
   RequestTeam,
   RequestUser,
+  RespondArticle,
+  RespondArticleData,
+  RespondArticles,
+  RespondArticlesData,
+  RespondArticlesDataContentInner,
   RespondContestanNominations,
   RespondContestanNominationsData,
   RespondContestanNominationsDataContentInner,

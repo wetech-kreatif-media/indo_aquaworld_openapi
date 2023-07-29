@@ -7,6 +7,7 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(RequestArticle.serializer)
       ..add(RequestChangePassword.serializer)
       ..add(RequestContestanNomination.serializer)
       ..add(RequestContestant.serializer)
@@ -29,6 +30,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestTankAssesmentHead.serializer)
       ..add(RequestTeam.serializer)
       ..add(RequestUser.serializer)
+      ..add(RespondArticle.serializer)
+      ..add(RespondArticleData.serializer)
+      ..add(RespondArticles.serializer)
+      ..add(RespondArticlesData.serializer)
+      ..add(RespondArticlesDataContentInner.serializer)
       ..add(RespondContestanNominations.serializer)
       ..add(RespondContestanNominationsData.serializer)
       ..add(RespondContestanNominationsDataContentInner.serializer)
@@ -118,6 +124,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RequestRolePermissionsInner)]),
           () => new ListBuilder<RequestRolePermissionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondArticlesDataContentInner)]),
+          () => new ListBuilder<RespondArticlesDataContentInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(RespondContestanNominationsDataContentInner)

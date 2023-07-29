@@ -1,12 +1,14 @@
 .gitignore
 README.md
 analysis_options.yaml
+doc/ArticleApi.md
 doc/ContestanNominationApi.md
 doc/ContestansApi.md
 doc/EventsApi.md
 doc/FaqApi.md
 doc/LocationApi.md
 doc/PermissionApi.md
+doc/RequestArticle.md
 doc/RequestChangePassword.md
 doc/RequestContestanNomination.md
 doc/RequestContestant.md
@@ -29,6 +31,11 @@ doc/RequestTankAssesment.md
 doc/RequestTankAssesmentHead.md
 doc/RequestTeam.md
 doc/RequestUser.md
+doc/RespondArticle.md
+doc/RespondArticleData.md
+doc/RespondArticles.md
+doc/RespondArticlesData.md
+doc/RespondArticlesDataContentInner.md
 doc/RespondContestanNominations.md
 doc/RespondContestanNominationsData.md
 doc/RespondContestanNominationsDataContentInner.md
@@ -113,6 +120,7 @@ doc/TeamsApi.md
 doc/UsersApi.md
 lib/openapi.dart
 lib/src/api.dart
+lib/src/api/article_api.dart
 lib/src/api/contestan_nomination_api.dart
 lib/src/api/contestans_api.dart
 lib/src/api/events_api.dart
@@ -133,6 +141,7 @@ lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
+lib/src/model/request_article.dart
 lib/src/model/request_change_password.dart
 lib/src/model/request_contestan_nomination.dart
 lib/src/model/request_contestant.dart
@@ -155,6 +164,11 @@ lib/src/model/request_tank_assesment.dart
 lib/src/model/request_tank_assesment_head.dart
 lib/src/model/request_team.dart
 lib/src/model/request_user.dart
+lib/src/model/respond_article.dart
+lib/src/model/respond_article_data.dart
+lib/src/model/respond_articles.dart
+lib/src/model/respond_articles_data.dart
+lib/src/model/respond_articles_data_content_inner.dart
 lib/src/model/respond_contestan_nominations.dart
 lib/src/model/respond_contestan_nominations_data.dart
 lib/src/model/respond_contestan_nominations_data_content_inner.dart
@@ -233,3 +247,10 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/article_api_test.dart
+test/request_article_test.dart
+test/respond_article_data_test.dart
+test/respond_article_test.dart
+test/respond_articles_data_content_inner_test.dart
+test/respond_articles_data_test.dart
+test/respond_articles_test.dart

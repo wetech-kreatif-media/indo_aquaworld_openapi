@@ -9,6 +9,7 @@ import 'package:openapi/src/auth/api_key_auth.dart';
 import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
+import 'package:openapi/src/api/article_api.dart';
 import 'package:openapi/src/api/contestan_nomination_api.dart';
 import 'package:openapi/src/api/contestans_api.dart';
 import 'package:openapi/src/api/events_api.dart';
@@ -74,6 +75,12 @@ class Openapi {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
       (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
+  }
+
+  /// Get ArticleApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ArticleApi getArticleApi() {
+    return ArticleApi(dio, serializers);
   }
 
   /// Get ContestanNominationApi instance, base route and serializer can be overridden by a given but be careful,
