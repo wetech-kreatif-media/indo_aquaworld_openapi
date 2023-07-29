@@ -11,13 +11,13 @@ class _$RespondArticlesDataContentInner
   @override
   final String id;
   @override
-  final String? createdBy;
+  final String createdBy;
   @override
-  final String? updatedBy;
+  final String updatedBy;
   @override
-  final String? created;
+  final String created;
   @override
-  final String? updated;
+  final String updated;
   @override
   final num? deleted;
   @override
@@ -39,10 +39,10 @@ class _$RespondArticlesDataContentInner
 
   _$RespondArticlesDataContentInner._(
       {required this.id,
-      this.createdBy,
-      this.updatedBy,
-      this.created,
-      this.updated,
+      required this.createdBy,
+      required this.updatedBy,
+      required this.created,
+      required this.updated,
       this.deleted,
       this.recordStatus,
       required this.title,
@@ -53,6 +53,14 @@ class _$RespondArticlesDataContentInner
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondArticlesDataContentInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        createdBy, r'RespondArticlesDataContentInner', 'createdBy');
+    BuiltValueNullFieldError.checkNotNull(
+        updatedBy, r'RespondArticlesDataContentInner', 'updatedBy');
+    BuiltValueNullFieldError.checkNotNull(
+        created, r'RespondArticlesDataContentInner', 'created');
+    BuiltValueNullFieldError.checkNotNull(
+        updated, r'RespondArticlesDataContentInner', 'updated');
     BuiltValueNullFieldError.checkNotNull(
         title, r'RespondArticlesDataContentInner', 'title');
     BuiltValueNullFieldError.checkNotNull(
@@ -230,10 +238,14 @@ class RespondArticlesDataContentInnerBuilder
           new _$RespondArticlesDataContentInner._(
               id: BuiltValueNullFieldError.checkNotNull(
                   id, r'RespondArticlesDataContentInner', 'id'),
-              createdBy: createdBy,
-              updatedBy: updatedBy,
-              created: created,
-              updated: updated,
+              createdBy: BuiltValueNullFieldError.checkNotNull(
+                  createdBy, r'RespondArticlesDataContentInner', 'createdBy'),
+              updatedBy: BuiltValueNullFieldError.checkNotNull(
+                  updatedBy, r'RespondArticlesDataContentInner', 'updatedBy'),
+              created: BuiltValueNullFieldError.checkNotNull(
+                  created, r'RespondArticlesDataContentInner', 'created'),
+              updated: BuiltValueNullFieldError.checkNotNull(
+                  updated, r'RespondArticlesDataContentInner', 'updated'),
               deleted: deleted,
               recordStatus: recordStatus,
               title: BuiltValueNullFieldError.checkNotNull(
@@ -243,9 +255,7 @@ class RespondArticlesDataContentInnerBuilder
               thumbnail: thumbnail,
               user: user.build(),
               publishStatus: BuiltValueNullFieldError.checkNotNull(
-                  publishStatus,
-                  r'RespondArticlesDataContentInner',
-                  'publishStatus'));
+                  publishStatus, r'RespondArticlesDataContentInner', 'publishStatus'));
     } catch (_) {
       late String _$failedField;
       try {

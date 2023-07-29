@@ -30,16 +30,16 @@ abstract class RespondArticlesDataContentInner implements Built<RespondArticlesD
   String get id;
 
   @BuiltValueField(wireName: r'createdBy')
-  String? get createdBy;
+  String get createdBy;
 
   @BuiltValueField(wireName: r'updatedBy')
-  String? get updatedBy;
+  String get updatedBy;
 
   @BuiltValueField(wireName: r'created')
-  String? get created;
+  String get created;
 
   @BuiltValueField(wireName: r'updated')
-  String? get updated;
+  String get updated;
 
   @BuiltValueField(wireName: r'deleted')
   num? get deleted;
@@ -90,34 +90,26 @@ class _$RespondArticlesDataContentInnerSerializer implements PrimitiveSerializer
       object.id,
       specifiedType: const FullType(String),
     );
-    if (object.createdBy != null) {
-      yield r'createdBy';
-      yield serializers.serialize(
-        object.createdBy,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updatedBy != null) {
-      yield r'updatedBy';
-      yield serializers.serialize(
-        object.updatedBy,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.created != null) {
-      yield r'created';
-      yield serializers.serialize(
-        object.created,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updated != null) {
-      yield r'updated';
-      yield serializers.serialize(
-        object.updated,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'createdBy';
+    yield serializers.serialize(
+      object.createdBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'updatedBy';
+    yield serializers.serialize(
+      object.updatedBy,
+      specifiedType: const FullType(String),
+    );
+    yield r'created';
+    yield serializers.serialize(
+      object.created,
+      specifiedType: const FullType(String),
+    );
+    yield r'updated';
+    yield serializers.serialize(
+      object.updated,
+      specifiedType: const FullType(String),
+    );
     if (object.deleted != null) {
       yield r'deleted';
       yield serializers.serialize(
