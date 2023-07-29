@@ -77,6 +77,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondRolesData.serializer)
       ..add(RespondRolesDataContentInner.serializer)
       ..add(RespondSelling.serializer)
+      ..add(RespondSellingAll.serializer)
+      ..add(RespondSellingAllData.serializer)
+      ..add(RespondSellingAllDataContentInner.serializer)
+      ..add(RespondSellingAllDataContentInnerSellingSubCategory.serializer)
+      ..add(RespondSellingAllDataContentInnerUser.serializer)
+      ..add(RespondSellingAllDataContentInnerUserRole.serializer)
+      ..add(
+          RespondSellingAllDataContentInnerUserRolePermissionsInner.serializer)
       ..add(RespondSellingCategories.serializer)
       ..add(RespondSellingCategoriesData.serializer)
       ..add(RespondSellingCategoriesDataContentInner.serializer)
@@ -176,6 +184,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RespondRolesDataContentInner)]),
           () => new ListBuilder<RespondRolesDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondSellingAllDataContentInner)]),
+          () => new ListBuilder<RespondSellingAllDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                RespondSellingAllDataContentInnerUserRolePermissionsInner)
+          ]),
+          () => new ListBuilder<
+              RespondSellingAllDataContentInnerUserRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondSellingCategoriesDataContentInner)]),

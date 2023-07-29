@@ -10,6 +10,7 @@ All URIs are relative to *http://localhost:8080/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getDetailSelling**](SellingApi.md#getdetailselling) | **GET** /public/detail-selling/{sellingId} | Get Detail Selling
+[**getSelling**](SellingApi.md#getselling) | **GET** /public/selling | Get All Selling
 [**getSellingCategory**](SellingApi.md#getsellingcategory) | **GET** /public/selling-category | Get Selling Category
 [**getSellingSubCategory**](SellingApi.md#getsellingsubcategory) | **GET** /public/selling-subcategory/{sellingCatId} | Get Selling SubCategory
 [**getSellingUser**](SellingApi.md#getsellinguser) | **GET** /public/selling-user | Get Selling User
@@ -54,6 +55,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RespondSelling**](RespondSelling.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getSelling**
+> RespondSellingAll getSelling()
+
+Get All Selling
+
+Ambil semua data penjualan
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getSellingApi();
+
+try {
+    final response = api.getSelling();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->getSelling: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RespondSellingAll**](RespondSellingAll.md)
 
 ### Authorization
 
