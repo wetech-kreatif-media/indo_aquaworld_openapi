@@ -128,7 +128,7 @@ class SellingApi {
     String? sort,
     String? direction,
     num? pageNumber,
-    String? pageSize,
+    num? pageSize,
     String? name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -160,7 +160,7 @@ class SellingApi {
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
-      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
       if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
     };
 
@@ -228,7 +228,7 @@ class SellingApi {
     String? sort,
     String? direction,
     num? pageNumber,
-    String? pageSize,
+    num? pageSize,
     String? name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -260,7 +260,7 @@ class SellingApi {
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
-      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
       if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
     };
 

@@ -62,11 +62,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getArticles**
-> RespondArticles getArticles(sort, direction, pageNumber, pageSize)
+> RespondArticles getArticles(sort, direction, pageNumber, pageSize, title)
 
 Get Articles
 
-Ambil smuda data
+Ambil semua data article
 
 ### Example
 ```dart
@@ -76,10 +76,11 @@ final api = Openapi().getArticleApi();
 final String sort = sort_example; // String | 
 final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
-final String pageSize = pageSize_example; // String | 
+final num pageSize = 8.14; // num | 
+final String title = title_example; // String | 
 
 try {
-    final response = api.getArticles(sort, direction, pageNumber, pageSize);
+    final response = api.getArticles(sort, direction, pageNumber, pageSize, title);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ArticleApi->getArticles: $e\n');
@@ -93,7 +94,8 @@ Name | Type | Description  | Notes
  **sort** | **String**|  | [optional] 
  **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
- **pageSize** | **String**|  | [optional] 
+ **pageSize** | **num**|  | [optional] 
+ **title** | **String**|  | [optional] 
 
 ### Return type
 

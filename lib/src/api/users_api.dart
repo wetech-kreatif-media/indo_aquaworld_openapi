@@ -208,7 +208,7 @@ class UsersApi {
     String? sort,
     String? direction,
     num? pageNumber,
-    String? pageSize,
+    num? pageSize,
     String? fullname,
     String? role,
     CancelToken? cancelToken,
@@ -235,7 +235,7 @@ class UsersApi {
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
-      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
       if (fullname != null) r'fullname': encodeQueryParameter(_serializers, fullname, const FullType(String)),
       if (role != null) r'role': encodeQueryParameter(_serializers, role, const FullType(String)),
     };

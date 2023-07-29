@@ -247,10 +247,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/article_api_test.dart
-test/request_article_test.dart
-test/respond_article_data_test.dart
-test/respond_article_test.dart
-test/respond_articles_data_content_inner_test.dart
-test/respond_articles_data_test.dart
-test/respond_articles_test.dart

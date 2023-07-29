@@ -84,7 +84,7 @@ final api = Openapi().getSellingApi();
 final String sort = sort_example; // String | 
 final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
-final String pageSize = pageSize_example; // String | 
+final num pageSize = 8.14; // num | 
 final String name = name_example; // String | 
 
 try {
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
  **sort** | **String**|  | [optional] 
  **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
- **pageSize** | **String**|  | [optional] 
+ **pageSize** | **num**|  | [optional] 
  **name** | **String**|  | [optional] 
 
 ### Return type
@@ -139,7 +139,7 @@ final String sellingCatId = sellingCatId_example; // String |
 final String sort = sort_example; // String | 
 final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
-final String pageSize = pageSize_example; // String | 
+final num pageSize = 8.14; // num | 
 final String name = name_example; // String | 
 
 try {
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
  **sort** | **String**|  | [optional] 
  **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
- **pageSize** | **String**|  | [optional] 
+ **pageSize** | **num**|  | [optional] 
  **name** | **String**|  | [optional] 
 
 ### Return type

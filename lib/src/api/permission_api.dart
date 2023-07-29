@@ -142,7 +142,7 @@ class PermissionApi {
     String? sort,
     String? direction,
     num? pageNumber,
-    String? pageSize,
+    num? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -167,7 +167,7 @@ class PermissionApi {
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
-      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
     };
 
     final _response = await _dio.request<Object>(

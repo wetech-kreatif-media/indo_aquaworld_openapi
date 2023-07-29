@@ -123,7 +123,7 @@ final api = Openapi().getUsersApi();
 final String sort = sort_example; // String | 
 final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
-final String pageSize = pageSize_example; // String | 
+final num pageSize = 8.14; // num | 
 final String fullname = fullname_example; // String | 
 final String role = role_example; // String | 
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
  **sort** | **String**|  | [optional] 
  **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
- **pageSize** | **String**|  | [optional] 
+ **pageSize** | **num**|  | [optional] 
  **fullname** | **String**|  | [optional] 
  **role** | **String**|  | [optional] 
 

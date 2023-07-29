@@ -103,13 +103,14 @@ class ArticleApi {
   }
 
   /// Get Articles
-  /// Ambil smuda data
+  /// Ambil semua data article
   ///
   /// Parameters:
   /// * [sort] - 
   /// * [direction] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
+  /// * [title] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -123,7 +124,8 @@ class ArticleApi {
     String? sort,
     String? direction,
     num? pageNumber,
-    String? pageSize,
+    num? pageSize,
+    String? title,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -148,7 +150,8 @@ class ArticleApi {
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
-      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
+      if (title != null) r'title': encodeQueryParameter(_serializers, title, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
