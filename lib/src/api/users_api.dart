@@ -194,6 +194,7 @@ class UsersApi {
   /// * [pageNumber] - 
   /// * [pageSize] - 
   /// * [fullname] - 
+  /// * [role] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -209,6 +210,7 @@ class UsersApi {
     num? pageNumber,
     String? pageSize,
     String? fullname,
+    String? role,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -235,6 +237,7 @@ class UsersApi {
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(String)),
       if (fullname != null) r'fullname': encodeQueryParameter(_serializers, fullname, const FullType(String)),
+      if (role != null) r'role': encodeQueryParameter(_serializers, role, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(

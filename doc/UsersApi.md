@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getUsers**
-> RespondUsers getUsers(sort, direction, pageNumber, pageSize, fullname)
+> RespondUsers getUsers(sort, direction, pageNumber, pageSize, fullname, role)
 
 Get Users
 
@@ -125,9 +125,10 @@ final String direction = direction_example; // String |
 final num pageNumber = 8.14; // num | 
 final String pageSize = pageSize_example; // String | 
 final String fullname = fullname_example; // String | 
+final String role = role_example; // String | 
 
 try {
-    final response = api.getUsers(sort, direction, pageNumber, pageSize, fullname);
+    final response = api.getUsers(sort, direction, pageNumber, pageSize, fullname, role);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling UsersApi->getUsers: $e\n');
@@ -143,6 +144,7 @@ Name | Type | Description  | Notes
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **String**|  | [optional] 
  **fullname** | **String**|  | [optional] 
+ **role** | **String**|  | [optional] 
 
 ### Return type
 
