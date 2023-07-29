@@ -33,9 +33,12 @@ doc/RequestTeam.md
 doc/RequestUser.md
 doc/RespondArticle.md
 doc/RespondArticleData.md
+doc/RespondArticleDataUser.md
 doc/RespondArticles.md
 doc/RespondArticlesData.md
 doc/RespondArticlesDataContentInner.md
+doc/RespondArticlesDataContentInnerUser.md
+doc/RespondArticlesDataContentInnerUserRole.md
 doc/RespondContestanNominations.md
 doc/RespondContestanNominationsData.md
 doc/RespondContestanNominationsDataContentInner.md
@@ -166,9 +169,12 @@ lib/src/model/request_team.dart
 lib/src/model/request_user.dart
 lib/src/model/respond_article.dart
 lib/src/model/respond_article_data.dart
+lib/src/model/respond_article_data_user.dart
 lib/src/model/respond_articles.dart
 lib/src/model/respond_articles_data.dart
 lib/src/model/respond_articles_data_content_inner.dart
+lib/src/model/respond_articles_data_content_inner_user.dart
+lib/src/model/respond_articles_data_content_inner_user_role.dart
 lib/src/model/respond_contestan_nominations.dart
 lib/src/model/respond_contestan_nominations_data.dart
 lib/src/model/respond_contestan_nominations_data_content_inner.dart
@@ -247,3 +253,6 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_article_data_user_test.dart
+test/respond_articles_data_content_inner_user_role_test.dart
+test/respond_articles_data_content_inner_user_test.dart

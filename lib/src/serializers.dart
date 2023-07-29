@@ -39,9 +39,12 @@ import 'package:openapi/src/model/request_team.dart';
 import 'package:openapi/src/model/request_user.dart';
 import 'package:openapi/src/model/respond_article.dart';
 import 'package:openapi/src/model/respond_article_data.dart';
+import 'package:openapi/src/model/respond_article_data_user.dart';
 import 'package:openapi/src/model/respond_articles.dart';
 import 'package:openapi/src/model/respond_articles_data.dart';
 import 'package:openapi/src/model/respond_articles_data_content_inner.dart';
+import 'package:openapi/src/model/respond_articles_data_content_inner_user.dart';
+import 'package:openapi/src/model/respond_articles_data_content_inner_user_role.dart';
 import 'package:openapi/src/model/respond_contestan_nominations.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
@@ -147,9 +150,12 @@ part 'serializers.g.dart';
   RequestUser,
   RespondArticle,
   RespondArticleData,
+  RespondArticleDataUser,
   RespondArticles,
   RespondArticlesData,
   RespondArticlesDataContentInner,
+  RespondArticlesDataContentInnerUser,
+  RespondArticlesDataContentInnerUserRole,
   RespondContestanNominations,
   RespondContestanNominationsData,
   RespondContestanNominationsDataContentInner,

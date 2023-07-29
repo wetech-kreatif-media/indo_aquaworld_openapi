@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/respond_article_data_user.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,6 +22,7 @@ part 'respond_article_data.g.dart';
 /// * [title] 
 /// * [content] 
 /// * [thumbnail] 
+/// * [user] 
 /// * [publishStatus] 
 @BuiltValue()
 abstract class RespondArticleData implements Built<RespondArticleData, RespondArticleDataBuilder> {
@@ -28,22 +30,22 @@ abstract class RespondArticleData implements Built<RespondArticleData, RespondAr
   String get id;
 
   @BuiltValueField(wireName: r'createdBy')
-  String get createdBy;
+  String? get createdBy;
 
   @BuiltValueField(wireName: r'updatedBy')
-  String get updatedBy;
+  String? get updatedBy;
 
   @BuiltValueField(wireName: r'created')
-  String get created;
+  String? get created;
 
   @BuiltValueField(wireName: r'updated')
   String get updated;
 
   @BuiltValueField(wireName: r'deleted')
-  num get deleted;
+  num? get deleted;
 
   @BuiltValueField(wireName: r'recordStatus')
-  String get recordStatus;
+  String? get recordStatus;
 
   @BuiltValueField(wireName: r'title')
   String get title;
@@ -53,6 +55,9 @@ abstract class RespondArticleData implements Built<RespondArticleData, RespondAr
 
   @BuiltValueField(wireName: r'thumbnail')
   String? get thumbnail;
+
+  @BuiltValueField(wireName: r'user')
+  RespondArticleDataUser get user;
 
   @BuiltValueField(wireName: r'publishStatus')
   String get publishStatus;
@@ -85,36 +90,46 @@ class _$RespondArticleDataSerializer implements PrimitiveSerializer<RespondArtic
       object.id,
       specifiedType: const FullType(String),
     );
-    yield r'createdBy';
-    yield serializers.serialize(
-      object.createdBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'updatedBy';
-    yield serializers.serialize(
-      object.updatedBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'created';
-    yield serializers.serialize(
-      object.created,
-      specifiedType: const FullType(String),
-    );
+    if (object.createdBy != null) {
+      yield r'createdBy';
+      yield serializers.serialize(
+        object.createdBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updatedBy != null) {
+      yield r'updatedBy';
+      yield serializers.serialize(
+        object.updatedBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.created != null) {
+      yield r'created';
+      yield serializers.serialize(
+        object.created,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'updated';
     yield serializers.serialize(
       object.updated,
       specifiedType: const FullType(String),
     );
-    yield r'deleted';
-    yield serializers.serialize(
-      object.deleted,
-      specifiedType: const FullType(num),
-    );
-    yield r'recordStatus';
-    yield serializers.serialize(
-      object.recordStatus,
-      specifiedType: const FullType(String),
-    );
+    if (object.deleted != null) {
+      yield r'deleted';
+      yield serializers.serialize(
+        object.deleted,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.recordStatus != null) {
+      yield r'recordStatus';
+      yield serializers.serialize(
+        object.recordStatus,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'title';
     yield serializers.serialize(
       object.title,
@@ -132,6 +147,11 @@ class _$RespondArticleDataSerializer implements PrimitiveSerializer<RespondArtic
         specifiedType: const FullType(String),
       );
     }
+    yield r'user';
+    yield serializers.serialize(
+      object.user,
+      specifiedType: const FullType(RespondArticleDataUser),
+    );
     yield r'publishStatus';
     yield serializers.serialize(
       object.publishStatus,
@@ -229,6 +249,13 @@ class _$RespondArticleDataSerializer implements PrimitiveSerializer<RespondArtic
             specifiedType: const FullType(String),
           ) as String;
           result.thumbnail = valueDes;
+          break;
+        case r'user':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RespondArticleDataUser),
+          ) as RespondArticleDataUser;
+          result.user.replace(valueDes);
           break;
         case r'publishStatus':
           final valueDes = serializers.deserialize(

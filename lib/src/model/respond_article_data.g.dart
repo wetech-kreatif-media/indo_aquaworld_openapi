@@ -10,23 +10,25 @@ class _$RespondArticleData extends RespondArticleData {
   @override
   final String id;
   @override
-  final String createdBy;
+  final String? createdBy;
   @override
-  final String updatedBy;
+  final String? updatedBy;
   @override
-  final String created;
+  final String? created;
   @override
   final String updated;
   @override
-  final num deleted;
+  final num? deleted;
   @override
-  final String recordStatus;
+  final String? recordStatus;
   @override
   final String title;
   @override
   final String content;
   @override
   final String? thumbnail;
+  @override
+  final RespondArticleDataUser user;
   @override
   final String publishStatus;
 
@@ -36,34 +38,26 @@ class _$RespondArticleData extends RespondArticleData {
 
   _$RespondArticleData._(
       {required this.id,
-      required this.createdBy,
-      required this.updatedBy,
-      required this.created,
+      this.createdBy,
+      this.updatedBy,
+      this.created,
       required this.updated,
-      required this.deleted,
-      required this.recordStatus,
+      this.deleted,
+      this.recordStatus,
       required this.title,
       required this.content,
       this.thumbnail,
+      required this.user,
       required this.publishStatus})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'RespondArticleData', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        createdBy, r'RespondArticleData', 'createdBy');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedBy, r'RespondArticleData', 'updatedBy');
-    BuiltValueNullFieldError.checkNotNull(
-        created, r'RespondArticleData', 'created');
-    BuiltValueNullFieldError.checkNotNull(
         updated, r'RespondArticleData', 'updated');
-    BuiltValueNullFieldError.checkNotNull(
-        deleted, r'RespondArticleData', 'deleted');
-    BuiltValueNullFieldError.checkNotNull(
-        recordStatus, r'RespondArticleData', 'recordStatus');
     BuiltValueNullFieldError.checkNotNull(
         title, r'RespondArticleData', 'title');
     BuiltValueNullFieldError.checkNotNull(
         content, r'RespondArticleData', 'content');
+    BuiltValueNullFieldError.checkNotNull(user, r'RespondArticleData', 'user');
     BuiltValueNullFieldError.checkNotNull(
         publishStatus, r'RespondArticleData', 'publishStatus');
   }
@@ -91,6 +85,7 @@ class _$RespondArticleData extends RespondArticleData {
         title == other.title &&
         content == other.content &&
         thumbnail == other.thumbnail &&
+        user == other.user &&
         publishStatus == other.publishStatus;
   }
 
@@ -107,6 +102,7 @@ class _$RespondArticleData extends RespondArticleData {
     _$hash = $jc(_$hash, title.hashCode);
     _$hash = $jc(_$hash, content.hashCode);
     _$hash = $jc(_$hash, thumbnail.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
     _$hash = $jc(_$hash, publishStatus.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -125,6 +121,7 @@ class _$RespondArticleData extends RespondArticleData {
           ..add('title', title)
           ..add('content', content)
           ..add('thumbnail', thumbnail)
+          ..add('user', user)
           ..add('publishStatus', publishStatus))
         .toString();
   }
@@ -174,6 +171,11 @@ class RespondArticleDataBuilder
   String? get thumbnail => _$this._thumbnail;
   set thumbnail(String? thumbnail) => _$this._thumbnail = thumbnail;
 
+  RespondArticleDataUserBuilder? _user;
+  RespondArticleDataUserBuilder get user =>
+      _$this._user ??= new RespondArticleDataUserBuilder();
+  set user(RespondArticleDataUserBuilder? user) => _$this._user = user;
+
   String? _publishStatus;
   String? get publishStatus => _$this._publishStatus;
   set publishStatus(String? publishStatus) =>
@@ -196,6 +198,7 @@ class RespondArticleDataBuilder
       _title = $v.title;
       _content = $v.content;
       _thumbnail = $v.thumbnail;
+      _user = $v.user.toBuilder();
       _publishStatus = $v.publishStatus;
       _$v = null;
     }
@@ -217,29 +220,38 @@ class RespondArticleDataBuilder
   RespondArticleData build() => _build();
 
   _$RespondArticleData _build() {
-    final _$result = _$v ??
-        new _$RespondArticleData._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'RespondArticleData', 'id'),
-            createdBy: BuiltValueNullFieldError.checkNotNull(
-                createdBy, r'RespondArticleData', 'createdBy'),
-            updatedBy: BuiltValueNullFieldError.checkNotNull(
-                updatedBy, r'RespondArticleData', 'updatedBy'),
-            created: BuiltValueNullFieldError.checkNotNull(
-                created, r'RespondArticleData', 'created'),
-            updated: BuiltValueNullFieldError.checkNotNull(
-                updated, r'RespondArticleData', 'updated'),
-            deleted: BuiltValueNullFieldError.checkNotNull(
-                deleted, r'RespondArticleData', 'deleted'),
-            recordStatus: BuiltValueNullFieldError.checkNotNull(
-                recordStatus, r'RespondArticleData', 'recordStatus'),
-            title: BuiltValueNullFieldError.checkNotNull(
-                title, r'RespondArticleData', 'title'),
-            content: BuiltValueNullFieldError.checkNotNull(
-                content, r'RespondArticleData', 'content'),
-            thumbnail: thumbnail,
-            publishStatus:
-                BuiltValueNullFieldError.checkNotNull(publishStatus, r'RespondArticleData', 'publishStatus'));
+    _$RespondArticleData _$result;
+    try {
+      _$result = _$v ??
+          new _$RespondArticleData._(
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondArticleData', 'id'),
+              createdBy: createdBy,
+              updatedBy: updatedBy,
+              created: created,
+              updated: BuiltValueNullFieldError.checkNotNull(
+                  updated, r'RespondArticleData', 'updated'),
+              deleted: deleted,
+              recordStatus: recordStatus,
+              title: BuiltValueNullFieldError.checkNotNull(
+                  title, r'RespondArticleData', 'title'),
+              content: BuiltValueNullFieldError.checkNotNull(
+                  content, r'RespondArticleData', 'content'),
+              thumbnail: thumbnail,
+              user: user.build(),
+              publishStatus: BuiltValueNullFieldError.checkNotNull(
+                  publishStatus, r'RespondArticleData', 'publishStatus'));
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'user';
+        user.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'RespondArticleData', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

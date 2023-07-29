@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **totalPages** | **num** |  | 
 **totalElements** | **num** |  | 
 **numberOfElements** | **num** |  | 
-**content** | [**BuiltList&lt;RespondArticlesDataContentInner&gt;**](RespondArticlesDataContentInner.md) |  | [optional] 
+**content** | [**BuiltList&lt;RespondArticlesDataContentInner&gt;**](RespondArticlesDataContentInner.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

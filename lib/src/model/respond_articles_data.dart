@@ -49,7 +49,7 @@ abstract class RespondArticlesData implements Built<RespondArticlesData, Respond
   num get numberOfElements;
 
   @BuiltValueField(wireName: r'content')
-  BuiltList<RespondArticlesDataContentInner>? get content;
+  BuiltList<RespondArticlesDataContentInner> get content;
 
   RespondArticlesData._();
 
@@ -120,13 +120,11 @@ class _$RespondArticlesDataSerializer implements PrimitiveSerializer<RespondArti
       object.numberOfElements,
       specifiedType: const FullType(num),
     );
-    if (object.content != null) {
-      yield r'content';
-      yield serializers.serialize(
-        object.content,
-        specifiedType: const FullType(BuiltList, [FullType(RespondArticlesDataContentInner)]),
-      );
-    }
+    yield r'content';
+    yield serializers.serialize(
+      object.content,
+      specifiedType: const FullType(BuiltList, [FullType(RespondArticlesDataContentInner)]),
+    );
   }
 
   @override

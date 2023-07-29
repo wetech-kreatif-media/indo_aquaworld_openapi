@@ -32,9 +32,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestUser.serializer)
       ..add(RespondArticle.serializer)
       ..add(RespondArticleData.serializer)
+      ..add(RespondArticleDataUser.serializer)
       ..add(RespondArticles.serializer)
       ..add(RespondArticlesData.serializer)
       ..add(RespondArticlesDataContentInner.serializer)
+      ..add(RespondArticlesDataContentInnerUser.serializer)
+      ..add(RespondArticlesDataContentInnerUserRole.serializer)
       ..add(RespondContestanNominations.serializer)
       ..add(RespondContestanNominationsData.serializer)
       ..add(RespondContestanNominationsDataContentInner.serializer)
@@ -195,6 +198,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RespondSellingDataFilesInner)]),
           () => new ListBuilder<RespondSellingDataFilesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondSellingDataUserRolePermissionsInner)
+          ]),
+          () => new ListBuilder<RespondSellingDataUserRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(RespondSellingDataUserRolePermissionsInner)

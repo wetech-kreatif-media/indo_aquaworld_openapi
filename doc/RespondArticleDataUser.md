@@ -1,4 +1,4 @@
-# openapi.model.RespondArticlesDataContentInner
+# openapi.model.RespondArticleDataUser
 
 ## Load the model package
 ```dart
@@ -15,11 +15,15 @@ Name | Type | Description | Notes
 **updated** | **String** |  | [optional] 
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
-**title** | **String** |  | 
-**content** | **String** |  | 
-**thumbnail** | **String** |  | [optional] 
-**user** | [**RespondArticlesDataContentInnerUser**](RespondArticlesDataContentInnerUser.md) |  | 
-**publishStatus** | **String** |  | 
+**fullname** | **String** |  | 
+**mobilePhone** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
+**city** | **String** |  | [optional] 
+**photo** | **String** |  | [optional] 
+**gender** | **String** |  | [optional] 
+**linkMaps** | **String** |  | [optional] 
+**placeofBirth** | **String** |  | [optional] 
+**role** | [**RespondArticlesDataContentInnerUserRole**](RespondArticlesDataContentInnerUserRole.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

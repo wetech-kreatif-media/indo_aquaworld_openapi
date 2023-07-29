@@ -24,7 +24,7 @@ class _$RespondArticlesData extends RespondArticlesData {
   @override
   final num numberOfElements;
   @override
-  final BuiltList<RespondArticlesDataContentInner>? content;
+  final BuiltList<RespondArticlesDataContentInner> content;
 
   factory _$RespondArticlesData(
           [void Function(RespondArticlesDataBuilder)? updates]) =>
@@ -39,7 +39,7 @@ class _$RespondArticlesData extends RespondArticlesData {
       required this.totalPages,
       required this.totalElements,
       required this.numberOfElements,
-      this.content})
+      required this.content})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(size, r'RespondArticlesData', 'size');
     BuiltValueNullFieldError.checkNotNull(
@@ -50,6 +50,8 @@ class _$RespondArticlesData extends RespondArticlesData {
         totalElements, r'RespondArticlesData', 'totalElements');
     BuiltValueNullFieldError.checkNotNull(
         numberOfElements, r'RespondArticlesData', 'numberOfElements');
+    BuiltValueNullFieldError.checkNotNull(
+        content, r'RespondArticlesData', 'content');
   }
 
   @override
@@ -167,7 +169,7 @@ class RespondArticlesDataBuilder
       _totalPages = $v.totalPages;
       _totalElements = $v.totalElements;
       _numberOfElements = $v.numberOfElements;
-      _content = $v.content?.toBuilder();
+      _content = $v.content.toBuilder();
       _$v = null;
     }
     return this;
@@ -205,12 +207,12 @@ class RespondArticlesDataBuilder
                   totalElements, r'RespondArticlesData', 'totalElements'),
               numberOfElements: BuiltValueNullFieldError.checkNotNull(
                   numberOfElements, r'RespondArticlesData', 'numberOfElements'),
-              content: _content?.build());
+              content: content.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'content';
-        _content?.build();
+        content.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondArticlesData', _$failedField, e.toString());
