@@ -12,7 +12,7 @@ class _$RequestSelling extends RequestSelling {
   @override
   final String judulIklan;
   @override
-  final String photo1;
+  final String? photo1;
   @override
   final String? photo2;
   @override
@@ -22,7 +22,7 @@ class _$RequestSelling extends RequestSelling {
   @override
   final String description;
   @override
-  final String linkVideo;
+  final String? linkVideo;
   @override
   final String user;
   @override
@@ -38,12 +38,12 @@ class _$RequestSelling extends RequestSelling {
   _$RequestSelling._(
       {required this.jenisIklan,
       required this.judulIklan,
-      required this.photo1,
+      this.photo1,
       this.photo2,
       this.photo3,
       this.photo4,
       required this.description,
-      required this.linkVideo,
+      this.linkVideo,
       required this.user,
       required this.sellingSubCategory,
       required this.price,
@@ -53,11 +53,8 @@ class _$RequestSelling extends RequestSelling {
         jenisIklan, r'RequestSelling', 'jenisIklan');
     BuiltValueNullFieldError.checkNotNull(
         judulIklan, r'RequestSelling', 'judulIklan');
-    BuiltValueNullFieldError.checkNotNull(photo1, r'RequestSelling', 'photo1');
     BuiltValueNullFieldError.checkNotNull(
         description, r'RequestSelling', 'description');
-    BuiltValueNullFieldError.checkNotNull(
-        linkVideo, r'RequestSelling', 'linkVideo');
     BuiltValueNullFieldError.checkNotNull(user, r'RequestSelling', 'user');
     BuiltValueNullFieldError.checkNotNull(
         sellingSubCategory, r'RequestSelling', 'sellingSubCategory');
@@ -229,15 +226,13 @@ class RequestSellingBuilder
                 jenisIklan, r'RequestSelling', 'jenisIklan'),
             judulIklan: BuiltValueNullFieldError.checkNotNull(
                 judulIklan, r'RequestSelling', 'judulIklan'),
-            photo1: BuiltValueNullFieldError.checkNotNull(
-                photo1, r'RequestSelling', 'photo1'),
+            photo1: photo1,
             photo2: photo2,
             photo3: photo3,
             photo4: photo4,
             description: BuiltValueNullFieldError.checkNotNull(
                 description, r'RequestSelling', 'description'),
-            linkVideo: BuiltValueNullFieldError.checkNotNull(
-                linkVideo, r'RequestSelling', 'linkVideo'),
+            linkVideo: linkVideo,
             user: BuiltValueNullFieldError.checkNotNull(
                 user, r'RequestSelling', 'user'),
             sellingSubCategory: BuiltValueNullFieldError.checkNotNull(

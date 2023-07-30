@@ -32,7 +32,7 @@ abstract class RequestSelling implements Built<RequestSelling, RequestSellingBui
   String get judulIklan;
 
   @BuiltValueField(wireName: r'photo1')
-  String get photo1;
+  String? get photo1;
 
   @BuiltValueField(wireName: r'photo2')
   String? get photo2;
@@ -47,7 +47,7 @@ abstract class RequestSelling implements Built<RequestSelling, RequestSellingBui
   String get description;
 
   @BuiltValueField(wireName: r'linkVideo')
-  String get linkVideo;
+  String? get linkVideo;
 
   @BuiltValueField(wireName: r'user')
   String get user;
@@ -94,11 +94,13 @@ class _$RequestSellingSerializer implements PrimitiveSerializer<RequestSelling> 
       object.judulIklan,
       specifiedType: const FullType(String),
     );
-    yield r'photo1';
-    yield serializers.serialize(
-      object.photo1,
-      specifiedType: const FullType(String),
-    );
+    if (object.photo1 != null) {
+      yield r'photo1';
+      yield serializers.serialize(
+        object.photo1,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.photo2 != null) {
       yield r'photo2';
       yield serializers.serialize(
@@ -125,11 +127,13 @@ class _$RequestSellingSerializer implements PrimitiveSerializer<RequestSelling> 
       object.description,
       specifiedType: const FullType(String),
     );
-    yield r'linkVideo';
-    yield serializers.serialize(
-      object.linkVideo,
-      specifiedType: const FullType(String),
-    );
+    if (object.linkVideo != null) {
+      yield r'linkVideo';
+      yield serializers.serialize(
+        object.linkVideo,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'user';
     yield serializers.serialize(
       object.user,

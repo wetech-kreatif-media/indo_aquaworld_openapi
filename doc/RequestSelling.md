@@ -10,12 +10,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **jenisIklan** | **String** |  | 
 **judulIklan** | **String** |  | 
-**photo1** | **String** |  | 
+**photo1** | **String** |  | [optional] 
 **photo2** | **String** |  | [optional] 
 **photo3** | **String** |  | [optional] 
 **photo4** | **String** |  | [optional] 
 **description** | **String** |  | 
-**linkVideo** | **String** |  | 
+**linkVideo** | **String** |  | [optional] 
 **user** | **String** |  | 
 **sellingSubCategory** | **String** |  | 
 **price** | **num** |  | 
