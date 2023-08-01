@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**postSelling**](SellingApi.md#postselling) | **POST** /public/selling | Post Selling
 [**postSellingCategory**](SellingApi.md#postsellingcategory) | **POST** /public/selling-category | Post Selling Category
 [**postSellingSubCategory**](SellingApi.md#postsellingsubcategory) | **POST** /public/selling-subcategory | Post Selling SubCategory
+[**putSelling**](SellingApi.md#putselling) | **PUT** /public/selling/{sellingId} | Put Selling
 [**putSellingCategory**](SellingApi.md#putsellingcategory) | **PUT** /public/selling-category/{sellingCatId} | Put Selling Category
 [**putSellingSubCategory**](SellingApi.md#putsellingsubcategory) | **PUT** /public/selling-subcategory/{sellingCatId} | Put Selling Category
 
@@ -397,6 +398,54 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestSellingSubCategory** | [**RequestSellingSubCategory**](RequestSellingSubCategory.md)|  | [optional] 
+
+### Return type
+
+[**RespondGlobal**](RespondGlobal.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **putSelling**
+> RespondGlobal putSelling(sellingId, requestSelling)
+
+Put Selling
+
+Perbaharui barang yang akan dijual
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure HTTP basic authorization: bearerAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
+
+final api = Openapi().getSellingApi();
+final String sellingId = sellingId_example; // String | 
+final RequestSelling requestSelling = {"jenisIklan":"Jual","judulIklan":"Jual Ikan","photo1":"nulasd asd asd asd asd asl","photo2":"","photo3":"","photo4":"","description":"test 1213","linkVideo":"https://www.youtube.com/shorts/ukZK4BkymPo","user":"e6458c51-3d5b-478a-a0c9-a710c3369d20","sellingSubCategory":"b49a359c-3ef8-406d-9aca-c6f8e95270e5","price":50000000,"publishStatus":"AKTIF"}; // RequestSelling | 
+
+try {
+    final response = api.putSelling(sellingId, requestSelling);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SellingApi->putSelling: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sellingId** | **String**|  | 
+ **requestSelling** | [**RequestSelling**](RequestSelling.md)|  | [optional] 
 
 ### Return type
 

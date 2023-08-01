@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **photo4** | **String** |  | [optional] 
 **description** | **String** |  | 
 **linkVideo** | **String** |  | [optional] 
-**user** | **String** |  | 
+**user** | **String** |  | [optional] 
 **sellingSubCategory** | **String** |  | 
 **price** | **num** |  | 
 **publishStatus** | **String** |  | 

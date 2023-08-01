@@ -50,7 +50,7 @@ abstract class RequestSelling implements Built<RequestSelling, RequestSellingBui
   String? get linkVideo;
 
   @BuiltValueField(wireName: r'user')
-  String get user;
+  String? get user;
 
   @BuiltValueField(wireName: r'sellingSubCategory')
   String get sellingSubCategory;
@@ -134,11 +134,13 @@ class _$RequestSellingSerializer implements PrimitiveSerializer<RequestSelling> 
         specifiedType: const FullType(String),
       );
     }
-    yield r'user';
-    yield serializers.serialize(
-      object.user,
-      specifiedType: const FullType(String),
-    );
+    if (object.user != null) {
+      yield r'user';
+      yield serializers.serialize(
+        object.user,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'sellingSubCategory';
     yield serializers.serialize(
       object.sellingSubCategory,

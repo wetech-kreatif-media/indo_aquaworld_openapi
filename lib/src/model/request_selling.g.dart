@@ -24,7 +24,7 @@ class _$RequestSelling extends RequestSelling {
   @override
   final String? linkVideo;
   @override
-  final String user;
+  final String? user;
   @override
   final String sellingSubCategory;
   @override
@@ -44,7 +44,7 @@ class _$RequestSelling extends RequestSelling {
       this.photo4,
       required this.description,
       this.linkVideo,
-      required this.user,
+      this.user,
       required this.sellingSubCategory,
       required this.price,
       required this.publishStatus})
@@ -55,7 +55,6 @@ class _$RequestSelling extends RequestSelling {
         judulIklan, r'RequestSelling', 'judulIklan');
     BuiltValueNullFieldError.checkNotNull(
         description, r'RequestSelling', 'description');
-    BuiltValueNullFieldError.checkNotNull(user, r'RequestSelling', 'user');
     BuiltValueNullFieldError.checkNotNull(
         sellingSubCategory, r'RequestSelling', 'sellingSubCategory');
     BuiltValueNullFieldError.checkNotNull(price, r'RequestSelling', 'price');
@@ -233,8 +232,7 @@ class RequestSellingBuilder
             description: BuiltValueNullFieldError.checkNotNull(
                 description, r'RequestSelling', 'description'),
             linkVideo: linkVideo,
-            user: BuiltValueNullFieldError.checkNotNull(
-                user, r'RequestSelling', 'user'),
+            user: user,
             sellingSubCategory: BuiltValueNullFieldError.checkNotNull(
                 sellingSubCategory, r'RequestSelling', 'sellingSubCategory'),
             price: BuiltValueNullFieldError.checkNotNull(
