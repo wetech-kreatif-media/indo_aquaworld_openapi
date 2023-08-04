@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_tank_assesment.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_tank_assesment.dart';
@@ -24,6 +25,10 @@ class TankAssesmentApi {
   ///
   /// Parameters:
   /// * [tankId] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,6 +40,10 @@ class TankAssesmentApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondTankAssesment>> getTankAssessment({ 
     required String tankId,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    num? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -61,9 +70,17 @@ class TankAssesmentApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

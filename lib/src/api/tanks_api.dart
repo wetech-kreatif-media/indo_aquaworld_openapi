@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_tank.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_tank.dart';
@@ -26,6 +27,10 @@ class TanksApi {
   /// Parameters:
   /// * [eventId] - 
   /// * [nominasiId] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [requestTank] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -39,6 +44,10 @@ class TanksApi {
   Future<Response<RespondGlobal>> addTank({ 
     required String eventId,
     required String nominasiId,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    num? pageSize,
     RequestTank? requestTank,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -67,6 +76,13 @@ class TanksApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
+    };
+
     dynamic _bodyData;
 
     try {
@@ -78,6 +94,7 @@ class TanksApi {
          requestOptions: _options.compose(
           _dio.options,
           _path,
+          queryParameters: _queryParameters,
         ),
         type: DioErrorType.unknown,
         error: error,
@@ -89,6 +106,7 @@ class TanksApi {
       _path,
       data: _bodyData,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -212,6 +230,10 @@ class TanksApi {
   /// Parameters:
   /// * [eventId] - 
   /// * [nominasiId] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -224,6 +246,10 @@ class TanksApi {
   Future<Response<RespondTanks>> getTanks({ 
     required String eventId,
     required String nominasiId,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    num? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -250,9 +276,17 @@ class TanksApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -295,6 +329,10 @@ class TanksApi {
   /// Parameters:
   /// * [eventId] - 
   /// * [nominasiId] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -307,6 +345,10 @@ class TanksApi {
   Future<Response<RespondTanks>> getTanksSummary({ 
     required String eventId,
     required String nominasiId,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    num? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -333,9 +375,17 @@ class TanksApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

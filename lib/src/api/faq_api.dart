@@ -107,6 +107,10 @@ class FaqApi {
   ///
   /// Parameters:
   /// * [cariTitle] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -118,6 +122,10 @@ class FaqApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondFaqs>> getFaqs({ 
     String? cariTitle,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    num? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -146,6 +154,10 @@ class FaqApi {
 
     final _queryParameters = <String, dynamic>{
       if (cariTitle != null) r'cariTitle': encodeQueryParameter(_serializers, cariTitle, const FullType(String)),
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
     };
 
     final _response = await _dio.request<Object>(

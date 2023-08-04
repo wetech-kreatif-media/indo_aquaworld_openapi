@@ -212,6 +212,7 @@ class ContestansApi {
   /// * [direction] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
+  /// * [eventId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -227,6 +228,7 @@ class ContestansApi {
     String? direction,
     num? pageNumber,
     num? pageSize,
+    String? eventId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -259,6 +261,7 @@ class ContestansApi {
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
+      if (eventId != null) r'eventId': encodeQueryParameter(_serializers, eventId, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
