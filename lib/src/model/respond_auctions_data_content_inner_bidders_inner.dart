@@ -7,9 +7,9 @@ import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_in
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_articles_data_content_inner.g.dart';
+part 'respond_auctions_data_content_inner_bidders_inner.g.dart';
 
-/// RespondArticlesDataContentInner
+/// RespondAuctionsDataContentInnerBiddersInner
 ///
 /// Properties:
 /// * [id] 
@@ -19,27 +19,25 @@ part 'respond_articles_data_content_inner.g.dart';
 /// * [updated] 
 /// * [deleted] 
 /// * [recordStatus] 
-/// * [title] 
-/// * [content] 
-/// * [thumbnail] 
-/// * [user] 
-/// * [publishStatus] 
+/// * [buyer] 
+/// * [bidPrice] 
+/// * [bidTime] 
 @BuiltValue()
-abstract class RespondArticlesDataContentInner implements Built<RespondArticlesDataContentInner, RespondArticlesDataContentInnerBuilder> {
+abstract class RespondAuctionsDataContentInnerBiddersInner implements Built<RespondAuctionsDataContentInnerBiddersInner, RespondAuctionsDataContentInnerBiddersInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'createdBy')
-  String get createdBy;
+  String? get createdBy;
 
   @BuiltValueField(wireName: r'updatedBy')
-  String get updatedBy;
+  String? get updatedBy;
 
   @BuiltValueField(wireName: r'created')
-  String get created;
+  String? get created;
 
   @BuiltValueField(wireName: r'updated')
-  String get updated;
+  String? get updated;
 
   @BuiltValueField(wireName: r'deleted')
   num? get deleted;
@@ -47,69 +45,73 @@ abstract class RespondArticlesDataContentInner implements Built<RespondArticlesD
   @BuiltValueField(wireName: r'recordStatus')
   String? get recordStatus;
 
-  @BuiltValueField(wireName: r'title')
-  String get title;
+  @BuiltValueField(wireName: r'buyer')
+  RespondAuctionsDataContentInnerBiddersInnerBuyer? get buyer;
 
-  @BuiltValueField(wireName: r'content')
-  String get content;
+  @BuiltValueField(wireName: r'bidPrice')
+  num? get bidPrice;
 
-  @BuiltValueField(wireName: r'thumbnail')
-  String? get thumbnail;
+  @BuiltValueField(wireName: r'bidTime')
+  String? get bidTime;
 
-  @BuiltValueField(wireName: r'user')
-  RespondAuctionsDataContentInnerBiddersInnerBuyer get user;
+  RespondAuctionsDataContentInnerBiddersInner._();
 
-  @BuiltValueField(wireName: r'publishStatus')
-  String get publishStatus;
-
-  RespondArticlesDataContentInner._();
-
-  factory RespondArticlesDataContentInner([void updates(RespondArticlesDataContentInnerBuilder b)]) = _$RespondArticlesDataContentInner;
+  factory RespondAuctionsDataContentInnerBiddersInner([void updates(RespondAuctionsDataContentInnerBiddersInnerBuilder b)]) = _$RespondAuctionsDataContentInnerBiddersInner;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondArticlesDataContentInnerBuilder b) => b;
+  static void _defaults(RespondAuctionsDataContentInnerBiddersInnerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondArticlesDataContentInner> get serializer => _$RespondArticlesDataContentInnerSerializer();
+  static Serializer<RespondAuctionsDataContentInnerBiddersInner> get serializer => _$RespondAuctionsDataContentInnerBiddersInnerSerializer();
 }
 
-class _$RespondArticlesDataContentInnerSerializer implements PrimitiveSerializer<RespondArticlesDataContentInner> {
+class _$RespondAuctionsDataContentInnerBiddersInnerSerializer implements PrimitiveSerializer<RespondAuctionsDataContentInnerBiddersInner> {
   @override
-  final Iterable<Type> types = const [RespondArticlesDataContentInner, _$RespondArticlesDataContentInner];
+  final Iterable<Type> types = const [RespondAuctionsDataContentInnerBiddersInner, _$RespondAuctionsDataContentInnerBiddersInner];
 
   @override
-  final String wireName = r'RespondArticlesDataContentInner';
+  final String wireName = r'RespondAuctionsDataContentInnerBiddersInner';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondArticlesDataContentInner object, {
+    RespondAuctionsDataContentInnerBiddersInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'createdBy';
-    yield serializers.serialize(
-      object.createdBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'updatedBy';
-    yield serializers.serialize(
-      object.updatedBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'created';
-    yield serializers.serialize(
-      object.created,
-      specifiedType: const FullType(String),
-    );
-    yield r'updated';
-    yield serializers.serialize(
-      object.updated,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.createdBy != null) {
+      yield r'createdBy';
+      yield serializers.serialize(
+        object.createdBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updatedBy != null) {
+      yield r'updatedBy';
+      yield serializers.serialize(
+        object.updatedBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.created != null) {
+      yield r'created';
+      yield serializers.serialize(
+        object.created,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updated != null) {
+      yield r'updated';
+      yield serializers.serialize(
+        object.updated,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.deleted != null) {
       yield r'deleted';
       yield serializers.serialize(
@@ -124,39 +126,33 @@ class _$RespondArticlesDataContentInnerSerializer implements PrimitiveSerializer
         specifiedType: const FullType(String),
       );
     }
-    yield r'title';
-    yield serializers.serialize(
-      object.title,
-      specifiedType: const FullType(String),
-    );
-    yield r'content';
-    yield serializers.serialize(
-      object.content,
-      specifiedType: const FullType(String),
-    );
-    if (object.thumbnail != null) {
-      yield r'thumbnail';
+    if (object.buyer != null) {
+      yield r'buyer';
       yield serializers.serialize(
-        object.thumbnail,
+        object.buyer,
+        specifiedType: const FullType(RespondAuctionsDataContentInnerBiddersInnerBuyer),
+      );
+    }
+    if (object.bidPrice != null) {
+      yield r'bidPrice';
+      yield serializers.serialize(
+        object.bidPrice,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.bidTime != null) {
+      yield r'bidTime';
+      yield serializers.serialize(
+        object.bidTime,
         specifiedType: const FullType(String),
       );
     }
-    yield r'user';
-    yield serializers.serialize(
-      object.user,
-      specifiedType: const FullType(RespondAuctionsDataContentInnerBiddersInnerBuyer),
-    );
-    yield r'publishStatus';
-    yield serializers.serialize(
-      object.publishStatus,
-      specifiedType: const FullType(String),
-    );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondArticlesDataContentInner object, {
+    RespondAuctionsDataContentInnerBiddersInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -167,7 +163,7 @@ class _$RespondArticlesDataContentInnerSerializer implements PrimitiveSerializer
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondArticlesDataContentInnerBuilder result,
+    required RespondAuctionsDataContentInnerBiddersInnerBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -223,40 +219,26 @@ class _$RespondArticlesDataContentInnerSerializer implements PrimitiveSerializer
           ) as String;
           result.recordStatus = valueDes;
           break;
-        case r'title':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.title = valueDes;
-          break;
-        case r'content':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.content = valueDes;
-          break;
-        case r'thumbnail':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.thumbnail = valueDes;
-          break;
-        case r'user':
+        case r'buyer':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(RespondAuctionsDataContentInnerBiddersInnerBuyer),
           ) as RespondAuctionsDataContentInnerBiddersInnerBuyer;
-          result.user.replace(valueDes);
+          result.buyer.replace(valueDes);
           break;
-        case r'publishStatus':
+        case r'bidPrice':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(num),
+          ) as num;
+          result.bidPrice = valueDes;
+          break;
+        case r'bidTime':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.publishStatus = valueDes;
+          result.bidTime = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -267,12 +249,12 @@ class _$RespondArticlesDataContentInnerSerializer implements PrimitiveSerializer
   }
 
   @override
-  RespondArticlesDataContentInner deserialize(
+  RespondAuctionsDataContentInnerBiddersInner deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondArticlesDataContentInnerBuilder();
+    final result = RespondAuctionsDataContentInnerBiddersInnerBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

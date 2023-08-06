@@ -29,7 +29,7 @@ class _$RespondArticlesDataContentInner
   @override
   final String? thumbnail;
   @override
-  final RespondArticlesDataContentInnerUser user;
+  final RespondAuctionsDataContentInnerBiddersInnerBuyer user;
   @override
   final String publishStatus;
 
@@ -182,10 +182,11 @@ class RespondArticlesDataContentInnerBuilder
   String? get thumbnail => _$this._thumbnail;
   set thumbnail(String? thumbnail) => _$this._thumbnail = thumbnail;
 
-  RespondArticlesDataContentInnerUserBuilder? _user;
-  RespondArticlesDataContentInnerUserBuilder get user =>
-      _$this._user ??= new RespondArticlesDataContentInnerUserBuilder();
-  set user(RespondArticlesDataContentInnerUserBuilder? user) =>
+  RespondAuctionsDataContentInnerBiddersInnerBuyerBuilder? _user;
+  RespondAuctionsDataContentInnerBiddersInnerBuyerBuilder get user =>
+      _$this._user ??=
+          new RespondAuctionsDataContentInnerBiddersInnerBuyerBuilder();
+  set user(RespondAuctionsDataContentInnerBiddersInnerBuyerBuilder? user) =>
       _$this._user = user;
 
   String? _publishStatus;

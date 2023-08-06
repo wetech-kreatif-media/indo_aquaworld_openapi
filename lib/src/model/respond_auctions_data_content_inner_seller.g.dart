@@ -1,14 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_article_data_user.dart';
+part of 'respond_auctions_data_content_inner_seller.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondArticleDataUser extends RespondArticleDataUser {
+class _$RespondAuctionsDataContentInnerSeller
+    extends RespondAuctionsDataContentInnerSeller {
   @override
-  final String id;
+  final String? id;
   @override
   final String? createdBy;
   @override
@@ -22,7 +23,7 @@ class _$RespondArticleDataUser extends RespondArticleDataUser {
   @override
   final String? recordStatus;
   @override
-  final String fullname;
+  final String? fullname;
   @override
   final String? mobilePhone;
   @override
@@ -38,21 +39,23 @@ class _$RespondArticleDataUser extends RespondArticleDataUser {
   @override
   final String? placeofBirth;
   @override
-  final RespondAuctionsDataContentInnerBiddersInnerBuyerRole? role;
+  final RespondUsersDataContentInnerRole? role;
 
-  factory _$RespondArticleDataUser(
-          [void Function(RespondArticleDataUserBuilder)? updates]) =>
-      (new RespondArticleDataUserBuilder()..update(updates))._build();
+  factory _$RespondAuctionsDataContentInnerSeller(
+          [void Function(RespondAuctionsDataContentInnerSellerBuilder)?
+              updates]) =>
+      (new RespondAuctionsDataContentInnerSellerBuilder()..update(updates))
+          ._build();
 
-  _$RespondArticleDataUser._(
-      {required this.id,
+  _$RespondAuctionsDataContentInnerSeller._(
+      {this.id,
       this.createdBy,
       this.updatedBy,
       this.created,
       this.updated,
       this.deleted,
       this.recordStatus,
-      required this.fullname,
+      this.fullname,
       this.mobilePhone,
       this.email,
       this.city,
@@ -61,25 +64,22 @@ class _$RespondArticleDataUser extends RespondArticleDataUser {
       this.linkMaps,
       this.placeofBirth,
       this.role})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'RespondArticleDataUser', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        fullname, r'RespondArticleDataUser', 'fullname');
-  }
+      : super._();
 
   @override
-  RespondArticleDataUser rebuild(
-          void Function(RespondArticleDataUserBuilder) updates) =>
+  RespondAuctionsDataContentInnerSeller rebuild(
+          void Function(RespondAuctionsDataContentInnerSellerBuilder)
+              updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondArticleDataUserBuilder toBuilder() =>
-      new RespondArticleDataUserBuilder()..replace(this);
+  RespondAuctionsDataContentInnerSellerBuilder toBuilder() =>
+      new RespondAuctionsDataContentInnerSellerBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondArticleDataUser &&
+    return other is RespondAuctionsDataContentInnerSeller &&
         id == other.id &&
         createdBy == other.createdBy &&
         updatedBy == other.updatedBy &&
@@ -123,7 +123,8 @@ class _$RespondArticleDataUser extends RespondArticleDataUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'RespondArticleDataUser')
+    return (newBuiltValueToStringHelper(
+            r'RespondAuctionsDataContentInnerSeller')
           ..add('id', id)
           ..add('createdBy', createdBy)
           ..add('updatedBy', updatedBy)
@@ -144,9 +145,11 @@ class _$RespondArticleDataUser extends RespondArticleDataUser {
   }
 }
 
-class RespondArticleDataUserBuilder
-    implements Builder<RespondArticleDataUser, RespondArticleDataUserBuilder> {
-  _$RespondArticleDataUser? _$v;
+class RespondAuctionsDataContentInnerSellerBuilder
+    implements
+        Builder<RespondAuctionsDataContentInnerSeller,
+            RespondAuctionsDataContentInnerSellerBuilder> {
+  _$RespondAuctionsDataContentInnerSeller? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -208,18 +211,17 @@ class RespondArticleDataUserBuilder
   String? get placeofBirth => _$this._placeofBirth;
   set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
 
-  RespondAuctionsDataContentInnerBiddersInnerBuyerRoleBuilder? _role;
-  RespondAuctionsDataContentInnerBiddersInnerBuyerRoleBuilder get role =>
-      _$this._role ??=
-          new RespondAuctionsDataContentInnerBiddersInnerBuyerRoleBuilder();
-  set role(RespondAuctionsDataContentInnerBiddersInnerBuyerRoleBuilder? role) =>
+  RespondUsersDataContentInnerRoleBuilder? _role;
+  RespondUsersDataContentInnerRoleBuilder get role =>
+      _$this._role ??= new RespondUsersDataContentInnerRoleBuilder();
+  set role(RespondUsersDataContentInnerRoleBuilder? role) =>
       _$this._role = role;
 
-  RespondArticleDataUserBuilder() {
-    RespondArticleDataUser._defaults(this);
+  RespondAuctionsDataContentInnerSellerBuilder() {
+    RespondAuctionsDataContentInnerSeller._defaults(this);
   }
 
-  RespondArticleDataUserBuilder get _$this {
+  RespondAuctionsDataContentInnerSellerBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -244,34 +246,33 @@ class RespondArticleDataUserBuilder
   }
 
   @override
-  void replace(RespondArticleDataUser other) {
+  void replace(RespondAuctionsDataContentInnerSeller other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondArticleDataUser;
+    _$v = other as _$RespondAuctionsDataContentInnerSeller;
   }
 
   @override
-  void update(void Function(RespondArticleDataUserBuilder)? updates) {
+  void update(
+      void Function(RespondAuctionsDataContentInnerSellerBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondArticleDataUser build() => _build();
+  RespondAuctionsDataContentInnerSeller build() => _build();
 
-  _$RespondArticleDataUser _build() {
-    _$RespondArticleDataUser _$result;
+  _$RespondAuctionsDataContentInnerSeller _build() {
+    _$RespondAuctionsDataContentInnerSeller _$result;
     try {
       _$result = _$v ??
-          new _$RespondArticleDataUser._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'RespondArticleDataUser', 'id'),
+          new _$RespondAuctionsDataContentInnerSeller._(
+              id: id,
               createdBy: createdBy,
               updatedBy: updatedBy,
               created: created,
               updated: updated,
               deleted: deleted,
               recordStatus: recordStatus,
-              fullname: BuiltValueNullFieldError.checkNotNull(
-                  fullname, r'RespondArticleDataUser', 'fullname'),
+              fullname: fullname,
               mobilePhone: mobilePhone,
               email: email,
               city: city,
@@ -287,7 +288,9 @@ class RespondArticleDataUserBuilder
         _role?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'RespondArticleDataUser', _$failedField, e.toString());
+            r'RespondAuctionsDataContentInnerSeller',
+            _$failedField,
+            e.toString());
       }
       rethrow;
     }

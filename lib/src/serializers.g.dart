@@ -8,6 +8,7 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestArticle.serializer)
+      ..add(RequestAuction.serializer)
       ..add(RequestChangePassword.serializer)
       ..add(RequestContestanNomination.serializer)
       ..add(RequestContestant.serializer)
@@ -36,8 +37,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondArticles.serializer)
       ..add(RespondArticlesData.serializer)
       ..add(RespondArticlesDataContentInner.serializer)
-      ..add(RespondArticlesDataContentInnerUser.serializer)
-      ..add(RespondArticlesDataContentInnerUserRole.serializer)
+      ..add(RespondAuction.serializer)
+      ..add(RespondAuctionData.serializer)
+      ..add(RespondAuctionDataFilesInner.serializer)
+      ..add(RespondAuctionUser.serializer)
+      ..add(RespondAuctions.serializer)
+      ..add(RespondAuctionsData.serializer)
+      ..add(RespondAuctionsDataContentInner.serializer)
+      ..add(RespondAuctionsDataContentInnerBiddersInner.serializer)
+      ..add(RespondAuctionsDataContentInnerBiddersInnerBuyer.serializer)
+      ..add(RespondAuctionsDataContentInnerBiddersInnerBuyerRole.serializer)
+      ..add(RespondAuctionsDataContentInnerSeller.serializer)
       ..add(RespondContestanNominations.serializer)
       ..add(RespondContestanNominationsData.serializer)
       ..add(RespondContestanNominationsDataContentInner.serializer)
@@ -139,6 +149,24 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(RespondArticlesDataContentInner)]),
           () => new ListBuilder<RespondArticlesDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondAuctionsDataContentInner)]),
+          () => new ListBuilder<RespondAuctionsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondAuctionsDataContentInnerBiddersInner)
+          ]),
+          () => new ListBuilder<RespondAuctionsDataContentInnerBiddersInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(RespondAuctionsDataContentInnerBiddersInner)
+          ]),
+          () => new ListBuilder<RespondAuctionsDataContentInnerBiddersInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondAuctionDataFilesInner)]),
+          () => new ListBuilder<RespondAuctionDataFilesInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(RespondContestanNominationsDataContentInner)

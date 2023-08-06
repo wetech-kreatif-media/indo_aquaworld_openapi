@@ -1,4 +1,4 @@
-# openapi.model.RespondArticleDataUser
+# openapi.model.RespondAuctionsDataContentInnerBiddersInnerBuyer
 
 ## Load the model package
 ```dart
@@ -8,14 +8,14 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
+**id** | **String** |  | [optional] 
 **createdBy** | **String** |  | [optional] 
 **updatedBy** | **String** |  | [optional] 
 **created** | **String** |  | [optional] 
 **updated** | **String** |  | [optional] 
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
-**fullname** | **String** |  | 
+**fullname** | **String** |  | [optional] 
 **mobilePhone** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **city** | **String** |  | [optional] 

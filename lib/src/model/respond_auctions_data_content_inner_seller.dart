@@ -3,13 +3,13 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer_role.dart';
+import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_article_data_user.g.dart';
+part 'respond_auctions_data_content_inner_seller.g.dart';
 
-/// RespondArticleDataUser
+/// RespondAuctionsDataContentInnerSeller
 ///
 /// Properties:
 /// * [id] 
@@ -29,9 +29,9 @@ part 'respond_article_data_user.g.dart';
 /// * [placeofBirth] 
 /// * [role] 
 @BuiltValue()
-abstract class RespondArticleDataUser implements Built<RespondArticleDataUser, RespondArticleDataUserBuilder> {
+abstract class RespondAuctionsDataContentInnerSeller implements Built<RespondAuctionsDataContentInnerSeller, RespondAuctionsDataContentInnerSellerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'createdBy')
   String? get createdBy;
@@ -52,7 +52,7 @@ abstract class RespondArticleDataUser implements Built<RespondArticleDataUser, R
   String? get recordStatus;
 
   @BuiltValueField(wireName: r'fullname')
-  String get fullname;
+  String? get fullname;
 
   @BuiltValueField(wireName: r'mobilePhone')
   String? get mobilePhone;
@@ -76,36 +76,38 @@ abstract class RespondArticleDataUser implements Built<RespondArticleDataUser, R
   String? get placeofBirth;
 
   @BuiltValueField(wireName: r'role')
-  RespondAuctionsDataContentInnerBiddersInnerBuyerRole? get role;
+  RespondUsersDataContentInnerRole? get role;
 
-  RespondArticleDataUser._();
+  RespondAuctionsDataContentInnerSeller._();
 
-  factory RespondArticleDataUser([void updates(RespondArticleDataUserBuilder b)]) = _$RespondArticleDataUser;
+  factory RespondAuctionsDataContentInnerSeller([void updates(RespondAuctionsDataContentInnerSellerBuilder b)]) = _$RespondAuctionsDataContentInnerSeller;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondArticleDataUserBuilder b) => b;
+  static void _defaults(RespondAuctionsDataContentInnerSellerBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondArticleDataUser> get serializer => _$RespondArticleDataUserSerializer();
+  static Serializer<RespondAuctionsDataContentInnerSeller> get serializer => _$RespondAuctionsDataContentInnerSellerSerializer();
 }
 
-class _$RespondArticleDataUserSerializer implements PrimitiveSerializer<RespondArticleDataUser> {
+class _$RespondAuctionsDataContentInnerSellerSerializer implements PrimitiveSerializer<RespondAuctionsDataContentInnerSeller> {
   @override
-  final Iterable<Type> types = const [RespondArticleDataUser, _$RespondArticleDataUser];
+  final Iterable<Type> types = const [RespondAuctionsDataContentInnerSeller, _$RespondAuctionsDataContentInnerSeller];
 
   @override
-  final String wireName = r'RespondArticleDataUser';
+  final String wireName = r'RespondAuctionsDataContentInnerSeller';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondArticleDataUser object, {
+    RespondAuctionsDataContentInnerSeller object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.createdBy != null) {
       yield r'createdBy';
       yield serializers.serialize(
@@ -148,11 +150,13 @@ class _$RespondArticleDataUserSerializer implements PrimitiveSerializer<RespondA
         specifiedType: const FullType(String),
       );
     }
-    yield r'fullname';
-    yield serializers.serialize(
-      object.fullname,
-      specifiedType: const FullType(String),
-    );
+    if (object.fullname != null) {
+      yield r'fullname';
+      yield serializers.serialize(
+        object.fullname,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.mobilePhone != null) {
       yield r'mobilePhone';
       yield serializers.serialize(
@@ -206,7 +210,7 @@ class _$RespondArticleDataUserSerializer implements PrimitiveSerializer<RespondA
       yield r'role';
       yield serializers.serialize(
         object.role,
-        specifiedType: const FullType(RespondAuctionsDataContentInnerBiddersInnerBuyerRole),
+        specifiedType: const FullType(RespondUsersDataContentInnerRole),
       );
     }
   }
@@ -214,7 +218,7 @@ class _$RespondArticleDataUserSerializer implements PrimitiveSerializer<RespondA
   @override
   Object serialize(
     Serializers serializers,
-    RespondArticleDataUser object, {
+    RespondAuctionsDataContentInnerSeller object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -225,7 +229,7 @@ class _$RespondArticleDataUserSerializer implements PrimitiveSerializer<RespondA
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondArticleDataUserBuilder result,
+    required RespondAuctionsDataContentInnerSellerBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -340,8 +344,8 @@ class _$RespondArticleDataUserSerializer implements PrimitiveSerializer<RespondA
         case r'role':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondAuctionsDataContentInnerBiddersInnerBuyerRole),
-          ) as RespondAuctionsDataContentInnerBiddersInnerBuyerRole;
+            specifiedType: const FullType(RespondUsersDataContentInnerRole),
+          ) as RespondUsersDataContentInnerRole;
           result.role.replace(valueDes);
           break;
         default:
@@ -353,12 +357,12 @@ class _$RespondArticleDataUserSerializer implements PrimitiveSerializer<RespondA
   }
 
   @override
-  RespondArticleDataUser deserialize(
+  RespondAuctionsDataContentInnerSeller deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondArticleDataUserBuilder();
+    final result = RespondAuctionsDataContentInnerSellerBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

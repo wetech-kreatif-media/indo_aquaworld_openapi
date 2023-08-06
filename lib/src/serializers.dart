@@ -15,6 +15,7 @@ import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/request_article.dart';
+import 'package:openapi/src/model/request_auction.dart';
 import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_contestan_nomination.dart';
 import 'package:openapi/src/model/request_contestant.dart';
@@ -43,8 +44,17 @@ import 'package:openapi/src/model/respond_article_data_user.dart';
 import 'package:openapi/src/model/respond_articles.dart';
 import 'package:openapi/src/model/respond_articles_data.dart';
 import 'package:openapi/src/model/respond_articles_data_content_inner.dart';
-import 'package:openapi/src/model/respond_articles_data_content_inner_user.dart';
-import 'package:openapi/src/model/respond_articles_data_content_inner_user_role.dart';
+import 'package:openapi/src/model/respond_auction.dart';
+import 'package:openapi/src/model/respond_auction_data.dart';
+import 'package:openapi/src/model/respond_auction_data_files_inner.dart';
+import 'package:openapi/src/model/respond_auction_user.dart';
+import 'package:openapi/src/model/respond_auctions.dart';
+import 'package:openapi/src/model/respond_auctions_data.dart';
+import 'package:openapi/src/model/respond_auctions_data_content_inner.dart';
+import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner.dart';
+import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer.dart';
+import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer_role.dart';
+import 'package:openapi/src/model/respond_auctions_data_content_inner_seller.dart';
 import 'package:openapi/src/model/respond_contestan_nominations.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
@@ -133,6 +143,7 @@ part 'serializers.g.dart';
 
 @SerializersFor([
   RequestArticle,
+  RequestAuction,
   RequestChangePassword,
   RequestContestanNomination,
   RequestContestant,
@@ -161,8 +172,17 @@ part 'serializers.g.dart';
   RespondArticles,
   RespondArticlesData,
   RespondArticlesDataContentInner,
-  RespondArticlesDataContentInnerUser,
-  RespondArticlesDataContentInnerUserRole,
+  RespondAuction,
+  RespondAuctionData,
+  RespondAuctionDataFilesInner,
+  RespondAuctionUser,
+  RespondAuctions,
+  RespondAuctionsData,
+  RespondAuctionsDataContentInner,
+  RespondAuctionsDataContentInnerBiddersInner,
+  RespondAuctionsDataContentInnerBiddersInnerBuyer,
+  RespondAuctionsDataContentInnerBiddersInnerBuyerRole,
+  RespondAuctionsDataContentInnerSeller,
   RespondContestanNominations,
   RespondContestanNominationsData,
   RespondContestanNominationsDataContentInner,
