@@ -289,16 +289,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/auction_api_test.dart
-test/request_auction_test.dart
-test/respond_auction_data_files_inner_test.dart
-test/respond_auction_data_test.dart
-test/respond_auction_test.dart
-test/respond_auction_user_test.dart
-test/respond_auctions_data_content_inner_bidders_inner_buyer_role_test.dart
-test/respond_auctions_data_content_inner_bidders_inner_buyer_test.dart
-test/respond_auctions_data_content_inner_bidders_inner_test.dart
-test/respond_auctions_data_content_inner_seller_test.dart
-test/respond_auctions_data_content_inner_test.dart
-test/respond_auctions_data_test.dart
-test/respond_auctions_test.dart

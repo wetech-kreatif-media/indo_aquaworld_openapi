@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAuctions**
-> RespondAuctions getAuctions(sort, direction, pageNumber, pageSize, name)
+> RespondAuctions getAuctions(sort, direction, pageNumber, pageSize, name, publishStatus)
 
 Get Auctions
 
@@ -75,9 +75,10 @@ final String direction = direction_example; // String |
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String name = name_example; // String | 
+final String publishStatus = publishStatus_example; // String | 
 
 try {
-    final response = api.getAuctions(sort, direction, pageNumber, pageSize, name);
+    final response = api.getAuctions(sort, direction, pageNumber, pageSize, name, publishStatus);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling AuctionApi->getAuctions: $e\n');
@@ -93,6 +94,7 @@ Name | Type | Description  | Notes
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **name** | **String**|  | [optional] 
+ **publishStatus** | **String**|  | [optional] [default to 'ACTIVE']
 
 ### Return type
 

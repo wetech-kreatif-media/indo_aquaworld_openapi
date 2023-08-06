@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getArticles**
-> RespondArticles getArticles(sort, direction, pageNumber, pageSize, title)
+> RespondArticles getArticles(sort, direction, pageNumber, pageSize, title, publishStatus)
 
 Get Articles
 
@@ -78,9 +78,10 @@ final String direction = direction_example; // String |
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String title = title_example; // String | 
+final String publishStatus = publishStatus_example; // String | 
 
 try {
-    final response = api.getArticles(sort, direction, pageNumber, pageSize, title);
+    final response = api.getArticles(sort, direction, pageNumber, pageSize, title, publishStatus);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ArticleApi->getArticles: $e\n');
@@ -96,6 +97,7 @@ Name | Type | Description  | Notes
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **title** | **String**|  | [optional] 
+ **publishStatus** | **String**|  | [optional] [default to 'DRAFT']
 
 ### Return type
 
