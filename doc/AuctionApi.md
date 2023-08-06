@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAuctionUser**](AuctionApi.md#getauctionuser) | **GET** /pubcli/auction-user | Get Auction User
+[**getAuctionUser**](AuctionApi.md#getauctionuser) | **GET** /public/auction-user | Get Auction User
 [**getAuctions**](AuctionApi.md#getauctions) | **GET** /public/auctions | Get Auctions
 [**getDetailAuction**](AuctionApi.md#getdetailauction) | **GET** /public/detail-auction/{auctionId} | Get Detail Auction
 [**postAuction**](AuctionApi.md#postauction) | **POST** /public/auction | Post Auction

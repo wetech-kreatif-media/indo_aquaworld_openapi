@@ -68,7 +68,7 @@ Class | Method | HTTP request | Description
 [*ArticleApi*](doc/ArticleApi.md) | [**getArticles**](doc/ArticleApi.md#getarticles) | **GET** /public/articles | Get Articles
 [*ArticleApi*](doc/ArticleApi.md) | [**postArticle**](doc/ArticleApi.md#postarticle) | **POST** /public/article | Post Article
 [*ArticleApi*](doc/ArticleApi.md) | [**putArticle**](doc/ArticleApi.md#putarticle) | **PUT** /public/article/{articleId} | Put Article
-[*AuctionApi*](doc/AuctionApi.md) | [**getAuctionUser**](doc/AuctionApi.md#getauctionuser) | **GET** /pubcli/auction-user | Get Auction User
+[*AuctionApi*](doc/AuctionApi.md) | [**getAuctionUser**](doc/AuctionApi.md#getauctionuser) | **GET** /public/auction-user | Get Auction User
 [*AuctionApi*](doc/AuctionApi.md) | [**getAuctions**](doc/AuctionApi.md#getauctions) | **GET** /public/auctions | Get Auctions
 [*AuctionApi*](doc/AuctionApi.md) | [**getDetailAuction**](doc/AuctionApi.md#getdetailauction) | **GET** /public/detail-auction/{auctionId} | Get Detail Auction
 [*AuctionApi*](doc/AuctionApi.md) | [**postAuction**](doc/AuctionApi.md#postauction) | **POST** /public/auction | Post Auction

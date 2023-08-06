@@ -43,7 +43,7 @@ class AuctionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/pubcli/auction-user';
+    final _path = r'/public/auction-user';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
