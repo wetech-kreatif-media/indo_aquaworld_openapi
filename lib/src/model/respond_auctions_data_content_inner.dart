@@ -43,22 +43,22 @@ abstract class RespondAuctionsDataContentInner implements Built<RespondAuctionsD
   String get id;
 
   @BuiltValueField(wireName: r'createdBy')
-  String get createdBy;
+  String? get createdBy;
 
   @BuiltValueField(wireName: r'updatedBy')
-  String get updatedBy;
+  String? get updatedBy;
 
   @BuiltValueField(wireName: r'created')
-  String get created;
+  String? get created;
 
   @BuiltValueField(wireName: r'updated')
-  String get updated;
+  String? get updated;
 
   @BuiltValueField(wireName: r'deleted')
-  num get deleted;
+  num? get deleted;
 
   @BuiltValueField(wireName: r'recordStatus')
-  String get recordStatus;
+  String? get recordStatus;
 
   @BuiltValueField(wireName: r'name')
   String get name;
@@ -67,16 +67,16 @@ abstract class RespondAuctionsDataContentInner implements Built<RespondAuctionsD
   String get description;
 
   @BuiltValueField(wireName: r'photo1')
-  String get photo1;
+  String? get photo1;
 
   @BuiltValueField(wireName: r'photo2')
-  String get photo2;
+  String? get photo2;
 
   @BuiltValueField(wireName: r'photo3')
-  String get photo3;
+  String? get photo3;
 
   @BuiltValueField(wireName: r'photo4')
-  String get photo4;
+  String? get photo4;
 
   @BuiltValueField(wireName: r'linkVideo')
   String get linkVideo;
@@ -136,36 +136,48 @@ class _$RespondAuctionsDataContentInnerSerializer implements PrimitiveSerializer
       object.id,
       specifiedType: const FullType(String),
     );
-    yield r'createdBy';
-    yield serializers.serialize(
-      object.createdBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'updatedBy';
-    yield serializers.serialize(
-      object.updatedBy,
-      specifiedType: const FullType(String),
-    );
-    yield r'created';
-    yield serializers.serialize(
-      object.created,
-      specifiedType: const FullType(String),
-    );
-    yield r'updated';
-    yield serializers.serialize(
-      object.updated,
-      specifiedType: const FullType(String),
-    );
-    yield r'deleted';
-    yield serializers.serialize(
-      object.deleted,
-      specifiedType: const FullType(num),
-    );
-    yield r'recordStatus';
-    yield serializers.serialize(
-      object.recordStatus,
-      specifiedType: const FullType(String),
-    );
+    if (object.createdBy != null) {
+      yield r'createdBy';
+      yield serializers.serialize(
+        object.createdBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updatedBy != null) {
+      yield r'updatedBy';
+      yield serializers.serialize(
+        object.updatedBy,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.created != null) {
+      yield r'created';
+      yield serializers.serialize(
+        object.created,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.updated != null) {
+      yield r'updated';
+      yield serializers.serialize(
+        object.updated,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.deleted != null) {
+      yield r'deleted';
+      yield serializers.serialize(
+        object.deleted,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.recordStatus != null) {
+      yield r'recordStatus';
+      yield serializers.serialize(
+        object.recordStatus,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'name';
     yield serializers.serialize(
       object.name,
@@ -176,26 +188,34 @@ class _$RespondAuctionsDataContentInnerSerializer implements PrimitiveSerializer
       object.description,
       specifiedType: const FullType(String),
     );
-    yield r'photo1';
-    yield serializers.serialize(
-      object.photo1,
-      specifiedType: const FullType(String),
-    );
-    yield r'photo2';
-    yield serializers.serialize(
-      object.photo2,
-      specifiedType: const FullType(String),
-    );
-    yield r'photo3';
-    yield serializers.serialize(
-      object.photo3,
-      specifiedType: const FullType(String),
-    );
-    yield r'photo4';
-    yield serializers.serialize(
-      object.photo4,
-      specifiedType: const FullType(String),
-    );
+    if (object.photo1 != null) {
+      yield r'photo1';
+      yield serializers.serialize(
+        object.photo1,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.photo2 != null) {
+      yield r'photo2';
+      yield serializers.serialize(
+        object.photo2,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.photo3 != null) {
+      yield r'photo3';
+      yield serializers.serialize(
+        object.photo3,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.photo4 != null) {
+      yield r'photo4';
+      yield serializers.serialize(
+        object.photo4,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'linkVideo';
     yield serializers.serialize(
       object.linkVideo,

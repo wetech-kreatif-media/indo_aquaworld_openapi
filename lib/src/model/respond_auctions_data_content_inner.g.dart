@@ -11,29 +11,29 @@ class _$RespondAuctionsDataContentInner
   @override
   final String id;
   @override
-  final String createdBy;
+  final String? createdBy;
   @override
-  final String updatedBy;
+  final String? updatedBy;
   @override
-  final String created;
+  final String? created;
   @override
-  final String updated;
+  final String? updated;
   @override
-  final num deleted;
+  final num? deleted;
   @override
-  final String recordStatus;
+  final String? recordStatus;
   @override
   final String name;
   @override
   final String description;
   @override
-  final String photo1;
+  final String? photo1;
   @override
-  final String photo2;
+  final String? photo2;
   @override
-  final String photo3;
+  final String? photo3;
   @override
-  final String photo4;
+  final String? photo4;
   @override
   final String linkVideo;
   @override
@@ -61,18 +61,18 @@ class _$RespondAuctionsDataContentInner
 
   _$RespondAuctionsDataContentInner._(
       {required this.id,
-      required this.createdBy,
-      required this.updatedBy,
-      required this.created,
-      required this.updated,
-      required this.deleted,
-      required this.recordStatus,
+      this.createdBy,
+      this.updatedBy,
+      this.created,
+      this.updated,
+      this.deleted,
+      this.recordStatus,
       required this.name,
       required this.description,
-      required this.photo1,
-      required this.photo2,
-      required this.photo3,
-      required this.photo4,
+      this.photo1,
+      this.photo2,
+      this.photo3,
+      this.photo4,
       required this.linkVideo,
       required this.price,
       required this.multipleBid,
@@ -87,29 +87,9 @@ class _$RespondAuctionsDataContentInner
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondAuctionsDataContentInner', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        createdBy, r'RespondAuctionsDataContentInner', 'createdBy');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedBy, r'RespondAuctionsDataContentInner', 'updatedBy');
-    BuiltValueNullFieldError.checkNotNull(
-        created, r'RespondAuctionsDataContentInner', 'created');
-    BuiltValueNullFieldError.checkNotNull(
-        updated, r'RespondAuctionsDataContentInner', 'updated');
-    BuiltValueNullFieldError.checkNotNull(
-        deleted, r'RespondAuctionsDataContentInner', 'deleted');
-    BuiltValueNullFieldError.checkNotNull(
-        recordStatus, r'RespondAuctionsDataContentInner', 'recordStatus');
-    BuiltValueNullFieldError.checkNotNull(
         name, r'RespondAuctionsDataContentInner', 'name');
     BuiltValueNullFieldError.checkNotNull(
         description, r'RespondAuctionsDataContentInner', 'description');
-    BuiltValueNullFieldError.checkNotNull(
-        photo1, r'RespondAuctionsDataContentInner', 'photo1');
-    BuiltValueNullFieldError.checkNotNull(
-        photo2, r'RespondAuctionsDataContentInner', 'photo2');
-    BuiltValueNullFieldError.checkNotNull(
-        photo3, r'RespondAuctionsDataContentInner', 'photo3');
-    BuiltValueNullFieldError.checkNotNull(
-        photo4, r'RespondAuctionsDataContentInner', 'photo4');
     BuiltValueNullFieldError.checkNotNull(
         linkVideo, r'RespondAuctionsDataContentInner', 'linkVideo');
     BuiltValueNullFieldError.checkNotNull(
@@ -392,29 +372,30 @@ class RespondAuctionsDataContentInnerBuilder
           new _$RespondAuctionsDataContentInner._(
               id: BuiltValueNullFieldError.checkNotNull(
                   id, r'RespondAuctionsDataContentInner', 'id'),
-              createdBy: BuiltValueNullFieldError.checkNotNull(
-                  createdBy, r'RespondAuctionsDataContentInner', 'createdBy'),
-              updatedBy: BuiltValueNullFieldError.checkNotNull(
-                  updatedBy, r'RespondAuctionsDataContentInner', 'updatedBy'),
-              created: BuiltValueNullFieldError.checkNotNull(
-                  created, r'RespondAuctionsDataContentInner', 'created'),
-              updated: BuiltValueNullFieldError.checkNotNull(
-                  updated, r'RespondAuctionsDataContentInner', 'updated'),
-              deleted: BuiltValueNullFieldError.checkNotNull(
-                  deleted, r'RespondAuctionsDataContentInner', 'deleted'),
-              recordStatus: BuiltValueNullFieldError.checkNotNull(recordStatus,
-                  r'RespondAuctionsDataContentInner', 'recordStatus'),
-              name: BuiltValueNullFieldError.checkNotNull(name, r'RespondAuctionsDataContentInner', 'name'),
-              description: BuiltValueNullFieldError.checkNotNull(description, r'RespondAuctionsDataContentInner', 'description'),
-              photo1: BuiltValueNullFieldError.checkNotNull(photo1, r'RespondAuctionsDataContentInner', 'photo1'),
-              photo2: BuiltValueNullFieldError.checkNotNull(photo2, r'RespondAuctionsDataContentInner', 'photo2'),
-              photo3: BuiltValueNullFieldError.checkNotNull(photo3, r'RespondAuctionsDataContentInner', 'photo3'),
-              photo4: BuiltValueNullFieldError.checkNotNull(photo4, r'RespondAuctionsDataContentInner', 'photo4'),
-              linkVideo: BuiltValueNullFieldError.checkNotNull(linkVideo, r'RespondAuctionsDataContentInner', 'linkVideo'),
-              price: BuiltValueNullFieldError.checkNotNull(price, r'RespondAuctionsDataContentInner', 'price'),
-              multipleBid: BuiltValueNullFieldError.checkNotNull(multipleBid, r'RespondAuctionsDataContentInner', 'multipleBid'),
-              openBid: BuiltValueNullFieldError.checkNotNull(openBid, r'RespondAuctionsDataContentInner', 'openBid'),
-              lastBid: BuiltValueNullFieldError.checkNotNull(lastBid, r'RespondAuctionsDataContentInner', 'lastBid'),
+              createdBy: createdBy,
+              updatedBy: updatedBy,
+              created: created,
+              updated: updated,
+              deleted: deleted,
+              recordStatus: recordStatus,
+              name: BuiltValueNullFieldError.checkNotNull(
+                  name, r'RespondAuctionsDataContentInner', 'name'),
+              description: BuiltValueNullFieldError.checkNotNull(
+                  description, r'RespondAuctionsDataContentInner', 'description'),
+              photo1: photo1,
+              photo2: photo2,
+              photo3: photo3,
+              photo4: photo4,
+              linkVideo: BuiltValueNullFieldError.checkNotNull(
+                  linkVideo, r'RespondAuctionsDataContentInner', 'linkVideo'),
+              price: BuiltValueNullFieldError.checkNotNull(
+                  price, r'RespondAuctionsDataContentInner', 'price'),
+              multipleBid: BuiltValueNullFieldError.checkNotNull(
+                  multipleBid, r'RespondAuctionsDataContentInner', 'multipleBid'),
+              openBid: BuiltValueNullFieldError.checkNotNull(
+                  openBid, r'RespondAuctionsDataContentInner', 'openBid'),
+              lastBid:
+                  BuiltValueNullFieldError.checkNotNull(lastBid, r'RespondAuctionsDataContentInner', 'lastBid'),
               seller: seller.build(),
               publishDate: BuiltValueNullFieldError.checkNotNull(publishDate, r'RespondAuctionsDataContentInner', 'publishDate'),
               bidders: bidders.build(),

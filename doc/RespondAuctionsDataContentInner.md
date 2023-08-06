@@ -9,18 +9,18 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**createdBy** | **String** |  | 
-**updatedBy** | **String** |  | 
-**created** | **String** |  | 
-**updated** | **String** |  | 
-**deleted** | **num** |  | 
-**recordStatus** | **String** |  | 
+**createdBy** | **String** |  | [optional] 
+**updatedBy** | **String** |  | [optional] 
+**created** | **String** |  | [optional] 
+**updated** | **String** |  | [optional] 
+**deleted** | **num** |  | [optional] 
+**recordStatus** | **String** |  | [optional] 
 **name** | **String** |  | 
 **description** | **String** |  | 
-**photo1** | **String** |  | 
-**photo2** | **String** |  | 
-**photo3** | **String** |  | 
-**photo4** | **String** |  | 
+**photo1** | **String** |  | [optional] 
+**photo2** | **String** |  | [optional] 
+**photo3** | **String** |  | [optional] 
+**photo4** | **String** |  | [optional] 
 **linkVideo** | **String** |  | 
 **price** | **num** |  | 
 **multipleBid** | **num** |  | 
