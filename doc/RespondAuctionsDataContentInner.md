@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **openBid** | **String** |  | 
 **lastBid** | **num** |  | [optional] 
 **seller** | [**RespondAuctionsDataContentInnerSeller**](RespondAuctionsDataContentInnerSeller.md) |  | 
-**publishDate** | **String** |  | 
+**publishDate** | **String** |  | [optional] 
 **bidders** | [**BuiltList&lt;RespondAuctionsDataContentInnerBiddersInner&gt;**](RespondAuctionsDataContentInnerBiddersInner.md) |  | 
 **publishStatus** | **String** |  | 
 **auctionStatus** | **String** |  | 

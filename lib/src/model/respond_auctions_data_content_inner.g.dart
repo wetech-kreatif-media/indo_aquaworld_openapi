@@ -47,7 +47,7 @@ class _$RespondAuctionsDataContentInner
   @override
   final RespondAuctionsDataContentInnerSeller seller;
   @override
-  final String publishDate;
+  final String? publishDate;
   @override
   final BuiltList<RespondAuctionsDataContentInnerBiddersInner> bidders;
   @override
@@ -79,7 +79,7 @@ class _$RespondAuctionsDataContentInner
       required this.openBid,
       this.lastBid,
       required this.seller,
-      required this.publishDate,
+      this.publishDate,
       required this.bidders,
       required this.publishStatus,
       required this.auctionStatus})
@@ -98,8 +98,6 @@ class _$RespondAuctionsDataContentInner
         openBid, r'RespondAuctionsDataContentInner', 'openBid');
     BuiltValueNullFieldError.checkNotNull(
         seller, r'RespondAuctionsDataContentInner', 'seller');
-    BuiltValueNullFieldError.checkNotNull(
-        publishDate, r'RespondAuctionsDataContentInner', 'publishDate');
     BuiltValueNullFieldError.checkNotNull(
         bidders, r'RespondAuctionsDataContentInner', 'bidders');
     BuiltValueNullFieldError.checkNotNull(
@@ -391,12 +389,12 @@ class RespondAuctionsDataContentInnerBuilder
                   openBid, r'RespondAuctionsDataContentInner', 'openBid'),
               lastBid: lastBid,
               seller: seller.build(),
-              publishDate: BuiltValueNullFieldError.checkNotNull(
-                  publishDate, r'RespondAuctionsDataContentInner', 'publishDate'),
+              publishDate: publishDate,
               bidders: bidders.build(),
               publishStatus: BuiltValueNullFieldError.checkNotNull(
                   publishStatus, r'RespondAuctionsDataContentInner', 'publishStatus'),
-              auctionStatus: BuiltValueNullFieldError.checkNotNull(auctionStatus, r'RespondAuctionsDataContentInner', 'auctionStatus'));
+              auctionStatus: BuiltValueNullFieldError.checkNotNull(
+                  auctionStatus, r'RespondAuctionsDataContentInner', 'auctionStatus'));
     } catch (_) {
       late String _$failedField;
       try {

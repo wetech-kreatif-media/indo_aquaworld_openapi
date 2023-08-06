@@ -97,7 +97,7 @@ abstract class RespondAuctionsDataContentInner implements Built<RespondAuctionsD
   RespondAuctionsDataContentInnerSeller get seller;
 
   @BuiltValueField(wireName: r'publishDate')
-  String get publishDate;
+  String? get publishDate;
 
   @BuiltValueField(wireName: r'bidders')
   BuiltList<RespondAuctionsDataContentInnerBiddersInner> get bidders;
@@ -250,11 +250,13 @@ class _$RespondAuctionsDataContentInnerSerializer implements PrimitiveSerializer
       object.seller,
       specifiedType: const FullType(RespondAuctionsDataContentInnerSeller),
     );
-    yield r'publishDate';
-    yield serializers.serialize(
-      object.publishDate,
-      specifiedType: const FullType(String),
-    );
+    if (object.publishDate != null) {
+      yield r'publishDate';
+      yield serializers.serialize(
+        object.publishDate,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'bidders';
     yield serializers.serialize(
       object.bidders,
