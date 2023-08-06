@@ -79,7 +79,7 @@ abstract class RespondAuctionsDataContentInner implements Built<RespondAuctionsD
   String? get photo4;
 
   @BuiltValueField(wireName: r'linkVideo')
-  String get linkVideo;
+  String? get linkVideo;
 
   @BuiltValueField(wireName: r'price')
   num get price;
@@ -91,7 +91,7 @@ abstract class RespondAuctionsDataContentInner implements Built<RespondAuctionsD
   String get openBid;
 
   @BuiltValueField(wireName: r'lastBid')
-  num get lastBid;
+  num? get lastBid;
 
   @BuiltValueField(wireName: r'seller')
   RespondAuctionsDataContentInnerSeller get seller;
@@ -216,11 +216,13 @@ class _$RespondAuctionsDataContentInnerSerializer implements PrimitiveSerializer
         specifiedType: const FullType(String),
       );
     }
-    yield r'linkVideo';
-    yield serializers.serialize(
-      object.linkVideo,
-      specifiedType: const FullType(String),
-    );
+    if (object.linkVideo != null) {
+      yield r'linkVideo';
+      yield serializers.serialize(
+        object.linkVideo,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'price';
     yield serializers.serialize(
       object.price,
@@ -236,11 +238,13 @@ class _$RespondAuctionsDataContentInnerSerializer implements PrimitiveSerializer
       object.openBid,
       specifiedType: const FullType(String),
     );
-    yield r'lastBid';
-    yield serializers.serialize(
-      object.lastBid,
-      specifiedType: const FullType(num),
-    );
+    if (object.lastBid != null) {
+      yield r'lastBid';
+      yield serializers.serialize(
+        object.lastBid,
+        specifiedType: const FullType(num),
+      );
+    }
     yield r'seller';
     yield serializers.serialize(
       object.seller,

@@ -21,11 +21,11 @@ Name | Type | Description | Notes
 **photo2** | **String** |  | [optional] 
 **photo3** | **String** |  | [optional] 
 **photo4** | **String** |  | [optional] 
-**linkVideo** | **String** |  | 
+**linkVideo** | **String** |  | [optional] 
 **price** | **num** |  | 
 **multipleBid** | **num** |  | 
 **openBid** | **String** |  | 
-**lastBid** | **num** |  | 
+**lastBid** | **num** |  | [optional] 
 **seller** | [**RespondAuctionsDataContentInnerSeller**](RespondAuctionsDataContentInnerSeller.md) |  | 
 **publishDate** | **String** |  | 
 **bidders** | [**BuiltList&lt;RespondAuctionsDataContentInnerBiddersInner&gt;**](RespondAuctionsDataContentInnerBiddersInner.md) |  | 

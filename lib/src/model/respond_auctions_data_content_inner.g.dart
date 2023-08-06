@@ -35,7 +35,7 @@ class _$RespondAuctionsDataContentInner
   @override
   final String? photo4;
   @override
-  final String linkVideo;
+  final String? linkVideo;
   @override
   final num price;
   @override
@@ -43,7 +43,7 @@ class _$RespondAuctionsDataContentInner
   @override
   final String openBid;
   @override
-  final num lastBid;
+  final num? lastBid;
   @override
   final RespondAuctionsDataContentInnerSeller seller;
   @override
@@ -73,11 +73,11 @@ class _$RespondAuctionsDataContentInner
       this.photo2,
       this.photo3,
       this.photo4,
-      required this.linkVideo,
+      this.linkVideo,
       required this.price,
       required this.multipleBid,
       required this.openBid,
-      required this.lastBid,
+      this.lastBid,
       required this.seller,
       required this.publishDate,
       required this.bidders,
@@ -91,15 +91,11 @@ class _$RespondAuctionsDataContentInner
     BuiltValueNullFieldError.checkNotNull(
         description, r'RespondAuctionsDataContentInner', 'description');
     BuiltValueNullFieldError.checkNotNull(
-        linkVideo, r'RespondAuctionsDataContentInner', 'linkVideo');
-    BuiltValueNullFieldError.checkNotNull(
         price, r'RespondAuctionsDataContentInner', 'price');
     BuiltValueNullFieldError.checkNotNull(
         multipleBid, r'RespondAuctionsDataContentInner', 'multipleBid');
     BuiltValueNullFieldError.checkNotNull(
         openBid, r'RespondAuctionsDataContentInner', 'openBid');
-    BuiltValueNullFieldError.checkNotNull(
-        lastBid, r'RespondAuctionsDataContentInner', 'lastBid');
     BuiltValueNullFieldError.checkNotNull(
         seller, r'RespondAuctionsDataContentInner', 'seller');
     BuiltValueNullFieldError.checkNotNull(
@@ -386,20 +382,20 @@ class RespondAuctionsDataContentInnerBuilder
               photo2: photo2,
               photo3: photo3,
               photo4: photo4,
-              linkVideo: BuiltValueNullFieldError.checkNotNull(
-                  linkVideo, r'RespondAuctionsDataContentInner', 'linkVideo'),
+              linkVideo: linkVideo,
               price: BuiltValueNullFieldError.checkNotNull(
                   price, r'RespondAuctionsDataContentInner', 'price'),
               multipleBid: BuiltValueNullFieldError.checkNotNull(
                   multipleBid, r'RespondAuctionsDataContentInner', 'multipleBid'),
               openBid: BuiltValueNullFieldError.checkNotNull(
                   openBid, r'RespondAuctionsDataContentInner', 'openBid'),
-              lastBid:
-                  BuiltValueNullFieldError.checkNotNull(lastBid, r'RespondAuctionsDataContentInner', 'lastBid'),
+              lastBid: lastBid,
               seller: seller.build(),
-              publishDate: BuiltValueNullFieldError.checkNotNull(publishDate, r'RespondAuctionsDataContentInner', 'publishDate'),
+              publishDate: BuiltValueNullFieldError.checkNotNull(
+                  publishDate, r'RespondAuctionsDataContentInner', 'publishDate'),
               bidders: bidders.build(),
-              publishStatus: BuiltValueNullFieldError.checkNotNull(publishStatus, r'RespondAuctionsDataContentInner', 'publishStatus'),
+              publishStatus: BuiltValueNullFieldError.checkNotNull(
+                  publishStatus, r'RespondAuctionsDataContentInner', 'publishStatus'),
               auctionStatus: BuiltValueNullFieldError.checkNotNull(auctionStatus, r'RespondAuctionsDataContentInner', 'auctionStatus'));
     } catch (_) {
       late String _$failedField;
