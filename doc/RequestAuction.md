@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **photo4** | **String** |  | [optional] 
 **description** | **String** |  | 
 **linkVideo** | **String** |  | [optional] 
-**user** | **String** |  | 
+**user** | **String** |  | [optional] 
 **openBid** | **String** |  | 
 **multipleBid** | **num** |  | 
 **price** | **num** |  | 

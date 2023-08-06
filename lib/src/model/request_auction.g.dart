@@ -22,7 +22,7 @@ class _$RequestAuction extends RequestAuction {
   @override
   final String? linkVideo;
   @override
-  final String user;
+  final String? user;
   @override
   final String openBid;
   @override
@@ -43,7 +43,7 @@ class _$RequestAuction extends RequestAuction {
       this.photo4,
       required this.description,
       this.linkVideo,
-      required this.user,
+      this.user,
       required this.openBid,
       required this.multipleBid,
       required this.price,
@@ -52,7 +52,6 @@ class _$RequestAuction extends RequestAuction {
     BuiltValueNullFieldError.checkNotNull(name, r'RequestAuction', 'name');
     BuiltValueNullFieldError.checkNotNull(
         description, r'RequestAuction', 'description');
-    BuiltValueNullFieldError.checkNotNull(user, r'RequestAuction', 'user');
     BuiltValueNullFieldError.checkNotNull(
         openBid, r'RequestAuction', 'openBid');
     BuiltValueNullFieldError.checkNotNull(
@@ -229,8 +228,7 @@ class RequestAuctionBuilder
             description: BuiltValueNullFieldError.checkNotNull(
                 description, r'RequestAuction', 'description'),
             linkVideo: linkVideo,
-            user: BuiltValueNullFieldError.checkNotNull(
-                user, r'RequestAuction', 'user'),
+            user: user,
             openBid: BuiltValueNullFieldError.checkNotNull(
                 openBid, r'RequestAuction', 'openBid'),
             multipleBid: BuiltValueNullFieldError.checkNotNull(

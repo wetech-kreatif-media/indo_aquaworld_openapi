@@ -47,7 +47,7 @@ abstract class RequestAuction implements Built<RequestAuction, RequestAuctionBui
   String? get linkVideo;
 
   @BuiltValueField(wireName: r'user')
-  String get user;
+  String? get user;
 
   @BuiltValueField(wireName: r'openBid')
   String get openBid;
@@ -129,11 +129,13 @@ class _$RequestAuctionSerializer implements PrimitiveSerializer<RequestAuction> 
         specifiedType: const FullType(String),
       );
     }
-    yield r'user';
-    yield serializers.serialize(
-      object.user,
-      specifiedType: const FullType(String),
-    );
+    if (object.user != null) {
+      yield r'user';
+      yield serializers.serialize(
+        object.user,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'openBid';
     yield serializers.serialize(
       object.openBid,
