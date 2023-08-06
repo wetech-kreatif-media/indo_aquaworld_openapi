@@ -22,6 +22,7 @@ part 'respond_auction_data.g.dart';
 /// * [lastBid] 
 /// * [openBid] 
 /// * [publishDate] 
+/// * [updated] 
 /// * [bidders] 
 /// * [publishStatus] 
 /// * [auctionStatus] 
@@ -49,6 +50,9 @@ abstract class RespondAuctionData implements Built<RespondAuctionData, RespondAu
 
   @BuiltValueField(wireName: r'publishDate')
   String? get publishDate;
+
+  @BuiltValueField(wireName: r'updated')
+  String get updated;
 
   @BuiltValueField(wireName: r'bidders')
   BuiltList<RespondAuctionsDataContentInnerBiddersInner>? get bidders;
@@ -131,6 +135,11 @@ class _$RespondAuctionDataSerializer implements PrimitiveSerializer<RespondAucti
         specifiedType: const FullType(String),
       );
     }
+    yield r'updated';
+    yield serializers.serialize(
+      object.updated,
+      specifiedType: const FullType(String),
+    );
     if (object.bidders != null) {
       yield r'bidders';
       yield serializers.serialize(
@@ -235,6 +244,13 @@ class _$RespondAuctionDataSerializer implements PrimitiveSerializer<RespondAucti
             specifiedType: const FullType(String),
           ) as String;
           result.publishDate = valueDes;
+          break;
+        case r'updated':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.updated = valueDes;
           break;
         case r'bidders':
           final valueDes = serializers.deserialize(

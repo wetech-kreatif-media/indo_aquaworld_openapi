@@ -22,6 +22,8 @@ class _$RespondAuctionData extends RespondAuctionData {
   @override
   final String? publishDate;
   @override
+  final String updated;
+  @override
   final BuiltList<RespondAuctionsDataContentInnerBiddersInner>? bidders;
   @override
   final String publishStatus;
@@ -44,6 +46,7 @@ class _$RespondAuctionData extends RespondAuctionData {
       this.lastBid,
       this.openBid,
       this.publishDate,
+      required this.updated,
       this.bidders,
       required this.publishStatus,
       this.auctionStatus,
@@ -55,6 +58,8 @@ class _$RespondAuctionData extends RespondAuctionData {
         price, r'RespondAuctionData', 'price');
     BuiltValueNullFieldError.checkNotNull(
         multipleBid, r'RespondAuctionData', 'multipleBid');
+    BuiltValueNullFieldError.checkNotNull(
+        updated, r'RespondAuctionData', 'updated');
     BuiltValueNullFieldError.checkNotNull(
         publishStatus, r'RespondAuctionData', 'publishStatus');
   }
@@ -79,6 +84,7 @@ class _$RespondAuctionData extends RespondAuctionData {
         lastBid == other.lastBid &&
         openBid == other.openBid &&
         publishDate == other.publishDate &&
+        updated == other.updated &&
         bidders == other.bidders &&
         publishStatus == other.publishStatus &&
         auctionStatus == other.auctionStatus &&
@@ -96,6 +102,7 @@ class _$RespondAuctionData extends RespondAuctionData {
     _$hash = $jc(_$hash, lastBid.hashCode);
     _$hash = $jc(_$hash, openBid.hashCode);
     _$hash = $jc(_$hash, publishDate.hashCode);
+    _$hash = $jc(_$hash, updated.hashCode);
     _$hash = $jc(_$hash, bidders.hashCode);
     _$hash = $jc(_$hash, publishStatus.hashCode);
     _$hash = $jc(_$hash, auctionStatus.hashCode);
@@ -115,6 +122,7 @@ class _$RespondAuctionData extends RespondAuctionData {
           ..add('lastBid', lastBid)
           ..add('openBid', openBid)
           ..add('publishDate', publishDate)
+          ..add('updated', updated)
           ..add('bidders', bidders)
           ..add('publishStatus', publishStatus)
           ..add('auctionStatus', auctionStatus)
@@ -155,6 +163,10 @@ class RespondAuctionDataBuilder
   String? _publishDate;
   String? get publishDate => _$this._publishDate;
   set publishDate(String? publishDate) => _$this._publishDate = publishDate;
+
+  String? _updated;
+  String? get updated => _$this._updated;
+  set updated(String? updated) => _$this._updated = updated;
 
   ListBuilder<RespondAuctionsDataContentInnerBiddersInner>? _bidders;
   ListBuilder<RespondAuctionsDataContentInnerBiddersInner> get bidders =>
@@ -201,6 +213,7 @@ class RespondAuctionDataBuilder
       _lastBid = $v.lastBid;
       _openBid = $v.openBid;
       _publishDate = $v.publishDate;
+      _updated = $v.updated;
       _bidders = $v.bidders?.toBuilder();
       _publishStatus = $v.publishStatus;
       _auctionStatus = $v.auctionStatus;
@@ -240,6 +253,8 @@ class RespondAuctionDataBuilder
               lastBid: lastBid,
               openBid: openBid,
               publishDate: publishDate,
+              updated: BuiltValueNullFieldError.checkNotNull(
+                  updated, r'RespondAuctionData', 'updated'),
               bidders: _bidders?.build(),
               publishStatus: BuiltValueNullFieldError.checkNotNull(
                   publishStatus, r'RespondAuctionData', 'publishStatus'),

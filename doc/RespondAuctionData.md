@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **lastBid** | **num** |  | [optional] 
 **openBid** | **String** |  | [optional] 
 **publishDate** | **String** |  | [optional] 
+**updated** | **String** |  | 
 **bidders** | [**BuiltList&lt;RespondAuctionsDataContentInnerBiddersInner&gt;**](RespondAuctionsDataContentInnerBiddersInner.md) |  | [optional] 
 **publishStatus** | **String** |  | 
 **auctionStatus** | **String** |  | [optional] 
