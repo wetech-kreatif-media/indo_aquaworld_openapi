@@ -180,6 +180,7 @@ class BidApi {
   /// Masuk bid
   ///
   /// Parameters:
+  /// * [auctionId] - 
   /// * [requestBid] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -191,6 +192,7 @@ class BidApi {
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondGlobal>> postBid({ 
+    required String auctionId,
     RequestBid? requestBid,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -199,7 +201,7 @@ class BidApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/bid';
+    final _path = r'/public/bid/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{

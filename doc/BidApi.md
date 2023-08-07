@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getBidders**](BidApi.md#getbidders) | **GET** /public/bidder/{auctionId} | GetBidders
 [**getLastBid**](BidApi.md#getlastbid) | **GET** /public/last-bid/{auctionId} | GetLastBid
-[**postBid**](BidApi.md#postbid) | **POST** /public/bid | PostBid
+[**postBid**](BidApi.md#postbid) | **POST** /public/bid/{auctionId} | PostBid
 
 
 # **getBidders**
@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **postBid**
-> RespondGlobal postBid(requestBid)
+> RespondGlobal postBid(auctionId, requestBid)
 
 PostBid
 
@@ -118,10 +118,11 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getBidApi();
+final String auctionId = auctionId_example; // String | 
 final RequestBid requestBid = {"bidPrice":10000}; // RequestBid | 
 
 try {
-    final response = api.postBid(requestBid);
+    final response = api.postBid(auctionId, requestBid);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling BidApi->postBid: $e\n');
@@ -132,6 +133,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **auctionId** | **String**|  | 
  **requestBid** | [**RequestBid**](RequestBid.md)|  | [optional] 
 
 ### Return type

@@ -301,9 +301,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/bid_api_test.dart
-test/request_bid_test.dart
-test/respond_bidders_data_content_inner_test.dart
-test/respond_bidders_data_test.dart
-test/respond_bidders_test.dart
-test/respond_last_bid_test.dart
