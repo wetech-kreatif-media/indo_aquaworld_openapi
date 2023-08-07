@@ -15,6 +15,7 @@ part 'respond_auction_data.g.dart';
 /// RespondAuctionData
 ///
 /// Properties:
+/// * [id] 
 /// * [name] 
 /// * [description] 
 /// * [price] 
@@ -30,6 +31,9 @@ part 'respond_auction_data.g.dart';
 /// * [files] 
 @BuiltValue()
 abstract class RespondAuctionData implements Built<RespondAuctionData, RespondAuctionDataBuilder> {
+  @BuiltValueField(wireName: r'id')
+  String get id;
+
   @BuiltValueField(wireName: r'name')
   String get name;
 
@@ -92,6 +96,11 @@ class _$RespondAuctionDataSerializer implements PrimitiveSerializer<RespondAucti
     RespondAuctionData object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
     yield r'name';
     yield serializers.serialize(
       object.name,
@@ -196,6 +205,13 @@ class _$RespondAuctionDataSerializer implements PrimitiveSerializer<RespondAucti
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.id = valueDes;
+          break;
         case r'name':
           final valueDes = serializers.deserialize(
             value,

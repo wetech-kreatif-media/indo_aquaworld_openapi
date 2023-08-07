@@ -8,6 +8,8 @@ part of 'respond_auction_data.dart';
 
 class _$RespondAuctionData extends RespondAuctionData {
   @override
+  final String id;
+  @override
   final String name;
   @override
   final String? description;
@@ -39,7 +41,8 @@ class _$RespondAuctionData extends RespondAuctionData {
       (new RespondAuctionDataBuilder()..update(updates))._build();
 
   _$RespondAuctionData._(
-      {required this.name,
+      {required this.id,
+      required this.name,
       this.description,
       required this.price,
       required this.multipleBid,
@@ -53,6 +56,7 @@ class _$RespondAuctionData extends RespondAuctionData {
       this.seller,
       this.files})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(id, r'RespondAuctionData', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'RespondAuctionData', 'name');
     BuiltValueNullFieldError.checkNotNull(
         price, r'RespondAuctionData', 'price');
@@ -77,6 +81,7 @@ class _$RespondAuctionData extends RespondAuctionData {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RespondAuctionData &&
+        id == other.id &&
         name == other.name &&
         description == other.description &&
         price == other.price &&
@@ -95,6 +100,7 @@ class _$RespondAuctionData extends RespondAuctionData {
   @override
   int get hashCode {
     var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, price.hashCode);
@@ -115,6 +121,7 @@ class _$RespondAuctionData extends RespondAuctionData {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RespondAuctionData')
+          ..add('id', id)
           ..add('name', name)
           ..add('description', description)
           ..add('price', price)
@@ -135,6 +142,10 @@ class _$RespondAuctionData extends RespondAuctionData {
 class RespondAuctionDataBuilder
     implements Builder<RespondAuctionData, RespondAuctionDataBuilder> {
   _$RespondAuctionData? _$v;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;
@@ -206,6 +217,7 @@ class RespondAuctionDataBuilder
   RespondAuctionDataBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _id = $v.id;
       _name = $v.name;
       _description = $v.description;
       _price = $v.price;
@@ -243,6 +255,8 @@ class RespondAuctionDataBuilder
     try {
       _$result = _$v ??
           new _$RespondAuctionData._(
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondAuctionData', 'id'),
               name: BuiltValueNullFieldError.checkNotNull(
                   name, r'RespondAuctionData', 'name'),
               description: description,
