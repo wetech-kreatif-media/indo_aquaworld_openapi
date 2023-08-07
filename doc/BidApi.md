@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getBidders**](BidApi.md#getbidders) | **GET** /public/bidder/{auctionId} | GetBidders
+[**getBidders**](BidApi.md#getbidders) | **GET** /public/bidders/{auctionId} | GetBidders
 [**getLastBid**](BidApi.md#getlastbid) | **GET** /public/last-bid/{auctionId} | GetLastBid
 [**postBid**](BidApi.md#postbid) | **POST** /public/bid/{auctionId} | PostBid
 

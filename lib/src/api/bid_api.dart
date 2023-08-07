@@ -43,7 +43,7 @@ class BidApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/bidder/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
+    final _path = r'/public/bidders/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
