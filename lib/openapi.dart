@@ -11,6 +11,7 @@ export 'package:openapi/src/model/date.dart';
 
 export 'package:openapi/src/api/article_api.dart';
 export 'package:openapi/src/api/auction_api.dart';
+export 'package:openapi/src/api/bid_api.dart';
 export 'package:openapi/src/api/contestan_nomination_api.dart';
 export 'package:openapi/src/api/contestans_api.dart';
 export 'package:openapi/src/api/events_api.dart';
@@ -26,6 +27,7 @@ export 'package:openapi/src/api/users_api.dart';
 
 export 'package:openapi/src/model/request_article.dart';
 export 'package:openapi/src/model/request_auction.dart';
+export 'package:openapi/src/model/request_bid.dart';
 export 'package:openapi/src/model/request_change_password.dart';
 export 'package:openapi/src/model/request_contestan_nomination.dart';
 export 'package:openapi/src/model/request_contestant.dart';
@@ -65,6 +67,9 @@ export 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_in
 export 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer.dart';
 export 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer_role.dart';
 export 'package:openapi/src/model/respond_auctions_data_content_inner_seller.dart';
+export 'package:openapi/src/model/respond_bidders.dart';
+export 'package:openapi/src/model/respond_bidders_data.dart';
+export 'package:openapi/src/model/respond_bidders_data_content_inner.dart';
 export 'package:openapi/src/model/respond_contestan_nominations.dart';
 export 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 export 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
@@ -90,6 +95,7 @@ export 'package:openapi/src/model/respond_faqs_data.dart';
 export 'package:openapi/src/model/respond_faqs_data_content_inner.dart';
 export 'package:openapi/src/model/respond_global.dart';
 export 'package:openapi/src/model/respond_global_data.dart';
+export 'package:openapi/src/model/respond_last_bid.dart';
 export 'package:openapi/src/model/respond_location.dart';
 export 'package:openapi/src/model/respond_location_data.dart';
 export 'package:openapi/src/model/respond_locations.dart';

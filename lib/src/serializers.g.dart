@@ -9,6 +9,7 @@ part of 'serializers.dart';
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestArticle.serializer)
       ..add(RequestAuction.serializer)
+      ..add(RequestBid.serializer)
       ..add(RequestChangePassword.serializer)
       ..add(RequestContestanNomination.serializer)
       ..add(RequestContestant.serializer)
@@ -48,6 +49,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondAuctionsDataContentInnerBiddersInnerBuyer.serializer)
       ..add(RespondAuctionsDataContentInnerBiddersInnerBuyerRole.serializer)
       ..add(RespondAuctionsDataContentInnerSeller.serializer)
+      ..add(RespondBidders.serializer)
+      ..add(RespondBiddersData.serializer)
+      ..add(RespondBiddersDataContentInner.serializer)
       ..add(RespondContestanNominations.serializer)
       ..add(RespondContestanNominationsData.serializer)
       ..add(RespondContestanNominationsDataContentInner.serializer)
@@ -73,6 +77,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondFaqsDataContentInner.serializer)
       ..add(RespondGlobal.serializer)
       ..add(RespondGlobalData.serializer)
+      ..add(RespondLastBid.serializer)
       ..add(RespondLocation.serializer)
       ..add(RespondLocationData.serializer)
       ..add(RespondLocations.serializer)
@@ -167,6 +172,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RespondAuctionDataFilesInner)]),
           () => new ListBuilder<RespondAuctionDataFilesInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondBiddersDataContentInner)]),
+          () => new ListBuilder<RespondBiddersDataContentInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(RespondContestanNominationsDataContentInner)

@@ -16,6 +16,7 @@ import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/request_article.dart';
 import 'package:openapi/src/model/request_auction.dart';
+import 'package:openapi/src/model/request_bid.dart';
 import 'package:openapi/src/model/request_change_password.dart';
 import 'package:openapi/src/model/request_contestan_nomination.dart';
 import 'package:openapi/src/model/request_contestant.dart';
@@ -55,6 +56,9 @@ import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_in
 import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer.dart';
 import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer_role.dart';
 import 'package:openapi/src/model/respond_auctions_data_content_inner_seller.dart';
+import 'package:openapi/src/model/respond_bidders.dart';
+import 'package:openapi/src/model/respond_bidders_data.dart';
+import 'package:openapi/src/model/respond_bidders_data_content_inner.dart';
 import 'package:openapi/src/model/respond_contestan_nominations.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
@@ -80,6 +84,7 @@ import 'package:openapi/src/model/respond_faqs_data.dart';
 import 'package:openapi/src/model/respond_faqs_data_content_inner.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_global_data.dart';
+import 'package:openapi/src/model/respond_last_bid.dart';
 import 'package:openapi/src/model/respond_location.dart';
 import 'package:openapi/src/model/respond_location_data.dart';
 import 'package:openapi/src/model/respond_locations.dart';
@@ -144,6 +149,7 @@ part 'serializers.g.dart';
 @SerializersFor([
   RequestArticle,
   RequestAuction,
+  RequestBid,
   RequestChangePassword,
   RequestContestanNomination,
   RequestContestant,
@@ -183,6 +189,9 @@ part 'serializers.g.dart';
   RespondAuctionsDataContentInnerBiddersInnerBuyer,
   RespondAuctionsDataContentInnerBiddersInnerBuyerRole,
   RespondAuctionsDataContentInnerSeller,
+  RespondBidders,
+  RespondBiddersData,
+  RespondBiddersDataContentInner,
   RespondContestanNominations,
   RespondContestanNominationsData,
   RespondContestanNominationsDataContentInner,
@@ -208,6 +217,7 @@ part 'serializers.g.dart';
   RespondFaqsDataContentInner,
   RespondGlobal,
   RespondGlobalData,
+  RespondLastBid,
   RespondLocation,
   RespondLocationData,
   RespondLocations,

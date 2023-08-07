@@ -73,6 +73,9 @@ Class | Method | HTTP request | Description
 [*AuctionApi*](doc/AuctionApi.md) | [**getDetailAuction**](doc/AuctionApi.md#getdetailauction) | **GET** /public/detail-auction/{auctionId} | Get Detail Auction
 [*AuctionApi*](doc/AuctionApi.md) | [**postAuction**](doc/AuctionApi.md#postauction) | **POST** /public/auction | Post Auction
 [*AuctionApi*](doc/AuctionApi.md) | [**putAuction**](doc/AuctionApi.md#putauction) | **PUT** /public/auction/{auctionId} | Put Auction
+[*BidApi*](doc/BidApi.md) | [**getBidders**](doc/BidApi.md#getbidders) | **GET** /public/bidder/{auctionId} | GetBidders
+[*BidApi*](doc/BidApi.md) | [**getLastBid**](doc/BidApi.md#getlastbid) | **GET** /public/last-bid/{auctionId} | GetLastBid
+[*BidApi*](doc/BidApi.md) | [**postBid**](doc/BidApi.md#postbid) | **POST** /public/bid | PostBid
 [*ContestanNominationApi*](doc/ContestanNominationApi.md) | [**addEventNominationContestant**](doc/ContestanNominationApi.md#addeventnominationcontestant) | **POST** /public/event/{eventId}/contestan-nomination/{nominasiId} | Add Event Nomination Contestant
 [*ContestanNominationApi*](doc/ContestanNominationApi.md) | [**getEventNominationsContestants**](doc/ContestanNominationApi.md#geteventnominationscontestants) | **GET** /public/event/{eventId}/contestan-nomination/{nominasiId} | Get Event Nomination Contestants
 [*ContestanNominationApi*](doc/ContestanNominationApi.md) | [**putEventNominationContestant**](doc/ContestanNominationApi.md#puteventnominationcontestant) | **PUT** /public/event/{eventId}/contestan-nomination/{nominasiId}/{userId} | Update Event Nomination Contestant
@@ -134,6 +137,7 @@ Class | Method | HTTP request | Description
 
  - [RequestArticle](doc/RequestArticle.md)
  - [RequestAuction](doc/RequestAuction.md)
+ - [RequestBid](doc/RequestBid.md)
  - [RequestChangePassword](doc/RequestChangePassword.md)
  - [RequestContestanNomination](doc/RequestContestanNomination.md)
  - [RequestContestant](doc/RequestContestant.md)
@@ -173,6 +177,9 @@ Class | Method | HTTP request | Description
  - [RespondAuctionsDataContentInnerBiddersInnerBuyer](doc/RespondAuctionsDataContentInnerBiddersInnerBuyer.md)
  - [RespondAuctionsDataContentInnerBiddersInnerBuyerRole](doc/RespondAuctionsDataContentInnerBiddersInnerBuyerRole.md)
  - [RespondAuctionsDataContentInnerSeller](doc/RespondAuctionsDataContentInnerSeller.md)
+ - [RespondBidders](doc/RespondBidders.md)
+ - [RespondBiddersData](doc/RespondBiddersData.md)
+ - [RespondBiddersDataContentInner](doc/RespondBiddersDataContentInner.md)
  - [RespondContestanNominations](doc/RespondContestanNominations.md)
  - [RespondContestanNominationsData](doc/RespondContestanNominationsData.md)
  - [RespondContestanNominationsDataContentInner](doc/RespondContestanNominationsDataContentInner.md)
@@ -198,6 +205,7 @@ Class | Method | HTTP request | Description
  - [RespondFaqsDataContentInner](doc/RespondFaqsDataContentInner.md)
  - [RespondGlobal](doc/RespondGlobal.md)
  - [RespondGlobalData](doc/RespondGlobalData.md)
+ - [RespondLastBid](doc/RespondLastBid.md)
  - [RespondLocation](doc/RespondLocation.md)
  - [RespondLocationData](doc/RespondLocationData.md)
  - [RespondLocations](doc/RespondLocations.md)

@@ -11,6 +11,7 @@ import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
 import 'package:openapi/src/api/article_api.dart';
 import 'package:openapi/src/api/auction_api.dart';
+import 'package:openapi/src/api/bid_api.dart';
 import 'package:openapi/src/api/contestan_nomination_api.dart';
 import 'package:openapi/src/api/contestans_api.dart';
 import 'package:openapi/src/api/events_api.dart';
@@ -88,6 +89,12 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   AuctionApi getAuctionApi() {
     return AuctionApi(dio, serializers);
+  }
+
+  /// Get BidApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  BidApi getBidApi() {
+    return BidApi(dio, serializers);
   }
 
   /// Get ContestanNominationApi instance, base route and serializer can be overridden by a given but be careful,
