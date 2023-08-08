@@ -17,9 +17,6 @@ import 'package:openapi/src/api/contestans_api.dart';
 import 'package:openapi/src/api/events_api.dart';
 import 'package:openapi/src/api/faq_api.dart';
 import 'package:openapi/src/api/forum_api.dart';
-import 'package:openapi/src/api/forum_article_api.dart';
-import 'package:openapi/src/api/forum_comment_api.dart';
-import 'package:openapi/src/api/forum_topic_api.dart';
 import 'package:openapi/src/api/location_api.dart';
 import 'package:openapi/src/api/permission_api.dart';
 import 'package:openapi/src/api/role_api.dart';
@@ -129,24 +126,6 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   ForumApi getForumApi() {
     return ForumApi(dio, serializers);
-  }
-
-  /// Get ForumArticleApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ForumArticleApi getForumArticleApi() {
-    return ForumArticleApi(dio, serializers);
-  }
-
-  /// Get ForumCommentApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ForumCommentApi getForumCommentApi() {
-    return ForumCommentApi(dio, serializers);
-  }
-
-  /// Get ForumTopicApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ForumTopicApi getForumTopicApi() {
-    return ForumTopicApi(dio, serializers);
   }
 
   /// Get LocationApi instance, base route and serializer can be overridden by a given but be careful,
