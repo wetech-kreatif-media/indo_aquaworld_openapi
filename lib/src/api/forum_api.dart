@@ -276,7 +276,12 @@ class ForumApi {
   ///
   /// Parameters:
   /// * [forumId] - 
-  /// * [topics] - 
+  /// * [forumTopicId] - 
+  /// * [name] - 
+  /// * [sort] - 
+  /// * [direction] - 
+  /// * [pageNumber] - 
+  /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -288,7 +293,12 @@ class ForumApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondForumArticles>> getForumArticles({ 
     required String forumId,
-    String? topics,
+    String? forumTopicId,
+    String? name,
+    String? sort,
+    String? direction,
+    num? pageNumber,
+    num? pageSize,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -310,7 +320,12 @@ class ForumApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (topics != null) r'topics': encodeQueryParameter(_serializers, topics, const FullType(String)),
+      if (forumTopicId != null) r'forumTopicId': encodeQueryParameter(_serializers, forumTopicId, const FullType(String)),
+      if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
+      if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
     };
 
     final _response = await _dio.request<Object>(
