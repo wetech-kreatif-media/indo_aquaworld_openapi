@@ -8,7 +8,6 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/post_forum201_response.dart';
 import 'package:openapi/src/model/request_comment.dart';
 import 'package:openapi/src/model/request_forum.dart';
 import 'package:openapi/src/model/request_forum_article.dart';
@@ -659,9 +658,9 @@ class ForumApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PostForum201Response] as data
+  /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<PostForum201Response>> postForum({ 
+  Future<Response<RespondGlobal>> postForum({ 
     RequestForum? requestForum,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -717,14 +716,14 @@ class ForumApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PostForum201Response? _responseData;
+    RespondGlobal? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PostForum201Response),
-      ) as PostForum201Response;
+        specifiedType: const FullType(RespondGlobal),
+      ) as RespondGlobal;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -736,7 +735,7 @@ class ForumApi {
       );
     }
 
-    return Response<PostForum201Response>(
+    return Response<RespondGlobal>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

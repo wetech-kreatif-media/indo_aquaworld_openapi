@@ -11,7 +11,6 @@ doc/FaqApi.md
 doc/ForumApi.md
 doc/LocationApi.md
 doc/PermissionApi.md
-doc/PostForum201Response.md
 doc/RequestArticle.md
 doc/RequestAuction.md
 doc/RequestBid.md
@@ -195,7 +194,6 @@ lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
-lib/src/model/post_forum201_response.dart
 lib/src/model/request_article.dart
 lib/src/model/request_auction.dart
 lib/src/model/request_bid.dart

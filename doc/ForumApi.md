@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **postForum**
-> PostForum201Response postForum(requestForum)
+> RespondGlobal postForum(requestForum)
 
 Post Forum
 
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PostForum201Response**](PostForum201Response.md)
+[**RespondGlobal**](RespondGlobal.md)
 
 ### Authorization
 

@@ -7,7 +7,6 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
-      ..add(PostForum201Response.serializer)
       ..add(RequestArticle.serializer)
       ..add(RequestAuction.serializer)
       ..add(RequestBid.serializer)

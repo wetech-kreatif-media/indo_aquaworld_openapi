@@ -14,7 +14,6 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
-import 'package:openapi/src/model/post_forum201_response.dart';
 import 'package:openapi/src/model/request_article.dart';
 import 'package:openapi/src/model/request_auction.dart';
 import 'package:openapi/src/model/request_bid.dart';
@@ -170,7 +169,6 @@ import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
-  PostForum201Response,
   RequestArticle,
   RequestAuction,
   RequestBid,

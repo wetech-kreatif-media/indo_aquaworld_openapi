@@ -26,7 +26,6 @@ export 'package:openapi/src/api/tanks_api.dart';
 export 'package:openapi/src/api/teams_api.dart';
 export 'package:openapi/src/api/users_api.dart';
 
-export 'package:openapi/src/model/post_forum201_response.dart';
 export 'package:openapi/src/model/request_article.dart';
 export 'package:openapi/src/model/request_auction.dart';
 export 'package:openapi/src/model/request_bid.dart';
