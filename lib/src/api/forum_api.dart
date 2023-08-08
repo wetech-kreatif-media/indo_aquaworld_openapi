@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_comment.dart';
 import 'package:openapi/src/model/request_forum.dart';
@@ -292,7 +293,7 @@ class ForumApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondForumArticles>> getForumArticles({ 
     required String forumId,
-    String? forumTopicId,
+    BuiltList<String>? forumTopicId,
     String? name,
     String? sort,
     String? direction,
@@ -319,7 +320,7 @@ class ForumApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (forumTopicId != null) r'forumTopicId': encodeQueryParameter(_serializers, forumTopicId, const FullType(String)),
+      if (forumTopicId != null) r'forumTopicId': encodeCollectionQueryParameter<String>(_serializers, forumTopicId, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),

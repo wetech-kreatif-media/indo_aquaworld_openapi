@@ -176,7 +176,7 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getForumApi();
 final String forumId = forumId_example; // String | 
-final String forumTopicId = forumTopicId_example; // String | 
+final BuiltList<String> forumTopicId = ; // BuiltList<String> | 
 final String name = name_example; // String | 
 final String sort = sort_example; // String | 
 final String direction = direction_example; // String | 
@@ -196,7 +196,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **forumId** | **String**|  | 
- **forumTopicId** | **String**|  | [optional] 
+ **forumTopicId** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **name** | **String**|  | [optional] 
  **sort** | **String**|  | [optional] 
  **direction** | **String**|  | [optional] 
