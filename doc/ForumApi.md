@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getForums**
-> RespondForums getForums()
+> RespondForums getForums(sort, direction, pageNumber, pageSize, name, publishStatus)
 
 Get Forums
 
@@ -266,9 +266,15 @@ Ambil semua data forum
 import 'package:openapi/api.dart';
 
 final api = Openapi().getForumApi();
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
+final num pageNumber = 8.14; // num | 
+final num pageSize = 8.14; // num | 
+final String name = name_example; // String | 
+final String publishStatus = publishStatus_example; // String | 
 
 try {
-    final response = api.getForums();
+    final response = api.getForums(sort, direction, pageNumber, pageSize, name, publishStatus);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ForumApi->getForums: $e\n');
@@ -276,7 +282,15 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
+ **pageNumber** | **num**|  | [optional] 
+ **pageSize** | **num**|  | [optional] 
+ **name** | **String**|  | [optional] 
+ **publishStatus** | **String**|  | [optional] [default to 'DRAFT']
 
 ### Return type
 
