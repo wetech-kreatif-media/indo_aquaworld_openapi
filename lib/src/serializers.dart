@@ -14,10 +14,12 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
+import 'package:openapi/src/model/post_forum201_response.dart';
 import 'package:openapi/src/model/request_article.dart';
 import 'package:openapi/src/model/request_auction.dart';
 import 'package:openapi/src/model/request_bid.dart';
 import 'package:openapi/src/model/request_change_password.dart';
+import 'package:openapi/src/model/request_comment.dart';
 import 'package:openapi/src/model/request_contestan_nomination.dart';
 import 'package:openapi/src/model/request_contestant.dart';
 import 'package:openapi/src/model/request_event.dart';
@@ -26,6 +28,9 @@ import 'package:openapi/src/model/request_event_contest_components_inner_judge.d
 import 'package:openapi/src/model/request_event_teams_inner.dart';
 import 'package:openapi/src/model/request_faq.dart';
 import 'package:openapi/src/model/request_forgot.dart';
+import 'package:openapi/src/model/request_forum.dart';
+import 'package:openapi/src/model/request_forum_article.dart';
+import 'package:openapi/src/model/request_forum_topic.dart';
 import 'package:openapi/src/model/request_location.dart';
 import 'package:openapi/src/model/request_permission.dart';
 import 'package:openapi/src/model/request_role.dart';
@@ -59,6 +64,10 @@ import 'package:openapi/src/model/respond_auctions_data_content_inner_seller.dar
 import 'package:openapi/src/model/respond_bidders.dart';
 import 'package:openapi/src/model/respond_bidders_data.dart';
 import 'package:openapi/src/model/respond_bidders_data_content_inner.dart';
+import 'package:openapi/src/model/respond_comments.dart';
+import 'package:openapi/src/model/respond_comments_data.dart';
+import 'package:openapi/src/model/respond_comments_data_content_inner.dart';
+import 'package:openapi/src/model/respond_comments_data_content_inner_user.dart';
 import 'package:openapi/src/model/respond_contestan_nominations.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data.dart';
 import 'package:openapi/src/model/respond_contestan_nominations_data_content_inner.dart';
@@ -82,6 +91,20 @@ import 'package:openapi/src/model/respond_faq_data.dart';
 import 'package:openapi/src/model/respond_faqs.dart';
 import 'package:openapi/src/model/respond_faqs_data.dart';
 import 'package:openapi/src/model/respond_faqs_data_content_inner.dart';
+import 'package:openapi/src/model/respond_forum_article.dart';
+import 'package:openapi/src/model/respond_forum_article_data.dart';
+import 'package:openapi/src/model/respond_forum_articles.dart';
+import 'package:openapi/src/model/respond_forum_articles_data.dart';
+import 'package:openapi/src/model/respond_forum_articles_data_content_inner.dart';
+import 'package:openapi/src/model/respond_forum_articles_data_content_inner_user.dart';
+import 'package:openapi/src/model/respond_forum_articles_data_content_inner_user_role.dart';
+import 'package:openapi/src/model/respond_forum_articles_data_content_inner_user_role_permissions_inner.dart';
+import 'package:openapi/src/model/respond_forum_topics.dart';
+import 'package:openapi/src/model/respond_forum_topics_data.dart';
+import 'package:openapi/src/model/respond_forum_topics_data_content_inner.dart';
+import 'package:openapi/src/model/respond_forums.dart';
+import 'package:openapi/src/model/respond_forums_data.dart';
+import 'package:openapi/src/model/respond_forums_data_content_inner.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_global_data.dart';
 import 'package:openapi/src/model/respond_last_bid.dart';
@@ -147,10 +170,12 @@ import 'package:openapi/src/model/respond_users_data_content_inner_role.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
+  PostForum201Response,
   RequestArticle,
   RequestAuction,
   RequestBid,
   RequestChangePassword,
+  RequestComment,
   RequestContestanNomination,
   RequestContestant,
   RequestEvent,
@@ -159,6 +184,9 @@ part 'serializers.g.dart';
   RequestEventTeamsInner,
   RequestFaq,
   RequestForgot,
+  RequestForum,
+  RequestForumArticle,
+  RequestForumTopic,
   RequestLocation,
   RequestPermission,
   RequestRole,
@@ -192,6 +220,10 @@ part 'serializers.g.dart';
   RespondBidders,
   RespondBiddersData,
   RespondBiddersDataContentInner,
+  RespondComments,
+  RespondCommentsData,
+  RespondCommentsDataContentInner,
+  RespondCommentsDataContentInnerUser,
   RespondContestanNominations,
   RespondContestanNominationsData,
   RespondContestanNominationsDataContentInner,
@@ -215,6 +247,20 @@ part 'serializers.g.dart';
   RespondFaqs,
   RespondFaqsData,
   RespondFaqsDataContentInner,
+  RespondForumArticle,
+  RespondForumArticleData,
+  RespondForumArticles,
+  RespondForumArticlesData,
+  RespondForumArticlesDataContentInner,
+  RespondForumArticlesDataContentInnerUser,
+  RespondForumArticlesDataContentInnerUserRole,
+  RespondForumArticlesDataContentInnerUserRolePermissionsInner,
+  RespondForumTopics,
+  RespondForumTopicsData,
+  RespondForumTopicsDataContentInner,
+  RespondForums,
+  RespondForumsData,
+  RespondForumsDataContentInner,
   RespondGlobal,
   RespondGlobalData,
   RespondLastBid,

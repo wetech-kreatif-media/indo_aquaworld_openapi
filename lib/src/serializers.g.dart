@@ -7,10 +7,12 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(PostForum201Response.serializer)
       ..add(RequestArticle.serializer)
       ..add(RequestAuction.serializer)
       ..add(RequestBid.serializer)
       ..add(RequestChangePassword.serializer)
+      ..add(RequestComment.serializer)
       ..add(RequestContestanNomination.serializer)
       ..add(RequestContestant.serializer)
       ..add(RequestEvent.serializer)
@@ -19,6 +21,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestEventTeamsInner.serializer)
       ..add(RequestFaq.serializer)
       ..add(RequestForgot.serializer)
+      ..add(RequestForum.serializer)
+      ..add(RequestForumArticle.serializer)
+      ..add(RequestForumPublishStatusEnum.serializer)
+      ..add(RequestForumTopic.serializer)
       ..add(RequestLocation.serializer)
       ..add(RequestPermission.serializer)
       ..add(RequestRole.serializer)
@@ -52,6 +58,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondBidders.serializer)
       ..add(RespondBiddersData.serializer)
       ..add(RespondBiddersDataContentInner.serializer)
+      ..add(RespondComments.serializer)
+      ..add(RespondCommentsData.serializer)
+      ..add(RespondCommentsDataContentInner.serializer)
+      ..add(RespondCommentsDataContentInnerUser.serializer)
       ..add(RespondContestanNominations.serializer)
       ..add(RespondContestanNominationsData.serializer)
       ..add(RespondContestanNominationsDataContentInner.serializer)
@@ -75,6 +85,21 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondFaqs.serializer)
       ..add(RespondFaqsData.serializer)
       ..add(RespondFaqsDataContentInner.serializer)
+      ..add(RespondForumArticle.serializer)
+      ..add(RespondForumArticleData.serializer)
+      ..add(RespondForumArticles.serializer)
+      ..add(RespondForumArticlesData.serializer)
+      ..add(RespondForumArticlesDataContentInner.serializer)
+      ..add(RespondForumArticlesDataContentInnerUser.serializer)
+      ..add(RespondForumArticlesDataContentInnerUserRole.serializer)
+      ..add(RespondForumArticlesDataContentInnerUserRolePermissionsInner
+          .serializer)
+      ..add(RespondForumTopics.serializer)
+      ..add(RespondForumTopicsData.serializer)
+      ..add(RespondForumTopicsDataContentInner.serializer)
+      ..add(RespondForums.serializer)
+      ..add(RespondForumsData.serializer)
+      ..add(RespondForumsDataContentInner.serializer)
       ..add(RespondGlobal.serializer)
       ..add(RespondGlobalData.serializer)
       ..add(RespondLastBid.serializer)
@@ -177,6 +202,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
               const [const FullType(RespondBiddersDataContentInner)]),
           () => new ListBuilder<RespondBiddersDataContentInner>())
       ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondCommentsDataContentInner)]),
+          () => new ListBuilder<RespondCommentsDataContentInner>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(RespondContestanNominationsDataContentInner)
           ]),
@@ -197,6 +226,25 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RespondFaqsDataContentInner)]),
           () => new ListBuilder<RespondFaqsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondForumArticlesDataContentInner)]),
+          () => new ListBuilder<RespondForumArticlesDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                RespondForumArticlesDataContentInnerUserRolePermissionsInner)
+          ]),
+          () => new ListBuilder<
+              RespondForumArticlesDataContentInnerUserRolePermissionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondForumTopicsDataContentInner)]),
+          () => new ListBuilder<RespondForumTopicsDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(RespondForumsDataContentInner)]),
+          () => new ListBuilder<RespondForumsDataContentInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondLocationsDataContentInner)]),
