@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getFaqs**
-> RespondFaqs getFaqs(cariTitle, sort, direction, pageNumber, pageSize)
+> RespondFaqs getFaqs(title, sort, direction, pageNumber, pageSize)
 
 Get Faqs
 
@@ -76,14 +76,14 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getFaqApi();
-final String cariTitle = cariTitle_example; // String | 
+final String title = title_example; // String | 
 final String sort = sort_example; // String | 
 final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getFaqs(cariTitle, sort, direction, pageNumber, pageSize);
+    final response = api.getFaqs(title, sort, direction, pageNumber, pageSize);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling FaqApi->getFaqs: $e\n');
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cariTitle** | **String**|  | [optional] 
+ **title** | **String**|  | [optional] 
  **sort** | **String**|  | [optional] 
  **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 

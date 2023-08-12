@@ -106,7 +106,7 @@ class FaqApi {
   /// Ambil semua data faq
   ///
   /// Parameters:
-  /// * [cariTitle] - 
+  /// * [title] - 
   /// * [sort] - 
   /// * [direction] - 
   /// * [pageNumber] - 
@@ -121,7 +121,7 @@ class FaqApi {
   /// Returns a [Future] containing a [Response] with a [RespondFaqs] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RespondFaqs>> getFaqs({ 
-    String? cariTitle,
+    String? title,
     String? sort,
     String? direction,
     num? pageNumber,
@@ -153,7 +153,7 @@ class FaqApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (cariTitle != null) r'cariTitle': encodeQueryParameter(_serializers, cariTitle, const FullType(String)),
+      if (title != null) r'title': encodeQueryParameter(_serializers, title, const FullType(String)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),

@@ -277,7 +277,7 @@ class ForumApi {
   /// Parameters:
   /// * [forumId] - 
   /// * [forumTopicId] - 
-  /// * [cariTitle] - 
+  /// * [title] - 
   /// * [sort] - 
   /// * [direction] - 
   /// * [pageNumber] - 
@@ -294,7 +294,7 @@ class ForumApi {
   Future<Response<RespondForumArticles>> getForumArticles({ 
     required String forumId,
     BuiltList<String>? forumTopicId,
-    String? cariTitle,
+    String? title,
     String? sort,
     String? direction,
     num? pageNumber,
@@ -321,7 +321,7 @@ class ForumApi {
 
     final _queryParameters = <String, dynamic>{
       if (forumTopicId != null) r'forumTopicId': encodeCollectionQueryParameter<String>(_serializers, forumTopicId, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
-      if (cariTitle != null) r'cariTitle': encodeQueryParameter(_serializers, cariTitle, const FullType(String)),
+      if (title != null) r'title': encodeQueryParameter(_serializers, title, const FullType(String)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
       if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
