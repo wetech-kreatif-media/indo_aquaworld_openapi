@@ -18,7 +18,7 @@ class _$RespondCommentsData extends RespondCommentsData {
   @override
   final num? number;
   @override
-  final num totalPages;
+  final num? totalPages;
   @override
   final num totalElements;
   @override
@@ -36,13 +36,11 @@ class _$RespondCommentsData extends RespondCommentsData {
       this.empty,
       this.size,
       this.number,
-      required this.totalPages,
+      this.totalPages,
       required this.totalElements,
       required this.numberOfElements,
       required this.content})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        totalPages, r'RespondCommentsData', 'totalPages');
     BuiltValueNullFieldError.checkNotNull(
         totalElements, r'RespondCommentsData', 'totalElements');
     BuiltValueNullFieldError.checkNotNull(
@@ -196,8 +194,7 @@ class RespondCommentsDataBuilder
               empty: empty,
               size: size,
               number: number,
-              totalPages: BuiltValueNullFieldError.checkNotNull(
-                  totalPages, r'RespondCommentsData', 'totalPages'),
+              totalPages: totalPages,
               totalElements: BuiltValueNullFieldError.checkNotNull(
                   totalElements, r'RespondCommentsData', 'totalElements'),
               numberOfElements: BuiltValueNullFieldError.checkNotNull(

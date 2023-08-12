@@ -18,7 +18,7 @@ class _$RespondForumsData extends RespondForumsData {
   @override
   final num? number;
   @override
-  final num totalPages;
+  final num? totalPages;
   @override
   final num totalElements;
   @override
@@ -36,13 +36,11 @@ class _$RespondForumsData extends RespondForumsData {
       this.empty,
       this.size,
       this.number,
-      required this.totalPages,
+      this.totalPages,
       required this.totalElements,
       required this.numberOfElements,
       required this.content})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        totalPages, r'RespondForumsData', 'totalPages');
     BuiltValueNullFieldError.checkNotNull(
         totalElements, r'RespondForumsData', 'totalElements');
     BuiltValueNullFieldError.checkNotNull(
@@ -195,8 +193,7 @@ class RespondForumsDataBuilder
               empty: empty,
               size: size,
               number: number,
-              totalPages: BuiltValueNullFieldError.checkNotNull(
-                  totalPages, r'RespondForumsData', 'totalPages'),
+              totalPages: totalPages,
               totalElements: BuiltValueNullFieldError.checkNotNull(
                   totalElements, r'RespondForumsData', 'totalElements'),
               numberOfElements: BuiltValueNullFieldError.checkNotNull(

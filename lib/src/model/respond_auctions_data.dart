@@ -40,7 +40,7 @@ abstract class RespondAuctionsData implements Built<RespondAuctionsData, Respond
   num? get number;
 
   @BuiltValueField(wireName: r'totalPages')
-  num get totalPages;
+  num? get totalPages;
 
   @BuiltValueField(wireName: r'totalElements')
   num get totalElements;
@@ -109,11 +109,13 @@ class _$RespondAuctionsDataSerializer implements PrimitiveSerializer<RespondAuct
         specifiedType: const FullType(num),
       );
     }
-    yield r'totalPages';
-    yield serializers.serialize(
-      object.totalPages,
-      specifiedType: const FullType(num),
-    );
+    if (object.totalPages != null) {
+      yield r'totalPages';
+      yield serializers.serialize(
+        object.totalPages,
+        specifiedType: const FullType(num),
+      );
+    }
     yield r'totalElements';
     yield serializers.serialize(
       object.totalElements,

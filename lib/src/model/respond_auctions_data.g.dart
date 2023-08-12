@@ -18,7 +18,7 @@ class _$RespondAuctionsData extends RespondAuctionsData {
   @override
   final num? number;
   @override
-  final num totalPages;
+  final num? totalPages;
   @override
   final num totalElements;
   @override
@@ -36,13 +36,11 @@ class _$RespondAuctionsData extends RespondAuctionsData {
       this.empty,
       this.size,
       this.number,
-      required this.totalPages,
+      this.totalPages,
       required this.totalElements,
       required this.numberOfElements,
       this.content})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        totalPages, r'RespondAuctionsData', 'totalPages');
     BuiltValueNullFieldError.checkNotNull(
         totalElements, r'RespondAuctionsData', 'totalElements');
     BuiltValueNullFieldError.checkNotNull(
@@ -194,8 +192,7 @@ class RespondAuctionsDataBuilder
               empty: empty,
               size: size,
               number: number,
-              totalPages: BuiltValueNullFieldError.checkNotNull(
-                  totalPages, r'RespondAuctionsData', 'totalPages'),
+              totalPages: totalPages,
               totalElements: BuiltValueNullFieldError.checkNotNull(
                   totalElements, r'RespondAuctionsData', 'totalElements'),
               numberOfElements: BuiltValueNullFieldError.checkNotNull(

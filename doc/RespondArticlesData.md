@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **last** | **bool** |  | [optional] 
 **first** | **bool** |  | [optional] 
 **empty** | **bool** |  | [optional] 
-**size** | **num** |  | 
-**number** | **num** |  | 
-**totalPages** | **num** |  | 
+**size** | **num** |  | [optional] 
+**number** | **num** |  | [optional] 
+**totalPages** | **num** |  | [optional] 
 **totalElements** | **num** |  | 
 **numberOfElements** | **num** |  | 
 **content** | [**BuiltList&lt;RespondArticlesDataContentInner&gt;**](RespondArticlesDataContentInner.md) |  | 

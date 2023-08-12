@@ -14,11 +14,11 @@ class _$RespondArticlesData extends RespondArticlesData {
   @override
   final bool? empty;
   @override
-  final num size;
+  final num? size;
   @override
-  final num number;
+  final num? number;
   @override
-  final num totalPages;
+  final num? totalPages;
   @override
   final num totalElements;
   @override
@@ -34,18 +34,13 @@ class _$RespondArticlesData extends RespondArticlesData {
       {this.last,
       this.first,
       this.empty,
-      required this.size,
-      required this.number,
-      required this.totalPages,
+      this.size,
+      this.number,
+      this.totalPages,
       required this.totalElements,
       required this.numberOfElements,
       required this.content})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(size, r'RespondArticlesData', 'size');
-    BuiltValueNullFieldError.checkNotNull(
-        number, r'RespondArticlesData', 'number');
-    BuiltValueNullFieldError.checkNotNull(
-        totalPages, r'RespondArticlesData', 'totalPages');
     BuiltValueNullFieldError.checkNotNull(
         totalElements, r'RespondArticlesData', 'totalElements');
     BuiltValueNullFieldError.checkNotNull(
@@ -197,12 +192,9 @@ class RespondArticlesDataBuilder
               last: last,
               first: first,
               empty: empty,
-              size: BuiltValueNullFieldError.checkNotNull(
-                  size, r'RespondArticlesData', 'size'),
-              number: BuiltValueNullFieldError.checkNotNull(
-                  number, r'RespondArticlesData', 'number'),
-              totalPages: BuiltValueNullFieldError.checkNotNull(
-                  totalPages, r'RespondArticlesData', 'totalPages'),
+              size: size,
+              number: number,
+              totalPages: totalPages,
               totalElements: BuiltValueNullFieldError.checkNotNull(
                   totalElements, r'RespondArticlesData', 'totalElements'),
               numberOfElements: BuiltValueNullFieldError.checkNotNull(

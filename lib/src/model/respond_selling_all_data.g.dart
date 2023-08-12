@@ -16,9 +16,9 @@ class _$RespondSellingAllData extends RespondSellingAllData {
   @override
   final num? size;
   @override
-  final num number;
+  final num? number;
   @override
-  final num totalPages;
+  final num? totalPages;
   @override
   final num totalElements;
   @override
@@ -35,16 +35,12 @@ class _$RespondSellingAllData extends RespondSellingAllData {
       this.first,
       this.empty,
       this.size,
-      required this.number,
-      required this.totalPages,
+      this.number,
+      this.totalPages,
       required this.totalElements,
       required this.numberOfElements,
       required this.content})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        number, r'RespondSellingAllData', 'number');
-    BuiltValueNullFieldError.checkNotNull(
-        totalPages, r'RespondSellingAllData', 'totalPages');
     BuiltValueNullFieldError.checkNotNull(
         totalElements, r'RespondSellingAllData', 'totalElements');
     BuiltValueNullFieldError.checkNotNull(
@@ -197,10 +193,8 @@ class RespondSellingAllDataBuilder
               first: first,
               empty: empty,
               size: size,
-              number: BuiltValueNullFieldError.checkNotNull(
-                  number, r'RespondSellingAllData', 'number'),
-              totalPages: BuiltValueNullFieldError.checkNotNull(
-                  totalPages, r'RespondSellingAllData', 'totalPages'),
+              number: number,
+              totalPages: totalPages,
               totalElements: BuiltValueNullFieldError.checkNotNull(
                   totalElements, r'RespondSellingAllData', 'totalElements'),
               numberOfElements: BuiltValueNullFieldError.checkNotNull(

@@ -37,10 +37,10 @@ abstract class RespondSellingAllData implements Built<RespondSellingAllData, Res
   num? get size;
 
   @BuiltValueField(wireName: r'number')
-  num get number;
+  num? get number;
 
   @BuiltValueField(wireName: r'totalPages')
-  num get totalPages;
+  num? get totalPages;
 
   @BuiltValueField(wireName: r'totalElements')
   num get totalElements;
@@ -102,16 +102,20 @@ class _$RespondSellingAllDataSerializer implements PrimitiveSerializer<RespondSe
         specifiedType: const FullType(num),
       );
     }
-    yield r'number';
-    yield serializers.serialize(
-      object.number,
-      specifiedType: const FullType(num),
-    );
-    yield r'totalPages';
-    yield serializers.serialize(
-      object.totalPages,
-      specifiedType: const FullType(num),
-    );
+    if (object.number != null) {
+      yield r'number';
+      yield serializers.serialize(
+        object.number,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.totalPages != null) {
+      yield r'totalPages';
+      yield serializers.serialize(
+        object.totalPages,
+        specifiedType: const FullType(num),
+      );
+    }
     yield r'totalElements';
     yield serializers.serialize(
       object.totalElements,

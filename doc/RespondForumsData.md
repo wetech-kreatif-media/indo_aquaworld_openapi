@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **empty** | **bool** |  | [optional] 
 **size** | **num** |  | [optional] 
 **number** | **num** |  | [optional] 
-**totalPages** | **num** |  | 
+**totalPages** | **num** |  | [optional] 
 **totalElements** | **num** |  | 
 **numberOfElements** | **num** |  | 
 **content** | [**BuiltList&lt;RespondForumsDataContentInner&gt;**](RespondForumsDataContentInner.md) |  | 
