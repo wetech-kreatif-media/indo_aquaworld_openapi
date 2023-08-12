@@ -21,7 +21,7 @@ Method | HTTP request | Description
 [**postForumTopic**](ForumApi.md#postforumtopic) | **POST** /public/topic/{forumId} | Post Forum Topic
 [**putComment**](ForumApi.md#putcomment) | **PUT** /public/comment/{commentId} | Put Comment
 [**putForumArticle**](ForumApi.md#putforumarticle) | **PUT** /public/forum-article/{forumArticleId} | Put Forum Article
-[**putForumTopic**](ForumApi.md#putforumtopic) | **PUT** /puclic/topic/{topicId} | Put Forum Topic
+[**putForumTopic**](ForumApi.md#putforumtopic) | **PUT** /public/topic/{topicId} | Put Forum Topic
 [**putFourm**](ForumApi.md#putfourm) | **PUT** /public/forum/{forumId} | Put Forum
 
 

@@ -1183,7 +1183,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/puclic/topic/{topicId}'.replaceAll('{' r'topicId' '}', topicId.toString());
+    final _path = r'/public/topic/{topicId}'.replaceAll('{' r'topicId' '}', topicId.toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
