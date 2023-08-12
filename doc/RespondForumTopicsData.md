@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **first** | **bool** |  | [optional] 
 **empty** | **bool** |  | [optional] 
 **size** | **num** |  | [optional] 
-**number** | **num** |  | 
+**number** | **num** |  | [optional] 
 **totalPages** | **num** |  | [optional] 
 **totalElements** | **num** |  | 
 **numberOfElements** | **num** |  | 

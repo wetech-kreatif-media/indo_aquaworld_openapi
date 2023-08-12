@@ -37,7 +37,7 @@ abstract class RespondForumTopicsData implements Built<RespondForumTopicsData, R
   num? get size;
 
   @BuiltValueField(wireName: r'number')
-  num get number;
+  num? get number;
 
   @BuiltValueField(wireName: r'totalPages')
   num? get totalPages;
@@ -102,11 +102,13 @@ class _$RespondForumTopicsDataSerializer implements PrimitiveSerializer<RespondF
         specifiedType: const FullType(num),
       );
     }
-    yield r'number';
-    yield serializers.serialize(
-      object.number,
-      specifiedType: const FullType(num),
-    );
+    if (object.number != null) {
+      yield r'number';
+      yield serializers.serialize(
+        object.number,
+        specifiedType: const FullType(num),
+      );
+    }
     if (object.totalPages != null) {
       yield r'totalPages';
       yield serializers.serialize(
