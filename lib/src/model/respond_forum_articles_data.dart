@@ -43,10 +43,10 @@ abstract class RespondForumArticlesData implements Built<RespondForumArticlesDat
   num? get totalPages;
 
   @BuiltValueField(wireName: r'totalElements')
-  num get totalElements;
+  num? get totalElements;
 
   @BuiltValueField(wireName: r'numberOfElements')
-  num get numberOfElements;
+  num? get numberOfElements;
 
   @BuiltValueField(wireName: r'content')
   BuiltList<RespondForumArticlesDataContentInner> get content;
@@ -116,16 +116,20 @@ class _$RespondForumArticlesDataSerializer implements PrimitiveSerializer<Respon
         specifiedType: const FullType(num),
       );
     }
-    yield r'totalElements';
-    yield serializers.serialize(
-      object.totalElements,
-      specifiedType: const FullType(num),
-    );
-    yield r'numberOfElements';
-    yield serializers.serialize(
-      object.numberOfElements,
-      specifiedType: const FullType(num),
-    );
+    if (object.totalElements != null) {
+      yield r'totalElements';
+      yield serializers.serialize(
+        object.totalElements,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.numberOfElements != null) {
+      yield r'numberOfElements';
+      yield serializers.serialize(
+        object.numberOfElements,
+        specifiedType: const FullType(num),
+      );
+    }
     yield r'content';
     yield serializers.serialize(
       object.content,

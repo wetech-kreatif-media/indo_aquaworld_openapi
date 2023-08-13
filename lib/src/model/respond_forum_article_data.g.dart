@@ -16,7 +16,7 @@ class _$RespondForumArticleData extends RespondForumArticleData {
   @override
   final String? created;
   @override
-  final String updated;
+  final String? updated;
   @override
   final num? deleted;
   @override
@@ -24,13 +24,17 @@ class _$RespondForumArticleData extends RespondForumArticleData {
   @override
   final String title;
   @override
+  final RespondForumArticleDataForumTopic? forumTopic;
+  @override
+  final RespondForumArticleDataForum? forum;
+  @override
   final RespondAuctionsDataContentInnerBiddersInnerBuyer? user;
   @override
-  final String content;
+  final String? content;
   @override
   final String? photo;
   @override
-  final num totalComment;
+  final num? totalComment;
 
   factory _$RespondForumArticleData(
           [void Function(RespondForumArticleDataBuilder)? updates]) =>
@@ -41,24 +45,20 @@ class _$RespondForumArticleData extends RespondForumArticleData {
       this.createdBy,
       this.updatedBy,
       this.created,
-      required this.updated,
+      this.updated,
       this.deleted,
       this.recordStatus,
       required this.title,
+      this.forumTopic,
+      this.forum,
       this.user,
-      required this.content,
+      this.content,
       this.photo,
-      required this.totalComment})
+      this.totalComment})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'RespondForumArticleData', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        updated, r'RespondForumArticleData', 'updated');
-    BuiltValueNullFieldError.checkNotNull(
         title, r'RespondForumArticleData', 'title');
-    BuiltValueNullFieldError.checkNotNull(
-        content, r'RespondForumArticleData', 'content');
-    BuiltValueNullFieldError.checkNotNull(
-        totalComment, r'RespondForumArticleData', 'totalComment');
   }
 
   @override
@@ -82,6 +82,8 @@ class _$RespondForumArticleData extends RespondForumArticleData {
         deleted == other.deleted &&
         recordStatus == other.recordStatus &&
         title == other.title &&
+        forumTopic == other.forumTopic &&
+        forum == other.forum &&
         user == other.user &&
         content == other.content &&
         photo == other.photo &&
@@ -99,6 +101,8 @@ class _$RespondForumArticleData extends RespondForumArticleData {
     _$hash = $jc(_$hash, deleted.hashCode);
     _$hash = $jc(_$hash, recordStatus.hashCode);
     _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, forumTopic.hashCode);
+    _$hash = $jc(_$hash, forum.hashCode);
     _$hash = $jc(_$hash, user.hashCode);
     _$hash = $jc(_$hash, content.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
@@ -118,6 +122,8 @@ class _$RespondForumArticleData extends RespondForumArticleData {
           ..add('deleted', deleted)
           ..add('recordStatus', recordStatus)
           ..add('title', title)
+          ..add('forumTopic', forumTopic)
+          ..add('forum', forum)
           ..add('user', user)
           ..add('content', content)
           ..add('photo', photo)
@@ -163,6 +169,18 @@ class RespondForumArticleDataBuilder
   String? get title => _$this._title;
   set title(String? title) => _$this._title = title;
 
+  RespondForumArticleDataForumTopicBuilder? _forumTopic;
+  RespondForumArticleDataForumTopicBuilder get forumTopic =>
+      _$this._forumTopic ??= new RespondForumArticleDataForumTopicBuilder();
+  set forumTopic(RespondForumArticleDataForumTopicBuilder? forumTopic) =>
+      _$this._forumTopic = forumTopic;
+
+  RespondForumArticleDataForumBuilder? _forum;
+  RespondForumArticleDataForumBuilder get forum =>
+      _$this._forum ??= new RespondForumArticleDataForumBuilder();
+  set forum(RespondForumArticleDataForumBuilder? forum) =>
+      _$this._forum = forum;
+
   RespondAuctionsDataContentInnerBiddersInnerBuyerBuilder? _user;
   RespondAuctionsDataContentInnerBiddersInnerBuyerBuilder get user =>
       _$this._user ??=
@@ -197,6 +215,8 @@ class RespondForumArticleDataBuilder
       _deleted = $v.deleted;
       _recordStatus = $v.recordStatus;
       _title = $v.title;
+      _forumTopic = $v.forumTopic?.toBuilder();
+      _forum = $v.forum?.toBuilder();
       _user = $v.user?.toBuilder();
       _content = $v.content;
       _photo = $v.photo;
@@ -230,21 +250,24 @@ class RespondForumArticleDataBuilder
               createdBy: createdBy,
               updatedBy: updatedBy,
               created: created,
-              updated: BuiltValueNullFieldError.checkNotNull(
-                  updated, r'RespondForumArticleData', 'updated'),
+              updated: updated,
               deleted: deleted,
               recordStatus: recordStatus,
               title: BuiltValueNullFieldError.checkNotNull(
                   title, r'RespondForumArticleData', 'title'),
+              forumTopic: _forumTopic?.build(),
+              forum: _forum?.build(),
               user: _user?.build(),
-              content: BuiltValueNullFieldError.checkNotNull(
-                  content, r'RespondForumArticleData', 'content'),
+              content: content,
               photo: photo,
-              totalComment: BuiltValueNullFieldError.checkNotNull(
-                  totalComment, r'RespondForumArticleData', 'totalComment'));
+              totalComment: totalComment);
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'forumTopic';
+        _forumTopic?.build();
+        _$failedField = 'forum';
+        _forum?.build();
         _$failedField = 'user';
         _user?.build();
       } catch (e) {

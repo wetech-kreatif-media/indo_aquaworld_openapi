@@ -92,12 +92,12 @@ import 'package:openapi/src/model/respond_faqs_data.dart';
 import 'package:openapi/src/model/respond_faqs_data_content_inner.dart';
 import 'package:openapi/src/model/respond_forum_article.dart';
 import 'package:openapi/src/model/respond_forum_article_data.dart';
+import 'package:openapi/src/model/respond_forum_article_data_forum.dart';
+import 'package:openapi/src/model/respond_forum_article_data_forum_topic.dart';
 import 'package:openapi/src/model/respond_forum_articles.dart';
 import 'package:openapi/src/model/respond_forum_articles_data.dart';
 import 'package:openapi/src/model/respond_forum_articles_data_content_inner.dart';
-import 'package:openapi/src/model/respond_forum_articles_data_content_inner_user.dart';
-import 'package:openapi/src/model/respond_forum_articles_data_content_inner_user_role.dart';
-import 'package:openapi/src/model/respond_forum_articles_data_content_inner_user_role_permissions_inner.dart';
+import 'package:openapi/src/model/respond_forum_articles_data_content_inner_forum.dart';
 import 'package:openapi/src/model/respond_forum_topics.dart';
 import 'package:openapi/src/model/respond_forum_topics_data.dart';
 import 'package:openapi/src/model/respond_forum_topics_data_content_inner.dart';
@@ -247,12 +247,12 @@ part 'serializers.g.dart';
   RespondFaqsDataContentInner,
   RespondForumArticle,
   RespondForumArticleData,
+  RespondForumArticleDataForum,
+  RespondForumArticleDataForumTopic,
   RespondForumArticles,
   RespondForumArticlesData,
   RespondForumArticlesDataContentInner,
-  RespondForumArticlesDataContentInnerUser,
-  RespondForumArticlesDataContentInnerUserRole,
-  RespondForumArticlesDataContentInnerUserRolePermissionsInner,
+  RespondForumArticlesDataContentInnerForum,
   RespondForumTopics,
   RespondForumTopicsData,
   RespondForumTopicsDataContentInner,

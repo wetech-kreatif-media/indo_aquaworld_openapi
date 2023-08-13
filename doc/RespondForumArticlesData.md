@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **size** | **num** |  | [optional] 
 **number** | **num** |  | [optional] 
 **totalPages** | **num** |  | [optional] 
-**totalElements** | **num** |  | 
-**numberOfElements** | **num** |  | 
+**totalElements** | **num** |  | [optional] 
+**numberOfElements** | **num** |  | [optional] 
 **content** | [**BuiltList&lt;RespondForumArticlesDataContentInner&gt;**](RespondForumArticlesDataContentInner.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

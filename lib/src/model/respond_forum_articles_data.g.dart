@@ -20,9 +20,9 @@ class _$RespondForumArticlesData extends RespondForumArticlesData {
   @override
   final num? totalPages;
   @override
-  final num totalElements;
+  final num? totalElements;
   @override
-  final num numberOfElements;
+  final num? numberOfElements;
   @override
   final BuiltList<RespondForumArticlesDataContentInner> content;
 
@@ -37,14 +37,10 @@ class _$RespondForumArticlesData extends RespondForumArticlesData {
       this.size,
       this.number,
       this.totalPages,
-      required this.totalElements,
-      required this.numberOfElements,
+      this.totalElements,
+      this.numberOfElements,
       required this.content})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        totalElements, r'RespondForumArticlesData', 'totalElements');
-    BuiltValueNullFieldError.checkNotNull(
-        numberOfElements, r'RespondForumArticlesData', 'numberOfElements');
     BuiltValueNullFieldError.checkNotNull(
         content, r'RespondForumArticlesData', 'content');
   }
@@ -197,12 +193,8 @@ class RespondForumArticlesDataBuilder
               size: size,
               number: number,
               totalPages: totalPages,
-              totalElements: BuiltValueNullFieldError.checkNotNull(
-                  totalElements, r'RespondForumArticlesData', 'totalElements'),
-              numberOfElements: BuiltValueNullFieldError.checkNotNull(
-                  numberOfElements,
-                  r'RespondForumArticlesData',
-                  'numberOfElements'),
+              totalElements: totalElements,
+              numberOfElements: numberOfElements,
               content: content.build());
     } catch (_) {
       late String _$failedField;

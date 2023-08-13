@@ -3,15 +3,12 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_forum_article_data_forum.dart';
-import 'package:openapi/src/model/respond_auctions_data_content_inner_bidders_inner_buyer.dart';
-import 'package:openapi/src/model/respond_forum_article_data_forum_topic.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_forum_article_data.g.dart';
+part 'respond_forum_article_data_forum_topic.g.dart';
 
-/// RespondForumArticleData
+/// RespondForumArticleDataForumTopic
 ///
 /// Properties:
 /// * [id] 
@@ -21,15 +18,9 @@ part 'respond_forum_article_data.g.dart';
 /// * [updated] 
 /// * [deleted] 
 /// * [recordStatus] 
-/// * [title] 
-/// * [forumTopic] 
-/// * [forum] 
-/// * [user] 
-/// * [content] 
-/// * [photo] 
-/// * [totalComment] 
+/// * [name] 
 @BuiltValue()
-abstract class RespondForumArticleData implements Built<RespondForumArticleData, RespondForumArticleDataBuilder> {
+abstract class RespondForumArticleDataForumTopic implements Built<RespondForumArticleDataForumTopic, RespondForumArticleDataForumTopicBuilder> {
   @BuiltValueField(wireName: r'id')
   String get id;
 
@@ -51,48 +42,30 @@ abstract class RespondForumArticleData implements Built<RespondForumArticleData,
   @BuiltValueField(wireName: r'recordStatus')
   String? get recordStatus;
 
-  @BuiltValueField(wireName: r'title')
-  String get title;
+  @BuiltValueField(wireName: r'name')
+  String? get name;
 
-  @BuiltValueField(wireName: r'forumTopic')
-  RespondForumArticleDataForumTopic? get forumTopic;
+  RespondForumArticleDataForumTopic._();
 
-  @BuiltValueField(wireName: r'forum')
-  RespondForumArticleDataForum? get forum;
-
-  @BuiltValueField(wireName: r'user')
-  RespondAuctionsDataContentInnerBiddersInnerBuyer? get user;
-
-  @BuiltValueField(wireName: r'content')
-  String? get content;
-
-  @BuiltValueField(wireName: r'photo')
-  String? get photo;
-
-  @BuiltValueField(wireName: r'totalComment')
-  num? get totalComment;
-
-  RespondForumArticleData._();
-
-  factory RespondForumArticleData([void updates(RespondForumArticleDataBuilder b)]) = _$RespondForumArticleData;
+  factory RespondForumArticleDataForumTopic([void updates(RespondForumArticleDataForumTopicBuilder b)]) = _$RespondForumArticleDataForumTopic;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondForumArticleDataBuilder b) => b;
+  static void _defaults(RespondForumArticleDataForumTopicBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondForumArticleData> get serializer => _$RespondForumArticleDataSerializer();
+  static Serializer<RespondForumArticleDataForumTopic> get serializer => _$RespondForumArticleDataForumTopicSerializer();
 }
 
-class _$RespondForumArticleDataSerializer implements PrimitiveSerializer<RespondForumArticleData> {
+class _$RespondForumArticleDataForumTopicSerializer implements PrimitiveSerializer<RespondForumArticleDataForumTopic> {
   @override
-  final Iterable<Type> types = const [RespondForumArticleData, _$RespondForumArticleData];
+  final Iterable<Type> types = const [RespondForumArticleDataForumTopic, _$RespondForumArticleDataForumTopic];
 
   @override
-  final String wireName = r'RespondForumArticleData';
+  final String wireName = r'RespondForumArticleDataForumTopic';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondForumArticleData object, {
+    RespondForumArticleDataForumTopic object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -142,51 +115,11 @@ class _$RespondForumArticleDataSerializer implements PrimitiveSerializer<Respond
         specifiedType: const FullType(String),
       );
     }
-    yield r'title';
-    yield serializers.serialize(
-      object.title,
-      specifiedType: const FullType(String),
-    );
-    if (object.forumTopic != null) {
-      yield r'forumTopic';
+    if (object.name != null) {
+      yield r'name';
       yield serializers.serialize(
-        object.forumTopic,
-        specifiedType: const FullType(RespondForumArticleDataForumTopic),
-      );
-    }
-    if (object.forum != null) {
-      yield r'forum';
-      yield serializers.serialize(
-        object.forum,
-        specifiedType: const FullType(RespondForumArticleDataForum),
-      );
-    }
-    if (object.user != null) {
-      yield r'user';
-      yield serializers.serialize(
-        object.user,
-        specifiedType: const FullType(RespondAuctionsDataContentInnerBiddersInnerBuyer),
-      );
-    }
-    if (object.content != null) {
-      yield r'content';
-      yield serializers.serialize(
-        object.content,
+        object.name,
         specifiedType: const FullType(String),
-      );
-    }
-    if (object.photo != null) {
-      yield r'photo';
-      yield serializers.serialize(
-        object.photo,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.totalComment != null) {
-      yield r'totalComment';
-      yield serializers.serialize(
-        object.totalComment,
-        specifiedType: const FullType(num),
       );
     }
   }
@@ -194,7 +127,7 @@ class _$RespondForumArticleDataSerializer implements PrimitiveSerializer<Respond
   @override
   Object serialize(
     Serializers serializers,
-    RespondForumArticleData object, {
+    RespondForumArticleDataForumTopic object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -205,7 +138,7 @@ class _$RespondForumArticleDataSerializer implements PrimitiveSerializer<Respond
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondForumArticleDataBuilder result,
+    required RespondForumArticleDataForumTopicBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -261,54 +194,12 @@ class _$RespondForumArticleDataSerializer implements PrimitiveSerializer<Respond
           ) as String;
           result.recordStatus = valueDes;
           break;
-        case r'title':
+        case r'name':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.title = valueDes;
-          break;
-        case r'forumTopic':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondForumArticleDataForumTopic),
-          ) as RespondForumArticleDataForumTopic;
-          result.forumTopic.replace(valueDes);
-          break;
-        case r'forum':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondForumArticleDataForum),
-          ) as RespondForumArticleDataForum;
-          result.forum.replace(valueDes);
-          break;
-        case r'user':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(RespondAuctionsDataContentInnerBiddersInnerBuyer),
-          ) as RespondAuctionsDataContentInnerBiddersInnerBuyer;
-          result.user.replace(valueDes);
-          break;
-        case r'content':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.content = valueDes;
-          break;
-        case r'photo':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.photo = valueDes;
-          break;
-        case r'totalComment':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(num),
-          ) as num;
-          result.totalComment = valueDes;
+          result.name = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -319,12 +210,12 @@ class _$RespondForumArticleDataSerializer implements PrimitiveSerializer<Respond
   }
 
   @override
-  RespondForumArticleData deserialize(
+  RespondForumArticleDataForumTopic deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondForumArticleDataBuilder();
+    final result = RespondForumArticleDataForumTopicBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

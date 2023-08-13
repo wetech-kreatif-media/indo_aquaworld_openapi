@@ -1,4 +1,4 @@
-# openapi.model.RespondForumArticleData
+# openapi.model.RespondForumArticlesDataContentInnerForum
 
 ## Load the model package
 ```dart
@@ -15,13 +15,10 @@ Name | Type | Description | Notes
 **updated** | **String** |  | [optional] 
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
-**title** | **String** |  | 
-**forumTopic** | [**RespondForumArticleDataForumTopic**](RespondForumArticleDataForumTopic.md) |  | [optional] 
-**forum** | [**RespondForumArticleDataForum**](RespondForumArticleDataForum.md) |  | [optional] 
-**user** | [**RespondAuctionsDataContentInnerBiddersInnerBuyer**](RespondAuctionsDataContentInnerBiddersInnerBuyer.md) |  | [optional] 
-**content** | **String** |  | [optional] 
-**photo** | **String** |  | [optional] 
-**totalComment** | **num** |  | [optional] 
+**name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**publishStatus** | **String** |  | [optional] 
+**thumbnail** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,7 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_forum_articles_data_content_inner_user.dart';
+import 'package:openapi/src/model/respond_auctions_data_content_inner_seller.dart';
+import 'package:openapi/src/model/respond_forum_articles_data_content_inner_forum.dart';
+import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,6 +22,8 @@ part 'respond_forum_articles_data_content_inner.g.dart';
 /// * [deleted] 
 /// * [recordStatus] 
 /// * [title] 
+/// * [forumTopic] 
+/// * [forum] 
 /// * [user] 
 /// * [content] 
 /// * [photo] 
@@ -50,8 +54,14 @@ abstract class RespondForumArticlesDataContentInner implements Built<RespondForu
   @BuiltValueField(wireName: r'title')
   String get title;
 
+  @BuiltValueField(wireName: r'forumTopic')
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner get forumTopic;
+
+  @BuiltValueField(wireName: r'forum')
+  RespondForumArticlesDataContentInnerForum get forum;
+
   @BuiltValueField(wireName: r'user')
-  RespondForumArticlesDataContentInnerUser get user;
+  RespondAuctionsDataContentInnerSeller get user;
 
   @BuiltValueField(wireName: r'content')
   String get content;
@@ -125,10 +135,20 @@ class _$RespondForumArticlesDataContentInnerSerializer implements PrimitiveSeria
       object.title,
       specifiedType: const FullType(String),
     );
+    yield r'forumTopic';
+    yield serializers.serialize(
+      object.forumTopic,
+      specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
+    );
+    yield r'forum';
+    yield serializers.serialize(
+      object.forum,
+      specifiedType: const FullType(RespondForumArticlesDataContentInnerForum),
+    );
     yield r'user';
     yield serializers.serialize(
       object.user,
-      specifiedType: const FullType(RespondForumArticlesDataContentInnerUser),
+      specifiedType: const FullType(RespondAuctionsDataContentInnerSeller),
     );
     yield r'content';
     yield serializers.serialize(
@@ -226,11 +246,25 @@ class _$RespondForumArticlesDataContentInnerSerializer implements PrimitiveSeria
           ) as String;
           result.title = valueDes;
           break;
+        case r'forumTopic':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
+          ) as RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
+          result.forumTopic.replace(valueDes);
+          break;
+        case r'forum':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RespondForumArticlesDataContentInnerForum),
+          ) as RespondForumArticlesDataContentInnerForum;
+          result.forum.replace(valueDes);
+          break;
         case r'user':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondForumArticlesDataContentInnerUser),
-          ) as RespondForumArticlesDataContentInnerUser;
+            specifiedType: const FullType(RespondAuctionsDataContentInnerSeller),
+          ) as RespondAuctionsDataContentInnerSeller;
           result.user.replace(valueDes);
           break;
         case r'content':

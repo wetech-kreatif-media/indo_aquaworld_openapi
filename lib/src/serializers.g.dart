@@ -86,13 +86,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondFaqsDataContentInner.serializer)
       ..add(RespondForumArticle.serializer)
       ..add(RespondForumArticleData.serializer)
+      ..add(RespondForumArticleDataForum.serializer)
+      ..add(RespondForumArticleDataForumTopic.serializer)
       ..add(RespondForumArticles.serializer)
       ..add(RespondForumArticlesData.serializer)
       ..add(RespondForumArticlesDataContentInner.serializer)
-      ..add(RespondForumArticlesDataContentInnerUser.serializer)
-      ..add(RespondForumArticlesDataContentInnerUserRole.serializer)
-      ..add(RespondForumArticlesDataContentInnerUserRolePermissionsInner
-          .serializer)
+      ..add(RespondForumArticlesDataContentInnerForum.serializer)
       ..add(RespondForumTopics.serializer)
       ..add(RespondForumTopicsData.serializer)
       ..add(RespondForumTopicsDataContentInner.serializer)
@@ -229,13 +228,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(RespondForumArticlesDataContentInner)]),
           () => new ListBuilder<RespondForumArticlesDataContentInner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                RespondForumArticlesDataContentInnerUserRolePermissionsInner)
-          ]),
-          () => new ListBuilder<
-              RespondForumArticlesDataContentInnerUserRolePermissionsInner>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(RespondForumTopicsDataContentInner)]),

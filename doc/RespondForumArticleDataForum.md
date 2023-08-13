@@ -1,4 +1,4 @@
-# openapi.model.RespondForumArticleData
+# openapi.model.RespondForumArticleDataForum
 
 ## Load the model package
 ```dart
@@ -8,20 +8,17 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
+**id** | **String** |  | [optional] 
 **createdBy** | **String** |  | [optional] 
 **updatedBy** | **String** |  | [optional] 
 **created** | **String** |  | [optional] 
 **updated** | **String** |  | [optional] 
 **deleted** | **num** |  | [optional] 
 **recordStatus** | **String** |  | [optional] 
-**title** | **String** |  | 
-**forumTopic** | [**RespondForumArticleDataForumTopic**](RespondForumArticleDataForumTopic.md) |  | [optional] 
-**forum** | [**RespondForumArticleDataForum**](RespondForumArticleDataForum.md) |  | [optional] 
-**user** | [**RespondAuctionsDataContentInnerBiddersInnerBuyer**](RespondAuctionsDataContentInnerBiddersInnerBuyer.md) |  | [optional] 
-**content** | **String** |  | [optional] 
-**photo** | **String** |  | [optional] 
-**totalComment** | **num** |  | [optional] 
+**name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**publishStatus** | **String** |  | [optional] 
+**thumbnail** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,12 @@ class _$RespondForumArticlesDataContentInner
   @override
   final String title;
   @override
-  final RespondForumArticlesDataContentInnerUser user;
+  final RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
+      forumTopic;
+  @override
+  final RespondForumArticlesDataContentInnerForum forum;
+  @override
+  final RespondAuctionsDataContentInnerSeller user;
   @override
   final String content;
   @override
@@ -48,6 +53,8 @@ class _$RespondForumArticlesDataContentInner
       required this.deleted,
       required this.recordStatus,
       required this.title,
+      required this.forumTopic,
+      required this.forum,
       required this.user,
       required this.content,
       this.photo,
@@ -69,6 +76,10 @@ class _$RespondForumArticlesDataContentInner
         recordStatus, r'RespondForumArticlesDataContentInner', 'recordStatus');
     BuiltValueNullFieldError.checkNotNull(
         title, r'RespondForumArticlesDataContentInner', 'title');
+    BuiltValueNullFieldError.checkNotNull(
+        forumTopic, r'RespondForumArticlesDataContentInner', 'forumTopic');
+    BuiltValueNullFieldError.checkNotNull(
+        forum, r'RespondForumArticlesDataContentInner', 'forum');
     BuiltValueNullFieldError.checkNotNull(
         user, r'RespondForumArticlesDataContentInner', 'user');
     BuiltValueNullFieldError.checkNotNull(
@@ -98,6 +109,8 @@ class _$RespondForumArticlesDataContentInner
         deleted == other.deleted &&
         recordStatus == other.recordStatus &&
         title == other.title &&
+        forumTopic == other.forumTopic &&
+        forum == other.forum &&
         user == other.user &&
         content == other.content &&
         photo == other.photo &&
@@ -115,6 +128,8 @@ class _$RespondForumArticlesDataContentInner
     _$hash = $jc(_$hash, deleted.hashCode);
     _$hash = $jc(_$hash, recordStatus.hashCode);
     _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, forumTopic.hashCode);
+    _$hash = $jc(_$hash, forum.hashCode);
     _$hash = $jc(_$hash, user.hashCode);
     _$hash = $jc(_$hash, content.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
@@ -134,6 +149,8 @@ class _$RespondForumArticlesDataContentInner
           ..add('deleted', deleted)
           ..add('recordStatus', recordStatus)
           ..add('title', title)
+          ..add('forumTopic', forumTopic)
+          ..add('forum', forum)
           ..add('user', user)
           ..add('content', content)
           ..add('photo', photo)
@@ -180,10 +197,26 @@ class RespondForumArticlesDataContentInnerBuilder
   String? get title => _$this._title;
   set title(String? title) => _$this._title = title;
 
-  RespondForumArticlesDataContentInnerUserBuilder? _user;
-  RespondForumArticlesDataContentInnerUserBuilder get user =>
-      _$this._user ??= new RespondForumArticlesDataContentInnerUserBuilder();
-  set user(RespondForumArticlesDataContentInnerUserBuilder? user) =>
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
+      _forumTopic;
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
+      get forumTopic => _$this._forumTopic ??=
+          new RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder();
+  set forumTopic(
+          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
+              forumTopic) =>
+      _$this._forumTopic = forumTopic;
+
+  RespondForumArticlesDataContentInnerForumBuilder? _forum;
+  RespondForumArticlesDataContentInnerForumBuilder get forum =>
+      _$this._forum ??= new RespondForumArticlesDataContentInnerForumBuilder();
+  set forum(RespondForumArticlesDataContentInnerForumBuilder? forum) =>
+      _$this._forum = forum;
+
+  RespondAuctionsDataContentInnerSellerBuilder? _user;
+  RespondAuctionsDataContentInnerSellerBuilder get user =>
+      _$this._user ??= new RespondAuctionsDataContentInnerSellerBuilder();
+  set user(RespondAuctionsDataContentInnerSellerBuilder? user) =>
       _$this._user = user;
 
   String? _content;
@@ -213,6 +246,8 @@ class RespondForumArticlesDataContentInnerBuilder
       _deleted = $v.deleted;
       _recordStatus = $v.recordStatus;
       _title = $v.title;
+      _forumTopic = $v.forumTopic.toBuilder();
+      _forum = $v.forum.toBuilder();
       _user = $v.user.toBuilder();
       _content = $v.content;
       _photo = $v.photo;
@@ -257,6 +292,8 @@ class RespondForumArticlesDataContentInnerBuilder
               recordStatus: BuiltValueNullFieldError.checkNotNull(recordStatus,
                   r'RespondForumArticlesDataContentInner', 'recordStatus'),
               title: BuiltValueNullFieldError.checkNotNull(title, r'RespondForumArticlesDataContentInner', 'title'),
+              forumTopic: forumTopic.build(),
+              forum: forum.build(),
               user: user.build(),
               content: BuiltValueNullFieldError.checkNotNull(content, r'RespondForumArticlesDataContentInner', 'content'),
               photo: photo,
@@ -264,6 +301,10 @@ class RespondForumArticlesDataContentInnerBuilder
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'forumTopic';
+        forumTopic.build();
+        _$failedField = 'forum';
+        forum.build();
         _$failedField = 'user';
         user.build();
       } catch (e) {
