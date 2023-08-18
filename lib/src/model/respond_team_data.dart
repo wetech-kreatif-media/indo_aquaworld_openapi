@@ -6,9 +6,9 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_teams_data_content_inner.g.dart';
+part 'respond_team_data.g.dart';
 
-/// RespondTeamsDataContentInner
+/// RespondTeamData
 ///
 /// Properties:
 /// * [id] 
@@ -22,9 +22,9 @@ part 'respond_teams_data_content_inner.g.dart';
 /// * [region] 
 /// * [address] 
 @BuiltValue()
-abstract class RespondTeamsDataContentInner implements Built<RespondTeamsDataContentInner, RespondTeamsDataContentInnerBuilder> {
+abstract class RespondTeamData implements Built<RespondTeamData, RespondTeamDataBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'createdBy')
   String? get createdBy;
@@ -45,42 +45,44 @@ abstract class RespondTeamsDataContentInner implements Built<RespondTeamsDataCon
   String? get recordStatus;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String? get name;
 
   @BuiltValueField(wireName: r'region')
-  String get region;
+  String? get region;
 
   @BuiltValueField(wireName: r'address')
-  String get address;
+  String? get address;
 
-  RespondTeamsDataContentInner._();
+  RespondTeamData._();
 
-  factory RespondTeamsDataContentInner([void updates(RespondTeamsDataContentInnerBuilder b)]) = _$RespondTeamsDataContentInner;
+  factory RespondTeamData([void updates(RespondTeamDataBuilder b)]) = _$RespondTeamData;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondTeamsDataContentInnerBuilder b) => b;
+  static void _defaults(RespondTeamDataBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondTeamsDataContentInner> get serializer => _$RespondTeamsDataContentInnerSerializer();
+  static Serializer<RespondTeamData> get serializer => _$RespondTeamDataSerializer();
 }
 
-class _$RespondTeamsDataContentInnerSerializer implements PrimitiveSerializer<RespondTeamsDataContentInner> {
+class _$RespondTeamDataSerializer implements PrimitiveSerializer<RespondTeamData> {
   @override
-  final Iterable<Type> types = const [RespondTeamsDataContentInner, _$RespondTeamsDataContentInner];
+  final Iterable<Type> types = const [RespondTeamData, _$RespondTeamData];
 
   @override
-  final String wireName = r'RespondTeamsDataContentInner';
+  final String wireName = r'RespondTeamData';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondTeamsDataContentInner object, {
+    RespondTeamData object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.createdBy != null) {
       yield r'createdBy';
       yield serializers.serialize(
@@ -123,27 +125,33 @@ class _$RespondTeamsDataContentInnerSerializer implements PrimitiveSerializer<Re
         specifiedType: const FullType(String),
       );
     }
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
-    yield r'region';
-    yield serializers.serialize(
-      object.region,
-      specifiedType: const FullType(String),
-    );
-    yield r'address';
-    yield serializers.serialize(
-      object.address,
-      specifiedType: const FullType(String),
-    );
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.region != null) {
+      yield r'region';
+      yield serializers.serialize(
+        object.region,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.address != null) {
+      yield r'address';
+      yield serializers.serialize(
+        object.address,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    RespondTeamsDataContentInner object, {
+    RespondTeamData object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -154,7 +162,7 @@ class _$RespondTeamsDataContentInnerSerializer implements PrimitiveSerializer<Re
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondTeamsDataContentInnerBuilder result,
+    required RespondTeamDataBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -240,12 +248,12 @@ class _$RespondTeamsDataContentInnerSerializer implements PrimitiveSerializer<Re
   }
 
   @override
-  RespondTeamsDataContentInner deserialize(
+  RespondTeamData deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondTeamsDataContentInnerBuilder();
+    final result = RespondTeamDataBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

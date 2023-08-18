@@ -8,17 +8,26 @@ part of 'respond_teams.dart';
 
 class _$RespondTeams extends RespondTeams {
   @override
-  final String? responseCode;
+  final String responseCode;
   @override
-  final String? responseMessage;
+  final String responseMessage;
   @override
-  final RespondTeamsData? data;
+  final RespondTeamsData data;
 
   factory _$RespondTeams([void Function(RespondTeamsBuilder)? updates]) =>
       (new RespondTeamsBuilder()..update(updates))._build();
 
-  _$RespondTeams._({this.responseCode, this.responseMessage, this.data})
-      : super._();
+  _$RespondTeams._(
+      {required this.responseCode,
+      required this.responseMessage,
+      required this.data})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondTeams', 'responseCode');
+    BuiltValueNullFieldError.checkNotNull(
+        responseMessage, r'RespondTeams', 'responseMessage');
+    BuiltValueNullFieldError.checkNotNull(data, r'RespondTeams', 'data');
+  }
 
   @override
   RespondTeams rebuild(void Function(RespondTeamsBuilder) updates) =>
@@ -83,7 +92,7 @@ class RespondTeamsBuilder
     if ($v != null) {
       _responseCode = $v.responseCode;
       _responseMessage = $v.responseMessage;
-      _data = $v.data?.toBuilder();
+      _data = $v.data.toBuilder();
       _$v = null;
     }
     return this;
@@ -108,14 +117,16 @@ class RespondTeamsBuilder
     try {
       _$result = _$v ??
           new _$RespondTeams._(
-              responseCode: responseCode,
-              responseMessage: responseMessage,
-              data: _data?.build());
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondTeams', 'responseCode'),
+              responseMessage: BuiltValueNullFieldError.checkNotNull(
+                  responseMessage, r'RespondTeams', 'responseMessage'),
+              data: data.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'data';
-        _data?.build();
+        data.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondTeams', _$failedField, e.toString());

@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **dateofBirth** | **String** |  | [optional] 
 **statusContestant** | **String** |  | 
 **photo** | **String** |  | [optional] 
-**contestantTeam** | [**RespondTeamsDataContentInner**](RespondTeamsDataContentInner.md) |  | [optional] 
+**contestantTeam** | [**RespondTeamData**](RespondTeamData.md) |  | [optional] 
 **codeContestant** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

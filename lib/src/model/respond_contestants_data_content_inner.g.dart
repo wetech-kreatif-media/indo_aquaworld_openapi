@@ -31,17 +31,17 @@ class _$RespondContestantsDataContentInner
   @override
   final String city;
   @override
-  final String gender;
+  final String? gender;
   @override
-  final String placeofBirth;
+  final String? placeofBirth;
   @override
-  final String dateofBirth;
+  final String? dateofBirth;
   @override
   final String statusContestant;
   @override
-  final String photo;
+  final String? photo;
   @override
-  final RespondTeamsDataContentInner? contestantTeam;
+  final RespondTeamData? contestantTeam;
   @override
   final String codeContestant;
 
@@ -63,11 +63,11 @@ class _$RespondContestantsDataContentInner
       required this.mobilePhone,
       required this.email,
       required this.city,
-      required this.gender,
-      required this.placeofBirth,
-      required this.dateofBirth,
+      this.gender,
+      this.placeofBirth,
+      this.dateofBirth,
       required this.statusContestant,
-      required this.photo,
+      this.photo,
       this.contestantTeam,
       required this.codeContestant})
       : super._() {
@@ -93,16 +93,8 @@ class _$RespondContestantsDataContentInner
         email, r'RespondContestantsDataContentInner', 'email');
     BuiltValueNullFieldError.checkNotNull(
         city, r'RespondContestantsDataContentInner', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        gender, r'RespondContestantsDataContentInner', 'gender');
-    BuiltValueNullFieldError.checkNotNull(
-        placeofBirth, r'RespondContestantsDataContentInner', 'placeofBirth');
-    BuiltValueNullFieldError.checkNotNull(
-        dateofBirth, r'RespondContestantsDataContentInner', 'dateofBirth');
     BuiltValueNullFieldError.checkNotNull(statusContestant,
         r'RespondContestantsDataContentInner', 'statusContestant');
-    BuiltValueNullFieldError.checkNotNull(
-        photo, r'RespondContestantsDataContentInner', 'photo');
     BuiltValueNullFieldError.checkNotNull(codeContestant,
         r'RespondContestantsDataContentInner', 'codeContestant');
   }
@@ -261,10 +253,10 @@ class RespondContestantsDataContentInnerBuilder
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
-  RespondTeamsDataContentInnerBuilder? _contestantTeam;
-  RespondTeamsDataContentInnerBuilder get contestantTeam =>
-      _$this._contestantTeam ??= new RespondTeamsDataContentInnerBuilder();
-  set contestantTeam(RespondTeamsDataContentInnerBuilder? contestantTeam) =>
+  RespondTeamDataBuilder? _contestantTeam;
+  RespondTeamDataBuilder get contestantTeam =>
+      _$this._contestantTeam ??= new RespondTeamDataBuilder();
+  set contestantTeam(RespondTeamDataBuilder? contestantTeam) =>
       _$this._contestantTeam = contestantTeam;
 
   String? _codeContestant;
@@ -340,11 +332,11 @@ class RespondContestantsDataContentInnerBuilder
               mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondContestantsDataContentInner', 'mobilePhone'),
               email: BuiltValueNullFieldError.checkNotNull(email, r'RespondContestantsDataContentInner', 'email'),
               city: BuiltValueNullFieldError.checkNotNull(city, r'RespondContestantsDataContentInner', 'city'),
-              gender: BuiltValueNullFieldError.checkNotNull(gender, r'RespondContestantsDataContentInner', 'gender'),
-              placeofBirth: BuiltValueNullFieldError.checkNotNull(placeofBirth, r'RespondContestantsDataContentInner', 'placeofBirth'),
-              dateofBirth: BuiltValueNullFieldError.checkNotNull(dateofBirth, r'RespondContestantsDataContentInner', 'dateofBirth'),
+              gender: gender,
+              placeofBirth: placeofBirth,
+              dateofBirth: dateofBirth,
               statusContestant: BuiltValueNullFieldError.checkNotNull(statusContestant, r'RespondContestantsDataContentInner', 'statusContestant'),
-              photo: BuiltValueNullFieldError.checkNotNull(photo, r'RespondContestantsDataContentInner', 'photo'),
+              photo: photo,
               contestantTeam: _contestantTeam?.build(),
               codeContestant: BuiltValueNullFieldError.checkNotNull(codeContestant, r'RespondContestantsDataContentInner', 'codeContestant'));
     } catch (_) {

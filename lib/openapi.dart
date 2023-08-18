@@ -167,6 +167,7 @@ export 'package:openapi/src/model/respond_tanks_data_content_inner.dart';
 export 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component.dart';
 export 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart';
 export 'package:openapi/src/model/respond_team.dart';
+export 'package:openapi/src/model/respond_team_data.dart';
 export 'package:openapi/src/model/respond_teams.dart';
 export 'package:openapi/src/model/respond_teams_data.dart';
 export 'package:openapi/src/model/respond_teams_data_content_inner.dart';

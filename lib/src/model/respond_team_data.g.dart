@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'respond_teams_data_content_inner.dart';
+part of 'respond_team_data.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$RespondTeamsDataContentInner extends RespondTeamsDataContentInner {
+class _$RespondTeamData extends RespondTeamData {
   @override
-  final String id;
+  final String? id;
   @override
   final String? createdBy;
   @override
@@ -22,51 +22,40 @@ class _$RespondTeamsDataContentInner extends RespondTeamsDataContentInner {
   @override
   final String? recordStatus;
   @override
-  final String name;
+  final String? name;
   @override
-  final String region;
+  final String? region;
   @override
-  final String address;
+  final String? address;
 
-  factory _$RespondTeamsDataContentInner(
-          [void Function(RespondTeamsDataContentInnerBuilder)? updates]) =>
-      (new RespondTeamsDataContentInnerBuilder()..update(updates))._build();
+  factory _$RespondTeamData([void Function(RespondTeamDataBuilder)? updates]) =>
+      (new RespondTeamDataBuilder()..update(updates))._build();
 
-  _$RespondTeamsDataContentInner._(
-      {required this.id,
+  _$RespondTeamData._(
+      {this.id,
       this.createdBy,
       this.updatedBy,
       this.created,
       this.updated,
       this.deleted,
       this.recordStatus,
-      required this.name,
-      required this.region,
-      required this.address})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'RespondTeamsDataContentInner', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        name, r'RespondTeamsDataContentInner', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        region, r'RespondTeamsDataContentInner', 'region');
-    BuiltValueNullFieldError.checkNotNull(
-        address, r'RespondTeamsDataContentInner', 'address');
-  }
+      this.name,
+      this.region,
+      this.address})
+      : super._();
 
   @override
-  RespondTeamsDataContentInner rebuild(
-          void Function(RespondTeamsDataContentInnerBuilder) updates) =>
+  RespondTeamData rebuild(void Function(RespondTeamDataBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  RespondTeamsDataContentInnerBuilder toBuilder() =>
-      new RespondTeamsDataContentInnerBuilder()..replace(this);
+  RespondTeamDataBuilder toBuilder() =>
+      new RespondTeamDataBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RespondTeamsDataContentInner &&
+    return other is RespondTeamData &&
         id == other.id &&
         createdBy == other.createdBy &&
         updatedBy == other.updatedBy &&
@@ -98,7 +87,7 @@ class _$RespondTeamsDataContentInner extends RespondTeamsDataContentInner {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'RespondTeamsDataContentInner')
+    return (newBuiltValueToStringHelper(r'RespondTeamData')
           ..add('id', id)
           ..add('createdBy', createdBy)
           ..add('updatedBy', updatedBy)
@@ -113,11 +102,9 @@ class _$RespondTeamsDataContentInner extends RespondTeamsDataContentInner {
   }
 }
 
-class RespondTeamsDataContentInnerBuilder
-    implements
-        Builder<RespondTeamsDataContentInner,
-            RespondTeamsDataContentInnerBuilder> {
-  _$RespondTeamsDataContentInner? _$v;
+class RespondTeamDataBuilder
+    implements Builder<RespondTeamData, RespondTeamDataBuilder> {
+  _$RespondTeamData? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -159,11 +146,11 @@ class RespondTeamsDataContentInnerBuilder
   String? get address => _$this._address;
   set address(String? address) => _$this._address = address;
 
-  RespondTeamsDataContentInnerBuilder() {
-    RespondTeamsDataContentInner._defaults(this);
+  RespondTeamDataBuilder() {
+    RespondTeamData._defaults(this);
   }
 
-  RespondTeamsDataContentInnerBuilder get _$this {
+  RespondTeamDataBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -182,36 +169,32 @@ class RespondTeamsDataContentInnerBuilder
   }
 
   @override
-  void replace(RespondTeamsDataContentInner other) {
+  void replace(RespondTeamData other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$RespondTeamsDataContentInner;
+    _$v = other as _$RespondTeamData;
   }
 
   @override
-  void update(void Function(RespondTeamsDataContentInnerBuilder)? updates) {
+  void update(void Function(RespondTeamDataBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  RespondTeamsDataContentInner build() => _build();
+  RespondTeamData build() => _build();
 
-  _$RespondTeamsDataContentInner _build() {
+  _$RespondTeamData _build() {
     final _$result = _$v ??
-        new _$RespondTeamsDataContentInner._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'RespondTeamsDataContentInner', 'id'),
+        new _$RespondTeamData._(
+            id: id,
             createdBy: createdBy,
             updatedBy: updatedBy,
             created: created,
             updated: updated,
             deleted: deleted,
             recordStatus: recordStatus,
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RespondTeamsDataContentInner', 'name'),
-            region: BuiltValueNullFieldError.checkNotNull(
-                region, r'RespondTeamsDataContentInner', 'region'),
-            address: BuiltValueNullFieldError.checkNotNull(
-                address, r'RespondTeamsDataContentInner', 'address'));
+            name: name,
+            region: region,
+            address: address);
     replace(_$result);
     return _$result;
   }

@@ -155,6 +155,7 @@ import 'package:openapi/src/model/respond_tanks_data_content_inner.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart';
 import 'package:openapi/src/model/respond_team.dart';
+import 'package:openapi/src/model/respond_team_data.dart';
 import 'package:openapi/src/model/respond_teams.dart';
 import 'package:openapi/src/model/respond_teams_data.dart';
 import 'package:openapi/src/model/respond_teams_data_content_inner.dart';
@@ -310,6 +311,7 @@ part 'serializers.g.dart';
   RespondTanksDataContentInnerContestComponent,
   RespondTanksDataContentInnerContestComponentContestEvent,
   RespondTeam,
+  RespondTeamData,
   RespondTeams,
   RespondTeamsData,
   RespondTeamsDataContentInner,

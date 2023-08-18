@@ -22,9 +22,9 @@ class _$RespondTeamsData extends RespondTeamsData {
   @override
   final num? totalElements;
   @override
-  final num? numberOfElements;
+  final num numberOfElements;
   @override
-  final BuiltList<RespondTeamsDataContentInner>? content;
+  final BuiltList<RespondTeamsDataContentInner> content;
 
   factory _$RespondTeamsData(
           [void Function(RespondTeamsDataBuilder)? updates]) =>
@@ -38,9 +38,14 @@ class _$RespondTeamsData extends RespondTeamsData {
       this.number,
       this.totalPages,
       this.totalElements,
-      this.numberOfElements,
-      this.content})
-      : super._();
+      required this.numberOfElements,
+      required this.content})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        numberOfElements, r'RespondTeamsData', 'numberOfElements');
+    BuiltValueNullFieldError.checkNotNull(
+        content, r'RespondTeamsData', 'content');
+  }
 
   @override
   RespondTeamsData rebuild(void Function(RespondTeamsDataBuilder) updates) =>
@@ -156,7 +161,7 @@ class RespondTeamsDataBuilder
       _totalPages = $v.totalPages;
       _totalElements = $v.totalElements;
       _numberOfElements = $v.numberOfElements;
-      _content = $v.content?.toBuilder();
+      _content = $v.content.toBuilder();
       _$v = null;
     }
     return this;
@@ -188,13 +193,14 @@ class RespondTeamsDataBuilder
               number: number,
               totalPages: totalPages,
               totalElements: totalElements,
-              numberOfElements: numberOfElements,
-              content: _content?.build());
+              numberOfElements: BuiltValueNullFieldError.checkNotNull(
+                  numberOfElements, r'RespondTeamsData', 'numberOfElements'),
+              content: content.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'content';
-        _content?.build();
+        content.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondTeamsData', _$failedField, e.toString());

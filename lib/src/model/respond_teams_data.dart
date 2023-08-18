@@ -46,10 +46,10 @@ abstract class RespondTeamsData implements Built<RespondTeamsData, RespondTeamsD
   num? get totalElements;
 
   @BuiltValueField(wireName: r'numberOfElements')
-  num? get numberOfElements;
+  num get numberOfElements;
 
   @BuiltValueField(wireName: r'content')
-  BuiltList<RespondTeamsDataContentInner>? get content;
+  BuiltList<RespondTeamsDataContentInner> get content;
 
   RespondTeamsData._();
 
@@ -123,20 +123,16 @@ class _$RespondTeamsDataSerializer implements PrimitiveSerializer<RespondTeamsDa
         specifiedType: const FullType(num),
       );
     }
-    if (object.numberOfElements != null) {
-      yield r'numberOfElements';
-      yield serializers.serialize(
-        object.numberOfElements,
-        specifiedType: const FullType(num),
-      );
-    }
-    if (object.content != null) {
-      yield r'content';
-      yield serializers.serialize(
-        object.content,
-        specifiedType: const FullType(BuiltList, [FullType(RespondTeamsDataContentInner)]),
-      );
-    }
+    yield r'numberOfElements';
+    yield serializers.serialize(
+      object.numberOfElements,
+      specifiedType: const FullType(num),
+    );
+    yield r'content';
+    yield serializers.serialize(
+      object.content,
+      specifiedType: const FullType(BuiltList, [FullType(RespondTeamsDataContentInner)]),
+    );
   }
 
   @override

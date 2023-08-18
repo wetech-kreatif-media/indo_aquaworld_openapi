@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_teams_data_content_inner.dart';
+import 'package:openapi/src/model/respond_team_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -24,7 +24,7 @@ abstract class RespondTeam implements Built<RespondTeam, RespondTeamBuilder> {
   String? get responseMessage;
 
   @BuiltValueField(wireName: r'data')
-  RespondTeamsDataContentInner? get data;
+  RespondTeamData? get data;
 
   RespondTeam._();
 
@@ -67,7 +67,7 @@ class _$RespondTeamSerializer implements PrimitiveSerializer<RespondTeam> {
       yield r'data';
       yield serializers.serialize(
         object.data,
-        specifiedType: const FullType(RespondTeamsDataContentInner),
+        specifiedType: const FullType(RespondTeamData),
       );
     }
   }
@@ -110,8 +110,8 @@ class _$RespondTeamSerializer implements PrimitiveSerializer<RespondTeam> {
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondTeamsDataContentInner),
-          ) as RespondTeamsDataContentInner;
+            specifiedType: const FullType(RespondTeamData),
+          ) as RespondTeamData;
           result.data.replace(valueDes);
           break;
         default:

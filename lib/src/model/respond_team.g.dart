@@ -12,7 +12,7 @@ class _$RespondTeam extends RespondTeam {
   @override
   final String? responseMessage;
   @override
-  final RespondTeamsDataContentInner? data;
+  final RespondTeamData? data;
 
   factory _$RespondTeam([void Function(RespondTeamBuilder)? updates]) =>
       (new RespondTeamBuilder()..update(updates))._build();
@@ -68,10 +68,10 @@ class RespondTeamBuilder implements Builder<RespondTeam, RespondTeamBuilder> {
   set responseMessage(String? responseMessage) =>
       _$this._responseMessage = responseMessage;
 
-  RespondTeamsDataContentInnerBuilder? _data;
-  RespondTeamsDataContentInnerBuilder get data =>
-      _$this._data ??= new RespondTeamsDataContentInnerBuilder();
-  set data(RespondTeamsDataContentInnerBuilder? data) => _$this._data = data;
+  RespondTeamDataBuilder? _data;
+  RespondTeamDataBuilder get data =>
+      _$this._data ??= new RespondTeamDataBuilder();
+  set data(RespondTeamDataBuilder? data) => _$this._data = data;
 
   RespondTeamBuilder() {
     RespondTeam._defaults(this);

@@ -152,6 +152,7 @@ doc/RespondTanksDataContentInner.md
 doc/RespondTanksDataContentInnerContestComponent.md
 doc/RespondTanksDataContentInnerContestComponentContestEvent.md
 doc/RespondTeam.md
+doc/RespondTeamData.md
 doc/RespondTeams.md
 doc/RespondTeamsData.md
 doc/RespondTeamsDataContentInner.md
@@ -335,6 +336,7 @@ lib/src/model/respond_tanks_data_content_inner.dart
 lib/src/model/respond_tanks_data_content_inner_contest_component.dart
 lib/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart
 lib/src/model/respond_team.dart
+lib/src/model/respond_team_data.dart
 lib/src/model/respond_teams.dart
 lib/src/model/respond_teams_data.dart
 lib/src/model/respond_teams_data_content_inner.dart
@@ -347,3 +349,4 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/respond_team_data_test.dart

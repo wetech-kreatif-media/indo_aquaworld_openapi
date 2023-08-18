@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **number** | **num** |  | [optional] 
 **totalPages** | **num** |  | [optional] 
 **totalElements** | **num** |  | [optional] 
-**numberOfElements** | **num** |  | [optional] 
-**content** | [**BuiltList&lt;RespondTeamsDataContentInner&gt;**](RespondTeamsDataContentInner.md) |  | [optional] 
+**numberOfElements** | **num** |  | 
+**content** | [**BuiltList&lt;RespondTeamsDataContentInner&gt;**](RespondTeamsDataContentInner.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

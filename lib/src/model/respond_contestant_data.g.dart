@@ -40,7 +40,7 @@ class _$RespondContestantData extends RespondContestantData {
   @override
   final String? photo;
   @override
-  final RespondTeamsDataContentInner? contestantTeam;
+  final RespondTeamData? contestantTeam;
   @override
   final String? codeContestant;
 
@@ -221,10 +221,10 @@ class RespondContestantDataBuilder
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
-  RespondTeamsDataContentInnerBuilder? _contestantTeam;
-  RespondTeamsDataContentInnerBuilder get contestantTeam =>
-      _$this._contestantTeam ??= new RespondTeamsDataContentInnerBuilder();
-  set contestantTeam(RespondTeamsDataContentInnerBuilder? contestantTeam) =>
+  RespondTeamDataBuilder? _contestantTeam;
+  RespondTeamDataBuilder get contestantTeam =>
+      _$this._contestantTeam ??= new RespondTeamDataBuilder();
+  set contestantTeam(RespondTeamDataBuilder? contestantTeam) =>
       _$this._contestantTeam = contestantTeam;
 
   String? _codeContestant;
