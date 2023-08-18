@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **photo** | **String** |  | [optional] 
 **codeContestant** | **String** |  | [optional] 
 **contestantTeam** | **String** |  | [optional] 
+**eventId** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

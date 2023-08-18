@@ -22,6 +22,7 @@ part 'request_contestant.g.dart';
 /// * [photo] 
 /// * [codeContestant] 
 /// * [contestantTeam] 
+/// * [eventId] 
 @BuiltValue()
 abstract class RequestContestant implements Built<RequestContestant, RequestContestantBuilder> {
   @BuiltValueField(wireName: r'fullname')
@@ -56,6 +57,9 @@ abstract class RequestContestant implements Built<RequestContestant, RequestCont
 
   @BuiltValueField(wireName: r'contestantTeam')
   String? get contestantTeam;
+
+  @BuiltValueField(wireName: r'eventId')
+  String get eventId;
 
   RequestContestant._();
 
@@ -143,6 +147,11 @@ class _$RequestContestantSerializer implements PrimitiveSerializer<RequestContes
         specifiedType: const FullType(String),
       );
     }
+    yield r'eventId';
+    yield serializers.serialize(
+      object.eventId,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override
@@ -242,6 +251,13 @@ class _$RequestContestantSerializer implements PrimitiveSerializer<RequestContes
             specifiedType: const FullType(String),
           ) as String;
           result.contestantTeam = valueDes;
+          break;
+        case r'eventId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.eventId = valueDes;
           break;
         default:
           unhandled.add(key);

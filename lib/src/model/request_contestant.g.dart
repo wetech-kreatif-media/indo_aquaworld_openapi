@@ -29,6 +29,8 @@ class _$RequestContestant extends RequestContestant {
   final String? codeContestant;
   @override
   final String? contestantTeam;
+  @override
+  final String eventId;
 
   factory _$RequestContestant(
           [void Function(RequestContestantBuilder)? updates]) =>
@@ -45,7 +47,8 @@ class _$RequestContestant extends RequestContestant {
       required this.dateofBirth,
       this.photo,
       this.codeContestant,
-      this.contestantTeam})
+      this.contestantTeam,
+      required this.eventId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         fullname, r'RequestContestant', 'fullname');
@@ -59,6 +62,8 @@ class _$RequestContestant extends RequestContestant {
         placeofBirth, r'RequestContestant', 'placeofBirth');
     BuiltValueNullFieldError.checkNotNull(
         dateofBirth, r'RequestContestant', 'dateofBirth');
+    BuiltValueNullFieldError.checkNotNull(
+        eventId, r'RequestContestant', 'eventId');
   }
 
   @override
@@ -83,7 +88,8 @@ class _$RequestContestant extends RequestContestant {
         dateofBirth == other.dateofBirth &&
         photo == other.photo &&
         codeContestant == other.codeContestant &&
-        contestantTeam == other.contestantTeam;
+        contestantTeam == other.contestantTeam &&
+        eventId == other.eventId;
   }
 
   @override
@@ -100,6 +106,7 @@ class _$RequestContestant extends RequestContestant {
     _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, codeContestant.hashCode);
     _$hash = $jc(_$hash, contestantTeam.hashCode);
+    _$hash = $jc(_$hash, eventId.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -117,7 +124,8 @@ class _$RequestContestant extends RequestContestant {
           ..add('dateofBirth', dateofBirth)
           ..add('photo', photo)
           ..add('codeContestant', codeContestant)
-          ..add('contestantTeam', contestantTeam))
+          ..add('contestantTeam', contestantTeam)
+          ..add('eventId', eventId))
         .toString();
   }
 }
@@ -173,6 +181,10 @@ class RequestContestantBuilder
   set contestantTeam(String? contestantTeam) =>
       _$this._contestantTeam = contestantTeam;
 
+  String? _eventId;
+  String? get eventId => _$this._eventId;
+  set eventId(String? eventId) => _$this._eventId = eventId;
+
   RequestContestantBuilder() {
     RequestContestant._defaults(this);
   }
@@ -191,6 +203,7 @@ class RequestContestantBuilder
       _photo = $v.photo;
       _codeContestant = $v.codeContestant;
       _contestantTeam = $v.contestantTeam;
+      _eventId = $v.eventId;
       _$v = null;
     }
     return this;
@@ -230,7 +243,9 @@ class RequestContestantBuilder
                 dateofBirth, r'RequestContestant', 'dateofBirth'),
             photo: photo,
             codeContestant: codeContestant,
-            contestantTeam: contestantTeam);
+            contestantTeam: contestantTeam,
+            eventId: BuiltValueNullFieldError.checkNotNull(
+                eventId, r'RequestContestant', 'eventId'));
     replace(_$result);
     return _$result;
   }
