@@ -10,21 +10,15 @@ class _$RequestContestant extends RequestContestant {
   @override
   final String fullname;
   @override
-  final String mobilePhone;
+  final String? mobilePhone;
   @override
-  final String email;
+  final String? email;
   @override
   final String city;
   @override
-  final String gender;
-  @override
-  final String placeofBirth;
+  final String? gender;
   @override
   final String? statusContestant;
-  @override
-  final String dateofBirth;
-  @override
-  final String? photo;
   @override
   final String? codeContestant;
   @override
@@ -38,30 +32,18 @@ class _$RequestContestant extends RequestContestant {
 
   _$RequestContestant._(
       {required this.fullname,
-      required this.mobilePhone,
-      required this.email,
+      this.mobilePhone,
+      this.email,
       required this.city,
-      required this.gender,
-      required this.placeofBirth,
+      this.gender,
       this.statusContestant,
-      required this.dateofBirth,
-      this.photo,
       this.codeContestant,
       this.contestantTeam,
       required this.eventId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         fullname, r'RequestContestant', 'fullname');
-    BuiltValueNullFieldError.checkNotNull(
-        mobilePhone, r'RequestContestant', 'mobilePhone');
-    BuiltValueNullFieldError.checkNotNull(email, r'RequestContestant', 'email');
     BuiltValueNullFieldError.checkNotNull(city, r'RequestContestant', 'city');
-    BuiltValueNullFieldError.checkNotNull(
-        gender, r'RequestContestant', 'gender');
-    BuiltValueNullFieldError.checkNotNull(
-        placeofBirth, r'RequestContestant', 'placeofBirth');
-    BuiltValueNullFieldError.checkNotNull(
-        dateofBirth, r'RequestContestant', 'dateofBirth');
     BuiltValueNullFieldError.checkNotNull(
         eventId, r'RequestContestant', 'eventId');
   }
@@ -83,10 +65,7 @@ class _$RequestContestant extends RequestContestant {
         email == other.email &&
         city == other.city &&
         gender == other.gender &&
-        placeofBirth == other.placeofBirth &&
         statusContestant == other.statusContestant &&
-        dateofBirth == other.dateofBirth &&
-        photo == other.photo &&
         codeContestant == other.codeContestant &&
         contestantTeam == other.contestantTeam &&
         eventId == other.eventId;
@@ -100,10 +79,7 @@ class _$RequestContestant extends RequestContestant {
     _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
     _$hash = $jc(_$hash, gender.hashCode);
-    _$hash = $jc(_$hash, placeofBirth.hashCode);
     _$hash = $jc(_$hash, statusContestant.hashCode);
-    _$hash = $jc(_$hash, dateofBirth.hashCode);
-    _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, codeContestant.hashCode);
     _$hash = $jc(_$hash, contestantTeam.hashCode);
     _$hash = $jc(_$hash, eventId.hashCode);
@@ -119,10 +95,7 @@ class _$RequestContestant extends RequestContestant {
           ..add('email', email)
           ..add('city', city)
           ..add('gender', gender)
-          ..add('placeofBirth', placeofBirth)
           ..add('statusContestant', statusContestant)
-          ..add('dateofBirth', dateofBirth)
-          ..add('photo', photo)
           ..add('codeContestant', codeContestant)
           ..add('contestantTeam', contestantTeam)
           ..add('eventId', eventId))
@@ -154,22 +127,10 @@ class RequestContestantBuilder
   String? get gender => _$this._gender;
   set gender(String? gender) => _$this._gender = gender;
 
-  String? _placeofBirth;
-  String? get placeofBirth => _$this._placeofBirth;
-  set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
-
   String? _statusContestant;
   String? get statusContestant => _$this._statusContestant;
   set statusContestant(String? statusContestant) =>
       _$this._statusContestant = statusContestant;
-
-  String? _dateofBirth;
-  String? get dateofBirth => _$this._dateofBirth;
-  set dateofBirth(String? dateofBirth) => _$this._dateofBirth = dateofBirth;
-
-  String? _photo;
-  String? get photo => _$this._photo;
-  set photo(String? photo) => _$this._photo = photo;
 
   String? _codeContestant;
   String? get codeContestant => _$this._codeContestant;
@@ -197,10 +158,7 @@ class RequestContestantBuilder
       _email = $v.email;
       _city = $v.city;
       _gender = $v.gender;
-      _placeofBirth = $v.placeofBirth;
       _statusContestant = $v.statusContestant;
-      _dateofBirth = $v.dateofBirth;
-      _photo = $v.photo;
       _codeContestant = $v.codeContestant;
       _contestantTeam = $v.contestantTeam;
       _eventId = $v.eventId;
@@ -228,20 +186,12 @@ class RequestContestantBuilder
         new _$RequestContestant._(
             fullname: BuiltValueNullFieldError.checkNotNull(
                 fullname, r'RequestContestant', 'fullname'),
-            mobilePhone: BuiltValueNullFieldError.checkNotNull(
-                mobilePhone, r'RequestContestant', 'mobilePhone'),
-            email: BuiltValueNullFieldError.checkNotNull(
-                email, r'RequestContestant', 'email'),
+            mobilePhone: mobilePhone,
+            email: email,
             city: BuiltValueNullFieldError.checkNotNull(
                 city, r'RequestContestant', 'city'),
-            gender: BuiltValueNullFieldError.checkNotNull(
-                gender, r'RequestContestant', 'gender'),
-            placeofBirth: BuiltValueNullFieldError.checkNotNull(
-                placeofBirth, r'RequestContestant', 'placeofBirth'),
+            gender: gender,
             statusContestant: statusContestant,
-            dateofBirth: BuiltValueNullFieldError.checkNotNull(
-                dateofBirth, r'RequestContestant', 'dateofBirth'),
-            photo: photo,
             codeContestant: codeContestant,
             contestantTeam: contestantTeam,
             eventId: BuiltValueNullFieldError.checkNotNull(

@@ -9,14 +9,11 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fullname** | **String** |  | 
-**mobilePhone** | **String** |  | 
-**email** | **String** |  | 
+**mobilePhone** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
 **city** | **String** |  | 
-**gender** | **String** |  | 
-**placeofBirth** | **String** |  | 
+**gender** | **String** |  | [optional] 
 **statusContestant** | **String** |  | [optional] 
-**dateofBirth** | **String** |  | 
-**photo** | **String** |  | [optional] 
 **codeContestant** | **String** |  | [optional] 
 **contestantTeam** | **String** |  | [optional] 
 **eventId** | **String** |  | 
