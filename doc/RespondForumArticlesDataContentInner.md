@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **deleted** | **num** |  | 
 **recordStatus** | **String** |  | 
 **title** | **String** |  | 
-**forumTopic** | [**RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner**](RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md) |  | 
+**forumTopic** | [**RespondSellingUserDataContentInnerSellingSubCategory**](RespondSellingUserDataContentInnerSellingSubCategory.md) |  | 
 **forum** | [**RespondForumArticlesDataContentInnerForum**](RespondForumArticlesDataContentInnerForum.md) |  | 
 **user** | [**RespondAuctionsDataContentInnerSeller**](RespondAuctionsDataContentInnerSeller.md) |  | 
 **content** | **String** |  | 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **files** | [**BuiltList&lt;RespondSellingDataFilesInner&gt;**](RespondSellingDataFilesInner.md) |  | 
 **description** | **String** |  | 
 **user** | [**RespondSellingDataUser**](RespondSellingDataUser.md) |  | 
-**sellingSubCategory** | [**RespondSellingDataSellingSubCategory**](RespondSellingDataSellingSubCategory.md) |  | [optional] 
+**sellingSubCategory** | [**RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner**](RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner.md) |  | [optional] 
 **price** | **num** |  | 
 **publishStatus** | **String** |  | 
 **updated** | **String** |  | 

@@ -25,8 +25,7 @@ class _$RespondForumArticlesDataContentInner
   @override
   final String title;
   @override
-  final RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
-      forumTopic;
+  final RespondSellingUserDataContentInnerSellingSubCategory forumTopic;
   @override
   final RespondForumArticlesDataContentInnerForum forum;
   @override
@@ -197,13 +196,12 @@ class RespondForumArticlesDataContentInnerBuilder
   String? get title => _$this._title;
   set title(String? title) => _$this._title = title;
 
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
-      _forumTopic;
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
-      get forumTopic => _$this._forumTopic ??=
-          new RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder();
+  RespondSellingUserDataContentInnerSellingSubCategoryBuilder? _forumTopic;
+  RespondSellingUserDataContentInnerSellingSubCategoryBuilder get forumTopic =>
+      _$this._forumTopic ??=
+          new RespondSellingUserDataContentInnerSellingSubCategoryBuilder();
   set forumTopic(
-          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
+          RespondSellingUserDataContentInnerSellingSubCategoryBuilder?
               forumTopic) =>
       _$this._forumTopic = forumTopic;
 

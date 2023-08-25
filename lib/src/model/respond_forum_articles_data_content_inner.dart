@@ -5,7 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:openapi/src/model/respond_auctions_data_content_inner_seller.dart';
 import 'package:openapi/src/model/respond_forum_articles_data_content_inner_forum.dart';
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
+import 'package:openapi/src/model/respond_selling_user_data_content_inner_selling_sub_category.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -55,7 +55,7 @@ abstract class RespondForumArticlesDataContentInner implements Built<RespondForu
   String get title;
 
   @BuiltValueField(wireName: r'forumTopic')
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner get forumTopic;
+  RespondSellingUserDataContentInnerSellingSubCategory get forumTopic;
 
   @BuiltValueField(wireName: r'forum')
   RespondForumArticlesDataContentInnerForum get forum;
@@ -138,7 +138,7 @@ class _$RespondForumArticlesDataContentInnerSerializer implements PrimitiveSeria
     yield r'forumTopic';
     yield serializers.serialize(
       object.forumTopic,
-      specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
+      specifiedType: const FullType(RespondSellingUserDataContentInnerSellingSubCategory),
     );
     yield r'forum';
     yield serializers.serialize(
@@ -249,8 +249,8 @@ class _$RespondForumArticlesDataContentInnerSerializer implements PrimitiveSeria
         case r'forumTopic':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
-          ) as RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
+            specifiedType: const FullType(RespondSellingUserDataContentInnerSellingSubCategory),
+          ) as RespondSellingUserDataContentInnerSellingSubCategory;
           result.forumTopic.replace(valueDes);
           break;
         case r'forum':

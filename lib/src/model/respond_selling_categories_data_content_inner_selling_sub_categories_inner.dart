@@ -22,7 +22,7 @@ part 'respond_selling_categories_data_content_inner_selling_sub_categories_inner
 @BuiltValue()
 abstract class RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner implements Built<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner, RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
 
   @BuiltValueField(wireName: r'createdBy')
   String? get createdBy;
@@ -43,7 +43,7 @@ abstract class RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
   String? get recordStatus;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String get name;
 
   RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner._();
 
@@ -68,13 +68,11 @@ class _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerSeriali
     RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
     if (object.createdBy != null) {
       yield r'createdBy';
       yield serializers.serialize(
@@ -117,13 +115,11 @@ class _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerSeriali
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
-      yield r'name';
-      yield serializers.serialize(
-        object.name,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'name';
+    yield serializers.serialize(
+      object.name,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override

@@ -20,7 +20,8 @@ class _$RespondSellingData extends RespondSellingData {
   @override
   final RespondSellingDataUser user;
   @override
-  final RespondSellingDataSellingSubCategory? sellingSubCategory;
+  final RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner?
+      sellingSubCategory;
   @override
   final num price;
   @override
@@ -147,12 +148,14 @@ class RespondSellingDataBuilder
       _$this._user ??= new RespondSellingDataUserBuilder();
   set user(RespondSellingDataUserBuilder? user) => _$this._user = user;
 
-  RespondSellingDataSellingSubCategoryBuilder? _sellingSubCategory;
-  RespondSellingDataSellingSubCategoryBuilder get sellingSubCategory =>
-      _$this._sellingSubCategory ??=
-          new RespondSellingDataSellingSubCategoryBuilder();
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
+      _sellingSubCategory;
+  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
+      get sellingSubCategory => _$this._sellingSubCategory ??=
+          new RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder();
   set sellingSubCategory(
-          RespondSellingDataSellingSubCategoryBuilder? sellingSubCategory) =>
+          RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder?
+              sellingSubCategory) =>
       _$this._sellingSubCategory = sellingSubCategory;
 
   num? _price;

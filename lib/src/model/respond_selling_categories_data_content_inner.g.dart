@@ -9,7 +9,7 @@ part of 'respond_selling_categories_data_content_inner.dart';
 class _$RespondSellingCategoriesDataContentInner
     extends RespondSellingCategoriesDataContentInner {
   @override
-  final String? id;
+  final String id;
   @override
   final String? createdBy;
   @override
@@ -23,7 +23,7 @@ class _$RespondSellingCategoriesDataContentInner
   @override
   final String? recordStatus;
   @override
-  final String? name;
+  final String name;
   @override
   final BuiltList<
           RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>?
@@ -36,16 +36,21 @@ class _$RespondSellingCategoriesDataContentInner
           ._build();
 
   _$RespondSellingCategoriesDataContentInner._(
-      {this.id,
+      {required this.id,
       this.createdBy,
       this.updatedBy,
       this.created,
       this.updated,
       this.deleted,
       this.recordStatus,
-      this.name,
+      required this.name,
       this.sellingSubCategories})
-      : super._();
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'RespondSellingCategoriesDataContentInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'RespondSellingCategoriesDataContentInner', 'name');
+  }
 
   @override
   RespondSellingCategoriesDataContentInner rebuild(
@@ -196,14 +201,16 @@ class RespondSellingCategoriesDataContentInnerBuilder
     try {
       _$result = _$v ??
           new _$RespondSellingCategoriesDataContentInner._(
-              id: id,
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'RespondSellingCategoriesDataContentInner', 'id'),
               createdBy: createdBy,
               updatedBy: updatedBy,
               created: created,
               updated: updated,
               deleted: deleted,
               recordStatus: recordStatus,
-              name: name,
+              name: BuiltValueNullFieldError.checkNotNull(
+                  name, r'RespondSellingCategoriesDataContentInner', 'name'),
               sellingSubCategories: _sellingSubCategories?.build());
     } catch (_) {
       late String _$failedField;

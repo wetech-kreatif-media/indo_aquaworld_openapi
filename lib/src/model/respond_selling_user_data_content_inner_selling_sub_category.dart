@@ -3,14 +3,12 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'respond_selling_categories_data_content_inner.g.dart';
+part 'respond_selling_user_data_content_inner_selling_sub_category.g.dart';
 
-/// RespondSellingCategoriesDataContentInner
+/// RespondSellingUserDataContentInnerSellingSubCategory
 ///
 /// Properties:
 /// * [id] 
@@ -21,11 +19,10 @@ part 'respond_selling_categories_data_content_inner.g.dart';
 /// * [deleted] 
 /// * [recordStatus] 
 /// * [name] 
-/// * [sellingSubCategories] 
 @BuiltValue()
-abstract class RespondSellingCategoriesDataContentInner implements Built<RespondSellingCategoriesDataContentInner, RespondSellingCategoriesDataContentInnerBuilder> {
+abstract class RespondSellingUserDataContentInnerSellingSubCategory implements Built<RespondSellingUserDataContentInnerSellingSubCategory, RespondSellingUserDataContentInnerSellingSubCategoryBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'createdBy')
   String? get createdBy;
@@ -46,39 +43,38 @@ abstract class RespondSellingCategoriesDataContentInner implements Built<Respond
   String? get recordStatus;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String? get name;
 
-  @BuiltValueField(wireName: r'sellingSubCategories')
-  BuiltList<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>? get sellingSubCategories;
+  RespondSellingUserDataContentInnerSellingSubCategory._();
 
-  RespondSellingCategoriesDataContentInner._();
-
-  factory RespondSellingCategoriesDataContentInner([void updates(RespondSellingCategoriesDataContentInnerBuilder b)]) = _$RespondSellingCategoriesDataContentInner;
+  factory RespondSellingUserDataContentInnerSellingSubCategory([void updates(RespondSellingUserDataContentInnerSellingSubCategoryBuilder b)]) = _$RespondSellingUserDataContentInnerSellingSubCategory;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RespondSellingCategoriesDataContentInnerBuilder b) => b;
+  static void _defaults(RespondSellingUserDataContentInnerSellingSubCategoryBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RespondSellingCategoriesDataContentInner> get serializer => _$RespondSellingCategoriesDataContentInnerSerializer();
+  static Serializer<RespondSellingUserDataContentInnerSellingSubCategory> get serializer => _$RespondSellingUserDataContentInnerSellingSubCategorySerializer();
 }
 
-class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveSerializer<RespondSellingCategoriesDataContentInner> {
+class _$RespondSellingUserDataContentInnerSellingSubCategorySerializer implements PrimitiveSerializer<RespondSellingUserDataContentInnerSellingSubCategory> {
   @override
-  final Iterable<Type> types = const [RespondSellingCategoriesDataContentInner, _$RespondSellingCategoriesDataContentInner];
+  final Iterable<Type> types = const [RespondSellingUserDataContentInnerSellingSubCategory, _$RespondSellingUserDataContentInnerSellingSubCategory];
 
   @override
-  final String wireName = r'RespondSellingCategoriesDataContentInner';
+  final String wireName = r'RespondSellingUserDataContentInnerSellingSubCategory';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RespondSellingCategoriesDataContentInner object, {
+    RespondSellingUserDataContentInnerSellingSubCategory object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.createdBy != null) {
       yield r'createdBy';
       yield serializers.serialize(
@@ -121,16 +117,11 @@ class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveS
         specifiedType: const FullType(String),
       );
     }
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
-    if (object.sellingSubCategories != null) {
-      yield r'sellingSubCategories';
+    if (object.name != null) {
+      yield r'name';
       yield serializers.serialize(
-        object.sellingSubCategories,
-        specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)]),
+        object.name,
+        specifiedType: const FullType(String),
       );
     }
   }
@@ -138,7 +129,7 @@ class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveS
   @override
   Object serialize(
     Serializers serializers,
-    RespondSellingCategoriesDataContentInner object, {
+    RespondSellingUserDataContentInnerSellingSubCategory object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -149,7 +140,7 @@ class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveS
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RespondSellingCategoriesDataContentInnerBuilder result,
+    required RespondSellingUserDataContentInnerSellingSubCategoryBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -212,13 +203,6 @@ class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveS
           ) as String;
           result.name = valueDes;
           break;
-        case r'sellingSubCategories':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner)]),
-          ) as BuiltList<RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner>;
-          result.sellingSubCategories.replace(valueDes);
-          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -228,12 +212,12 @@ class _$RespondSellingCategoriesDataContentInnerSerializer implements PrimitiveS
   }
 
   @override
-  RespondSellingCategoriesDataContentInner deserialize(
+  RespondSellingUserDataContentInnerSellingSubCategory deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RespondSellingCategoriesDataContentInnerBuilder();
+    final result = RespondSellingUserDataContentInnerSellingSubCategoryBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

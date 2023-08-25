@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/respond_selling_categories_data_content_inner_selling_sub_categories_inner.dart';
+import 'package:openapi/src/model/respond_selling_user_data_content_inner_selling_sub_category.dart';
 import 'package:openapi/src/model/respond_selling_user_data_content_inner_user.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -83,7 +83,7 @@ abstract class RespondSellingUserDataContentInner implements Built<RespondSellin
   RespondSellingUserDataContentInnerUser? get user;
 
   @BuiltValueField(wireName: r'sellingSubCategory')
-  RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner? get sellingSubCategory;
+  RespondSellingUserDataContentInnerSellingSubCategory? get sellingSubCategory;
 
   @BuiltValueField(wireName: r'price')
   num? get price;
@@ -230,7 +230,7 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
       yield r'sellingSubCategory';
       yield serializers.serialize(
         object.sellingSubCategory,
-        specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
+        specifiedType: const FullType(RespondSellingUserDataContentInnerSellingSubCategory),
       );
     }
     if (object.price != null) {
@@ -385,8 +385,8 @@ class _$RespondSellingUserDataContentInnerSerializer implements PrimitiveSeriali
         case r'sellingSubCategory':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner),
-          ) as RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner;
+            specifiedType: const FullType(RespondSellingUserDataContentInnerSellingSubCategory),
+          ) as RespondSellingUserDataContentInnerSellingSubCategory;
           result.sellingSubCategory.replace(valueDes);
           break;
         case r'price':
