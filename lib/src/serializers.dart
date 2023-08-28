@@ -52,7 +52,6 @@ import 'package:openapi/src/model/respond_articles_data_content_inner.dart';
 import 'package:openapi/src/model/respond_auction.dart';
 import 'package:openapi/src/model/respond_auction_data.dart';
 import 'package:openapi/src/model/respond_auction_data_files_inner.dart';
-import 'package:openapi/src/model/respond_auction_user.dart';
 import 'package:openapi/src/model/respond_auctions.dart';
 import 'package:openapi/src/model/respond_auctions_data.dart';
 import 'package:openapi/src/model/respond_auctions_data_content_inner.dart';
@@ -208,7 +207,6 @@ part 'serializers.g.dart';
   RespondAuction,
   RespondAuctionData,
   RespondAuctionDataFilesInner,
-  RespondAuctionUser,
   RespondAuctions,
   RespondAuctionsData,
   RespondAuctionsDataContentInner,

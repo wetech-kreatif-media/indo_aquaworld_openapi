@@ -49,7 +49,6 @@ doc/RespondArticlesDataContentInner.md
 doc/RespondAuction.md
 doc/RespondAuctionData.md
 doc/RespondAuctionDataFilesInner.md
-doc/RespondAuctionUser.md
 doc/RespondAuctions.md
 doc/RespondAuctionsData.md
 doc/RespondAuctionsDataContentInner.md
@@ -233,7 +232,6 @@ lib/src/model/respond_articles_data_content_inner.dart
 lib/src/model/respond_auction.dart
 lib/src/model/respond_auction_data.dart
 lib/src/model/respond_auction_data_files_inner.dart
-lib/src/model/respond_auction_user.dart
 lib/src/model/respond_auctions.dart
 lib/src/model/respond_auctions_data.dart
 lib/src/model/respond_auctions_data_content_inner.dart
@@ -349,4 +347,3 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/respond_selling_user_data_content_inner_selling_sub_category_test.dart

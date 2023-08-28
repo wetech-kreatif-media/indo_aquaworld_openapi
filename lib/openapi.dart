@@ -64,7 +64,6 @@ export 'package:openapi/src/model/respond_articles_data_content_inner.dart';
 export 'package:openapi/src/model/respond_auction.dart';
 export 'package:openapi/src/model/respond_auction_data.dart';
 export 'package:openapi/src/model/respond_auction_data_files_inner.dart';
-export 'package:openapi/src/model/respond_auction_user.dart';
 export 'package:openapi/src/model/respond_auctions.dart';
 export 'package:openapi/src/model/respond_auctions_data.dart';
 export 'package:openapi/src/model/respond_auctions_data_content_inner.dart';

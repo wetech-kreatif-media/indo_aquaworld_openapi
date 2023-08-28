@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **getAuctionUser**
-> RespondAuctionUser getAuctionUser()
+> RespondAuctions getAuctionUser()
 
 Get Auction User
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RespondAuctionUser**](RespondAuctionUser.md)
+[**RespondAuctions**](RespondAuctions.md)
 
 ### Authorization
 

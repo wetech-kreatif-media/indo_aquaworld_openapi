@@ -10,7 +10,6 @@ import 'package:dio/dio.dart';
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_auction.dart';
 import 'package:openapi/src/model/respond_auction.dart';
-import 'package:openapi/src/model/respond_auction_user.dart';
 import 'package:openapi/src/model/respond_auctions.dart';
 import 'package:openapi/src/model/respond_global.dart';
 
@@ -33,9 +32,9 @@ class AuctionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RespondAuctionUser] as data
+  /// Returns a [Future] containing a [Response] with a [RespondAuctions] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<RespondAuctionUser>> getAuctionUser({ 
+  Future<Response<RespondAuctions>> getAuctionUser({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -64,14 +63,14 @@ class AuctionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RespondAuctionUser? _responseData;
+    RespondAuctions? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RespondAuctionUser),
-      ) as RespondAuctionUser;
+        specifiedType: const FullType(RespondAuctions),
+      ) as RespondAuctions;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -83,7 +82,7 @@ class AuctionApi {
       );
     }
 
-    return Response<RespondAuctionUser>(
+    return Response<RespondAuctions>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
