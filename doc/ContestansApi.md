@@ -30,7 +30,7 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestansApi();
-final RequestContestant requestContestant = {"fullname":"Hasan Basri Tea","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"Individual","dateofBirth":"1999-10-14","photo":"{{SAMPLE_IMAGE}}","codeContestant":"sdasd"}; // RequestContestant | 
+final RequestContestant requestContestant = {"eventId":"asdasdas","fullname":"Hasan Basri Tea","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"Individual","dateofBirth":"1999-10-14","photo":"{{SAMPLE_IMAGE}}","codeContestant":"sdasd"}; // RequestContestant | 
 
 try {
     final response = api.createContestant(requestContestant);
@@ -179,7 +179,7 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getContestansApi();
 final String contestantId = contestantId_example; // String | 
-final RequestContestant requestContestant = {"fullname":"Ahmad D asd asd ","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"TIM","dateofBirth":"1999-10-14","photo":"{{SAMPLE_IMAGE}}","codeContestant":"sdasd","contestantTeam":"3033d51e-3e02-4579-b534-05460ac3489a"}; // RequestContestant | 
+final RequestContestant requestContestant = {"eventId":"asdasdasd","fullname":"Ahmad D asd asd ","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"TIM","dateofBirth":"1999-10-14","photo":"{{SAMPLE_IMAGE}}","codeContestant":"sdasd","contestantTeam":"3033d51e-3e02-4579-b534-05460ac3489a"}; // RequestContestant | 
 
 try {
     final response = api.putContestant(contestantId, requestContestant);
