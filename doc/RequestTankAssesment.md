@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **marking** | [**RequestTankAssesmentHead**](RequestTankAssesmentHead.md) |  | [optional] 
 **overall** | [**RequestTankAssesmentHead**](RequestTankAssesmentHead.md) |  | [optional] 
 **defect** | **String** |  | [optional] 
+**mayor** | [**RequestTankAssesmentMayor**](RequestTankAssesmentMayor.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

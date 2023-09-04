@@ -41,6 +41,7 @@ import 'package:openapi/src/model/request_send_otp.dart';
 import 'package:openapi/src/model/request_tank.dart';
 import 'package:openapi/src/model/request_tank_assesment.dart';
 import 'package:openapi/src/model/request_tank_assesment_head.dart';
+import 'package:openapi/src/model/request_tank_assesment_mayor.dart';
 import 'package:openapi/src/model/request_team.dart';
 import 'package:openapi/src/model/request_user.dart';
 import 'package:openapi/src/model/respond_article.dart';
@@ -196,6 +197,7 @@ part 'serializers.g.dart';
   RequestTank,
   RequestTankAssesment,
   RequestTankAssesmentHead,
+  RequestTankAssesmentMayor,
   RequestTeam,
   RequestUser,
   RespondArticle,

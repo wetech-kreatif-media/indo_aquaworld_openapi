@@ -38,6 +38,7 @@ doc/RequestSendOtp.md
 doc/RequestTank.md
 doc/RequestTankAssesment.md
 doc/RequestTankAssesmentHead.md
+doc/RequestTankAssesmentMayor.md
 doc/RequestTeam.md
 doc/RequestUser.md
 doc/RespondArticle.md
@@ -221,6 +222,7 @@ lib/src/model/request_send_otp.dart
 lib/src/model/request_tank.dart
 lib/src/model/request_tank_assesment.dart
 lib/src/model/request_tank_assesment_head.dart
+lib/src/model/request_tank_assesment_mayor.dart
 lib/src/model/request_team.dart
 lib/src/model/request_user.dart
 lib/src/model/respond_article.dart
@@ -347,3 +349,4 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/request_tank_assesment_mayor_test.dart

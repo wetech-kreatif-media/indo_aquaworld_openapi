@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:openapi/src/model/request_tank_assesment_head.dart';
+import 'package:openapi/src/model/request_tank_assesment_mayor.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,6 +22,7 @@ part 'request_tank_assesment.g.dart';
 /// * [marking] 
 /// * [overall] 
 /// * [defect] 
+/// * [mayor] 
 @BuiltValue()
 abstract class RequestTankAssesment implements Built<RequestTankAssesment, RequestTankAssesmentBuilder> {
   @BuiltValueField(wireName: r'head')
@@ -49,6 +51,9 @@ abstract class RequestTankAssesment implements Built<RequestTankAssesment, Reque
 
   @BuiltValueField(wireName: r'defect')
   String? get defect;
+
+  @BuiltValueField(wireName: r'mayor')
+  RequestTankAssesmentMayor? get mayor;
 
   RequestTankAssesment._();
 
@@ -136,6 +141,13 @@ class _$RequestTankAssesmentSerializer implements PrimitiveSerializer<RequestTan
         specifiedType: const FullType(String),
       );
     }
+    if (object.mayor != null) {
+      yield r'mayor';
+      yield serializers.serialize(
+        object.mayor,
+        specifiedType: const FullType(RequestTankAssesmentMayor),
+      );
+    }
   }
 
   @override
@@ -221,6 +233,13 @@ class _$RequestTankAssesmentSerializer implements PrimitiveSerializer<RequestTan
             specifiedType: const FullType(String),
           ) as String;
           result.defect = valueDes;
+          break;
+        case r'mayor':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(RequestTankAssesmentMayor),
+          ) as RequestTankAssesmentMayor;
+          result.mayor.replace(valueDes);
           break;
         default:
           unhandled.add(key);

@@ -53,6 +53,7 @@ export 'package:openapi/src/model/request_send_otp.dart';
 export 'package:openapi/src/model/request_tank.dart';
 export 'package:openapi/src/model/request_tank_assesment.dart';
 export 'package:openapi/src/model/request_tank_assesment_head.dart';
+export 'package:openapi/src/model/request_tank_assesment_mayor.dart';
 export 'package:openapi/src/model/request_team.dart';
 export 'package:openapi/src/model/request_user.dart';
 export 'package:openapi/src/model/respond_article.dart';
