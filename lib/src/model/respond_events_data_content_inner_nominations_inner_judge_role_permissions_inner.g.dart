@@ -211,7 +211,7 @@ class RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInnerBuil
       _build() {
     final _$result = _$v ??
         new _$RespondEventsDataContentInnerNominationsInnerJudgeRolePermissionsInner
-                ._(
+            ._(
             id: id,
             createdBy: createdBy,
             updatedBy: updatedBy,

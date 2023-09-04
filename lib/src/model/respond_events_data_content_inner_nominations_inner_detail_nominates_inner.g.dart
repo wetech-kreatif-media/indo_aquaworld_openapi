@@ -264,7 +264,7 @@ class RespondEventsDataContentInnerNominationsInnerDetailNominatesInnerBuilder
   _$RespondEventsDataContentInnerNominationsInnerDetailNominatesInner _build() {
     final _$result = _$v ??
         new _$RespondEventsDataContentInnerNominationsInnerDetailNominatesInner
-                ._(
+            ._(
             id: id,
             createdBy: createdBy,
             updatedBy: updatedBy,

@@ -187,7 +187,7 @@ class RespondSellingCategoriesDataContentInnerSellingSubCategorysInnerBuilder
   _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner _build() {
     final _$result = _$v ??
         new _$RespondSellingCategoriesDataContentInnerSellingSubCategorysInner
-                ._(
+            ._(
             id: id,
             createdBy: createdBy,
             updatedBy: updatedBy,

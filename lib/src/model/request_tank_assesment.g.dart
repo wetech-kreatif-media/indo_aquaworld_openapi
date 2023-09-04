@@ -25,6 +25,8 @@ class _$RequestTankAssesment extends RequestTankAssesment {
   final RequestTankAssesmentHead? overall;
   @override
   final String? defect;
+  @override
+  final RequestTankAssesmentMayor? mayor;
 
   factory _$RequestTankAssesment(
           [void Function(RequestTankAssesmentBuilder)? updates]) =>
@@ -39,7 +41,8 @@ class _$RequestTankAssesment extends RequestTankAssesment {
       this.pearly,
       this.marking,
       this.overall,
-      this.defect})
+      this.defect,
+      this.mayor})
       : super._();
 
   @override
@@ -63,7 +66,8 @@ class _$RequestTankAssesment extends RequestTankAssesment {
         pearly == other.pearly &&
         marking == other.marking &&
         overall == other.overall &&
-        defect == other.defect;
+        defect == other.defect &&
+        mayor == other.mayor;
   }
 
   @override
@@ -78,6 +82,7 @@ class _$RequestTankAssesment extends RequestTankAssesment {
     _$hash = $jc(_$hash, marking.hashCode);
     _$hash = $jc(_$hash, overall.hashCode);
     _$hash = $jc(_$hash, defect.hashCode);
+    _$hash = $jc(_$hash, mayor.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -93,7 +98,8 @@ class _$RequestTankAssesment extends RequestTankAssesment {
           ..add('pearly', pearly)
           ..add('marking', marking)
           ..add('overall', overall)
-          ..add('defect', defect))
+          ..add('defect', defect)
+          ..add('mayor', mayor))
         .toString();
   }
 }
@@ -151,6 +157,11 @@ class RequestTankAssesmentBuilder
   String? get defect => _$this._defect;
   set defect(String? defect) => _$this._defect = defect;
 
+  RequestTankAssesmentMayorBuilder? _mayor;
+  RequestTankAssesmentMayorBuilder get mayor =>
+      _$this._mayor ??= new RequestTankAssesmentMayorBuilder();
+  set mayor(RequestTankAssesmentMayorBuilder? mayor) => _$this._mayor = mayor;
+
   RequestTankAssesmentBuilder() {
     RequestTankAssesment._defaults(this);
   }
@@ -167,6 +178,7 @@ class RequestTankAssesmentBuilder
       _marking = $v.marking?.toBuilder();
       _overall = $v.overall?.toBuilder();
       _defect = $v.defect;
+      _mayor = $v.mayor?.toBuilder();
       _$v = null;
     }
     return this;
@@ -199,7 +211,8 @@ class RequestTankAssesmentBuilder
               pearly: _pearly?.build(),
               marking: _marking?.build(),
               overall: _overall?.build(),
-              defect: defect);
+              defect: defect,
+              mayor: _mayor?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -219,6 +232,9 @@ class RequestTankAssesmentBuilder
         _marking?.build();
         _$failedField = 'overall';
         _overall?.build();
+
+        _$failedField = 'mayor';
+        _mayor?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RequestTankAssesment', _$failedField, e.toString());

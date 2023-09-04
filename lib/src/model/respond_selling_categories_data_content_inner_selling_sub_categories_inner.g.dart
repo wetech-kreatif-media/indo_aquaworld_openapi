@@ -196,7 +196,7 @@ class RespondSellingCategoriesDataContentInnerSellingSubCategoriesInnerBuilder
   _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner _build() {
     final _$result = _$v ??
         new _$RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner
-                ._(
+            ._(
             id: BuiltValueNullFieldError.checkNotNull(
                 id,
                 r'RespondSellingCategoriesDataContentInnerSellingSubCategoriesInner',
