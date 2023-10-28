@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getContestants**
-> RespondContestants getContestants(fullname, sort, dir, pageNumber, pageSize, eventId)
+> RespondContestants getContestants(fullname, sort, direction, pageNumber, pageSize, eventId)
 
 Get Contestants
 
@@ -115,13 +115,13 @@ import 'package:openapi/api.dart';
 final api = Openapi().getContestansApi();
 final String fullname = fullname_example; // String | 
 final String sort = sort_example; // String | 
-final String dir = dir_example; // String | 
+final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String eventId = eventId_example; // String | 
 
 try {
-    final response = api.getContestants(fullname, sort, dir, pageNumber, pageSize, eventId);
+    final response = api.getContestants(fullname, sort, direction, pageNumber, pageSize, eventId);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ContestansApi->getContestants: $e\n');
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fullname** | **String**|  | [optional] 
  **sort** | **String**|  | [optional] 
- **dir** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **eventId** | **String**|  | [optional] 

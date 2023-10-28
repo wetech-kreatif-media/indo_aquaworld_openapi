@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getArticles**
-> RespondArticles getArticles(sort, dir, pageNumber, pageSize, title, publishStatus)
+> RespondArticles getArticles(sort, direction, pageNumber, pageSize, title, publishStatus)
 
 Get Articles
 
@@ -71,14 +71,14 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getArticleApi();
 final String sort = sort_example; // String | 
-final String dir = dir_example; // String | 
+final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String title = title_example; // String | 
 final String publishStatus = publishStatus_example; // String | 
 
 try {
-    final response = api.getArticles(sort, dir, pageNumber, pageSize, title, publishStatus);
+    final response = api.getArticles(sort, direction, pageNumber, pageSize, title, publishStatus);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ArticleApi->getArticles: $e\n');
@@ -90,7 +90,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **String**|  | [optional] 
- **dir** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **title** | **String**|  | [optional] 

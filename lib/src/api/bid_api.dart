@@ -27,7 +27,7 @@ class BidApi {
   /// Parameters:
   /// * [auctionId] - 
   /// * [sort] - 
-  /// * [dir] - 
+  /// * [direction] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -40,7 +40,7 @@ class BidApi {
   Future<Response<RespondBidders>> getBidders({ 
     required String auctionId,
     String? sort,
-    String? dir,
+    String? direction,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -69,7 +69,7 @@ class BidApi {
 
     final _queryParameters = <String, dynamic>{
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(

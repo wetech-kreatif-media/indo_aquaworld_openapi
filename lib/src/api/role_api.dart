@@ -127,7 +127,7 @@ class RoleApi {
   /// Parameters:
   /// * [name] - 
   /// * [sort] - 
-  /// * [dir] - 
+  /// * [direction] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -142,7 +142,7 @@ class RoleApi {
   Future<Response<RespondRoles>> getRoles({ 
     String? name,
     String? sort,
-    String? dir,
+    String? direction,
     num? pageNumber,
     num? pageSize,
     CancelToken? cancelToken,
@@ -174,7 +174,7 @@ class RoleApi {
     final _queryParameters = <String, dynamic>{
       if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
     };

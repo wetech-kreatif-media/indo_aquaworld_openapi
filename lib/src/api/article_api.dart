@@ -107,7 +107,7 @@ class ArticleApi {
   ///
   /// Parameters:
   /// * [sort] - 
-  /// * [dir] - 
+  /// * [direction] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
   /// * [title] - 
@@ -123,7 +123,7 @@ class ArticleApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondArticles>> getArticles({ 
     String? sort,
-    String? dir,
+    String? direction,
     num? pageNumber,
     num? pageSize,
     String? title,
@@ -150,7 +150,7 @@ class ArticleApi {
 
     final _queryParameters = <String, dynamic>{
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
       if (title != null) r'title': encodeQueryParameter(_serializers, title, const FullType(String)),

@@ -26,7 +26,7 @@ class AuctionApi {
   ///
   /// Parameters:
   /// * [sort] - 
-  /// * [dir] - 
+  /// * [direction] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -38,7 +38,7 @@ class AuctionApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondAuctions>> getAuctionUser({ 
     String? sort,
-    String? dir,
+    String? direction,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -61,7 +61,7 @@ class AuctionApi {
 
     final _queryParameters = <String, dynamic>{
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -109,7 +109,7 @@ class AuctionApi {
   ///
   /// Parameters:
   /// * [sort] - 
-  /// * [dir] - 
+  /// * [direction] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
   /// * [name] - 
@@ -125,7 +125,7 @@ class AuctionApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondAuctions>> getAuctions({ 
     String? sort,
-    String? dir,
+    String? direction,
     num? pageNumber,
     num? pageSize,
     String? name,
@@ -158,7 +158,7 @@ class AuctionApi {
 
     final _queryParameters = <String, dynamic>{
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
       if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),

@@ -126,7 +126,7 @@ class PermissionApi {
   ///
   /// Parameters:
   /// * [sort] - 
-  /// * [dir] - 
+  /// * [direction] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -140,7 +140,7 @@ class PermissionApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondPermissions>> getPermissions({ 
     String? sort,
-    String? dir,
+    String? direction,
     num? pageNumber,
     num? pageSize,
     CancelToken? cancelToken,
@@ -165,7 +165,7 @@ class PermissionApi {
 
     final _queryParameters = <String, dynamic>{
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
     };

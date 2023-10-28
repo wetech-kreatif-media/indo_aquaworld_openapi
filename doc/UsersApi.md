@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getUsers**
-> RespondUsers getUsers(sort, dir, pageNumber, pageSize, fullname, role)
+> RespondUsers getUsers(sort, direction, pageNumber, pageSize, fullname, role)
 
 Get Users
 
@@ -115,14 +115,14 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getUsersApi();
 final String sort = sort_example; // String | 
-final String dir = dir_example; // String | 
+final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String fullname = fullname_example; // String | 
 final String role = role_example; // String | 
 
 try {
-    final response = api.getUsers(sort, dir, pageNumber, pageSize, fullname, role);
+    final response = api.getUsers(sort, direction, pageNumber, pageSize, fullname, role);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling UsersApi->getUsers: $e\n');
@@ -134,7 +134,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **String**|  | [optional] 
- **dir** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **fullname** | **String**|  | [optional] 
