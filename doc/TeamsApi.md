@@ -25,9 +25,6 @@ Buat team baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTeamsApi();
 final RequestTeam requestTeam = {"name":"Tim 1","region":"Jakarta","address":"Jl Mayhe HR Edi Sukma"}; // RequestTeam | 
@@ -35,7 +32,7 @@ final RequestTeam requestTeam = {"name":"Tim 1","region":"Jakarta","address":"Jl
 try {
     final response = api.createTeam(requestTeam);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TeamsApi->createTeam: $e\n');
 }
 ```
@@ -71,9 +68,6 @@ Ambil team detail
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTeamsApi();
 final String teamId = teamId_example; // String | 
@@ -81,7 +75,7 @@ final String teamId = teamId_example; // String |
 try {
     final response = api.getTeam(teamId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TeamsApi->getTeam: $e\n');
 }
 ```
@@ -117,9 +111,6 @@ Ambil data teams
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTeamsApi();
 final String name = name_example; // String | 
@@ -131,7 +122,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getTeams(name, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TeamsApi->getTeams: $e\n');
 }
 ```
@@ -171,9 +162,6 @@ Update data team
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTeamsApi();
 final String teamId = teamId_example; // String | 
@@ -182,7 +170,7 @@ final RequestTeam requestTeam = {"name":"Tim 1","region":"Jakarta","address":"Jl
 try {
     final response = api.putTeam(teamId, requestTeam);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TeamsApi->putTeam: $e\n');
 }
 ```

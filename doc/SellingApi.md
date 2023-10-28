@@ -32,9 +32,6 @@ Ambil data selling detail
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final String sellingId = sellingId_example; // String | 
@@ -42,7 +39,7 @@ final String sellingId = sellingId_example; // String |
 try {
     final response = api.getDetailSelling(sellingId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->getDetailSelling: $e\n');
 }
 ```
@@ -78,9 +75,6 @@ Ambil semua data penjualan
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final BuiltList<String> idCategory = ; // BuiltList<String> | 
@@ -93,7 +87,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getSelling(idCategory, name, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->getSelling: $e\n');
 }
 ```
@@ -134,9 +128,6 @@ Ambil kategori jual beli
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final String sort = sort_example; // String | 
@@ -148,7 +139,7 @@ final String name = name_example; // String |
 try {
     final response = api.getSellingCategory(sort, direction, pageNumber, pageSize, name);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->getSellingCategory: $e\n');
 }
 ```
@@ -188,9 +179,6 @@ Ambil subkategori jual beli
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final String sellingCatId = sellingCatId_example; // String | 
@@ -203,7 +191,7 @@ final String name = name_example; // String |
 try {
     final response = api.getSellingSubCategory(sellingCatId, sort, direction, pageNumber, pageSize, name);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->getSellingSubCategory: $e\n');
 }
 ```
@@ -235,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSellingUser**
-> RespondSellingUser getSellingUser()
+> RespondSellingUser getSellingUser(sort, direction)
 
 Get Selling User
 
@@ -244,22 +232,25 @@ Ambil data selling user
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
 
 try {
-    final response = api.getSellingUser();
+    final response = api.getSellingUser(sort, direction);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->getSellingUser: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
 
 ### Return type
 
@@ -286,9 +277,6 @@ Tambah barang yang akan dijual
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final RequestSelling requestSelling = {"jenisIklan":"Jual","judulIklan":"Jual Ikan","photo1":"nulasd asd asd asd asd asl","photo2":"","photo3":"","photo4":"","description":"test 1213","linkVideo":"https://www.youtube.com/shorts/ukZK4BkymPo","user":"e6458c51-3d5b-478a-a0c9-a710c3369d20","sellingSubCategory":"b49a359c-3ef8-406d-9aca-c6f8e95270e5","price":50000000,"publishStatus":"AKTIF"}; // RequestSelling | 
@@ -296,7 +284,7 @@ final RequestSelling requestSelling = {"jenisIklan":"Jual","judulIklan":"Jual Ik
 try {
     final response = api.postSelling(requestSelling);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->postSelling: $e\n');
 }
 ```
@@ -332,9 +320,6 @@ Tambah ketegori jual beli
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final RequestSellingCategory requestSellingCategory = {"name":"Ikan"}; // RequestSellingCategory | 
@@ -342,7 +327,7 @@ final RequestSellingCategory requestSellingCategory = {"name":"Ikan"}; // Reques
 try {
     final response = api.postSellingCategory(requestSellingCategory);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->postSellingCategory: $e\n');
 }
 ```
@@ -378,9 +363,6 @@ Tambah ketegori jual beli
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final RequestSellingSubCategory requestSellingSubCategory = {"sellingCategory":"9ba95266-1f6e-4d49-9f91-201e453a321e","name":"Koi"}; // RequestSellingSubCategory | 
@@ -388,7 +370,7 @@ final RequestSellingSubCategory requestSellingSubCategory = {"sellingCategory":"
 try {
     final response = api.postSellingSubCategory(requestSellingSubCategory);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->postSellingSubCategory: $e\n');
 }
 ```
@@ -424,9 +406,6 @@ Perbaharui barang yang akan dijual
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final String sellingId = sellingId_example; // String | 
@@ -435,7 +414,7 @@ final RequestSelling requestSelling = {"jenisIklan":"Jual","judulIklan":"Jual Ik
 try {
     final response = api.putSelling(sellingId, requestSelling);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->putSelling: $e\n');
 }
 ```
@@ -472,9 +451,6 @@ Sunting ketegori jual beli
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final String sellingCatId = sellingCatId_example; // String | 
@@ -483,7 +459,7 @@ final RequestSellingCategory requestSellingCategory = {"name":"Ikan"}; // Reques
 try {
     final response = api.putSellingCategory(sellingCatId, requestSellingCategory);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->putSellingCategory: $e\n');
 }
 ```
@@ -520,9 +496,6 @@ Sunting sub ketegori jual beli
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getSellingApi();
 final String sellingCatId = sellingCatId_example; // String | 
@@ -531,7 +504,7 @@ final RequestSellingCategory requestSellingCategory = {"name":"Ikan"}; // Reques
 try {
     final response = api.putSellingSubCategory(sellingCatId, requestSellingCategory);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling SellingApi->putSellingSubCategory: $e\n');
 }
 ```

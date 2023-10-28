@@ -25,9 +25,6 @@ Ambil detail article
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getArticleApi();
 final String articleId = articleId_example; // String | 
@@ -35,7 +32,7 @@ final String articleId = articleId_example; // String |
 try {
     final response = api.getArticleDetail(articleId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ArticleApi->getArticleDetail: $e\n');
 }
 ```
@@ -83,7 +80,7 @@ final String publishStatus = publishStatus_example; // String |
 try {
     final response = api.getArticles(sort, direction, pageNumber, pageSize, title, publishStatus);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ArticleApi->getArticles: $e\n');
 }
 ```
@@ -131,7 +128,7 @@ final RequestArticle requestArticle = {"title":"Test Artikel 1","content":"In it
 try {
     final response = api.postArticle(requestArticle);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ArticleApi->postArticle: $e\n');
 }
 ```
@@ -167,9 +164,6 @@ Update data article
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getArticleApi();
 final String articleId = articleId_example; // String | 
@@ -178,7 +172,7 @@ final RequestArticle requestArticle = {"title":"Test Artikel 1","content":"In it
 try {
     final response = api.putArticle(articleId, requestArticle);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ArticleApi->putArticle: $e\n');
 }
 ```

@@ -34,7 +34,7 @@ class TeamsApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> createTeam({ 
     RequestTeam? requestTeam,
     CancelToken? cancelToken,
@@ -71,12 +71,12 @@ class TeamsApi {
       _bodyData = requestTeam == null ? null : _serializers.serialize(requestTeam, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -101,10 +101,10 @@ class TeamsApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -135,7 +135,7 @@ class TeamsApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondTeam] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondTeam>> getTeam({ 
     required String teamId,
     CancelToken? cancelToken,
@@ -145,7 +145,7 @@ class TeamsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/team/{teamId}'.replaceAll('{' r'teamId' '}', teamId.toString());
+    final _path = r'/public/team/{teamId}'.replaceAll('{' r'teamId' '}', encodeQueryParameter(_serializers, teamId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -182,10 +182,10 @@ class TeamsApi {
       ) as RespondTeam;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -220,7 +220,7 @@ class TeamsApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondTeams] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondTeams>> getTeams({ 
     String? name,
     String? sort,
@@ -280,10 +280,10 @@ class TeamsApi {
       ) as RespondTeams;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -315,7 +315,7 @@ class TeamsApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putTeam({ 
     required String teamId,
     RequestTeam? requestTeam,
@@ -326,7 +326,7 @@ class TeamsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/team/{teamId}'.replaceAll('{' r'teamId' '}', teamId.toString());
+    final _path = r'/public/team/{teamId}'.replaceAll('{' r'teamId' '}', encodeQueryParameter(_serializers, teamId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -353,12 +353,12 @@ class TeamsApi {
       _bodyData = requestTeam == null ? null : _serializers.serialize(requestTeam, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -383,10 +383,10 @@ class TeamsApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

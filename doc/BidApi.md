@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **getBidders**
-> RespondBidders getBidders(auctionId)
+> RespondBidders getBidders(auctionId, sort, direction)
 
 GetBidders
 
@@ -24,17 +24,16 @@ sad asd asd asd
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getBidApi();
 final String auctionId = auctionId_example; // String | 
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
 
 try {
-    final response = api.getBidders(auctionId);
+    final response = api.getBidders(auctionId, sort, direction);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling BidApi->getBidders: $e\n');
 }
 ```
@@ -44,6 +43,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auctionId** | **String**|  | 
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
 
 ### Return type
 
@@ -77,7 +78,7 @@ final String auctionId = auctionId_example; // String |
 try {
     final response = api.getLastBid(auctionId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling BidApi->getLastBid: $e\n');
 }
 ```
@@ -113,9 +114,6 @@ Masuk bid
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getBidApi();
 final String auctionId = auctionId_example; // String | 
@@ -124,7 +122,7 @@ final RequestBid requestBid = {"bidPrice":10000}; // RequestBid |
 try {
     final response = api.postBid(auctionId, requestBid);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling BidApi->postBid: $e\n');
 }
 ```

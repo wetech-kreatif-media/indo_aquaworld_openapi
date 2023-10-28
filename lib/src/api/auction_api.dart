@@ -25,6 +25,8 @@ class AuctionApi {
   /// Mabil data lelang per user
   ///
   /// Parameters:
+  /// * [sort] - 
+  /// * [direction] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -33,8 +35,10 @@ class AuctionApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondAuctions] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondAuctions>> getAuctionUser({ 
+    String? sort,
+    String? direction,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -55,9 +59,15 @@ class AuctionApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -73,10 +83,10 @@ class AuctionApi {
       ) as RespondAuctions;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -112,7 +122,7 @@ class AuctionApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondAuctions] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondAuctions>> getAuctions({ 
     String? sort,
     String? direction,
@@ -174,10 +184,10 @@ class AuctionApi {
       ) as RespondAuctions;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -208,7 +218,7 @@ class AuctionApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondAuction] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondAuction>> getDetailAuction({ 
     required String auctionId,
     CancelToken? cancelToken,
@@ -218,7 +228,7 @@ class AuctionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/detail-auction/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
+    final _path = r'/public/detail-auction/{auctionId}'.replaceAll('{' r'auctionId' '}', encodeQueryParameter(_serializers, auctionId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -255,10 +265,10 @@ class AuctionApi {
       ) as RespondAuction;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -289,7 +299,7 @@ class AuctionApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postAuction({ 
     RequestAuction? requestAuction,
     CancelToken? cancelToken,
@@ -326,12 +336,12 @@ class AuctionApi {
       _bodyData = requestAuction == null ? null : _serializers.serialize(requestAuction, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -356,10 +366,10 @@ class AuctionApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -391,7 +401,7 @@ class AuctionApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putAuction({ 
     required String auctionId,
     RequestAuction? requestAuction,
@@ -402,7 +412,7 @@ class AuctionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/auction/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
+    final _path = r'/public/auction/{auctionId}'.replaceAll('{' r'auctionId' '}', encodeQueryParameter(_serializers, auctionId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -429,12 +439,12 @@ class AuctionApi {
       _bodyData = requestAuction == null ? null : _serializers.serialize(requestAuction, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -459,10 +469,10 @@ class AuctionApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

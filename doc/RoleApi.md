@@ -23,9 +23,6 @@ Membuat role baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getRoleApi();
 final RequestRole requestRole = {"name":"User","code":"role_user","permissions":[{"id":"5d0b4afd-ef01-4bcd-bf7b-16cda0bb32ef","label":"permission_3","value":"PERMISSION 3","description":"Permission 3 untuk user"}]}; // RequestRole | 
@@ -33,7 +30,7 @@ final RequestRole requestRole = {"name":"User","code":"role_user","permissions":
 try {
     final response = api.createRole(requestRole);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling RoleApi->createRole: $e\n');
 }
 ```
@@ -69,9 +66,6 @@ Ambil data role
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getRoleApi();
 final String name = name_example; // String | 
@@ -83,7 +77,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getRoles(name, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling RoleApi->getRoles: $e\n');
 }
 ```

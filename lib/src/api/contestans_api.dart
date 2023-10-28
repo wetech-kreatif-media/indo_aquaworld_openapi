@@ -34,7 +34,7 @@ class ContestansApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> createContestant({ 
     RequestContestant? requestContestant,
     CancelToken? cancelToken,
@@ -71,12 +71,12 @@ class ContestansApi {
       _bodyData = requestContestant == null ? null : _serializers.serialize(requestContestant, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -101,10 +101,10 @@ class ContestansApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -135,7 +135,7 @@ class ContestansApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondContestant] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondContestant>> getContestant({ 
     required String contestantId,
     CancelToken? cancelToken,
@@ -145,7 +145,7 @@ class ContestansApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/contestant/{contestantId}'.replaceAll('{' r'contestantId' '}', contestantId.toString());
+    final _path = r'/public/contestant/{contestantId}'.replaceAll('{' r'contestantId' '}', encodeQueryParameter(_serializers, contestantId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -182,10 +182,10 @@ class ContestansApi {
       ) as RespondContestant;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -221,7 +221,7 @@ class ContestansApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondContestants] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondContestants>> getContestants({ 
     String? fullname,
     String? sort,
@@ -283,10 +283,10 @@ class ContestansApi {
       ) as RespondContestants;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -318,7 +318,7 @@ class ContestansApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putContestant({ 
     required String contestantId,
     RequestContestant? requestContestant,
@@ -329,7 +329,7 @@ class ContestansApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/contestant/{contestantId}'.replaceAll('{' r'contestantId' '}', contestantId.toString());
+    final _path = r'/public/contestant/{contestantId}'.replaceAll('{' r'contestantId' '}', encodeQueryParameter(_serializers, contestantId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -356,12 +356,12 @@ class ContestansApi {
       _bodyData = requestContestant == null ? null : _serializers.serialize(requestContestant, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -386,10 +386,10 @@ class ContestansApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

@@ -24,9 +24,6 @@ Tambah contestan nominasi pada even
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestanNominationApi();
 final String eventId = eventId_example; // String | 
@@ -36,7 +33,7 @@ final RequestContestanNomination requestContestanNomination = {"fullname":"Hasan
 try {
     final response = api.addEventNominationContestant(eventId, nominasiId, requestContestanNomination);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ContestanNominationApi->addEventNominationContestant: $e\n');
 }
 ```
@@ -74,9 +71,6 @@ Ambil data event nominasi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestanNominationApi();
 final String eventId = eventId_example; // String | 
@@ -86,7 +80,7 @@ final RequestEvent requestEvent = {"name":"Event Lohan","startDate":"2023-06-23"
 try {
     final response = api.getEventNominationsContestants(eventId, nominasiId, requestEvent);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ContestanNominationApi->getEventNominationsContestants: $e\n');
 }
 ```
@@ -124,9 +118,6 @@ Update contestan nominasi pada even
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestanNominationApi();
 final String nominasiId = nominasiId_example; // String | 
@@ -137,7 +128,7 @@ final RequestContestanNomination requestContestanNomination = {"fullname":"Hasan
 try {
     final response = api.putEventNominationContestant(nominasiId, eventId, userId, requestContestanNomination);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ContestanNominationApi->putEventNominationContestant: $e\n');
 }
 ```

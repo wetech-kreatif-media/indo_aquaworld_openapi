@@ -30,16 +30,13 @@ Ambil userId
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
 
 try {
     final response = api.getMe();
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->getMe: $e\n');
 }
 ```
@@ -72,9 +69,6 @@ Ambil detail user
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
 final String userId = userId_example; // String | 
@@ -82,7 +76,7 @@ final String userId = userId_example; // String |
 try {
     final response = api.getUser(userId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->getUser: $e\n');
 }
 ```
@@ -130,7 +124,7 @@ final String role = role_example; // String |
 try {
     final response = api.getUsers(sort, direction, pageNumber, pageSize, fullname, role);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->getUsers: $e\n');
 }
 ```
@@ -178,7 +172,7 @@ final RequestForgot requestForgot = {"email":"user1@yopmsail.com"}; // RequestFo
 try {
     final response = api.postForgot(requestForgot);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->postForgot: $e\n');
 }
 ```
@@ -214,9 +208,6 @@ Regsitrasi user baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
 final RequestUser requestUser = {"fullname":"Juri","email":"juri1@yopmsail.com","mobilePhone":"081289933444","password":"juri","confirmPassword":"juri","city":"Jakarta","id_role":"86c1f549-5440-4d05-80f3-6b75024af7d0"}; // RequestUser | 
@@ -224,7 +215,7 @@ final RequestUser requestUser = {"fullname":"Juri","email":"juri1@yopmsail.com",
 try {
     final response = api.postRegistrasi(requestUser);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->postRegistrasi: $e\n');
 }
 ```
@@ -267,7 +258,7 @@ final RequestSendOtp requestSendOtp = {"userId":"30ce67b2-0421-4330-9482-b777d06
 try {
     final response = api.postSentOtp(requestSendOtp);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->postSentOtp: $e\n');
 }
 ```
@@ -310,7 +301,7 @@ final RequestChangePassword requestChangePassword = {"userId":"asdasd","password
 try {
     final response = api.putChangePassword(requestChangePassword);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->putChangePassword: $e\n');
 }
 ```
@@ -353,7 +344,7 @@ final RequestChangePassword requestChangePassword = {"userId":"asdasd","password
 try {
     final response = api.putNewPassword(requestChangePassword);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->putNewPassword: $e\n');
 }
 ```
@@ -389,9 +380,6 @@ update data user
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getUsersApi();
 final String userId = userId_example; // String | 
@@ -400,7 +388,7 @@ final RequestUser requestUser = {"fullname":"Hasan Basri","email":"user12@yopmsa
 try {
     final response = api.putUser(userId, requestUser);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling UsersApi->putUser: $e\n');
 }
 ```

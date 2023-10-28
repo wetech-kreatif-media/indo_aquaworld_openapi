@@ -25,9 +25,6 @@ Buat contestant baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestansApi();
 final RequestContestant requestContestant = {"eventId":"asdasdas","fullname":"Hasan Basri Tea","mobilePhone":"62822135423190","email":"example@gmail.com","city":"Bogor","gender":"JK","placeofBirth":"Bogor","statusContestant":"Individual","dateofBirth":"1999-10-14","photo":"{{SAMPLE_IMAGE}}","codeContestant":"sdasd"}; // RequestContestant | 
@@ -35,7 +32,7 @@ final RequestContestant requestContestant = {"eventId":"asdasdas","fullname":"Ha
 try {
     final response = api.createContestant(requestContestant);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ContestansApi->createContestant: $e\n');
 }
 ```
@@ -71,9 +68,6 @@ Ambil detail data contestant
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestansApi();
 final String contestantId = contestantId_example; // String | 
@@ -81,7 +75,7 @@ final String contestantId = contestantId_example; // String |
 try {
     final response = api.getContestant(contestantId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ContestansApi->getContestant: $e\n');
 }
 ```
@@ -117,9 +111,6 @@ Ambil data semua contestants
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestansApi();
 final String fullname = fullname_example; // String | 
@@ -132,7 +123,7 @@ final String eventId = eventId_example; // String |
 try {
     final response = api.getContestants(fullname, sort, direction, pageNumber, pageSize, eventId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ContestansApi->getContestants: $e\n');
 }
 ```
@@ -173,9 +164,6 @@ Update Contestant
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getContestansApi();
 final String contestantId = contestantId_example; // String | 
@@ -184,7 +172,7 @@ final RequestContestant requestContestant = {"eventId":"asdasdasd","fullname":"A
 try {
     final response = api.putContestant(contestantId, requestContestant);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ContestansApi->putContestant: $e\n');
 }
 ```

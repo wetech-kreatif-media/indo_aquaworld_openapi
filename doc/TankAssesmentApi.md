@@ -23,9 +23,6 @@ Ambil data tak assetment
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTankAssesmentApi();
 final String tankId = tankId_example; // String | 
@@ -37,7 +34,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getTankAssessment(tankId, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TankAssesmentApi->getTankAssessment: $e\n');
 }
 ```
@@ -77,9 +74,6 @@ Penjurian
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTankAssesmentApi();
 final String tankId = tankId_example; // String | 
@@ -88,7 +82,7 @@ final RequestTankAssesment requestTankAssesment = {"head":{"value":8,"pinalty":"
 try {
     final response = api.postTankAssessment(tankId, requestTankAssesment);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TankAssesmentApi->postTankAssessment: $e\n');
 }
 ```

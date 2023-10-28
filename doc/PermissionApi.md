@@ -23,9 +23,6 @@ Buat permission
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getPermissionApi();
 final RequestPermission requestPermission = {"label":"permission_exp2","value":"Example Permission 2","description":"Contoh permission 2"}; // RequestPermission | 
@@ -33,7 +30,7 @@ final RequestPermission requestPermission = {"label":"permission_exp2","value":"
 try {
     final response = api.createPermission(requestPermission);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling PermissionApi->createPermission: $e\n');
 }
 ```
@@ -79,7 +76,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getPermissions(sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling PermissionApi->getPermissions: $e\n');
 }
 ```

@@ -40,7 +40,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondSelling] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondSelling>> getDetailSelling({ 
     required String sellingId,
     CancelToken? cancelToken,
@@ -50,7 +50,7 @@ class SellingApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/detail-selling/{sellingId}'.replaceAll('{' r'sellingId' '}', sellingId.toString());
+    final _path = r'/public/detail-selling/{sellingId}'.replaceAll('{' r'sellingId' '}', encodeQueryParameter(_serializers, sellingId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -87,10 +87,10 @@ class SellingApi {
       ) as RespondSelling;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -126,7 +126,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondSellingAll] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondSellingAll>> getSelling({ 
     BuiltList<String>? idCategory,
     String? name,
@@ -188,10 +188,10 @@ class SellingApi {
       ) as RespondSellingAll;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -226,7 +226,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondSellingCategories] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondSellingCategories>> getSellingCategory({ 
     String? sort,
     String? direction,
@@ -286,10 +286,10 @@ class SellingApi {
       ) as RespondSellingCategories;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -325,7 +325,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondSellingSubCategory] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondSellingSubCategory>> getSellingSubCategory({ 
     required String sellingCatId,
     String? sort,
@@ -340,7 +340,7 @@ class SellingApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/selling-subcategory/{sellingCatId}'.replaceAll('{' r'sellingCatId' '}', sellingCatId.toString());
+    final _path = r'/public/selling-subcategory/{sellingCatId}'.replaceAll('{' r'sellingCatId' '}', encodeQueryParameter(_serializers, sellingCatId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -386,10 +386,10 @@ class SellingApi {
       ) as RespondSellingSubCategory;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -411,6 +411,8 @@ class SellingApi {
   /// Ambil data selling user
   ///
   /// Parameters:
+  /// * [sort] - 
+  /// * [direction] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -419,8 +421,10 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondSellingUser] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondSellingUser>> getSellingUser({ 
+    String? sort,
+    String? direction,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -447,9 +451,15 @@ class SellingApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -465,10 +475,10 @@ class SellingApi {
       ) as RespondSellingUser;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -499,7 +509,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postSelling({ 
     RequestSelling? requestSelling,
     CancelToken? cancelToken,
@@ -536,12 +546,12 @@ class SellingApi {
       _bodyData = requestSelling == null ? null : _serializers.serialize(requestSelling, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -566,10 +576,10 @@ class SellingApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -600,7 +610,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postSellingCategory({ 
     RequestSellingCategory? requestSellingCategory,
     CancelToken? cancelToken,
@@ -637,12 +647,12 @@ class SellingApi {
       _bodyData = requestSellingCategory == null ? null : _serializers.serialize(requestSellingCategory, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -667,10 +677,10 @@ class SellingApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -701,7 +711,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postSellingSubCategory({ 
     RequestSellingSubCategory? requestSellingSubCategory,
     CancelToken? cancelToken,
@@ -738,12 +748,12 @@ class SellingApi {
       _bodyData = requestSellingSubCategory == null ? null : _serializers.serialize(requestSellingSubCategory, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -768,10 +778,10 @@ class SellingApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -803,7 +813,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putSelling({ 
     required String sellingId,
     RequestSelling? requestSelling,
@@ -814,7 +824,7 @@ class SellingApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/selling/{sellingId}'.replaceAll('{' r'sellingId' '}', sellingId.toString());
+    final _path = r'/public/selling/{sellingId}'.replaceAll('{' r'sellingId' '}', encodeQueryParameter(_serializers, sellingId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -841,12 +851,12 @@ class SellingApi {
       _bodyData = requestSelling == null ? null : _serializers.serialize(requestSelling, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -871,10 +881,10 @@ class SellingApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -906,7 +916,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putSellingCategory({ 
     required String sellingCatId,
     RequestSellingCategory? requestSellingCategory,
@@ -917,7 +927,7 @@ class SellingApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/selling-category/{sellingCatId}'.replaceAll('{' r'sellingCatId' '}', sellingCatId.toString());
+    final _path = r'/public/selling-category/{sellingCatId}'.replaceAll('{' r'sellingCatId' '}', encodeQueryParameter(_serializers, sellingCatId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -944,12 +954,12 @@ class SellingApi {
       _bodyData = requestSellingCategory == null ? null : _serializers.serialize(requestSellingCategory, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -974,10 +984,10 @@ class SellingApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1009,7 +1019,7 @@ class SellingApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putSellingSubCategory({ 
     required String sellingCatId,
     RequestSellingCategory? requestSellingCategory,
@@ -1020,7 +1030,7 @@ class SellingApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/selling-subcategory/{sellingCatId}'.replaceAll('{' r'sellingCatId' '}', sellingCatId.toString());
+    final _path = r'/public/selling-subcategory/{sellingCatId}'.replaceAll('{' r'sellingCatId' '}', encodeQueryParameter(_serializers, sellingCatId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -1047,12 +1057,12 @@ class SellingApi {
       _bodyData = requestSellingCategory == null ? null : _serializers.serialize(requestSellingCategory, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1077,10 +1087,10 @@ class SellingApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

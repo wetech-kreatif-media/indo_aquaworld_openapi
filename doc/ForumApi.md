@@ -35,9 +35,6 @@ Hapus komentar
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String commentId = commentId_example; // String | 
@@ -45,7 +42,7 @@ final String commentId = commentId_example; // String |
 try {
     final response = api.delComment(commentId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->delComment: $e\n');
 }
 ```
@@ -72,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getComments**
-> RespondComments getComments(forumArticleId)
+> RespondComments getComments(forumArticleId, sort, direction)
 
 Get Comments
 
@@ -81,17 +78,16 @@ Ambil semua kome article
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String forumArticleId = forumArticleId_example; // String | 
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
 
 try {
-    final response = api.getComments(forumArticleId);
+    final response = api.getComments(forumArticleId, sort, direction);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->getComments: $e\n');
 }
 ```
@@ -101,6 +97,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **forumArticleId** | **String**|  | 
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
 
 ### Return type
 
@@ -127,9 +125,6 @@ Ambil detail forum article
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String forumArticleId = forumArticleId_example; // String | 
@@ -137,7 +132,7 @@ final String forumArticleId = forumArticleId_example; // String |
 try {
     final response = api.getForumArticle(forumArticleId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->getForumArticle: $e\n');
 }
 ```
@@ -186,7 +181,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getForumArticles(forumId, topics, title, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->getForumArticles: $e\n');
 }
 ```
@@ -228,9 +223,6 @@ Ambil topic forum
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String forumId = forumId_example; // String | 
@@ -243,7 +235,7 @@ final String name = name_example; // String |
 try {
     final response = api.getForumTopics(forumId, sort, direction, pageNumber, pageSize, name);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->getForumTopics: $e\n');
 }
 ```
@@ -296,7 +288,7 @@ final String publishStatus = publishStatus_example; // String |
 try {
     final response = api.getForums(sort, direction, pageNumber, pageSize, name, publishStatus);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->getForums: $e\n');
 }
 ```
@@ -337,9 +329,6 @@ Buat comment di article
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String forumArticleId = forumArticleId_example; // String | 
@@ -348,7 +337,7 @@ final RequestComment requestComment = {"comment":"sadsadsasadsaddsadsadsadasdasd
 try {
     final response = api.postComment(forumArticleId, requestComment);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->postComment: $e\n');
 }
 ```
@@ -385,9 +374,6 @@ Buat forum baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final RequestForum requestForum = {"name":"Forum Ikan Cupang","description":"description Forum","thumbnail":"{{SAMPLE_IMAGE_FISH}}","publishStatus":"PUBLISHED"}; // RequestForum | 
@@ -395,7 +381,7 @@ final RequestForum requestForum = {"name":"Forum Ikan Cupang","description":"des
 try {
     final response = api.postForum(requestForum);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->postForum: $e\n');
 }
 ```
@@ -431,9 +417,6 @@ buat article forum
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final RequestForumArticle requestForumArticle = {"title":"Cara Merawat ikan Louhan 1","content":"1. Akuarium Ikan louhan membutuhkan akuarium yang cukup luas, biasanya menggunakan ukuran panjang 90 x 40 x 50 cm untuk ikan berukuran sedang atau besar. 2. Filter Akuarium atau Filtrasi Agar akuarium terjaga kebersihannya, penggunaan filter sangat disarankan lho.Sisa makanan dan kotoran dapat dengan cepat mengotori air akuarium, dengan penambahan filter tersebut, air tidak akan mudah keruh","forumTopicId":"77e5c1ec-7281-472a-a405-90592ae0c73a","thumbnail":"{{SAMPLE_IMAGE}}"}; // RequestForumArticle | 
@@ -441,7 +424,7 @@ final RequestForumArticle requestForumArticle = {"title":"Cara Merawat ikan Louh
 try {
     final response = api.postForumArticle(requestForumArticle);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->postForumArticle: $e\n');
 }
 ```
@@ -477,9 +460,6 @@ Buat forum topic baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String forumId = forumId_example; // String | 
@@ -488,7 +468,7 @@ final RequestForumTopic requestForumTopic = {"name":"topiccssss"}; // RequestFor
 try {
     final response = api.postForumTopic(forumId, requestForumTopic);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->postForumTopic: $e\n');
 }
 ```
@@ -525,9 +505,6 @@ Update comment
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String commentId = commentId_example; // String | 
@@ -536,7 +513,7 @@ final RequestComment requestComment = {"comment":"sadsadsasadsaddsadsadsadasdasd
 try {
     final response = api.putComment(commentId, requestComment);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->putComment: $e\n');
 }
 ```
@@ -573,9 +550,6 @@ edit article forum
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getForumApi();
 final String forumArticleId = forumArticleId_example; // String | 
@@ -584,7 +558,7 @@ final RequestForumArticle requestForumArticle = {"title":"Cara Merawat ikan Louh
 try {
     final response = api.putForumArticle(forumArticleId, requestForumArticle);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->putForumArticle: $e\n');
 }
 ```
@@ -629,7 +603,7 @@ final RequestForumTopic requestForumTopic = {"name":"Name Topic"}; // RequestFor
 try {
     final response = api.putForumTopic(topicId, requestForumTopic);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->putForumTopic: $e\n');
 }
 ```
@@ -674,7 +648,7 @@ final RequestForum requestForum = {"name":"Forum Ikan Cupang","description":"des
 try {
     final response = api.putFourm(forumId, requestForum);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling ForumApi->putFourm: $e\n');
 }
 ```

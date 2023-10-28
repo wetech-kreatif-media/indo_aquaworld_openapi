@@ -26,9 +26,6 @@ Membuat event
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getEventsApi();
 final RequestEvent requestEvent = {"name":"Event Lohaan","startDate":"2023-06-23","endDate":"2023-07-11","description":"Kofdgsdfgntes untuk ikan lohan","contestComponents":[{"nomination":"42095eec-e9e8-4e23-b07e-d1d82063fc14","head":10,"body":5,"colour":7,"fantail":8,"face":10,"pearly":5,"marking":3,"overall":2,"judge":{"id":"108573e1-d446-439c-89ee-2aa1506e03ca"}},{"nomination":"283267b4-3f62-4936-9dae-756fb6bc82a4","head":10,"body":5,"colour":7,"fantail":8,"face":10,"pearly":5,"marking":3,"overall":2,"judge":{"id":"108573e1-d446-439c-89ee-2aa1506e03ca"}}],"location":"12c6bbc4-888b-4393-a718-b438472358df","teams":[{"id":"50432068-c66c-4810-8cf6-367c86f9284d"},{"id":"01e23a3e-1f57-4a3e-86e8-93c210ed9dad"}],"statusPublish":"DRAFT","statusEvent":"COMING_SOON"}; // RequestEvent | 
@@ -36,7 +33,7 @@ final RequestEvent requestEvent = {"name":"Event Lohaan","startDate":"2023-06-23
 try {
     final response = api.createEvent(requestEvent);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling EventsApi->createEvent: $e\n');
 }
 ```
@@ -72,9 +69,6 @@ Ambil data event
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getEventsApi();
 final String eventId = eventId_example; // String | 
@@ -82,7 +76,7 @@ final String eventId = eventId_example; // String |
 try {
     final response = api.getEvent(eventId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling EventsApi->getEvent: $e\n');
 }
 ```
@@ -118,9 +112,6 @@ Ambil data event nominasi
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getEventsApi();
 final String eventId = eventId_example; // String | 
@@ -130,7 +121,7 @@ final RequestEvent requestEvent = {"name":"Event Lohan","startDate":"2023-06-23"
 try {
     final response = api.getEventNominations(eventId, name, requestEvent);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling EventsApi->getEventNominations: $e\n');
 }
 ```
@@ -168,9 +159,6 @@ Ambil data events atau lomba
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getEventsApi();
 final String name = name_example; // String | 
@@ -182,7 +170,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getEvents(name, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling EventsApi->getEvents: $e\n');
 }
 ```
@@ -222,9 +210,6 @@ UPdate data event. / lomba
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getEventsApi();
 final String eventId = eventId_example; // String | 
@@ -233,7 +218,7 @@ final RequestEvent requestEvent = {"name":"Event Lohaan","startDate":"2023-06-23
 try {
     final response = api.putEvent(eventId, requestEvent);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling EventsApi->putEvent: $e\n');
 }
 ```

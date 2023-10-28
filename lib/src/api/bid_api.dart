@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_bid.dart';
 import 'package:openapi/src/model/respond_bidders.dart';
 import 'package:openapi/src/model/respond_global.dart';
@@ -25,6 +26,8 @@ class BidApi {
   ///
   /// Parameters:
   /// * [auctionId] - 
+  /// * [sort] - 
+  /// * [direction] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -33,9 +36,11 @@ class BidApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondBidders] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondBidders>> getBidders({ 
     required String auctionId,
+    String? sort,
+    String? direction,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -43,7 +48,7 @@ class BidApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/bidders/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
+    final _path = r'/public/bidders/{auctionId}'.replaceAll('{' r'auctionId' '}', encodeQueryParameter(_serializers, auctionId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -62,9 +67,15 @@ class BidApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -80,10 +91,10 @@ class BidApi {
       ) as RespondBidders;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -114,7 +125,7 @@ class BidApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondLastBid] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondLastBid>> getLastBid({ 
     required String auctionId,
     CancelToken? cancelToken,
@@ -124,7 +135,7 @@ class BidApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/last-bid/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
+    final _path = r'/public/last-bid/{auctionId}'.replaceAll('{' r'auctionId' '}', encodeQueryParameter(_serializers, auctionId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -155,10 +166,10 @@ class BidApi {
       ) as RespondLastBid;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -190,7 +201,7 @@ class BidApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postBid({ 
     required String auctionId,
     RequestBid? requestBid,
@@ -201,7 +212,7 @@ class BidApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/bid/{auctionId}'.replaceAll('{' r'auctionId' '}', auctionId.toString());
+    final _path = r'/public/bid/{auctionId}'.replaceAll('{' r'auctionId' '}', encodeQueryParameter(_serializers, auctionId, const FullType(String)).toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -228,12 +239,12 @@ class BidApi {
       _bodyData = requestBid == null ? null : _serializers.serialize(requestBid, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -258,10 +269,10 @@ class BidApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

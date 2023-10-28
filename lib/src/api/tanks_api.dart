@@ -40,7 +40,7 @@ class TanksApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> addTank({ 
     required String eventId,
     required String nominasiId,
@@ -56,7 +56,7 @@ class TanksApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/event/{eventId}/tank/{nominasiId}'.replaceAll('{' r'eventId' '}', eventId.toString()).replaceAll('{' r'nominasiId' '}', nominasiId.toString());
+    final _path = r'/public/event/{eventId}/tank/{nominasiId}'.replaceAll('{' r'eventId' '}', encodeQueryParameter(_serializers, eventId, const FullType(String)).toString()).replaceAll('{' r'nominasiId' '}', encodeQueryParameter(_serializers, nominasiId, const FullType(String)).toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -90,13 +90,13 @@ class TanksApi {
       _bodyData = requestTank == null ? null : _serializers.serialize(requestTank, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
           queryParameters: _queryParameters,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -122,10 +122,10 @@ class TanksApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -156,7 +156,7 @@ class TanksApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondTank] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondTank>> getTank({ 
     required String tankId,
     CancelToken? cancelToken,
@@ -166,7 +166,7 @@ class TanksApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/tank/{tankId}'.replaceAll('{' r'tankId' '}', tankId.toString());
+    final _path = r'/public/tank/{tankId}'.replaceAll('{' r'tankId' '}', encodeQueryParameter(_serializers, tankId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -203,10 +203,10 @@ class TanksApi {
       ) as RespondTank;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -242,7 +242,7 @@ class TanksApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondTanks] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondTanks>> getTanks({ 
     required String eventId,
     required String nominasiId,
@@ -257,7 +257,7 @@ class TanksApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/event/{eventId}/tank/{nominasiId}'.replaceAll('{' r'eventId' '}', eventId.toString()).replaceAll('{' r'nominasiId' '}', nominasiId.toString());
+    final _path = r'/public/event/{eventId}/tank/{nominasiId}'.replaceAll('{' r'eventId' '}', encodeQueryParameter(_serializers, eventId, const FullType(String)).toString()).replaceAll('{' r'nominasiId' '}', encodeQueryParameter(_serializers, nominasiId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -302,10 +302,10 @@ class TanksApi {
       ) as RespondTanks;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -341,7 +341,7 @@ class TanksApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondTanks] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondTanks>> getTanksSummary({ 
     required String eventId,
     required String nominasiId,
@@ -356,7 +356,7 @@ class TanksApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/event/{eventId}/summary/{nominasiId}'.replaceAll('{' r'eventId' '}', eventId.toString()).replaceAll('{' r'nominasiId' '}', nominasiId.toString());
+    final _path = r'/public/event/{eventId}/summary/{nominasiId}'.replaceAll('{' r'eventId' '}', encodeQueryParameter(_serializers, eventId, const FullType(String)).toString()).replaceAll('{' r'nominasiId' '}', encodeQueryParameter(_serializers, nominasiId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -401,10 +401,10 @@ class TanksApi {
       ) as RespondTanks;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -436,7 +436,7 @@ class TanksApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putTank({ 
     required String tankId,
     RequestTank? requestTank,
@@ -447,7 +447,7 @@ class TanksApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/tank/{tankId}'.replaceAll('{' r'tankId' '}', tankId.toString());
+    final _path = r'/public/tank/{tankId}'.replaceAll('{' r'tankId' '}', encodeQueryParameter(_serializers, tankId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -474,12 +474,12 @@ class TanksApi {
       _bodyData = requestTank == null ? null : _serializers.serialize(requestTank, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -504,10 +504,10 @@ class TanksApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

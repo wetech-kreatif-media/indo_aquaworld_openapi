@@ -37,7 +37,7 @@ class TankAssesmentApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondTankAssesment] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondTankAssesment>> getTankAssessment({ 
     required String tankId,
     String? sort,
@@ -51,7 +51,7 @@ class TankAssesmentApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/tank-assesment/{tankId}'.replaceAll('{' r'tankId' '}', tankId.toString());
+    final _path = r'/public/tank-assesment/{tankId}'.replaceAll('{' r'tankId' '}', encodeQueryParameter(_serializers, tankId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -96,10 +96,10 @@ class TankAssesmentApi {
       ) as RespondTankAssesment;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -131,7 +131,7 @@ class TankAssesmentApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postTankAssessment({ 
     required String tankId,
     RequestTankAssesment? requestTankAssesment,
@@ -142,7 +142,7 @@ class TankAssesmentApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/tank-assesment/{tankId}'.replaceAll('{' r'tankId' '}', tankId.toString());
+    final _path = r'/public/tank-assesment/{tankId}'.replaceAll('{' r'tankId' '}', encodeQueryParameter(_serializers, tankId, const FullType(String)).toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -169,12 +169,12 @@ class TankAssesmentApi {
       _bodyData = requestTankAssesment == null ? null : _serializers.serialize(requestTankAssesment, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -199,10 +199,10 @@ class TankAssesmentApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

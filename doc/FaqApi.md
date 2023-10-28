@@ -25,9 +25,6 @@ Ambil faq detail
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getFaqApi();
 final String faqId = faqId_example; // String | 
@@ -35,7 +32,7 @@ final String faqId = faqId_example; // String |
 try {
     final response = api.getFaq(faqId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling FaqApi->getFaq: $e\n');
 }
 ```
@@ -71,9 +68,6 @@ Ambil semua data faq
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getFaqApi();
 final String title = title_example; // String | 
@@ -85,7 +79,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getFaqs(title, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling FaqApi->getFaqs: $e\n');
 }
 ```
@@ -125,9 +119,6 @@ Buat faq baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getFaqApi();
 final RequestFaq requestFaq = {"title":"Ketentuan Jual Beli","content":"<p>Aquaworld Adalah komunitas sekaligus marketplace gratis dan dikelola secara profesional</p><p>Aquaworld adalah milik bersama, untuk itu peran serta kalian untuk menjaga keberlangsungan apps komunitas sangat kami hargai</p>"}; // RequestFaq | 
@@ -135,7 +126,7 @@ final RequestFaq requestFaq = {"title":"Ketentuan Jual Beli","content":"<p>Aquaw
 try {
     final response = api.postFaq(requestFaq);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling FaqApi->postFaq: $e\n');
 }
 ```
@@ -171,9 +162,6 @@ Update faq
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getFaqApi();
 final String faqId = faqId_example; // String | 
@@ -182,7 +170,7 @@ final RequestFaq requestFaq = {"title":"Ketentuan Jual Beli","content":"<p>Aquaw
 try {
     final response = api.putFaq(faqId, requestFaq);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling FaqApi->putFaq: $e\n');
 }
 ```

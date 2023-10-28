@@ -26,9 +26,6 @@ Tambah tank
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTanksApi();
 final String eventId = eventId_example; // String | 
@@ -42,7 +39,7 @@ final RequestTank requestTank = {"noTank":"001","codeTank":"0001","photo":"{{SAM
 try {
     final response = api.addTank(eventId, nominasiId, sort, direction, pageNumber, pageSize, requestTank);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TanksApi->addTank: $e\n');
 }
 ```
@@ -84,9 +81,6 @@ Amibil detail tank
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTanksApi();
 final String tankId = tankId_example; // String | 
@@ -94,7 +88,7 @@ final String tankId = tankId_example; // String |
 try {
     final response = api.getTank(tankId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TanksApi->getTank: $e\n');
 }
 ```
@@ -130,9 +124,6 @@ Ambil data tanks
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTanksApi();
 final String eventId = eventId_example; // String | 
@@ -145,7 +136,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getTanks(eventId, nominasiId, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TanksApi->getTanks: $e\n');
 }
 ```
@@ -186,9 +177,6 @@ Ambil data tanks
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTanksApi();
 final String eventId = eventId_example; // String | 
@@ -201,7 +189,7 @@ final num pageSize = 8.14; // num |
 try {
     final response = api.getTanksSummary(eventId, nominasiId, sort, direction, pageNumber, pageSize);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TanksApi->getTanksSummary: $e\n');
 }
 ```
@@ -242,9 +230,6 @@ update tank
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getTanksApi();
 final String tankId = tankId_example; // String | 
@@ -253,7 +238,7 @@ final RequestTank requestTank = {"id":"4b6c1496-eab2-4108-8da8-abcd02b19f34","no
 try {
     final response = api.putTank(tankId, requestTank);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling TanksApi->putTank: $e\n');
 }
 ```

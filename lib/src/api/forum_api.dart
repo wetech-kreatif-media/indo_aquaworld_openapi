@@ -41,7 +41,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> delComment({ 
     required String commentId,
     CancelToken? cancelToken,
@@ -51,7 +51,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/comment/{commentId}'.replaceAll('{' r'commentId' '}', commentId.toString());
+    final _path = r'/public/comment/{commentId}'.replaceAll('{' r'commentId' '}', encodeQueryParameter(_serializers, commentId, const FullType(String)).toString());
     final _options = Options(
       method: r'DELETE',
       headers: <String, dynamic>{
@@ -88,10 +88,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -114,6 +114,8 @@ class ForumApi {
   ///
   /// Parameters:
   /// * [forumArticleId] - 
+  /// * [sort] - 
+  /// * [direction] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -122,9 +124,11 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondComments] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondComments>> getComments({ 
     required String forumArticleId,
+    String? sort,
+    String? direction,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -132,7 +136,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/comments/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', forumArticleId.toString());
+    final _path = r'/public/comments/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', encodeQueryParameter(_serializers, forumArticleId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -151,9 +155,15 @@ class ForumApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
+      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -169,10 +179,10 @@ class ForumApi {
       ) as RespondComments;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -203,7 +213,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondForumArticle] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondForumArticle>> getForumArticle({ 
     required String forumArticleId,
     CancelToken? cancelToken,
@@ -213,7 +223,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/forum-article/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', forumArticleId.toString());
+    final _path = r'/public/forum-article/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', encodeQueryParameter(_serializers, forumArticleId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -250,10 +260,10 @@ class ForumApi {
       ) as RespondForumArticle;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -290,7 +300,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondForumArticles] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondForumArticles>> getForumArticles({ 
     required String forumId,
     BuiltSet<String>? topics,
@@ -306,7 +316,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/forum-articles/{forumId}'.replaceAll('{' r'forumId' '}', forumId.toString());
+    final _path = r'/public/forum-articles/{forumId}'.replaceAll('{' r'forumId' '}', encodeQueryParameter(_serializers, forumId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -347,10 +357,10 @@ class ForumApi {
       ) as RespondForumArticles;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -386,7 +396,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondForumTopics] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondForumTopics>> getForumTopics({ 
     required String forumId,
     String? sort,
@@ -401,7 +411,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/topics/{forumId}'.replaceAll('{' r'forumId' '}', forumId.toString());
+    final _path = r'/public/topics/{forumId}'.replaceAll('{' r'forumId' '}', encodeQueryParameter(_serializers, forumId, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -447,10 +457,10 @@ class ForumApi {
       ) as RespondForumTopics;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -486,7 +496,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondForums] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondForums>> getForums({ 
     String? sort,
     String? direction,
@@ -542,10 +552,10 @@ class ForumApi {
       ) as RespondForums;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -577,7 +587,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postComment({ 
     required String forumArticleId,
     RequestComment? requestComment,
@@ -588,7 +598,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/forum-comment/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', forumArticleId.toString());
+    final _path = r'/public/forum-comment/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', encodeQueryParameter(_serializers, forumArticleId, const FullType(String)).toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -615,12 +625,12 @@ class ForumApi {
       _bodyData = requestComment == null ? null : _serializers.serialize(requestComment, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -645,10 +655,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -679,7 +689,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postForum({ 
     RequestForum? requestForum,
     CancelToken? cancelToken,
@@ -716,12 +726,12 @@ class ForumApi {
       _bodyData = requestForum == null ? null : _serializers.serialize(requestForum, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -746,10 +756,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -780,7 +790,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postForumArticle({ 
     RequestForumArticle? requestForumArticle,
     CancelToken? cancelToken,
@@ -817,12 +827,12 @@ class ForumApi {
       _bodyData = requestForumArticle == null ? null : _serializers.serialize(requestForumArticle, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -847,10 +857,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -882,7 +892,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> postForumTopic({ 
     required String forumId,
     RequestForumTopic? requestForumTopic,
@@ -893,7 +903,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/topic/{forumId}'.replaceAll('{' r'forumId' '}', forumId.toString());
+    final _path = r'/public/topic/{forumId}'.replaceAll('{' r'forumId' '}', encodeQueryParameter(_serializers, forumId, const FullType(String)).toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -920,12 +930,12 @@ class ForumApi {
       _bodyData = requestForumTopic == null ? null : _serializers.serialize(requestForumTopic, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -950,10 +960,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -985,7 +995,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putComment({ 
     required String commentId,
     RequestComment? requestComment,
@@ -996,7 +1006,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/comment/{commentId}'.replaceAll('{' r'commentId' '}', commentId.toString());
+    final _path = r'/public/comment/{commentId}'.replaceAll('{' r'commentId' '}', encodeQueryParameter(_serializers, commentId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -1023,12 +1033,12 @@ class ForumApi {
       _bodyData = requestComment == null ? null : _serializers.serialize(requestComment, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1053,10 +1063,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1088,7 +1098,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putForumArticle({ 
     required String forumArticleId,
     RequestForumArticle? requestForumArticle,
@@ -1099,7 +1109,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/forum-article/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', forumArticleId.toString());
+    final _path = r'/public/forum-article/{forumArticleId}'.replaceAll('{' r'forumArticleId' '}', encodeQueryParameter(_serializers, forumArticleId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -1126,12 +1136,12 @@ class ForumApi {
       _bodyData = requestForumArticle == null ? null : _serializers.serialize(requestForumArticle, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1156,10 +1166,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1191,7 +1201,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putForumTopic({ 
     required String topicId,
     RequestForumTopic? requestForumTopic,
@@ -1202,7 +1212,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/topic/{topicId}'.replaceAll('{' r'topicId' '}', topicId.toString());
+    final _path = r'/public/topic/{topicId}'.replaceAll('{' r'topicId' '}', encodeQueryParameter(_serializers, topicId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -1223,12 +1233,12 @@ class ForumApi {
       _bodyData = requestForumTopic == null ? null : _serializers.serialize(requestForumTopic, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1253,10 +1263,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1288,7 +1298,7 @@ class ForumApi {
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
   /// Returns a [Future] containing a [Response] with a [RespondGlobal] as data
-  /// Throws [DioError] if API call or serialization fails
+  /// Throws [DioException] if API call or serialization fails
   Future<Response<RespondGlobal>> putFourm({ 
     required String forumId,
     RequestForum? requestForum,
@@ -1299,7 +1309,7 @@ class ForumApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/public/forum/{forumId}'.replaceAll('{' r'forumId' '}', forumId.toString());
+    final _path = r'/public/forum/{forumId}'.replaceAll('{' r'forumId' '}', encodeQueryParameter(_serializers, forumId, const FullType(String)).toString());
     final _options = Options(
       method: r'PUT',
       headers: <String, dynamic>{
@@ -1320,12 +1330,12 @@ class ForumApi {
       _bodyData = requestForum == null ? null : _serializers.serialize(requestForum, specifiedType: _type);
 
     } catch(error, stackTrace) {
-      throw DioError(
+      throw DioException(
          requestOptions: _options.compose(
           _dio.options,
           _path,
         ),
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );
@@ -1350,10 +1360,10 @@ class ForumApi {
       ) as RespondGlobal;
 
     } catch (error, stackTrace) {
-      throw DioError(
+      throw DioException(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.unknown,
+        type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
       );

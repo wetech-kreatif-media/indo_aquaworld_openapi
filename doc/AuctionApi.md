@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **getAuctionUser**
-> RespondAuctions getAuctionUser()
+> RespondAuctions getAuctionUser(sort, direction)
 
 Get Auction User
 
@@ -28,17 +28,23 @@ Mabil data lelang per user
 import 'package:openapi/api.dart';
 
 final api = Openapi().getAuctionApi();
+final String sort = sort_example; // String | 
+final String direction = direction_example; // String | 
 
 try {
-    final response = api.getAuctionUser();
+    final response = api.getAuctionUser(sort, direction);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling AuctionApi->getAuctionUser: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | **String**|  | [optional] 
+ **direction** | **String**|  | [optional] 
 
 ### Return type
 
@@ -65,9 +71,6 @@ Ambil semua data auction
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getAuctionApi();
 final String sort = sort_example; // String | 
@@ -80,7 +83,7 @@ final String publishStatus = publishStatus_example; // String |
 try {
     final response = api.getAuctions(sort, direction, pageNumber, pageSize, name, publishStatus);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling AuctionApi->getAuctions: $e\n');
 }
 ```
@@ -121,9 +124,6 @@ Ambil detail lelang
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getAuctionApi();
 final String auctionId = auctionId_example; // String | 
@@ -131,7 +131,7 @@ final String auctionId = auctionId_example; // String |
 try {
     final response = api.getDetailAuction(auctionId);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling AuctionApi->getDetailAuction: $e\n');
 }
 ```
@@ -167,9 +167,6 @@ Buat lelang baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getAuctionApi();
 final RequestAuction requestAuction = {"name":"Jual Ikan 4","description":"jual ikan nih bos","photo1":"{{SAMPLE_IMAGE}}","price":10000,"multipleBid":25000,"openBid":"3","publishStatus":"ACTIVE","user":"5892cc59-a2e2-46e4-a8ca-fca8d566d521"}; // RequestAuction | 
@@ -177,7 +174,7 @@ final RequestAuction requestAuction = {"name":"Jual Ikan 4","description":"jual 
 try {
     final response = api.postAuction(requestAuction);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling AuctionApi->postAuction: $e\n');
 }
 ```
@@ -213,9 +210,6 @@ Buat lelang baru
 ### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure HTTP basic authorization: bearerAuth
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('bearerAuth').password = 'YOUR_PASSWORD';
 
 final api = Openapi().getAuctionApi();
 final String auctionId = auctionId_example; // String | 
@@ -224,7 +218,7 @@ final RequestAuction requestAuction = {"name":"Jual Ikan 4","description":"jual 
 try {
     final response = api.putAuction(auctionId, requestAuction);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print('Exception when calling AuctionApi->putAuction: $e\n');
 }
 ```
