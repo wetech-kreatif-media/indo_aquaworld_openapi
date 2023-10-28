@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeams**
-> RespondTeams getTeams(name, sort, direction, pageNumber, pageSize)
+> RespondTeams getTeams(name, sort, dir, pageNumber, pageSize)
 
 Get Teams
 
@@ -115,12 +115,12 @@ import 'package:openapi/api.dart';
 final api = Openapi().getTeamsApi();
 final String name = name_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getTeams(name, sort, direction, pageNumber, pageSize);
+    final response = api.getTeams(name, sort, dir, pageNumber, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling TeamsApi->getTeams: $e\n');
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**|  | [optional] 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
 

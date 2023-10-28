@@ -209,7 +209,7 @@ class ContestansApi {
   /// Parameters:
   /// * [fullname] - 
   /// * [sort] - 
-  /// * [direction] - 
+  /// * [dir] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
   /// * [eventId] - 
@@ -225,7 +225,7 @@ class ContestansApi {
   Future<Response<RespondContestants>> getContestants({ 
     String? fullname,
     String? sort,
-    String? direction,
+    String? dir,
     num? pageNumber,
     num? pageSize,
     String? eventId,
@@ -258,7 +258,7 @@ class ContestansApi {
     final _queryParameters = <String, dynamic>{
       if (fullname != null) r'fullname': encodeQueryParameter(_serializers, fullname, const FullType(String)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
       if (eventId != null) r'eventId': encodeQueryParameter(_serializers, eventId, const FullType(String)),

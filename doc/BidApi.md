@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **getBidders**
-> RespondBidders getBidders(auctionId, sort, direction)
+> RespondBidders getBidders(auctionId, sort, dir)
 
 GetBidders
 
@@ -28,10 +28,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getBidApi();
 final String auctionId = auctionId_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 
 try {
-    final response = api.getBidders(auctionId, sort, direction);
+    final response = api.getBidders(auctionId, sort, dir);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling BidApi->getBidders: $e\n');
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auctionId** | **String**|  | 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
 
 ### Return type
 

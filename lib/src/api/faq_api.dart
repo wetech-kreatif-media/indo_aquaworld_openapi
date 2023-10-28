@@ -108,7 +108,7 @@ class FaqApi {
   /// Parameters:
   /// * [title] - 
   /// * [sort] - 
-  /// * [direction] - 
+  /// * [dir] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -123,7 +123,7 @@ class FaqApi {
   Future<Response<RespondFaqs>> getFaqs({ 
     String? title,
     String? sort,
-    String? direction,
+    String? dir,
     num? pageNumber,
     num? pageSize,
     CancelToken? cancelToken,
@@ -155,7 +155,7 @@ class FaqApi {
     final _queryParameters = <String, dynamic>{
       if (title != null) r'title': encodeQueryParameter(_serializers, title, const FullType(String)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
-      if (direction != null) r'direction': encodeQueryParameter(_serializers, direction, const FullType(String)),
+      if (dir != null) r'dir': encodeQueryParameter(_serializers, dir, const FullType(String)),
       if (pageNumber != null) r'pageNumber': encodeQueryParameter(_serializers, pageNumber, const FullType(num)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(num)),
     };

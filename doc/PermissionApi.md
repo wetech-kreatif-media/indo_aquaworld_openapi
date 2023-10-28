@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getPermissions**
-> RespondPermissions getPermissions(sort, direction, pageNumber, pageSize)
+> RespondPermissions getPermissions(sort, dir, pageNumber, pageSize)
 
 Get Permissions
 
@@ -69,12 +69,12 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getPermissionApi();
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getPermissions(sort, direction, pageNumber, pageSize);
+    final response = api.getPermissions(sort, dir, pageNumber, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling PermissionApi->getPermissions: $e\n');
@@ -86,7 +86,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
 

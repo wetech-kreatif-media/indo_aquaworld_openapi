@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getComments**
-> RespondComments getComments(forumArticleId, sort, direction)
+> RespondComments getComments(forumArticleId, sort, dir)
 
 Get Comments
 
@@ -82,10 +82,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getForumApi();
 final String forumArticleId = forumArticleId_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 
 try {
-    final response = api.getComments(forumArticleId, sort, direction);
+    final response = api.getComments(forumArticleId, sort, dir);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ForumApi->getComments: $e\n');
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **forumArticleId** | **String**|  | 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
 
 ### Return type
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getForumArticles**
-> RespondForumArticles getForumArticles(forumId, topics, title, sort, direction, pageNumber, pageSize)
+> RespondForumArticles getForumArticles(forumId, topics, title, sort, dir, pageNumber, pageSize)
 
 Get Forum Articles
 
@@ -174,12 +174,12 @@ final String forumId = forumId_example; // String |
 final BuiltSet<String> topics = ; // BuiltSet<String> | 
 final String title = title_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getForumArticles(forumId, topics, title, sort, direction, pageNumber, pageSize);
+    final response = api.getForumArticles(forumId, topics, title, sort, dir, pageNumber, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ForumApi->getForumArticles: $e\n');
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
  **topics** | [**BuiltSet&lt;String&gt;**](String.md)|  | [optional] 
  **title** | **String**|  | [optional] 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
 
@@ -214,7 +214,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getForumTopics**
-> RespondForumTopics getForumTopics(forumId, sort, direction, pageNumber, pageSize, name)
+> RespondForumTopics getForumTopics(forumId, sort, dir, pageNumber, pageSize, name)
 
 Get Forum Topic
 
@@ -227,13 +227,13 @@ import 'package:openapi/api.dart';
 final api = Openapi().getForumApi();
 final String forumId = forumId_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String name = name_example; // String | 
 
 try {
-    final response = api.getForumTopics(forumId, sort, direction, pageNumber, pageSize, name);
+    final response = api.getForumTopics(forumId, sort, dir, pageNumber, pageSize, name);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ForumApi->getForumTopics: $e\n');
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **forumId** | **String**|  | 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **name** | **String**|  | [optional] 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getForums**
-> RespondForums getForums(sort, direction, pageNumber, pageSize, name, publishStatus)
+> RespondForums getForums(sort, dir, pageNumber, pageSize, name, publishStatus)
 
 Get Forums
 
@@ -279,14 +279,14 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getForumApi();
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String name = name_example; // String | 
 final String publishStatus = publishStatus_example; // String | 
 
 try {
-    final response = api.getForums(sort, direction, pageNumber, pageSize, name, publishStatus);
+    final response = api.getForums(sort, dir, pageNumber, pageSize, name, publishStatus);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ForumApi->getForums: $e\n');
@@ -298,7 +298,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **name** | **String**|  | [optional] 

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **getAuctionUser**
-> RespondAuctions getAuctionUser(sort, direction)
+> RespondAuctions getAuctionUser(sort, dir)
 
 Get Auction User
 
@@ -29,10 +29,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getAuctionApi();
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 
 try {
-    final response = api.getAuctionUser(sort, direction);
+    final response = api.getAuctionUser(sort, dir);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling AuctionApi->getAuctionUser: $e\n');
@@ -44,7 +44,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
 
 ### Return type
 
@@ -62,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAuctions**
-> RespondAuctions getAuctions(sort, direction, pageNumber, pageSize, name, publishStatus)
+> RespondAuctions getAuctions(sort, dir, pageNumber, pageSize, name, publishStatus)
 
 Get Auctions
 
@@ -74,14 +74,14 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getAuctionApi();
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final String name = name_example; // String | 
 final String publishStatus = publishStatus_example; // String | 
 
 try {
-    final response = api.getAuctions(sort, direction, pageNumber, pageSize, name, publishStatus);
+    final response = api.getAuctions(sort, dir, pageNumber, pageSize, name, publishStatus);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling AuctionApi->getAuctions: $e\n');
@@ -93,7 +93,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **name** | **String**|  | [optional] 

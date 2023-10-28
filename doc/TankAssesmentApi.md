@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **getTankAssessment**
-> RespondTankAssesment getTankAssessment(tankId, sort, direction, pageNumber, pageSize)
+> RespondTankAssesment getTankAssessment(tankId, sort, dir, pageNumber, pageSize)
 
 Get Tank Assessment
 
@@ -27,12 +27,12 @@ import 'package:openapi/api.dart';
 final api = Openapi().getTankAssesmentApi();
 final String tankId = tankId_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getTankAssessment(tankId, sort, direction, pageNumber, pageSize);
+    final response = api.getTankAssessment(tankId, sort, dir, pageNumber, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling TankAssesmentApi->getTankAssessment: $e\n');
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tankId** | **String**|  | 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
 

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **addTank**
-> RespondGlobal addTank(eventId, nominasiId, sort, direction, pageNumber, pageSize, requestTank)
+> RespondGlobal addTank(eventId, nominasiId, sort, dir, pageNumber, pageSize, requestTank)
 
 Add Tank
 
@@ -31,13 +31,13 @@ final api = Openapi().getTanksApi();
 final String eventId = eventId_example; // String | 
 final String nominasiId = nominasiId_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 final RequestTank requestTank = {"noTank":"001","codeTank":"0001","photo":"{{SAMPLE_IMAGE_FISH}}","contestant":"5cf53cdb-4588-4549-b2fe-9a7b57994f3e"}; // RequestTank | 
 
 try {
-    final response = api.addTank(eventId, nominasiId, sort, direction, pageNumber, pageSize, requestTank);
+    final response = api.addTank(eventId, nominasiId, sort, dir, pageNumber, pageSize, requestTank);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling TanksApi->addTank: $e\n');
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
  **eventId** | **String**|  | 
  **nominasiId** | **String**|  | 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
  **requestTank** | [**RequestTank**](RequestTank.md)|  | [optional] 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTanks**
-> RespondTanks getTanks(eventId, nominasiId, sort, direction, pageNumber, pageSize)
+> RespondTanks getTanks(eventId, nominasiId, sort, dir, pageNumber, pageSize)
 
 Get Tanks
 
@@ -129,12 +129,12 @@ final api = Openapi().getTanksApi();
 final String eventId = eventId_example; // String | 
 final String nominasiId = nominasiId_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getTanks(eventId, nominasiId, sort, direction, pageNumber, pageSize);
+    final response = api.getTanks(eventId, nominasiId, sort, dir, pageNumber, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling TanksApi->getTanks: $e\n');
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
  **eventId** | **String**|  | 
  **nominasiId** | **String**|  | 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTanksSummary**
-> RespondTanks getTanksSummary(eventId, nominasiId, sort, direction, pageNumber, pageSize)
+> RespondTanks getTanksSummary(eventId, nominasiId, sort, dir, pageNumber, pageSize)
 
 Get Tanks
 
@@ -182,12 +182,12 @@ final api = Openapi().getTanksApi();
 final String eventId = eventId_example; // String | 
 final String nominasiId = nominasiId_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getTanksSummary(eventId, nominasiId, sort, direction, pageNumber, pageSize);
+    final response = api.getTanksSummary(eventId, nominasiId, sort, dir, pageNumber, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling TanksApi->getTanksSummary: $e\n');
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
  **eventId** | **String**|  | 
  **nominasiId** | **String**|  | 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
 

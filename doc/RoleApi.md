@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getRoles**
-> RespondRoles getRoles(name, sort, direction, pageNumber, pageSize)
+> RespondRoles getRoles(name, sort, dir, pageNumber, pageSize)
 
 Get Roles
 
@@ -70,12 +70,12 @@ import 'package:openapi/api.dart';
 final api = Openapi().getRoleApi();
 final String name = name_example; // String | 
 final String sort = sort_example; // String | 
-final String direction = direction_example; // String | 
+final String dir = dir_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
 
 try {
-    final response = api.getRoles(name, sort, direction, pageNumber, pageSize);
+    final response = api.getRoles(name, sort, dir, pageNumber, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling RoleApi->getRoles: $e\n');
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**|  | [optional] 
  **sort** | **String**|  | [optional] 
- **direction** | **String**|  | [optional] 
+ **dir** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
 
