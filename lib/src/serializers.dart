@@ -42,6 +42,7 @@ import 'package:openapi/src/model/request_tank.dart';
 import 'package:openapi/src/model/request_tank_assesment.dart';
 import 'package:openapi/src/model/request_tank_assesment_head.dart';
 import 'package:openapi/src/model/request_tank_assesment_mayor.dart';
+import 'package:openapi/src/model/request_tank_v2.dart';
 import 'package:openapi/src/model/request_team.dart';
 import 'package:openapi/src/model/request_user.dart';
 import 'package:openapi/src/model/respond_article.dart';
@@ -154,6 +155,10 @@ import 'package:openapi/src/model/respond_tanks_data.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component.dart';
 import 'package:openapi/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart';
+import 'package:openapi/src/model/respond_tanks_v2.dart';
+import 'package:openapi/src/model/respond_tanks_v2_data.dart';
+import 'package:openapi/src/model/respond_tanks_v2_data_content_inner.dart';
+import 'package:openapi/src/model/respond_tanks_v2_data_content_inner_contest_component.dart';
 import 'package:openapi/src/model/respond_team.dart';
 import 'package:openapi/src/model/respond_team_data.dart';
 import 'package:openapi/src/model/respond_teams.dart';
@@ -198,6 +203,7 @@ part 'serializers.g.dart';
   RequestTankAssesment,
   RequestTankAssesmentHead,
   RequestTankAssesmentMayor,
+  RequestTankV2,
   RequestTeam,
   RequestUser,
   RespondArticle,
@@ -310,6 +316,10 @@ part 'serializers.g.dart';
   RespondTanksDataContentInner,
   RespondTanksDataContentInnerContestComponent,
   RespondTanksDataContentInnerContestComponentContestEvent,
+  RespondTanksV2,
+  RespondTanksV2Data,
+  RespondTanksV2DataContentInner,
+  RespondTanksV2DataContentInnerContestComponent,
   RespondTeam,
   RespondTeamData,
   RespondTeams,

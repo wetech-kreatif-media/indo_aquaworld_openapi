@@ -9,9 +9,11 @@ import 'package:dio/dio.dart';
 
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/request_tank.dart';
+import 'package:openapi/src/model/request_tank_v2.dart';
 import 'package:openapi/src/model/respond_global.dart';
 import 'package:openapi/src/model/respond_tank.dart';
 import 'package:openapi/src/model/respond_tanks.dart';
+import 'package:openapi/src/model/respond_tanks_v2.dart';
 
 class TanksApi {
 
@@ -31,7 +33,7 @@ class TanksApi {
   /// * [direction] - 
   /// * [pageNumber] - 
   /// * [pageSize] - 
-  /// * [requestTank] 
+  /// * [requestTankV2] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -48,7 +50,7 @@ class TanksApi {
     String? direction,
     num? pageNumber,
     num? pageSize,
-    RequestTank? requestTank,
+    RequestTankV2? requestTankV2,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -86,8 +88,8 @@ class TanksApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(RequestTank);
-      _bodyData = requestTank == null ? null : _serializers.serialize(requestTank, specifiedType: _type);
+      const _type = FullType(RequestTankV2);
+      _bodyData = requestTankV2 == null ? null : _serializers.serialize(requestTankV2, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -241,9 +243,9 @@ class TanksApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [RespondTanks] as data
+  /// Returns a [Future] containing a [Response] with a [RespondTanksV2] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<RespondTanks>> getTanks({ 
+  Future<Response<RespondTanksV2>> getTanks({ 
     required String eventId,
     required String nominasiId,
     String? sort,
@@ -292,14 +294,14 @@ class TanksApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RespondTanks? _responseData;
+    RespondTanksV2? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(RespondTanks),
-      ) as RespondTanks;
+        specifiedType: const FullType(RespondTanksV2),
+      ) as RespondTanksV2;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -311,7 +313,7 @@ class TanksApi {
       );
     }
 
-    return Response<RespondTanks>(
+    return Response<RespondTanksV2>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

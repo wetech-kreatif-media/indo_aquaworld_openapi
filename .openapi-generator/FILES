@@ -39,6 +39,7 @@ doc/RequestTank.md
 doc/RequestTankAssesment.md
 doc/RequestTankAssesmentHead.md
 doc/RequestTankAssesmentMayor.md
+doc/RequestTankV2.md
 doc/RequestTeam.md
 doc/RequestUser.md
 doc/RespondArticle.md
@@ -151,6 +152,10 @@ doc/RespondTanksData.md
 doc/RespondTanksDataContentInner.md
 doc/RespondTanksDataContentInnerContestComponent.md
 doc/RespondTanksDataContentInnerContestComponentContestEvent.md
+doc/RespondTanksV2.md
+doc/RespondTanksV2Data.md
+doc/RespondTanksV2DataContentInner.md
+doc/RespondTanksV2DataContentInnerContestComponent.md
 doc/RespondTeam.md
 doc/RespondTeamData.md
 doc/RespondTeams.md
@@ -223,6 +228,7 @@ lib/src/model/request_tank.dart
 lib/src/model/request_tank_assesment.dart
 lib/src/model/request_tank_assesment_head.dart
 lib/src/model/request_tank_assesment_mayor.dart
+lib/src/model/request_tank_v2.dart
 lib/src/model/request_team.dart
 lib/src/model/request_user.dart
 lib/src/model/respond_article.dart
@@ -335,6 +341,10 @@ lib/src/model/respond_tanks_data.dart
 lib/src/model/respond_tanks_data_content_inner.dart
 lib/src/model/respond_tanks_data_content_inner_contest_component.dart
 lib/src/model/respond_tanks_data_content_inner_contest_component_contest_event.dart
+lib/src/model/respond_tanks_v2.dart
+lib/src/model/respond_tanks_v2_data.dart
+lib/src/model/respond_tanks_v2_data_content_inner.dart
+lib/src/model/respond_tanks_v2_data_content_inner_contest_component.dart
 lib/src/model/respond_team.dart
 lib/src/model/respond_team_data.dart
 lib/src/model/respond_teams.dart
@@ -349,3 +359,8 @@ lib/src/model/respond_users_data_content_inner.dart
 lib/src/model/respond_users_data_content_inner_role.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/request_tank_v2_test.dart
+test/respond_tanks_v2_data_content_inner_contest_component_test.dart
+test/respond_tanks_v2_data_content_inner_test.dart
+test/respond_tanks_v2_data_test.dart
+test/respond_tanks_v2_test.dart

@@ -36,6 +36,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestTankAssesment.serializer)
       ..add(RequestTankAssesmentHead.serializer)
       ..add(RequestTankAssesmentMayor.serializer)
+      ..add(RequestTankV2.serializer)
       ..add(RequestTeam.serializer)
       ..add(RequestUser.serializer)
       ..add(RespondArticle.serializer)
@@ -150,6 +151,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RespondTanksDataContentInner.serializer)
       ..add(RespondTanksDataContentInnerContestComponent.serializer)
       ..add(RespondTanksDataContentInnerContestComponentContestEvent.serializer)
+      ..add(RespondTanksV2.serializer)
+      ..add(RespondTanksV2Data.serializer)
+      ..add(RespondTanksV2DataContentInner.serializer)
+      ..add(RespondTanksV2DataContentInnerContestComponent.serializer)
       ..add(RespondTeam.serializer)
       ..add(RespondTeamData.serializer)
       ..add(RespondTeams.serializer)
@@ -316,6 +321,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(RespondTanksDataContentInner)]),
           () => new ListBuilder<RespondTanksDataContentInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(RespondTanksV2DataContentInner)]),
+          () => new ListBuilder<RespondTanksV2DataContentInner>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(RespondTeamsDataContentInner)]),
