@@ -10,69 +10,73 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
   @override
   final String id;
   @override
-  final String createdBy;
+  final String? createdBy;
   @override
-  final String updatedBy;
+  final String? updatedBy;
   @override
-  final String created;
+  final String? created;
   @override
-  final String updated;
+  final String? updated;
   @override
-  final num deleted;
+  final num? deleted;
   @override
-  final String recordStatus;
+  final String? recordStatus;
   @override
   final String noTank;
   @override
   final String codeTank;
   @override
-  final String photoUrl;
+  final String? photoUrl;
   @override
-  final RespondContestantData? contestant;
+  final RespondTanksDataContentInnerContestComponent? contestComponent;
   @override
-  final RespondTanksDataContentInnerContestComponent contestComponent;
+  final String contestantName;
   @override
-  final num head;
+  final String city;
   @override
-  final num headPoint;
+  final String? teamName;
   @override
-  final num body;
+  final num? head;
   @override
-  final num bodyPoint;
+  final num? headPoint;
   @override
-  final num colour;
+  final num? body;
   @override
-  final num colourPoint;
+  final num? bodyPoint;
   @override
-  final num fantail;
+  final num? colour;
   @override
-  final num fantailPoint;
+  final num? colourPoint;
   @override
-  final num face;
+  final num? fantail;
   @override
-  final num facePoint;
+  final num? fantailPoint;
   @override
-  final num pearly;
+  final num? face;
   @override
-  final num pearlyPoint;
+  final num? facePoint;
   @override
-  final num marking;
+  final num? pearly;
   @override
-  final num markingPoint;
+  final num? pearlyPoint;
   @override
-  final num overall;
+  final num? marking;
   @override
-  final num overallPoint;
+  final num? markingPoint;
   @override
-  final num total;
+  final num? overall;
   @override
-  final num totalPenalty;
+  final num? overallPoint;
   @override
-  final num grandTotal;
+  final num? total;
   @override
-  final String assesmentStatus;
+  final num? totalPenalty;
+  @override
+  final num? grandTotal;
   @override
   final String? rank;
+  @override
+  final String? assesmentStatus;
 
   factory _$RespondTanksDataContentInner(
           [void Function(RespondTanksDataContentInnerBuilder)? updates]) =>
@@ -80,101 +84,51 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
 
   _$RespondTanksDataContentInner._(
       {required this.id,
-      required this.createdBy,
-      required this.updatedBy,
-      required this.created,
-      required this.updated,
-      required this.deleted,
-      required this.recordStatus,
+      this.createdBy,
+      this.updatedBy,
+      this.created,
+      this.updated,
+      this.deleted,
+      this.recordStatus,
       required this.noTank,
       required this.codeTank,
-      required this.photoUrl,
-      this.contestant,
-      required this.contestComponent,
-      required this.head,
-      required this.headPoint,
-      required this.body,
-      required this.bodyPoint,
-      required this.colour,
-      required this.colourPoint,
-      required this.fantail,
-      required this.fantailPoint,
-      required this.face,
-      required this.facePoint,
-      required this.pearly,
-      required this.pearlyPoint,
-      required this.marking,
-      required this.markingPoint,
-      required this.overall,
-      required this.overallPoint,
-      required this.total,
-      required this.totalPenalty,
-      required this.grandTotal,
-      required this.assesmentStatus,
-      this.rank})
+      this.photoUrl,
+      this.contestComponent,
+      required this.contestantName,
+      required this.city,
+      this.teamName,
+      this.head,
+      this.headPoint,
+      this.body,
+      this.bodyPoint,
+      this.colour,
+      this.colourPoint,
+      this.fantail,
+      this.fantailPoint,
+      this.face,
+      this.facePoint,
+      this.pearly,
+      this.pearlyPoint,
+      this.marking,
+      this.markingPoint,
+      this.overall,
+      this.overallPoint,
+      this.total,
+      this.totalPenalty,
+      this.grandTotal,
+      this.rank,
+      this.assesmentStatus})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RespondTanksDataContentInner', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        createdBy, r'RespondTanksDataContentInner', 'createdBy');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedBy, r'RespondTanksDataContentInner', 'updatedBy');
-    BuiltValueNullFieldError.checkNotNull(
-        created, r'RespondTanksDataContentInner', 'created');
-    BuiltValueNullFieldError.checkNotNull(
-        updated, r'RespondTanksDataContentInner', 'updated');
-    BuiltValueNullFieldError.checkNotNull(
-        deleted, r'RespondTanksDataContentInner', 'deleted');
-    BuiltValueNullFieldError.checkNotNull(
-        recordStatus, r'RespondTanksDataContentInner', 'recordStatus');
     BuiltValueNullFieldError.checkNotNull(
         noTank, r'RespondTanksDataContentInner', 'noTank');
     BuiltValueNullFieldError.checkNotNull(
         codeTank, r'RespondTanksDataContentInner', 'codeTank');
     BuiltValueNullFieldError.checkNotNull(
-        photoUrl, r'RespondTanksDataContentInner', 'photoUrl');
+        contestantName, r'RespondTanksDataContentInner', 'contestantName');
     BuiltValueNullFieldError.checkNotNull(
-        contestComponent, r'RespondTanksDataContentInner', 'contestComponent');
-    BuiltValueNullFieldError.checkNotNull(
-        head, r'RespondTanksDataContentInner', 'head');
-    BuiltValueNullFieldError.checkNotNull(
-        headPoint, r'RespondTanksDataContentInner', 'headPoint');
-    BuiltValueNullFieldError.checkNotNull(
-        body, r'RespondTanksDataContentInner', 'body');
-    BuiltValueNullFieldError.checkNotNull(
-        bodyPoint, r'RespondTanksDataContentInner', 'bodyPoint');
-    BuiltValueNullFieldError.checkNotNull(
-        colour, r'RespondTanksDataContentInner', 'colour');
-    BuiltValueNullFieldError.checkNotNull(
-        colourPoint, r'RespondTanksDataContentInner', 'colourPoint');
-    BuiltValueNullFieldError.checkNotNull(
-        fantail, r'RespondTanksDataContentInner', 'fantail');
-    BuiltValueNullFieldError.checkNotNull(
-        fantailPoint, r'RespondTanksDataContentInner', 'fantailPoint');
-    BuiltValueNullFieldError.checkNotNull(
-        face, r'RespondTanksDataContentInner', 'face');
-    BuiltValueNullFieldError.checkNotNull(
-        facePoint, r'RespondTanksDataContentInner', 'facePoint');
-    BuiltValueNullFieldError.checkNotNull(
-        pearly, r'RespondTanksDataContentInner', 'pearly');
-    BuiltValueNullFieldError.checkNotNull(
-        pearlyPoint, r'RespondTanksDataContentInner', 'pearlyPoint');
-    BuiltValueNullFieldError.checkNotNull(
-        marking, r'RespondTanksDataContentInner', 'marking');
-    BuiltValueNullFieldError.checkNotNull(
-        markingPoint, r'RespondTanksDataContentInner', 'markingPoint');
-    BuiltValueNullFieldError.checkNotNull(
-        overall, r'RespondTanksDataContentInner', 'overall');
-    BuiltValueNullFieldError.checkNotNull(
-        overallPoint, r'RespondTanksDataContentInner', 'overallPoint');
-    BuiltValueNullFieldError.checkNotNull(
-        total, r'RespondTanksDataContentInner', 'total');
-    BuiltValueNullFieldError.checkNotNull(
-        totalPenalty, r'RespondTanksDataContentInner', 'totalPenalty');
-    BuiltValueNullFieldError.checkNotNull(
-        grandTotal, r'RespondTanksDataContentInner', 'grandTotal');
-    BuiltValueNullFieldError.checkNotNull(
-        assesmentStatus, r'RespondTanksDataContentInner', 'assesmentStatus');
+        city, r'RespondTanksDataContentInner', 'city');
   }
 
   @override
@@ -200,8 +154,10 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
         noTank == other.noTank &&
         codeTank == other.codeTank &&
         photoUrl == other.photoUrl &&
-        contestant == other.contestant &&
         contestComponent == other.contestComponent &&
+        contestantName == other.contestantName &&
+        city == other.city &&
+        teamName == other.teamName &&
         head == other.head &&
         headPoint == other.headPoint &&
         body == other.body &&
@@ -221,8 +177,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
         total == other.total &&
         totalPenalty == other.totalPenalty &&
         grandTotal == other.grandTotal &&
-        assesmentStatus == other.assesmentStatus &&
-        rank == other.rank;
+        rank == other.rank &&
+        assesmentStatus == other.assesmentStatus;
   }
 
   @override
@@ -238,8 +194,10 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
     _$hash = $jc(_$hash, noTank.hashCode);
     _$hash = $jc(_$hash, codeTank.hashCode);
     _$hash = $jc(_$hash, photoUrl.hashCode);
-    _$hash = $jc(_$hash, contestant.hashCode);
     _$hash = $jc(_$hash, contestComponent.hashCode);
+    _$hash = $jc(_$hash, contestantName.hashCode);
+    _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, teamName.hashCode);
     _$hash = $jc(_$hash, head.hashCode);
     _$hash = $jc(_$hash, headPoint.hashCode);
     _$hash = $jc(_$hash, body.hashCode);
@@ -259,8 +217,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
     _$hash = $jc(_$hash, total.hashCode);
     _$hash = $jc(_$hash, totalPenalty.hashCode);
     _$hash = $jc(_$hash, grandTotal.hashCode);
-    _$hash = $jc(_$hash, assesmentStatus.hashCode);
     _$hash = $jc(_$hash, rank.hashCode);
+    _$hash = $jc(_$hash, assesmentStatus.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -278,8 +236,10 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
           ..add('noTank', noTank)
           ..add('codeTank', codeTank)
           ..add('photoUrl', photoUrl)
-          ..add('contestant', contestant)
           ..add('contestComponent', contestComponent)
+          ..add('contestantName', contestantName)
+          ..add('city', city)
+          ..add('teamName', teamName)
           ..add('head', head)
           ..add('headPoint', headPoint)
           ..add('body', body)
@@ -299,8 +259,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
           ..add('total', total)
           ..add('totalPenalty', totalPenalty)
           ..add('grandTotal', grandTotal)
-          ..add('assesmentStatus', assesmentStatus)
-          ..add('rank', rank))
+          ..add('rank', rank)
+          ..add('assesmentStatus', assesmentStatus))
         .toString();
   }
 }
@@ -351,12 +311,6 @@ class RespondTanksDataContentInnerBuilder
   String? get photoUrl => _$this._photoUrl;
   set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
-  RespondContestantDataBuilder? _contestant;
-  RespondContestantDataBuilder get contestant =>
-      _$this._contestant ??= new RespondContestantDataBuilder();
-  set contestant(RespondContestantDataBuilder? contestant) =>
-      _$this._contestant = contestant;
-
   RespondTanksDataContentInnerContestComponentBuilder? _contestComponent;
   RespondTanksDataContentInnerContestComponentBuilder get contestComponent =>
       _$this._contestComponent ??=
@@ -365,6 +319,19 @@ class RespondTanksDataContentInnerBuilder
           RespondTanksDataContentInnerContestComponentBuilder?
               contestComponent) =>
       _$this._contestComponent = contestComponent;
+
+  String? _contestantName;
+  String? get contestantName => _$this._contestantName;
+  set contestantName(String? contestantName) =>
+      _$this._contestantName = contestantName;
+
+  String? _city;
+  String? get city => _$this._city;
+  set city(String? city) => _$this._city = city;
+
+  String? _teamName;
+  String? get teamName => _$this._teamName;
+  set teamName(String? teamName) => _$this._teamName = teamName;
 
   num? _head;
   num? get head => _$this._head;
@@ -442,14 +409,14 @@ class RespondTanksDataContentInnerBuilder
   num? get grandTotal => _$this._grandTotal;
   set grandTotal(num? grandTotal) => _$this._grandTotal = grandTotal;
 
+  String? _rank;
+  String? get rank => _$this._rank;
+  set rank(String? rank) => _$this._rank = rank;
+
   String? _assesmentStatus;
   String? get assesmentStatus => _$this._assesmentStatus;
   set assesmentStatus(String? assesmentStatus) =>
       _$this._assesmentStatus = assesmentStatus;
-
-  String? _rank;
-  String? get rank => _$this._rank;
-  set rank(String? rank) => _$this._rank = rank;
 
   RespondTanksDataContentInnerBuilder() {
     RespondTanksDataContentInner._defaults(this);
@@ -468,8 +435,10 @@ class RespondTanksDataContentInnerBuilder
       _noTank = $v.noTank;
       _codeTank = $v.codeTank;
       _photoUrl = $v.photoUrl;
-      _contestant = $v.contestant?.toBuilder();
-      _contestComponent = $v.contestComponent.toBuilder();
+      _contestComponent = $v.contestComponent?.toBuilder();
+      _contestantName = $v.contestantName;
+      _city = $v.city;
+      _teamName = $v.teamName;
       _head = $v.head;
       _headPoint = $v.headPoint;
       _body = $v.body;
@@ -489,8 +458,8 @@ class RespondTanksDataContentInnerBuilder
       _total = $v.total;
       _totalPenalty = $v.totalPenalty;
       _grandTotal = $v.grandTotal;
-      _assesmentStatus = $v.assesmentStatus;
       _rank = $v.rank;
+      _assesmentStatus = $v.assesmentStatus;
       _$v = null;
     }
     return this;
@@ -517,52 +486,51 @@ class RespondTanksDataContentInnerBuilder
           new _$RespondTanksDataContentInner._(
               id: BuiltValueNullFieldError.checkNotNull(
                   id, r'RespondTanksDataContentInner', 'id'),
-              createdBy: BuiltValueNullFieldError.checkNotNull(
-                  createdBy, r'RespondTanksDataContentInner', 'createdBy'),
-              updatedBy: BuiltValueNullFieldError.checkNotNull(
-                  updatedBy, r'RespondTanksDataContentInner', 'updatedBy'),
-              created: BuiltValueNullFieldError.checkNotNull(
-                  created, r'RespondTanksDataContentInner', 'created'),
-              updated: BuiltValueNullFieldError.checkNotNull(
-                  updated, r'RespondTanksDataContentInner', 'updated'),
-              deleted: BuiltValueNullFieldError.checkNotNull(
-                  deleted, r'RespondTanksDataContentInner', 'deleted'),
-              recordStatus: BuiltValueNullFieldError.checkNotNull(
-                  recordStatus, r'RespondTanksDataContentInner', 'recordStatus'),
+              createdBy: createdBy,
+              updatedBy: updatedBy,
+              created: created,
+              updated: updated,
+              deleted: deleted,
+              recordStatus: recordStatus,
               noTank: BuiltValueNullFieldError.checkNotNull(
                   noTank, r'RespondTanksDataContentInner', 'noTank'),
-              codeTank: BuiltValueNullFieldError.checkNotNull(codeTank, r'RespondTanksDataContentInner', 'codeTank'),
-              photoUrl: BuiltValueNullFieldError.checkNotNull(photoUrl, r'RespondTanksDataContentInner', 'photoUrl'),
-              contestant: _contestant?.build(),
-              contestComponent: contestComponent.build(),
-              head: BuiltValueNullFieldError.checkNotNull(head, r'RespondTanksDataContentInner', 'head'),
-              headPoint: BuiltValueNullFieldError.checkNotNull(headPoint, r'RespondTanksDataContentInner', 'headPoint'),
-              body: BuiltValueNullFieldError.checkNotNull(body, r'RespondTanksDataContentInner', 'body'),
-              bodyPoint: BuiltValueNullFieldError.checkNotNull(bodyPoint, r'RespondTanksDataContentInner', 'bodyPoint'),
-              colour: BuiltValueNullFieldError.checkNotNull(colour, r'RespondTanksDataContentInner', 'colour'),
-              colourPoint: BuiltValueNullFieldError.checkNotNull(colourPoint, r'RespondTanksDataContentInner', 'colourPoint'),
-              fantail: BuiltValueNullFieldError.checkNotNull(fantail, r'RespondTanksDataContentInner', 'fantail'),
-              fantailPoint: BuiltValueNullFieldError.checkNotNull(fantailPoint, r'RespondTanksDataContentInner', 'fantailPoint'),
-              face: BuiltValueNullFieldError.checkNotNull(face, r'RespondTanksDataContentInner', 'face'),
-              facePoint: BuiltValueNullFieldError.checkNotNull(facePoint, r'RespondTanksDataContentInner', 'facePoint'),
-              pearly: BuiltValueNullFieldError.checkNotNull(pearly, r'RespondTanksDataContentInner', 'pearly'),
-              pearlyPoint: BuiltValueNullFieldError.checkNotNull(pearlyPoint, r'RespondTanksDataContentInner', 'pearlyPoint'),
-              marking: BuiltValueNullFieldError.checkNotNull(marking, r'RespondTanksDataContentInner', 'marking'),
-              markingPoint: BuiltValueNullFieldError.checkNotNull(markingPoint, r'RespondTanksDataContentInner', 'markingPoint'),
-              overall: BuiltValueNullFieldError.checkNotNull(overall, r'RespondTanksDataContentInner', 'overall'),
-              overallPoint: BuiltValueNullFieldError.checkNotNull(overallPoint, r'RespondTanksDataContentInner', 'overallPoint'),
-              total: BuiltValueNullFieldError.checkNotNull(total, r'RespondTanksDataContentInner', 'total'),
-              totalPenalty: BuiltValueNullFieldError.checkNotNull(totalPenalty, r'RespondTanksDataContentInner', 'totalPenalty'),
-              grandTotal: BuiltValueNullFieldError.checkNotNull(grandTotal, r'RespondTanksDataContentInner', 'grandTotal'),
-              assesmentStatus: BuiltValueNullFieldError.checkNotNull(assesmentStatus, r'RespondTanksDataContentInner', 'assesmentStatus'),
-              rank: rank);
+              codeTank: BuiltValueNullFieldError.checkNotNull(
+                  codeTank, r'RespondTanksDataContentInner', 'codeTank'),
+              photoUrl: photoUrl,
+              contestComponent: _contestComponent?.build(),
+              contestantName: BuiltValueNullFieldError.checkNotNull(
+                  contestantName,
+                  r'RespondTanksDataContentInner',
+                  'contestantName'),
+              city: BuiltValueNullFieldError.checkNotNull(
+                  city, r'RespondTanksDataContentInner', 'city'),
+              teamName: teamName,
+              head: head,
+              headPoint: headPoint,
+              body: body,
+              bodyPoint: bodyPoint,
+              colour: colour,
+              colourPoint: colourPoint,
+              fantail: fantail,
+              fantailPoint: fantailPoint,
+              face: face,
+              facePoint: facePoint,
+              pearly: pearly,
+              pearlyPoint: pearlyPoint,
+              marking: marking,
+              markingPoint: markingPoint,
+              overall: overall,
+              overallPoint: overallPoint,
+              total: total,
+              totalPenalty: totalPenalty,
+              grandTotal: grandTotal,
+              rank: rank,
+              assesmentStatus: assesmentStatus);
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'contestant';
-        _contestant?.build();
         _$failedField = 'contestComponent';
-        contestComponent.build();
+        _contestComponent?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'RespondTanksDataContentInner', _$failedField, e.toString());

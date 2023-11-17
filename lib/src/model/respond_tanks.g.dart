@@ -8,17 +8,23 @@ part of 'respond_tanks.dart';
 
 class _$RespondTanks extends RespondTanks {
   @override
-  final String? responseCode;
+  final String responseCode;
   @override
-  final String? responseMessage;
+  final String responseMessage;
   @override
   final RespondTanksData? data;
 
   factory _$RespondTanks([void Function(RespondTanksBuilder)? updates]) =>
       (new RespondTanksBuilder()..update(updates))._build();
 
-  _$RespondTanks._({this.responseCode, this.responseMessage, this.data})
-      : super._();
+  _$RespondTanks._(
+      {required this.responseCode, required this.responseMessage, this.data})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondTanks', 'responseCode');
+    BuiltValueNullFieldError.checkNotNull(
+        responseMessage, r'RespondTanks', 'responseMessage');
+  }
 
   @override
   RespondTanks rebuild(void Function(RespondTanksBuilder) updates) =>
@@ -108,8 +114,10 @@ class RespondTanksBuilder
     try {
       _$result = _$v ??
           new _$RespondTanks._(
-              responseCode: responseCode,
-              responseMessage: responseMessage,
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondTanks', 'responseCode'),
+              responseMessage: BuiltValueNullFieldError.checkNotNull(
+                  responseMessage, r'RespondTanks', 'responseMessage'),
               data: _data?.build());
     } catch (_) {
       late String _$failedField;

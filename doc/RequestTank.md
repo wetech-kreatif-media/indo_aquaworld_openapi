@@ -12,7 +12,9 @@ Name | Type | Description | Notes
 **noTank** | **String** |  | 
 **codeTank** | **String** |  | 
 **photo** | **String** |  | [optional] 
-**contestant** | **String** |  | 
+**contestantName** | **String** |  | 
+**city** | **String** |  | 
+**team** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

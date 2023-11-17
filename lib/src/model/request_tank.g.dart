@@ -16,7 +16,11 @@ class _$RequestTank extends RequestTank {
   @override
   final String? photo;
   @override
-  final String contestant;
+  final String contestantName;
+  @override
+  final String city;
+  @override
+  final String? team;
 
   factory _$RequestTank([void Function(RequestTankBuilder)? updates]) =>
       (new RequestTankBuilder()..update(updates))._build();
@@ -26,12 +30,15 @@ class _$RequestTank extends RequestTank {
       required this.noTank,
       required this.codeTank,
       this.photo,
-      required this.contestant})
+      required this.contestantName,
+      required this.city,
+      this.team})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(noTank, r'RequestTank', 'noTank');
     BuiltValueNullFieldError.checkNotNull(codeTank, r'RequestTank', 'codeTank');
     BuiltValueNullFieldError.checkNotNull(
-        contestant, r'RequestTank', 'contestant');
+        contestantName, r'RequestTank', 'contestantName');
+    BuiltValueNullFieldError.checkNotNull(city, r'RequestTank', 'city');
   }
 
   @override
@@ -49,7 +56,9 @@ class _$RequestTank extends RequestTank {
         noTank == other.noTank &&
         codeTank == other.codeTank &&
         photo == other.photo &&
-        contestant == other.contestant;
+        contestantName == other.contestantName &&
+        city == other.city &&
+        team == other.team;
   }
 
   @override
@@ -59,7 +68,9 @@ class _$RequestTank extends RequestTank {
     _$hash = $jc(_$hash, noTank.hashCode);
     _$hash = $jc(_$hash, codeTank.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
-    _$hash = $jc(_$hash, contestant.hashCode);
+    _$hash = $jc(_$hash, contestantName.hashCode);
+    _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, team.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -71,7 +82,9 @@ class _$RequestTank extends RequestTank {
           ..add('noTank', noTank)
           ..add('codeTank', codeTank)
           ..add('photo', photo)
-          ..add('contestant', contestant))
+          ..add('contestantName', contestantName)
+          ..add('city', city)
+          ..add('team', team))
         .toString();
   }
 }
@@ -95,9 +108,18 @@ class RequestTankBuilder implements Builder<RequestTank, RequestTankBuilder> {
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
-  String? _contestant;
-  String? get contestant => _$this._contestant;
-  set contestant(String? contestant) => _$this._contestant = contestant;
+  String? _contestantName;
+  String? get contestantName => _$this._contestantName;
+  set contestantName(String? contestantName) =>
+      _$this._contestantName = contestantName;
+
+  String? _city;
+  String? get city => _$this._city;
+  set city(String? city) => _$this._city = city;
+
+  String? _team;
+  String? get team => _$this._team;
+  set team(String? team) => _$this._team = team;
 
   RequestTankBuilder() {
     RequestTank._defaults(this);
@@ -110,7 +132,9 @@ class RequestTankBuilder implements Builder<RequestTank, RequestTankBuilder> {
       _noTank = $v.noTank;
       _codeTank = $v.codeTank;
       _photo = $v.photo;
-      _contestant = $v.contestant;
+      _contestantName = $v.contestantName;
+      _city = $v.city;
+      _team = $v.team;
       _$v = null;
     }
     return this;
@@ -139,8 +163,11 @@ class RequestTankBuilder implements Builder<RequestTank, RequestTankBuilder> {
             codeTank: BuiltValueNullFieldError.checkNotNull(
                 codeTank, r'RequestTank', 'codeTank'),
             photo: photo,
-            contestant: BuiltValueNullFieldError.checkNotNull(
-                contestant, r'RequestTank', 'contestant'));
+            contestantName: BuiltValueNullFieldError.checkNotNull(
+                contestantName, r'RequestTank', 'contestantName'),
+            city: BuiltValueNullFieldError.checkNotNull(
+                city, r'RequestTank', 'city'),
+            team: team);
     replace(_$result);
     return _$result;
   }

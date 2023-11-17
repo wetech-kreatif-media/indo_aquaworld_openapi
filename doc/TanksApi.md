@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **addTank**
-> RespondGlobal addTank(eventId, nominasiId, sort, direction, pageNumber, pageSize, requestTankV2)
+> RespondGlobal addTank(eventId, nominasiId, sort, direction, pageNumber, pageSize, requestTank)
 
 Add Tank
 
@@ -34,10 +34,10 @@ final String sort = sort_example; // String |
 final String direction = direction_example; // String | 
 final num pageNumber = 8.14; // num | 
 final num pageSize = 8.14; // num | 
-final RequestTankV2 requestTankV2 = {"noTank":"001","codeTank":"0001","photo":"{{SAMPLE_IMAGE_FISH}}","contestantName":"Gifar Haidar","city":"Bogor","team":"Buzzer Beater"}; // RequestTankV2 | 
+final RequestTank requestTank = {"noTank":"001","codeTank":"0001","photo":"{{SAMPLE_IMAGE_FISH}}","contestantName":"Gifar Haidar","city":"Bogor","team":"Buzzer Beater"}; // RequestTank | 
 
 try {
-    final response = api.addTank(eventId, nominasiId, sort, direction, pageNumber, pageSize, requestTankV2);
+    final response = api.addTank(eventId, nominasiId, sort, direction, pageNumber, pageSize, requestTank);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling TanksApi->addTank: $e\n');
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
  **direction** | **String**|  | [optional] 
  **pageNumber** | **num**|  | [optional] 
  **pageSize** | **num**|  | [optional] 
- **requestTankV2** | [**RequestTankV2**](RequestTankV2.md)|  | [optional] 
+ **requestTank** | [**RequestTank**](RequestTank.md)|  | [optional] 
 
 ### Return type
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTanks**
-> RespondTanksV2 getTanks(eventId, nominasiId, sort, direction, pageNumber, pageSize)
+> RespondTanks getTanks(eventId, nominasiId, sort, direction, pageNumber, pageSize)
 
 Get Tanks
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RespondTanksV2**](RespondTanksV2.md)
+[**RespondTanks**](RespondTanks.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getTanksApi();
 final String tankId = tankId_example; // String | 
-final RequestTank requestTank = {"id":"4b6c1496-eab2-4108-8da8-abcd02b19f34","noTank":"001","codeTank":"0001","photo":"{{SAMPLE_IMAGE_FISH}}","contestant":"5cf53cdb-4588-4549-b2fe-9a7b57994f3e"}; // RequestTank | 
+final RequestTank requestTank = {"id":"4b6c1496-eab2-4108-8da8-abcd02b19f34","noTank":"001","codeTank":"0001","photo":"{{SAMPLE_IMAGE_FISH}}","contestantName":"5cf53cdb-4588-4549-b2fe-9a7b57994f3e","team":"sdasdasda","city":"asdjhasdjkh"}; // RequestTank | 
 
 try {
     final response = api.putTank(tankId, requestTank);
