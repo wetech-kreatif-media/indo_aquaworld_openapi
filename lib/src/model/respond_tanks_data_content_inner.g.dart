@@ -30,9 +30,9 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
   @override
   final RespondTanksDataContentInnerContestComponent? contestComponent;
   @override
-  final String contestantName;
+  final String? contestantName;
   @override
-  final String city;
+  final String? city;
   @override
   final String? teamName;
   @override
@@ -94,8 +94,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
       required this.codeTank,
       this.photoUrl,
       this.contestComponent,
-      required this.contestantName,
-      required this.city,
+      this.contestantName,
+      this.city,
       this.teamName,
       this.head,
       this.headPoint,
@@ -125,10 +125,6 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
         noTank, r'RespondTanksDataContentInner', 'noTank');
     BuiltValueNullFieldError.checkNotNull(
         codeTank, r'RespondTanksDataContentInner', 'codeTank');
-    BuiltValueNullFieldError.checkNotNull(
-        contestantName, r'RespondTanksDataContentInner', 'contestantName');
-    BuiltValueNullFieldError.checkNotNull(
-        city, r'RespondTanksDataContentInner', 'city');
   }
 
   @override
@@ -498,12 +494,8 @@ class RespondTanksDataContentInnerBuilder
                   codeTank, r'RespondTanksDataContentInner', 'codeTank'),
               photoUrl: photoUrl,
               contestComponent: _contestComponent?.build(),
-              contestantName: BuiltValueNullFieldError.checkNotNull(
-                  contestantName,
-                  r'RespondTanksDataContentInner',
-                  'contestantName'),
-              city: BuiltValueNullFieldError.checkNotNull(
-                  city, r'RespondTanksDataContentInner', 'city'),
+              contestantName: contestantName,
+              city: city,
               teamName: teamName,
               head: head,
               headPoint: headPoint,

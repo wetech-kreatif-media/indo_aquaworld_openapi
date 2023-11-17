@@ -83,10 +83,10 @@ abstract class RespondTanksDataContentInner implements Built<RespondTanksDataCon
   RespondTanksDataContentInnerContestComponent? get contestComponent;
 
   @BuiltValueField(wireName: r'contestantName')
-  String get contestantName;
+  String? get contestantName;
 
   @BuiltValueField(wireName: r'city')
-  String get city;
+  String? get city;
 
   @BuiltValueField(wireName: r'teamName')
   String? get teamName;
@@ -248,16 +248,20 @@ class _$RespondTanksDataContentInnerSerializer implements PrimitiveSerializer<Re
         specifiedType: const FullType(RespondTanksDataContentInnerContestComponent),
       );
     }
-    yield r'contestantName';
-    yield serializers.serialize(
-      object.contestantName,
-      specifiedType: const FullType(String),
-    );
-    yield r'city';
-    yield serializers.serialize(
-      object.city,
-      specifiedType: const FullType(String),
-    );
+    if (object.contestantName != null) {
+      yield r'contestantName';
+      yield serializers.serialize(
+        object.contestantName,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.city != null) {
+      yield r'city';
+      yield serializers.serialize(
+        object.city,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.teamName != null) {
       yield r'teamName';
       yield serializers.serialize(

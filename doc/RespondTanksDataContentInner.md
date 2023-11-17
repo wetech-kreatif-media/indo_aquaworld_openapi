@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 **codeTank** | **String** |  | 
 **photoUrl** | **String** |  | [optional] 
 **contestComponent** | [**RespondTanksDataContentInnerContestComponent**](RespondTanksDataContentInnerContestComponent.md) |  | [optional] 
-**contestantName** | **String** |  | 
-**city** | **String** |  | 
+**contestantName** | **String** |  | [optional] 
+**city** | **String** |  | [optional] 
 **teamName** | **String** |  | [optional] 
 **head** | **num** |  | [optional] 
 **headPoint** | **num** |  | [optional] 
