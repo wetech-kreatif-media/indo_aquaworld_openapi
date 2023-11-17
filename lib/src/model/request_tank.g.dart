@@ -16,9 +16,9 @@ class _$RequestTank extends RequestTank {
   @override
   final String? photo;
   @override
-  final String contestantName;
+  final String? contestantName;
   @override
-  final String city;
+  final String? city;
   @override
   final String? team;
 
@@ -30,15 +30,12 @@ class _$RequestTank extends RequestTank {
       required this.noTank,
       required this.codeTank,
       this.photo,
-      required this.contestantName,
-      required this.city,
+      this.contestantName,
+      this.city,
       this.team})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(noTank, r'RequestTank', 'noTank');
     BuiltValueNullFieldError.checkNotNull(codeTank, r'RequestTank', 'codeTank');
-    BuiltValueNullFieldError.checkNotNull(
-        contestantName, r'RequestTank', 'contestantName');
-    BuiltValueNullFieldError.checkNotNull(city, r'RequestTank', 'city');
   }
 
   @override
@@ -163,10 +160,8 @@ class RequestTankBuilder implements Builder<RequestTank, RequestTankBuilder> {
             codeTank: BuiltValueNullFieldError.checkNotNull(
                 codeTank, r'RequestTank', 'codeTank'),
             photo: photo,
-            contestantName: BuiltValueNullFieldError.checkNotNull(
-                contestantName, r'RequestTank', 'contestantName'),
-            city: BuiltValueNullFieldError.checkNotNull(
-                city, r'RequestTank', 'city'),
+            contestantName: contestantName,
+            city: city,
             team: team);
     replace(_$result);
     return _$result;
