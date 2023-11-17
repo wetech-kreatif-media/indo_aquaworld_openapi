@@ -8,7 +8,7 @@ part of 'respond_tank.dart';
 
 class _$RespondTank extends RespondTank {
   @override
-  final String? responseCode;
+  final String responseCode;
   @override
   final String? responseMessage;
   @override
@@ -17,8 +17,11 @@ class _$RespondTank extends RespondTank {
   factory _$RespondTank([void Function(RespondTankBuilder)? updates]) =>
       (new RespondTankBuilder()..update(updates))._build();
 
-  _$RespondTank._({this.responseCode, this.responseMessage, this.data})
-      : super._();
+  _$RespondTank._({required this.responseCode, this.responseMessage, this.data})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondTank', 'responseCode');
+  }
 
   @override
   RespondTank rebuild(void Function(RespondTankBuilder) updates) =>
@@ -107,7 +110,8 @@ class RespondTankBuilder implements Builder<RespondTank, RespondTankBuilder> {
     try {
       _$result = _$v ??
           new _$RespondTank._(
-              responseCode: responseCode,
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondTank', 'responseCode'),
               responseMessage: responseMessage,
               data: _data?.build());
     } catch (_) {

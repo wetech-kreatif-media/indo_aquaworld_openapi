@@ -8,22 +8,41 @@ part of 'respond_tank_data.dart';
 
 class _$RespondTankData extends RespondTankData {
   @override
-  final String? id;
+  final String id;
   @override
-  final String? noTank;
+  final String noTank;
   @override
-  final String? codeTank;
+  final String codeTank;
   @override
-  final String? photo;
+  final String photo;
   @override
-  final String? contestant;
+  final String contestantName;
+  @override
+  final String city;
+  @override
+  final String? team;
 
   factory _$RespondTankData([void Function(RespondTankDataBuilder)? updates]) =>
       (new RespondTankDataBuilder()..update(updates))._build();
 
   _$RespondTankData._(
-      {this.id, this.noTank, this.codeTank, this.photo, this.contestant})
-      : super._();
+      {required this.id,
+      required this.noTank,
+      required this.codeTank,
+      required this.photo,
+      required this.contestantName,
+      required this.city,
+      this.team})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(id, r'RespondTankData', 'id');
+    BuiltValueNullFieldError.checkNotNull(noTank, r'RespondTankData', 'noTank');
+    BuiltValueNullFieldError.checkNotNull(
+        codeTank, r'RespondTankData', 'codeTank');
+    BuiltValueNullFieldError.checkNotNull(photo, r'RespondTankData', 'photo');
+    BuiltValueNullFieldError.checkNotNull(
+        contestantName, r'RespondTankData', 'contestantName');
+    BuiltValueNullFieldError.checkNotNull(city, r'RespondTankData', 'city');
+  }
 
   @override
   RespondTankData rebuild(void Function(RespondTankDataBuilder) updates) =>
@@ -41,7 +60,9 @@ class _$RespondTankData extends RespondTankData {
         noTank == other.noTank &&
         codeTank == other.codeTank &&
         photo == other.photo &&
-        contestant == other.contestant;
+        contestantName == other.contestantName &&
+        city == other.city &&
+        team == other.team;
   }
 
   @override
@@ -51,7 +72,9 @@ class _$RespondTankData extends RespondTankData {
     _$hash = $jc(_$hash, noTank.hashCode);
     _$hash = $jc(_$hash, codeTank.hashCode);
     _$hash = $jc(_$hash, photo.hashCode);
-    _$hash = $jc(_$hash, contestant.hashCode);
+    _$hash = $jc(_$hash, contestantName.hashCode);
+    _$hash = $jc(_$hash, city.hashCode);
+    _$hash = $jc(_$hash, team.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -63,7 +86,9 @@ class _$RespondTankData extends RespondTankData {
           ..add('noTank', noTank)
           ..add('codeTank', codeTank)
           ..add('photo', photo)
-          ..add('contestant', contestant))
+          ..add('contestantName', contestantName)
+          ..add('city', city)
+          ..add('team', team))
         .toString();
   }
 }
@@ -88,9 +113,18 @@ class RespondTankDataBuilder
   String? get photo => _$this._photo;
   set photo(String? photo) => _$this._photo = photo;
 
-  String? _contestant;
-  String? get contestant => _$this._contestant;
-  set contestant(String? contestant) => _$this._contestant = contestant;
+  String? _contestantName;
+  String? get contestantName => _$this._contestantName;
+  set contestantName(String? contestantName) =>
+      _$this._contestantName = contestantName;
+
+  String? _city;
+  String? get city => _$this._city;
+  set city(String? city) => _$this._city = city;
+
+  String? _team;
+  String? get team => _$this._team;
+  set team(String? team) => _$this._team = team;
 
   RespondTankDataBuilder() {
     RespondTankData._defaults(this);
@@ -103,7 +137,9 @@ class RespondTankDataBuilder
       _noTank = $v.noTank;
       _codeTank = $v.codeTank;
       _photo = $v.photo;
-      _contestant = $v.contestant;
+      _contestantName = $v.contestantName;
+      _city = $v.city;
+      _team = $v.team;
       _$v = null;
     }
     return this;
@@ -126,11 +162,19 @@ class RespondTankDataBuilder
   _$RespondTankData _build() {
     final _$result = _$v ??
         new _$RespondTankData._(
-            id: id,
-            noTank: noTank,
-            codeTank: codeTank,
-            photo: photo,
-            contestant: contestant);
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'RespondTankData', 'id'),
+            noTank: BuiltValueNullFieldError.checkNotNull(
+                noTank, r'RespondTankData', 'noTank'),
+            codeTank: BuiltValueNullFieldError.checkNotNull(
+                codeTank, r'RespondTankData', 'codeTank'),
+            photo: BuiltValueNullFieldError.checkNotNull(
+                photo, r'RespondTankData', 'photo'),
+            contestantName: BuiltValueNullFieldError.checkNotNull(
+                contestantName, r'RespondTankData', 'contestantName'),
+            city: BuiltValueNullFieldError.checkNotNull(
+                city, r'RespondTankData', 'city'),
+            team: team);
     replace(_$result);
     return _$result;
   }

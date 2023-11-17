@@ -15,23 +15,31 @@ part 'respond_tank_data.g.dart';
 /// * [noTank] 
 /// * [codeTank] 
 /// * [photo] 
-/// * [contestant] 
+/// * [contestantName] 
+/// * [city] 
+/// * [team] 
 @BuiltValue()
 abstract class RespondTankData implements Built<RespondTankData, RespondTankDataBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
 
   @BuiltValueField(wireName: r'noTank')
-  String? get noTank;
+  String get noTank;
 
   @BuiltValueField(wireName: r'codeTank')
-  String? get codeTank;
+  String get codeTank;
 
   @BuiltValueField(wireName: r'photo')
-  String? get photo;
+  String get photo;
 
-  @BuiltValueField(wireName: r'contestant')
-  String? get contestant;
+  @BuiltValueField(wireName: r'contestantName')
+  String get contestantName;
+
+  @BuiltValueField(wireName: r'city')
+  String get city;
+
+  @BuiltValueField(wireName: r'team')
+  String? get team;
 
   RespondTankData._();
 
@@ -56,38 +64,40 @@ class _$RespondTankDataSerializer implements PrimitiveSerializer<RespondTankData
     RespondTankData object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
+    yield r'noTank';
+    yield serializers.serialize(
+      object.noTank,
+      specifiedType: const FullType(String),
+    );
+    yield r'codeTank';
+    yield serializers.serialize(
+      object.codeTank,
+      specifiedType: const FullType(String),
+    );
+    yield r'photo';
+    yield serializers.serialize(
+      object.photo,
+      specifiedType: const FullType(String),
+    );
+    yield r'contestantName';
+    yield serializers.serialize(
+      object.contestantName,
+      specifiedType: const FullType(String),
+    );
+    yield r'city';
+    yield serializers.serialize(
+      object.city,
+      specifiedType: const FullType(String),
+    );
+    if (object.team != null) {
+      yield r'team';
       yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.noTank != null) {
-      yield r'noTank';
-      yield serializers.serialize(
-        object.noTank,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.codeTank != null) {
-      yield r'codeTank';
-      yield serializers.serialize(
-        object.codeTank,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.photo != null) {
-      yield r'photo';
-      yield serializers.serialize(
-        object.photo,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.contestant != null) {
-      yield r'contestant';
-      yield serializers.serialize(
-        object.contestant,
+        object.team,
         specifiedType: const FullType(String),
       );
     }
@@ -142,12 +152,26 @@ class _$RespondTankDataSerializer implements PrimitiveSerializer<RespondTankData
           ) as String;
           result.photo = valueDes;
           break;
-        case r'contestant':
+        case r'contestantName':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.contestant = valueDes;
+          result.contestantName = valueDes;
+          break;
+        case r'city':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.city = valueDes;
+          break;
+        case r'team':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.team = valueDes;
           break;
         default:
           unhandled.add(key);

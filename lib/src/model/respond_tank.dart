@@ -18,7 +18,7 @@ part 'respond_tank.g.dart';
 @BuiltValue()
 abstract class RespondTank implements Built<RespondTank, RespondTankBuilder> {
   @BuiltValueField(wireName: r'responseCode')
-  String? get responseCode;
+  String get responseCode;
 
   @BuiltValueField(wireName: r'responseMessage')
   String? get responseMessage;
@@ -49,13 +49,11 @@ class _$RespondTankSerializer implements PrimitiveSerializer<RespondTank> {
     RespondTank object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.responseCode != null) {
-      yield r'responseCode';
-      yield serializers.serialize(
-        object.responseCode,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'responseCode';
+    yield serializers.serialize(
+      object.responseCode,
+      specifiedType: const FullType(String),
+    );
     if (object.responseMessage != null) {
       yield r'responseMessage';
       yield serializers.serialize(

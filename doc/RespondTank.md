@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**responseCode** | **String** |  | [optional] 
+**responseCode** | **String** |  | 
 **responseMessage** | **String** |  | [optional] 
 **data** | [**RespondTankData**](RespondTankData.md) |  | [optional] 
 
