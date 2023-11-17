@@ -8,24 +8,12 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
-**createdBy** | **String** |  | 
-**updatedBy** | **String** |  | 
-**created** | **String** |  | 
-**updated** | **String** |  | 
-**deleted** | **num** |  | 
-**recordStatus** | **String** |  | 
-**fullname** | **String** |  | 
-**mobilePhone** | **String** |  | 
-**email** | **String** |  | 
-**city** | **String** |  | 
-**gender** | **String** |  | [optional] 
-**placeofBirth** | **String** |  | [optional] 
-**dateofBirth** | **String** |  | [optional] 
-**statusContestant** | **String** |  | 
-**photo** | **String** |  | [optional] 
-**contestantTeam** | [**RespondTeamData**](RespondTeamData.md) |  | [optional] 
-**codeContestant** | **String** |  | 
+**tankId** | **String** |  | 
+**nominationId** | **String** |  | 
+**eventId** | **String** |  | 
+**contestantName** | **String** |  | [optional] 
+**city** | **String** |  | [optional] 
+**team** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,10 +18,10 @@ part 'respond_contestants.g.dart';
 @BuiltValue()
 abstract class RespondContestants implements Built<RespondContestants, RespondContestantsBuilder> {
   @BuiltValueField(wireName: r'responseCode')
-  String? get responseCode;
+  String get responseCode;
 
   @BuiltValueField(wireName: r'responseMessage')
-  String? get responseMessage;
+  String get responseMessage;
 
   @BuiltValueField(wireName: r'data')
   RespondContestantsData? get data;
@@ -49,20 +49,16 @@ class _$RespondContestantsSerializer implements PrimitiveSerializer<RespondConte
     RespondContestants object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.responseCode != null) {
-      yield r'responseCode';
-      yield serializers.serialize(
-        object.responseCode,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.responseMessage != null) {
-      yield r'responseMessage';
-      yield serializers.serialize(
-        object.responseMessage,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'responseCode';
+    yield serializers.serialize(
+      object.responseCode,
+      specifiedType: const FullType(String),
+    );
+    yield r'responseMessage';
+    yield serializers.serialize(
+      object.responseMessage,
+      specifiedType: const FullType(String),
+    );
     if (object.data != null) {
       yield r'data';
       yield serializers.serialize(

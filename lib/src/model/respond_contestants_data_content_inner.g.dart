@@ -9,41 +9,17 @@ part of 'respond_contestants_data_content_inner.dart';
 class _$RespondContestantsDataContentInner
     extends RespondContestantsDataContentInner {
   @override
-  final String id;
+  final String tankId;
   @override
-  final String createdBy;
+  final String nominationId;
   @override
-  final String updatedBy;
+  final String eventId;
   @override
-  final String created;
+  final String? contestantName;
   @override
-  final String updated;
+  final String? city;
   @override
-  final num deleted;
-  @override
-  final String recordStatus;
-  @override
-  final String fullname;
-  @override
-  final String mobilePhone;
-  @override
-  final String email;
-  @override
-  final String city;
-  @override
-  final String? gender;
-  @override
-  final String? placeofBirth;
-  @override
-  final String? dateofBirth;
-  @override
-  final String statusContestant;
-  @override
-  final String? photo;
-  @override
-  final RespondTeamData? contestantTeam;
-  @override
-  final String codeContestant;
+  final String? team;
 
   factory _$RespondContestantsDataContentInner(
           [void Function(RespondContestantsDataContentInnerBuilder)?
@@ -52,51 +28,19 @@ class _$RespondContestantsDataContentInner
           ._build();
 
   _$RespondContestantsDataContentInner._(
-      {required this.id,
-      required this.createdBy,
-      required this.updatedBy,
-      required this.created,
-      required this.updated,
-      required this.deleted,
-      required this.recordStatus,
-      required this.fullname,
-      required this.mobilePhone,
-      required this.email,
-      required this.city,
-      this.gender,
-      this.placeofBirth,
-      this.dateofBirth,
-      required this.statusContestant,
-      this.photo,
-      this.contestantTeam,
-      required this.codeContestant})
+      {required this.tankId,
+      required this.nominationId,
+      required this.eventId,
+      this.contestantName,
+      this.city,
+      this.team})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        id, r'RespondContestantsDataContentInner', 'id');
+        tankId, r'RespondContestantsDataContentInner', 'tankId');
     BuiltValueNullFieldError.checkNotNull(
-        createdBy, r'RespondContestantsDataContentInner', 'createdBy');
+        nominationId, r'RespondContestantsDataContentInner', 'nominationId');
     BuiltValueNullFieldError.checkNotNull(
-        updatedBy, r'RespondContestantsDataContentInner', 'updatedBy');
-    BuiltValueNullFieldError.checkNotNull(
-        created, r'RespondContestantsDataContentInner', 'created');
-    BuiltValueNullFieldError.checkNotNull(
-        updated, r'RespondContestantsDataContentInner', 'updated');
-    BuiltValueNullFieldError.checkNotNull(
-        deleted, r'RespondContestantsDataContentInner', 'deleted');
-    BuiltValueNullFieldError.checkNotNull(
-        recordStatus, r'RespondContestantsDataContentInner', 'recordStatus');
-    BuiltValueNullFieldError.checkNotNull(
-        fullname, r'RespondContestantsDataContentInner', 'fullname');
-    BuiltValueNullFieldError.checkNotNull(
-        mobilePhone, r'RespondContestantsDataContentInner', 'mobilePhone');
-    BuiltValueNullFieldError.checkNotNull(
-        email, r'RespondContestantsDataContentInner', 'email');
-    BuiltValueNullFieldError.checkNotNull(
-        city, r'RespondContestantsDataContentInner', 'city');
-    BuiltValueNullFieldError.checkNotNull(statusContestant,
-        r'RespondContestantsDataContentInner', 'statusContestant');
-    BuiltValueNullFieldError.checkNotNull(codeContestant,
-        r'RespondContestantsDataContentInner', 'codeContestant');
+        eventId, r'RespondContestantsDataContentInner', 'eventId');
   }
 
   @override
@@ -112,47 +56,23 @@ class _$RespondContestantsDataContentInner
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RespondContestantsDataContentInner &&
-        id == other.id &&
-        createdBy == other.createdBy &&
-        updatedBy == other.updatedBy &&
-        created == other.created &&
-        updated == other.updated &&
-        deleted == other.deleted &&
-        recordStatus == other.recordStatus &&
-        fullname == other.fullname &&
-        mobilePhone == other.mobilePhone &&
-        email == other.email &&
+        tankId == other.tankId &&
+        nominationId == other.nominationId &&
+        eventId == other.eventId &&
+        contestantName == other.contestantName &&
         city == other.city &&
-        gender == other.gender &&
-        placeofBirth == other.placeofBirth &&
-        dateofBirth == other.dateofBirth &&
-        statusContestant == other.statusContestant &&
-        photo == other.photo &&
-        contestantTeam == other.contestantTeam &&
-        codeContestant == other.codeContestant;
+        team == other.team;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, createdBy.hashCode);
-    _$hash = $jc(_$hash, updatedBy.hashCode);
-    _$hash = $jc(_$hash, created.hashCode);
-    _$hash = $jc(_$hash, updated.hashCode);
-    _$hash = $jc(_$hash, deleted.hashCode);
-    _$hash = $jc(_$hash, recordStatus.hashCode);
-    _$hash = $jc(_$hash, fullname.hashCode);
-    _$hash = $jc(_$hash, mobilePhone.hashCode);
-    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, tankId.hashCode);
+    _$hash = $jc(_$hash, nominationId.hashCode);
+    _$hash = $jc(_$hash, eventId.hashCode);
+    _$hash = $jc(_$hash, contestantName.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
-    _$hash = $jc(_$hash, gender.hashCode);
-    _$hash = $jc(_$hash, placeofBirth.hashCode);
-    _$hash = $jc(_$hash, dateofBirth.hashCode);
-    _$hash = $jc(_$hash, statusContestant.hashCode);
-    _$hash = $jc(_$hash, photo.hashCode);
-    _$hash = $jc(_$hash, contestantTeam.hashCode);
-    _$hash = $jc(_$hash, codeContestant.hashCode);
+    _$hash = $jc(_$hash, team.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -160,24 +80,12 @@ class _$RespondContestantsDataContentInner
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RespondContestantsDataContentInner')
-          ..add('id', id)
-          ..add('createdBy', createdBy)
-          ..add('updatedBy', updatedBy)
-          ..add('created', created)
-          ..add('updated', updated)
-          ..add('deleted', deleted)
-          ..add('recordStatus', recordStatus)
-          ..add('fullname', fullname)
-          ..add('mobilePhone', mobilePhone)
-          ..add('email', email)
+          ..add('tankId', tankId)
+          ..add('nominationId', nominationId)
+          ..add('eventId', eventId)
+          ..add('contestantName', contestantName)
           ..add('city', city)
-          ..add('gender', gender)
-          ..add('placeofBirth', placeofBirth)
-          ..add('dateofBirth', dateofBirth)
-          ..add('statusContestant', statusContestant)
-          ..add('photo', photo)
-          ..add('contestantTeam', contestantTeam)
-          ..add('codeContestant', codeContestant))
+          ..add('team', team))
         .toString();
   }
 }
@@ -188,81 +96,30 @@ class RespondContestantsDataContentInnerBuilder
             RespondContestantsDataContentInnerBuilder> {
   _$RespondContestantsDataContentInner? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+  String? _tankId;
+  String? get tankId => _$this._tankId;
+  set tankId(String? tankId) => _$this._tankId = tankId;
 
-  String? _createdBy;
-  String? get createdBy => _$this._createdBy;
-  set createdBy(String? createdBy) => _$this._createdBy = createdBy;
+  String? _nominationId;
+  String? get nominationId => _$this._nominationId;
+  set nominationId(String? nominationId) => _$this._nominationId = nominationId;
 
-  String? _updatedBy;
-  String? get updatedBy => _$this._updatedBy;
-  set updatedBy(String? updatedBy) => _$this._updatedBy = updatedBy;
+  String? _eventId;
+  String? get eventId => _$this._eventId;
+  set eventId(String? eventId) => _$this._eventId = eventId;
 
-  String? _created;
-  String? get created => _$this._created;
-  set created(String? created) => _$this._created = created;
-
-  String? _updated;
-  String? get updated => _$this._updated;
-  set updated(String? updated) => _$this._updated = updated;
-
-  num? _deleted;
-  num? get deleted => _$this._deleted;
-  set deleted(num? deleted) => _$this._deleted = deleted;
-
-  String? _recordStatus;
-  String? get recordStatus => _$this._recordStatus;
-  set recordStatus(String? recordStatus) => _$this._recordStatus = recordStatus;
-
-  String? _fullname;
-  String? get fullname => _$this._fullname;
-  set fullname(String? fullname) => _$this._fullname = fullname;
-
-  String? _mobilePhone;
-  String? get mobilePhone => _$this._mobilePhone;
-  set mobilePhone(String? mobilePhone) => _$this._mobilePhone = mobilePhone;
-
-  String? _email;
-  String? get email => _$this._email;
-  set email(String? email) => _$this._email = email;
+  String? _contestantName;
+  String? get contestantName => _$this._contestantName;
+  set contestantName(String? contestantName) =>
+      _$this._contestantName = contestantName;
 
   String? _city;
   String? get city => _$this._city;
   set city(String? city) => _$this._city = city;
 
-  String? _gender;
-  String? get gender => _$this._gender;
-  set gender(String? gender) => _$this._gender = gender;
-
-  String? _placeofBirth;
-  String? get placeofBirth => _$this._placeofBirth;
-  set placeofBirth(String? placeofBirth) => _$this._placeofBirth = placeofBirth;
-
-  String? _dateofBirth;
-  String? get dateofBirth => _$this._dateofBirth;
-  set dateofBirth(String? dateofBirth) => _$this._dateofBirth = dateofBirth;
-
-  String? _statusContestant;
-  String? get statusContestant => _$this._statusContestant;
-  set statusContestant(String? statusContestant) =>
-      _$this._statusContestant = statusContestant;
-
-  String? _photo;
-  String? get photo => _$this._photo;
-  set photo(String? photo) => _$this._photo = photo;
-
-  RespondTeamDataBuilder? _contestantTeam;
-  RespondTeamDataBuilder get contestantTeam =>
-      _$this._contestantTeam ??= new RespondTeamDataBuilder();
-  set contestantTeam(RespondTeamDataBuilder? contestantTeam) =>
-      _$this._contestantTeam = contestantTeam;
-
-  String? _codeContestant;
-  String? get codeContestant => _$this._codeContestant;
-  set codeContestant(String? codeContestant) =>
-      _$this._codeContestant = codeContestant;
+  String? _team;
+  String? get team => _$this._team;
+  set team(String? team) => _$this._team = team;
 
   RespondContestantsDataContentInnerBuilder() {
     RespondContestantsDataContentInner._defaults(this);
@@ -271,24 +128,12 @@ class RespondContestantsDataContentInnerBuilder
   RespondContestantsDataContentInnerBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _id = $v.id;
-      _createdBy = $v.createdBy;
-      _updatedBy = $v.updatedBy;
-      _created = $v.created;
-      _updated = $v.updated;
-      _deleted = $v.deleted;
-      _recordStatus = $v.recordStatus;
-      _fullname = $v.fullname;
-      _mobilePhone = $v.mobilePhone;
-      _email = $v.email;
+      _tankId = $v.tankId;
+      _nominationId = $v.nominationId;
+      _eventId = $v.eventId;
+      _contestantName = $v.contestantName;
       _city = $v.city;
-      _gender = $v.gender;
-      _placeofBirth = $v.placeofBirth;
-      _dateofBirth = $v.dateofBirth;
-      _statusContestant = $v.statusContestant;
-      _photo = $v.photo;
-      _contestantTeam = $v.contestantTeam?.toBuilder();
-      _codeContestant = $v.codeContestant;
+      _team = $v.team;
       _$v = null;
     }
     return this;
@@ -310,46 +155,17 @@ class RespondContestantsDataContentInnerBuilder
   RespondContestantsDataContentInner build() => _build();
 
   _$RespondContestantsDataContentInner _build() {
-    _$RespondContestantsDataContentInner _$result;
-    try {
-      _$result = _$v ??
-          new _$RespondContestantsDataContentInner._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'RespondContestantsDataContentInner', 'id'),
-              createdBy: BuiltValueNullFieldError.checkNotNull(
-                  createdBy, r'RespondContestantsDataContentInner', 'createdBy'),
-              updatedBy: BuiltValueNullFieldError.checkNotNull(
-                  updatedBy, r'RespondContestantsDataContentInner', 'updatedBy'),
-              created: BuiltValueNullFieldError.checkNotNull(
-                  created, r'RespondContestantsDataContentInner', 'created'),
-              updated: BuiltValueNullFieldError.checkNotNull(
-                  updated, r'RespondContestantsDataContentInner', 'updated'),
-              deleted: BuiltValueNullFieldError.checkNotNull(
-                  deleted, r'RespondContestantsDataContentInner', 'deleted'),
-              recordStatus: BuiltValueNullFieldError.checkNotNull(recordStatus,
-                  r'RespondContestantsDataContentInner', 'recordStatus'),
-              fullname: BuiltValueNullFieldError.checkNotNull(fullname, r'RespondContestantsDataContentInner', 'fullname'),
-              mobilePhone: BuiltValueNullFieldError.checkNotNull(mobilePhone, r'RespondContestantsDataContentInner', 'mobilePhone'),
-              email: BuiltValueNullFieldError.checkNotNull(email, r'RespondContestantsDataContentInner', 'email'),
-              city: BuiltValueNullFieldError.checkNotNull(city, r'RespondContestantsDataContentInner', 'city'),
-              gender: gender,
-              placeofBirth: placeofBirth,
-              dateofBirth: dateofBirth,
-              statusContestant: BuiltValueNullFieldError.checkNotNull(statusContestant, r'RespondContestantsDataContentInner', 'statusContestant'),
-              photo: photo,
-              contestantTeam: _contestantTeam?.build(),
-              codeContestant: BuiltValueNullFieldError.checkNotNull(codeContestant, r'RespondContestantsDataContentInner', 'codeContestant'));
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'contestantTeam';
-        _contestantTeam?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'RespondContestantsDataContentInner', _$failedField, e.toString());
-      }
-      rethrow;
-    }
+    final _$result = _$v ??
+        new _$RespondContestantsDataContentInner._(
+            tankId: BuiltValueNullFieldError.checkNotNull(
+                tankId, r'RespondContestantsDataContentInner', 'tankId'),
+            nominationId: BuiltValueNullFieldError.checkNotNull(nominationId,
+                r'RespondContestantsDataContentInner', 'nominationId'),
+            eventId: BuiltValueNullFieldError.checkNotNull(
+                eventId, r'RespondContestantsDataContentInner', 'eventId'),
+            contestantName: contestantName,
+            city: city,
+            team: team);
     replace(_$result);
     return _$result;
   }

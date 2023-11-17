@@ -8,9 +8,9 @@ part of 'respond_contestants.dart';
 
 class _$RespondContestants extends RespondContestants {
   @override
-  final String? responseCode;
+  final String responseCode;
   @override
-  final String? responseMessage;
+  final String responseMessage;
   @override
   final RespondContestantsData? data;
 
@@ -18,8 +18,14 @@ class _$RespondContestants extends RespondContestants {
           [void Function(RespondContestantsBuilder)? updates]) =>
       (new RespondContestantsBuilder()..update(updates))._build();
 
-  _$RespondContestants._({this.responseCode, this.responseMessage, this.data})
-      : super._();
+  _$RespondContestants._(
+      {required this.responseCode, required this.responseMessage, this.data})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        responseCode, r'RespondContestants', 'responseCode');
+    BuiltValueNullFieldError.checkNotNull(
+        responseMessage, r'RespondContestants', 'responseMessage');
+  }
 
   @override
   RespondContestants rebuild(
@@ -111,8 +117,10 @@ class RespondContestantsBuilder
     try {
       _$result = _$v ??
           new _$RespondContestants._(
-              responseCode: responseCode,
-              responseMessage: responseMessage,
+              responseCode: BuiltValueNullFieldError.checkNotNull(
+                  responseCode, r'RespondContestants', 'responseCode'),
+              responseMessage: BuiltValueNullFieldError.checkNotNull(
+                  responseMessage, r'RespondContestants', 'responseMessage'),
               data: _data?.build());
     } catch (_) {
       late String _$failedField;
