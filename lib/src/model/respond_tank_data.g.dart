@@ -16,9 +16,9 @@ class _$RespondTankData extends RespondTankData {
   @override
   final String photo;
   @override
-  final String contestantName;
+  final String? contestantName;
   @override
-  final String city;
+  final String? city;
   @override
   final String? team;
 
@@ -30,8 +30,8 @@ class _$RespondTankData extends RespondTankData {
       required this.noTank,
       required this.codeTank,
       required this.photo,
-      required this.contestantName,
-      required this.city,
+      this.contestantName,
+      this.city,
       this.team})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'RespondTankData', 'id');
@@ -39,9 +39,6 @@ class _$RespondTankData extends RespondTankData {
     BuiltValueNullFieldError.checkNotNull(
         codeTank, r'RespondTankData', 'codeTank');
     BuiltValueNullFieldError.checkNotNull(photo, r'RespondTankData', 'photo');
-    BuiltValueNullFieldError.checkNotNull(
-        contestantName, r'RespondTankData', 'contestantName');
-    BuiltValueNullFieldError.checkNotNull(city, r'RespondTankData', 'city');
   }
 
   @override
@@ -170,10 +167,8 @@ class RespondTankDataBuilder
                 codeTank, r'RespondTankData', 'codeTank'),
             photo: BuiltValueNullFieldError.checkNotNull(
                 photo, r'RespondTankData', 'photo'),
-            contestantName: BuiltValueNullFieldError.checkNotNull(
-                contestantName, r'RespondTankData', 'contestantName'),
-            city: BuiltValueNullFieldError.checkNotNull(
-                city, r'RespondTankData', 'city'),
+            contestantName: contestantName,
+            city: city,
             team: team);
     replace(_$result);
     return _$result;
