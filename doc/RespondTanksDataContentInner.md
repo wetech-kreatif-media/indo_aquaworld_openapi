@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **photoUrl** | **String** |  | [optional] 
 **contestComponent** | [**RespondTanksDataContentInnerContestComponent**](RespondTanksDataContentInnerContestComponent.md) |  | [optional] 
 **contestantName** | **String** |  | [optional] 
+**team** | **String** |  | [optional] 
 **city** | **String** |  | [optional] 
 **teamName** | **String** |  | [optional] 
 **head** | **num** |  | [optional] 

@@ -24,6 +24,7 @@ part 'respond_tanks_data_content_inner.g.dart';
 /// * [photoUrl] 
 /// * [contestComponent] 
 /// * [contestantName] 
+/// * [team] 
 /// * [city] 
 /// * [teamName] 
 /// * [head] 
@@ -84,6 +85,9 @@ abstract class RespondTanksDataContentInner implements Built<RespondTanksDataCon
 
   @BuiltValueField(wireName: r'contestantName')
   String? get contestantName;
+
+  @BuiltValueField(wireName: r'team')
+  String? get team;
 
   @BuiltValueField(wireName: r'city')
   String? get city;
@@ -252,6 +256,13 @@ class _$RespondTanksDataContentInnerSerializer implements PrimitiveSerializer<Re
       yield r'contestantName';
       yield serializers.serialize(
         object.contestantName,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.team != null) {
+      yield r'team';
+      yield serializers.serialize(
+        object.team,
         specifiedType: const FullType(String),
       );
     }
@@ -522,6 +533,13 @@ class _$RespondTanksDataContentInnerSerializer implements PrimitiveSerializer<Re
             specifiedType: const FullType(String),
           ) as String;
           result.contestantName = valueDes;
+          break;
+        case r'team':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.team = valueDes;
           break;
         case r'city':
           final valueDes = serializers.deserialize(

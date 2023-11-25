@@ -32,6 +32,8 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
   @override
   final String? contestantName;
   @override
+  final String? team;
+  @override
   final String? city;
   @override
   final String? teamName;
@@ -95,6 +97,7 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
       this.photoUrl,
       this.contestComponent,
       this.contestantName,
+      this.team,
       this.city,
       this.teamName,
       this.head,
@@ -152,6 +155,7 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
         photoUrl == other.photoUrl &&
         contestComponent == other.contestComponent &&
         contestantName == other.contestantName &&
+        team == other.team &&
         city == other.city &&
         teamName == other.teamName &&
         head == other.head &&
@@ -192,6 +196,7 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
     _$hash = $jc(_$hash, photoUrl.hashCode);
     _$hash = $jc(_$hash, contestComponent.hashCode);
     _$hash = $jc(_$hash, contestantName.hashCode);
+    _$hash = $jc(_$hash, team.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
     _$hash = $jc(_$hash, teamName.hashCode);
     _$hash = $jc(_$hash, head.hashCode);
@@ -234,6 +239,7 @@ class _$RespondTanksDataContentInner extends RespondTanksDataContentInner {
           ..add('photoUrl', photoUrl)
           ..add('contestComponent', contestComponent)
           ..add('contestantName', contestantName)
+          ..add('team', team)
           ..add('city', city)
           ..add('teamName', teamName)
           ..add('head', head)
@@ -320,6 +326,10 @@ class RespondTanksDataContentInnerBuilder
   String? get contestantName => _$this._contestantName;
   set contestantName(String? contestantName) =>
       _$this._contestantName = contestantName;
+
+  String? _team;
+  String? get team => _$this._team;
+  set team(String? team) => _$this._team = team;
 
   String? _city;
   String? get city => _$this._city;
@@ -433,6 +443,7 @@ class RespondTanksDataContentInnerBuilder
       _photoUrl = $v.photoUrl;
       _contestComponent = $v.contestComponent?.toBuilder();
       _contestantName = $v.contestantName;
+      _team = $v.team;
       _city = $v.city;
       _teamName = $v.teamName;
       _head = $v.head;
@@ -495,6 +506,7 @@ class RespondTanksDataContentInnerBuilder
               photoUrl: photoUrl,
               contestComponent: _contestComponent?.build(),
               contestantName: contestantName,
+              team: team,
               city: city,
               teamName: teamName,
               head: head,
