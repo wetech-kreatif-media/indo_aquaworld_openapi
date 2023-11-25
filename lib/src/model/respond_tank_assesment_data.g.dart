@@ -22,6 +22,8 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
   @override
   final String? contestantEmail;
   @override
+  final String? contestantTeam;
+  @override
   final String? judgeName;
   @override
   final String? judgePhoto;
@@ -66,6 +68,7 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
       this.contestantPhoto,
       this.contestantCity,
       this.contestantEmail,
+      this.contestantTeam,
       this.judgeName,
       this.judgePhoto,
       this.judgeCity,
@@ -104,6 +107,7 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
         contestantPhoto == other.contestantPhoto &&
         contestantCity == other.contestantCity &&
         contestantEmail == other.contestantEmail &&
+        contestantTeam == other.contestantTeam &&
         judgeName == other.judgeName &&
         judgePhoto == other.judgePhoto &&
         judgeCity == other.judgeCity &&
@@ -132,6 +136,7 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
     _$hash = $jc(_$hash, contestantPhoto.hashCode);
     _$hash = $jc(_$hash, contestantCity.hashCode);
     _$hash = $jc(_$hash, contestantEmail.hashCode);
+    _$hash = $jc(_$hash, contestantTeam.hashCode);
     _$hash = $jc(_$hash, judgeName.hashCode);
     _$hash = $jc(_$hash, judgePhoto.hashCode);
     _$hash = $jc(_$hash, judgeCity.hashCode);
@@ -162,6 +167,7 @@ class _$RespondTankAssesmentData extends RespondTankAssesmentData {
           ..add('contestantPhoto', contestantPhoto)
           ..add('contestantCity', contestantCity)
           ..add('contestantEmail', contestantEmail)
+          ..add('contestantTeam', contestantTeam)
           ..add('judgeName', judgeName)
           ..add('judgePhoto', judgePhoto)
           ..add('judgeCity', judgeCity)
@@ -218,6 +224,11 @@ class RespondTankAssesmentDataBuilder
   String? get contestantEmail => _$this._contestantEmail;
   set contestantEmail(String? contestantEmail) =>
       _$this._contestantEmail = contestantEmail;
+
+  String? _contestantTeam;
+  String? get contestantTeam => _$this._contestantTeam;
+  set contestantTeam(String? contestantTeam) =>
+      _$this._contestantTeam = contestantTeam;
 
   String? _judgeName;
   String? get judgeName => _$this._judgeName;
@@ -302,6 +313,7 @@ class RespondTankAssesmentDataBuilder
       _contestantPhoto = $v.contestantPhoto;
       _contestantCity = $v.contestantCity;
       _contestantEmail = $v.contestantEmail;
+      _contestantTeam = $v.contestantTeam;
       _judgeName = $v.judgeName;
       _judgePhoto = $v.judgePhoto;
       _judgeCity = $v.judgeCity;
@@ -349,6 +361,7 @@ class RespondTankAssesmentDataBuilder
               contestantPhoto: contestantPhoto,
               contestantCity: contestantCity,
               contestantEmail: contestantEmail,
+              contestantTeam: contestantTeam,
               judgeName: judgeName,
               judgePhoto: judgePhoto,
               judgeCity: judgeCity,
